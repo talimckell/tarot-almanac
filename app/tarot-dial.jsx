@@ -1136,7 +1136,7 @@ export default function TarotDial() {
               <div style={styles.modalPreview}>
                 <div style={styles.previewText}>
                   <div style={{ fontSize: '1.3em', fontWeight: 'bold', color: '#d4a574', marginBottom: '20px', textAlign: 'center' }}>
-                    {new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
+                    {new Date(date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
                   </div>
                   
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '1em' }}>
@@ -1163,6 +1163,21 @@ export default function TarotDial() {
                       </tr>
                     </tbody>
                   </table>
+
+                  {birthdateData && showPersonal && (() => {
+                    const pos = getPositioningMessage(cd, pd, true);
+                    if (!pos) return null;
+                    return (
+                      <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid rgba(212, 165, 116, 0.3)' }}>
+                        <div style={{ color: '#d4a574', fontWeight: '600', marginBottom: '8px', fontSize: '0.9em' }}>
+                          Your Positioning
+                        </div>
+                        <div style={{ color: '#a89968', fontSize: '0.85em', lineHeight: '1.6' }}>
+                          {pos.message}
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
 
