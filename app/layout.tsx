@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
+import IconSprite from "./components/IconSprite";
 import "./globals.css";
 
 const cormorant = Cormorant({
@@ -47,7 +48,10 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${cormorantSC.variable} ${lato.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <IconSprite />
+        {children}
+      </body>
     </html>
   );
 }

@@ -9,6 +9,18 @@ export const MAJORS = [
   "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World",
 ] as const;
 
+// Card-detail slugs, one per Major (index 0-21). Matches the slugs already used in the
+// card content database (tarot-content-database/content/cards-index.json), which drops
+// the "The" article. Some of the static-page mockups instead use "the-x" hrefs (e.g.
+// "/tarot/the-chariot") — that's mockup drift; /tarot/[slug] will read from the card
+// database, so these are the slugs that matter.
+export const MAJOR_SLUGS = [
+  "fool", "magician", "high-priestess", "empress", "emperor",
+  "hierophant", "lovers", "chariot", "strength", "hermit",
+  "wheel-of-fortune", "justice", "hanged-one", "death", "temperance",
+  "devil", "tower", "star", "moon", "sun", "judgement", "world",
+] as const;
+
 export type Element = "fire" | "water" | "air" | "earth";
 
 // Element per Major (index 0-21). Follows Golden Dawn correspondences: zodiacal Majors

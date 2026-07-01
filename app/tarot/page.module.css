@@ -1,0 +1,159 @@
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+.hero {
+  text-align: center;
+  padding: 54px 0 30px;
+}
+.eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.04;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--charcoal);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.secthead {
+  text-align: center;
+  padding: 36px 0 22px;
+  border-top: 1px solid var(--warm-stone);
+  margin-top: 30px;
+}
+.secthead h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--ink);
+}
+.secthead .sub {
+  font-size: 15px;
+  color: var(--label);
+  margin-top: 6px;
+}
+
+.cgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.cgrid.minors {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.ccard {
+  border: 1px solid var(--warm-stone);
+  padding: 18px 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color 0.15s;
+}
+.ccard:hover {
+  border-color: var(--indigo);
+}
+.cglyph {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 9px;
+}
+.cglyph svg {
+  width: 42px;
+  height: 42px;
+}
+.cglyph.small {
+  width: 30px;
+  height: 30px;
+}
+.cglyph.small svg {
+  width: 30px;
+  height: 30px;
+}
+.elFire .cglyph { color: var(--fire); }
+.elWater .cglyph { color: var(--water); }
+.elAir .cglyph { color: var(--air); }
+.elEarth .cglyph { color: var(--earth); }
+
+.cnum {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--label);
+}
+.cname {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-top: 3px;
+}
+
+.suitsec {
+  padding-top: 30px;
+  border-top: 1px solid var(--warm-stone);
+  margin-top: 30px;
+}
+.suithead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.suitmark {
+  width: 30px;
+  height: 30px;
+}
+.suitmark svg {
+  width: 30px;
+  height: 30px;
+}
+.suithead h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--ink);
+}
+.suitel {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.suitFire .suitmark, .suitFire .suitel { color: var(--fire); }
+.suitWater .suitmark, .suitWater .suitel { color: var(--water); }
+.suitAir .suitmark, .suitAir .suitel { color: var(--air); }
+.suitEarth .suitmark, .suitEarth .suitel { color: var(--earth); }
+
+@media (max-width: 760px) {
+  .hero h1 { font-size: 38px; }
+  .cgrid { grid-template-columns: repeat(3, 1fr); }
+  .cgrid.minors { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 460px) {
+  .cgrid { grid-template-columns: repeat(2, 1fr); }
+  .cgrid.minors { grid-template-columns: repeat(3, 1fr); }
+}
