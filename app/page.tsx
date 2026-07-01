@@ -14,17 +14,16 @@ export default function Home() {
   return (
     <>
       {/* NAV */}
-      <nav className="nav">
-        <Link className="nav-brand" href="/">The Tarot Almanac</Link>
-        <ul className="nav-links">
-          <li><Link href="/today">Today</Link></li>
-          <li><Link href="/tarot">The Cards</Link></li>
-          <li><Link href="/bearing">Bearings</Link></li>
-          <li><Link href="/year/2026">The Year</Link></li>
-          <li><Link href="/how-it-works">How It Works</Link></li>
-          <li><Link href="/me" className="nav-cta">Make your almanac</Link></li>
-        </ul>
-      </nav>
+      <nav className="nav"><div className="nav-in">
+        <Link className="nav-brand" href="/">THE TAROT ALMANAC</Link>
+        <div className="nav-links">
+          <Link href="/today">Today</Link>
+          <Link href="/tarot">Cards</Link>
+          <Link href="/bearing">Bearing</Link>
+          <Link href="/how-it-works">How it works</Link>
+          <Link href="/me" className="nav-cta">Make your almanac</Link>
+        </div>
+      </div></nav>
 
       {/* HERO */}
       <section className="hero">
@@ -118,8 +117,8 @@ export default function Home() {
           </span>
           <h3 className="prop-head">Every date, and the people you love</h3>
           <p className="prop-body">
-            Keep your own days, go back and forward through any date, read your natal
-            chart, and follow the days of the people you love.
+            Keep your own days, go back and forward through any date, and read the natal
+            chart of anyone who matters to you.
           </p>
           <span className="prop-go">Make your almanac &rarr;</span>
         </Link>
@@ -173,11 +172,11 @@ export default function Home() {
       <section className="acct-band">
         <span className="acct-eyebrow">YOUR ALMANAC</span>
         <StarMark size={20} style={{ display: "block", margin: "10px auto 0" }} />
-        <h2 className="acct-head">Today is free.<br />Keep it, and <em>follow the people you love.</em></h2>
+        <h2 className="acct-head">Today is free.<br />Keep it, and <em>see who you love, in cards.</em></h2>
         <p className="acct-sub">
           Make an account and the whole of time opens: every day behind you and ahead of
-          you, your natal chart, and the people whose days you want to keep beside your
-          own.
+          you, your natal chart, and the natal charts of the people you want to keep
+          beside your own.
         </p>
         <div className="acct-cols">
           <div className="acct-col">
@@ -190,7 +189,7 @@ export default function Home() {
           </div>
           <div className="acct-col">
             <div className="acct-col-h">The people you love</div>
-            <div className="acct-col-b">Follow the people who matter to you, and see the day each of them is walking through.</div>
+            <div className="acct-col-b">Pull up the natal chart of anyone who matters to you, and see the cards they came in under.</div>
           </div>
         </div>
         <Link href="/me" className="acct-cta">Make your almanac</Link>

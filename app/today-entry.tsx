@@ -9,6 +9,7 @@ import {
   type Element,
   type DayCard,
 } from "@/lib/almanac";
+import { getCollectiveReading } from "@/lib/collectiveReadings";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
 function SuitPip({ suit }: { suit: string }) {
@@ -106,6 +107,9 @@ export default function TodayEntry() {
                 ))}
             </div>
             <div className="ec-name">{card?.minorName ?? ""}</div>
+            {card && getCollectiveReading(card) && (
+              <p className="ec-prompt">{getCollectiveReading(card)}</p>
+            )}
           </div>
         </div>
 
