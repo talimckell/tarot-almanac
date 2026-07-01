@@ -21,6 +21,7 @@
   --serif:    var(--font-cormorant), Georgia, serif;
   --serif-sc: var(--font-cormorant-sc), Georgia, serif;
   --sans:     var(--font-lato), system-ui, sans-serif;
+  --mono:     var(--font-jetbrains-mono), monospace;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

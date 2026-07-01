@@ -1,0 +1,271 @@
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.04;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--charcoal);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* SECTIONS */
+.section {
+  padding: 38px 0;
+  border-top: 1px solid var(--warm-stone);
+}
+.section:first-of-type {
+  border-top: none;
+}
+.section h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.section h3 {
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin: 24px 0 12px;
+}
+.section p {
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.section p:last-child {
+  margin-bottom: 0;
+}
+.lede {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--charcoal);
+}
+
+/* TAROT CYCLE figure */
+.cycleFig {
+  margin: 30px 0 8px;
+  text-align: center;
+}
+.cycleSvg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+.cycleCap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--label);
+  margin-top: 6px;
+}
+
+/* WORKED EXAMPLE: the proof, in a framed block */
+.worked {
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 30px 30px 26px;
+  margin: 28px 0;
+}
+.wlabel {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 18px;
+}
+.step {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(184, 168, 144, 0.4);
+}
+.step:last-of-type {
+  border-bottom: none;
+}
+.calc {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--indigo);
+  white-space: nowrap;
+}
+.says {
+  font-size: 15px;
+  color: var(--charcoal);
+}
+.result {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid var(--warm-stone);
+  font-family: var(--serif);
+  font-size: 21px;
+  color: var(--ink);
+  text-align: center;
+}
+
+/* FORMULA CARD: reference block, monospace */
+.formula {
+  background: var(--ink);
+  color: var(--stone);
+  padding: 30px 30px;
+  margin: 28px 0;
+}
+.flabel {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-stone);
+  display: block;
+  margin-bottom: 16px;
+}
+.frow {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--stone);
+}
+.dim {
+  color: var(--warm-stone);
+}
+.fnote {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--warm-stone);
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* disclosure note (Strength/Justice) */
+.asideNote {
+  font-size: 14px;
+  color: var(--label);
+  font-style: italic;
+  font-family: var(--serif);
+  border-left: 2px solid var(--warm-stone);
+  padding-left: 16px;
+  margin: 18px 0;
+}
+
+/* LEARN MORE: links down to blog */
+.learn {
+  padding: 38px 0;
+  border-top: 1px solid var(--warm-stone);
+}
+.learn h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.learnSub {
+  font-size: 15px;
+  color: var(--label);
+  margin-bottom: 22px;
+}
+.post {
+  display: block;
+  border: 1px solid var(--warm-stone);
+  padding: 22px 24px;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+.post:hover {
+  border-color: var(--indigo);
+}
+.postTitle {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.postDesc {
+  font-size: 14px;
+  color: var(--charcoal);
+}
+.arrow {
+  color: var(--indigo);
+}
+
+/* CTA */
+.cta {
+  background: var(--indigo);
+  color: var(--stone);
+  padding: 40px 34px;
+  margin: 40px 0 0;
+  text-align: center;
+}
+.cta p {
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.4;
+  color: var(--stone);
+  margin-bottom: 22px;
+}
+.btn {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  border: 1px solid var(--stone);
+  background: none;
+  color: var(--stone);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--stone);
+  color: var(--indigo);
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+  .step {
+    flex-direction: column;
+    gap: 3px;
+  }
+  .calc {
+    white-space: normal;
+  }
+}

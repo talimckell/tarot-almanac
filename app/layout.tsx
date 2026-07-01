@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant, Cormorant_SC, Lato } from "next/font/google";
+import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant({
@@ -24,6 +24,13 @@ const lato = Lato({
   variable: "--font-lato",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+});
+
 export const metadata: Metadata = {
   title: "The Tarot Almanac · Find your angle on the day",
   description:
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${cormorantSC.variable} ${lato.variable}`}
+      className={`${cormorant.variable} ${cormorantSC.variable} ${lato.variable} ${jetbrainsMono.variable}`}
     >
       <body>{children}</body>
     </html>

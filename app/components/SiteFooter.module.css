@@ -1,0 +1,18 @@
+.footer {
+  border-top: 1px solid var(--warm-stone);
+  padding: 34px 0;
+  text-align: center;
+}
+.footLine {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--charcoal);
+  display: inline-flex;
+  align-items: center;
+}
+.star {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+}
