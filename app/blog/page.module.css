@@ -1,0 +1,178 @@
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+.crumb {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--label);
+  padding: 34px 0 0;
+}
+.crumb a {
+  color: var(--label);
+  text-decoration: none;
+}
+.crumb a:hover {
+  color: var(--indigo);
+}
+
+.glyphRow {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 0 0 22px;
+  opacity: 0.9;
+}
+.glyphRow svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.hero {
+  text-align: center;
+  padding: 44px 0 14px;
+  border-bottom: 1px solid var(--warm-stone);
+  margin-bottom: 14px;
+}
+.eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--charcoal);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.entry {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  text-decoration: none;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--vellum);
+}
+.entryGlyph {
+  flex-shrink: 0;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+.entryGlyph svg {
+  width: 26px;
+  height: 26px;
+}
+.entryBody {
+  flex: 1;
+}
+.entryTitle {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.12;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+.entrySf {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+.entry:hover .entryTitle {
+  color: var(--indigo);
+}
+
+.capture {
+  margin-top: 46px;
+  background: #fbf8f2;
+  border: 1px solid var(--warm-stone);
+  padding: 32px 34px;
+  text-align: center;
+}
+.capture h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.capture p {
+  font-size: 16px;
+  color: var(--charcoal);
+  max-width: 440px;
+  margin: 0 auto 20px;
+}
+.captureForm {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.captureInput {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 300;
+  padding: 12px 16px;
+  width: 260px;
+  max-width: 100%;
+  background: var(--stone);
+  border: 1px solid var(--warm-stone);
+  color: var(--ink);
+}
+.captureInput::placeholder {
+  color: var(--warm-stone);
+}
+.captureInput:focus {
+  outline: none;
+  border-color: var(--indigo);
+}
+.captureBtn {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  background: var(--indigo);
+  color: var(--stone);
+  border: none;
+  cursor: pointer;
+}
+.captureBtn:hover {
+  background: var(--indigo-mid);
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 36px; }
+  .entryTitle { font-size: 25px; }
+  .entry { gap: 16px; }
+}
+@media (max-width: 520px) {
+  .glyphRow { gap: 14px; }
+  .glyphRow svg { width: 24px; height: 24px; }
+  .captureInput { width: 100%; }
+}
