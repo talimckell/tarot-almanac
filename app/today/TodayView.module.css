@@ -1,0 +1,432 @@
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+/* DATE HEADER */
+.dayhead {
+  text-align: center;
+  padding: 40px 0 8px;
+}
+.greeting {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 10px;
+}
+.dayhead h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--ink);
+  line-height: 1.05;
+}
+.dateRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.moonMark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.moonMark svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.moonPhaseLabel {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-top: 6px;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 16px;
+}
+.stepper a {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--label);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 4px;
+  text-decoration: none;
+}
+.stepper a:hover {
+  color: var(--indigo);
+}
+.todayPill {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: 1px solid var(--warm-stone);
+  padding: 5px 14px;
+  text-decoration: none;
+}
+a.todayPill:hover {
+  color: var(--indigo);
+  border-color: var(--indigo);
+}
+
+/* THE PARALLEL COLUMNS */
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--warm-stone);
+  margin-top: 30px;
+}
+
+.colHead {
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--warm-stone);
+  text-align: center;
+}
+.colHeadLbl {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: block;
+}
+.colHeadLbl.world { color: var(--label); }
+.colHeadLbl.yours { color: var(--indigo); }
+.colPersonal .colHead { border-left: 1px solid var(--warm-stone); }
+
+.dayCardBlock {
+  padding: 22px 20px 18px;
+}
+.colPersonal .dayCardBlock { border-left: 1px solid var(--warm-stone); }
+
+.pips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto 14px;
+  width: fit-content;
+  min-height: 44px;
+  justify-content: center;
+}
+.prow {
+  display: flex;
+  gap: 9px;
+}
+.pips svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.cardname {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.1;
+}
+.cardname a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.cardname a:hover {
+  color: var(--indigo);
+  border-bottom-color: var(--indigo);
+}
+.cardsub {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--label);
+  text-align: center;
+  margin-top: 5px;
+}
+.reading {
+  font-size: 14px;
+  color: var(--ink);
+  margin-top: 14px;
+  line-height: 1.65;
+}
+.fulllink {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+}
+.fulllink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.majorRow {
+  border-top: 1px solid var(--warm-stone);
+  padding: 12px 20px;
+}
+.colPersonal .majorRow { border-left: 1px solid var(--warm-stone); }
+.rowLbl {
+  font-family: var(--serif-sc);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 3px;
+}
+.majorLink {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--indigo);
+  text-decoration: none;
+}
+.majorLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* BETWEEN YOU */
+.between {
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  border-top: none;
+  padding: 24px 30px;
+  text-align: center;
+}
+.between .lbl {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 10px;
+}
+.syn {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--charcoal);
+  font-style: italic;
+}
+
+/* MONTH + YEAR */
+.contextPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--warm-stone);
+  border-top: none;
+}
+.contextRow {
+  padding: 10px 20px;
+}
+.colPersonalCtx {
+  border-left: 1px solid var(--warm-stone);
+}
+.contextDivider {
+  border-top: 1px solid var(--warm-stone);
+}
+.contextLink {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--charcoal);
+  text-decoration: none;
+}
+.contextLink:hover {
+  color: var(--indigo);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* BEARING */
+.bearing {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--warm-stone);
+  border-top: none;
+  padding: 18px 22px;
+  background: var(--stone);
+}
+.bGlyph {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.bGlyph svg {
+  width: 36px;
+  height: 36px;
+}
+.bText { flex: 1; }
+.bLabel {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 2px;
+}
+.bName {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+}
+.bCard { color: var(--indigo); }
+.bLink {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.bLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* alignment flag */
+.alignFlag {
+  border: 1px solid var(--warm-stone);
+  border-top: none;
+  padding: 7px 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--stone);
+}
+.alignDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--indigo);
+  flex-shrink: 0;
+}
+.alignText {
+  font-family: var(--serif-sc);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 28px;
+}
+.btn {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border: 1px solid var(--indigo);
+  background: none;
+  color: var(--indigo);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--indigo);
+  color: var(--stone);
+}
+.btnSolid {
+  background: var(--indigo);
+  color: var(--stone);
+}
+.btnSolid:hover {
+  background: var(--indigo-mid);
+}
+
+/* GATED STATE — the real, server-rendered paywall page (no card data ever sent for
+   gated dates), styled like the mockup's modal but as page content, not a JS overlay. */
+.gateWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+.gateCard {
+  background: var(--stone);
+  max-width: 440px;
+  width: 100%;
+  padding: 38px 34px;
+  text-align: center;
+  border: 1px solid var(--warm-stone);
+}
+.gateCard .star {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 16px;
+  display: block;
+}
+.gateCard h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.gateCard p {
+  font-size: 15px;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.gateSub {
+  font-size: 13px;
+  color: var(--label);
+  margin-bottom: 24px;
+}
+.gateActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .pair, .contextPair {
+    grid-template-columns: 1fr;
+  }
+  .colPersonal .colHead,
+  .colPersonal .dayCardBlock,
+  .colPersonal .majorRow,
+  .colPersonalCtx {
+    border-left: none;
+    border-top: 1px solid var(--warm-stone);
+  }
+  .dayhead h1 { font-size: 30px; }
+  .bearing { flex-wrap: wrap; }
+}

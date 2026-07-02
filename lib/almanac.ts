@@ -121,6 +121,50 @@ export function collectiveDayCard(y: number, m: number, d: number): DayCard {
   };
 }
 
+// Personal track: birth month + day folded in. Birth YEAR is deliberately excluded —
+// the personal track is about where you stand in the cycle now, not how many turns
+// you've taken around it. (Birth year enters only in the natal chart, which runs the
+// daily engine on the birth date itself — a separate reading, not built here yet.)
+export function personalYear(y: number, bm: number, bd: number): number {
+  return mod22(bm + bd + sumDigits(y));
+}
+export function personalMonth(y: number, m: number, bm: number, bd: number): number {
+  return mod22(personalYear(y, bm, bd) + m);
+}
+export function personalDayMajor(y: number, m: number, d: number, bm: number, bd: number): number {
+  return mod22(personalMonth(y, m, bm, bd) + d);
+}
+
+// The personal day's Minor rank: same ×11 mod 14 step as the collective day, but the
+// seed folds the birthday in (dateSeed + MMDD) so your texture is yours.
+export function personalDayRank(y: number, m: number, d: number, bm: number, bd: number): number {
+  const dateSeed = y * 10000 + m * 100 + d + (bm * 100 + bd);
+  return ((dateSeed * 11) % 14) + 1;
+}
+
+export function personalDayCard(y: number, m: number, d: number, bm: number, bd: number): DayCard {
+  const major = personalDayMajor(y, m, d, bm, bd);
+  const element = ELEMENT_BY_MAJOR[major];
+  const suit = SUIT_BY_ELEMENT[element];
+  const rank = personalDayRank(y, m, d, bm, bd);
+  const rankName = RANKS[rank - 1];
+  return {
+    major,
+    majorName: MAJORS[major],
+    element,
+    suit,
+    rank,
+    rankName,
+    minorName: `${rankName} of ${suit}`,
+  };
+}
+
+// A lifelong constant: the fixed gap between the personal and collective columns,
+// identical at every level, on every date. Birth year excluded (see above).
+export function bearingIndex(bm: number, bd: number): number {
+  return mod22(bm + bd);
+}
+
 // The three phase bands of the cycle, read off the day's Major.
 export function phaseBand(major: number): "Initiation" | "Testing" | "Reckoning" {
   if (major <= 7) return "Initiation";
@@ -136,10 +180,16 @@ const MOON_PHASES = [
   "Full moon", "Waning gibbous", "Last quarter", "Waning crescent",
 ] as const;
 
-export function moonPhase(y: number, m: number, d: number): string {
+// Fraction through the current synodic month, 0 = new moon, 0.5 = full moon.
+export function moonFraction(y: number, m: number, d: number): number {
   const days = Date.UTC(y, m - 1, d, 12, 0) / 86400000 - NEW_MOON_EPOCH;
   let frac = (days % SYNODIC_MONTH) / SYNODIC_MONTH;
   if (frac < 0) frac += 1;
+  return frac;
+}
+
+export function moonPhase(y: number, m: number, d: number): string {
+  const frac = moonFraction(y, m, d);
   return MOON_PHASES[Math.floor(frac * 8 + 0.5) % 8];
 }
 
