@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Three of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/three-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Three · Water · feeling becomes community",
+    "essence": "The Three of Cups is joy that multiplies because it's shared. It is friendship, celebration, the belonging that happens in a circle rather than a pair. It is the heart finding its people.",
+    "narrative": "The emotional arc widens here from the couple to the circle. The Ace opened, the Two met, and the Three is where feeling becomes communal, where it stops being about one bond and starts being about belonging to a group. The old image is three figures raising their cups together mid-dance, a harvest underfoot, pure shared gladness. It sits early in the suit because community is one of the heart's first joys and first needs, the discovery that joy gets bigger when there are people to hand it to. This is the friendship that feels like family, the chosen circle, the table where you don't have to explain yourself. The card is celebration, but the deeper subject is belonging, the specific relief of being among people who are glad you exist.",
+    "gift": {
+      "keywords": [
+        "celebration",
+        "friendship",
+        "chosen family",
+        "shared joy",
+        "belonging"
+      ],
+      "body": "Upright, the Three of Cups is the night you laugh until your face hurts with people who get you. It's the group chat that's been alive for years. It's showing up to something dreading it and ending the evening not wanting to leave. It's the friends who throw you the party, or just bring soup when you're sick. What it gives is belonging, joy multiplied by being shared and grief divided the same way. When joy is passed around a table it gets bigger. Your joy is a form of resistance, and chosen family is a sacred form of connection. You get to define what celebration looks like, and who counts as your people.",
+      "affirmation": "I can let myself be carried by good company. I belong in my circle."
+    },
+    "shadow": {
+      "keywords": [
+        "feeling left out",
+        "comparison",
+        "performative belonging",
+        "overextension"
+      ],
+      "body": "The circle feels like glass you're pressed against from outside. The Three of Cups' shadow is being in the room and still not sure you're really part of it, scanning for proof you don't belong and always finding some. It's the comparison spiral, everyone else's connections looking easier and warmer than yours. It's performing belonging, laughing on cue, exhausting yourself being fun so they'll keep you around. Or it's overextending, saying yes to every invitation until the community that was supposed to fill you is just draining you. Underneath is the old fear that you're tolerated, not wanted, that the invitation was politeness. The belonging may be real. The shadow is the part of you that can't quite believe it.",
+      "affirmation": "I can let belonging be real. I don't have to earn my place by performing."
+    },
+    "reclaiming": {
+      "keywords": [
+        "outgrowing circles",
+        "belonging without fitting in",
+        "building from freedom"
+      ],
+      "body": "The Three of Cups reverses a second way, as a refusal to keep contorting to fit a circle that doesn't actually hold you. It's okay to outgrow people. Belonging was never supposed to mean fitting in, making yourself smaller or smoother to keep a seat at a table that only wants the edited version of you. This is the permission to leave the group that requires a performance and build outward from the place where you're already free. Real belonging is feeling able to be all of yourself, not most of yourself with the rest left at the door. If you were taught that being included was worth any amount of self-erasure, the reclaiming Three is you choosing the circle where you don't have to disappear.",
+      "affirmation": "Belonging is not the same as fitting in. I can build from where I'm free."
+    },
+    "skills": [
+      "Letting good company actually reach you",
+      "Noticing the comparison spiral before it takes the night",
+      "Telling real belonging apart from performed belonging",
+      "Leaving circles that only want the edited you",
+      "Saying yes from desire, not from fear of being dropped"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was gathered together. The collective feeling was communal and warm, the shared mood organized around celebration and belonging, the particular emotional quality of a circle that's glad to be in the same place. That was the air around you at the beginning. It gave you a native faith in community, a baseline sense that people can be actually happy in each other's company and that belonging is available if you can find your people. The warmth of that day is still in you somewhere, available when the comparison spiral isn't running.\n\nThe shadow of that inheritance: a world organized around communal joy also set a standard for what togetherness is supposed to look like, and the early attunement to belonging can sharpen the ache when you're on the outside of it. You feel exclusion specifically. The loneliness that comes when a room full of people still doesn't feel like yours is a particular kind, and you know it from the inside.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Three of Cups as your rising means you meet the world looking for the circle. Your first instinct in a new situation is to find your people: who here gets it, who can the room relax into, where is the warmth. You're reading for belonging before you're reading for anything else.\n\nWhen you find your people the effect is real. You're good company, you make the circle better, you bring the particular energy that makes a group feel like it's actually gathering rather than just occupying the same space. The harder side is the scan that never quite turns off, the monitoring for whether you're really in or only adjacent. The rising of the Three teaches, over time, to trust belonging when you're in it rather than checking it constantly to see if it's still there. Being carried by good company requires letting them carry you.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world gathers today, a day of friendship and shared joy, happiness that happens between people. A day of celebration and good company, warm and collective, the kind of joy that needs more than one.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Three of Cups, which means today has community in it, or the conditions for it. Reach for your people. Let the good company actually reach you rather than watching it from a slight remove. The card is also asking: are you present, or performing? There's a difference between being actually in a good moment and producing the look of one. Today try for the real thing, even if it's quieter than the performance. Joy shared is bigger than joy watched.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Three of Cups. Joy that gets bigger when you pass it around. Find your people today and actually let yourself be with them."
+  },
+  "slug": "three-of-cups"
+}

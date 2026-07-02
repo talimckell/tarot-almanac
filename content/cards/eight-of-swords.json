@@ -1,0 +1,67 @@
+{
+  "arcana": "minor",
+  "name": "Eight of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/eight-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Eight · Air · the mind's own trap",
+    "essence": "The Eight of Swords is feeling trapped, bound by a cage that is mostly mental. It is restriction, helplessness, the prison of your own thoughts, where the way out exists but you can't yet see it.",
+    "narrative": "Eight in Swords is the suit's image of mental imprisonment. The old image is a blindfolded figure loosely bound, surrounded by eight swords stuck in the ground like the bars of a cage, water at their feet. But the binding is loose, the cage has gaps, and the way out is open if they could only see it. This is the trap that is mostly in the mind: the helplessness that feels total but isn't, the limitation you've half-built yourself out of fear and old belief. It sits late in the suit because by now the mind has wounded itself enough to construct its own prison, and the card holds both the reality of the trap and the quiet truth that the door isn't locked.",
+    "gift": {
+      "keywords": [
+        "seeing the trap",
+        "recognizing self-imposed limits",
+        "the door that isn't locked"
+      ],
+      "body": "The Eight's gift is a hard one, and it isn't freedom yet. It's the first glimpse that the cage has a gap. Upright, the Eight of Swords is the moment you start to see that the trap is partly one you can leave: noticing that the story keeping you stuck is a story, realizing the rule you've been obeying was never actually a law, feeling the blindfold loosen enough to suspect there's a way out. It's the beginning of escape, not the escape itself. What it offers is the dawning sight that you are less trapped than you feel. The swords have gaps between them. The binding is looser than it looks. Seeing that is the first step out.",
+      "affirmation": "I can see that the cage has gaps. The trap is realer in my mind than in the world, and that means there's a way out."
+    },
+    "shadow": {
+      "keywords": [
+        "victim mentality",
+        "paralysis",
+        "believing the trap is total",
+        "learned helplessness"
+      ],
+      "body": "The cage feels total and the blindfold stays on. The Eight of Swords' shadow is the helplessness that's become a worldview, the certainty that there's no way out when the way out is right there. It's learned helplessness, the \"I can't\" that's really an \"I'm too afraid to try,\" the trap maintained because escaping would mean risking and possibly failing. It's staying bound because the cage, awful as it is, is known, and freedom is terrifying. Underneath is the fear that if you tried to leave and couldn't, you'd have proof the trap is real, so you never test the bars. The prison holds because you've stopped checking whether the door is locked.",
+      "affirmation": "I can test the bars instead of assuming they hold. The only way to learn the door opens is to push it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing the cage others built",
+        "naming real constraints",
+        "freeing yourself from imposed limits"
+      ],
+      "body": "Reversed as refusal, the Eight rejects the cage that others built and called your nature. Some of us were bound early, told what we couldn't be, hemmed in by other people's rules about our gender, our worth, our possibilities, until the cage felt like reality itself. This reclaiming is naming the bars as something done to you, not something true about you. The limits you were handed are not the limits of who you are. You can name the trap as constructed, can see that what felt like your nature was someone else's fence, and can start cutting your way out. If you were caged by other people's certainty about your limits, the reclaiming Eight is you recognizing the bars as theirs and refusing to call them yours.",
+      "affirmation": "The cage I was put in is not my nature. The limits others swore were mine were always theirs to begin with."
+    },
+    "skills": [
+      "Spotting the gap in a trap that feels total",
+      "Telling a real constraint from a story about one",
+      "Testing the bars instead of assuming they hold",
+      "Naming limits that were imposed, not innate",
+      "Taking the first small step before you can see the whole way out"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world felt bound by something it had largely built itself. The collective mood was constrained, hemmed in, the shared sense of a cage that looked total from inside even though the gaps were there. That was the current you arrived into. It gave you a native sensitivity to the difference between a real limit and an imagined one, an instinct that distrusts the story \"there's no way out\" even when it's loud, a baseline suspicion that the door is rarely as locked as it feels.\n\nThe shadow the day also carried is the fear underneath that suspicion. A world that constructed its own trap also taught you, early, how convincing a self-built cage can feel, and you may have absorbed a wariness about trusting your own sense of what's possible.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Eight of Swords as your rising means you meet the world checking for the gap in the cage. Your instinct in a situation that feels stuck isn't to accept the stuckness at face value but to look for what's actually fixed and what only feels fixed. That produces a quality of quiet resourcefulness, a refusal to fully believe the trap is total even when it looks that way.\n\nThe work this rising asks over a lifetime is acting on what you see. The figure in the old image is loosely bound, which the rising can perceive clearly. The growth the suit's arc asks for is testing the rope rather than just noticing it's loose, taking the step that proves the door opens instead of only suspecting it does.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world feels hemmed in today, a bind that looks total, a day of constraint. And the ropes are looser than they seem, the trap more self-made than it first appears, if anyone thinks to test it.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Eight of Swords. A day where you may feel stuck, hemmed in by something. Here's the gentle truth the card holds: the bind looks total but isn't. The blindfold can be lifted and the ropes are looser than they feel. The trap is real and it's also more escapable than it seems from inside it. Test the ropes before you assume they hold.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Eight of Swords. The swords aren't touching her. The cage has gaps. Worth checking before you assume it's locked."
+  },
+  "slug": "eight-of-swords"
+}

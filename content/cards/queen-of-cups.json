@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Queen of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/queen-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Queen · Water · feeling held from within",
+    "essence": "The Queen of Cups is deep feeling held with a steady hand. She has gone all the way into emotion and made her home there, the one who can feel everything without drowning in it.",
+    "narrative": "The Queen is the suit's inward mastery, the element lived from the inside. Where the Knight rides toward feeling, the Queen has already gone all the way down into it and made her home there. She sits at the edge of the water with an ornate cup she gazes into, deep in what she carries. This is emotional depth that doesn't spill, intuition trusted, empathy that has grown boundaries so it can survive being this open. She is the most internally fluent of the courts in the language of feeling, the one others come to because she can hold what they bring without being swept away by it. She has felt her way through enough of life that the deep no longer frightens her, and people can tell. They bring her the things they can't say anywhere else.",
+    "gift": {
+      "keywords": [
+        "intuition",
+        "emotional depth",
+        "empathy",
+        "healing presence",
+        "compassionate wisdom"
+      ],
+      "body": "Upright, the Queen of Cups is the steadiness of someone who feels deeply and doesn't lose themselves in it. It's being the friend people come to in crisis because you can sit with their worst without flinching or fixing. It's trusting the intuition that's never steered you wrong. It's holding enormous feeling, yours and other people's, with a hand that doesn't shake. The gift is depth with boundaries, empathy that lasts because it isn't boundaryless. You can care for others without losing yourself, and your softness is a form of power rather than a leak in it.",
+      "affirmation": "I can feel deeply and not be swept away. My boundaries are what keep my empathy alive."
+    },
+    "shadow": {
+      "keywords": [
+        "enmeshment",
+        "caretaker burnout",
+        "self-neglect",
+        "over-identifying with others"
+      ],
+      "body": "The boundaries dissolve and the deep water floods in. The Queen of Cups' shadow is empathy without edges, feeling everyone else's feelings so completely you lose track of your own. It's the enmeshment where you can't tell whether you're upset or just soaked in someone else's upset. It's the caretaker run dry, giving and giving on the belief that your worth lives in how much you absorb for other people. It's emotional depth turned into a sponge that never gets wrung out. Underneath is usually the fear that if you don't give endlessly, you won't be loved, that your value is your caretaking. The depth is a gift. The shadow is drowning in it because you never learned you were allowed to come up for air.",
+      "affirmation": "My worth is not how much I absorb for others. I can come up for air and still be loving."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reclaiming your emotional space",
+        "refusing the assigned caretaker role",
+        "sovereign softness"
+      ],
+      "body": "The Queen of Cups reverses a second way, as a refusal of the caretaker role that got assigned to you rather than chosen. Some of us were made the emotional caretaker young, the one who managed everyone's feelings, the designated soft place, long before anyone asked if we wanted the job. The reclaiming is taking your emotional space back as sacred and sovereign, deciding for yourself when to open the depth and when to keep it closed. Your empathy is yours to direct, not a public utility. You can be the healer in your community and still refuse to be everyone's unpaid therapist. If you were handed the caretaker role without consent, the reclaiming Queen is you deciding whose feelings you'll hold and whose you'll hand back.",
+      "affirmation": "My empathy is mine to direct. I did not consent to holding everyone, and I can choose again."
+    },
+    "skills": [
+      "Feeling deeply without taking on what isn't yours",
+      "Building boundaries that keep your empathy sustainable",
+      "Telling your own feelings apart from absorbed ones",
+      "Coming up for air without guilt",
+      "Choosing whose emotions you hold"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective depth. The world's emotional current was turned inward, feeling things with a steadiness rather than a rush, the quality of water that has learned to be deep without spilling. That was what you arrived into. It gave you a native fluency with the interior life, a baseline comfort with the profound and the unspoken, an ease in the rooms where people are feeling things they can't quite say.\n\nWhat the day also passed on is the cost of that depth. The people who hold the most usually learned early that holding was what they were for. Whether that was asked of you or offered, it's worth knowing which it was.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Queen of Cups as your rising means you meet the world as the one who can hold it. Your first orientation in any situation is toward what's being felt and whether it's being tended. People sense this quickly and bring you things: their real feelings, their hard situations, the things they can't say in other rooms. You have become someone others trust with the deep water.\n\nThe work this rising asks is the boundary that keeps the gift alive. The Queen doesn't drown. She holds from a shore that's hers. Learning where that shore is, and keeping it, is the lifelong practice of this card.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world holds deep feeling today, compassion with a shore, a day to be felt-with. A capacity for emotional depth, generous and steadying, with the old cost borne by whoever does all the holding.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Queen of Cups. You can hold a lot today: your own feeling and some of other people's, without losing yourself in it. That's available. The card also asks: are you remembering the shore? The Queen is not boundaryless. She holds from inside something that's hers. If people are bringing you their deep water today, you're allowed to receive it and also allowed to hand some of it back.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Queen of Cups. She's looking into the cup, not showing it around. The depth is there. It's hers."
+  },
+  "slug": "queen-of-cups"
+}

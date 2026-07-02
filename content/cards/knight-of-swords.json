@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Knight of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/knight-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Knight · Air · mind as action",
+    "essence": "The Knight of Swords is the mind in headlong action, all logic and speed and force. It is intellect charging forward, decisive and brilliant and prone to running people over on the way to being right.",
+    "narrative": "The Knight is the element in action, and in Swords that action is the mind moving at full speed. The old image is a knight in armor charging on a galloping horse, sword raised, leaning into a fierce wind, all forward momentum. This is intellect as a charge: quick, decisive, driven by logic and the certainty of being right, with little patience for nuance or feeling. Where the Page questioned, the Knight has reached a conclusion and is already galloping toward it. The Knight is the suit's most forceful energy, dazzling in its clarity and dangerous in its speed, the mind that acts so fast and so sure it can cut down everything in its path.",
+    "gift": {
+      "keywords": [
+        "decisiveness",
+        "intellectual courage",
+        "swift action",
+        "directness",
+        "conviction"
+      ],
+      "body": "Upright, the Knight of Swords is the courage to act on what you know, fast and direct. It's saying the true thing the room is avoiding, charging at a problem with clear logic while others dither, the decisiveness that cuts through paralysis and just moves. It's intellectual bravery, the willingness to follow an argument to its conclusion and act on it. What it offers is the gift of decisive clarity in motion, the force to drive an idea forward. You're allowed to be direct, to move fast on a clear truth, to be the one who says it and does it. Sometimes the charge is exactly what a stuck situation needs.",
+      "affirmation": "I can act decisively on what I know is true. Sometimes the direct charge is what a stuck thing needs."
+    },
+    "shadow": {
+      "keywords": [
+        "ruthlessness",
+        "talking over people",
+        "cold logic",
+        "charging without thinking"
+      ],
+      "body": "The charge flattens everything tender in its path. The Knight of Swords' shadow is intellect without warmth, the logic so sure of itself it stops listening, the directness that's really just cutting people down. It's winning every argument and losing every relationship, talking over people, mistaking coldness for clarity and speed for intelligence. It's charging at a conclusion so fast you miss that you're wrong, or right in a way that wounds. Underneath is often a discomfort with feeling, a sense that emotion is weakness and logic is the only safe ground, so you lead with the blade and call it honesty. The brilliant mind just leaves casualties.",
+      "affirmation": "I can slow down and let feeling into the room. Being right at speed is not the same as being wise."
+    },
+    "reclaiming": {
+      "keywords": [
+        "speaking hard truths",
+        "refusing to stay quiet",
+        "directness as integrity"
+      ],
+      "body": "Reversed as refusal, the Knight stops staying quiet just to keep the peace. Some of us were trained into silence, told our directness was rude, our truths inconvenient, our clarity too sharp for polite company, especially when we were naming something others wanted ignored. This reclaiming is taking back the right to say the true thing directly. Your bluntness is not a character flaw to apologize for. You get to name the problem out loud, to refuse the silence that protects the comfortable, to be as direct as the truth requires. The world often calls a clear voice \"too much\" precisely because it's effective. If you were made to soften yourself into silence, the reclaiming Knight is you saying it plainly and refusing to take it back.",
+      "affirmation": "My directness is not a flaw to apologize for. I can name the truth plainly and refuse the comfortable silence."
+    },
+    "skills": [
+      "Acting decisively on a clear truth",
+      "Saying the thing the room is avoiding",
+      "Letting feeling and nuance temper the logic",
+      "Telling honest directness from cold cruelty",
+      "Refusing silence that only protects the comfortable"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of headlong logic. The world's collective mood was fast and forceful, an argument or a conviction charging ahead at full speed, the particular energy of a moment that had stopped deliberating and started acting. That was the current you arrived into. It gave you a native comfort with decisiveness, an instinct to follow a clear thought all the way to action without waiting for consensus, a baseline trust that speed and conviction can move things stuck conversation alone couldn't.\n\nThe shadow it also carried is the cost of that speed. A world charging on logic doesn't always pause to check who's in the path, and you may have absorbed an early relationship to directness that took time to learn how to soften without losing its force.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Knight of Swords as your rising means you meet the world already moving on a conclusion. Your first instinct when you see something clearly is to say it and act on it, fast, rather than sit with it or soften it for the room. That produces real intellectual courage, the kind that cuts through paralysis when everyone else is still deliberating.\n\nThe work this rising asks over a lifetime is the pause before the charge. The horse in the old image is at full gallop into a fierce wind, and the suit's full arc asks whether the direction was checked before the speed picked up. Learning to slow down just enough to let feeling and nuance into the decision is what keeps the directness from becoming collateral damage.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world charges in with its mind today, fast and direct, a day of headlong logic. Sharp and forceful, the kind of momentum that cuts through and occasionally cuts down what it didn't mean to.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Knight of Swords. A day of mental momentum, ideas and arguments moving at speed. Use the clarity and the drive, let yourself think and act quickly. Just check that you're aimed at the real thing before you charge, because this energy is fast and direct and sometimes faster than is wise. Conviction is useful. Conviction without aim runs people over.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Knight of Swords. Full gallop, sword raised, leaning into the wind. Make sure you checked the direction before the speed picked up."
+  },
+  "slug": "knight-of-swords"
+}

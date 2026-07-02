@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Ten of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ten-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Ten · Air · rock bottom, and the dawn behind it",
+    "essence": "The Ten of Swords is the painful end, rock bottom, the worst finally complete. It is ruin and finality, and folded inside it, the strange relief that the worst is over and the only way left is up.",
+    "narrative": "Ten completes the suit, and in Swords the completion is rock bottom. The old image is dramatic: a figure face-down with all ten swords in their back, the scene almost overdone, against a black sky with the first gold of dawn breaking on the horizon. The excess is the point. This is the absolute end of the mind's hard road, the worst-case fully arrived. But the dawn is always in the image, because rock bottom is also solid ground: there is nothing left to fear once the feared thing has happened. The suit ends here, at the painful finish that is also, quietly, a release, because you cannot fall any further and the light is already coming.",
+    "gift": {
+      "keywords": [
+        "painful endings",
+        "rock bottom as release",
+        "the worst is over",
+        "dawn coming"
+      ],
+      "body": "This one is the hardest, because the gift isn't the ending, it's what becomes possible once you've survived it. Upright, the Ten of Swords is the strange peace on the far side of the worst: the collapse that finally ends a thing that needed to end, the rock bottom that turns out to be solid ground, the relief, underneath the pain, of no longer having to dread the fall because you've already landed. It's the dawn breaking behind the ruin. What it offers is the freedom that comes when the worst has happened and you're still here. It's over. You survived the thing you feared, and the light coming up behind you is real. There is only up from here.",
+      "affirmation": "I survived the worst, and the dawn behind it is real. There is nothing left to dread, and only up from here."
+    },
+    "shadow": {
+      "keywords": [
+        "refusing to let it end",
+        "melodrama",
+        "victimhood",
+        "clinging to the wound"
+      ],
+      "body": "The swords stay in and the dawn goes unwatched. The Ten of Swords' shadow is the refusal to let a finished thing be finished, the wound clung to past all use, the rock bottom you furnish and move into instead of climbing out of. It's the melodrama that makes the worst day into a permanent identity, the victimhood that however earned, becomes the whole story. It's keeping the swords in because pulling them out would mean the ordeal is over and you'd have to start living again. Underneath is sometimes the fear that if you let it end, you'll have to risk being hurt anew. So you lie in the ruin with your back to the dawn and call it the truth of your life.",
+      "affirmation": "I can let the worst be over and turn toward the dawn. The ending is real, and so is the morning after it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "rising from ruin",
+        "refusing to stay destroyed",
+        "survival as defiance",
+        "the phoenix"
+      ],
+      "body": "Reversed the other way, the Ten refuses to stay destroyed by what was meant to destroy you. Some of us have been brought to ruin on purpose: cast out, broken down, written off, hit with everything the world had. This reclaiming is the rising afterward, the refusal to let the ending be the end of you. You were not meant to survive this, and you did. The dawn behind the ruin is yours, and getting up from rock bottom, when staying down was expected, is its own act of defiance. You can build a whole new life from the ground you landed on. If the world tried to finish you, the reclaiming Ten is you standing up in the first light and refusing to be a casualty of it.",
+      "affirmation": "What was meant to destroy me did not. I can rise from the ruin, and rising is its own defiance."
+    },
+    "skills": [
+      "Letting a truly finished thing be finished",
+      "Finding the solid ground that rock bottom becomes",
+      "Turning toward the dawn instead of the wound",
+      "Telling honored grief from a permanent identity of ruin",
+      "Rising again when staying down was expected"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world hit bottom. The collective mood was at its lowest, a finality that looked total, and underneath it the first edge of a dawn nobody had quite noticed yet. That was the current you arrived into. It gave you a native understanding that endings, even the brutal kind, can also be solid ground. You carry an instinct that knows the worst day is survivable, because the world you were born into had already proven it.\n\nThe shadow the day also carried is the proximity to ruin you absorbed before you had the words for it. A world at rock bottom on your birthday means you may carry a heightened sensitivity to collapse, yours and other people's, that runs deeper than is always comfortable.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ten of Swords as your rising means you meet the world having already touched the floor once. Your instinct when things get hard is shaped by knowing, somewhere underneath, that even the worst case has a bottom and the bottom is survivable. That gives you a particular steadiness in genuine crisis, a capacity to stay functional when other people are still catching up to how bad things are.\n\nThe work this rising asks over a lifetime is turning toward the dawn once it's actually there. The card's whole gift is in the rising afterward, not in staying fluent in ruin. This rising's growth is trusting that the worst being over means it's actually allowed to be over.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world hits bottom today, a dramatic ending, and the strange relief that the only way left is up. A day of finality, harsh and oddly freeing, the kind of low that turns out to be a turning point.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ten of Swords. A day that can feel like an ending, the dramatic kind, and this one doesn't pretend it's gentle. It also holds a strange relief: when you're already at the bottom, the next move is up. If something has finally finished, you're allowed to let it be finished. The worst of it may be behind you now, not ahead, however it feels in the moment.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ten of Swords. Ten swords. Black sky. And right there on the horizon, the first gold of dawn. It's always in the image. People just don't look that far yet."
+  },
+  "slug": "ten-of-swords"
+}

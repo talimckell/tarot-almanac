@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Seven of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/seven-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Seven · Air · the mind alone, by stealth",
+    "essence": "The Seven of Swords is strategy, stealth, and acting alone. It is the cunning move made quietly, sometimes clever self-protection, sometimes deception, the mind working in the shadows.",
+    "narrative": "Seven in Swords turns the mind toward strategy and stealth. The old image is a figure sneaking away from a camp carrying five swords, leaving two behind, glancing back with a sly look. It reads as theft or escape, getting away with something. This is the suit's most ambiguous card: the cunning that can be clever survival or cowardly deception depending on the why. After the Six's honest crossing, the Seven is the mind that decides to go it alone and work by stealth, and the card holds the open question of whether the secrecy is protecting you or betraying someone. It sits late in the suit, where the mind has learned enough to be strategic and must decide how to use it.",
+    "gift": {
+      "keywords": [
+        "strategy",
+        "cleverness",
+        "independence",
+        "acting alone",
+        "resourcefulness"
+      ],
+      "body": "The Seven of Swords, upright, is the cleverness to handle a thing your own way, quietly. It's the strategic move you make without announcing it, the resourcefulness of getting yourself out of a bind by wit instead of force, the choice to act alone when involving others would only complicate it. It's mental agility, the ability to think around a problem rather than charge it head-on. What it offers is strategic independence, the gift of a mind that can plan its own way through. You're allowed to be strategic, to protect your plans until they're ready, to handle some things solo. Not everything needs to be done in the open or by committee.",
+      "affirmation": "I can be strategic and handle things my own way. Not every move needs an audience or a committee."
+    },
+    "shadow": {
+      "keywords": [
+        "deception",
+        "self-deception",
+        "dishonesty",
+        "getting away with it"
+      ],
+      "body": "The stealth becomes deceit. The Seven of Swords' shadow is the cleverness turned to lying, the corners cut and hidden, the getting-away-with-it that erodes you a little each time. It's the deception of others, but more often the deception of yourself, the stories you tell to avoid a truth, the half-truths that let you skip the hard conversation. It's strategy that's really just avoidance with a smarter mask. Underneath is often the belief that honesty would cost too much, that the sneaky way is the only safe way. So you slip out of the camp with the swords, congratulating yourself, and miss that the person you most fooled was you.",
+      "affirmation": "I can be honest even when stealth would be easier. The person I most need to stop fooling is myself."
+    },
+    "reclaiming": {
+      "keywords": [
+        "strategic survival",
+        "necessary concealment",
+        "protecting yourself by any means",
+        "refusing transparency to the unsafe"
+      ],
+      "body": "The other reversal refuses to be transparent to people who haven't earned it. Some of us survived by stealth: staying closeted where being out wasn't safe, keeping our real selves hidden from those who'd use the truth against us, moving carefully through systems built to catch us. This reclaiming honors the cunning it took to survive, and refuses the shame attached to it. You did not owe honesty to people who would have harmed you with it. Concealment in an unsafe place is not deception, it's strategy, and you are allowed to protect yourself by keeping parts of you hidden until it's safe. If you were made to feel like a liar for surviving by stealth, the reclaiming Seven is you honoring the clever, careful self that got you through.",
+      "affirmation": "I did not owe my truth to people who'd weaponize it. The stealth that kept me safe was wisdom, not deceit."
+    },
+    "skills": [
+      "Thinking strategically around a problem",
+      "Handling some things independently and quietly",
+      "Telling clever self-protection from self-deception",
+      "Being honest with yourself even when stealth is easier",
+      "Honoring the concealment that once kept you safe"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of quiet maneuvering. The world's collective mood was strategic, working things out by stealth rather than declaration, the particular texture of a moment where caution and cunning made more sense than openness. That was the current you arrived into. It gave you a native comfort with discretion, an instinct to think a few moves ahead before you act, a baseline understanding that not everything has to be done in the open to be done well.\n\nThe shadow the day also carried is the ambiguity built into that instinct. A world that runs on quiet strategy can't always tell its own self-protection from its self-deception, and you may carry that same blurred line, useful in some situations and worth questioning in others.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Seven of Swords as your rising means you meet the world with a strategist's instinct. Your first move in a complicated situation is often to think it through quietly before showing your hand, to find the clever route rather than the direct one. That can be a real strength, the resourcefulness of solving things on your own terms.\n\nThe work this rising asks over a lifetime is honesty about the why. Strategic independence and self-deception can look identical from inside, and the growth this rising points toward is checking, regularly, whether the quiet route is actually the wisest path or just the one that lets you avoid something harder. The glance back over the shoulder in the old image is the tell. It's worth noticing what you're glancing back at.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is strategic today, the indirect route, a day that runs on cleverness. Resourceful and a little guarded, the kind of maneuvering that solves things and sometimes conceals them.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Seven of Swords. A day that calls for cleverness, for the indirect route, for thinking a few moves ahead. Strategy is a real strength here. Just notice if you're being resourceful or if you're hiding something you'd rather not bring into the open. The lone approach works until it becomes a way of cutting yourself off from the people who'd help.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Seven of Swords. Five swords gone, two left behind, one glance back. Worth asking what you're actually leaving behind today."
+  },
+  "slug": "seven-of-swords"
+}

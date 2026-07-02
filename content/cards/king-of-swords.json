@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "King of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/king-of-swords",
+    "cardMeta": "Minor Arcana · Swords · King · Air · mind as outward expression",
+    "essence": "The King of Swords is the mind expressed outward as authority, judgment, and principle. It is intellect matured into fair leadership, the clear thinker who can hold truth and ethics steady and apply them in the world.",
+    "narrative": "The King is the element in its most outward, expressed form, air turned toward the world as authority and judgment. The old image is a king on a throne, robed in blue, an upright sword held slightly tilted, his gaze direct and impartial, butterflies and a stern sky behind him. This is mind as mature authority: the judge, the strategist, the leader who governs by reason and principle. Where the Queen holds clear sight inwardly, the King applies it outwardly, making the calls, setting the standards, speaking the truth that organizes things. The King of Swords is intellect grown into ethical authority, the seasoned power of a mind used to lead with fairness rather than force.",
+    "gift": {
+      "keywords": [
+        "authority",
+        "sound judgment",
+        "ethics",
+        "intellectual leadership",
+        "fair principle"
+      ],
+      "body": "At his best the King of Swords is the clear, fair authority of a mind you can trust to make the call. It's the leader who decides by principle instead of mood, the judgment that weighs things honestly and rules fairly, the person who can hold a hard truth steady and act on it with integrity. It's intellect grown into ethics, power used with reason and restraint. What it offers is the gift of principled authority, a mind clear enough and fair enough to lead. You can hold authority with integrity, can make hard calls by sound principle, can be the steady clear head a situation needs. Used well, your clarity becomes a form of justice.",
+      "affirmation": "I can hold authority with fairness and principle. My clarity, used well, becomes a form of justice."
+    },
+    "shadow": {
+      "keywords": [
+        "cold authority",
+        "tyranny of logic",
+        "judgment without mercy",
+        "rigid principle"
+      ],
+      "body": "The judge becomes the tyrant of pure reason. The King of Swords' shadow is authority gone cold, principle without mercy, the logic so rigid it crushes the human beings it was supposed to serve. It's the leader who's technically right and humanly wrong, the judgment that applies the rule and ignores the person, the intellect that uses its authority to dominate rather than to serve. It's mistaking coldness for fairness, rigidity for principle, the power to decide turned into the power to control. Underneath is often the belief that feeling corrupts judgment, that mercy is weakness, that only detached logic can be trusted. So the clear mind rules justly on paper and harms people in fact.",
+      "affirmation": "I can let mercy inform my judgment. A principle that crushes the people it serves has lost the plot."
+    },
+    "reclaiming": {
+      "keywords": [
+        "redefining authority",
+        "justice from the margins",
+        "leading by ethics the system lacks"
+      ],
+      "body": "Reversed the other way, the King refuses an authority that calls itself impartial while serving only some. Many of us have been judged by systems that claimed to be neutral and weren't, ruled by an \"objective\" logic that somehow always landed against people like us. This reclaiming is claiming the authority to judge by truer principles than the ones we were handed. Your sense of justice, sharpened by being on the wrong end of the official kind, is not bias, it's clearer sight. You can hold authority that actually accounts for the people the old logic ignored, can lead by ethics the system lacks. If you were ruled by a justice that was never just to you, the reclaiming King is you picking up the sword and judging by a fairness that finally includes you.",
+      "affirmation": "The justice I was handed was never neutral. I can hold authority by a fairness that finally includes the people it ignored."
+    },
+    "skills": [
+      "Making hard calls by sound principle",
+      "Holding authority with integrity and restraint",
+      "Letting mercy inform clear judgment",
+      "Telling true fairness from rigid, cold rule",
+      "Judging by ethics that include the people the old logic ignored"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of established judgment. The world's collective mood was authoritative and principled, the shared sense of standards being set and held, the particular weight of a moment organized around what's fair rather than what's expedient. That was the current you arrived into. It gave you a native respect for clear principle, an instinct to want the call made honestly rather than conveniently, a baseline trust that reason applied fairly can actually settle something.\n\nThe shadow the day also carried is the coldness that can ride alongside that authority. A world organized around impartial judgment can forget that its impartiality was never as neutral as it claimed, and you may have absorbed a respect for \"the rules\" that took time to examine for whom the rules actually worked.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The King of Swords as your rising means you meet the world looking for the principle underneath it. Your instinct in a complicated situation is to find the fair standard, the honest call, the thing that should govern the decision regardless of who's loudest. People bring you their disputes because they trust your read will be reasoned rather than reactive.\n\nThe work this rising asks over a lifetime is keeping mercy in the room with the judgment. The throne in the old image is stern, and the suit's full arc asks whether the fairness being applied actually accounts for the person standing in front of it, or only for the abstract principle. The clearest authority remembers there's a human on the other side of the ruling.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world judges soundly today, thinking things through to a fair conclusion. A day of principled clarity, rigorous and a little austere, the kind of judgment that's right and sometimes forgets to be kind.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the King of Swords. A day for sound judgment, for thinking something through to its honest conclusion. You have the discernment this moment asks for, so lead with the clear, fair thought. Just keep the heart in the room with the head, because principle without warmth can decide correctly and still land coldly. The best judgment knows what it's deciding about.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the King of Swords. The sword is upright but tilted, not rigid. There's give in it. Keep that in mind before you rule on anything today."
+  },
+  "slug": "king-of-swords"
+}

@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Eight of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/eight-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Eight · Earth · the craft refined",
+    "essence": "The Eight of Pentacles is dedicated craft, the patient repetition that builds mastery. It is diligence, skill-building, and the quiet satisfaction of getting better at something through steady, focused work.",
+    "narrative": "Eight in Pentacles is the suit's card of devoted craft. The old image is an artisan at a bench, head down, carving coin after coin, finished ones mounted neatly beside them, a town in the distance they're not distracted by. This is mastery in the making: the focused repetition, the skill deepening through practice, the work done well for its own sake. After the Seven's waiting, the Eight is the return to the bench, the choice to keep refining. It sits late in the suit because real skill is the fruit of patient, repeated effort, and the Eight honors the unglamorous truth that you get good at something by doing it, again and again, with care.",
+    "gift": {
+      "keywords": [
+        "diligence",
+        "mastery",
+        "focused work",
+        "skill-building",
+        "craftsmanship"
+      ],
+      "body": "Upright, the Eight of Pentacles is the deep satisfaction of getting good at something through patient practice. It's the hours at the craft that are starting to show, the skill you can feel sharpening rep by rep, the focused work that quiets the mind and builds something real in your hands. It's diligence that isn't drudgery because you care about the thing. What it offers is the gift of mastery in the making, the steady pleasure of devoted work. You're allowed to take your craft seriously, to find meaning in doing a thing well, to enjoy the slow climb toward skill. The bench is honest. Showing up to it, again and again, is how good hands are made.",
+      "affirmation": "I can build mastery one patient rep at a time. The bench is honest, and showing up to it is how good hands are made."
+    },
+    "shadow": {
+      "keywords": [
+        "perfectionism",
+        "drudgery",
+        "soulless repetition",
+        "working without meaning"
+      ],
+      "body": "The bench becomes a treadmill. The Eight of Pentacles' shadow is craft drained of meaning, the repetition that's stopped building anything, the perfectionism that polishes one coin forever and never finishes. It's work for work's sake long after the joy is gone, grinding at a skill out of compulsion rather than care, mistaking busyness for craft. Or it's the perfectionism that can't release anything as good enough, the endless refining that's really fear of being judged on the finished thing. Underneath is sometimes the belief that you are only worth what you produce, that stopping the work means becoming worthless. So the bench that should have built mastery just becomes a place to hide inside endless, joyless effort.",
+      "affirmation": "I can do good work without grinding myself hollow. My worth is not only what comes off the bench."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing the productivity trap",
+        "craft on your own terms",
+        "worth beyond output"
+      ],
+      "body": "Reversed as refusal, the Eight stops letting your whole worth be measured in output. Many of us were raised to equate our value with our productivity, taught that rest is laziness and that a person is only as good as what they make. This reclaiming is separating who you are from what you produce. Your worth is not your output. You get to pursue craft for love rather than proof, to work at your own pace, to value the making without making it the measure of whether you deserve to exist. The bench can be a joy instead of a tribunal. If you were taught that you are only worth what you produce, the reclaiming Eight is you doing the work for its own sake and knowing you'd be worthy even if you set the tools down.",
+      "affirmation": "My worth is not my output. I can do my craft for love, and I'd be worthy even with the tools set down."
+    },
+    "skills": [
+      "Building skill through patient, repeated practice",
+      "Finding meaning in work done well",
+      "Telling devoted craft from joyless grinding",
+      "Releasing a thing as good enough instead of polishing forever",
+      "Separating your worth from your productivity"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was at the bench. The collective mood was focused and devoted, the shared sense of skill being built through patient repetition, the particular satisfaction of work done with care rather than work rushed through. That was the current you arrived into. It gave you a native respect for craft, an instinct that mastery comes from showing up again and again rather than from talent alone, a baseline comfort with the unglamorous middle of getting good at something.\n\nThe shadow the day also carried is the risk of the bench becoming a hiding place. A world devoted to its craft on the day you were born may have taught you, early, that constant output is the proof of worth, and you may carry a harder time than most knowing when the work is actually done.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Eight of Pentacles as your rising means you meet the world ready to put in the reps. Your first instinct with anything worth doing is to practice it, to refine it, to trust that skill comes from patient repetition rather than a single flash of talent. That produces real mastery over time, and a credibility other people feel when they see your work.\n\nThe work this rising asks over a lifetime is knowing when to look up from the bench. The artisan in the old image isn't distracted by the town in the distance, which is the gift and also the risk. The suit's full arc asks this rising to remember that the craft is meant to serve a life, and the life includes more than the work.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is devoted to its work today, refining the craft, a day of quiet pleasure in doing it well. A day of skilled focus, absorbing and a little monastic, where dedication can shade into retreat.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Eight of Pentacles. A day for devoted work, for the quiet satisfaction of doing something with care. Let yourself sink into the craft, into the repetition that refines the skill. There's real joy in getting good at something on purpose. Just notice if the devotion ever tips into hiding inside the work, using the bench as a way to avoid everything that isn't the bench.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Eight of Pentacles. Head down, coin after coin, the town not even visible past the bench. Good work today. Just look up once."
+  },
+  "slug": "eight-of-pentacles"
+}

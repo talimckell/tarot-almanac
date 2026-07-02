@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Three of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/three-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Three · Earth · the work takes shape with others",
+    "essence": "The Three of Pentacles is skilled collaboration, the work coming together through many hands. It is craft, teamwork, and the early proof that what you're building is good and others see it too.",
+    "narrative": "Where the Two juggled alone, the Three brings other hands in. Three in Pentacles is the suit's collaboration card: the old image is a craftsperson in a cathedral, tools in hand, consulting with two others holding the plans, the work visibly underway in the stone above them. This is skill recognized and combined, the moment a project stops being one person's effort and becomes a shared build. It sits early in the suit because real material things, cathedrals and businesses and homes, get built by people working together, each bringing their craft. The Three is the suit's reminder that the solid life is rarely built solo, and that being good at your part, among others good at theirs, is its own deep satisfaction.",
+    "gift": {
+      "keywords": [
+        "collaboration",
+        "skill",
+        "craftsmanship",
+        "recognition",
+        "building together"
+      ],
+      "body": "At its best the Three of Pentacles is the satisfaction of doing skilled work alongside people who do theirs well. It's the project where everyone pulls their weight and it shows, the trade you've gotten actually good at, the moment your contribution gets seen and valued by people who know what good work looks like. It's craft and collaboration meeting, the pleasure of building something real with the right people. What it offers is the gift of skilled, recognized, shared work. You're allowed to take pride in your craft and to need other people's. Being one good pair of hands among others is not lesser than going it alone. It's often how the cathedral actually gets built.",
+      "affirmation": "I can take pride in my craft and lean on others' too. The cathedral gets built by many good hands, including mine."
+    },
+    "shadow": {
+      "keywords": [
+        "poor teamwork",
+        "unrecognized effort",
+        "ego clashes",
+        "working in a vacuum"
+      ],
+      "body": "The hands stop working together. The Three of Pentacles' shadow is collaboration gone wrong, the team where credit's hoarded and effort goes unseen, the project sunk by ego or by no one actually listening to anyone else. It's doing real work that no one recognizes, the skill poured in and overlooked, or the refusal to collaborate at all because trusting other hands feels like risk. It's the build that fails because the people building it won't align. Underneath is sometimes the fear that needing others is weakness, or that your contribution only counts if you did it alone. So the work suffers, the recognition curdles, and the cathedral goes up crooked or not at all.",
+      "affirmation": "I can let my work be shared and seen. Needing other hands is not weakness, and good collaboration lifts us all."
+    },
+    "reclaiming": {
+      "keywords": [
+        "demanding real recognition",
+        "refusing erased labor",
+        "claiming your contribution"
+      ],
+      "body": "The other reversal refuses to let your labor be erased from what it built. Some of us do the work and watch others take the credit: the ideas absorbed without attribution, the unglamorous effort that holds everything up and never gets named, the contributions written out of the story because of who we are. This reclaiming is claiming your share of what you helped build. Your work counts, and your name belongs on it. You get to refuse the erasure, to name what you contributed, to insist on recognition that was quietly withheld. The cathedral has your hands in it whether or not the plaque says so. If your labor was taken and uncredited, the reclaiming Three is you putting your name back on the work.",
+      "affirmation": "My labor belongs to the story of what it built. I refuse to let my contribution be erased."
+    },
+    "skills": [
+      "Doing skilled work alongside others who do theirs",
+      "Taking pride in craft without needing to go solo",
+      "Letting your contribution be seen and shared",
+      "Telling healthy collaboration from credit-hoarding",
+      "Claiming recognition for labor that was erased"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was building together. The collective mood was collaborative and craft-oriented, the shared sense of something real coming together through many hands rather than one. That was the current you arrived into. It gave you a native respect for shared work, an instinct to look for the team rather than going it alone, a baseline trust that the lasting things get built by people pooling their skill rather than by any one person's solo effort.\n\nThe shadow the day also carried is the question of whose contribution gets named. A world building collaboratively doesn't always credit fairly, and you may carry a heightened sensitivity to labor going unseen, yours or other people's, that runs deeper than is always comfortable.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Three of Pentacles as your rising means you meet the world looking for your part in the build. Your first instinct on a project is to find where your particular skill fits alongside other people's, rather than to take the whole thing on alone. That produces real collaborative strength, the kind of craftsperson other people want on the team because you do your part well and respect that they're doing theirs.\n\nThe work this rising asks over a lifetime is making sure your contribution gets seen. The figure in the old image is consulted, present in the planning, not just executing in silence. The growth this rising points toward is claiming your place at the table rather than assuming good work speaks for itself.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world builds together today, craft and collaboration, the early skilled work of a lasting thing. A day of combined effort, productive and interdependent, where the strength is in the partnership and so is the friction.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Three of Pentacles. A day for building something with other people. There's pleasure in craft and collaboration, in work that needs more than one pair of hands, and your part matters as much as theirs. Let yourself both contribute and learn. It also means loosening your grip on doing it all yourself. The lasting things get built together, or they don't get built.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Three of Pentacles. Three figures, tools, the cathedral plans on the table. None of them are building it alone."
+  },
+  "slug": "three-of-pentacles"
+}

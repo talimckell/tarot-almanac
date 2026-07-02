@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Three of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/three-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Three · Air · the heart pierced",
+    "essence": "The Three of Swords is heartbreak, the clean pain of a truth that hurts. It is grief, betrayal, the sorrow that comes when the mind sees clearly something the heart wishes weren't so.",
+    "narrative": "Three in Swords is the suit's first full wound. The Ace cut, the Two looked away, and the Three is the heartbreak that lands when the truth finally pierces. The old image is stark: a red heart pierced by three swords against a grey, raining sky, no figure at all, just the pure image of sorrow. This is heartbreak as the suit's honest center, the pain that comes from clarity, from seeing the betrayal or the loss for what it is. It sits early in the journey because the mind's clear sight, the suit's whole gift, will sometimes show you exactly the thing that breaks your heart. There's no softening it. The card simply tells the truth of the hurt.",
+    "gift": {
+      "keywords": [
+        "honest grief",
+        "necessary heartbreak",
+        "clarity through pain",
+        "feeling the cut"
+      ],
+      "body": "This one is hard, because the gift isn't comfort, it's the honesty of letting it hurt. Upright, the Three of Swords is the clean grief of facing a loss instead of numbing it: the relationship you finally admit is over, the betrayal you stop explaining away, the cry in the car that you'd been holding for weeks. It's the pain that comes from seeing clearly, and the strange relief that the seeing brings. What it offers is the honesty of real heartbreak, fully felt. The cut is real. Letting it be real, instead of pretending it doesn't hurt, is how it begins, eventually, to close.",
+      "affirmation": "I can let it hurt without pretending otherwise. Feeling the cut honestly is how it starts to heal."
+    },
+    "shadow": {
+      "keywords": [
+        "dwelling in pain",
+        "rehearsing the wound",
+        "refusing to heal",
+        "stored grief"
+      ],
+      "body": "The swords stay in long after the wound could have closed. The Three of Swords' shadow is grief that's become an identity, the heartbreak rehearsed so many times it's worn a groove, the wound reopened on purpose because the pain is at least familiar. It's replaying the betrayal at 2am for the hundredth time, keeping the hurt fresh because letting it heal feels like letting them off the hook. Or it's the opposite, the grief stuffed down so hard it calcifies, never felt and never released. Underneath is sometimes the fear that healing means forgetting, that if the wound closes the loss didn't matter. So the swords stay in, and the heart never gets to mend.",
+      "affirmation": "I can let the wound close without betraying what it meant. Healing is not forgetting."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to hide your pain",
+        "grief witnessed",
+        "the right to be hurt openly"
+      ],
+      "body": "The other reversal refuses to hide a heartbreak the world told you didn't count. Some of us grieve losses no one will acknowledge: the relationship that wasn't legible to others, the family that cut us off, the version of a life we were never allowed to have. This reclaiming is letting the pain be real and witnessed even when you were told it shouldn't be. Your heartbreak is valid even if no one else will name it a loss. You don't have to grieve in private because your grief is inconvenient or unrecognized. If you were made to carry a sorrow alone because the world wouldn't count it, the reclaiming Three is you holding your heartbreak up to the light and refusing to be ashamed of it.",
+      "affirmation": "My heartbreak is real even if the world won't name it. I can grieve openly and without shame."
+    },
+    "skills": [
+      "Letting a loss hurt instead of numbing it",
+      "Telling honest grief from rehearsed pain",
+      "Letting a wound close without fearing you'll forget",
+      "Naming a heartbreak the world refuses to count",
+      "Grieving openly instead of hiding the hurt"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective heartbreak. The world's shared mood was grieving something, a truth that had pierced through and left a real ache, the particular sorrow of clarity that hurts. That was the air around you at the beginning. It gave you a native understanding that some truths are painful and worth facing anyway, an ease with naming grief rather than performing past it, a baseline trust that feeling something honestly is how it eventually moves.\n\nThe shadow the day also carried is the familiarity with pain that can become a pattern. A world grieving openly on the day you were born also taught you what sorrow looks like up close, and you may carry a specific sensitivity to heartbreak, yours and other people's, that runs deeper than most.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Three of Swords as your rising means you meet the world without flinching from what hurts. Your instinct when something is painful isn't to look away from it but to name it clearly, even when the naming costs something. That gives you an honesty other people sometimes find startling, the willingness to say the hard true thing instead of the comfortable almost-true one.\n\nThe work this rising asks over a lifetime is letting the wound actually close. The clarity that names pain honestly is the gift. What the suit's arc asks next is trusting that feeling it all the way through is how it stops being the whole story, rather than something you have to keep proving by carrying it forever.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world aches today, the sharp clarity of a hard truth, a day that asks to be felt honestly. Heartache that names itself, painful and clean, the kind that moves through when it isn't hidden.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Three of Swords. Today may carry some ache, the sharp clarity of a hard truth. This one doesn't pretend the hurt isn't real, so let it be felt rather than buried. Pain that's named tends to move through; pain that's hidden settles in and stays. Be tender with the sore place, and trust that feeling it is how it eventually stops being the whole story.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Three of Swords. No figure in this one. Just a heart, three swords, rain. It doesn't soften it. It just tells the truth."
+  },
+  "slug": "three-of-swords"
+}

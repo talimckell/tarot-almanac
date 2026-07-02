@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Knight of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/knight-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Knight · Water · feeling in motion",
+    "essence": "The Knight of Cups is the heart on a quest. It is feeling turned into pursuit, the romantic who follows what moves them, the element of water finally going somewhere. It acts on emotion, sometimes before the emotion has fully thought itself through.",
+    "narrative": "Among the courts, the Knight is the suit's action, the element doing rather than studying or holding. After the Page's apprenticeship, the Knight rides out, and in Cups the riding-out is romantic: this is the one who pursues love, beauty, the dream, the feeling worth chasing. The old image is a knight on a slow horse, offering a cup like a proposal, the picture of the heart on a mission. But the Knight is the least grounded of the courts, less embodied than the Queen and less seasoned than the King, which is the catch built into it. It acts on feeling fast, sometimes faster than wisdom, mistaking the intensity of an emotion for proof it's true. The Knight of Cups is the romance of following your heart, with all the beauty and all the risk that the word romance carries.",
+    "gift": {
+      "keywords": [
+        "romance",
+        "emotional pursuit",
+        "idealism",
+        "following the heart",
+        "poetic courage"
+      ],
+      "body": "Upright, the Knight of Cups is the courage to actually follow what moves you. It's making the trip to tell someone how you feel. It's quitting the sensible plan to chase the thing your heart won't shut up about. It's leading with emotion in a world that calls that naive, and doing it anyway. The gift is heart-led action, the bravery to treat your feelings as worth pursuing rather than managing. It's brave to follow your heart, and your emotional quests, in love or art or identity, deserve to be honored with some poetic pride. You can chase what moves you. The trick the card is teaching is to stay grounded while you do.",
+      "affirmation": "I can follow my heart and still stay grounded. My feelings are worth the quest."
+    },
+    "shadow": {
+      "keywords": [
+        "escapism",
+        "moodiness",
+        "love-bombing",
+        "fantasy over substance",
+        "unrealistic expectations"
+      ],
+      "body": "The quest becomes a way of never arriving. The Knight of Cups' shadow is chasing the feeling instead of the substance, in love with being in love, more committed to the romance of the pursuit than to anything real at the end of it. It's the moodiness of someone ruled by the weather of their emotions. It's love-bombing, the grand romantic gesture that's really about the gesture. Sometimes it's escapism dressed as idealism, using the next dream to avoid the present life. Underneath is often the fear that you'll never find what you're looking for, that the whole chase is a fantasy that will disappoint you, so you keep moving before any of it can be tested. The romance is real. The shadow is preferring it to reality.",
+      "affirmation": "I can want the real thing, not just the feeling of wanting. Grounded love outlasts the chase."
+    },
+    "reclaiming": {
+      "keywords": [
+        "heart-led living",
+        "refusing the savior story",
+        "returning to your own truth"
+      ],
+      "body": "The Knight of Cups reverses a second way, as a refusal to mistake love for validation, or rescue for connection. Watch for the savior narrative, the romance where you're either being saved or doing the saving, where love is the thing that finally proves you're worth something. The reclaiming is following your heart from your own truth instead of from that hunger. You get to live poetically, to chase beauty and feeling and meaning, without needing someone else's gaze to make it real. If you learned that love was the validation you'd been starving for, the reclaiming Knight is you pursuing what moves you because it's yours, not because it might finally fill the hole.",
+      "affirmation": "I follow my heart from my own truth, not from a hunger to be chosen."
+    },
+    "skills": [
+      "Letting feeling move you toward action, not away from life",
+      "Telling the real thing apart from the romance of wanting it",
+      "Staying grounded while you follow the heart",
+      "Noticing the savior story before you cast yourself in it",
+      "Pursuing what moves you for your own sake"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was following its heart. The collective mood was in motion, romantic and forward-leaning, the emotional quality of feeling that had become pursuit. That was the current around you at the beginning. It gave you a native faith in the value of the quest, an instinct to treat your feelings as worth going somewhere for, a comfort with leading with the heart rather than waiting for the logic to catch up.\n\nThe shadow it also gave you is the untethered quality of a world moved primarily by feeling. The day didn't offer much ballast, and you may have had to learn grounding as a later skill rather than inheriting it.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Knight of Cups as your rising means you meet the world in motion toward what moves you. Your first instinct when you feel something is to follow it, to let the heart lead and figure out the ground later. That produces a quality of aliveness and courage that other people feel and are drawn to. You go toward things.\n\nThe work this rising asks over time is the ballast. The Knight's horse is moving steadily but not galloping, which is its own kind of wisdom. You learn, over time, that you can follow what moves you more truly when you're not outrunning your own footing.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world follows its heart today, moved by feeling, a day of romance and emotional tide. Beautiful and a little untethered, the kind of day that moves on feeling and sometimes forgets to check the ground.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Knight of Cups. Something is calling and today the card says follow it. Let the heart lead. Make the move you've been thinking about. The Knight's caution isn't don't go. It's stay grounded while you go. The feeling is real and worth pursuing. Just keep enough ballast that you know what you're riding toward, not only what you're riding away from.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Knight of Cups. Slow horse. Cup held out. Heart already decided. The Knight isn't charging. He's riding steadily toward the thing he means."
+  },
+  "slug": "knight-of-cups"
+}

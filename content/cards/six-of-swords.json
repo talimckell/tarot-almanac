@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Six of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/six-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Six · Air · the passage to calmer water",
+    "essence": "The Six of Swords is the journey away from trouble toward something calmer. It is transition, the move out of a hard place, the quiet passage that isn't joyful yet but is finally moving in the right direction.",
+    "narrative": "Six brings recovery after the Five's hollow conflict, and in Swords that recovery is a literal crossing. The old image is a figure being ferried across water in a boat, swords standing upright in the hull, a companion and a child huddled with them, the near water choppy and the far shore calm. They are leaving something. This is the suit's transition card, the move from rough water toward smooth, carrying your burdens with you but carrying them somewhere better. It sits past the midpoint because by now the journey has taught enough hard lessons that the only sane move is to go, quietly, toward calmer ground.",
+    "gift": {
+      "keywords": [
+        "transition",
+        "moving on",
+        "gradual healing",
+        "leaving the storm"
+      ],
+      "body": "At its best the Six of Swords is the quiet relief of finally moving toward calmer water. It's leaving the city where everything went wrong, the slow improvement after a hard season, the move that's quiet but unmistakably toward better. It's not joy yet, but it's the steady direction of getting out. What it offers is passage, the felt sense of leaving the worst behind even while you carry what you learned. You're allowed to go somewhere calmer. The water ahead is smoother than the water behind, and moving toward it, even slowly, even still tired, is enough.",
+      "affirmation": "I can move toward calmer water. Leaving the storm behind is progress even when it's quiet."
+    },
+    "shadow": {
+      "keywords": [
+        "carrying the past",
+        "geographic cures",
+        "unable to move on",
+        "baggage"
+      ],
+      "body": "The boat moves but the swords come along, upright and heavy. The Six of Swords' shadow is the move that changes everything except what you carry, the geographic cure that relocates the problem because the problem was never the place. It's leaving the city but bringing the patterns, the fresh start that's the same story in a new setting, the running that never arrives because what you're fleeing is in the boat with you. Or it's being unable to leave at all, stuck in the rough water because the crossing feels too hard. Underneath is the fear that calmer water doesn't exist for you, so you either never launch or you carry the storm wherever you row.",
+      "affirmation": "I can do the inner work the move alone won't do. Calmer water is real, and reaching it means setting some swords down."
+    },
+    "reclaiming": {
+      "keywords": [
+        "leaving for your survival",
+        "refusing to stay in harm",
+        "the right to flee"
+      ],
+      "body": "Reversed the other way, the Six refuses to stay somewhere that was killing you slowly. Some of us had to leave to survive: the hometown that had no place for us, the family that would only accept a version of us that wasn't real, the community that ran on our silence. This reclaiming is honoring the leaving as an act of self-preservation, not betrayal. You were allowed to go. Choosing calmer water over a familiar storm is not abandonment, it's survival, and you don't owe anyone your continued presence in a place that harmed you. If you were made to feel guilty for leaving what hurt you, the reclaiming Six is you in the boat, rowing toward a life that lets you breathe, and not looking back with shame.",
+      "affirmation": "I was allowed to leave what was harming me. Choosing my survival over a familiar storm is not betrayal."
+    },
+    "skills": [
+      "Moving toward calmer ground even when it's not dramatic",
+      "Doing the inner work a change of place can't do alone",
+      "Carrying lessons forward without carrying the whole storm",
+      "Recognizing when leaving is genuine survival",
+      "Releasing guilt for getting yourself out"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of passage. The world's collective mood was in transition, moving away from something hard toward something calmer, the particular quality of a crossing that isn't finished but is clearly headed in the right direction. That was the current you arrived into. It gave you a native understanding of transition as a real and gradual thing, an ease with the slow movement out of hard places, a baseline trust that things can get calmer even when the getting-there takes time.\n\nThe shadow the day also carried is the temptation of the geographic cure. A world in transition can confuse moving with changing, and you may have absorbed an early instinct to relocate the problem rather than examine what's actually being carried in the boat.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Six of Swords as your rising means you meet the world already moving toward calmer water. Your instinct after something hard is to go, steadily, toward whatever's better, rather than stay and relitigate it. That produces a quality of forward motion that other people find reassuring when things are rough: you know how to leave a bad situation without needing it to resolve first.\n\nThe work this rising asks over time is honesty about the cargo. The swords are standing upright in the boat, which means they're still there, still sharp, just being carried somewhere new. The growth this rising points toward is doing the inner work that the crossing alone can't do, so the calmer water you're rowing toward actually feels different once you arrive.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is in passage today, leaving rough water for something calmer, a quiet crossing. A day of transition, steadying and a little sorrowful, moving on while still carrying what came before.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Six of Swords. A day of passage, leaving rougher water for something gentler. This isn't dramatic, just a quiet crossing, a real movement away from something hard toward something steadier. Let it be slow. You don't have to arrive today, and you can grieve what you're leaving even as you're glad to be going. Both can ride in the same boat.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Six of Swords. Far shore calm. Near water choppy. The boat is already moving. That's enough for today."
+  },
+  "slug": "six-of-swords"
+}

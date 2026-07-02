@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Four of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/four-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Four · Air · the mind at rest",
+    "essence": "The Four of Swords is rest, retreat, and recovery. It is the necessary pause after pain, the stillness that lets a worn-out mind heal before it has to face the world again.",
+    "narrative": "Four is the number of structure and stability, and after the Three's heartbreak, the Four is the rest that wound demands. The old image is a figure lying still as if on a tomb, hands in prayer, three swords mounted on the wall above and one beneath, a stained-glass window letting in quiet light. It looks like death but it's sleep, deliberate retreat. This is the recovery the suit insists on after the wound, genuine rest rather than avoidance, the mind powering down so it can repair. It sits where it does because you cannot keep cutting and bleeding without stopping, and the Four is the permission, and the necessity, to stop.",
+    "gift": {
+      "keywords": [
+        "rest",
+        "recovery",
+        "retreat",
+        "mental quiet",
+        "restoration"
+      ],
+      "body": "Upright, the Four of Swords is the rest you finally let yourself take. It's the day off you stop feeling guilty about, the retreat from the noise so your mind can stop spinning, the deliberate quiet after a stretch that took everything. It's recovery treated as necessary rather than lazy, the still pause that lets a worn-out mind come back to itself. What it offers is restoration, the permission to stop and heal before you pick the swords back up. You're allowed to rest. The pause is not the opposite of strength. It's what makes the next round of it possible.",
+      "affirmation": "I can rest without guilt. The pause is not weakness. It's what lets me return."
+    },
+    "shadow": {
+      "keywords": [
+        "burnout",
+        "isolation",
+        "hiding out",
+        "retreat that becomes avoidance"
+      ],
+      "body": "The rest becomes a place to hide. The Four of Swords' shadow is the retreat that stopped being recovery and turned into avoidance, the withdrawal that was supposed to be temporary and became the whole life. It's hiding out from the world long past healing, calling isolation rest, the disengagement that protects you from hurt by protecting you from everything. Or it's the burnout so deep you can't tell whether you're recovering or just shut down. Underneath is sometimes the fear that re-entering means getting cut again, so the tomb becomes a place to stay instead of a place to heal. The rest that should have restored you just keeps you under.",
+      "affirmation": "I can rest and then return. Recovery is meant to end with me back in my life, not hidden from it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "rest as resistance",
+        "refusing the grind",
+        "claiming recovery",
+        "the right to stop"
+      ],
+      "body": "Reversed as refusal, the Four rejects the demand that you never stop. We're taught that worth is output, that rest must be earned, that slowing down is falling behind. For those of us pushed hardest to prove we deserve our place, the pressure to keep producing never lets up. This reclaiming is taking rest as a right, not a reward. You do not have to earn the pause. Your need to stop and recover is not a failure of will, and refusing the grind is a form of resistance to a world that wants you only as useful as your last output. If you were taught that stopping is for people who matter less, the reclaiming Four is you lying down anyway and calling it yours.",
+      "affirmation": "I do not have to earn rest. Stopping to recover is my right, not my reward."
+    },
+    "skills": [
+      "Resting before you're completely depleted",
+      "Treating recovery as necessary, not indulgent",
+      "Telling genuine rest from hiding out",
+      "Returning to your life after the pause",
+      "Refusing the belief that worth is constant output"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world stopped to rest. The collective mood was quiet, recovering, the shared energy of swords laid down after something that had taken too much. That was the air around you at the beginning. It gave you a native permission for stillness, an instinct that knows rest is part of the cycle rather than a failure of it, a baseline comfort with the pause that other people sometimes have to learn the hard way.\n\nThe shadow the day carried is harder to spot precisely because the rest looked so peaceful: a world resting can also be a world avoiding, and the line between genuine recovery and retreat can be difficult to find when stillness is the inheritance you started with.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Four of Swords as your rising means you meet the world knowing when to stop. Your instinct after something hard is to retreat and recover rather than push through, to let the mind go quiet before asking it to function again. That produces a quality of genuine restoration that other people, who push past their limits without noticing, find themselves drawn to or envious of.\n\nThe work this rising asks over time is the return. The figure in the old image is resting, not staying. The gift is the permission to stop. What the suit's full arc asks is that the rest, eventually, ends with you back in your life rather than permanently apart from it.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world rests today, a necessary pause, swords laid down and recovery underway. A day of stillness, restorative and quiet, the kind of rest that heals when it isn't just avoidance.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Four of Swords. A day for real rest. This is the pause that isn't laziness, the recovery the mind needs after too much, so lay the swords down for a while. Stillness isn't the same as stopping, and you'll think more clearly on the other side of real rest. Just notice if you're resting or only hiding. One restores you; the other postpones things.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Four of Swords. It looks like a tomb. It's a nap. There's a difference, and today asks you to take it."
+  },
+  "slug": "four-of-swords"
+}

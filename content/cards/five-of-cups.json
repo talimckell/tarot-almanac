@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Five of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/five-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Five · Water · feeling at the point of loss",
+    "essence": "The Five of Cups is the part of you standing over what spilled. It is grief, the weight of what's gone, the pull to count the losses before anything else. It is the moment loss has your whole attention.",
+    "narrative": "The arc of the Cups numbers runs through the whole emotional life: the Ace cracked the heart open, the Two and Three built love and belonging, the Four went flat. The Five is where it breaks. Every suit has its five, and the five is always the wobble, the place the element meets trouble, but in Cups the trouble is specifically loss. The old image is a cloaked figure looking down at three cups spilled on the ground, so fixed on them they haven't turned to see the two cups still standing behind them. This is grief at the stage where it narrows your vision down to only what's gone. It sits in the middle of the suit because you can't reach the calmer water of the later cups without passing through this, the part where you actually feel the loss instead of routing around it.",
+    "gift": {
+      "keywords": [
+        "grief",
+        "honest loss",
+        "emotional presence",
+        "mourning what was"
+      ],
+      "body": "The gift here isn't that grief feels good. It's that you finally let yourself feel it. The Five of Cups is the day you stop performing fine and mourn the thing, the person, the version of your life that didn't happen. It's crying in the car before you go in. It's the honest sadness you've been holding in your chest for months finally getting to move. Grief asks to be felt rather than hurried past, and there's integrity in actually meeting it. You don't have to be over it on anyone's timeline. Letting the loss be real is how it slowly stops running you from underneath.",
+      "affirmation": "I can let myself grieve what's gone. The sadness is allowed to be felt, not managed."
+    },
+    "shadow": {
+      "keywords": [
+        "rumination",
+        "defined by loss",
+        "looking only at what spilled",
+        "despair"
+      ],
+      "body": "The grief stops moving and becomes a place you live. The Five of Cups' shadow is the gaze that never lifts from the spilled cups, the story that everything good slips away and loss is just what you are now. It's replaying the ending on a loop, polishing the regret until it's the whole horizon. The two cups still standing behind you go unseen. They're there. Turning around feels like betraying the grief. Underneath is the quiet belief that loss defines you, that if you stopped mourning you'd lose the thing all over again. The sadness was real and honest. The shadow is when it calcifies into who you are.",
+      "affirmation": "My losses are real, and they are not the whole of me. I can turn around without betraying what I grieve."
+    },
+    "reclaiming": {
+      "keywords": [
+        "grieving erased losses",
+        "mourning on your terms",
+        "resilience without bypass"
+      ],
+      "body": "The Five of Cups reverses a second way, as a refusal to let your grief be ranked or rushed. Some losses don't get recognized: the relationship no one knew to count, the erased history, the unlived life you can still feel the shape of, the version of yourself you never got to be. This honors the mourning the world never made room for. You get to grieve what was invisible to everyone else, and to do it without the pressure to be inspiring about it. Honoring grief and being defined by it are different things. You can choose connection and joy again on your own clock, because the standing cups are yours, not because you're supposed to look healed. Because the standing cups are also yours.",
+      "affirmation": "My grief is valid even if no one else counted the loss. I can honor what was and still reach for what remains."
+    },
+    "skills": [
+      "Letting grief be felt instead of managed",
+      "Naming the loss plainly, even an invisible one",
+      "Noticing what's still standing without rushing to it",
+      "Telling honest mourning apart from rumination",
+      "Choosing connection again when you're ready, not when you're told"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day touched by loss. The world's collective feeling was heavier than usual, the shared mood weighted by something spilled, a grief in the air that didn't belong to any one person. You came in on that current. It gave you an early acquaintance with the fact that loss is real, that some things don't come back, and that the world keeps moving anyway. There's an emotional realism in you that didn't have to be learned . It was in the room when you arrived\n\nWhat that day also gave you, less visibly: the two cups still standing. The world that held grief on the day you were born was also still holding what hadn't fallen. You absorbed both, even if the grief was louder.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Five of Cups as your rising means you meet the world with an awareness of what can be lost. It's in your first read of a situation: you feel the fragility of things, the possibility of the cups tipping, before you feel the solidity of what's standing. That can make you careful, tender with things that matter, attentive to what's at risk. It also means loss, when it comes, lands with particular weight. You were already a little ready for it, which doesn't make it easier.\n\nThe growth this rising asks for is the turn. Toward the cups that didn't spill. They're behind you. They're there. Learning to hold both the mourning and the standing things at once is the work this card does over a life.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world grieves today, touched by loss and spilled cups, a day that asks to be felt rather than managed. And behind the cups that fell, some are still standing. Both are real, and the world holds them together whether or not it's ready to.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Five of Cups. Something has spilled, or the weight of something that spilled is with you today. Let it be there. Don't manage it or rush it or talk yourself into perspective before you've actually felt the loss. And when you're ready, not yet maybe, but when you are: there are cups still standing behind you. You don't have to choose between the grief and what remains. Today, just let the grief be real.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Five of Cups. Three spilled. Two still standing. The figure hasn't turned around yet. That's not a flaw in the card. That's where grief actually is."
+  },
+  "slug": "five-of-cups"
+}

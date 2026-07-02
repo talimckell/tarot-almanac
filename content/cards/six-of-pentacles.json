@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Six of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/six-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Six · Earth · the flow of giving and getting",
+    "essence": "The Six of Pentacles is generosity and the exchange of resources, the flow of giving and receiving. It is charity, fairness, and the question of power that runs underneath who gives and who receives.",
+    "narrative": "Six restores balance after the Five's hardship, and in Pentacles that balance is the flow of resources between people. The old image is a merchant holding scales, dropping coins into the hands of two kneeling figures. It looks like generosity, and it is, but the scales and the postures raise a quiet question about power: who holds the purse, who kneels, who decides what's fair. This is the suit's reckoning with giving and receiving, charity and its dignity or its imbalance. It sits past the midpoint because once you've known the cold of the Five, the flow of help, given or received, carries weight, and the card asks you to look at where you stand in the exchange.",
+    "gift": {
+      "keywords": [
+        "generosity",
+        "fair exchange",
+        "giving and receiving",
+        "sharing",
+        "balance restored"
+      ],
+      "body": "Upright, the Six of Pentacles is the good flow of resources between people who can help each other. It's giving from real abundance, sharing what you have because you have it to share, receiving help gracefully when it's your turn to need it. It's fairness in the exchange, the sense that giving and getting can move in healthy balance over time. What it offers is the gift of generous flow, the dignity of both giving and receiving well. You're allowed to give freely when you can and receive freely when you can't. The flow goes both ways across a life, and being on either side of it, with dignity, is part of being held by other people.",
+      "affirmation": "I can give freely and receive with grace. The flow goes both ways, and both sides hold dignity."
+    },
+    "shadow": {
+      "keywords": [
+        "strings attached",
+        "power imbalance",
+        "debt",
+        "giving to control"
+      ],
+      "body": "The scales tip and the giving comes with strings. The Six of Pentacles' shadow is generosity used as power, the gift that's really a leash, the help offered so it can be held over you later. It's the giving that buys control, the charity that humiliates, the keeping of careful accounts so every kindness becomes a debt. Or it's being on the receiving end and trapped by it, dependent on a giver who uses the dependence. Underneath is the confusion of resources with power, the use of who-gives-to-whom as a way to stay on top. So what looked like generosity is really a transaction, and the flow that should have moved freely becomes a way of keeping people in their place.",
+      "affirmation": "I can give without strings and receive without surrendering myself. True generosity does not come with a leash."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing strings on help",
+        "mutual aid over charity",
+        "dignity in receiving"
+      ],
+      "body": "Reversed the other way, the Six refuses the kind of charity that demands your gratitude and your smallness in return. Some of us have had to take help that came with humiliation built in, been made to perform deserving-ness, been reminded who held the purse. This reclaiming is refusing the version of giving that requires you to grovel, and choosing mutual aid over charity-from-above. Your need does not make you lesser than the person meeting it. You get to receive without being made small, to give without lording it, to build the kind of flow where help moves between equals instead of down from on high. If you were made to kneel for what you needed, the reclaiming Six is you standing up and refusing to confuse help with hierarchy.",
+      "affirmation": "Needing help does not make me lesser. I refuse the charity that demands I kneel, and I choose aid between equals."
+    },
+    "skills": [
+      "Giving from real abundance, without strings",
+      "Receiving help with dignity intact",
+      "Spotting generosity that's really control",
+      "Building mutual aid instead of top-down charity",
+      "Refusing to be made small by your own need"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of exchange. The world's collective mood was about giving and receiving, resources moving between people, the shared question of fairness running underneath who had and who needed. That was the current you arrived into. It gave you a native sensitivity to the balance of an exchange, an instinct for when help is being given freely versus when it's being used to hold power, a baseline understanding that generosity and control can wear the same face.\n\nThe shadow the day also carried is the wariness that comes with that sensitivity. A world reckoning with fair exchange on the day you were born may have taught you, early, to scrutinize kindness for hidden strings, which is useful and can also make it harder to simply receive.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Six of Pentacles as your rising means you meet the world attuned to the flow between people, who's giving, who's receiving, whether it's actually balanced. Your first instinct in a relationship or transaction is to sense the fairness of it, which makes you naturally generous and also naturally careful about whose generosity you accept.\n\nThe work this rising asks over a lifetime is letting the flow move both directions without over-scrutinizing it. The scales in the old image are a real question worth asking. The suit's full arc also asks this rising to trust that not every offered hand is holding a leash, and that receiving with dignity is itself a skill worth having.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world gives and receives today, generosity in motion, a day for the flow to move both ways. A day of exchange, openhanded and a little unequal, where who gives and who receives is worth watching.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Six of Pentacles. A day about the flow of giving and receiving. Notice which role you're more comfortable in, because most of us lean hard one way. The flow stays healthy when it moves both directions, so let yourself receive as well as give today. Generosity that can't accept anything back isn't quite generosity. It's a wall with a nice view.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Six of Pentacles. Scales in one hand, coins in the other. Worth noticing which side of the exchange you're standing on today."
+  },
+  "slug": "six-of-pentacles"
+}

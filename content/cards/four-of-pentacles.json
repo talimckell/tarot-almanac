@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Four of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/four-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Four · Earth · holding on tight",
+    "essence": "The Four of Pentacles is security held too tightly, the grip that protects and constricts at once. It is stability, control, and the fear of loss that turns having into clutching.",
+    "narrative": "Four is the number of structure, and in Pentacles it brings the stability the suit has been building toward, along with its shadow. The old image is a figure seated clutching one coin to the chest, one balanced on the head, two pinned under the feet, a city behind them. They have it all, and they're holding it so tightly they can't move. This is the suit's reckoning with the difference between security and clinging. After the Three's open collaboration, the Four closes the hands. It sits at the structural midpoint because having something real raises the fear of losing it, and the card holds the question of whether your grip is keeping you safe or keeping you stuck.",
+    "gift": {
+      "keywords": [
+        "stability",
+        "security",
+        "boundaries",
+        "holding steady",
+        "conservation"
+      ],
+      "body": "The Four of Pentacles, upright, is the steadiness of having built something and holding it secure. It's the savings that let you sleep at night, the boundary that protects what you've worked for, the stability of knowing your ground is solid and yours. It's conservation in the good sense, not spending what you should keep, not giving away what you need. What it offers is the security of a firm hold, the safety of resources protected and structure maintained. You're allowed to keep what you've built, to guard your stability, to say no to what would drain it. Holding steady is not greed. Sometimes it's just the sense to protect what took so much to make.",
+      "affirmation": "I can hold what I've built and protect it. Keeping my stability secure is not greed. It's care."
+    },
+    "shadow": {
+      "keywords": [
+        "greed",
+        "control",
+        "fear of loss",
+        "hoarding",
+        "rigidity"
+      ],
+      "body": "The grip tightens until nothing moves, including you. The Four of Pentacles' shadow is security curdled into clutching, the savings hoarded past any sense, the control that grips money or people or routine so hard that life can't flow. It's the fear of loss running the whole show, spending nothing and enjoying nothing, holding so tight that what you've kept stops serving you and starts imprisoning you. Or it's controlling everything because loosening feels like danger. Underneath is the terror that if you let anything go, you'll lose it all, that the only safety is the tightest possible grip. So you sit on the city you built, clutching, unable to spend or share or move, rich and stuck at once.",
+      "affirmation": "I can loosen my grip without losing everything. What I hold so tightly was meant to serve my life, not cage it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing scarcity-driven control",
+        "releasing inherited fear",
+        "holding loosely"
+      ],
+      "body": "Reversed as refusal, the Four lets go of the white-knuckle scarcity that was handed down to you. Some of us inherited the clutch, raised by people who lived through real lack, taught that you grip everything because it could all vanish, that loosening your hold is how you end up with nothing. This reclaiming is recognizing the grip as a survival reflex from a scarcity that may not be yours anymore. The fear that taught your hands to clench made sense once. You can thank it and still set it down. You get to hold your security loosely enough to live inside it, to spend and share and rest without the old dread. If you inherited a grip born of someone else's lack, the reclaiming Four is you opening your hands on purpose.",
+      "affirmation": "The grip I inherited came from a scarcity that may not be mine. I can hold what I have loosely enough to live."
+    },
+    "skills": [
+      "Protecting your stability without over-gripping it",
+      "Telling sensible conservation from fearful hoarding",
+      "Loosening control enough to let life flow",
+      "Spending and sharing from security, not dread",
+      "Recognizing an inherited scarcity reflex for what it is"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was holding tight. The collective mood was protective and guarded, the shared sense of resources gripped against the fear of loss, security pursued so carefully it left little room to breathe. That was the current you arrived into. It gave you a native respect for stability, an instinct that what's been built is worth protecting, a baseline understanding that security takes real, deliberate effort to maintain.\n\nThe shadow the day also carried is the clench that can come with that protectiveness. A world gripping tight on the day you were born may have passed down a wariness about loosening your hold even when conditions no longer call for it, a vigilance that outlasted the actual scarcity that justified it.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Four of Pentacles as your rising means you meet the world already protecting what you have. Your first instinct in a new situation is to assess the security of it, to ask what's at risk and what needs guarding. That produces real prudence, a steadiness that other people, who spend more freely or trust more easily, sometimes lean on.\n\nThe work this rising asks over a lifetime is loosening the grip enough to actually live inside what you've protected. The figure in the old image has everything and is too clenched to enjoy any of it, and the suit's full arc asks this rising to notice when the holding has stopped serving the life and started constraining it.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world holds on today, to security and what feels safe, a grip that protects and constricts. A day of holding tight, prudent and a little fearful, where keeping can shade into clenching.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Four of Pentacles. A day about holding on, to money, to security, to what feels safe. Keep what you actually need to keep. Just notice if the holding has quietly become clenching, and whether anything in your grip wants a little more air. Security is worth having. It stops serving you the moment it costs you everything you were trying to feel secure enough to enjoy.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Four of Pentacles. One coin clutched to the chest, two pinned under the feet. He has everything and can't move. Worth checking your own grip today."
+  },
+  "slug": "four-of-pentacles"
+}

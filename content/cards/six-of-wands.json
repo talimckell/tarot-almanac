@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Six of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/six-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Six · Fire · the fire is seen and crowned",
+    "essence": "The Six of Wands is victory and recognition, the win that others witness. It is the return of momentum after the friction of the Five, success carried home in public view.",
+    "narrative": "Six restores order after the Five's chaos, and in Wands that order arrives as triumph. The melee resolved, and someone came through it. The old image is a rider on horseback moving through a crowd, a laurel wreath on their head and on their raised staff, people walking alongside in celebration. This is the moment effort is rewarded and seen, the public face of success. After the scramble, the suit lets you have the parade. But it sits at the midpoint of the journey for a reason: recognition is sweet and also fragile, and the card holds the question of what your fire is worth when the crowd isn't watching.",
+    "gift": {
+      "keywords": [
+        "victory",
+        "recognition",
+        "earned confidence",
+        "public success",
+        "vindication"
+      ],
+      "body": "The Six of Wands upright is the win you get to be seen winning. It's the promotion announced in front of everyone, the project that lands and gets named, the moment the people who doubted you watch it work. It's earned pride, the confidence that comes from effort that paid off in plain sight. What it offers is permission to accept the recognition instead of deflecting it, to let the wreath sit on your head without rushing to give it away. You did the thing. Being seen for it is not arrogance. You're allowed to ride through the crowd and let the win be yours.",
+      "affirmation": "I can accept recognition without deflecting it. The win is allowed to be mine."
+    },
+    "shadow": {
+      "keywords": [
+        "needing applause",
+        "fragile confidence",
+        "fear of falling",
+        "hollow victory"
+      ],
+      "body": "The confidence only lives in the crowd's eyes. The Six of Wands' shadow is success that means nothing without an audience, the win you can't feel unless others confirm it, the pride that collapses the moment the applause stops. It's needing the recognition so badly you chase visible wins over real ones, performing victory while privately unsure it's true. Or it's the dread on the other side of the parade, the fear that you're only as good as your last triumph and the fall is always one failure away. Underneath is the belief that your worth is the witnessing, that without the wreath and the crowd you're nothing. So the win never feeds you.",
+      "affirmation": "My worth holds when no one is watching. I can feel a win even without the crowd to confirm it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "defining your own success",
+        "refusing borrowed metrics",
+        "private victory"
+      ],
+      "body": "Reversed the other way, the Six refuses the rule about whose victories get the parade. The recognition the world hands out runs on its own scorecard, and plenty of us will never be crowned for the things that actually took the most out of us. This reclaiming is deciding what counts as a win on your own terms, including the ones no crowd will ever clap for. Getting through the day can be a victory. The quiet, unwitnessed wins are allowed to matter as much as the public ones. You don't need the wreath or the crowd to know what you survived and what you built. If your real triumphs were never the kind the world celebrates, the reclaiming Six is you crowning them yourself.",
+      "affirmation": "I define what counts as a victory. The wins no one sees are still mine to honor."
+    },
+    "skills": [
+      "Accepting recognition without deflecting it",
+      "Holding confidence that doesn't depend on applause",
+      "Telling real wins from visible ones",
+      "Honoring the victories no one else witnessed",
+      "Defining success on your own scorecard"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of public victory. The world's shared mood was triumphant, the collective energy of effort finally seen and acknowledged, the particular warmth of success that has come home. That was the current around you at the beginning. It gave you a native attunement to recognition, an understanding that being seen for your work matters, a baseline faith that effort can produce results visible to others.\n\nThe shadow it carried is the dependency that comes with a world organized around public success. A world celebrating its wins also defined what the wins were and whose victories got the parade. Whether the recognition that was in the air on the day you were born had room for your kind of success is something that shaped you, one way or another.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Six of Wands as your rising means you meet the world with an eye toward recognition. Your first instinct in any situation is toward what's been earned and whether it's been seen, toward the moment of acknowledgment that confirms the work was real. That produces a quality of visible ambition and earned confidence that other people find compelling. You work well in public. You're good at bringing things home.\n\nThe work this rising asks over a lifetime is the confidence that holds when the crowd isn't watching. The Six's rider is on a horse in front of a crowd, and the card's deeper question is who they are when they dismount. That's the growth the recognition Bearing eventually asks for.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world has a victory today, a homecoming, effort finally seen and applauded. A day of recognition, with the quiet question of who gets seen and who did the unseen work behind the win.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Six of Wands. Something you did is being seen today, or recognition is coming that you've been waiting for. Let yourself receive it. Don't deflect it, don't minimize it, don't rush past it to prove you're already working on the next thing. The win is allowed to be yours. If no external recognition has arrived, the card still asks: what have you done recently that deserved the wreath? Give it one, quietly. It still counts.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Six of Wands. The rider came through the melee and earned the wreath. Today: don't give it back."
+  },
+  "slug": "six-of-wands"
+}

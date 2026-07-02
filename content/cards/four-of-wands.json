@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Four of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/four-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Four · Fire · the fire makes a home",
+    "essence": "The Four of Wands is celebration and arrival, the milestone reached and marked. It is the stable joy of a foundation built, the moment the work earns a party and a sense of belonging.",
+    "narrative": "Four is the number of structure, the square, and where in some suits it brings stuckness, in Wands it brings the good kind of solidity: fire that has built something worth gathering around. The old image is four wands raised like the posts of a canopy, flowers strung between them, figures celebrating beneath in front of a sunlit house. This is the wedding, the housewarming, the threshold crossed together. After the Three's watching, the first returns have come home, and they're enough to mark. The suit pauses here to let joy be the point, the warmth of a fire that's become a hearth.",
+    "gift": {
+      "keywords": [
+        "celebration",
+        "belonging",
+        "milestones",
+        "harmony",
+        "homecoming"
+      ],
+      "body": "Upright, the Four of Wands is letting yourself celebrate the thing you reached. It's the housewarming where your people fill the rooms, the moment you finish the degree and let it land instead of rushing to the next thing, the relief of a place that finally feels like yours. It's joy with a foundation under it, happiness that comes from having built something real and gathered the right people inside it. What it offers is permission to stop and mark the milestone. You don't have to earn the celebration twice. Belonging is not a reward for more work. It's allowed to be the point.",
+      "affirmation": "I can stop and celebrate what I built. Belonging doesn't have to be earned twice."
+    },
+    "shadow": {
+      "keywords": [
+        "rushing past joy",
+        "hollow milestones",
+        "belonging that doesn't fit",
+        "skipping the party"
+      ],
+      "body": "The canopy goes up but no one stands under it. The Four of Wands' shadow is reaching the milestone and feeling nothing, blowing past the celebration because stopping feels like laziness. It's the achievement you don't let yourself enjoy, the home that looks settled but doesn't feel like belonging, the party thrown for a version of your life you're not sure is yours. Or it's the harmony that's only on the surface, everyone smiling under the flowers while something underneath doesn't hold. Underneath is often the fear that if you stop to celebrate you'll lose momentum, or worse, find out the milestone didn't mean what you hoped. So you skip the party and call it drive.",
+      "affirmation": "I can let an achievement land before I chase the next one. Stopping to feel it is not the same as stopping."
+    },
+    "reclaiming": {
+      "keywords": [
+        "chosen family",
+        "building your own belonging",
+        "refusing the prescribed milestones"
+      ],
+      "body": "Reversed as refusal, the Four rejects the rule about whose celebrations count and whose belonging is allowed. The milestones the world hands out aren't everyone's: the wedding shaped one way, the family that looks a certain kind, the home with the approved people in it. This reclaiming is building belonging on your own terms and throwing the party anyway. Your chosen family is a real foundation. The thresholds that matter to you deserve their flowers and their canopy even if no tradition has a name for them. You get to mark your own milestones and gather your own people under the light. If the prescribed homecomings were never built for you, the reclaiming Four is you raising the posts yourself.",
+      "affirmation": "My belonging is mine to build and mine to celebrate. The milestones that matter to me deserve their flowers."
+    },
+    "skills": [
+      "Letting an achievement land before moving on",
+      "Marking milestones instead of rushing past them",
+      "Telling real belonging from surface harmony",
+      "Building a home and a family on your own terms",
+      "Gathering the people who actually fit you"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective arrival. The world's shared mood was celebratory and settled, the particular warmth of people gathered around something they built together and stopped to enjoy. That was the current you arrived into. It gave you a native ease with belonging, an instinct to feel at home in a room full of the right people, a baseline faith that milestones are worth marking rather than rushing past.\n\nThe shadow the day carried is harder to see than the warmth: a world organized around celebration also defined what the celebrations were supposed to look like, and whose arrivals counted as worth marking. Whether the festivities you were born into had room for the version of you that would eventually show up is part of what shaped how safe belonging has felt.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Four of Wands as your rising means you meet the world looking for the hearth. Your first instinct in any situation is toward what's been built and what's worth celebrating, toward the gathering rather than the solitary fire. You're good at community, at creating the conditions where people feel they've arrived somewhere.\n\nThe work this rising asks is the willingness to stop and actually feel it. The Four doesn't rush. The people under the canopy in the old image are standing still inside their joy. The practice, for a rising that's always looking for the next threshold to cross together, is staying long enough in the celebration to let it be the point.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "Something comes together in the world today, a day of homecoming and shared celebration. A stable joy worth marking, with the only danger being how quickly the world tends to rush past its own good moments toward the next thing.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Four of Wands. Something has been built well enough to celebrate today, and the card is asking you to actually stop and do it. Don't rush past the milestone. Don't decide it wasn't quite enough to count. Let the flowers be up, let the people be gathered, let the moment be what it is. You're allowed to have arrived somewhere. The work will still be there tomorrow.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Four of Wands. The canopy is up. The people are gathered. The only move today is standing under it and actually feeling it."
+  },
+  "slug": "four-of-wands"
+}

@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Ten of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ten-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Ten · Earth · the whole house, across time",
+    "essence": "The Ten of Pentacles is lasting wealth, legacy, and belonging across generations. It is the fullest material abundance, security that extends beyond yourself into family, home, and what you leave behind.",
+    "narrative": "Ten completes the suit, and in Pentacles the completion is the fullest abundance: not just personal success but legacy, the wealth that holds a whole family and outlasts a single life. The old image is a multigenerational scene, an old person with dogs, a couple, a child, an archway and a family crest, ten coins arranged like the tree of life across it all. This is the suit at its richest: stability that became a home, a home that became a lineage, security wide enough to hold others and long enough to outlast you. It sits at the suit's end because the material road, fully walked, arrives not at a pile of gold but at belonging, the wealth that is really about the people it shelters and the legacy it leaves.",
+    "gift": {
+      "keywords": [
+        "legacy",
+        "lasting security",
+        "family wealth",
+        "belonging",
+        "abundance that holds others"
+      ],
+      "body": "Upright, the Ten of Pentacles is abundance wide enough to hold the people you love and long enough to outlast you. It's the home that becomes the family's gathering place, the security that lets you give the next generation a better start, the deep wealth of belonging to something stable that holds more than just you. It's success that turned into legacy, prosperity measured in the people it shelters. What it offers is the gift of lasting, shared abundance, security that became a home and a lineage. You're allowed to build something that holds others, to want a wealth that outlasts you, to create the stable ground you may not have been given. Real abundance isn't the pile. It's the people it keeps safe.",
+      "affirmation": "I can build abundance that holds the people I love. Real wealth isn't the pile. It's who it keeps safe."
+    },
+    "shadow": {
+      "keywords": [
+        "golden handcuffs",
+        "family pressure",
+        "wealth without warmth",
+        "clinging to legacy"
+      ],
+      "body": "The house becomes a structure that traps the people inside it. The Ten of Pentacles' shadow is legacy turned to obligation, the family wealth that comes with control, the security that's really a set of golden handcuffs. It's staying in the family business you hate because leaving would betray the legacy, the inheritance with strings that bind you to a life you didn't choose, the prosperity maintained at the cost of everyone's actual happiness. It's wealth without warmth, a house full of money and short on love. Underneath is the confusion of material legacy with worth, the belief that the structure matters more than the people in it. So the abundance that should have sheltered the family becomes the thing that cages them.",
+      "affirmation": "I can value the people over the structure. A legacy that traps the family it was meant to hold has lost its purpose."
+    },
+    "reclaiming": {
+      "keywords": [
+        "chosen family legacy",
+        "building belonging from scratch",
+        "refusing inherited cages"
+      ],
+      "body": "Reversed the other way, the Ten refuses the idea that legacy and belonging only count in the prescribed shape. Many of us were cut out of the family wealth, the inheritance, the lineage, or had to leave the family that held them because staying meant erasing ourselves. This reclaiming is building belonging and legacy on our own terms instead. Your family can be the one you chose. The home and stability and legacy you build for your people are real even if no bloodline or tradition recognizes them. You get to create the lasting, sheltering abundance you were denied, to be the ancestor your chosen family needed. If you were written out of the inherited house, the reclaiming Ten is you building a new one with the door open to everyone they tried to leave in the cold.",
+      "affirmation": "My legacy is mine to build, in the shape my people need. The home I make for my chosen family is real and lasting."
+    },
+    "skills": [
+      "Building security that shelters more than yourself",
+      "Valuing the people over the structure that holds them",
+      "Telling true legacy from golden handcuffs",
+      "Creating belonging on your own terms",
+      "Becoming the stable ground your people needed"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was thinking about legacy. The collective mood was about what lasts and who it holds, the shared sense of stability built wide enough to shelter more than one generation, the particular weight of belonging to something that extends past any single life. That was the current you arrived into. It gave you a native sense of what lasting security looks like, an instinct that real wealth is measured in who it shelters rather than how much there is, a baseline comfort with thinking in terms of family and lineage rather than just yourself.\n\nThe shadow the day also carried is the obligation that can ride alongside legacy. A world organized around what lasts on the day you were born may have taught you, early, that the structure matters more than the people in it, and you may carry a heightened sensitivity to legacy that comes with strings attached.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ten of Pentacles as your rising means you meet the world thinking past yourself. Your first instinct with anything you build is to ask what it will mean for the people around you, who it will shelter, whether it lasts past the immediate moment. That produces a real generosity of scale, the capacity to build things that hold more than just your own life.\n\nThe work this rising asks over a lifetime is making sure the structure stays in service of the people. The multigenerational scene in the old image is warm, not just wealthy, and the suit's full arc asks this rising to keep checking that the legacy it's building is sheltering people rather than just accumulating for its own sake.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world takes the long view today, a day of legacy and what endures, things meant to be passed on. A day of lasting wealth and belonging, solid and a little weighty, the structure that shelters and can also bind.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ten of Pentacles. A day of the long view, of what endures across time. Notice what you're building that will outlast the moment, the things meant to be passed on rather than just held. This is legacy, family, the wealth that's about belonging more than money. Just don't let tending the legacy become its own cage, the structure so important you forget to actually live inside it.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ten of Pentacles. Three generations, an archway, ten coins arranged like a family tree. What you're building today is bigger than today."
+  },
+  "slug": "ten-of-pentacles"
+}

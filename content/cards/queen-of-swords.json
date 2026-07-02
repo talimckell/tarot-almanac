@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Queen of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/queen-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Queen · Air · mind as inward depth",
+    "essence": "The Queen of Swords is the mind matured into clear-eyed wisdom. It is perceptive intelligence held with hard-won independence, the clarity of someone who has been through enough to see truly and speak honestly without cruelty.",
+    "narrative": "The Queen is the element turned inward, embodied and held. The old image is a queen on a throne carved with butterflies and a stern cherub, one hand raised as if welcoming honesty, the other holding an upright sword, her expression composed and unillusioned. There's often a sense she has known grief. This is air as mature perception: clear sight earned through experience, intelligence that has integrated loss into wisdom rather than bitterness. Where the Knight charges, the Queen has stopped needing to. She sees clearly, speaks truthfully, and keeps her own counsel, the most perceptive and most independent of the courts.",
+    "gift": {
+      "keywords": [
+        "clear perception",
+        "honest wisdom",
+        "independence",
+        "discernment",
+        "truth with compassion"
+      ],
+      "body": "At her best the Queen of Swords is the clarity of someone who sees through things and tells the truth kindly. It's the friend who gives you the honest read instead of the comfortable one, the discernment that isn't fooled by charm or story, the independence of a mind that thinks for itself and isn't swayed by who's loudest. It's perception sharpened by experience, including hard experience, into wisdom. What it offers is clear-eyed honesty held with compassion, truth that doesn't need to wound to be true. You can see clearly and speak honestly and still be kind. Your discernment, earned through what you've lived, is a gift to the people who want the truth.",
+      "affirmation": "I can see clearly and tell the truth with kindness. The discernment I earned the hard way is worth trusting."
+    },
+    "shadow": {
+      "keywords": [
+        "coldness",
+        "bitterness",
+        "cutting others off",
+        "isolation behind walls"
+      ],
+      "body": "The clear sight hardens into ice. The Queen of Swords' shadow is perception turned cold, the wisdom soured into bitterness, the independence that's become isolation behind walls no one's allowed past. It's using your clear read of people to keep them all at arm's length, the sharp tongue that cuts before anyone can get close, the hurt of the past hardened into a permanent expectation of betrayal. It's being right about people in a way that leaves you alone. Underneath is often old grief that calcified, a decision made after enough wounds that letting anyone in isn't worth the risk. So the clear-eyed Queen sees everyone perfectly and lets no one near.",
+      "affirmation": "I can let people past the walls without losing my clarity. Discernment was meant to choose who to trust, not to bar everyone."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to be softened",
+        "owning your perception",
+        "clarity the world calls cold"
+      ],
+      "body": "The second reversal refuses to dull your perception so others can stay at ease. Some of us, especially women and queer people who see clearly and say so, get called cold, harsh, intimidating, too much, for the crime of being perceptive and unwilling to play dumb. This reclaiming is owning your clear sight instead of apologizing for it. Your perceptiveness is not a character defect. You don't have to soften your intelligence or pretend not to notice what you notice so that others feel less seen. The clarity the world calls coldness is often just a woman or a queer person refusing to flatter. If you were told your clear eyes made you hard to love, the reclaiming Queen is you keeping them open and refusing to dim what you see.",
+      "affirmation": "My clear sight is not coldness. I refuse to play dumb or soften my perception so others feel comfortable."
+    },
+    "skills": [
+      "Telling a hard truth with kindness intact",
+      "Trusting discernment earned through experience",
+      "Letting trusted people past your walls",
+      "Telling protective clarity from bitter isolation",
+      "Refusing to dull your perception for others' comfort"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of clear-eyed wisdom. The world's collective mood was perceptive and unillusioned, the shared energy of an intelligence that had been through something and integrated it rather than calcified around it. That was the current you arrived into. It gave you a native respect for hard-won discernment, an instinct to trust the read that comes from actual experience over the theory that hasn't been tested, a baseline understanding that real clarity often comes with a cost already paid.\n\nThe shadow the day also carried is the temptation toward the walls that protect that clarity. A world that has seen too much can mistake distance for wisdom, and you may carry a similar instinct to keep people at the remove that once felt like safety.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Queen of Swords as your rising means you meet the world with a discernment that doesn't need to be loud about itself. Your instinct in any situation is to see clearly first, to read what's actually happening rather than what's being performed, and to trust that read once you have it. People who want an honest account come to you because they can feel you won't flatter them.\n\nThe work this rising asks over a lifetime is keeping the door open. The Queen's raised hand in the old image is open, welcoming honesty, and the suit's full arc asks the rising to remember that gesture even after the clarity has cost something. The clearest sight is meant to choose who gets close, not to bar everyone equally.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world sees clearly today, without illusion, a day of honest perception. Discernment at full strength, accurate and a little severe, the clear eye that can warm or chill depending on its aim.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Queen of Swords. A day for clear sight, for seeing things as they actually are without illusion. Trust your read on the situation today. And remember that clarity and kindness aren't opposites, that you can perceive honestly and still speak gently. The sharp eye is a gift. It only becomes cold when it forgets there are people on the other side of the truth.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Queen of Swords. One hand holds the sword. The other is open. Both at once, today."
+  },
+  "slug": "queen-of-swords"
+}

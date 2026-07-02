@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Seven of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/seven-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Seven · Water · feeling lost in possibility",
+    "essence": "The Seven of Cups is the heart dazzled by too many options. It is fantasy, imagination, the shimmer of possibility that can tip into paralysis. It is the dream that's lovely until you have to choose.",
+    "narrative": "The suit drifts upward into the imagination here. Seven is a restless, searching number, and in Cups it becomes the mind spinning out possibilities, each one prettier than the last. The old image is a figure facing seven cups floating in cloud, each holding something different, a jewel, a wreath, a dragon, a shrouded glowing figure, some wondrous and some monstrous, all of them slightly unreal. This is the place in the emotional arc where feeling meets fantasy, where wanting outruns reality and the sheer number of options becomes a trap. It sits late in the suit because by now the heart has lived enough to dream vividly, and the lesson is learning to tell the cup that's real from the six that are only beautiful.",
+    "gift": {
+      "keywords": [
+        "imagination",
+        "possibility",
+        "vision",
+        "creative dreaming",
+        "the open field"
+      ],
+      "body": "Upright, the Seven of Cups is a vivid imagination given room to run. It's the late-night conversation about all the lives you could live. It's brainstorming with nothing crossed out yet, letting yourself want impossible things just to see their shape. It's the creative open field before the editing starts. The gift is permission to dream, to expand the sense of what's possible beyond what you were told to want. Imagination is how you explore identity and desire outside the lines someone drew for you. The cups are full of maybes, and for now you don't have to pick. You just get to see what your heart conjures when it's allowed.",
+      "affirmation": "I can let myself dream widely. Imagination expands what's possible for me."
+    },
+    "shadow": {
+      "keywords": [
+        "paralysis",
+        "illusion",
+        "wishful thinking",
+        "avoidance through fantasy"
+      ],
+      "body": "The dreaming becomes a place to hide from choosing. The Seven of Cups' shadow is so many shimmering options that you commit to none, mistaking the buzz of possibility for actual movement. It's wishful thinking standing in for action, planning the life instead of starting it. It's keeping every cup half-considered because choosing one means grieving the other six. Sometimes the fantasy is just more comfortable than the real, smaller, harder thing in front of you. Underneath is often a fear of choosing wrong, so you choose nothing and call the paralysis open-mindedness. The cups are mostly mirage. The shadow is preferring the mirage because the mirage never disappoints you the way a real choice might.",
+      "affirmation": "I can choose one real thing. A made choice beats six beautiful maybes."
+    },
+    "reclaiming": {
+      "keywords": [
+        "authenticity over fantasy",
+        "releasing imposed ideals",
+        "self-invention"
+      ],
+      "body": "The Seven of Cups reverses a second way, as a refusal of the dazzling images that were never actually yours. Some of those shimmering cups hold other people's ideals, the life you were supposed to want, the version of success or love or self that got installed in you young. This reclaiming is clearing those away to find the real one underneath. It's choosing authenticity over the fantasy you were handed, queerness as creative self-invention rather than fitting a borrowed picture. You get to release the imposed dream and build from what's actually true for you. If the cups in front of you are full of someone else's wishes, the reclaiming Seven is you tipping those out to make room for your own.",
+      "affirmation": "I can release the dreams that were never mine. I get to invent my own real."
+    },
+    "skills": [
+      "Letting imagination run before the editing starts",
+      "Telling a real option apart from a beautiful mirage",
+      "Choosing one thing and grieving the rest honestly",
+      "Noticing which dreams were installed by someone else",
+      "Building from what's true rather than what was prescribed"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was dazzled by its own possibilities. The collective mood was expansive, slightly unreal, the shared feeling of standing in front of more options than could be held at once. That shimmer was the air you arrived into. It gave you a native capacity for vision and imagination, an ease with the not-yet-chosen, an ability to hold many possibilities without needing to resolve them immediately. You're comfortable in the open field before the decision.\n\nWhat it also gave you is the particular difficulty of that field: the cups were numerous and cloudy on the day you got here, and learning which ones held something real has been part of your work ever since.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Seven of Cups as your rising means you meet the world through imagination first. Your instinct in any situation is to see the possibilities it contains, the multiple directions it could go, the versions of this moment that haven't declared themselves yet. You're a natural at the open field. You feel the shimmer of options before you feel the weight of any particular one.\n\nThat's a real gift for creative and visionary work, and the shadow it carries is the one the card always carries: the shimmer can become the thing itself. The rising of the Seven, over a lifetime, develops the discernment to tell the cups that are real from the ones that are just beautiful, and to make the choice that turns imagination into something you can actually hold.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is full of possibilities today, shimmering options, not all of them solid. A day of dazzling choice, rich and a little unreal, where the sheer number of cups can keep anything from being chosen.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Seven of Cups. There's a lot shimmering in front of you today: options, fantasies, possibilities, some of them real and some of them just attractive. Let yourself look at the full array. Then pick one actual thing. Not the one that looks the best from the outside, the one that actually holds water when you tip it. The card's gift is imagination. Its invitation is to let the dreaming get specific enough to become a choice.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Seven of Cups. Seven options, all of them floating, all of them a little unreal. Dream freely. Then pick the one that's actually there."
+  },
+  "slug": "seven-of-cups"
+}

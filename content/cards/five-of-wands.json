@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Five of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/five-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Five · Fire · the fire turns to friction",
+    "essence": "The Five of Wands is conflict, competition, and the chaos of too many wills in one room. It is the scramble of clashing energy, sometimes a real fight, sometimes only the noise of everyone wanting at once.",
+    "narrative": "Five is where every suit hits its disruption, the wobble that breaks the Four's stability so growth can keep moving. In Wands, fire meeting fire makes friction, and the old image shows it plainly: five figures with raised staves, all swinging, in what looks less like a war than a melee, a tangle of people each pushing their own direction. No one's clearly winning. It might be sparring, it might be real. This is the suit's reminder that drive doesn't exist in a vacuum, that the moment your will meets other wills, you get heat, and the heat has to go somewhere before anything aligns.",
+    "gift": {
+      "keywords": [
+        "healthy competition",
+        "lively friction",
+        "testing your strength",
+        "creative clash"
+      ],
+      "body": "This one's mixed, because the gift isn't peace, it's the aliveness of a real contest. Upright, the Five of Wands is the friction that sharpens you: the debate that makes your idea better, the competition that pulls a harder effort out of you than you'd have found alone, the messy brainstorm where five people argue and something none of them had walks out of the room. It's the gym, the scrimmage, the proving ground. What it offers is the chance to test your fire against resistance and discover it holds. Not all conflict is damage. Some of it is how you find out what you're made of.",
+      "affirmation": "I can meet friction without fearing it. Some conflict is how my strength gets found."
+    },
+    "shadow": {
+      "keywords": [
+        "pointless conflict",
+        "exhausting drama",
+        "scattered fighting",
+        "ego battles"
+      ],
+      "body": "The melee never ends and nothing gets decided. The Five of Wands' shadow is conflict for its own sake, the house where everyone's always low-grade fighting, the team that burns its energy on turf wars instead of the work. It's the argument you keep having that never resolves because winning matters more than fixing, the drama that's become a habit, the exhaustion of a room where every will is clashing and no one will yield an inch. Underneath is often the fear that backing down means losing yourself, so you fight every small thing as if it were the whole war. The fire that could have built something just burns everyone in the room.",
+      "affirmation": "I can choose which fights are worth my fire. Not every clash deserves my whole strength."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing manufactured competition",
+        "opting out of the scramble",
+        "solidarity over rivalry"
+      ],
+      "body": "The second reversal refuses the competition you were forced into against people who should have been your allies. So many of us were set against each other, made to scramble for the one spot, taught that someone like us only gets in by beating the others like us. This reclaiming is stepping out of the manufactured melee and refusing to fight people who were never really the enemy. You don't have to claw for scarcity that was designed to keep you scrapping. You can choose solidarity over rivalry, build with the people you were told to compete with. If you were thrown into a fight that only served whoever set it up, the reclaiming Five is you lowering your staff and walking out of it.",
+      "affirmation": "I refuse to fight the people who were meant to be my allies. I can choose solidarity over the scramble."
+    },
+    "skills": [
+      "Telling generative friction from pointless drama",
+      "Choosing which conflicts are worth your energy",
+      "Letting a contest sharpen you instead of drain you",
+      "Stepping out of competition that was designed to divide",
+      "Building with people you were told to fight"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of friction. The world's collective energy was clashing, multiple wills moving in multiple directions, the particular heat of a room where everyone wants something and not all of it can go the same way at once. That was the air around you at the beginning. It gave you a native tolerance for conflict, an ability to be in a charged environment without immediately needing it to resolve, a baseline understanding that friction is often part of how things work themselves out.\n\nWhether that friction was productive or just exhausting on the day you arrived is part of what you inherited. A world full of clashing energy can sharpen or scatter, and which it does depends on whether anyone is steering it toward something.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Five of Wands as your rising means you meet the world ready for the contest. Your instinct in a charged situation isn't to smooth it over or leave. It's to engage, to bring your fire into the clash and see what comes out of it. That produces a quality of aliveness and directness that other people feel. You don't back down from friction.\n\nThe work this rising asks over time is discernment about which contests are worth entering. The Five's melee has no clear winners, and the rising that's always ready to raise the staff eventually has to learn to ask whether this particular fight is one worth having. Lowering the staff on purpose is a different kind of strength than never picking it up.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world crackles with friction today, many wills in one room, energy scattering in different directions. A day where the clash can be productive or just exhausting, depending on whether anyone's steering it toward something.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Five of Wands. There's friction in the air today: competing energy, clashing directions, the particular heat of a room where everyone's pushing something. Let the friction do some work if it's useful. The card isn't asking you to make peace with everything. It's asking you to notice what you're fighting and whether the fight is sharpening you or just burning you up. Some of this clash is productive. Some of it is just noise. The difference is worth finding.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Five of Wands. Five people, five wands, no one clearly winning. Worth asking which fights today are actually worth your fire."
+  },
+  "slug": "five-of-wands"
+}

@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Knight of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/knight-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Knight · Fire · fire as action",
+    "essence": "The Knight of Wands is fire in full motion, charging. It is boldness, passion, and adventure acted on, the energy that leaps before it looks, all drive and momentum and heat.",
+    "narrative": "The Knight is the element in action, and of all the courts the Knight is fire's most characteristic form, because fire wants to move. The old image is a knight on a rearing horse, armor decorated with salamanders, charging forward with the staff held high and an expression of pure intent. This is passion that doesn't wait, courage that acts on impulse, the adventurer who's already galloping before the plan exists. Where the Page held the spark and wondered, the Knight rides with it. The Knight is the suit's most thrilling and most dangerous energy, magnificent in motion and prone to charging off a cliff.",
+    "gift": {
+      "keywords": [
+        "boldness",
+        "passion",
+        "adventure",
+        "decisive action",
+        "charisma"
+      ],
+      "body": "Upright, the Knight of Wands is the courage to charge at what you want. It's booking the one-way ticket, making the bold move while everyone's still deliberating, throwing yourself fully at the thing that excites you. It's magnetic energy, the charisma of someone who's actually lit up and moving, the kind of decisiveness that makes things happen. What it offers is the gift of momentum and nerve, the willingness to act on passion instead of waiting for permission. Sometimes the bold move is the right one precisely because it's bold. You're allowed to charge. Not every leap needs a guarantee before you take it.",
+      "affirmation": "I can charge at what I want. Not every leap needs a guarantee before I take it."
+    },
+    "shadow": {
+      "keywords": [
+        "recklessness",
+        "burning out",
+        "impulsiveness",
+        "all heat no direction"
+      ],
+      "body": "The charge has no brakes and no map. The Knight of Wands' shadow is impulse that wrecks things, the leap taken without a thought for the landing, the passion that flares hot and burns out fast leaving a mess behind. It's the half-finished projects abandoned for the next exciting thing, the relationships entered at a sprint and exited just as fast, the recklessness that mistakes speed for courage. Or it's the temper, fire turned to anger that scorches whoever's near. Underneath is often a fear of the slow and the steady, a sense that if you stop moving the energy dies, so you keep charging and call the chaos passion. The fire that could have built something just leaves scorch marks.",
+      "affirmation": "I can aim my fire before I charge. Steadiness won't kill the passion. It's how the passion lasts."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to dim your intensity",
+        "owning your fire",
+        "passion without apology"
+      ],
+      "body": "Reversed as refusal, the Knight stops apologizing for the size of your fire. Some of us were told all our lives that we were too intense, too passionate, too much, asked to ride slower and quieter so we'd be easier to be around. This reclaiming is owning the full force of your energy instead of shrinking it to fit. Your intensity is not a defect. The heat that other people found overwhelming is the same heat that lets you charge at a life most people only daydream about. You can be as bold and as ardent as you are. If you were made to ride at half-speed so others felt comfortable, the reclaiming Knight is you opening up to a full gallop and refusing to say sorry for it.",
+      "affirmation": "My intensity is not too much. I can ride at full force and refuse to apologize for the heat."
+    },
+    "skills": [
+      "Acting boldly when the moment actually calls for it",
+      "Aiming your energy before you launch it",
+      "Telling courageous action from reckless escape",
+      "Letting passion last by giving it direction",
+      "Owning the full size of your fire without apology"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was charging. The collective mood was bold and fast, headlong motion toward something it wanted, a particular heat and momentum in the air that didn't pause to deliberate. That was the current you arrived into. It gave you a native ease with decisive action, an instinct that trusts the leap before it has the guarantee, a baseline comfort with moving on passion rather than waiting for permission.\n\nThe shadow the day also carried is the recklessness that rides alongside boldness. A world in full charge doesn't always check the landing, and you may have absorbed an early relationship to speed that took time to learn aim.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Knight of Wands as your rising means you meet the world already in motion. Your instinct when something excites you is to go, immediately, without waiting for the plan to finish forming. That produces a magnetism and decisiveness other people are drawn to, the sense that you're someone who actually does the thing instead of just discussing it.\n\nThe work this rising asks over a lifetime is the aim. The Knight's horse is rearing, mid-charge, and the suit's full arc asks whether the charge has a direction or just a velocity. Learning to point the fire before launching it is what lets the passion last instead of burning out fast and leaving scorch marks behind.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is charging ahead today, bold and hot, a day of headlong motion toward what it wants. Magnetic and a little reckless, the kind of energy that gets things moving and occasionally moves them off a cliff.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Knight of Wands. A day for charging toward what you want. The energy is fast and a little reckless, full of heat and forward motion, and it's good fuel when you use it well. Move boldly, and keep one hand on the reins. Bold is a gift. Headlong without looking is the same gift turned against you.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Knight of Wands. Horse rearing, staff already raised. He didn't wait for the plan. Some days that's exactly right."
+  },
+  "slug": "knight-of-wands"
+}

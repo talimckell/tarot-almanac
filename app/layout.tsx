@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
 import IconSprite from "./components/IconSprite";
 import "./globals.css";
+import "./card-page.css";
 
 const cormorant = Cormorant({
   subsets: ["latin"],

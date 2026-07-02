@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Ace of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ace-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Ace · Earth · the seed of something solid",
+    "essence": "The Ace of Pentacles is the offer of something real to build on. It is opportunity in tangible form, the seed of prosperity, health, or security, the first solid ground a new thing can grow from.",
+    "narrative": "Every suit begins with its Ace, the element handed over pure. In Pentacles the element is earth, the material world, and the Ace is its most promising form: the old image is a hand from a cloud holding a single golden coin over a garden, a path leading out through flowers toward a gate in the hedge. This is potential you can hold, the seed of something that could become a livelihood, a home, a healthier body, a stable life. Where the other Aces offer feeling or will or insight, this one offers ground. The Ace doesn't build the thing for you. It hands you the seed and points at the garden where it could grow.",
+    "gift": {
+      "keywords": [
+        "opportunity",
+        "new resources",
+        "material beginnings",
+        "prosperity",
+        "solid ground"
+      ],
+      "body": "Upright, the Ace of Pentacles is the chance to build something real and lasting. It's the job offer that could change your footing, the down payment that makes the home possible, the first day of treating your body like it's worth tending. It's opportunity with substance to it, the kind you can put your hands on and grow. What it offers is solid ground to start from, a seed of real security or wellbeing. You're allowed to take the practical opportunity, to want stability, to plant something now that you'll harvest later. The coin is in your hand. The garden gate is open, and the path through it is yours to walk.",
+      "affirmation": "I can build something real from here. Wanting solid ground is not small. It's a foundation."
+    },
+    "shadow": {
+      "keywords": [
+        "missed chances",
+        "scarcity thinking",
+        "greed",
+        "hollow security"
+      ],
+      "body": "The seed never gets planted, or it's clutched so tight it can't grow. The Ace of Pentacles' shadow is the opportunity let slip from fear, the door not walked through because building means risking, the chance you tell yourself you'll take later until later is gone. Or it tips the other way into clutching, security pursued so anxiously it becomes greed, the coin gripped so hard the garden behind it goes unseen. It's mistaking hoarding for stability, accumulation for safety. Underneath is often a deep scarcity fear, the belief that there isn't enough and never will be, so you either freeze or grab. The seed that could have grown a whole garden stays locked in a tight fist.",
+      "affirmation": "I can take the opportunity and let it grow. Holding on tighter is not the same as being secure."
+    },
+    "reclaiming": {
+      "keywords": [
+        "redefining wealth",
+        "refusing the scarcity script",
+        "claiming your right to enough"
+      ],
+      "body": "The second reversal is a refusal: the story that says people like you don't get to have enough was never true. Some of us were raised inside scarcity, taught that security was for other people, that wanting money or comfort or a stable body was greedy or out of reach for someone like us. This reclaiming is claiming your right to material wellbeing without shame. You are allowed to want enough, to build wealth and health and a solid home, to believe the garden could be yours. Stability is not reserved for people born closer to it. If you were taught to expect scarcity as your lot, the reclaiming Ace is you reaching for the coin and refusing to believe the garden was never meant for you.",
+      "affirmation": "I have a right to enough. Security and comfort were never reserved for other people."
+    },
+    "skills": [
+      "Taking a practical opportunity when it's offered",
+      "Planting something now for a later harvest",
+      "Telling real security from anxious hoarding",
+      "Letting resources grow instead of clutching them",
+      "Claiming your right to material wellbeing"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world planted something real. The collective mood was practical and promising, the shared sense of a tangible opportunity newly offered, ground worth building on rather than another idea to chase. That was the current you arrived into. It gave you a native trust in solid beginnings, an instinct that things worth having are worth the patient building, a baseline comfort with starting from something you can actually hold rather than something abstract.\n\nThe shadow the day also carried is the scarcity that can live right alongside opportunity. A world handed a seed doesn't always trust it'll grow, and you may have absorbed an early wariness about whether the ground was really yours to plant in.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ace of Pentacles as your rising means you meet the world looking for what's actually buildable. Your first instinct in a new situation is practical: what's the real opportunity here, what could actually take root, what's worth the patient work of tending. That produces a groundedness other people notice, the sense that you're less interested in the idea of a thing than in whether it could really stand.\n\nThe work this rising asks over time is trusting the seed enough to plant it. The gift is real and practical. What the suit's full arc asks is the follow-through, the willingness to tend the thing you started rather than holding the coin so tightly it never gets the chance to grow.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "A solid beginning takes root in the world today, a seed of something tangible, real enough to hold. A day of new ground, grounded and promising, the start that still has to be tended to become anything.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ace of Pentacles. A solid beginning today, the kind you can actually hold. Whatever's starting has roots, not just wings, so plant it with some care and let it take hold. This is the seed of something tangible. Just remember a seed needs tending after the planting, that the beginning is a promise the days ahead have to keep.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ace of Pentacles. A coin offered over an open garden, a path through it, the gate unlatched. Plant something real today."
+  },
+  "slug": "ace-of-pentacles"
+}

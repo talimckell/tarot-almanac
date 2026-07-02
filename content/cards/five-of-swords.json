@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Five of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/five-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Five · Air · the cost of winning",
+    "essence": "The Five of Swords is conflict won at a price, the hollow victory. It is the moment you win the fight and lose something larger, the sharp lesson about what winning can cost.",
+    "narrative": "Five disrupts the Four's rest, and in Swords the disruption is conflict and its aftermath. The old image is a figure holding three swords with a smirk, two more on the ground, two defeated others walking away under a ragged sky. The winner has won, and the win is hollow. This is the suit's hard look at conflict: the argument you won that cost you the relationship, the point proven at the price of the connection. It sits in the middle of the journey as a warning about the mind's sharpness turned competitive, the way being right can leave you alone. The card asks what your victory actually cost.",
+    "gift": {
+      "keywords": [
+        "hard lessons",
+        "knowing your limits",
+        "walking away",
+        "recognizing true cost"
+      ],
+      "body": "The Five is a mixed gift. It isn't triumph; it's the clarity about what a fight is really worth. Upright, the Five of Swords is the hard wisdom of seeing the true cost of winning: realizing the argument isn't worth the damage, choosing to walk away from a fight you could win but shouldn't, learning the difference between being right and being whole. It's the lesson, sometimes learned the hard way, that some victories aren't worth their price. What it offers is the clarity to count the cost before you swing. Not every fight is worth winning. Knowing which ones to walk away from is its own sharp kind of strength.",
+      "affirmation": "I can count what a fight will cost before I have it. Walking away can be the stronger move."
+    },
+    "shadow": {
+      "keywords": [
+        "winning at all costs",
+        "scorched earth",
+        "pride",
+        "hollow victories"
+      ],
+      "body": "The need to win burns down everything around the win. The Five of Swords' shadow is victory pursued no matter the cost, the argument won so thoroughly there's no relationship left, the pride that would rather be right than connected. It's the scorched-earth fight, the point driven home until the other person is humiliated and gone, the collecting of wins that leaves you increasingly alone. Or it's being on the losing end and unable to let it go, nursing the defeat into resentment. Underneath is often the belief that losing any conflict means losing yourself, so you win everything and wonder why you're isolated. The victories pile up, and so does the emptiness.",
+      "affirmation": "I can lose a fight and keep myself. Being right is not worth being alone."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to fight on rigged terms",
+        "walking away from bad-faith conflict",
+        "protecting your peace"
+      ],
+      "body": "The second reversal refuses to keep fighting battles that were never fair. Some of us are pulled into conflicts designed so we can't win: the bad-faith argument, the family fight that always ends with us as the problem, the debate where the other side changes the rules every time we get close. This reclaiming is refusing to keep swinging in a fight that was rigged. You don't have to win an argument that was built for you to lose. Walking away from bad-faith conflict isn't surrender, it's refusing to bleed for someone else's game. If you were drawn again and again into fights you were never meant to win, the reclaiming Five is you laying your swords down and leaving the field on purpose.",
+      "affirmation": "I can refuse a fight that was rigged against me. Walking away from bad faith is not losing."
+    },
+    "skills": [
+      "Counting the real cost of a conflict before entering it",
+      "Choosing connection over being right when it matters",
+      "Walking away from a fight you could win but shouldn't",
+      "Letting go of a loss instead of nursing it",
+      "Refusing bad-faith battles built for you to lose"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of costly conflict. The world's collective mood was post-battle, the air carrying the particular feel of victories that weren't entirely worth their price, fights that left more broken than they fixed. That was the current you arrived into. It gave you a native suspicion of winning for winning's sake, an instinct to ask what a conflict actually costs before engaging, a baseline awareness that being right and being whole aren't always the same thing.\n\nThe shadow it also carried is the wariness that can come with that awareness. A world that watched too many hollow victories may have taught you early to avoid conflict altogether, which is its own cost, just a quieter one.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Five of Swords as your rising means you meet the world already counting the cost of conflict. Your instinct before entering a fight, verbal or otherwise, is to ask what you'll actually lose by winning it. That produces a quality of discernment other people sometimes mistake for conflict avoidance, when it's really closer to wisdom about what's worth the fire.\n\nThe work this rising asks over a lifetime is using that discernment without letting it become permanent withdrawal. The figure who won is alone in the old image, and so, in a different way, is the person who never fights at all. The growth this rising points toward is choosing your battles rather than avoiding all of them.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is in conflict today, victories that may cost more than they're worth, a day to ask what's actually being won. Hollow triumphs and unnecessary battles, the kind of winning that leaves something worse off.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Five of Swords. A day of friction where winning might cost more than it's worth. Before you press the advantage, ask honestly what you actually want here, because this is the hollow victory, the argument you can win and still lose something in. Some battles aren't yours, and some you'd regret winning. Choose with that in view.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Five of Swords. The winner is holding three swords and standing alone. That's the whole card, really."
+  },
+  "slug": "five-of-swords"
+}

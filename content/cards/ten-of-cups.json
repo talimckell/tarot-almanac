@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Ten of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ten-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Ten · Water · feeling comes home",
+    "essence": "The Ten of Cups is the heart settled into lasting love. It is harmony, belonging, the emotional fulfillment that holds over time. It is the home you build, not the one you were handed.",
+    "narrative": "The suit completes here, in the fullest expression of what water can become. Where the Nine was personal satisfaction, the Ten widens it back out into shared, durable love, the emotional arc come all the way home. The old image is a couple with their arms raised, children playing, a rainbow of ten cups arched across the sky above a small house. It's the picture of harmony made lasting. It sits at the end of the suit because this is what the whole journey of feeling was reaching toward, the settled, weathered, chosen love that survives. The card's quiet honesty is that this kind of harmony is built and tended, never simply given, and that the home worth having is the one shaped to fit you.",
+    "gift": {
+      "keywords": [
+        "harmony",
+        "lasting fulfillment",
+        "chosen family",
+        "belonging",
+        "peace"
+      ],
+      "body": "Upright, the Ten of Cups is love that has become a home. It's the ordinary Sunday you'd not trade for anything. It's looking around a room full of your people and feeling the deep quiet of belonging here. It's the relationship that's survived enough to feel like ground. What it offers is harmony that lasts, the warmth still there in the morning after the fireworks are long over. You can co-create joy and belonging, and the love you've built is real legacy. Chosen family counts as fully as any other. You're allowed to rest in the love that's already here, to stop bracing and let yourself be home.",
+      "affirmation": "I can rest in the love that's already here. The home I built is real."
+    },
+    "shadow": {
+      "keywords": [
+        "disillusionment",
+        "unmet ideals",
+        "family tension",
+        "performing happiness"
+      ],
+      "body": "The picture and the reality stop matching. The Ten of Cups' shadow is the gap between the harmony you're supposed to have and what's actually happening under the roof. It's the family photo that hides the tension, the holiday performance of closeness everyone's exhausted by. It's measuring your real, complicated love against a rainbow-over-a-cottage ideal and finding it wanting. Or it's emotional bypassing, insisting everything's wonderful because admitting otherwise feels like failing at happiness itself. Underneath is often the fear that you don't fit the mold of what happiness is supposed to look like, so you fake the picture. The love may be real. The shadow is the pressure to perform a perfection that no real home has.",
+      "affirmation": "My real love doesn't have to match the picture. I can stop performing the perfect home."
+    },
+    "reclaiming": {
+      "keywords": [
+        "chosen family",
+        "questioning the script",
+        "complex belonging",
+        "joy on your terms"
+      ],
+      "body": "The Ten of Cups reverses a second way, as a refusal of the single approved image of happily-ever-after. The cottage, the rainbow, the conventional family: it was only ever one shape of home, and it was never the only valid one. This reclaiming honors the love that doesn't fit the mold, chosen family, complicated family, the belonging you built precisely because the prescribed version had no room for you. You get to define your emotional legacy and what a fulfilled life looks like. If the happily-ever-after you were shown was never going to include you, the reclaiming Ten is you building a home in your own shape and calling it exactly what it is, which is real.",
+      "affirmation": "My happily-ever-after gets to look like mine. The home I chose is no less real for being different."
+    },
+    "skills": [
+      "Letting yourself rest in a love that's actually here",
+      "Telling real harmony apart from performed harmony",
+      "Releasing the cottage-and-rainbow measuring stick",
+      "Honoring chosen family as full family",
+      "Building a home in your own shape"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world felt like home. The collective mood was settled, belonging, the emotional quality of people gathered in the warmth of something they'd built together over time. That was the current around you at the beginning. It gave you a native faith in lasting love, a baseline sense that harmony is available and durable if you tend it, that the good thing can stay. You came in on a day that had arrived somewhere.\n\nThe shadow the day carried is the measuring stick that comes with a picture that complete. A world at the Ten of Cups also had a strong image of what the home should look like, and the people who didn't fit that image felt its absence specifically. How you got the belonging or whether the picture fit is part of what you carry.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ten of Cups as your rising means you meet the world looking for home. Your first orientation in any situation is toward belonging: who here are my people, where does the warmth settle, is there ground to stand on in this relationship. You're reading for the possibility of lasting love before you're reading for anything else.\n\nWhen you find it, the effect is real. You build things that hold. You tend what matters. The shadow of this rising is the pressure it generates to have the harmony look right, to perform the rainbow even when the real thing is messier and more complicated. The Ten teaches, over time, that the home you're looking for is built, not found, and that the built one is the real one.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is full-hearted today, a day of belonging, love already gathered close. A day of fulfillment and homecoming, whole in a way that asks only to be noticed before it's missed.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ten of Cups. Look up. The love is already here, not perfect, not the picture, but real and yours. Today's card isn't asking you to build anything or chase anything. It's asking you to notice what's already gathered around you. The belonging you have is worth feeling. Let yourself be home for a day.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ten of Cups. The suit's final card. Ten cups in the sky, people you love, the ordinary Sunday you wouldn't trade. Look up."
+  },
+  "slug": "ten-of-cups"
+}

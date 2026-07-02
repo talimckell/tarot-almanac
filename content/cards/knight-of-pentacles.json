@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Knight of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/knight-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Knight · Earth · earth as action",
+    "essence": "The Knight of Pentacles is steady, reliable action, the slowest and most dependable of the knights. It is diligence, routine, and the unglamorous follow-through that finishes what it starts.",
+    "narrative": "The Knight is the element in action, and in Pentacles that action is slow, methodical, and reliable. The old image is a knight on a heavy, motionless workhorse, holding a coin, surveying a plowed field, in no hurry at all. Where the other knights charge, this one plods, and the plodding is the point. This is action as steady labor: the routine maintained, the task finished, the long unexciting work done day after day until it's complete. The Knight of Pentacles is the suit's embodiment of follow-through, the one who isn't flashy but gets there, the dependable diligence that builds real things while the faster knights burn out.",
+    "gift": {
+      "keywords": [
+        "reliability",
+        "diligence",
+        "routine",
+        "follow-through",
+        "patient hard work"
+      ],
+      "body": "Upright, the Knight of Pentacles is the quiet power of showing up and doing the work, day after day, until it's done. It's the steady routine that builds a real result, the reliability people can count on, the follow-through that finishes the unglamorous middle when everyone flashier has wandered off. It's diligence without drama, the patient labor that gets there. What it offers is the gift of dependable action, the kind that builds lasting things. You're allowed to be the steady one, to value routine and follow-through, to win by finishing rather than by dazzling. The plodding workhorse reaches the end of the field. Slow and reliable is real strength, and it's the kind that arrives.",
+      "affirmation": "I can win by finishing, not by dazzling. Steady and reliable reaches the end of the field."
+    },
+    "shadow": {
+      "keywords": [
+        "stagnation",
+        "rigid routine",
+        "boredom",
+        "stubbornness",
+        "fear of change"
+      ],
+      "body": "The steady plod becomes a rut with no exit. The Knight of Pentacles' shadow is reliability calcified into rigidity, the routine that's stopped serving you and become a cage, the resistance to any change because the familiar plod feels safe. It's the work done so mechanically it's lost all meaning, the stubbornness that mistakes never adapting for being dependable, the life so committed to the same furrow that it can't see the field has changed. Underneath is often a fear of the new, a sense that any deviation from the routine risks everything, so you keep plowing the same row long after it's gone barren. The steadiness that built things now just keeps you stuck in place.",
+      "affirmation": "I can stay reliable and still allow change. A routine is meant to serve my life, not to trap me in the same furrow."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to be taken for granted",
+        "valuing your steady labor",
+        "reliability on your terms"
+      ],
+      "body": "Reversed as refusal, the Knight stops letting your steady reliability be taken for granted and exploited. Some of us are the dependable ones, and the world learns to lean on that, piling on more because we'll always come through, never thanking the labor because it's quiet, assuming our follow-through is owed. This reclaiming is valuing your own diligence and refusing to let it be mined for free. Your reliability is a gift, not a given. You get to set limits on the steady labor everyone's come to expect, to be dependable on your own terms rather than endlessly available, to be appreciated for the work that holds things up. If your quiet, faithful effort has been treated as a bottomless resource, the reclaiming Knight is you deciding that your steadiness has worth and limits both.",
+      "affirmation": "My reliability is a gift, not a given. I can be steady on my own terms and refuse to be quietly mined."
+    },
+    "skills": [
+      "Showing up to do the work until it's finished",
+      "Building results through steady routine",
+      "Allowing change without abandoning reliability",
+      "Telling dependable rhythm from a barren rut",
+      "Setting limits so your steadiness isn't exploited"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world moved slowly and reliably. The collective mood was steady, methodical, unhurried, the shared sense of work being done patiently rather than chased. That was the current you arrived into. It gave you a native respect for the unglamorous middle, an instinct that real things get built through routine and follow-through rather than flashes of brilliance, a baseline trust in the value of just showing up.\n\nThe shadow the day also carried is the rut that steady can become. A world moving methodically on the day you were born may have taught you, early, that change is risky and the familiar plod is always safer, and you may carry a harder time than most knowing when the routine has stopped serving you.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Knight of Pentacles as your rising means you meet the world ready to do the work, steadily, without needing it to be exciting. Your first instinct with a long task is to settle into the routine that will actually finish it, rather than chasing the burst of motivation other temperaments need to get started. That produces real dependability, the kind that makes you the person other people build their plans around.\n\nThe work this rising asks over a lifetime is staying flexible inside the reliability. The workhorse in the old image is motionless, surveying the field, and the suit's full arc asks this rising to keep checking whether the field still needs the same furrow, or whether steady has quietly become stuck.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world makes steady progress today, reliable and unhurried, a day of dependable work. A day of patient effort, solid and a little plodding, the reliability that gets there and occasionally refuses to adapt.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Knight of Pentacles. A day for steady, unglamorous progress. This is the reliable energy, moving at its own pace and finishing what it starts, and it actually gets there while the flashier kinds burn out. Keep your steady pace. Just notice if steady has quietly become stuck, if the caution that serves you has started to keep you from ever changing course.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Knight of Pentacles. Workhorse standing still, surveying the field. Not exciting. Gets there anyway."
+  },
+  "slug": "knight-of-pentacles"
+}

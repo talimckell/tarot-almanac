@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Four of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/four-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Four · Water · feeling turns inward and flat",
+    "essence": "The Four of Cups is the heart gone quiet and unmoved. It is apathy, restlessness, the strange flatness that can settle in even when there's plenty around you. It is the offered cup you don't reach for.",
+    "narrative": "After the Three's bright communal joy, the suit cools. Four is the stable number, the square, and in Cups that stability curdles into emotional stuckness, the restlessness that comes when the highs have passed and nothing new is landing. The old image is a figure sitting under a tree, arms crossed, three cups in front of them and a fourth being offered by a hand from a cloud, and they're looking at none of it. This is the discontent that isn't quite sadness, the flatness where everything feels like not-enough so you reach for nothing. It comes mid-suit because every emotional life passes through these stretches, the gray patches where feeling goes dull and the world keeps offering things you can't make yourself want.",
+    "gift": {
+      "keywords": [
+        "introspection",
+        "discontent",
+        "withdrawal",
+        "the overlooked",
+        "honest flatness"
+      ],
+      "body": "This one's hard, because the gift isn't a good feeling. It's the honesty of a flat one. The Four of Cups is the day everything feels beige and you stop pretending otherwise. It's turning down the plans because you have nothing to bring. It's the restlessness that's trying to tell you something the busier feelings drowned out. The gift is letting the flatness be real instead of forcing enthusiasm you don't have, because the discontent is usually a signal. Sometimes the cup you're not reaching for is the wrong cup, and the apathy is wisdom in disguise. Sitting with the gray honestly is how you find out what it's pointing at.",
+      "affirmation": "I can let the flatness be honest. Not wanting any of it is information, not failure."
+    },
+    "shadow": {
+      "keywords": [
+        "apathy as habit",
+        "missing what's offered",
+        "isolation",
+        "chronic dissatisfaction"
+      ],
+      "body": "The gray becomes the only weather. The Four of Cups' shadow is when the temporary flatness hardens into a permanent shrug, when nothing is ever enough on principle and you've stopped even looking up at what's offered. It's turning down the fourth cup so reflexively you don't notice it's a good one. It's the dissatisfaction that's become an identity, the certainty that nothing will land so why bother reaching. Underneath is often a fear of being disappointed again, so you preempt it by wanting nothing. The offered cup is still there, held out by a hand you've trained yourself not to see. The shadow is mistaking your own numbness for the world's emptiness.",
+      "affirmation": "I can look up at what's actually being offered. The emptiness might be mine to set down."
+    },
+    "reclaiming": {
+      "keywords": [
+        "sacred rest",
+        "protecting your energy",
+        "refusing forced enthusiasm"
+      ],
+      "body": "The Four of Cups reverses a second way, as a refusal to perform an interest you don't feel. Sometimes the withdrawal isn't depression. It's protection, the sacred no of someone who's been asked to be available and grateful and engaged past what they have to give. You're allowed to conserve your emotional energy. You don't owe the world your enthusiasm on demand. This reclaims the pause as a right rather than a problem, the deliberate stepping-back from a culture that treats rest as failure and constant wanting as health. If you were taught that checking out is always a symptom, the reclaiming Four is you knowing the difference between numbness and a boundary, and choosing the boundary on purpose.",
+      "affirmation": "I can protect my energy without apology. Rest is allowed to be a choice."
+    },
+    "skills": [
+      "Letting a flat feeling be honest instead of forcing cheer",
+      "Asking what the discontent is pointing at",
+      "Noticing the good cup you're reflexively refusing",
+      "Telling protective rest apart from stuck apathy",
+      "Conserving energy without calling it a failure"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world had gone quiet. The collective mood was flat, restless in the way that follows abundance rather than precedes it, the shared feeling of having enough and being unmoved by it anyway. That was the emotional air at your beginning. It gave you a specific sensitivity to the interior life, to the difference between surface contentment and what's actually happening underneath, to the gray stretches that don't announce themselves as anything in particular but are their own kind of signal. You know the flatness from the inside. You don't panic when it arrives because it was there at the start, and you learned early that it passes.\n\nThat same familiarity with the gray is the shadow's opening. The ease with flatness can become a comfort with it, the sense that nothing landing is just how things are, that the offered cup probably isn't worth reaching for.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Four of Cups as your rising means you meet the world with a built-in discernment about what's actually worth wanting. You're not easily impressed. You don't reach for the cup just because it's offered. That can look like apathy from outside, and sometimes it is. At its best it's a filter: you know the difference between things that actually move you and things that are just available, and you don't pretend to want what you don't want.\n\nThe work this rising does over a lifetime is in the direction of the fourth cup, the one held out unexpectedly. Your instinct is to not look up. The growth is in learning when to look.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is restless today, a flatness amid plenty, something being overlooked right nearby. A day of quiet discontent, where the eye fixes on what's missing and misses what's already offered.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Four of Cups. The flatness is real. Don't perform around it. But the card is also asking something: there's a cup being offered nearby, something available you haven't looked at yet. The discontent is honest. It's also possible it's aimed the wrong way. Before the day is over, look up once and see what's actually there.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Four of Cups. The figure isn't looking at the fourth cup, the one being offered right now. Easy to miss when you're fixed on what's not there."
+  },
+  "slug": "four-of-cups"
+}

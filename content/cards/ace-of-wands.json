@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Ace of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ace-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Ace · Fire · the spark before the fire",
+    "essence": "The Ace of Wands is the first flare of want. It is raw creative and vital energy, the spark of an idea or a desire before it has any shape, the moment something in you says yes, this, go.",
+    "narrative": "Every suit begins with its Ace, the pure undiluted element offered like a seed. In Wands the seed is fire, and fire is will. This is the spark with no form yet, the impulse before the plan, the kind of energy that makes you sit up straighter without quite knowing why. The old image is a hand reaching out of a cloud holding a single budding branch, green shoots already pushing from the dead wood. That budding is the whole promise of the suit: this is alive, and it wants to grow. The Ace doesn't tell you what to build. It just hands you the lit thing and trusts you'll know it when you feel it.",
+    "gift": {
+      "keywords": [
+        "inspiration",
+        "new energy",
+        "creative spark",
+        "drive",
+        "raw potential"
+      ],
+      "body": "Upright, the Ace of Wands is the surge of wanting to make something. It's the idea that wakes you up at 2am with your hands already itching to start. It's signing up for the class, opening the blank document and not hating it, feeling the pull toward a person or a project before you can explain it. What it offers is permission to want, to follow the heat instead of waiting for a reason that's airtight. You don't need the whole plan to begin. The spark is enough to start with, and starting is the only way the rest arrives.",
+      "affirmation": "I can follow what lights me up. The spark is reason enough to begin."
+    },
+    "shadow": {
+      "keywords": [
+        "false starts",
+        "blocked energy",
+        "scattered drive",
+        "lost spark"
+      ],
+      "body": "The spark won't catch, or it catches everything at once and burns nothing through. The Ace of Wands' shadow is the idea you never start, talked out of it before the match touched the wick. It's the notebook full of first pages, the projects abandoned at the exciting part, the drive that scatters across ten wants and lands on none. Or it's the flat stretch where nothing lights you up at all, where you wait to feel inspired and the feeling won't come. Underneath is often the fear that if you start and it fizzles, you'll have proof you were never that creative, never that alive. So you keep the spark safe by never letting it touch air.",
+      "affirmation": "I can begin before I feel ready. A spark that fizzles still taught my hands to strike."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reclaiming desire",
+        "creative permission",
+        "refusing the practical script",
+        "vital wanting"
+      ],
+      "body": "The second reversal is a refusal: every rule that told you your wants were frivolous gets set down. Plenty of us were taught that desire is suspect, that the practical path is the only responsible one, that making things for the joy of it is a luxury we didn't earn. This says otherwise. Your wanting is not a problem to manage. The pull toward color and heat and creation is information about who you are, not a distraction from a more serious life. You get to want loudly, to make things no one asked for, to chase a spark with no defense ready for why. If you were told to be sensible at the cost of being lit up, the reclaiming Ace is you taking the match back.",
+      "affirmation": "My desire is not frivolous. I am allowed to want loudly and make what I please."
+    },
+    "skills": [
+      "Acting on a spark before you have the whole plan",
+      "Noticing what pulls you and trusting the pull",
+      "Starting small instead of waiting for certainty",
+      "Protecting early energy from premature judgment",
+      "Letting yourself want without justifying the want"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of ignition. The world's collective energy was sparking, the shared mood of something wanting to begin before it had a name or a shape. Raw creative potential in the air, the first flare before anything had been decided about it. That was the current you arrived into. It gave you a native relationship to impulse and initiation, an instinct to feel the pull toward things before the logic has caught up, a comfort with the beginning of projects that many people find the hardest part.\n\nThe shadow the day carried is the scatter. A world full of sparks is a world where a lot of things start and not all of them land, and you may have absorbed an early pattern of beginnings that need tending to become anything more.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ace of Wands as your rising means you meet the world with fire first. Your instinct in any new situation is toward what wants to start, what wants to be made, what's alive in this moment that could go somewhere. You're good at beginnings. The energy of initiation comes naturally to you in a way that people who tend toward caution or completion find hard to access.\n\nThe work this rising asks over a lifetime is the tending. The spark is real and worth trusting. The suit of Wands runs all the way to the King, and the full arc of it is fire learning to sustain itself rather than only flare. That's the work the Ace starts.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "A spark catches in the world today, the first impulse of something wanting to begin. There's real heat in beginnings, and also the question of whether anyone will tend the flame past the first flare. A day for what wants to start.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ace of Wands. Something in you wants to begin today, and the card says trust that before you talk yourself out of it. You don't need the plan to be complete. You don't need to know it'll work. The Ace is the spark, and the spark is asking to touch something. Notice what you're pulled toward and let yourself move toward it, even just one step, before the day is out.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ace of Wands. The branch is budding. The spark is real. The only question is whether you let it touch something today."
+  },
+  "slug": "ace-of-wands"
+}

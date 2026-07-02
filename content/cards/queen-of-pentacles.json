@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Queen of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/queen-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Queen · Earth · earth as inward depth",
+    "essence": "The Queen of Pentacles is nurturing abundance held with grounded warmth. It is practical care, resourcefulness, and the generous competence of someone who can tend a home, a body, a business, and the people in them, all at once.",
+    "narrative": "The Queen is the element turned inward, embodied and held. The old image is a queen on a throne carved with goats and cherubs, in a lush garden, cradling a coin in her lap like something alive, a rabbit, symbol of abundance, at her feet. She is warm and capable, surrounded by growing things she clearly tends well. This is earth as nurturing mastery: the practical, generous competence that keeps a household or a venture thriving and the people in it cared for. Where the Knight labors steadily outward, the Queen holds the whole ecosystem inwardly, the resourceful warmth that makes a place fertile. She is abundance that nurtures, security that has become a generous, grounded love.",
+    "gift": {
+      "keywords": [
+        "nurturing",
+        "resourcefulness",
+        "practical care",
+        "grounded warmth",
+        "abundance shared"
+      ],
+      "body": "At her best the Queen of Pentacles is the warm competence of someone who can tend a whole life and the people in it. It's the friend whose home is somehow always nourishing, the practical care that notices what people actually need and provides it, the resourcefulness that makes a little go far and a lot go to good use. It's abundance that nurtures rather than hoards, security expressed as warmth. What it offers is the gift of grounded, generous capability, the ability to make things thrive. You can be both practical and warm, can tend your resources and your people at once, can make a place fertile and safe. Nurturing competence is real power. The garden flourishes because someone tends it well.",
+      "affirmation": "I can be practical and warm at once. Tending a life and its people well is real power, and the garden flourishes for it."
+    },
+    "shadow": {
+      "keywords": [
+        "smothering",
+        "self-neglect",
+        "martyrdom",
+        "over-giving",
+        "losing yourself in care"
+      ],
+      "body": "The nurturer pours out until there's nothing left for herself. The Queen of Pentacles' shadow is care that's become self-erasure, the giving so total that the giver disappears, the tending of everyone else's garden while your own goes to seed. It's the martyrdom of the one who feeds everyone and never eats, the resourcefulness spent entirely on others, the warmth that smothers because it can't stop managing. Or it's tying your whole worth to how well you provide and nurture, so any failure to care for everyone feels like personal collapse. Underneath is often the belief that you're only valuable while you're nourishing others. So the Queen tends every garden but her own, and slowly starves in the middle of all that abundance.",
+      "affirmation": "I can tend my own garden too. I am worth nourishing, not only worth what I provide to everyone else."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing the assigned nurturer role",
+        "care that includes yourself",
+        "abundance without self-sacrifice"
+      ],
+      "body": "The second reversal refuses the assumption that your role is to nurture everyone else at your own expense. Many of us, especially women and queer caregivers, get cast as the one who provides and tends and holds it all together, the assumed source of care who's never asked who cares for them. This reclaiming is keeping the warmth and resourcefulness while refusing the self-erasure attached to them. Your care can include yourself. You get to nurture from real abundance rather than depletion, to provide without disappearing, to be the warm competent one and still be tended too. If you were assigned the role of feeding everyone and going hungry yourself, the reclaiming Queen is you setting a place at the table for your own needs.",
+      "affirmation": "My care includes me. I refuse the role of feeding everyone while I go hungry, and I set a place at the table for myself."
+    },
+    "skills": [
+      "Tending resources and people with grounded warmth",
+      "Making things thrive through practical care",
+      "Keeping care for yourself in the budget of your giving",
+      "Telling generous nurture from self-erasing martyrdom",
+      "Refusing the role of the one who provides and goes hungry"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was tending its garden. The collective mood was nurturing and resourceful, the shared sense of care given practically rather than just felt, the particular warmth of a place that's actually being looked after. That was the current you arrived into. It gave you a native capacity for practical care, an instinct to notice what people and places actually need rather than what's easy to offer, a baseline comfort with making something thrive through steady, grounded attention.\n\nThe shadow the day also carried is the self-erasure that can hide inside that gift. A world absorbed in tending on the day you were born may have taught you, early, that your value lives in how well you care for others, and you may carry a harder time than most remembering to tend your own garden too.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Queen of Pentacles as your rising means you meet the world looking for what needs tending. Your first instinct in any space is practical and warm at once: what does this place need, who here is uncared for, what would actually make this thrive. That produces a real gift for making things flourish, the rare combination of competence and warmth that other people feel cared for inside.\n\nThe work this rising asks over a lifetime is staying on your own list. The Queen in the old image cradles the coin like something alive, fully present to what she tends, and the suit's full arc asks this rising to extend that same presence inward. The garden flourishes because someone tends it well. You're allowed to be the someone who tends your own.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world tends and nurtures today, grounded care for the practical and the people both. A day of capable warmth, abundant and a little self-forgetting, the one who tends everyone and is easy to overlook.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Queen of Pentacles. A day for grounded care, for tending the practical and the people both. Look after what's in your charge today, capably and warmly. And include yourself in that care, because the nurturer who tends everyone and everything has a way of falling off her own list. You can make a home of wherever you are. Just leave a room in it for you.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Queen of Pentacles. Cradling the coin like something alive. Tend what's yours today. Tend yourself too."
+  },
+  "slug": "queen-of-pentacles"
+}

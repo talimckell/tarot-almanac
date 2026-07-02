@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "King of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/king-of-cups",
+    "cardMeta": "Minor Arcana · Cups · King · Water · feeling expressed into the world",
+    "essence": "The King of Cups is feeling turned outward with steadiness. He is emotional maturity in motion among others, the calm depth that can hold high water and offer other people a steady shore. He is what mastered feeling looks like when it leads.",
+    "narrative": "The King is the suit's outward expression, the element turned toward the world and the community rather than held privately within. Where the Queen embodies feeling inwardly, the King carries it into how he leads, steadies, and holds space for others. The old image is a king on a throne set in a rough sea, the water churning all around him while he stays calm and unspilled. That is the whole achievement of the card: deep feeling fully present and not running the show. This is emotional maturity expressed outward, the person who can stay steady in high water so others can find their footing near him. The King of Cups is what water becomes at its most seasoned, feeling mastered well enough to become a kind of shelter for the people around him.",
+    "gift": {
+      "keywords": [
+        "emotional steadiness",
+        "calm depth",
+        "compassion",
+        "mature leadership",
+        "holding space"
+      ],
+      "body": "Upright, the King of Cups is the calm at the center of other people's storms. It's being the steady one in the family crisis, feeling all of it and staying useful anyway. It's the leader who can hold a room's grief or fear without absorbing it or shutting it down. It's compassion that comes with spine, kindness that can also hold a hard line. The gift is feeling fully without being swept by it, deep water that doesn't capsize the boat. Your emotional maturity is a real strength, and leading with calm and compassion changes the rooms you're in. You can be moved and still be steady. The King offers others the shore he had to become for himself first.",
+      "affirmation": "I can stay calm in the middle of feeling. My steadiness is a place others can stand."
+    },
+    "shadow": {
+      "keywords": [
+        "suppression",
+        "cold control",
+        "feeling locked down",
+        "false calm"
+      ],
+      "body": "The steadiness hardens into a lid. The King of Cups' shadow is calm that's actually suppression, the steadiness bought by locking everything down so tightly nothing shows and nothing moves. It's the person who looks composed and is quietly frozen, mistaking control for maturity. It's the manipulation that can come from someone skilled with emotion who's stopped feeling their own, managing the room while staying numb at the center. Underneath is the fear that if he shows too much feeling, he'll lose control of all of it, so he keeps everything inside until the inside goes cold. The calm sea was supposed to be mastery. The shadow is a sea frozen solid and calling the ice peace.",
+      "affirmation": "Real steadiness includes feeling, not freezing. I can let it move through me and stay calm."
+    },
+    "reclaiming": {
+      "keywords": [
+        "redefining masculine calm",
+        "feeling out loud",
+        "refusing the stoic mask",
+        "tender authority"
+      ],
+      "body": "The King of Cups reverses a second way, as a refusal of the mask that says a man, or a leader, or a steady person has to keep it all inside. So much of what gets called emotional strength is just well-dressed suppression, the stoic who feels nothing on the outside and is dying underneath. The reclaiming is steadiness that includes feeling out loud, authority that can cry, leadership that's tender without apology. You can be the calm one and still let people see you moved. You can redefine what mature, grounded feeling looks like on your own terms. If you were taught that holding it all in was the price of being trusted, the reclaiming King is you proving steadiness and softness were never enemies.",
+      "affirmation": "I can be steady and still feel out loud. My tenderness does not cost me my strength."
+    },
+    "skills": [
+      "Staying steady while still feeling it all the way",
+      "Telling real calm apart from frozen suppression",
+      "Holding space for others without absorbing their storms",
+      "Leading with compassion that still has a spine",
+      "Letting yourself be visibly moved without losing your footing"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective composure. The world's shared mood was steady in the middle of deep water, feeling things without being run by them, the emotional quality of a community that has learned to hold its high water without spilling. That was the current you arrived into. It gave you a native understanding of emotional steadiness as something real and earned, a baseline faith that it's possible to feel fully and still stay useful.\n\nThe shadow the day also carried is the frozen version of that steadiness. A world organized around not spilling can confuse suppression with strength, and the early lesson that calm is valuable can become the lesson that feeling is dangerous.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The King of Cups as your rising means you meet the world as the steady one. Your first orientation in a charged situation is toward holding the room, staying calm so others can find their footing. People feel it and organize around it. You become the shore.\n\nThe work this rising asks over a lifetime is the difference between the shore and the frozen sea. Real steadiness moves: feeling passes through, is felt, and the person stays upright. The suppression version holds still by holding nothing. Learning which kind of calm you're in is the ongoing practice of this card.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world keeps a steady heart today, feeling fully without spilling, calm in deep water. A day of emotional mastery, composed and warm, with the quiet risk of mistaking control for peace.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the King of Cups. You can be the steady one today, holding the room's feeling without it sweeping you. That's real and available. The card is also asking: is the calm real, or are you holding something down? The King's mastery isn't distance from the water. He's in it, on a throne in the middle of the sea. Feeling it and staying steady is the move. Not feeling it isn't.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the King of Cups. His throne is in the middle of the sea. The water is rough. He's not moving. That's not distance. That's mastery."
+  },
+  "slug": "king-of-cups"
+}

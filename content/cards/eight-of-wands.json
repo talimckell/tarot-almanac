@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Eight of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/eight-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Eight · Fire · the fire takes flight",
+    "essence": "The Eight of Wands is speed, momentum, and sudden movement. It is everything happening at once after a wait, the energy finally released and flying toward its target.",
+    "narrative": "After the Seven's braced standstill, the Eight breaks loose. Eight in Wands is pure velocity: the old image is eight staves flying through open air over a green landscape, parallel, fast, nearly landing. There are no figures, just motion. This is the suit's rush, the moment the held energy releases and things move faster than you can quite track, messages and opportunities and changes arriving all at once. After all the standing and defending, the fire is finally going somewhere, and going quickly. The card is the exhilaration and the slight overwhelm of acceleration, the feeling of events outpacing your ability to plan them.",
+    "gift": {
+      "keywords": [
+        "momentum",
+        "swift action",
+        "rapid progress",
+        "alignment",
+        "things falling into place"
+      ],
+      "body": "At its best the Eight of Wands is the rush of everything moving at once. It's the week where the replies all come back yes, the project that suddenly accelerates, the message you finally send after weeks of drafting. It's the moment effort turns to momentum and things start falling into place faster than you expected. What it offers is the gift of alignment and speed, the green light after the long red. Ride it. When the energy is finally moving, you don't have to slow it down to feel in control. Sometimes the work is just to keep up and let it fly.",
+      "affirmation": "I can move with the momentum when it comes. I don't have to slow things down to feel in control."
+    },
+    "shadow": {
+      "keywords": [
+        "overwhelm",
+        "haste",
+        "chaos",
+        "moving too fast to think"
+      ],
+      "body": "The speed becomes a blur you can't steer. The Eight of Wands' shadow is too much arriving at once, the inbox that floods, the changes that pile up faster than you can absorb them, the rush that tips from exciting into frantic. It's acting too fast to think, firing off the message you should have slept on, saying yes to everything because it's all moving and stopping feels impossible. Or it's the crash after, the burnout that follows a sprint you never paused. Underneath is the fear that if you slow down you'll miss it, so you let the speed drive you instead of driving it. The momentum that should have carried you just scatters you.",
+      "affirmation": "I can slow down without losing the momentum. Speed I can't steer is not progress."
+    },
+    "reclaiming": {
+      "keywords": [
+        "moving at your own pace",
+        "refusing forced urgency",
+        "rejecting the hustle"
+      ],
+      "body": "Reversed as refusal, the Eight rejects the urgency the world keeps demanding of you. So much of life is built to rush you: be successful by this age, hit the milestones on schedule, keep up or fall behind. This reclaiming is deciding your own pace and refusing the manufactured hurry. Your timeline is yours. You don't have to move at the speed the world set for a life that isn't yours, don't have to treat every fast-moving thing as something you must catch. You can let the eight staves fly past and choose the ones that are actually yours. If you were made to feel always behind, the reclaiming Eight is you setting the pace yourself.",
+      "affirmation": "My pace is mine to set. I refuse the urgency that was never about my real life."
+    },
+    "skills": [
+      "Riding momentum without trying to over-control it",
+      "Slowing a rush enough to steer it",
+      "Telling true acceleration from frantic motion",
+      "Choosing your own pace against external pressure",
+      "Letting fast-moving things pass if they aren't yours"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of release. The world's collective energy had been building and it broke loose on your birthday, the shared mood of a held breath finally let out into motion. That was the air around you at the beginning. It gave you a native comfort with speed and change, an ease with things happening quickly, a baseline faith that acceleration is often the shape of things going right.\n\nThe shadow the day carried is the disorientation that can come with too much motion at once. A world in release can also scatter, and you may have absorbed an early relationship to pace that makes stillness feel like stagnation rather than steadiness.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Eight of Wands as your rising means you meet the world in motion. Your instinct is toward acceleration, toward the quick move, the fast reply, the project that can go now rather than wait. When momentum is available you're the first to feel it and the first to ride it, which makes you good at seizing the moment other people are still deciding about.\n\nThe work this rising asks is steering. The eight staves in the image are flying parallel, which means they were aimed before they were released. The ease with speed is the gift. Learning to aim before you release is what makes it land.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "Things move quickly in the world today, messages landing, plans accelerating, a held breath releasing into motion. A day of speed, useful when it's aimed and disorienting when it isn't.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Eight of Wands. Things are moving today, or they're about to. Messages will land, plans will accelerate, the thing you've been waiting on may arrive. Let the momentum carry you. The card's one caution is steering: make sure you know where these staves are aimed before they land. The speed is a gift. Don't let it outrun your direction.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Eight of Wands. Eight staves, mid-flight, moving fast. The question is whether they were aimed before they left."
+  },
+  "slug": "eight-of-wands"
+}

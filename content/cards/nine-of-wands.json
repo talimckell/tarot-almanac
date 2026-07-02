@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Nine of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/nine-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Nine · Fire · the fire, weary but still standing",
+    "essence": "The Nine of Wands is resilience, the last stand, the strength that's tired but won't fall. It is the courage to keep going when you're nearly spent, guarding what you've fought for one more time.",
+    "narrative": "Nine is the near-end, the card just before the suit completes, and in Wands it's the moment of exhausted persistence. The old image is a figure leaning on one staff, head bandaged, eight more planted behind them like a fence, watching warily for the next attack. They've been through it. They're hurt and worn down, and they're still on their feet. This is resilience that has a cost, strength that isn't fresh anymore but holds anyway. After the Eight's rush, the bill comes due, and the Nine asks whether you can keep standing when the easy energy is gone and only will is left.",
+    "gift": {
+      "keywords": [
+        "resilience",
+        "perseverance",
+        "courage",
+        "grit",
+        "the last push"
+      ],
+      "body": "Upright, the Nine of Wands is the strength to stand up one more time when you're already exhausted. It's showing up for the hard conversation after a week that already took everything, finishing the thing when every part of you wants to quit, the grit that holds the line on willpower alone. It's resilience that knows what it costs and pays it anyway. What it offers is proof of your own durability, the discovery that you can keep going past the point you thought was your limit. You've survived more than this. The fence behind you is every fight you already won. You can hold one more time.",
+      "affirmation": "I can stand one more time, even tired. Every staff behind me is a fight I already survived."
+    },
+    "shadow": {
+      "keywords": [
+        "burnout",
+        "bracing for attacks that aren't coming",
+        "walls up",
+        "depleted"
+      ],
+      "body": "The guard never comes down, even when the threat is gone. The Nine of Wands' shadow is exhaustion turned into permanent defensiveness, bracing for the next blow long after the fight is over, so depleted you can't tell safety from danger anymore. It's the walls built so high after so much hurt that nothing good gets in either, the wariness that's become your whole posture. Or it's pushing through on empty past the point it helps, mistaking depletion for strength, refusing rest because stopping feels like defeat. Underneath is the belief that you can never let your guard down, that the moment you rest is the moment you get hit. So you stand exhausted behind your fence and never lay the staff down.",
+      "affirmation": "I can lower my guard where it's safe. Rest is not the moment I get hit. It's how I keep standing."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to be endlessly strong",
+        "allowing softness",
+        "rest as resistance"
+      ],
+      "body": "The second reversal refuses the demand that you be endlessly, tirelessly strong. Some of us were never allowed to be tired, made into the resilient one, the survivor, the one who always copes, until strength stopped being a choice and became a cage. This reclaiming is laying the staff down and refusing to perform invulnerability. You are allowed to be tired. Your worth was never the bandage and the brace. You can stop standing guard, let yourself be soft and tended instead of always the one enduring. If you were made to be strong because no one would catch you if you fell, the reclaiming Nine is you finally setting the weapon down and resting anyway.",
+      "affirmation": "I am allowed to be tired. My strength was never the only thing I am worth."
+    },
+    "skills": [
+      "Finding one more push when it actually matters",
+      "Telling necessary perseverance from depleted pushing",
+      "Lowering your guard where it's actually safe",
+      "Resting before you're past empty",
+      "Refusing the role of the one who's always strong"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of worn endurance. The world's collective energy was tired and still standing, the shared mood of people who had been through something hard and were in the last stretch of it. That was the current around you at the beginning. It gave you a native understanding of resilience as a real thing with a real cost, a baseline feel for what it's like to keep going when the easy energy is long gone.\n\nThe shadow that came with it is the permanent readiness to endure. A world in exhausted perseverance also had its walls up, and you may have absorbed early the belief that strength means never putting the staff down, that rest is the moment you get hit.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Nine of Wands as your rising means you meet the world already braced. Your first instinct in any challenging situation is to check your defenses and find your ground. You're good at enduring. People who know you well know you as someone who keeps standing when things get hard, the one who's still there at the end.\n\nThe work this rising asks is the distinction between resilience and rigidity. The bandaged figure in the old image has been through real battles, and the wariness makes sense. Over time this rising asks you to tell the difference between the guard that keeps you safe and the guard that's become a wall even against things that aren't threats. The staff can be put down. The endurance that matters isn't the kind that never rests.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is weary and still standing today, near the end of a long effort, bracing for one more push. A day of battered resilience, where exhaustion can curdle into defending against threats that have already passed.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Nine of Wands. You're tired, and you're still standing, and that counts. The card isn't asking you to be fresh. It's asking you to find one more push if one is actually needed, and to rest if it isn't. Check the fence: is something actually coming, or are you standing guard out of habit? If the threat has passed, you're allowed to put the staff down. The endurance is real. It doesn't have to be constant.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Nine of Wands. Bandaged. Still standing. Eight staves already won behind them. This isn't fresh strength. It's the real kind."
+  },
+  "slug": "nine-of-wands"
+}

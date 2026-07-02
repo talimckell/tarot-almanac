@@ -1,0 +1,71 @@
+{
+  "arcana": "minor",
+  "name": "Two of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/two-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Two · Water · feeling meets another",
+    "essence": "The Two of Cups is the meeting of two hearts on level ground. It is connection, reciprocity, the moment feeling becomes shared rather than solitary. It is what happens when the open heart finds another one.",
+    "narrative": "If the Ace is feeling beginning alone, the Two is feeling turned toward someone else. The suit's emotional arc takes its first relational step here: one cup became two, and two cups raised together is the simplest picture of mutual regard. The old image is two people facing each other, exchanging cups, sometimes with a winged emblem floating above them, a small private ceremony of meeting. It comes this early in the suit because connection is the first thing the open heart reaches for, and the Two holds the particular hope and risk of that reaching: to offer your cup, you have to trust it'll be met. This is partnership in miniature: romance, yes, but also any real meeting of equals, the friendship that clicks, the reconciliation that holds. The whole card rests on reciprocity, the difference between being met and merely being received.",
+    "gift": {
+      "keywords": [
+        "mutual respect",
+        "reciprocity",
+        "intimacy",
+        "partnership",
+        "being met"
+      ],
+      "body": "Upright, the Two of Cups is the relief of being met exactly as much as you reached. It's the conversation where you say the vulnerable thing and they answer with one of their own. It's the friendship that becomes real the night you both admit you were lonely. It's the reconciliation where both people actually apologize, not just the tired one. What's precious here is reciprocity, the rare and steadying experience of effort flowing both ways. You can be seen and valued for who you actually are. Your connections don't have to follow any script to be real love. You're allowed to want depth, and to hold out for the people who meet you in it.",
+      "affirmation": "I can meet another person fully. I deserve to be met in return."
+    },
+    "shadow": {
+      "keywords": [
+        "imbalance",
+        "one-sided effort",
+        "miscommunication",
+        "codependency",
+        "unmet needs"
+      ],
+      "body": "The two cups stop being equal. The Two of Cups' shadow is the connection where you're the only one pouring, doing the reaching and the repairing and the remembering while the other person just receives. It's the relationship that runs on your effort and calls itself mutual. Or it tips the other way into codependency, two people so tangled that neither can tell where they stop and the other begins. It's the slow leak of unspoken needs, the message you reread wondering why it landed wrong. Underneath is often the fear that if you stopped doing all the work, there'd be nothing holding it together, which is usually the truest and hardest thing the card is trying to show you.",
+      "affirmation": "I don't have to lose myself to keep us. I can stay whole and still stay close."
+    },
+    "reclaiming": {
+      "keywords": [
+        "love on your terms",
+        "refusing \"too much",
+        "\" radical reciprocity",
+        "chosen bonds"
+      ],
+      "body": "The Two of Cups reverses a second way, as a refusal to accept less than being fully met. You're not too much for wanting depth. The world is full of pressure to be easy, low-maintenance, grateful for whatever connection you can get, and this is the refusal of that bargain. You deserve relationships that meet you in your wholeness, not only when it's convenient for the other person. You get to build love and belonging on your terms, chosen family and healing partnerships and the kind of reciprocity that doesn't keep score because it doesn't need to. If you were taught to shrink your needs to keep people close, the reclaiming Two is you wanting the real thing out loud.",
+      "affirmation": "I am not too much for wanting to be met. I can hold out for real reciprocity."
+    },
+    "skills": [
+      "Offering vulnerability and letting it be answered",
+      "Noticing when effort only runs one direction",
+      "Naming a need instead of hoping it's noticed",
+      "Telling closeness apart from losing yourself",
+      "Holding out for people who meet you fully"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was in the act of meeting itself. The collective feeling was relational and mutual, two becoming visible to each other, the particular emotional quality of recognition rather than solitude. That was the atmosphere you arrived into. It gave you a native attunement to the quality of connection, the ability to feel the difference between being actually met and being merely tolerated, between presence and performance, between a room full of people and an actual exchange. You've always known, somewhere below the conscious level, what real reciprocity feels like. You were in the middle of it when you got here.\n\nThe shadow of that inheritance: a world organized around meeting also raised the stakes of not being met, and the early attunement to reciprocity can make its absence land harder than it does for people whose baseline is more solitary. You feel the imbalance early. That's information, and it costs something.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Two of Cups as your rising means you meet the world through the lens of reciprocity. You're reading the exchange before anything else, assessing almost automatically whether what's flowing between you and the person or situation in front of you is actually mutual. You show up with your cup offered. You're watching to see if theirs comes up to meet it.\n\nThat attunement is real and it gives you access to a quality of connection most people have to work harder to find. The harder side is the cost of the watching, the energy spent monitoring whether the meeting is real. The rising of the Two eventually teaches the difference between healthy discernment and the hypervigilance that stops you offering your cup at all. The goal the card points toward is not certainty before offering, it's the willingness to reach while staying whole enough to notice if the reaching isn't returned.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world meets itself today, a day of genuine connection, two seeing each other clearly. A day of mutual recognition, which only works when both sides actually show up for it.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Two of Cups, which means today has a meeting in it, or the conditions for one. Offer your cup. The card asks for reciprocity, which means it also asks you to notice whether you're getting it: is this actually flowing both ways, or are you doing all the reaching? Today is a good day to let a real connection be real, to say the thing that would deepen it, to show up as yourself rather than the version you think is easier to meet. If the meeting is genuine, let it in.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Two of Cups. Someone is going to be actually seen today, maybe by you, maybe by someone else, maybe by both at once. The card is about what happens when both cups come up."
+  },
+  "slug": "two-of-cups"
+}

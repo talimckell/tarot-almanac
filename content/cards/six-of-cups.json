@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Six of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/six-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Six · Water · feeling turns toward the past",
+    "essence": "The Six of Cups is the heart turned back toward what was. It is nostalgia, memory, the sweetness of an earlier self. It is the past offered as comfort, for better and for worse.",
+    "narrative": "After the Five's grief, the suit reaches back for something gentler. Six is the number of harmony returning, and in Cups it returns through memory, the warm pull of the past after loss has scoured the present. The old image is two children in a garden, one handing the other a cup full of flowers, a scene of innocence and safekeeping. It comes right after the Five for a reason worth feeling: when the present hurts, the heart often turns home, to the version of things that felt safe. This is nostalgia and reunion, the childhood memory, the old friend who knew you before, the comfort of returning to who you used to be. The card is tender, and its tenderness is also its risk, because the past makes a sweeter place to visit than to live.",
+    "gift": {
+      "keywords": [
+        "nostalgia",
+        "innocence",
+        "joyful memory",
+        "reunion",
+        "emotional roots"
+      ],
+      "body": "Upright, the Six of Cups is remembering that warms instead of aches. It's a song coming on that drops you straight into being sixteen, in the best way. It's the friend you haven't seen in years and the conversation picks up like no time passed. It's making your grandmother's recipe and feeling her in the kitchen with you. The gift is the past being gentle with you, the reclaimed innocence, the proof that you were once held and can be again. Your early experiences of safety and joy were real and they still belong to you. Letting the past be kind today, without demanding you move back into it, is a quiet form of repair.",
+      "affirmation": "I can let the past be gentle with me today. The good I knew was real."
+    },
+    "shadow": {
+      "keywords": [
+        "living in the past",
+        "stagnation",
+        "selective memory",
+        "stuck in what was"
+      ],
+      "body": "The visit becomes a residence. The Six of Cups' shadow is when the past stops being a place you remember and becomes the place you actually live, the present grayed out next to a golden version of before. It's selective memory polishing the old days until they outshine anything now could offer. It's staying loyal to a version of yourself or a relationship that's long over because back then felt safer than here. Underneath is often the belief that the good is behind you, that the past was the real life and this is just the long afterward. The memories are real and sweet. The shadow is using them as a door out of a present you've stopped trying to live in.",
+      "affirmation": "The past was safe, and I am allowed to live now. I can visit without moving back."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reparenting",
+        "healing childhood pain",
+        "choosing a different past-story"
+      ],
+      "body": "The Six of Cups reverses a second way, as a refusal to leave your younger self in the version of the past that hurt them. Not everyone's childhood was a garden. For a lot of people, going back means confronting erasure, repression, the parts of you that didn't get to exist yet. This reclaiming is the work of returning with adult hands, parenting yourself the way you needed, validating the kid who once felt unreal or unsafe. You get to revisit your early experiences of identity and kinship and decide which to honor and which to gently release. If your past held more pain than flowers, the reclaiming Six is you going back to give that child what no one gave them.",
+      "affirmation": "I can return to my younger self with kinder hands. I get to reparent what was missed."
+    },
+    "skills": [
+      "Letting a good memory comfort you without escaping into it",
+      "Telling sweet remembering apart from living in the past",
+      "Returning to your younger self with compassion",
+      "Honoring what was real then without grieving the present away",
+      "Choosing which parts of your history to carry forward"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was turned gently toward what came before. The collective mood was tender and remembering, a softness in the air that came from looking back rather than forward. That was the current you arrived into. It gave you a native relationship with memory and roots, an ease with the past as a living thing rather than just something done and stored. You carry your history close. You can revisit it without being destroyed by it, and sometimes the warmth of what was is where you go when the present needs supplementing.\n\nThe shadow the day also gave you is the pull that warmth exerts. A world organized around looking back made the past feel safer than it sometimes is, and the comfort of the familiar can make the present's demands feel less compelling by comparison than they need to be.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Six of Cups as your rising means you meet the world through the texture of what it reminds you of. Your first orientation to a new situation often involves pattern-matching: who does this person remind you of, where have you been that felt like this, what past version of a feeling is this current one related to. Memory is your emotional lingua franca.\n\nThat capacity gives you deep continuity and the ability to be actually comforted by the past, which is a gift. The work this rising asks is direction: the warmth of memory is orienting, and it's available to point you into the present as well as back into the past. The question it keeps asking, quietly, is whether you're using the past to understand now or to escape it.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world turns tender toward the past today, a day of nostalgia and remembered sweetness. A gentle backward look, comforting and a little wistful, with the old pull of preferring then to now.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Six of Cups. Something from the past is surfacing today, a memory, a sweetness, maybe an old feeling you'd almost forgotten. Let it be a comfort. The card isn't asking you to live there, just to let the warmth of it reach you. Notice, though, whether the pull of before is making the present feel like a disappointment. If so, that's asking something. The past is available to visit. Today, stay long enough to feel it, then come back.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Six of Cups. Something old is coming through warm today. Let it. Just don't unpack your bags."
+  },
+  "slug": "six-of-cups"
+}

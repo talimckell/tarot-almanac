@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Ace of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ace-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Ace · Air · the first clear cut",
+    "essence": "The Ace of Swords is the moment of sudden clarity. It is truth, mental breakthrough, the clean cut that separates what's real from what isn't, the idea that arrives sharp enough to change everything.",
+    "narrative": "Every suit begins with its Ace, the element handed over pure. In Swords the element is air, the mind, and the Ace is its sharpest expression: the old image is a hand from a cloud gripping an upright sword, a crown and laurel at its tip, the blade cutting clean through the haze. This is the breakthrough thought, the truth that cuts, the clarity that arrives all at once and won't let you un-see it. The double edge matters: a sword cuts both ways, and the same clarity that frees you can wound. The Ace is the suit's promise and its warning at once, the power of a mind that can finally see clearly.",
+    "gift": {
+      "keywords": [
+        "clarity",
+        "truth",
+        "breakthrough",
+        "mental sharpness",
+        "decisive insight"
+      ],
+      "body": "Upright, the Ace of Swords is the moment the fog burns off and you finally see it plainly. It's the realization that names what's been wrong for months, the decision that becomes obvious the instant you stop lying to yourself, the clean clarity of knowing exactly what's true. It's the idea sharp enough to cut through everyone's noise, including your own. What it offers is the power of honest sight, the relief of clarity even when the truth it reveals is hard. You can see this clearly now. The cut is clean, and a clean cut, even when it stings, is the beginning of being able to act.",
+      "affirmation": "I can see this clearly and name what's true. A clean cut is the start of being able to act."
+    },
+    "shadow": {
+      "keywords": [
+        "confusion",
+        "harsh truth weaponized",
+        "cutting words",
+        "clouded judgment"
+      ],
+      "body": "The blade turns on the wrong things. The Ace of Swords' shadow is clarity curdled into cruelty, the truth used as a weapon, the sharp mind that cuts people down because it can. It's the brutal honesty that's really just brutality, the words chosen to wound under cover of \"just being real.\" Or it's the opposite, the fog that won't lift, the confusion where you can't find the clean line no matter how hard you look, decisions made on muddied ground. Underneath is sometimes the belief that being sharp is the same as being right, that the cruelest read is the truest one. So the blade that could have freed you just leaves cuts.",
+      "affirmation": "I can be honest without being cruel. The sharpest read is not always the truest one."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reclaiming your own truth",
+        "refusing the imposed narrative",
+        "naming reality"
+      ],
+      "body": "The second reversal is a refusal: the version of reality you were handed and told to accept was never the only one. Many of us were made to doubt our own minds, told that what we saw wasn't happening, that our read on things was wrong, that the official story was the only truth. This reclaiming is taking the blade back and naming reality for yourself. Your perception is not the problem. You get to trust what you see, to call the thing by its real name even when you were trained to call it something softer. The clarity to say \"this is what is actually happening\" is yours. If you were taught to mistrust your own clear sight, the reclaiming Ace is you picking up the sword and cutting through the story to the truth underneath.",
+      "affirmation": "I can trust what I see. The clarity to name reality for myself was always mine."
+    },
+    "skills": [
+      "Naming a hard truth plainly when it matters",
+      "Telling honest clarity from weaponized cruelty",
+      "Trusting your own perception against an imposed story",
+      "Acting on a clear sight instead of stalling in fog",
+      "Using a sharp mind to free rather than to wound"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world saw something clearly. The collective mood was sharp, the fog burning off something the shared mind had been avoiding, a breakthrough cutting through whatever noise had been covering it. That was the current you arrived into. It gave you a native instinct toward clarity, a comfort with the clean cut of truth even when it's unwelcome, a baseline trust that seeing clearly is better than staying comfortable in the fog.\n\nThe shadow the day also carried is the sharpness that cuts without aim. A world in sudden clarity is also a world where the blade can swing carelessly, and the truth-telling instinct you absorbed may need to learn the difference between clean cuts and unnecessary ones.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ace of Swords as your rising means you meet the world looking for what's actually true. Your first instinct in any situation is to cut through to the real thing, past the noise and the diplomatic softening, to what's actually happening. People notice this about you. You don't perform confusion you don't feel.\n\nThe work this rising asks over a lifetime is the aim of the blade. The Ace's clarity is real and worth trusting. The suit's full arc, though, asks whether the sharpness is being used to free people, including yourself, or just to be right. Learning the difference is the lifelong practice of a mind this clear.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "A clarity cuts through the world today, sudden and sharp, a truth opening like a window. A day of breakthrough, bracing and a little ruthless, the clean cut that frees and can also wound.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ace of Swords. A moment of clarity is available today, sharp and sudden, like a window thrown open. A truth is cutting through the fog. Follow where it leads. Just hold the blade with some care: the same sharpness that frees you can wound, so notice what you do with the clarity once you have it. Seeing clearly is the gift. What you say next is the test.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ace of Swords. The fog just lifted. Whatever you're seeing clearly right now, you won't be able to un-see it."
+  },
+  "slug": "ace-of-swords"
+}

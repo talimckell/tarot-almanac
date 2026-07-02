@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Page of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/page-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Page · Air · mind as the student",
+    "essence": "The Page of Swords is the mind newly awake and hungry to know. It is curiosity, mental energy, the sharp restless intelligence of someone just discovering the power of their own thinking.",
+    "narrative": "The courts are the element at four stages, and the Page is the student, air in its youngest and most restless form. The old image is a young figure on a windy hill, sword raised, hair and clouds blown sideways, alert and a little wary, looking ready to question everything. This is the mind waking up: curious, quick, eager to learn and to challenge, not yet wise but sharp and full of questions. Where the Ace was clarity itself, the Page is the person discovering they have a mind that can cut, and testing its edge on everything in reach. The Page's gift and danger are the same: a fresh intelligence that hasn't yet learned restraint.",
+    "gift": {
+      "keywords": [
+        "curiosity",
+        "mental energy",
+        "eagerness to learn",
+        "sharp questions",
+        "fresh perspective"
+      ],
+      "body": "The Page of Swords, upright, is the live-wire energy of a curious mind. It's the joy of learning something new and turning it over from every angle, the kid who asks \"but why\" until they get a real answer, the fresh perspective that sees what the experts stopped noticing. It's mental quickness, the eagerness to understand and to question what everyone takes for granted. What it offers is the gift of curiosity unafraid to probe. You're allowed to ask the obvious question, to want to understand, to bring a beginner's sharp eye to a thing. The questions you're almost embarrassed to ask are often the ones that cut to something real.",
+      "affirmation": "I can stay curious and ask the question. The thing I'm almost embarrassed to ask often cuts to what's real."
+    },
+    "shadow": {
+      "keywords": [
+        "gossip",
+        "scattered mind",
+        "all questions no depth",
+        "cynicism"
+      ],
+      "body": "The sharp curiosity turns restless and a little mean. The Page of Swords' shadow is mental energy with no discipline, the mind that questions everything but commits to nothing, the cleverness that turns to gossip and small cruelties. It's using a quick tongue to wound, treating every conversation as a debate to win, the cynicism that mistakes tearing things down for being smart. Or it's the scattered intellect that starts ten inquiries and finishes none, sharp but shallow. Underneath is sometimes the worry that depth would expose how much you don't know, so you stay quick and surface and a little defended. The mind that could have learned deeply just skims and stings.",
+      "affirmation": "I can go deep instead of just quick. Real understanding matters more than winning the exchange."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reclaiming your right to question",
+        "refusing imposed answers",
+        "thinking for yourself"
+      ],
+      "body": "The other reversal refuses to stop asking the questions you were told not to ask. Some of us were punished for curiosity, told not to question what we were taught, made to feel that wanting to understand the rules was disobedience. This reclaiming is taking back the right to think for yourself. Your questions are not a threat to be managed. You get to interrogate the story you were handed, to ask why the rule exists and who it serves, to refuse an answer just because an authority gave it. The mind that won't stop questioning is not the problem they told you it was. If you were taught that asking was dangerous, the reclaiming Page is you raising the question anyway and trusting your right to want a real answer.",
+      "affirmation": "My questions are not disobedience. I get to think for myself and interrogate what I was handed."
+    },
+    "skills": [
+      "Staying curious and asking the real question",
+      "Bringing a fresh eye to what others take for granted",
+      "Going deep instead of just quick",
+      "Using a sharp mind to understand rather than to wound",
+      "Refusing to stop questioning what you were told not to"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was newly curious. The collective mood was alert and questioning, a restless intelligence testing its own edges, the particular energy of ideas just discovering their own sharpness. That was the current you arrived into. It gave you a native hunger to understand, an instinct to ask the question other people are too polite or too settled to ask, a baseline comfort with not yet knowing as long as you're actively finding out.\n\nThe shadow the day carried is the restlessness of a mind still learning discipline. A world freshly curious hasn't yet learned which questions to follow all the way down, and you may have absorbed an early pattern of skimming widely before learning to go deep.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Page of Swords as your rising means you meet the world with a question already forming. Your first instinct in any new situation is to want to understand it, to turn it over, to ask the thing other people skip past. That produces a quality of mental aliveness other people notice and are often drawn into, the sense that you're actually paying attention rather than performing interest.\n\nThe work this rising asks over a lifetime is depth. The Page is sharp but young, and the suit's full arc asks the curiosity to mature into something that can sit with a hard question long enough to actually answer it, rather than moving on to the next interesting thing once the first one stops being easy.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is curious and quick today, full of questions, a sharp mind eager to understand. A day of restless intelligence, bright and a little cutting, the edge that examines and occasionally wounds.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Page of Swords. A bright, questioning energy today, the mind that wants to know. Ask your questions, chase the idea, follow the curiosity wherever it goes. Just keep the sharpness kind, especially toward yourself, because a quick mind can turn its edge inward as easily as outward. Curiosity is the gift. Cleverness used against yourself isn't.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Page of Swords. Sword already up, hair blown sideways, not waiting for permission to ask. Ask the question today."
+  },
+  "slug": "page-of-swords"
+}

@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Ten of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ten-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Ten · Fire · the fire, carrying it all",
+    "essence": "The Ten of Wands is the weight of everything you took on. It is burden and overload, the burnout of carrying too much alone at the end of the suit's long climb.",
+    "narrative": "Ten completes the suit, and in Wands the completion is heavy. All that fire, all that drive and ambition and defending, has become a load. The old image is a figure bent under an armful of ten staves, struggling toward a house in the distance, the bundle so wide they can barely see past it. They built all of this. Now they're carrying it, and it's crushing them. This is the shadow side of relentless will: the success that became a burden, the responsibilities that piled up unquestioned, the fire that lit so many things it now has to haul them all. The suit ends by asking what all the drive was for, and what you're allowed to put down.",
+    "gift": {
+      "keywords": [
+        "completion",
+        "responsibility",
+        "the final stretch",
+        "hard-won accomplishment"
+      ],
+      "body": "This one's heavy, because the gift isn't relief, it's the strength of carrying something all the way to done. Upright, the Ten of Wands is the last hard stretch of a long effort, the weight you take on because the thing matters and you're the one to carry it. It's finishing the degree while working full-time, holding the family together through the hard year, hauling the project across the line when no one else will. What it offers is the dignity of follow-through, the proof that you can bear real weight and reach the house with it. The load is heavy. You're almost home. And once you arrive, you get to set it down.",
+      "affirmation": "I can carry this the last stretch. The weight is real, and so is the door I'm almost to."
+    },
+    "shadow": {
+      "keywords": [
+        "burnout",
+        "martyrdom",
+        "carrying it all alone",
+        "refusing help"
+      ],
+      "body": "The bundle crushes the one who won't put it down. The Ten of Wands' shadow is the burden you carry past all reason, taking on everything because asking for help feels like failing, until the load is your whole identity. It's the martyrdom of doing it all alone, the resentment that builds under the weight, the inability to delegate even when hands are offered. It's burnout dressed as responsibility, the belief that if you set anything down it all falls. Underneath is often the fear that you're only valuable while you're carrying, that the weight is the proof you matter. So you haul it all and call the crushing love.",
+      "affirmation": "I can set some of this down and ask for hands. I am not only worth what I carry."
+    },
+    "reclaiming": {
+      "keywords": [
+        "putting down what isn't yours",
+        "refusing inherited burdens",
+        "sharing the load"
+      ],
+      "body": "Reversed the other way, the Ten refuses the burdens that were loaded onto you without asking. Some of us were handed weight that was never ours: the family role no one else would take, the emotional labor assumed because of who we are, the expectations stacked on our backs since before we could refuse them. This reclaiming is sorting the load and putting down what was never yours to carry. You can hand back the burdens you were assigned, refuse to haul what someone else should be carrying. The fire was meant to warm your life, not to be spent hauling other people's loads. If you were made the one who carries, the reclaiming Ten is you setting down what was never yours and walking lighter.",
+      "affirmation": "Not all of this weight is mine to carry. I can set down what I was handed without consent."
+    },
+    "skills": [
+      "Carrying a real responsibility through to completion",
+      "Telling your true load from what was handed to you",
+      "Asking for help before the weight crushes you",
+      "Putting down burdens that were never yours",
+      "Setting the bundle down once you reach the door"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective weight. The world was shouldering something on the day you arrived, the shared mood bent under a load that had been accumulating, carrying it toward a door in the distance. That was the current around you at the beginning. It gave you a native understanding of what it costs to see something through, an instinct for the dignity of the last hard stretch, a baseline sense that the weight is real and that bearing it matters.\n\nThe shadow the day also gave you is the habit of carrying. A world organized around hauling its load also passed on the belief that carrying is what you're for, and asking for help or setting something down is failure. That equation is wrong and worth knowing is wrong.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ten of Wands as your rising means you meet the world with your arms already full. Your instinct in any situation is toward responsibility, toward what needs to be carried and who's going to carry it. You're good at the last stretch, at finishing the hard thing when others would have stopped. People rely on you to haul what needs hauling, because they can feel that you will.\n\nThe work this rising asks over a lifetime is the door. The figure in the old image is carrying the bundle toward a house, and the house is the point: once you arrive, you set it down. The practice of this rising is actually putting the bundle down once you've carried it home, rather than immediately picking up the next one.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is carrying a heavy load today, shouldering the full bundle, a day that asks what could be set down. There's pride in carrying it all, and a cost the world doesn't always let itself count.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ten of Wands. You're carrying a lot right now, maybe more than you need to be. Before you pick up anything else today, take stock of the bundle: what's actually yours, what was handed to you, what could be set down or passed to someone else. The strength to carry it isn't in question. The question is whether carrying all of it is what this stretch requires. Look for the door. You're closer to it than it feels.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ten of Wands. Bent under the bundle. Almost to the door. The question worth asking: is everything in that armful actually yours?"
+  },
+  "slug": "ten-of-wands"
+}

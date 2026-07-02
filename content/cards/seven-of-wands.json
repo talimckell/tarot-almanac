@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Seven of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/seven-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Seven · Fire · the fire defends its ground",
+    "essence": "The Seven of Wands is standing your ground against challenge. It is the defense of what you've built or believe, holding the high position even when the pushback comes from every side.",
+    "narrative": "After the Six's public victory comes the cost of it: now you have something worth challenging, and the Seven is where you defend it. Seven in Wands is the lone figure on higher ground, one staff raised against six others pushing up from below. They're outnumbered, braced, holding the slope. This is conviction under pressure, the moment success or belief has to be protected against the people who'd take it or tear it down. It sits late in the suit because defending a position requires you to have built one first, and the card asks whether what you're guarding is worth the fight, and whether the fight is yours to keep having.",
+    "gift": {
+      "keywords": [
+        "conviction",
+        "standing firm",
+        "defending your position",
+        "courage under pressure"
+      ],
+      "body": "Upright, the Seven of Wands is holding your ground when the pushback comes. It's defending the boundary everyone keeps testing, standing by the unpopular call because you know it's right, refusing to fold just because you're outnumbered. It's the courage to keep your position when staying would be easier if you'd just give it up. What it offers is the steadiness of conviction, the proof that you'll stand for what you've built even when it's contested. You're allowed to hold your ground. Being challenged doesn't mean you're wrong, and being outnumbered doesn't mean you have to yield.",
+      "affirmation": "I can hold my ground when it's challenged. Being outnumbered doesn't mean I'm wrong."
+    },
+    "shadow": {
+      "keywords": [
+        "defensiveness",
+        "fighting every battle",
+        "exhaustion",
+        "paranoia"
+      ],
+      "body": "Every interaction becomes a threat to repel. The Seven of Wands' shadow is defensiveness that's lost its target, bracing against attacks that aren't coming, treating feedback as assault and every disagreement as a siege. It's the exhaustion of guarding a hill no one's actually storming, the rigidity that can't tell a real challenge from an imagined one. Or it's defending a position you've outgrown purely because retreating feels like losing. Underneath is the fear that one yielded inch is the whole hill, so you fight everything and rest from nothing. The fire that should defend what matters burns itself out guarding ground that no longer needs you.",
+      "affirmation": "I can tell a real threat from an imagined one. Not every hill needs defending, and I am allowed to rest."
+    },
+    "reclaiming": {
+      "keywords": [
+        "defending your right to exist",
+        "refusing to justify yourself",
+        "holding the line on your terms"
+      ],
+      "body": "The other reversal refuses to keep justifying your own existence. Some of us spend our lives on the defensive hill, asked again and again to explain why we deserve the space we take, to prove our identities, to defend a life that others get to simply live. This reclaiming is recognizing when the fight was rigged, when you're being made to defend ground that should never have been contested. You don't owe the world an endless justification of who you are. You can stop answering the challenge that was only ever meant to wear you down. If you were forced to defend your right to exist, the reclaiming Seven is you deciding that some ground doesn't require your defense, only your standing on it.",
+      "affirmation": "I do not have to justify my existence to anyone. Some ground is mine simply because I stand on it."
+    },
+    "skills": [
+      "Holding a position when it's actually challenged",
+      "Telling a real threat from a perceived one",
+      "Knowing when a defended position has been outgrown",
+      "Resting instead of guarding ground no one's storming",
+      "Refusing to justify your right to exist"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was holding its ground. The collective mood was braced and determined, the shared energy of a position defended against pressure. That was the current you arrived into. It gave you a native instinct for standing firm, an ease with being outnumbered, a baseline understanding that conviction is worth protecting even when it's contested. You know how to hold the high ground.\n\nThe shadow that came with it is the constant readiness to defend. A world organized around holding its position also taught you that the pushback is always coming, and that readiness can settle into a permanent brace that makes it hard to tell when the hill is actually under attack and when it's just morning.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Seven of Wands as your rising means you meet the world from the high ground, already positioned. Your instinct in any charged situation is to assess the challenge and hold your line. You're not easily pushed off a position you've taken deliberately. That produces a quality of steadiness under pressure that other people find reliable. You don't fold.\n\nThe work this rising asks over time is discernment about which ground is actually worth holding. The figure on the hill has one staff raised and six coming up from below, and the exhaustion of permanent defense is built into that image. The growth is in learning to put the staff down on the hills that were never yours to die on.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is holding its ground today, positions defended, a day of standing firm against pressure. Courage and stubbornness wear the same face here, and the world doesn't always stop to ask which one it's running on.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Seven of Wands. Something today requires holding your ground, or something is already pushing against a position you've taken. Hold where it matters. The card's real question is underneath the brace: is this hill yours, and is this fight worth your fire? Stand where it's actually yours to stand. The rest you're allowed to let come up from below without meeting it at the top.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Seven of Wands. Outnumbered on the high ground. The question isn't whether you can hold it. It's whether this is the hill."
+  },
+  "slug": "seven-of-wands"
+}

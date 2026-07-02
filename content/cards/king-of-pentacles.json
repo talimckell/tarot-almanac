@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "King of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/king-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · King · Earth · earth as outward expression",
+    "essence": "The King of Pentacles is material mastery expressed as stable, generous provision. It is the seasoned abundance of someone who has built real security and uses it well, the grounded authority that provides, sustains, and stewards.",
+    "narrative": "The King is the element in its most outward, expressed form, earth turned toward the world as provision and stewardship. The old image is a king on a throne carved with bulls, robed in grapevines, one hand on a coin and the other on a scepter, a thriving estate behind him. He has built it all and sits secure in it, generous and unhurried. This is earth as mature mastery: the provider, the steward, the one whose long discipline has produced real and lasting abundance that now sustains others. Where the Queen nurtures the ecosystem inwardly, the King governs it outwardly, the seasoned authority who can build wealth, hold it steady, and use it to provide. He is the suit's fullest expression of grounded, generous power.",
+    "gift": {
+      "keywords": [
+        "abundance",
+        "stewardship",
+        "stability",
+        "generous provision",
+        "grounded authority"
+      ],
+      "body": "At his best the King of Pentacles is the secure, generous mastery of someone who built something lasting and uses it well. It's the provider whose stability shelters others, the steward who manages resources wisely and shares the surplus, the grounded authority that comes from having actually built the thing. It's wealth held with steadiness and used with generosity, success matured into the ability to sustain. What it offers is the gift of stable, providing power, abundance that holds others up. You can build real security and use it generously, can be the steady provider, can turn long discipline into a prosperity that shelters more than yourself. Material mastery, used well, becomes a form of stewardship, and that is a good thing to grow into.",
+      "affirmation": "I can build lasting security and use it generously. Mastery used well becomes stewardship, and that is worth growing into."
+    },
+    "shadow": {
+      "keywords": [
+        "greed",
+        "materialism",
+        "controlling through wealth",
+        "status obsession"
+      ],
+      "body": "The provider becomes the one who measures everything in money. The King of Pentacles' shadow is abundance curdled into greed, stewardship corrupted into control, the wealth used to dominate rather than to sustain. It's the materialism that confuses net worth with self-worth, the status obsession that's never satisfied, the provider who uses provision as power over the people who depend on it. It's hoarding dressed as prudence, success measured only in the size of the pile. Underneath is often the fear that without the wealth and the status he'd be nothing, that the money is the whole of his worth. So the King who could have stewarded an abundance that fed others just sits on it, guarding and measuring, mistaking the pile for the man.",
+      "affirmation": "My worth is not the size of the pile. I can hold wealth as something to steward, not as the whole measure of who I am."
+    },
+    "reclaiming": {
+      "keywords": [
+        "redefining success",
+        "wealth used for liberation",
+        "stewardship from the margins"
+      ],
+      "body": "Reversed the other way, the King refuses the narrow, often greedy image of what material success is supposed to look like. The model of the wealthy provider we're handed is frequently about accumulation and dominance, and plenty of us were told we'd never reach it, or that to reach it we'd have to become that. This reclaiming is building abundance and using it by different values entirely. Your success doesn't have to look like the old kings' to be real. You can build security and use it to lift others, to fund the community, to provide in ways the hoarders never would, to be the kind of steward the role was never meant to include. If you were shut out of material power or told you'd have to become ruthless to hold it, the reclaiming King is you building it anyway and using it to free people rather than to rule them.",
+      "affirmation": "I can build abundance and use it by my own values. Success in my hands can free people rather than rule them."
+    },
+    "skills": [
+      "Building lasting security and stewarding it well",
+      "Using abundance to sustain more than yourself",
+      "Telling generous provision from controlling wealth",
+      "Separating your worth from your net worth",
+      "Building material power and using it to liberate"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world had built something lasting and was sharing it. The collective mood was secure and generous, the shared sense of abundance that had matured past accumulation into stewardship, prosperity used to shelter rather than just held. That was the current you arrived into. It gave you a native sense of what mature security looks like, an instinct that real success is measured by what it provides for others, a baseline trust in steady, grounded authority over flashy or anxious power.\n\nThe shadow the day also carried is the version of mastery that curdles into control. A world generous with its abundance on the day you were born also had a model of power that could tip into hoarding or status obsession, and you may carry a wariness toward your own relationship with material success that's worth examining honestly.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The King of Pentacles as your rising means you meet the world thinking about provision and stewardship. Your first instinct with resources, whether money, time, or skill, is to ask how they could sustain something larger than yourself. That produces real grounded authority, the kind that makes people trust you with responsibility because you've shown you can hold it steadily and use it generously.\n\nThe work this rising asks over a lifetime is making sure the stewarding stays the point. The King in the old image wears armor under his robe, ready for threat even at rest, and the suit's full arc asks this rising to notice when readiness has become rigidity, when guarding the abundance has started to matter more than what the abundance is for.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is a good steward today, stable enough to be generous, a day of provision. A day of grounded mastery, secure and a little proprietary, abundance that gives freely or guards itself depending on how lightly it's held.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the King of Pentacles. A day for stable mastery, for the security that lets you be generous. You've built something solid, and from that plenty you can afford to be open-handed, to provide and to steward well. Just keep the abundance held lightly. Stability is a fine thing to stand on and a sad thing to become, if guarding what you've built turns into the whole point of having built it.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the King of Pentacles. Armor under the robe, even on the throne. What you built is secure today. Let it be generous too."
+  },
+  "slug": "king-of-pentacles"
+}

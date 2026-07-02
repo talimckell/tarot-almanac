@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Nine of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/nine-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Nine · Earth · the garden earned",
+    "essence": "The Nine of Pentacles is earned abundance enjoyed in peace, the self-sufficient comfort of a life well-built. It is independence, refinement, and the quiet pleasure of standing alone in a garden you made yourself.",
+    "narrative": "Nine is the near-completion, and in Pentacles it's the suit's image of earned, solitary abundance. The old image is an elegant figure alone in a lush vineyard, a hooded falcon resting on a gloved hand, fine robes, an expression of serene self-possession. They built this, and they're enjoying it on their own terms. This is the reward of all the suit's patient work: security reached, refinement earned, the ability to stand alone in comfort. It sits near the end because by now the long building has borne fruit, and the Nine is the deep satisfaction of a self-sufficient life, the garden you can walk through knowing it's yours and you made it.",
+    "gift": {
+      "keywords": [
+        "self-sufficiency",
+        "earned abundance",
+        "independence",
+        "refinement",
+        "enjoying the fruits"
+      ],
+      "body": "The Nine of Pentacles, upright, is the pleasure of enjoying a good life you built yourself. It's the home that's finally yours and peaceful, the financial independence that lets you breathe, the quiet luxury of a life arranged to your own taste and earned by your own effort. It's self-sufficiency that feels like freedom, the ability to stand on your own and savor it. What it offers is the gift of earned, independent abundance, the reward of long discipline. You're allowed to enjoy what you built, to stand alone in your garden without apology, to savor the comfort you worked for. Independence is not loneliness. Sometimes it's the deep peace of a life that is fully, finally yours.",
+      "affirmation": "I can enjoy the life I built and stand alone in it with peace. Independence I earned is not loneliness. It's freedom."
+    },
+    "shadow": {
+      "keywords": [
+        "isolation",
+        "overwork for status",
+        "golden cage",
+        "hollow success"
+      ],
+      "body": "The garden becomes a beautiful place to be alone in the wrong way. The Nine of Pentacles' shadow is independence hardened into isolation, the self-sufficiency that's really a wall against ever needing anyone, the comfortable life that's quietly lonely. It's the success that cost all the connection, the refinement maintained at the price of intimacy, the golden cage of a life that looks enviable and feels empty. Or it's overworking endlessly to afford the garden and never being in it. Underneath is sometimes the fear that needing people is weakness, that true safety is owing nothing to anyone, so you build a perfect solitary life and call the loneliness freedom. The garden is gorgeous, and no one else is ever in it.",
+      "affirmation": "I can be self-sufficient and still let people in. A garden is meant to be enjoyed, sometimes with company."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing dependence as the only option",
+        "building your own",
+        "independence as safety"
+      ],
+      "body": "The second reversal refuses to depend on anyone who might use that dependence against you. Some of us learned the hard way that relying on others, a family, a partner, a system, meant being controlled by them, so we built our own ground to stand on as a matter of survival. This reclaiming honors the independence that was hard-won and necessary. Your self-sufficiency is not coldness. Building a life you don't have to beg anyone for is a legitimate kind of safety, especially for those who were once trapped by needing the wrong people. You get to stand in your own garden, owing nothing, as freedom rather than as exile. If you built your independence because depending was once dangerous, the reclaiming Nine is you enjoying the safety of ground that is finally, fully your own.",
+      "affirmation": "My independence is hard-won safety, not coldness. I built a life I don't have to beg anyone for, and that is freedom."
+    },
+    "skills": [
+      "Enjoying the fruits of what you built",
+      "Standing in your own life with self-possession",
+      "Letting people into the garden without losing independence",
+      "Telling earned solitude from defended isolation",
+      "Honoring independence built for genuine safety"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of earned abundance. The world's collective mood was self-sufficient and at peace, the shared sense of a hard-won comfort being enjoyed rather than chased, the particular quality of a life arrived at rather than still being built. That was the current you arrived into. It gave you a native respect for independence, an instinct that real security comes from your own ground rather than from leaning on others, a baseline comfort with solitude that doesn't read as loneliness.\n\nThe shadow the day also carried is the wall that earned independence can build. A world standing alone in its own garden on the day you were born may have taught you, early, that needing no one is the safest position, and you may carry a harder time than most letting people actually in once you've built something good.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Nine of Pentacles as your rising means you meet the world from a place of self-possession. Your first instinct is to handle things yourself, to build your own ground rather than wait for someone else to provide it, to take real pleasure in a life you can point to and say you made. That produces a quiet, earned confidence other people notice and often envy.\n\nThe work this rising asks over a lifetime is the door to the garden. The figure in the old image stands alone, and the suit's full arc asks this rising to notice the difference between a solitude that's restful and one that's become a permanent wall. Independence is the gift. Letting someone else stand in the garden with you, sometimes, is the growth.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world rests in earned ease today, standing in a garden it grew, a day of self-sufficiency. A day of independent comfort, gracious and a little solitary, the abundance that can become a fortress.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Nine of Pentacles. A day of earned ease, of standing in a garden you grew yourself. Enjoy the fruits of it without guilt, because you built this and you're allowed to rest in it. Solitude can be a luxury. Just notice if the self-sufficiency has quietly become a wall, if you've gotten so good at needing no one that you've stopped letting anyone close.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Nine of Pentacles. Falcon on the glove, vineyard she grew herself, completely at ease. She built this. She's allowed to enjoy it."
+  },
+  "slug": "nine-of-pentacles"
+}

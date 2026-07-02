@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Five of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/five-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Five · Earth · out in the cold",
+    "essence": "The Five of Pentacles is hardship, lack, and the feeling of being shut out. It is material or spiritual poverty, the cold stretch of going without, and the particular loneliness of struggling while help feels out of reach.",
+    "narrative": "Five disrupts the Four's stability, and in Pentacles the disruption is loss and want. The old image is two figures, one on crutches, trudging through snow past a lit church window they don't look up to see. They're cold and hurting, passing right by shelter without noticing it. This is the suit's hardship card: poverty, illness, the season of not enough. It sits at the midpoint because the material road has its hard winters, and the card holds both the reality of the lack and the quiet, painful detail that help is sometimes nearer than the suffering lets you see. The Five doesn't minimize the cold. It just notes the lit window.",
+    "gift": {
+      "keywords": [
+        "honest hardship",
+        "solidarity in struggle",
+        "recognizing need",
+        "the lit window"
+      ],
+      "body": "This one is hard, because the gift isn't comfort, it's the honesty of admitting you're struggling and the help that becomes possible once you do. Upright, the Five of Pentacles is naming the hard season instead of hiding it: admitting the money is tight, telling someone you're not okay, finally looking up at the lit window instead of trudging past it. It's the strange grace of shared hardship, the people who've been cold too and don't flinch from yours. What it offers is the honesty of need spoken and the help that can only come once it's named. The winter is real. But the window is lit, and asking to come in from the cold is not weakness. It's how the cold ends.",
+      "affirmation": "I can admit I'm struggling and look up at the lit window. Asking to come in from the cold is how the winter ends."
+    },
+    "shadow": {
+      "keywords": [
+        "isolation in hardship",
+        "refusing help",
+        "poverty mindset",
+        "shame spiral"
+      ],
+      "body": "The figures trudge past the window and never look up. The Five of Pentacles' shadow is suffering made worse by isolation, the hardship endured alone because asking for help feels like failure, the shame that keeps you trudging past every lit window. It's the poverty mindset that persists even when the lack has eased, the certainty that you're on the outside and always will be. It's refusing the help that's right there because taking it would mean admitting you need it. Underneath is often deep shame, the belief that struggling makes you lesser, that needing help is proof of something wrong with you. So you stay out in the cold, within sight of warmth, too ashamed to knock.",
+      "affirmation": "I can knock on the lit door. Needing help is not proof of failure. It's just being human in a hard season."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing shame about need",
+        "surviving systemic lack",
+        "solidarity over self-blame"
+      ],
+      "body": "The second reversal refuses the shame loaded onto you for a lack that was never your fault. Some of us were left out in the cold by design: locked out of the wealth others inherited, blamed for a poverty built by systems we didn't make, told our struggle was a personal failing rather than an engineered outcome. This reclaiming is refusing to carry shame for being shut out of a warmth that was hoarded. Your hardship is not a moral verdict on you. You get to name the cold as something done, not deserved, to find the others out in it with you, to refuse the lie that struggle means you didn't try hard enough. If you were blamed for your own exclusion, the reclaiming Five is you setting down the shame and finding your people in the snow.",
+      "affirmation": "My hardship is not a verdict on my worth. The cold was built by others, and I refuse to carry shame for it."
+    },
+    "skills": [
+      "Naming hardship out loud instead of hiding it",
+      "Looking up at the help that's actually there",
+      "Knocking on the door despite the shame",
+      "Telling real lack from a lingering poverty mindset",
+      "Refusing shame for a struggle that wasn't your fault"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was out in the cold. The collective mood was hard, a season of lack and struggle, the shared experience of going without while warmth seemed to be happening somewhere just out of reach. That was the current you arrived into. It gave you a native solidarity with hardship, a refusal to look away from people who are struggling, a baseline understanding that the cold is real and so is the shame of having to ask for help inside it.\n\nThe shadow the day also carried is the same shame turned inward. A world out in the cold on the day you were born may have taught you, early, that asking for help is exposing, and you may carry a heightened reluctance to knock on doors that are actually open to you.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Five of Pentacles as your rising means you meet the world with an instinct for who's actually struggling. Your first read on a room often includes who's cold, who's been left out, who's trudging past a window they don't think is for them. That gives you a real compassion for hardship, and a discomfort with pretending things are fine when they aren't.\n\nThe work this rising asks over a lifetime is turning that same instinct toward yourself. The figures in the old image don't look up, and the suit's full arc asks this rising to practice looking up at its own lit windows, accepting the help it's so quick to extend to others. Compassion that only flows outward eventually runs you dry.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world feels the cold today, a sense of lack, a day of hardship. And a lit window stands closer than it seems, help available to whoever can bring themselves to knock.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Five of Pentacles. A day that may carry a sense of lack, of being out in the cold. The hardship is real, and so is the loneliness that comes with feeling left out of the warmth. Here's the gentle truth the card holds: there's often a lit window right nearby, help closer than it feels. Let yourself ask. The hardest part is sometimes just turning toward the door.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Five of Pentacles. They're walking right past a lit window. They don't look up. Look up today."
+  },
+  "slug": "five-of-pentacles"
+}

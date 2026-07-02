@@ -1,0 +1,64 @@
+/* Styles for the card detail pages (/tarot/[slug], /bearing/[slug]).
+   Site chrome (nav, footer) and base tokens/reset are already handled by globals.css
+   and the shared SiteNav/SiteFooter components — this file starts from the breadcrumb. */
+
+.crumb { max-width:1080px; margin:0 auto; padding:18px 28px 0; font-family:var(--serif-sc); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--label); }
+.crumb a { color:var(--label); text-decoration:none; }
+.crumb a:hover { color:var(--indigo); }
+.wrap { max-width:760px; margin:0 auto; padding:0 28px 80px; }
+.cardhead { text-align:center; padding:44px 0 30px; border-bottom:1px solid var(--warm-stone); margin-bottom:8px; }
+.cardhead .glyph { width:96px; height:96px; margin:0 auto 22px; display:block; }
+.cardhead .glyph svg { width:96px; height:96px; }
+.cardhead .num { font-family:var(--serif-sc); font-size:13px; letter-spacing:.3em; color:var(--label); display:block; margin-bottom:8px; }
+.cardhead h1 { font-family:var(--serif); font-weight:400; font-size:52px; line-height:1; color:var(--ink); margin-bottom:14px; }
+.cardhead .position { font-family:var(--serif); font-style:italic; font-size:20px; color:var(--charcoal); }
+.meta { display:flex; justify-content:center; gap:0; margin:26px 0 4px; border:1px solid var(--warm-stone); }
+.meta .item { flex:1; text-align:center; padding:14px 10px; border-right:1px solid var(--warm-stone); }
+.meta .item:last-child { border-right:none; }
+.meta .lbl { font-family:var(--serif-sc); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--label); display:block; margin-bottom:5px; }
+.meta .val { font-family:var(--serif); font-size:18px; color:var(--ink); }
+.meta .val.fire { color:var(--fire); }
+.meta .val.water { color:var(--water); }
+.meta .val.air { color:var(--air); }
+.meta .val.earth { color:var(--earth); }
+.essence { font-family:var(--serif); font-size:23px; line-height:1.5; color:var(--charcoal); text-align:center; padding:34px 12px 30px; font-style:italic; }
+.section { padding:30px 0; border-top:1px solid var(--warm-stone); }
+.section h2 { font-family:var(--serif); font-weight:500; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--indigo); margin-bottom:16px; }
+.section p { font-size:16px; color:var(--ink); margin-bottom:14px; }
+.section p:last-child { margin-bottom:0; }
+.face { padding:32px 0; border-top:1px solid var(--warm-stone); }
+.face-head { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+.face-head h2 { font-family:var(--serif); font-weight:500; font-size:26px; color:var(--ink); margin:0; }
+.face-head .tag { font-family:var(--serif-sc); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--label); }
+.face .keywords { font-family:var(--sans); font-size:12px; letter-spacing:.04em; color:var(--label); margin-bottom:16px; }
+.face .keywords b { font-weight:400; color:var(--charcoal); }
+.face p { font-size:16px; color:var(--ink); margin-bottom:16px; }
+.face .affirm { font-family:var(--serif); font-style:italic; font-size:18px; color:var(--indigo); border-left:2px solid var(--warm-stone); padding-left:18px; margin-top:4px; }
+.skills { padding:30px 0; border-top:1px solid var(--warm-stone); }
+.skills h2 { font-family:var(--serif); font-weight:500; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--indigo); margin-bottom:16px; }
+.skills ul { list-style:none; }
+.skills li { font-size:16px; color:var(--ink); padding:8px 0 8px 26px; position:relative; border-bottom:1px solid rgba(184,168,144,.3); }
+.skills li:last-child { border-bottom:none; }
+.skills li .star { position:absolute; left:0; top:11px; width:14px; height:14px; }
+.almanac { background:var(--indigo); color:var(--stone); padding:34px 32px; margin:40px 0 0; text-align:center; }
+.almanac .eyebrow { font-family:var(--serif-sc); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--warm-stone); display:block; margin-bottom:12px; }
+.almanac p { font-family:var(--serif); font-size:20px; line-height:1.5; color:var(--stone); margin-bottom:8px; }
+.almanac .dates { font-family:var(--sans); font-size:14px; color:var(--warm-stone); margin-top:14px; }
+.almanac a { color:var(--stone); text-decoration:underline; text-decoration-color:var(--warm-stone); text-underline-offset:3px; }
+.related { padding:40px 0 0; border-top:1px solid var(--warm-stone); margin-top:40px; }
+.related h2 { font-family:var(--serif); font-weight:500; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--indigo); margin-bottom:20px; text-align:center; }
+.rel-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+.rel-card { border:1px solid var(--warm-stone); padding:18px 14px; text-align:center; text-decoration:none; display:block; }
+.rel-card:hover { border-color:var(--indigo); }
+.rel-card .rel-glyph { width:34px; height:34px; margin:0 auto 10px; display:block; }
+.rel-card .rel-glyph svg { width:34px; height:34px; }
+.rel-card .rel-num { font-family:var(--serif-sc); font-size:10px; letter-spacing:.18em; color:var(--label); display:block; }
+.rel-card .rel-name { font-family:var(--serif); font-size:18px; color:var(--ink); }
+@media (max-width:640px){ .cardhead h1 { font-size:40px; } .rel-grid { grid-template-columns:1fr; } .essence { font-size:20px; } }
+
+/* additions for the React template */
+.cardhead .pips { display:flex; flex-direction:column; align-items:center; gap:10px; margin:0 auto 24px; }
+.cardhead .pip-row { display:flex; justify-content:center; gap:16px; }
+.cardhead .pips svg { display:block; }
+.face .inline-label { font-family:var(--serif-sc); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--label); }
+.numbering-note { font-size:.9rem; color:var(--label); font-style:italic; margin-top:24px; }

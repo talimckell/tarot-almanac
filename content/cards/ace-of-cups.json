@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Ace of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/ace-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Ace · Water · the heart cracked open",
+    "essence": "The Ace of Cups is the moment feeling begins. It is the heart opening, the first rush of love or tenderness or grief before it has a shape. It is the source the whole suit pours out from.",
+    "narrative": "Every suit starts with its Ace, the raw element before life does anything with it, and the Ace of Cups is pure feeling at its headwaters. Where the Ace of Wands is the spark and the Ace of Swords is the first clear thought, this is the heart cracked open and the water beginning to move. It's the start of the whole emotional arc that runs through the suit, the Two's meeting, the Three's belonging, all the way down to the Ten's settled love, and it begins here with a single overflowing cup. The old image is a hand offering a chalice that spills over five streams, more than it can hold, which is the nature of a real opening: feeling doesn't arrive in manageable amounts. It comes at the beginning of the suit because everything the Cups will explore has to start with the willingness to feel something at all.",
+    "gift": {
+      "keywords": [
+        "emotional opening",
+        "new love",
+        "compassion",
+        "tenderness",
+        "heart-centered flow"
+      ],
+      "body": "Upright, the Ace of Cups is the moment you let yourself feel something new. It's the unexpected wave of tenderness watching someone you love do an ordinary thing. It's catching yourself wanting to text someone first after you'd sworn you were done trying. It's tearing up at a song in the car and not being embarrassed about it. What it offers is permission to be moved, to let the cup fill and overflow instead of capping it. Your emotions are not a problem to manage. Your way of loving, whatever shape it takes, is whole and valid. Letting yourself feel what's beginning is the bravest small thing you can do.",
+      "affirmation": "I can let myself feel what's beginning. My heart is safe to open."
+    },
+    "shadow": {
+      "keywords": [
+        "emotional blockage",
+        "numbness",
+        "suppressed feeling",
+        "protective withdrawal"
+      ],
+      "body": "The cup turns over and the water won't come. The Ace of Cups' shadow is the heart held shut, feeling pushed down so far you can't reach it even when you want to. It's going numb because numb felt safer than the alternative. It's the wall that started as protection and became the only setting you have. Sometimes it's the tears that won't come at the funeral, the love you can feel but can't let in. Underneath is the fear that if you feel it all the way, it'll break you, or that opening means being abandoned again. The water is still there behind the wall. The shadow is how long you can go without letting yourself touch it.",
+      "affirmation": "I can soften the wall when I'm ready. Feeling it will not break me."
+    },
+    "reclaiming": {
+      "keywords": [
+        "self-intimacy",
+        "queer tenderness",
+        "love beyond the script",
+        "grieving erasure"
+      ],
+      "body": "The Ace of Cups reverses a second way, as a refusal of the single story about what love is supposed to look like. Emotional rebirth doesn't have to mean a partner or a script you were handed. It can mean self-intimacy, chosen family, the queer joy of a tenderness that was never on anyone's approved list. Part of this reclaiming is grief, because opening the queer heart often means mourning the love that got erased or the years you spent closed. You're allowed to feel all of it and to take your time coming back to love. If you were taught your way of loving didn't count, the reclaiming Ace is you letting the cup fill anyway, on your own terms.",
+      "affirmation": "My way of loving is whole. I can come back to my own heart in my own time."
+    },
+    "skills": [
+      "Letting a feeling arrive without immediately managing it",
+      "Noticing the small moments that move you",
+      "Softening a wall that was built for an old danger",
+      "Telling protective numbness apart from real peace",
+      "Letting love include the kind you give yourself"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world's heart was opening. The collective feeling on that particular day was tender and unguarded, the emotional weather at its headwaters, a generosity in the air before it had hardened into any particular form. That was the feeling field you arrived into. It gave you a native attunement to emotional beginnings, to the moment just before a feeling becomes a named thing, to the specific quality of a heart in the process of cracking open. You understand openings. You know what they feel like from the inside, and you recognized them early because the world was mid-opening when you got here.\n\nThe shadow of that inheritance: a world with its heart open is also a world without its usual defenses, and the exposure you absorbed at the start can make you sensitive to emotional weather in ways that are hard to account for. You feel things early, before the room has declared them. That's information. The cost is that the signal never entirely quiets.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Ace of Cups as your rising means you meet the world heart-first. That's the temperament the day gave you: an instinctive openness, a tendency to lead with feeling rather than with analysis or will or structure. You walk into a room and you're already reading the emotional current before you've registered anything else. You meet people through tenderness before you meet them through assessment.\n\nThat quality is real and it draws people toward you, the sense that you're actually present, that you're going to feel the thing rather than observe it. The harder side is the exposure it carries, the way leading with the heart means leading with the part of you that can be hurt. The wall, when you build it, is usually the overcorrection: closing the thing that was meant to be open because open got expensive. The rising of the Ace is always available to you. The work is staying soft where it's safe, without having to stay soft everywhere.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world's heart opens today, tender and new, the first stir of feeling before it has a shape. A day of emotional beginnings, soft and unguarded, with all the aliveness and exposure that opening brings.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Ace of Cups, which means today has something in it that wants to be felt rather than managed. A feeling is beginning or returning, tender and unformed, and what it's asking of you is simple: let it. Don't name it too fast, don't cap it before it fills, don't talk yourself out of it because the timing feels inconvenient. This is the card of the open heart. Today, yours is being offered something. See what happens when you let the cup receive it.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Ace of Cups. Something is beginning in the feeling register, soft and unformed, not ready to be named yet. The cup is just now starting to fill."
+  },
+  "slug": "ace-of-cups"
+}

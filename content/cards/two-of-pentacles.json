@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Two of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/two-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Two · Earth · juggling what matters",
+    "essence": "The Two of Pentacles is balance in motion, the juggling of competing demands. It is adaptability under pressure, keeping two things in the air at once and staying light enough to manage the dance.",
+    "narrative": "After the Ace's single seed comes the first complication: now there are two things to tend, and the Two is the juggling of them. The old image is a figure dancing while juggling two coins linked by an infinity loop, ships rising and falling on big waves behind them. The waves say it isn't easy, but the dancer is managing, even playful. This is the suit's reckoning with limited resources and competing demands, the work and the home, the two jobs, the money and the time. It sits early because the material life rarely lets you tend just one thing, and the Two asks whether you can keep them moving without dropping either.",
+    "gift": {
+      "keywords": [
+        "balance",
+        "adaptability",
+        "juggling priorities",
+        "flexibility",
+        "staying light"
+      ],
+      "body": "The Two of Pentacles, upright, is the skill of keeping competing demands in motion without losing your footing. It's balancing the day job and the side project, managing the budget that's tight but workable, handling the week where everything needs you at once and somehow keeping it all afloat. It's adaptability with a little grace in it, the flexibility to shift as the waves rise. What it offers is the gift of nimble balance, the proof that you can hold more than one thing at a time. You don't have to do everything perfectly to keep it moving. Staying flexible and a little light on your feet is often enough to ride the waves.",
+      "affirmation": "I can keep more than one thing moving without dropping it all. Flexibility carries me where rigidity would tip me over."
+    },
+    "shadow": {
+      "keywords": [
+        "overwhelm",
+        "dropping balls",
+        "overcommitment",
+        "juggling too much"
+      ],
+      "body": "The juggling stops being a dance and becomes a scramble. The Two of Pentacles' shadow is too many balls in the air and the dread of which one drops first, the overcommitment that looked manageable until it wasn't, the constant motion that's really just barely keeping up. It's saying yes to everything and doing none of it well, the budget juggled so tight one surprise topples it, the exhaustion of never setting anything down. Underneath is often the fear that if you drop any of it, the whole structure falls, so you keep everything moving and never rest. The balance that should have been nimble turns into a frantic effort to keep too much from crashing at once.",
+      "affirmation": "I can set something down before it all drops. I don't have to keep every ball in the air to be enough."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing impossible loads",
+        "naming what can't all be carried",
+        "choosing what to drop"
+      ],
+      "body": "Reversed the other way, the Two refuses the impossible juggling act you were handed and told to manage gracefully. Many of us are expected to balance what was never balanceable: the full-time job and the caretaking, the survival hustle and the dream, the demands stacked on people who were never given enough to meet them. This reclaiming is naming the load as impossible instead of blaming yourself for struggling under it. You were not failing. The act was rigged. You get to refuse the expectation that you keep everything aloft alone, to drop what was never yours to juggle, to demand the support that makes balance actually possible. If you were handed an impossible load and told to smile while carrying it, the reclaiming Two is you setting some of it down on purpose.",
+      "affirmation": "The load I was handed was never balanceable alone. I can drop what was never mine to juggle."
+    },
+    "skills": [
+      "Keeping competing priorities in motion without rigidity",
+      "Staying flexible as circumstances shift",
+      "Setting something down before everything drops",
+      "Naming a load as actually impossible",
+      "Refusing to carry alone what needs real support"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was juggling. The collective mood was busy and adaptive, the shared sense of multiple demands held in motion at once, the particular energy of staying nimble because there wasn't really a choice. That was the current you arrived into. It gave you a native flexibility, an ease with managing more than one priority at a time, a baseline trust in your own capacity to keep things moving even when conditions are choppy.\n\nThe shadow the day also carried is the normalization of overload. A world juggling on the day you were born may have taught you, early, that constant motion is just how things are, and you may have absorbed a higher tolerance for too much than is actually sustainable.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Two of Pentacles as your rising means you meet the world already juggling. Your first instinct in a complicated situation is to find the rhythm that keeps multiple things moving rather than insisting on doing one at a time. That produces a real adaptability, the capacity to handle a full week without losing your footing the way more rigid temperaments might.\n\nThe work this rising asks over a lifetime is knowing when to set a ball down. The dancer in the old image is managing the waves, not eliminating them, and the suit's full arc asks this rising to learn the difference between flexible juggling and an overcommitment that's just been normalized. Not everything has to stay in the air.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is juggling today, balance in motion, keeping several things in the air. A day of nimble adapting, capable and a little frantic, the kind of balance that works until one thing too many gets added.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Two of Pentacles. A day of juggling, keeping several things in the air at once. You're managing more than it probably looks like, with real cheerful competence, so trust your nimbleness. Just notice which ball you can't afford to drop and protect that one. The balance is impressive and it's also tiring, and not every plate has to stay spinning.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Two of Pentacles. Two coins, an infinity loop, ships rising and falling behind. Still dancing. That's the whole trick today."
+  },
+  "slug": "two-of-pentacles"
+}

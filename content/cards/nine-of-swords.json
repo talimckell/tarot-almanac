@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Nine of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/nine-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Nine · Air · the mind in the dark",
+    "essence": "The Nine of Swords is anguish, anxiety, the 3am spiral of a mind turned against itself. It is mental suffering at its sharpest, the dread and guilt and fear that loom largest in the dark.",
+    "narrative": "Nine is the near-end, and in Swords it's the suit's darkest night. The old image is a figure sitting up in bed, face in hands, nine swords mounted on the wall behind in the blackness, a carved scene of grief on the bedframe. This is the nightmare, the waking dread, the mind replaying every failure and fear in the small hours. It sits second-to-last because the suit of mind, followed to its near-end, arrives at the place where thought becomes torment, where the same sharp clarity that was the Ace's gift now cuts only inward. The card doesn't pretend the anguish isn't real. It names the long dark night for what it is.",
+    "gift": {
+      "keywords": [
+        "facing the fear",
+        "naming the dread",
+        "anguish witnessed",
+        "the night before dawn"
+      ],
+      "body": "There's no relief in the Nine's gift. What it offers instead is the honesty of naming what haunts you. Upright, the Nine of Swords is finally facing the fear you've been circling: saying the dread out loud to someone, writing down the 3am thought and seeing it in daylight, admitting the anxiety instead of pretending you're fine. It's the strange mercy of naming the nightmare, which often shrinks it. What it offers is the honesty of the dark night fully felt and witnessed. The anguish is real. Naming it, bringing it into the light, telling someone, is how the night begins, eventually, to end. You don't have to suffer it in silence.",
+      "affirmation": "I can name what haunts me instead of suffering it silently. Spoken in daylight, the dread is smaller than it was at 3am."
+    },
+    "shadow": {
+      "keywords": [
+        "spiraling",
+        "catastrophizing",
+        "anxiety feeding itself",
+        "suffering in silence"
+      ],
+      "body": "The mind devours itself in the dark. The Nine of Swords' shadow is the spiral that feeds on itself, the catastrophizing that builds disaster from nothing, the anxiety that's stopped pointing at any real threat and just runs. It's the 3am replay of every mistake, the guilt that loops without resolving, the dread kept secret because saying it feels like admitting you're broken. It's suffering compounded by suffering alone. Underneath is often the belief that the spiral is telling you the truth, that the worst-case voice is the honest one. So you lie in the dark, believing the cruelest narrator in your head, and never turn on the light or call for help.",
+      "affirmation": "My anxious mind is not my most honest one. The 3am voice is not a prophet, and I can reach for help instead of believing it."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing inherited shame",
+        "naming what was done to you",
+        "anguish that isn't your fault"
+      ],
+      "body": "The second reversal refuses to keep carrying anguish that was never your fault to begin with. Some of the dread we wake to was planted: the shame we were taught about who we are, the guilt drilled in by people who needed us small, the fear that came from real harm and then got called our oversensitivity. This reclaiming is naming the source of the suffering as outside you. The voice in the dark that says you're wrong, too much, unlovable, often isn't yours, it's an echo of someone who told you so. You can refuse to keep punishing yourself for a verdict that was never true. If your worst nights are full of shame that was installed in you, the reclaiming Nine is you naming whose voice it really is and refusing to keep serving its sentence.",
+      "affirmation": "The shame that haunts me was installed, not earned. I can refuse to keep punishing myself for someone else's verdict."
+    },
+    "skills": [
+      "Naming a fear out loud instead of circling it",
+      "Telling an anxious spiral from a real signal",
+      "Bringing a 3am thought into daylight to test it",
+      "Reaching for help instead of suffering alone",
+      "Recognizing inherited shame as something done to you"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective dread. The world's shared mood was anxious, caught in something like a 3am spiral at the scale of a whole community, fears that felt larger than they would in daylight. That was the current you arrived into. It gave you a native familiarity with anguish as a real, namable thing rather than a shameful secret, an instinct that understands dread can be spoken without it becoming truer for the speaking.\n\nThe shadow the day also carried is the spiral itself. A world deep in its own anxiety on the day you were born may have passed on a heightened baseline sensitivity to catastrophizing, the mind's tendency to run ahead into the dark even when the actual threat is smaller than it feels.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Nine of Swords as your rising means you meet the world with a mind that can run dark quickly. Your instinct under stress is toward the worst-case scenario, the spiral that builds disaster out of incomplete information. That's a real vulnerability, and it usually comes paired with a real gift: once you learn to name the fear instead of just living inside it, you become unusually skilled at helping other people do the same.\n\nThe work this rising asks over a lifetime is the practice of bringing the 3am thought into daylight. The card's whole gift is in the naming. This rising has more occasion than most to use it, and more reason to learn, early, that the anxious voice is not the most honest one in the room.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world worries today, the mind running ahead into the dark, fears larger at night than in daylight. A day of anxiety, gripping and mostly imagined, the kind that loosens when it's named.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Nine of Swords. A day where the mind runs ahead into worry, the way it does in the dark hours. These are the fears that live mostly in the head, larger at night than they ever are in daylight. Name them out loud if you can, because most of them shrink when you do. You are not your 3am thoughts, even when they're loud and certain.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Nine of Swords. Whatever's loud in your head right now, say it to someone today. It's smaller out loud than it is at 3am."
+  },
+  "slug": "nine-of-swords"
+}

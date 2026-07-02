@@ -1,0 +1,68 @@
+{
+  "arcana": "minor",
+  "name": "Two of Swords",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/two-of-swords",
+    "cardMeta": "Minor Arcana · Swords · Two · Air · the mind at a standstill",
+    "essence": "The Two of Swords is the stalemate, the decision avoided by refusing to look. It is a mind held in careful balance, blindfolded against a truth it isn't ready to face.",
+    "narrative": "After the Ace's clean cut comes the refusal to cut at all. Two is the number of choice, and in Swords the choice is one you're avoiding. The old image is a blindfolded figure seated with two crossed swords held over the chest, a calm sea and a sliver of moon behind. The balance looks peaceful, but it's the peace of stalemate: the blindfold is on so you don't have to see the thing you'd have to decide about. This is the held breath before a hard choice, the careful equilibrium that's really avoidance. The suit pauses here, swords crossed, waiting for you to take the blindfold off.",
+    "gift": {
+      "keywords": [
+        "pause before choosing",
+        "weighing carefully",
+        "truce",
+        "considered stillness"
+      ],
+      "body": "The Two of Swords, upright, is the wisdom of not deciding before you're ready. It's holding two options in genuine balance instead of forcing a premature answer, the pause that lets a heated thing cool before you act, the truce you call so you can actually think. It's protecting a decision from being made in panic. What it offers is the steadiness of the considered pause, the refusal to be rushed into a choice you'll regret. You don't have to decide this instant. Some clarity only comes if you let yourself sit, balanced, until you're ready to look.",
+      "affirmation": "I can hold a choice in balance until I'm ready. The considered pause is not the same as avoidance."
+    },
+    "shadow": {
+      "keywords": [
+        "avoidance",
+        "willful blindness",
+        "indecision",
+        "refusing to see"
+      ],
+      "body": "The blindfold stays on long past its use. The Two of Swords' shadow is the decision you refuse to make because making it means seeing something you can't unsee. It's the willful blindness that keeps the peace by keeping you in the dark, the stalemate you call balance because admitting it's avoidance would force you to move. It's staying frozen between two choices for so long that the not-choosing becomes the choice. Underneath is the fear that whatever you'd see behind the blindfold is worse than the limbo, so you keep the swords crossed and the eyes covered and call the paralysis peace.",
+      "affirmation": "I can take the blindfold off and look. The limbo is not safer than the truth."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing forced choices",
+        "rejecting false binaries",
+        "the right not to decide on demand"
+      ],
+      "body": "Reversed the other way, the Two refuses the false binary you're being forced to choose between. Sometimes the two swords are a setup, a \"pick one\" that was rigged from the start: which box, which side, which acceptable version of yourself. This reclaiming is refusing to choose between two options that were never the real ones. You don't have to pick from a menu someone else wrote. The choice presented as the only choice can be declined, and \"neither of these is true to me\" is a valid answer. If you were forced toward a binary that left no room for who you actually are, the reclaiming Two is you setting both swords down and refusing the rigged question.",
+      "affirmation": "I can refuse a choice that was never really mine to make. Neither of these is a complete answer."
+    },
+    "skills": [
+      "Pausing on a hard choice without rushing it",
+      "Telling a considered pause from avoidance",
+      "Taking the blindfold off when you're stalling",
+      "Refusing false binaries someone else constructed",
+      "Naming when \"neither\" is the honest answer"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of held breath. The world's collective mood was suspended between two things, a decision deferred, the particular tension of a stalemate that looked like peace from the outside. That was the current you arrived into. It gave you a native comfort with ambiguity, an ability to hold two unresolved options without panicking, a baseline understanding that not every choice needs to be made immediately.\n\nThe shadow the day also carried is the avoidance that can hide inside that comfort. A world good at sitting with stalemate is also a world that can mistake stalling for wisdom, and you may have absorbed an early pattern of calling the not-deciding something gentler than it is.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Two of Swords as your rising means you meet the world with a built-in pause. Your first instinct when faced with a hard choice is to hold it carefully rather than rush toward a decision, to let both options sit until you can actually see them clearly. That produces a quality of considered calm that other people find steadying, especially in situations where everyone else wants to move fast.\n\nThe work this rising asks over time is knowing when the pause has done its job. The blindfolded figure in the old image is balanced, not at peace, and the rising eventually has to learn to feel the difference between a pause that's still working and one that's become the whole posture. The blindfold comes off when you're ready, but it does have to come off.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world holds a decision today, eyes closed against choosing, a careful balance that can't hold. A day of stalemate, poised and avoidant, the truth waiting just behind the blindfold.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Two of Swords. There's a held decision in your life right now, the kind where you've kept your eyes closed to avoid choosing. The balance feels safe and it can't last forever. You have more information than you're letting yourself see. The card isn't demanding you decide today, but it is asking you to notice the blindfold. When you're ready, lift it and look. The not-deciding is itself a decision, just a quieter one.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Two of Swords. Blindfold on. Swords crossed. The sea behind her is calm. That calm has a cost."
+  },
+  "slug": "two-of-swords"
+}

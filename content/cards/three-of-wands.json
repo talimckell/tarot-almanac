@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Three of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/three-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Three · Fire · the first ships come back",
+    "essence": "The Three of Wands is the moment after you've committed and the first results start coming in. It is expansion underway, the waiting that follows a real choice, watching the horizon for what you set in motion.",
+    "narrative": "Where the Two decided, the Three has acted and now watches. Three in Wands is the suit's first taste of momentum: you've sent something out, and the world is beginning to answer. The old image is a figure standing on a high shore, back to us, watching ships move across the water, three wands planted firmly beside them. They are no longer deciding whether to go. They've gone, and now they wait with a grounded confidence for the returns to arrive. This is the patience that comes after boldness, the steadiness of someone who has bet on themselves and is starting to see it pay.",
+    "gift": {
+      "keywords": [
+        "expansion",
+        "momentum",
+        "foresight",
+        "progress",
+        "the wider view"
+      ],
+      "body": "At its best the Three of Wands is watching the thing you started begin to move. It's the first reply to the application, the first stranger who finds your work, the early sign that the leap is catching air. It's standing in the trust that comes after a real commitment, when you can finally see further because you climbed. What it gives is the confidence of momentum, the felt evidence that your effort is reaching places you can't see yet. You bet on yourself and it's moving. Keep your eyes on the horizon. More is coming back than you've counted.",
+      "affirmation": "What I set in motion is already moving. I can trust the returns I can't yet see."
+    },
+    "shadow": {
+      "keywords": [
+        "delays",
+        "impatience",
+        "doubt after commitment",
+        "watching too anxiously"
+      ],
+      "body": "The waiting curdles into worry. The Three of Wands' shadow is standing on the shore convinced the ships are never coming back, refreshing for results that need more time than your nerves will give them. It's the impatience that makes you pull a thing up by the roots to check if it's growing, the doubt that floods in the gap between effort and reward. Or it's the expansion that overreached, the commitment that went wider than you could actually support. Underneath is the fear that the silence means failure, that if returns haven't come yet they never will. So you stand on the shore and let the waiting eat the confidence that got you there.",
+      "affirmation": "I can let what I started take the time it needs. Silence on the horizon is not the same as failure."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing to shrink your reach",
+        "claiming wider ground",
+        "expansion on your terms"
+      ],
+      "body": "The other reversal refuses to keep your reach small to make others comfortable. Some of us learned to apologize for taking up space, to keep our ambitions local and quiet, to not be seen wanting too much from too wide a world. This reclaiming is planting your wands on the high ground and looking as far out as you please. Your reach is allowed to be expansive. You can build something that travels past the room you were supposed to stay in, and you don't owe anyone smallness as proof of humility. If you were taught to keep your horizons modest, the reclaiming Three is you claiming the whole view.",
+      "affirmation": "My reach does not have to stay small to be acceptable. I can take up the whole horizon."
+    },
+    "skills": [
+      "Waiting steadily after you've made a real commitment",
+      "Letting results arrive on their own timeline",
+      "Seeing further because you took the risk to climb",
+      "Supporting your expansion instead of overreaching it",
+      "Refusing to apologize for the size of your reach"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of things in motion. The world's collective energy was watching the horizon, the shared mood of someone who has already committed and is now waiting with a grounded steadiness for the returns to arrive. Not the anxious waiting, the confident one. That was the current around you at the beginning. It gave you a native understanding that some things take time to come back, an instinct to stay at your post after the decision has been made, a capacity for the patience that comes after boldness rather than before it.\n\nWhat the day also gave you is a sensitivity to the gap between effort and reward. The ships are on the water and you can't see them yet, and that gap has always been real to you in a specific way.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Three of Wands as your rising means you meet the world from the high shore, already watching. Your instinct in any situation is to look past the immediate view to what's further out, to read momentum before it's visible, to trust the ships on the water before they've turned back toward you. That produces a quality of strategic patience that other people find orienting. You can see further than the room you're in.\n\nThe work this rising asks is staying on the shore without letting the wait become doubt. The figure has three wands planted firmly. The grounding is there. The practice is trusting it.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world has things in motion today, sent out and traveling, a day of watching the horizon. The work is done and the return hasn't landed yet, which can read as progress or as an anxious waiting depending on who's watching.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Three of Wands. Something you set in motion is still moving, further out than you can see from here. Today the card isn't asking you to do more. It's asking you to stay at your post and trust the ships on the water. The silence isn't failure. The gap between effort and return is real and this is where you're standing in it. Keep the wands planted. What you sent out is still traveling.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Three of Wands. Ships on the water. The figure isn't pacing. They're watching. There's a difference."
+  },
+  "slug": "three-of-wands"
+}

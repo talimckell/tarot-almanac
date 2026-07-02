@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Seven of Pentacles",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/seven-of-pentacles",
+    "cardMeta": "Minor Arcana · Pentacles · Seven · Earth · the long wait for the harvest",
+    "essence": "The Seven of Pentacles is the pause to assess a long effort, the patient wait for growth. It is investment, perseverance, and the hard middle stretch where you've done the work but the harvest hasn't come yet.",
+    "narrative": "Seven in Pentacles is the suit's card of patient waiting. The old image is a figure leaning on a hoe, gazing at a flourishing vine heavy with coins, neither harvesting yet nor walking away, just assessing. They've tended this for a long time. This is the moment of looking at a long investment and asking whether to keep going, the slow middle of any real building where the effort is spent but the payoff is still ripening. It sits late in the suit because by now you've planted and tended enough to know that material things grow on their own timeline, not yours, and the Seven is the patience, and the doubt, of the long wait between work and reward.",
+    "gift": {
+      "keywords": [
+        "patience",
+        "long-term investment",
+        "assessment",
+        "perseverance",
+        "trusting the growth"
+      ],
+      "body": "At its best the Seven of Pentacles is the patience to let a long effort ripen, and the wisdom to assess it honestly. It's stepping back to look at what you've built and judging whether it's growing right, staying with the slow investment that hasn't paid off yet but will, trusting the timeline of a thing that can't be rushed. It's perseverance with a clear eye, neither abandoning the vine early nor refusing to ever harvest. What it offers is the gift of patient assessment, the maturity to work and then wait. You're allowed to give a thing time. Real harvests come slowly, and tending the vine through the long middle is how the fruit gets heavy.",
+      "affirmation": "I can let my efforts ripen on their own timeline. The long middle of tending is how the harvest gets heavy."
+    },
+    "shadow": {
+      "keywords": [
+        "impatience",
+        "sunk-cost clinging",
+        "giving up too soon",
+        "wasted effort"
+      ],
+      "body": "The waiting curdles into either pulling up the roots or refusing to ever leave the field. The Seven of Pentacles' shadow is impatience that abandons a good thing right before it fruits, the giving-up too soon because the growth felt too slow. Or it's the opposite, the sunk-cost grip that keeps you tending a dead vine for years because you've already put so much in, unable to admit the harvest is never coming. It's misjudging the assessment, either bailing on what would have grown or clinging to what won't. Underneath is the difficulty of the honest look, the fear that judging it clearly means facing either wasted time or more waiting. So you either yank it up early or pour years into barren ground.",
+      "affirmation": "I can judge honestly whether this is still growing. Patience and sunk cost are not the same thing."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing the grind myth",
+        "valuing your time",
+        "redefining worthwhile work"
+      ],
+      "body": "The other reversal refuses the lie that endless toil is virtue regardless of what it yields. Some of us were taught to keep tending fields that will never feed us, to grind without question, to measure our worth by how hard we labor rather than by whether the labor serves our actual lives. This reclaiming is reclaiming the right to ask what the work is for. Your time and effort are not infinite resources to pour into someone else's harvest. You get to walk away from labor that only enriches others, to choose the vines that grow something for you, to refuse the grind dressed up as virtue. If you were taught that worth is just relentless toil, the reclaiming Seven is you deciding which fields are actually worth your tending.",
+      "affirmation": "My labor is not virtuous just because it's hard. I get to ask what the work is for and tend only what feeds my life."
+    },
+    "skills": [
+      "Letting a long effort ripen without rushing it",
+      "Assessing honestly whether something's still growing",
+      "Telling patience from sunk-cost clinging",
+      "Walking away from labor that won't ever feed you",
+      "Asking what the work is actually for"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day the world was in the long wait. The collective mood was patient and assessing, the shared sense of effort already spent and a harvest not yet ready, the particular texture of a stretch that's neither beginning nor finishing. That was the current you arrived into. It gave you a native tolerance for the slow middle, an instinct that real growth takes time and shouldn't be rushed, a baseline comfort with the discomfort of not knowing yet whether something is working.\n\nThe shadow the day also carried is the difficulty of the honest assessment itself. A world in the long wait on the day you were born may have taught you to keep tending past the point of usefulness, or alternately to give up right before the fruit was ready, and you may carry one of those patterns more readily than the other.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Seven of Pentacles as your rising means you meet the world with patience for slow growth built in. Your first instinct with a long project isn't to rush it but to settle into the tending, to trust that real things take the time they take. That produces real perseverance, the capacity to stay with something through the unglamorous middle that makes other people give up.\n\nThe work this rising asks over a lifetime is the honest look. The figure in the old image is actually assessing, not just waiting blindly, and the suit's full arc asks this rising to keep checking in rather than letting patience become an excuse not to look closely at whether the vine is actually still growing.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is patient today, tending a slow harvest, a long look at what's been planted. A day of waiting and assessing, steady and a little anxious, the pause where you can't yet tell what will come.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Seven of Pentacles. A day for patience with something slow-growing. Take the long look at what you've tended, assess honestly, and then let it be. Growth has its own pace and can't be hurried by wanting. Just make sure patience hasn't become a way of avoiding a harvest that's actually ready, or one that's quietly failed. Tend it, then trust it.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Seven of Pentacles. Leaning on the hoe. Not harvesting, not walking away. Just looking honestly at what's actually there."
+  },
+  "slug": "seven-of-pentacles"
+}

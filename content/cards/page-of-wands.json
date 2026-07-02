@@ -1,0 +1,70 @@
+{
+  "arcana": "minor",
+  "name": "Page of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/page-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Page · Fire · fire as the student",
+    "essence": "The Page of Wands is fire just discovering itself. It is enthusiasm, curiosity, and the eager beginner's energy, the spark meeting the world for the first time with no fear of looking foolish.",
+    "narrative": "The courts are the element at four stages, and the Page is the student, fire in its youngest and most open form. The old image is a young figure in a bright tunic holding a budding staff, looking up at it with frank wonder, as if the wand might do something marvelous any second. This is the suit's beginner energy: not yet skilled, not yet burned, just lit up and ready to try. Where the Ace was the spark itself, the Page is the person holding it, brimming with the eagerness to chase whatever catches their interest. The Page doesn't know enough yet to be afraid, and that's exactly the gift.",
+    "gift": {
+      "keywords": [
+        "enthusiasm",
+        "curiosity",
+        "courage to begin",
+        "playfulness",
+        "fresh passion"
+      ],
+      "body": "The Page of Wands upright is the freedom of being a beginner at something that lights you up. It's signing up for the pottery class you'll be terrible at and not caring, the new obsession you dive into headfirst, the willingness to look like a fool because the wanting is bigger than the fear. It's enthusiasm before expertise, the courage to start a thing you haven't earned the right to be good at yet. What it offers is permission to be new, to chase a spark just because it's bright. You don't have to be skilled to begin. The eagerness itself is the gift, and protecting it matters more than getting it right.",
+      "affirmation": "I can be a beginner and love it. The eagerness matters more than getting it right."
+    },
+    "shadow": {
+      "keywords": [
+        "flakiness",
+        "all spark no follow-through",
+        "restlessness",
+        "fear of commitment"
+      ],
+      "body": "The fire lights everything and finishes nothing. The Page of Wands' shadow is enthusiasm that never lands, the new passion every week and the abandoned one every month, the energy that scatters before anything takes root. It's starting ten things and seeing none through, mistaking the rush of beginning for actual progress, getting bored the moment a thing requires real work. Or it's the restlessness that can't sit still long enough to deepen, always chasing the next bright thing because staying with one means risking it gets hard. Underneath is sometimes the fear that if you commit and it gets difficult, you'll find out the spark was never real. So you keep it perpetually new and never let it become anything.",
+      "affirmation": "I can stay with a spark long enough to let it grow. The next bright thing isn't always the real one."
+    },
+    "reclaiming": {
+      "keywords": [
+        "reclaiming play",
+        "refusing premature seriousness",
+        "queer joy",
+        "the right to be new"
+      ],
+      "body": "The other reversal refuses every voice that told you to grow up, settle down, and stop playing. A lot of us had our enthusiasm shamed early, were told our excitement was too much, our interests pointless, our play a thing to outgrow as fast as possible. This reclaiming is taking the eagerness back, refusing to let the world sand the wonder off you. Your delight is not childish. The freedom to be openly, unashamedly excited about what you love is a thing they tried to take, and you can have it back. You get to play, to be new at things, to light up without apology. If your joy was treated as something to mature out of, the reclaiming Page is you choosing wonder on purpose.",
+      "affirmation": "My excitement is not something to outgrow. I get to play and to light up without apology."
+    },
+    "skills": [
+      "Letting yourself be a beginner without shame",
+      "Chasing a spark before you've earned expertise",
+      "Staying with a passion long enough to deepen it",
+      "Telling restless escape from genuine new interest",
+      "Protecting your enthusiasm from those who'd shame it"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective enthusiasm. The world's shared mood was curious and eager, the energy of something new being explored without yet knowing what it would become. That was the air around you at the beginning. It gave you a native access to beginner's mind, an ease with the open field before anything is decided, a comfort with trying things just to see.\n\nWhat the day also gave you is the challenge that comes alongside that freshness: a world in the enthusiastic-beginning stage hasn't yet sorted what it's actually going to follow through on. You may have absorbed an early relationship to starts that took longer to develop into staying power.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Page of Wands as your rising means you meet the world with a wand held up in wonder. Your first instinct in any situation is curiosity: what is this, what could it do, what happens if you try. That produces a quality of openness and eagerness that makes other people feel they're in the presence of someone who's actually alive to what's in front of them. You haven't stopped finding things interesting.\n\nThe work this rising asks over time is the staying. The Page looks up at the wand with wonder, and the wand is still just budding. The gift is the eagerness. What the suit's full arc asks is learning to stay with the spark long enough to find out what it can actually become.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world is eager and curious today, a young fire, ready to try things just to see. A day of fresh enthusiasm, bright and a little unfocused, the spark still deciding what it wants to become.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Page of Wands. Something today wants your curiosity, not your expertise. Let yourself be a beginner at it. Follow the spark without demanding it already know where it's going. The card's one caution is the scatter: if you notice the enthusiasm jumping to five things at once, pick the one that's pulling hardest and stay with it long enough to find out what's actually there. Play is allowed to be the whole point today.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Page of Wands. Holding the wand up, looking at it like it might do something extraordinary. Doesn't know yet. Doesn't need to."
+  },
+  "slug": "page-of-wands"
+}

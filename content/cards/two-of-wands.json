@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Two of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/two-of-wands",
+    "cardMeta": "Minor Arcana · Wands · Two · Fire · the spark meets a choice",
+    "essence": "The Two of Wands is the moment the spark has to decide where to go. It is potential held in the hand and the first real planning of it, standing at the edge of your own life looking at what you could build.",
+    "narrative": "After the Ace's raw flare comes the first question fire asks: where to. Two is the number of partnership and of choice, and in Wands it's the meeting of your energy with the wide world it could move into. The old image is a figure on a castle wall holding a small globe, one wand fixed to the stone and the other in hand, gazing past the edge of what they already own toward a horizon they haven't crossed. They've already built something. The question is whether it's enough, or whether the spark wants more than the safe wall. This is ambition at its earliest, the moment the want grows a direction.",
+    "gift": {
+      "keywords": [
+        "planning",
+        "vision",
+        "personal power",
+        "bold choice",
+        "looking ahead"
+      ],
+      "body": "The Two of Wands upright is standing at your own edge and deciding to go further. It's mapping the trip you've only daydreamed, the moment you stop saying someday about the move or the business or the leap and start naming a date. It's holding real power in your hands and choosing to aim it somewhere bigger than where you are. What it asks is the courage to want more than the safe thing you already have. You are allowed to outgrow what you built. The view from the wall is good, and the horizon is still yours to walk toward.",
+      "affirmation": "I can want more than what already feels safe. The next horizon is mine to choose."
+    },
+    "shadow": {
+      "keywords": [
+        "fear of leaving",
+        "playing safe",
+        "indecision",
+        "the comfortable cage"
+      ],
+      "body": "The figure stays on the wall. The Two of Wands' shadow is the vision you keep admiring from a distance and never walking toward, the plan that stays a plan because choosing it means risking the comfortable thing you've got. It's overplanning as a way of never leaving, researching the move for three years, the dream kept safely hypothetical so it can never actually fail. Or it's the opposite: grabbing at the horizon so fast you abandon something solid that was actually working. Underneath is the fear that if you choose and it's wrong, you'll have traded a sure thing for nothing. So you stand on the wall, holding the whole world in your hand, and don't throw.",
+      "affirmation": "I can make the choice instead of guarding it. A plan I never act on is just a prettier cage."
+    },
+    "reclaiming": {
+      "keywords": [
+        "refusing the small life",
+        "daring to want bigger",
+        "authoring your own horizon"
+      ],
+      "body": "Reversed the other way, the Two refuses the small life you were handed as your only option. Some of us were raised to keep our ambitions modest, to want what was reasonable for someone like us, to mistake the wall we were given for the whole world. This reclaiming is looking past the assigned horizon and deciding you get to pick a bigger one. Your vision doesn't have to fit the size anyone measured you for. You can author a life that the people who raised you couldn't have pictured, and wanting it is not betrayal. If you were told to stay where you were put, the reclaiming Two is you climbing the wall to see what else is out there.",
+      "affirmation": "I was not built for the small life I was handed. The horizon I choose is allowed to be vast."
+    },
+    "skills": [
+      "Turning a daydream into a dated, concrete plan",
+      "Risking a comfortable thing for a truer one",
+      "Naming what you actually want before you talk yourself down",
+      "Telling real preparation apart from stalling",
+      "Letting your ambition be as big as it honestly is"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day when the world was standing at its edge. The collective mood was expansive and forward-facing, the shared energy of looking out at a wider horizon and weighing whether to step toward it. That was the current around you at the beginning. It gave you a native relationship to vision, an ease with holding the long view, an instinct to see further than where you're currently standing and to want what you see.\n\nWhat the day also carried is the particular weight of the choice that the wide view asks for. A world standing at its edge is also a world that has to decide, and that decision is uncomfortable. You may have absorbed early that ambition is real and also costly, and that the bigger horizon is only yours if you're willing to let go of the safer one.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Two of Wands as your rising means you meet the world with a globe in your hands. Your instinct in any situation is to take the longer view, to see what it could become rather than only what it is, to hold the whole shape of a thing before deciding where to aim. That produces a quality of deliberate ambition that other people find clarifying to be around. You don't just want. You want with direction.\n\nThe work this rising asks is the step off the wall. Vision without movement is still a comfortable cage. The Two is the card that stands at the edge, and the growth it points toward is the crossing.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world stands at an edge today, looking out, weighing where to point the energy it has gathered. A day of wide views and held plans, with the quiet risk that surveying becomes a substitute for stepping.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Two of Wands. You're at an edge today, or close to one. The energy is there and the question is where to point it. Let yourself see the wider picture before you narrow it down. Name the bigger version of what you want, honestly, before you talk it into something smaller. Then notice: is the planning still in service of the leap, or has it become a way of not leaping? If the map is ready, today might be the day to start walking.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Two of Wands. Holding the whole world in one hand. The other hand is already on the wand. The horizon is right there. The only move left is stepping off the wall."
+  },
+  "slug": "two-of-wands"
+}

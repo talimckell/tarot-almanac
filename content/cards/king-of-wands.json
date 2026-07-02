@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "King of Wands",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/king-of-wands",
+    "cardMeta": "Minor Arcana · Wands · King · Fire · fire as outward expression",
+    "essence": "The King of Wands is fire expressed outward as vision and leadership. It is the mature mastery of will, creative energy directed toward something larger, the charisma that moves the self and others.",
+    "narrative": "The King is the element in its most outward, expressed form, fire turned toward the world as leadership and vision. Where the Queen holds the fire within as self-possession, the King sends it outward to light and move others. The old image is a king on a throne decorated with lions and salamanders, robed in flame colors, holding a flowering staff, leaning slightly forward as if already half-risen toward action. This is fire that has matured into direction, the visionary who can hold a bold idea and actually marshal people toward it. The King of Wands is passion that became leadership, the seasoned form of all that drive, used to build something beyond himself.",
+    "gift": {
+      "keywords": [
+        "vision",
+        "leadership",
+        "charisma",
+        "mature drive",
+        "inspiring others"
+      ],
+      "body": "At his best the King of Wands is fire that has grown into vision and the ability to lead. It's holding a bold idea and being able to make others believe in it, the natural authority that comes from genuine conviction, the charisma that gathers people toward a shared horizon. It's drive that's matured past the Knight's reckless charge into something that can actually build, ambition with the wisdom to direct it. What it offers is the gift of inspiring leadership, the power to take your fire and use it to light others. You can hold a vision and carry people toward it. Your passion, grown up and aimed, is the kind of thing that moves the world a little.",
+      "affirmation": "I can hold a vision and lead others toward it. My fire, aimed well, can move more than myself."
+    },
+    "shadow": {
+      "keywords": [
+        "domineering",
+        "ego",
+        "ruthlessness",
+        "impatience with others"
+      ],
+      "body": "The leader becomes the tyrant. The King of Wands' shadow is vision turned to ego, leadership that's really domination, the charisma used to control rather than inspire. It's the impatience with anyone slower, the ruthlessness that runs people over on the way to the goal, the conviction so sure of itself it stops listening. It's the boss who's all heat and no care, the visionary who treats people as fuel for the vision. Underneath is often the fear that real leadership, the patient kind, isn't enough to keep the position, so power gets confused with force. The fire that should have lit others up just burns them as tinder.",
+      "affirmation": "I can lead without dominating. Real authority listens, and force is not the same as power."
+    },
+    "reclaiming": {
+      "keywords": [
+        "redefining leadership",
+        "refusing the domineering mold",
+        "leading as your true self"
+      ],
+      "body": "Reversed the other way, the King refuses the narrow mold of what a leader is supposed to be. The image we're handed of authority is often loud and hard, a particular kind of man, and plenty of us were told we'd never fit it, or that to lead we'd have to become someone we're not. This reclaiming is leading as yourself instead. Your vision doesn't require you to harden into the prescribed shape of power. You can hold authority with warmth, can lead from your actual values, can be the kind of leader the mold left out. The world needs the fire of people who were told they could never carry it. If you were shut out of leadership or asked to deform yourself to claim it, the reclaiming King is you leading exactly as you are.",
+      "affirmation": "I can lead as myself, not as the mold demands. The fire of leadership was always mine to carry."
+    },
+    "skills": [
+      "Holding a vision and bringing others toward it",
+      "Leading with warmth instead of force",
+      "Aiming mature drive at something larger than yourself",
+      "Telling true authority from domination",
+      "Claiming leadership in your own shape, not the prescribed one"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of directed fire. The world's collective energy was visionary and purposeful, the shared mood of a community pointed toward something and moving. That was the current around you at the beginning. It gave you a native understanding of what it looks like when passion has grown into direction, a baseline sense that fire is most powerful when it knows where it's going, an instinct for the difference between burning and building.\n\nThe shadow the day also carried is the weight of vision that expects others to follow. A world organized around directed leadership also had strong ideas about who gets to hold the torch, and you may have absorbed those ideas, one way or another, before you were old enough to question them.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The King of Wands as your rising means you meet the world already half-risen toward action. Your instinct in any situation is toward vision and leadership: where is this going, who's building it, and how can your fire be useful to the direction. People feel the forward lean. They turn toward it.\n\nThe work this rising asks is the patience that makes the vision real rather than merely forceful. The King in the old image is already half out of the throne, and the growth this rising points toward is the steadiness to stay seated long enough for others to catch up, to lead at a pace that includes the people around you rather than scorching past them.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world aims its fire with purpose today, drive that knows where it's going. A day of directed will and mature vision, powerful when the aim is true and forceful when it isn't questioned.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the King of Wands. You have vision today and the energy to move toward it. Point your fire at something worthy. The King's caution isn't about the size of the vision. It's about the people in it. Lead toward the goal and bring them with you rather than burning past them. The charisma is real and available today. Use it to build something, not just to win something.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the King of Wands. Already half out of the throne. The vision is there. The question is whether the people around you are coming with you or just watching you go."
+  },
+  "slug": "king-of-wands"
+}

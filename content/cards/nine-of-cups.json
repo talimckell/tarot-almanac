@@ -1,0 +1,69 @@
+{
+  "arcana": "minor",
+  "name": "Nine of Cups",
+  "cardReading": {
+    "status": "BLESSED",
+    "referenceUrl": "/tarot/nine-of-cups",
+    "cardMeta": "Minor Arcana · Cups · Nine · Water · feeling arrives at fullness",
+    "essence": "The Nine of Cups is the heart that got what it wanted. It is satisfaction, pleasure, the contentment of a wish fulfilled. It is permission to enjoy the good that's actually here.",
+    "narrative": "After the Eight's hard departure, the suit arrives somewhere good. Nine is the number of near-completion, the wish almost fully realized, and in Cups it's emotional satisfaction, the rare stretch where you have what you longed for and get to feel it. The old image is a figure seated with arms crossed, content, nine cups arrayed in an arc behind them like a display of everything they've gathered. It's sometimes called the wish card. It comes this late in the suit because contentment this real is earned, arriving only after the grief and the leaving and the long search. This is fulfillment, the satisfied exhale of a heart that reached its want and found the want was true. The card's quiet challenge is whether you can actually let yourself have it.",
+    "gift": {
+      "keywords": [
+        "fulfillment",
+        "satisfaction",
+        "gratitude",
+        "pleasure",
+        "the wish granted"
+      ],
+      "body": "Upright, the Nine of Cups is letting yourself actually enjoy what you have. It's the meal you cooked, the people around the table, the moment you catch yourself thinking this is enough and mean it. It's getting the thing you worked for and letting it land instead of immediately chasing the next one. It's pleasure without the guilt tax. The gift is permission to be satisfied, to receive your own good fortune without flinching. You deserve fulfillment and pleasure, and your joy is not selfish. Letting yourself have what you wanted, fully, is its own quiet practice. Sit down in the arc of your nine cups and let it be enough for tonight.",
+      "affirmation": "I can let myself have what I wanted. My pleasure is not something to apologize for."
+    },
+    "shadow": {
+      "keywords": [
+        "emptiness behind success",
+        "comparison",
+        "overindulgence",
+        "hollow fulfillment"
+      ],
+      "body": "The cups are full and you feel nothing. The Nine of Cups' shadow is getting exactly what you wanted and finding it doesn't touch the emptiness you thought it would fill. It's the success that photographs well and feels hollow, the achievement that just resets the bar higher. It's the comparison spiral that turns your real good fortune to ash because someone always has more. Or it's overindulgence, trying to fill the hole by piling up more cups when the hole was never about cups. Underneath is the fear that even getting everything won't be enough, that the emptiness is permanent. The fulfillment is real and available. The shadow is being unable to let it in.",
+      "affirmation": "I can let satisfaction reach me. Filling the cup higher was never the answer."
+    },
+    "reclaiming": {
+      "keywords": [
+        "self-defined fulfillment",
+        "releasing inherited happiness",
+        "joy on your terms"
+      ],
+      "body": "The Nine of Cups reverses a second way, as a refusal of someone else's definition of a satisfied life. Maybe you got the thing you were told would make you happy and it didn't, and the problem wasn't you, it was the recipe. This reclaiming is releasing the inherited picture of fulfillment, the milestones and markers that were supposed to feel like enough and never did. You get to define what pleasure and contentment actually mean for you, even if your version looks nothing like the brochure. If you chased a happiness that was never yours and came up empty, the reclaiming Nine is you tossing out the borrowed wish and finding the one that's actually yours.",
+      "affirmation": "I get to define my own fulfillment. The happiness I'm building is mine, not inherited."
+    },
+    "skills": [
+      "Letting a good thing fully land before chasing the next",
+      "Receiving pleasure without the guilt tax",
+      "Noticing the comparison spiral turning your good to ash",
+      "Telling real fulfillment apart from inherited milestones",
+      "Defining satisfaction in your own terms"
+    ]
+  },
+  "natalCollectiveDay": {
+    "status": "DRAFT",
+    "body": "You were born on a day of collective satisfaction. The world's shared mood was full, the emotional quality of having enough and knowing it. That was what was in the air at your beginning. It gave you a native capacity for enjoyment, a baseline understanding that good things are real and available and meant to be felt rather than immediately questioned. You know what satisfaction feels like in your body. You were born into a day that had it.\n\nThe shadow the day carried is the reflex that comes alongside good fortune: the waiting for the catch, the distrust of the contentment, the sense that if things are this good something must be about to go wrong. A world resting in its wish fulfilled also taught you not to trust the rest too completely.\n\n---"
+  },
+  "natalPersonalDay": {
+    "status": "DRAFT",
+    "body": "The Nine of Cups as your rising means you meet the world with a baseline capacity for pleasure. Your first instinct in a good situation is to feel it, and that's less common than it sounds. You have access to satisfaction that many people have to work to locate. The contentment is in your register.\n\nThe shadow of this rising is the comparison spiral that can undercut what's actually there, the turning of your real good fortune to ash against someone else's display. The work of the Nine over a lifetime is learning to sit inside your own arc of cups without scanning the room for who has more.\n\n---"
+  },
+  "collectiveReading": {
+    "status": "BLESSED",
+    "body": "The world's wish is granted today, the cup running over, a day of deep contentment. Real satisfaction, with the old human reflex that distrusts a good thing and keeps waiting for the catch.\n\n---"
+  },
+  "personalReading": {
+    "status": "DRAFT",
+    "body": "Your day card is the Nine of Cups. Something good is here, or coming, and today's card is asking you to actually let it land. Notice if part of you is already waiting for the other shoe. That's the card's real question: can you receive the good thing fully, without immediately earning it twice or qualifying it or measuring it against what someone else has? Sit down in the arc of what you have. Let it be enough for today.\n\n---"
+  },
+  "social": {
+    "status": "DRAFT",
+    "dailyCaption": "The day card is the Nine of Cups. The wish card. The cups are full. The only task is letting yourself have it."
+  },
+  "slug": "nine-of-cups"
+}

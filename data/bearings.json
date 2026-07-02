@@ -1,0 +1,200 @@
+[
+  {
+    "number": 0,
+    "roman": "0",
+    "name": "The Fool",
+    "slug": "fool",
+    "element": "air",
+    "glyphId": "ma-0",
+    "reading": "Your Bearing is the Fool, the open beginning. You come to things fresh, without the weight of how they're supposed to go, and that lets you start what others have already ruled out and see possibility where they see a closed door. Lived the other way, that same openness reads as a refusal to land, a leaping before there's ground beneath it. The Fool in you is neither the gift nor the flaw on its own; the work of carrying it is keeping the beginner's eyes without mistaking every ending for a reason to start over."
+  },
+  {
+    "number": 1,
+    "roman": "I",
+    "name": "The Magician",
+    "slug": "magician",
+    "element": "air",
+    "glyphId": "ma-1",
+    "reading": "Your Bearing is the Magician, focused will. You gather what's scattered and make something happen, turning intention into a result you can point at. Turned the other way, that same power tips into manipulation, or into the belief that you can force anything into being if you just will it hard enough. Making things real comes easily to you. The harder, truer task is choosing what's actually worth making."
+  },
+  {
+    "number": 2,
+    "roman": "II",
+    "name": "The High Priestess",
+    "slug": "high-priestess",
+    "element": "water",
+    "glyphId": "ma-2",
+    "reading": "Your Bearing is the High Priestess, inner knowing. You read the world through what you sense beneath its surface, trusting a quiet intelligence that never announces itself. That receptivity is a real gift, and it can also fold inward until it becomes a withdrawal, a knowing held so privately that no one is ever let in. The disposition is yours by nature. What it asks of you is to honor what you sense and still risk saying it out loud."
+  },
+  {
+    "number": 3,
+    "roman": "III",
+    "name": "The Empress",
+    "slug": "empress",
+    "element": "earth",
+    "glyphId": "ma-3",
+    "reading": "Your Bearing is the Empress, generative abundance. You meet the world as someone who makes things grow, with a natural fullness others are drawn toward. That same giving can overflow its banks, smothering the very thing it meant to tend, or pouring out until nothing is left for you. What flourishes around you is the gift of it. The harder part is letting what you've grown have a life of its own."
+  },
+  {
+    "number": 4,
+    "roman": "IV",
+    "name": "The Emperor",
+    "slug": "emperor",
+    "element": "fire",
+    "glyphId": "ma-4",
+    "reading": "Your Bearing is the Emperor, structure and order. You build the frameworks other people lean on, setting the boundaries that make things stable and dependable. That same steadiness can harden into rigidity, into control worn as if it were safety. The structure is the gift others rely on. What it asks of you is to know when to hold the form and when to let it bend."
+  },
+  {
+    "number": 5,
+    "roman": "V",
+    "name": "The Hierophant",
+    "slug": "hierophant",
+    "element": "earth",
+    "glyphId": "ma-5",
+    "reading": "Your Bearing is the Hierophant, tradition and meaning. You orient toward what's larger than yourself, drawn to lineage and to the accumulated wisdom of what came before. That reverence grounds you, and it can also calcify, defending the form long after the meaning has drained out of it. Carrying what matters forward is the gift. Telling living tradition from empty habit is the work."
+  },
+  {
+    "number": 6,
+    "roman": "VI",
+    "name": "The Lovers",
+    "slug": "lovers",
+    "element": "air",
+    "glyphId": "ma-6",
+    "reading": "Your Bearing is the Lovers, union and choice. You move through the world by way of connection, the meeting of one self with another, with a real gift for intimacy and for choosing what genuinely aligns with you. The other face of that is a fear of choosing wrong, or a tendency to dissolve into the person you've chosen. Real union you already know how to find. Staying whole inside it is the harder art."
+  },
+  {
+    "number": 7,
+    "roman": "VII",
+    "name": "The Chariot",
+    "slug": "chariot",
+    "element": "water",
+    "glyphId": "ma-7",
+    "reading": "Your Bearing is the Chariot, directed will. You move with drive, holding opposing forces together and pushing forward toward what you want. That same momentum can become a running-over, a forward motion so committed it forgets to ask where it's headed. Getting there is never your problem. Choosing a destination worth the charge is the work."
+  },
+  {
+    "number": 8,
+    "roman": "VIII",
+    "name": "Strength",
+    "slug": "strength",
+    "element": "fire",
+    "glyphId": "ma-8",
+    "reading": "Your Bearing is Strength, gentle power. You carry a quiet courage that works through patience rather than force, the hand that calms the lion instead of fighting it, and people likely feel steadier near you. Its shadow is the cost of always being the steady one: you can give and give and forget to let anyone be strong for you. Calm under intensity is the gift. Letting yourself be held too is the work."
+  },
+  {
+    "number": 9,
+    "roman": "IX",
+    "name": "The Hermit",
+    "slug": "hermit",
+    "element": "earth",
+    "glyphId": "ma-9",
+    "reading": "Your Bearing is the Hermit, inner searching. You make sense of the world by going inward, seeking understanding in solitude, carrying your own lamp into the dark. That hard-won self-knowledge is real, and the same turn inward can deepen into isolation, a withdrawal so complete the wisdom never reaches anyone else. Depth found alone is the gift. The return, coming back to share what you found, is the harder half."
+  },
+  {
+    "number": 10,
+    "roman": "X",
+    "name": "Wheel of Fortune",
+    "slug": "wheel-of-fortune",
+    "element": "fire",
+    "glyphId": "ma-10",
+    "reading": "Your Bearing is the Wheel of Fortune, the turning. You meet the world already knowing that circumstances shift and nothing holds still, and you move with the cycle instead of bracing against it. That same acceptance can soften into passivity, a sense that since it all turns anyway, there's little point in steering. Grace with change is the gift. Acting where you actually can, even as the wheel turns, is the work."
+  },
+  {
+    "number": 11,
+    "roman": "XI",
+    "name": "Justice",
+    "slug": "justice",
+    "element": "air",
+    "glyphId": "ma-11",
+    "reading": "Your Bearing is Justice, balance and truth. You weigh things honestly, see consequence clearly, and hold yourself and others to what's fair. That clarity is a gift, and the same exacting eye can sharpen into harshness, a scale that never rests, a judgment with no mercy left in it. The discernment is yours by nature. Leaving room for grace alongside the truth is what it asks of you."
+  },
+  {
+    "number": 12,
+    "roman": "XII",
+    "name": "The Hanged One",
+    "slug": "hanged-one",
+    "element": "water",
+    "glyphId": "ma-12",
+    "reading": "Your Bearing is the Hanged One, the willing pause. You meet the world without forcing it, able to hold still in the in-between and see things from the angle no one else thought to take. That patience is real wisdom, and the same suspension can curdle into being stuck, a pause that never resolves into a move. The reframe and the willingness to wait are the gift. Knowing when the waiting is finished is the harder knowing."
+  },
+  {
+    "number": 13,
+    "roman": "XIII",
+    "name": "Death",
+    "slug": "death",
+    "element": "water",
+    "glyphId": "ma-13",
+    "reading": "Your Bearing is Death, transformation. You can let things end, releasing what's complete to make room for what's next, unafraid of an ending that needs to happen. That same capacity can turn restless and clear the ground too often, ending things that hadn't actually finished. True release is the gift. Telling a real ending from an impatient one is the work."
+  },
+  {
+    "number": 14,
+    "roman": "XIV",
+    "name": "Temperance",
+    "slug": "temperance",
+    "element": "fire",
+    "glyphId": "ma-14",
+    "reading": "Your Bearing is Temperance, the patient blend. You integrate, finding the workable middle and combining opposites into something that holds. That alchemy is a gift, and the same instinct for moderation can become a quiet fear of intensity, watering down what wanted to stay vivid. The blend that holds is yours. Letting some things stay strong and undiluted is the work."
+  },
+  {
+    "number": 15,
+    "roman": "XV",
+    "name": "The Devil",
+    "slug": "devil",
+    "element": "earth",
+    "glyphId": "ma-15",
+    "reading": "Your Bearing is the Devil, honest appetite. You face the world unafraid of desire and the shadow, seeing what truly drives people, unscandalized by hunger or want, and that frankness gives others permission to be honest too. The same clear gaze can become a binding, mistaking a chain for a choice, getting caught in the very thing you saw so plainly in everyone else. Seeing the want underneath is the gift. Staying free of it is the lifelong part."
+  },
+  {
+    "number": 16,
+    "roman": "XVI",
+    "name": "The Tower",
+    "slug": "tower",
+    "element": "fire",
+    "glyphId": "ma-16",
+    "reading": "Your Bearing is the Tower, the necessary break. You can see what's built on false ground and you don't flinch when it falls, even when the falling comes all at once, and that honesty clears what needed clearing. Turned the other way, it becomes destructive, breaking things that didn't need to break. Letting false structures fall is the gift. Knowing which walls are load-bearing is the work."
+  },
+  {
+    "number": 17,
+    "roman": "XVII",
+    "name": "The Star",
+    "slug": "star",
+    "element": "air",
+    "glyphId": "ma-17",
+    "reading": "Your Bearing is the Star, quiet hope. You meet the world with a faith that survives the dark, finding the light after the storm and holding it out to others. That hope heals, and the same reach for light can become a bypassing, grasping for the bright side before the wound has even been felt. Genuine renewal is the gift. The discipline is staying with the hard thing long enough to truly heal it."
+  },
+  {
+    "number": 18,
+    "roman": "XVIII",
+    "name": "The Moon",
+    "slug": "moon",
+    "element": "water",
+    "glyphId": "ma-18",
+    "reading": "Your Bearing is the Moon, intuition and tides. You read the world by feel rather than by argument, attuned to undercurrents and to the things sensed long before they can be named. That sensitivity catches what others miss, and the same attunement can drift into confusion, mistaking every feeling for a fact and losing the shore in the fog. Deep attunement is the gift. Telling the true signal from the dream is the work."
+  },
+  {
+    "number": 19,
+    "roman": "XIX",
+    "name": "The Sun",
+    "slug": "sun",
+    "element": "fire",
+    "glyphId": "ma-19",
+    "reading": "Your Bearing is the Sun, clarity and warmth. You move through the world with vitality, a brightness that clarifies and gladdens, a capacity for joy that's genuinely your own. That same warmth can curdle into a need to stay bright, a difficulty letting the day be cloudy or the feeling be hard. The radiance is real and it's yours. Letting yourself dim sometimes, without feeling you've failed, is the work."
+  },
+  {
+    "number": 20,
+    "roman": "XX",
+    "name": "Judgement",
+    "slug": "judgement",
+    "element": "fire",
+    "glyphId": "ma-20",
+    "reading": "Your Bearing is Judgement, the reckoning and the call. You take honest account, hear the call to rise, and answer it, unafraid of the larger reassessment, and that clarity moves you and the people around you toward what matters. The same capacity can turn inward as self-judgment, an accounting that never settles, a call you can't stop answering. Rising to what's asked is the gift. Knowing when you've done enough is the work."
+  },
+  {
+    "number": 21,
+    "roman": "XXI",
+    "name": "The World",
+    "slug": "world",
+    "element": "earth",
+    "glyphId": "ma-21",
+    "reading": "Your Bearing is the World, wholeness. You meet life from a sense of fundamental completeness, an integration that lets you hold the whole picture and feel, underneath it all, that there is enough. That wholeness is rare and steadying. Its other face quietly insists you need nothing and no one, a self-sufficiency that forgets to let anyone in. Genuine completeness is the gift. Staying open even when you feel whole is what it quietly asks."
+  }
+]
