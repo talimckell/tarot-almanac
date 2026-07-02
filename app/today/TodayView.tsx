@@ -182,9 +182,19 @@ export default function TodayView({
             ) : (
               <>
                 <div className={styles.cardname}>Add your birthday</div>
-                <div className={styles.reading}>
-                  <Link href="/" style={{ color: "var(--indigo)" }}>Enter your birthday</Link> to see the card the day sets for you.
-                </div>
+                <div className={styles.reading}>See the card the day sets for you.</div>
+                <form className="reveal-form" action="" method="get">
+                  <input
+                    type="text"
+                    name="n"
+                    placeholder="Your name"
+                    autoComplete="given-name"
+                    aria-label="Your name"
+                    defaultValue={name ?? ""}
+                  />
+                  <input type="date" name="b" required aria-label="Your birthdate" />
+                  <button type="submit" className="btn-reveal">Reveal my card &rarr;</button>
+                </form>
               </>
             )}
           </div>
