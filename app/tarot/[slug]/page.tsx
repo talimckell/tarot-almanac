@@ -225,7 +225,7 @@ export default async function CardPage({
       </aside>
 
       <section className="related">
-        <h2>{isMajor ? "Nearby in the Journey" : "Nearby in the Suit"}</h2>
+        <h2>Nearby in the Journey</h2>
         <div className="rel-grid">
           {related.map((c) => (
             <Link className="rel-card" href={`/tarot/${c.slug}`} key={c.slug}>
