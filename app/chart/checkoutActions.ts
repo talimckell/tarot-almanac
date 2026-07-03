@@ -1,0 +1,80 @@
+"use server";
+
+import { redirect } from "next/navigation";
+import { prisma } from "@/lib/prisma";
+import { createClient } from "@/lib/supabase/server";
+import {
+  stripe,
+  STRIPE_PRICE_ID_SUBSCRIPTION,
+  STRIPE_PRICE_ID_CHART,
+  getOrCreateStripeCustomerId,
+} from "@/lib/stripe";
+
+// Starts Stripe Checkout for the $7/mo subscription (the "Subscribe" button on
+// /chart's paywall). Redirects the browser to Stripe's hosted page; Stripe redirects
+// back to success_url/cancel_url on completion/abandon. The actual unlock happens
+// via the webhook (app/api/webhooks/stripe/route.ts), not this action.
+export async function startSubscriptionCheckout() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/sign-in?next=/chart");
+
+  const profile = await prisma.profile.upsert({
+    where: { id: user.id },
+    update: {},
+    create: { id: user.id, email: user.email ?? user.id },
+  });
+
+  const customerId = await getOrCreateStripeCustomerId(profile);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const session = await stripe.checkout.sessions.create({
+    mode: "subscription",
+    customer: customerId,
+    line_items: [{ price: STRIPE_PRICE_ID_SUBSCRIPTION, quantity: 1 }],
+    success_url: `${siteUrl}/chart?checkout=success`,
+    cancel_url: `${siteUrl}/chart?checkout=cancelled`,
+    metadata: { supabaseUserId: user.id },
+    // subscription_data.metadata: the Subscription object itself (not just the
+    // Checkout Session) needs supabaseUserId too, since customer.subscription.*
+    // events carry the Subscription, not the Session.
+    subscription_data: { metadata: { supabaseUserId: user.id } },
+  });
+
+  redirect(session.url!);
+}
+
+// Starts Stripe Checkout for the $12 one-off that unlocks the viewer's OWN natal
+// chart (the "Buy my chart" button on /chart's paywall). No chart name/birthdate
+// metadata needed — the webhook just sets Profile.ownChartPurchasedPaymentIntentId
+// for this supabaseUserId.
+export async function startOwnChartCheckout() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/sign-in?next=/chart");
+
+  const profile = await prisma.profile.upsert({
+    where: { id: user.id },
+    update: {},
+    create: { id: user.id, email: user.email ?? user.id },
+  });
+
+  const customerId = await getOrCreateStripeCustomerId(profile);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  const session = await stripe.checkout.sessions.create({
+    mode: "payment",
+    customer: customerId,
+    line_items: [{ price: STRIPE_PRICE_ID_CHART, quantity: 1 }],
+    success_url: `${siteUrl}/chart?checkout=success`,
+    cancel_url: `${siteUrl}/chart?checkout=cancelled`,
+    metadata: { kind: "own-chart", supabaseUserId: user.id },
+    payment_intent_data: { metadata: { kind: "own-chart", supabaseUserId: user.id } },
+  });
+
+  redirect(session.url!);
+}

@@ -34,7 +34,7 @@ function serverToday(): { y: number; m: number; d: number } {
 export default async function MePage({
   searchParams,
 }: {
-  searchParams: Promise<{ month?: string; view?: string }>;
+  searchParams: Promise<{ month?: string; view?: string; checkout?: string }>;
 }) {
   const supabase = await createClient();
   const {
@@ -49,7 +49,7 @@ export default async function MePage({
     include: { savedCharts: { orderBy: { createdAt: "asc" } } },
   });
 
-  const { month, view } = await searchParams;
+  const { month, view, checkout } = await searchParams;
   const nowYM = serverNowYM();
   const requestedMonth = (month && parseMonthSlug(month)) || nowYM;
 
@@ -93,6 +93,7 @@ export default async function MePage({
         today={serverToday()}
         birthday={birthday}
         view={resolvedView}
+        checkout={checkout}
       />
       <Footer />
     </>

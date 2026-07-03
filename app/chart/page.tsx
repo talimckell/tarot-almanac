@@ -17,6 +17,7 @@ import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
 import ReadCard from "./ReadCard";
+import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -26,7 +27,12 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-export default async function ChartPage() {
+export default async function ChartPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ checkout?: string }>;
+}) {
+  const { checkout } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
@@ -58,7 +64,7 @@ export default async function ChartPage() {
   const bm = profile.birthDate.getUTCMonth() + 1;
   const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-  const unlocked = profile.subscriptionStatus === "active";
+  const unlocked = profile.subscriptionStatus === "active" || !!profile.ownChartPurchasedPaymentIntentId;
   const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
   const repeat = findRepeatedMajor(chart);
@@ -104,6 +110,13 @@ export default async function ChartPage() {
           )}
         </div>
 
+        {checkout === "success" && !unlocked && (
+          <p className={styles.checkoutNote}>
+            Payment received — unlocking your chart. If it doesn&rsquo;t appear in a few seconds,{" "}
+            <Link href="/chart">refresh this page</Link>.
+          </p>
+        )}
+
         {!unlocked && (
           <div className={styles.paywall}>
             <h3>Read your whole chart</h3>
@@ -120,9 +133,11 @@ export default async function ChartPage() {
                 <div className={styles.what}>
                   Your full chart, plus charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
-                <button className={styles.buy} disabled title="Checkout isn't wired up yet">
-                  Subscribe
-                </button>
+                <form action={startSubscriptionCheckout}>
+                  <button type="submit" className={styles.buy}>
+                    Subscribe
+                  </button>
+                </form>
               </div>
               <div className={`${styles.opt} ${styles.secondary}`}>
                 <div className={styles.tagline}>Just this chart</div>
@@ -130,12 +145,13 @@ export default async function ChartPage() {
                   $12<span className={styles.per}> once</span>
                 </div>
                 <div className={styles.what}>Unlock this one natal chart to read and keep. No subscription.</div>
-                <button className={styles.buy} disabled title="Checkout isn't wired up yet">
-                  Buy my chart
-                </button>
+                <form action={startOwnChartCheckout}>
+                  <button type="submit" className={styles.buy}>
+                    Buy my chart
+                  </button>
+                </form>
               </div>
             </div>
-            <p className={styles.checkoutNote}>Checkout isn&rsquo;t wired up yet. Coming soon.</p>
           </div>
         )}
       </div>

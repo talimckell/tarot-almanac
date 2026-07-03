@@ -32,6 +32,12 @@ model Profile {
   subscriptionStatus           String?
   subscriptionCurrentPeriodEnd DateTime?
 
+  // Set when the account holder buys the $12 one-off to unlock their OWN chart
+  // without subscribing. Distinct from SavedChart.purchasedPaymentIntentId (charts
+  // made for OTHER people) since the account holder's own chart isn't a SavedChart
+  // row — it's computed live from birthDate.
+  ownChartPurchasedPaymentIntentId String?
+
   savedCharts SavedChart[]
 
   createdAt DateTime @default(now())
@@ -50,8 +56,10 @@ model SavedChart {
   name      String // the person's name, e.g. "Mom"
   birthDate DateTime // full date — the natal chart runs the daily engine on this date
 
-  purchasedPaymentIntentId String? // set if this specific chart was bought one-off ($12),
-  // null if it was covered by an active subscription at creation time
+  // Set if this specific chart was bought one-off ($12), null if it was covered by an
+  // active subscription at creation time. @unique doubles as the webhook's idempotency
+  // key (upsert on this field), so duplicate Stripe event delivery can't double-create.
+  purchasedPaymentIntentId String? @unique
 
   // /gift/[token]'s lookup key, separate from the primary id so a leaked gift link
   // can be revoked (regenerate this) without disturbing /chart/[person]'s own id.
