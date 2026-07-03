@@ -14,10 +14,19 @@
 import type { NatalChart } from "./natalChart";
 import type { DayCard } from "./almanac";
 import { getCardBySlug, getPositionReading } from "./cards";
-import bearings from "../data/bearings.json";
 
 function minorSlug(card: DayCard): string {
   return `${card.rankName.toLowerCase()}-of-${card.suit.toLowerCase()}`;
+}
+
+// The chart's Bearing readcard is a short teaser (matches the mockup's compact
+// "free" card), not the full essay — that lives on /bearing/[slug], which this
+// links out to. data/bearings.json's own `reading` field is a shorter placeholder,
+// not the real content; the actual essay is each Major's own bearing.body, so this
+// takes just its opening paragraph as the excerpt.
+function bearingExcerpt(slug: string): string | undefined {
+  const full = getCardBySlug(slug)?.bearingReading;
+  return full?.split("\n\n")[0];
 }
 
 export interface ChartReadingItem {
@@ -38,8 +47,6 @@ function majorReading(slug: string, natalKey: string, fallbackLabel: string): { 
 }
 
 export function getChartReadings(chart: NatalChart): ChartReadingItem[] {
-  const bearingData = bearings.find((b) => b.slug === chart.bearing.slug);
-
   const personalYear = majorReading(chart.personalYear.slug, "natalPersonalYear", "Sun · core self");
   const collectiveYear = majorReading(chart.collectiveYear.slug, "natalCollectiveYear", "What you inherited");
   const personalMonth = majorReading(chart.personalMonth.slug, "natalPersonalMonth", "Moon · inner life");
@@ -54,7 +61,7 @@ export function getChartReadings(chart: NatalChart): ChartReadingItem[] {
       label: "Bearing",
       name: chart.bearing.name,
       href: `/bearing/${chart.bearing.slug}`,
-      text: bearingData?.reading,
+      text: bearingExcerpt(chart.bearing.slug),
       element: chart.bearing.element,
       major: chart.bearing.major,
     },

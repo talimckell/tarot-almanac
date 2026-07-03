@@ -33,6 +33,7 @@
 .face .keywords { font-family:var(--sans); font-size:12px; letter-spacing:.04em; color:var(--label); margin-bottom:16px; }
 .face .keywords b { font-weight:400; color:var(--charcoal); }
 .face p { font-size:16px; color:var(--ink); margin-bottom:16px; }
+.face strong { font-family:var(--serif-sc); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--indigo); font-weight:500; display:block; margin:24px 0 8px; }
 .face .affirm { font-family:var(--serif); font-style:italic; font-size:18px; color:var(--indigo); border-left:2px solid var(--warm-stone); padding-left:18px; margin-top:4px; }
 .skills { padding:30px 0; border-top:1px solid var(--warm-stone); }
 .skills h2 { font-family:var(--serif); font-weight:500; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--indigo); margin-bottom:16px; }

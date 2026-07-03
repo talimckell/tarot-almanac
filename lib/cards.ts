@@ -49,6 +49,9 @@ export interface Card {
   positionReadings?: Record<string, PositionReading>; // majors only
   natalPersonalDay?: string; // minors only — the natal chart's Rising position
   natalCollectiveDay?: string; // minors only — the natal chart's "day that caught you"
+  bearingReading?: string; // majors only — the real, full Bearing essay. data/bearings.json
+  // carries a much shorter placeholder under the same shape; this field (each card's own
+  // top-level `bearing.body`) is the actual authored content.
 }
 
 interface RawCardReading {
@@ -70,6 +73,7 @@ interface RawCard {
   positionReadings?: { positions: Record<string, PositionReading> };
   natalPersonalDay?: { body: string };
   natalCollectiveDay?: { body: string };
+  bearing?: { body: string };
 }
 
 export function parseCardMeta(raw: string): CardMeta {
@@ -121,6 +125,7 @@ export function getAllCards(): Card[] {
       positionReadings: raw.positionReadings?.positions,
       natalPersonalDay: raw.natalPersonalDay?.body,
       natalCollectiveDay: raw.natalCollectiveDay?.body,
+      bearingReading: raw.bearing?.body,
     };
   });
   return cache;

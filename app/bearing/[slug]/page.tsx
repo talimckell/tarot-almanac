@@ -1,8 +1,8 @@
 // app/bearing/[slug]/page.tsx — The Tarot Almanac Bearing pages
-// One template -> 22 static pages, built from /data/bearings.json.
-// bearings.json is exported from the Bearing readings source; never hand-edit it.
-// (Its slugs here are normalized to drop the "the-" prefix, matching the MAJOR_SLUGS
-// convention already used by /bearing's index + finder — the source file is untouched.)
+// One template -> 22 static pages. Sourced from each Major's own card data
+// (content/cards/*.json), not data/bearings.json — that file's own `reading`
+// field is a much shorter placeholder; the real, full essay is each card's own
+// top-level `bearing.body` (lib/cards.ts exposes it as `bearingReading`).
 // Glyphs come from the sprite (public/major-arcana-icons.svg): #ma-0..#ma-21.
 
 import type { Metadata } from "next";
@@ -10,14 +10,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import SiteFooter from "../../components/SiteFooter";
-import bearings from "@/data/bearings.json";
-
-type Bearing = (typeof bearings)[number];
+import { getCardBySlug } from "@/lib/cards";
+import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
+import { majorGlyphId } from "@/lib/pips";
+import { renderMarkdown } from "@/lib/markdown";
 
 const SITE = "https://tarotalmanac.com";
 
 export function generateStaticParams() {
-  return bearings.map((b) => ({ slug: b.slug }));
+  return MAJOR_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -26,15 +27,15 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const b = bearings.find((x) => x.slug === slug);
-  if (!b) return {};
-  const title = `${b.name} Bearing: The Card You Carry`;
-  const description = `If your Bearing is ${b.name}, here is how you meet the world. The Bearing is the birth-fixed card of the Tarot Almanac, the one card you carry your whole life.`.slice(0, 158);
+  const card = getCardBySlug(slug);
+  if (!card || card.majorIndex === undefined) return {};
+  const title = `${card.name} Bearing: The Card You Carry`;
+  const description = `If your Bearing is ${card.name}, here is how you meet the world. The Bearing is the birth-fixed card of the Tarot Almanac, the one card you carry your whole life.`.slice(0, 158);
   return {
     title,
     description,
-    alternates: { canonical: `${SITE}/bearing/${b.slug}` },
-    openGraph: { title, description, url: `${SITE}/bearing/${b.slug}`, type: "article" },
+    alternates: { canonical: `${SITE}/bearing/${card.slug}` },
+    openGraph: { title, description, url: `${SITE}/bearing/${card.slug}`, type: "article" },
   };
 }
 
@@ -44,21 +45,23 @@ export default async function BearingPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const b = bearings.find((x) => x.slug === slug);
-  if (!b) notFound();
+  const card = getCardBySlug(slug);
+  if (!card || card.majorIndex === undefined || !card.bearingReading) notFound();
 
-  // adjacent Bearings on the wheel (wrap 0..21)
-  const prev = bearings.find((x) => x.number === (b.number + 21) % 22);
-  const next = bearings.find((x) => x.number === (b.number + 1) % 22);
+  const majorIndex = card.majorIndex;
+  const prevIndex = (majorIndex + 21) % 22;
+  const nextIndex = (majorIndex + 1) % 22;
+
+  const html = await renderMarkdown(card.bearingReading);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${b.name} Bearing`,
-    about: `${b.name} (tarot)`,
+    headline: `${card.name} Bearing`,
+    about: `${card.name} (tarot)`,
     author: { "@type": "Organization", name: "The Tarot Almanac" },
     publisher: { "@type": "Organization", name: "The Tarot Almanac" },
-    mainEntityOfPage: `${SITE}/bearing/${b.slug}`,
+    mainEntityOfPage: `${SITE}/bearing/${card.slug}`,
   };
 
   return (
@@ -68,17 +71,17 @@ export default async function BearingPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <nav className="crumb">
-        <Link href="/">Home</Link> · <Link href="/bearing">Bearing</Link> · {b.name}
+        <Link href="/">Home</Link> · <Link href="/bearing">Bearing</Link> · {card.name}
       </nav>
 
       <header className="cardhead">
-        <span className="glyph" style={{ color: `var(--${b.element})` }}>
-          <svg viewBox="0 0 46 46" width={96} height={96} aria-label={`${b.name} glyph`}>
-            <use href={`#${b.glyphId}`} />
+        <span className="glyph" style={{ color: `var(--${card.element})` }}>
+          <svg viewBox="0 0 46 46" width={96} height={96} aria-label={`${card.name} glyph`}>
+            <use href={`#${majorGlyphId(majorIndex)}`} />
           </svg>
         </span>
-        <span className="num">Bearing · {b.roman}</span>
-        <h1>{b.name}</h1>
+        <span className="num">Bearing · {card.numberLabel}</span>
+        <h1>{card.name}</h1>
         <p className="position">how you greet the world</p>
       </header>
 
@@ -93,15 +96,15 @@ export default async function BearingPage({
       </section>
 
       <section className="face gift">
-        <div className="face-head"><h2>Your Bearing is {b.name}</h2><span className="tag">{b.roman}</span></div>
-        <p>{b.reading}</p>
+        <div className="face-head"><h2>Your Bearing is {card.name}</h2><span className="tag">{card.numberLabel}</span></div>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </section>
 
       <aside className="almanac">
         <span className="eyebrow">Your Bearing in the almanac</span>
         <p>
           The Bearing is the lens the rest of your almanac is read through. The same day meets a
-          {` ${b.name}`} Bearing differently than it meets any other. It is where you begin.
+          {` ${card.name}`} Bearing differently than it meets any other. It is where you begin.
         </p>
         <p className="dates">
           <Link href="/today">See today&rsquo;s card</Link> · <Link href="/bearing">Find your Bearing</Link>
@@ -111,23 +114,23 @@ export default async function BearingPage({
       <section className="related">
         <h2>Nearby on the Wheel</h2>
         <div className="rel-grid">
-          {[prev, next].filter(Boolean).map((r) => (
-            <Link className="rel-card" href={`/bearing/${(r as Bearing).slug}`} key={(r as Bearing).slug}>
-              <span className="rel-glyph" style={{ color: `var(--${(r as Bearing).element})` }}>
+          {[prevIndex, nextIndex].map((i) => (
+            <Link className="rel-card" href={`/bearing/${MAJOR_SLUGS[i]}`} key={MAJOR_SLUGS[i]}>
+              <span className="rel-glyph" style={{ color: `var(--${getCardBySlug(MAJOR_SLUGS[i])?.element})` }}>
                 <svg viewBox="0 0 46 46" width={28} height={28}>
-                  <use href={`#${(r as Bearing).glyphId}`} />
+                  <use href={`#${majorGlyphId(i)}`} />
                 </svg>
               </span>
-              <span className="rel-num">{(r as Bearing).roman}</span>
-              <span className="rel-name">{(r as Bearing).name}</span>
+              <span className="rel-num">{getCardBySlug(MAJOR_SLUGS[i])?.numberLabel}</span>
+              <span className="rel-name">{MAJORS[i]}</span>
             </Link>
           ))}
-          <Link className="rel-card" href={`/tarot/${b.slug}`}>
-            <span className="rel-glyph" style={{ color: `var(--${b.element})` }}>
-              <svg viewBox="0 0 46 46" width={28} height={28}><use href={`#${b.glyphId}`} /></svg>
+          <Link className="rel-card" href={`/tarot/${card.slug}`}>
+            <span className="rel-glyph" style={{ color: `var(--${card.element})` }}>
+              <svg viewBox="0 0 46 46" width={28} height={28}><use href={`#${majorGlyphId(majorIndex)}`} /></svg>
             </span>
             <span className="rel-num">CARD</span>
-            <span className="rel-name">{b.name} card</span>
+            <span className="rel-name">{card.name} card</span>
           </Link>
         </div>
       </section>
