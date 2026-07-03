@@ -1,0 +1,61 @@
+// The Tarot Almanac — data model.
+// Auth itself is Supabase's (auth.users, not modeled here). Profile mirrors that user by id
+// (the Supabase UUID) so the app has somewhere to keep everything auth.users doesn't hold.
+//
+// Scoped to what unblocks accounts + /me + the giftable-chart library (build order step 4-5).
+// Sharing fields for /chart/[person] and /gift/[token] (step 6) aren't here yet — that's a
+// later migration, once those mockups are actually read.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Prisma 7: connection URLs are no longer set here. The CLI (migrate, etc.) reads them from
+// prisma.config.ts; the runtime PrismaClient gets them via a driver adapter (lib/prisma.ts).
+datasource db {
+  provider = "postgresql"
+}
+
+model Profile {
+  id    String  @id // matches Supabase auth.users.id — set on first sign-in, not generated here
+  email String  @unique
+  name  String?
+
+  // The account holder's own birthdate — full date, since the natal chart (unlike the
+  // year-excluded Bearing/personal daily track) needs birth year. lib/almanac.ts's
+  // personalYear/Month/Day functions only ever need birthMonth/birthDay from this.
+  birthDate DateTime?
+
+  // Mirrors Stripe directly rather than an enum — statuses match Stripe's own strings
+  // ("active", "canceled", "past_due", ...) so a webhook can write it through unchanged.
+  stripeCustomerId             String?   @unique
+  stripeSubscriptionId         String?   @unique
+  subscriptionStatus           String?
+  subscriptionCurrentPeriodEnd DateTime?
+
+  savedCharts SavedChart[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// A natal chart made for someone else (or yourself, separately from your own living
+// almanac) — the giftable, fixed object described in the product plan. Access to a given
+// chart comes from either an active subscription at creation time, or a one-off $12
+// purchase; purchasedPaymentIntentId is set only for the latter.
+model SavedChart {
+  id      String  @id @default(cuid())
+  ownerId String
+  owner   Profile @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  name      String // the person's name, e.g. "Mom"
+  birthDate DateTime // full date — the natal chart runs the daily engine on this date
+
+  purchasedPaymentIntentId String? // set if this specific chart was bought one-off ($12),
+  // null if it was covered by an active subscription at creation time
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
+}
