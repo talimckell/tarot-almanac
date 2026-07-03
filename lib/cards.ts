@@ -52,6 +52,8 @@ export interface Card {
   bearingReading?: string; // majors only — the real, full Bearing essay. data/bearings.json
   // carries a much shorter placeholder under the same shape; this field (each card's own
   // top-level `bearing.body`) is the actual authored content.
+  bearingLinkMap?: Record<string, string>; // majors only — resolves this essay's "#"
+  // placeholder links by exact visible text, same convention as BlogPostMeta.linkMap.
 }
 
 interface RawCardReading {
@@ -73,7 +75,7 @@ interface RawCard {
   positionReadings?: { positions: Record<string, PositionReading> };
   natalPersonalDay?: { body: string };
   natalCollectiveDay?: { body: string };
-  bearing?: { body: string };
+  bearing?: { body: string; linkMap?: Record<string, string> };
 }
 
 export function parseCardMeta(raw: string): CardMeta {
@@ -126,6 +128,7 @@ export function getAllCards(): Card[] {
       natalPersonalDay: raw.natalPersonalDay?.body,
       natalCollectiveDay: raw.natalCollectiveDay?.body,
       bearingReading: raw.bearing?.body,
+      bearingLinkMap: raw.bearing?.linkMap,
     };
   });
   return cache;

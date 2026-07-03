@@ -97,6 +97,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     majorIndex: 21, // The World
     file: "blog-05-the-tarot-natal-chart.md",
     linkMap: {
+      "here": "/blog/what-is-a-tarot-bearing",
       "its own piece": "/blog/what-is-a-tarot-bearing",
       "Build your natal chart in the Tarot Almanac →": "/chart",
     },

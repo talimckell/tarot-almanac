@@ -62,7 +62,10 @@ export default async function BearingPage({
   const hasSplit = splitAt !== -1;
   const beforeGap = hasSplit ? card.bearingReading.slice(0, splitAt + MEETS_WORLD_HEADING.length) : card.bearingReading;
   const afterGap = hasSplit ? card.bearingReading.slice(splitAt + MEETS_WORLD_HEADING.length) : "";
-  const [htmlBefore, htmlAfter] = await Promise.all([renderMarkdown(beforeGap), renderMarkdown(afterGap)]);
+  const [htmlBefore, htmlAfter] = await Promise.all([
+    renderMarkdown(beforeGap, card.bearingLinkMap),
+    renderMarkdown(afterGap, card.bearingLinkMap),
+  ]);
 
   const jsonLd = {
     "@context": "https://schema.org",
