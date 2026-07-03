@@ -224,8 +224,8 @@ export default function MeView({
               Bearing of {MAJORS[bIdx]}.
             </p>
           </div>
-          <Link className={styles.youCta} href={`/bearing/${MAJOR_SLUGS[bIdx]}`}>
-            See your Bearing
+          <Link className={styles.youCta} href="/chart">
+            Open my chart
           </Link>
         </div>
       ) : (
