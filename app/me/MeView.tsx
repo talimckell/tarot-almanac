@@ -170,7 +170,7 @@ export default function MeView({
         {!profile.subscribed && (
           <>
             {" "}
-            <Link href="/chart">Subscribe</Link> to see the rest of this month and travel to others.
+            <Link href="#subscribe">Subscribe</Link> to see the rest of this month and travel to others.
           </>
         )}
       </p>
@@ -315,7 +315,7 @@ export default function MeView({
           <button type="submit" className={styles.saveBtn}>Add a chart</button>
         </form>
       ) : (
-        <div className={styles.paywall}>
+        <div className={styles.paywall} id="subscribe">
           <h3>Add a chart</h3>
           <p>Subscribe for unlimited charts, or buy this one for $12 without subscribing.</p>
           <div className={styles.options}>
