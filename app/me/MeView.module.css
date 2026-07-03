@@ -168,6 +168,16 @@
 .cell.today .cellDay {
   color: var(--indigo);
 }
+.cellLocked {
+  cursor: default;
+}
+.cellLocked .cellDay {
+  color: var(--warm-stone);
+}
+.cellLocked:hover {
+  border-color: var(--vellum);
+  background: #fbf8f2;
+}
 .legend {
   display: flex;
   gap: 18px;

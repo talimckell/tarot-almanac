@@ -50,6 +50,7 @@ export default function MeView({
   monthSlug,
   isCurrentMonth,
   nextLocked,
+  prevLocked,
   today,
   birthday,
   view,
@@ -61,6 +62,7 @@ export default function MeView({
   monthSlug: string;
   isCurrentMonth: boolean;
   nextLocked: boolean;
+  prevLocked: boolean;
   today: { y: number; m: number; d: number };
   birthday: { bm: number; bd: number } | null;
   view: "personal" | "collective";
@@ -96,19 +98,33 @@ export default function MeView({
 
       <div className={styles.monthHead}>
         <div className={styles.monthNav}>
-          <Link
-            className={styles.mnav}
-            href={`/me?month=${prevSlug}${view === "collective" ? "&view=collective" : ""}`}
-            aria-label="Previous month"
-          >
-            &lsaquo;
-          </Link>
+          {prevLocked ? (
+            <span
+              className={`${styles.mnav} ${styles.locked}`}
+              title="Subscribe to see past months."
+              aria-label="Past months require a subscription"
+            >
+              &lsaquo;
+            </span>
+          ) : (
+            <Link
+              className={styles.mnav}
+              href={`/me?month=${prevSlug}${view === "collective" ? "&view=collective" : ""}`}
+              aria-label="Previous month"
+            >
+              &lsaquo;
+            </Link>
+          )}
           <span className={styles.monthTitle}>{formatMonthLabel(month)}</span>
           {nextLocked ? (
             <span
               className={`${styles.mnav} ${styles.locked}`}
-              title={`${nextMonthLabel} opens when ${formatMonthLabel(month)} ends. Your almanac always reaches one month ahead.`}
-              aria-label={`${nextMonthLabel} is locked until ${formatMonthLabel(month)} ends`}
+              title={
+                profile.subscribed
+                  ? `${nextMonthLabel} opens when ${formatMonthLabel(month)} ends. Your almanac always reaches one month ahead.`
+                  : "Subscribe to see future months."
+              }
+              aria-label={`${nextMonthLabel} is locked${profile.subscribed ? ` until ${formatMonthLabel(month)} ends` : ""}`}
             >
               &rsaquo;
             </span>
@@ -150,6 +166,12 @@ export default function MeView({
         {view === "personal"
           ? "Your days this month, set by your birthdate."
           : "The world's days this month, the same for everyone."}
+        {!profile.subscribed && (
+          <>
+            {" "}
+            <Link href="/chart">Subscribe</Link> to see the rest of this month and travel to others.
+          </>
+        )}
       </p>
 
       <div className={styles.cal}>
@@ -161,6 +183,19 @@ export default function MeView({
         ))}
         {days.map(({ day, card }) => {
           const isToday = isCurrentMonth && day === today.d;
+          const dayLocked = !profile.subscribed && isCurrentMonth && day > today.d;
+          if (dayLocked) {
+            return (
+              <span
+                key={day}
+                className={`${styles.cell} ${styles.cellLocked}`}
+                title="Subscribe to see this day before it arrives."
+                aria-label={`Day ${day} requires a subscription`}
+              >
+                <span className={styles.cellDay}>{day}</span>
+              </span>
+            );
+          }
           return (
             <Link
               key={day}

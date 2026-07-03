@@ -64,7 +64,8 @@ export default async function ChartPage({
   const bm = profile.birthDate.getUTCMonth() + 1;
   const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-  const unlocked = profile.subscriptionStatus === "active" || !!profile.ownChartPurchasedPaymentIntentId;
+  const subscribed = profile.subscriptionStatus === "active";
+  const unlocked = subscribed || !!profile.ownChartPurchasedPaymentIntentId;
   const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
   const repeat = findRepeatedMajor(chart);
@@ -148,6 +149,29 @@ export default async function ChartPage({
                 <form action={startOwnChartCheckout}>
                   <button type="submit" className={styles.buy}>
                     Buy my chart
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {unlocked && !subscribed && (
+          <div className={styles.paywall}>
+            <h3>You&rsquo;ve unlocked this chart</h3>
+            <p>A subscription covers everything else: charts for everyone you love, monthly readings, and time-travel.</p>
+            <div className={styles.options}>
+              <div className={`${styles.opt} ${styles.primary}`}>
+                <div className={styles.tagline}>Everything, always</div>
+                <div className={styles.price}>
+                  $7<span className={styles.per}>/mo</span>
+                </div>
+                <div className={styles.what}>
+                  Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
+                </div>
+                <form action={startSubscriptionCheckout}>
+                  <button type="submit" className={styles.buy}>
+                    Subscribe
                   </button>
                 </form>
               </div>

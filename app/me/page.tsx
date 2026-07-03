@@ -8,7 +8,7 @@ import {
   type YM,
   parseMonthSlug,
   formatMonthSlug,
-  isMonthOpen,
+  isMonthOpenForViewer,
   monthIndex,
 } from "@/lib/today";
 import MeView from "./MeView";
@@ -52,10 +52,11 @@ export default async function MePage({
   const { month, view, checkout } = await searchParams;
   const nowYM = serverNowYM();
   const requestedMonth = (month && parseMonthSlug(month)) || nowYM;
+  const subscribed = profile.subscriptionStatus === "active";
 
   // No data leak: a locked month is never fetched or rendered, just bounced to
   // the current month (same discipline as /today/[date]'s per-day gate).
-  if (!isMonthOpen(requestedMonth, nowYM)) {
+  if (!isMonthOpenForViewer(requestedMonth, nowYM, subscribed)) {
     redirect("/me");
   }
 
@@ -68,8 +69,9 @@ export default async function MePage({
     ? { bm: birthDate.getUTCMonth() + 1, bd: birthDate.getUTCDate() }
     : null;
 
-  const forwardLimitIndex = monthIndex(nowYM) + 1;
+  const forwardLimitIndex = subscribed ? monthIndex(nowYM) + 1 : monthIndex(nowYM);
   const nextLocked = monthIndex(requestedMonth) >= forwardLimitIndex;
+  const prevLocked = !subscribed; // non-subscribers only ever reach the current month page
 
   return (
     <>
@@ -79,7 +81,7 @@ export default async function MePage({
           name: profile.name,
           email: profile.email,
           birthDate: birthDate ? birthDate.toISOString().slice(0, 10) : null,
-          subscribed: profile.subscriptionStatus === "active",
+          subscribed,
         }}
         savedCharts={profile.savedCharts.map((c) => ({
           id: c.id,
@@ -90,6 +92,7 @@ export default async function MePage({
         monthSlug={formatMonthSlug(requestedMonth)}
         isCurrentMonth={monthIndex(requestedMonth) === monthIndex(nowYM)}
         nextLocked={nextLocked}
+        prevLocked={prevLocked}
         today={serverToday()}
         birthday={birthday}
         view={resolvedView}

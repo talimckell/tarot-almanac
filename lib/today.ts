@@ -62,6 +62,15 @@ export function isDateOpen(target: YMD, now: YMD): boolean {
   return targetMs <= boundaryMs;
 }
 
+// Free tier: only the current month, day 1 through today. Subscribers get the full
+// structural window above (isDateOpen). This is a business decision ("we can't give
+// the almanac away for free"), not a technical constraint.
+export function isDateOpenForViewer(target: YMD, now: YMD, subscribed: boolean): boolean {
+  if (subscribed) return isDateOpen(target, now);
+  if (target.y !== now.y || target.m !== now.m) return false;
+  return target.d <= now.d;
+}
+
 // A locked target's whole month unlocks in one shot, the day the calendar rolls
 // into the month before it (that becomes the new "current month," making target's
 // month the new one-ahead). Signed-in accounts get told this date directly instead
@@ -133,6 +142,13 @@ export function addMonths(target: YM, delta: number): YM {
 // month ahead) but at month granularity, since /me pages a whole month at a time.
 export function isMonthOpen(target: YM, now: YM): boolean {
   return monthIndex(target) <= monthIndex(now) + 1;
+}
+
+// Free tier: only the current month page is viewable at all. Subscribers get the
+// full structural window above (isMonthOpen).
+export function isMonthOpenForViewer(target: YM, now: YM, subscribed: boolean): boolean {
+  if (subscribed) return isMonthOpen(target, now);
+  return monthIndex(target) === monthIndex(now);
 }
 
 export function daysInMonth(target: YM): number {

@@ -5,6 +5,7 @@ import type { Birthday } from "./today";
 export interface SignedInBirthday {
   birthday: Birthday | null; // null if signed in but hasn't added a birthday yet
   name: string | null;
+  subscribed: boolean;
 }
 
 // Null means signed out entirely — callers should fall back to the anonymous
@@ -26,5 +27,6 @@ export async function getSignedInBirthday(): Promise<SignedInBirthday | null> {
       ? { bm: profile.birthDate.getUTCMonth() + 1, bd: profile.birthDate.getUTCDate() }
       : null,
     name: profile.name,
+    subscribed: profile.subscriptionStatus === "active",
   };
 }

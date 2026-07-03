@@ -18,7 +18,7 @@ import {
 import {
   type YMD,
   type Birthday,
-  isDateOpen,
+  isDateOpenForViewer,
   monthUnlockDate,
   addDays,
   formatDateSlug,
@@ -47,14 +47,16 @@ export default function TodayView({
   birthday,
   name,
   signedIn,
+  subscribed,
 }: {
   target: YMD;
   now: YMD;
   birthday: Birthday | null;
   name?: string;
   signedIn?: boolean;
+  subscribed?: boolean;
 }) {
-  const open = isDateOpen(target, now);
+  const open = isDateOpenForViewer(target, now, !!subscribed);
   const prevSlug = formatDateSlug(addDays(target, -1));
   const nextSlug = formatDateSlug(addDays(target, 1));
   const isToday = target.y === now.y && target.m === now.m && target.d === now.d;
@@ -103,7 +105,7 @@ export default function TodayView({
             <svg className={styles.star} viewBox="0 0 56 56" fill="var(--indigo)" aria-hidden="true">
               <path d="M28 7 L32.5 23.5 L49 28 L32.5 32.5 L28 49 L23.5 32.5 L7 28 L23.5 23.5 Z" />
             </svg>
-            {signedIn ? (
+            {subscribed ? (
               <>
                 <h2>Not open yet</h2>
                 <p>
@@ -119,13 +121,16 @@ export default function TodayView({
               <>
                 <h2>Travel the year</h2>
                 <p>
-                  Today is always free. To go back and forward through the calendar,
-                  to read any date&rsquo;s cards and your own across time, keep an
-                  almanac of your own.
+                  Today&rsquo;s reading, and anything earlier this month, is always free.
+                  Subscribing lets you go back further and see what&rsquo;s ahead.
                 </p>
                 <p className={styles.gateSub}>Every date, collective and personal, permanent and yours.</p>
                 <div className={styles.gateActions}>
-                  <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
+                  {signedIn ? (
+                    <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
+                  ) : (
+                    <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
+                  )}
                   <Link href="/today" className={styles.btn}>Back to today</Link>
                 </div>
               </>

@@ -44,7 +44,14 @@ export default async function TodayPage({
   return (
     <>
       <SiteNav current="today" />
-      <TodayView target={now} now={now} birthday={birthday} name={name} signedIn={!!account} />
+      <TodayView
+        target={now}
+        now={now}
+        birthday={birthday}
+        name={name}
+        signedIn={!!account}
+        subscribed={account?.subscribed ?? false}
+      />
       <Footer />
     </>
   );
