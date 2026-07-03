@@ -5,6 +5,7 @@ import SiteNav from "../../components/SiteNav";
 import SiteFooter from "../../components/SiteFooter";
 import { parseBirthday, parseDateSlug, BIRTHDAY_COOKIE, type YMD } from "../../../lib/today";
 import { formatLongDate } from "../../../lib/almanac";
+import { getSignedInBirthday } from "../../../lib/accountBirthday";
 import TodayView from "../TodayView";
 
 // The gate depends on the request-time date, so this can never be statically cached.
@@ -41,14 +42,22 @@ export default async function TodayDatePage({
   if (!target) notFound();
 
   const { n, b } = await searchParams;
-  const cookieStore = await cookies();
-  const birthday = parseBirthday(b) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value);
+  const account = await getSignedInBirthday();
+
+  let birthday = account?.birthday ?? null;
+  let name = account ? account.name ?? undefined : n?.trim() || undefined;
+
+  if (!account) {
+    const cookieStore = await cookies();
+    birthday = parseBirthday(b) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value);
+  }
+
   const now = serverNow();
 
   return (
     <>
       <SiteNav current="today" />
-      <TodayView target={target} now={now} birthday={birthday} name={n?.trim() || undefined} />
+      <TodayView target={target} now={now} birthday={birthday} name={name} />
       <SiteFooter />
     </>
   );
