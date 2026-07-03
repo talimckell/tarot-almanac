@@ -12,9 +12,9 @@
   --indigo-mid: #2e5478;
 
   /* Element colors */
-  --fire:       #b83820;
+  --fire:       #b4371f;   /* darkened from #b83820 for 4.5:1 AA text contrast on vellum */
   --water:      #2a5c7a;
-  --air:        #9a7820;
+  --air:        #785e19;   /* darkened from #9a7820 for 4.5:1 AA text contrast on stone/vellum */
   --earth:      #3a5a38;
 
   /* Type — wired to next/font (see app/layout.tsx) */
@@ -237,10 +237,10 @@ body {
 .reveal-form { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
 .reveal-form input {
   font-family: var(--sans); font-weight: 300; font-size: 14px; color: var(--ink);
-  background: var(--stone); border: 1px solid var(--warm-stone); padding: 9px 11px; border-radius: 0;
+  background: var(--stone); border: 1px solid var(--charcoal); padding: 9px 11px; border-radius: 0;
 }
 .reveal-form input:focus { outline: none; border-color: var(--indigo); }
-.reveal-form input::placeholder { color: var(--warm-stone); }
+.reveal-form input::placeholder { color: var(--label); }
 .btn-reveal {
   font-family: var(--serif-sc); font-size: 11px; font-weight: 400; letter-spacing: .18em;
   text-transform: uppercase; color: var(--stone); background: var(--indigo);

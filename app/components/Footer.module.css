@@ -78,7 +78,7 @@
 .fcopy {
   font-family: var(--sans);
   font-size: 12px;
-  color: var(--warm-stone);
+  color: var(--label);
   letter-spacing: 0.02em;
 }
 

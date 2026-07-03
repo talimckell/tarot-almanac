@@ -141,11 +141,11 @@
   width: 260px;
   max-width: 100%;
   background: var(--stone);
-  border: 1px solid var(--warm-stone);
+  border: 1px solid var(--charcoal);
   color: var(--ink);
 }
 .captureInput::placeholder {
-  color: var(--warm-stone);
+  color: var(--label);
 }
 .captureInput:focus {
   outline: none;

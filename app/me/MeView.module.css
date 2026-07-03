@@ -39,7 +39,7 @@
   font-family: var(--serif);
   font-size: 26px;
   line-height: 1;
-  color: var(--warm-stone);
+  color: var(--label);
   text-decoration: none;
   padding: 0 4px;
 }
@@ -49,6 +49,7 @@
 .mnav.locked {
   cursor: default;
   font-size: 18px;
+  color: var(--warm-stone);
 }
 .mnav.locked:hover {
   color: var(--warm-stone);
@@ -68,8 +69,8 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--warm-stone);
-  border: 1px solid var(--warm-stone);
+  color: var(--label);
+  border: 1px solid var(--charcoal);
   padding: 4px 10px;
   text-decoration: none;
 }
@@ -113,7 +114,7 @@
   font-family: var(--serif-sc);
   font-size: 10px;
   letter-spacing: 0.1em;
-  color: var(--warm-stone);
+  color: var(--label);
   text-align: center;
   padding-bottom: 4px;
 }
@@ -358,7 +359,7 @@
 }
 .libBorn {
   font-size: 11px;
-  color: var(--warm-stone);
+  color: var(--label);
   margin-top: 7px;
 }
 
@@ -386,7 +387,7 @@
   font-family: var(--sans);
   font-size: 14px;
   padding: 10px 12px;
-  border: 1px solid var(--warm-stone);
+  border: 1px solid var(--charcoal);
   background: #fff;
   color: var(--ink);
 }
@@ -423,7 +424,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--warm-stone);
+  color: var(--label);
   background: none;
   border: none;
   text-decoration: underline;
