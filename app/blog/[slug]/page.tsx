@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import NewsletterForm from "../../components/NewsletterForm";
 import { BLOG_POSTS, getPostMeta, getPostHtml } from "../../../lib/blog";
 import styles from "./page.module.css";
 
@@ -83,10 +84,7 @@ export default async function BlogPostPage({
             <div className={styles.pcH}>New pieces, now and then</div>
             <div className={styles.pcSub}>A note when there&rsquo;s something new worth reading. No noise.</div>
           </div>
-          <div className={styles.pcForm}>
-            <input type="email" placeholder="your email" aria-label="Your email address" />
-            <button type="button">Keep me posted</button>
-          </div>
+          <NewsletterForm formClassName={styles.pcForm} />
         </div>
       </article>
 

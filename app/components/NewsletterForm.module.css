@@ -1,0 +1,11 @@
+.error {
+  font-size: 13px;
+  color: var(--fire);
+  margin-top: 8px;
+}
+
+.confirm {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--ink);
+}

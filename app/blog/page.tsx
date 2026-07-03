@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
+import NewsletterForm from "../components/NewsletterForm";
 import { BLOG_POSTS } from "../../lib/blog";
 import { ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import styles from "./page.module.css";
@@ -66,15 +67,11 @@ export default function BlogIndexPage() {
             No schedule, no noise. Just a note when there&rsquo;s a new piece
             on how the Almanac works, or something worth reading.
           </p>
-          <div className={styles.captureForm}>
-            <input
-              className={styles.captureInput}
-              type="email"
-              placeholder="your email"
-              aria-label="Your email address"
-            />
-            <button className={styles.captureBtn} type="button">Keep me posted</button>
-          </div>
+          <NewsletterForm
+            formClassName={styles.captureForm}
+            inputClassName={styles.captureInput}
+            buttonClassName={styles.captureBtn}
+          />
         </div>
       </div>
 
