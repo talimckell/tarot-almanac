@@ -99,13 +99,18 @@ export function foolBearingNote(subjectPossessive: string): string {
 
 export interface RepeatedMajor {
   majorName: string;
-  positions: string[]; // e.g. ["Bearing", "Personal Year", "Collective Day"]
+  positions: string[]; // e.g. ["Bearing", "Personal Year"]
 }
 
-// Across 22 Majors and 7 chart slots, the same Major landing in more than one
-// slot is a real, occasional coincidence — not guaranteed, unlike the Fool-Bearing
-// collapse (which is checked separately and excluded here, since that collapse is
-// systemic rather than a notable one-off pattern).
+// Only the 5 positions that are actually a Major card can "repeat" in the sense
+// of the same card landing twice. The two Day positions are Minors — a Minor's
+// underlying major index just picks its suit/element, so a match there means
+// "same element," not "the same card," and doesn't belong in this check.
+//
+// Across 22 Majors and 5 slots, the same Major landing in more than one slot is a
+// real, occasional coincidence — not guaranteed, unlike the Fool-Bearing collapse
+// (checked separately and excluded here, since that collapse is systemic rather
+// than a notable one-off pattern).
 export function findRepeatedMajor(chart: NatalChart): RepeatedMajor | null {
   if (isFoolBearing(chart)) return null;
 
@@ -115,8 +120,6 @@ export function findRepeatedMajor(chart: NatalChart): RepeatedMajor | null {
     ["Collective Year", chart.collectiveYear.major],
     ["Personal Month", chart.personalMonth.major],
     ["Collective Month", chart.collectiveMonth.major],
-    ["Personal Day", chart.personalDayMinor.major],
-    ["Collective Day", chart.collectiveDayMinor.major],
   ];
 
   const byMajor = new Map<number, string[]>();
