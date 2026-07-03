@@ -24,6 +24,10 @@
   --mono:     var(--font-jetbrains-mono), monospace;
 }
 
+/* Style rule: italics are for short accents (a headline's <em>, a single-line
+   date/tagline) — not for body copy longer than one sentence. Multi-sentence
+   paragraphs stay upright even where they were italicized before. */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -36,58 +40,8 @@ body {
   line-height: 1.65;
 }
 
-/* ── NAV ── */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  background: var(--stone);
-  border-bottom: 1px solid var(--warm-stone);
-  padding: 0 60px;
-  min-height: 58px;
-  display: flex;
-}
-.nav-in {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-brand {
-  font-family: var(--serif-sc);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  color: var(--ink);
-  text-decoration: none;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.nav-links a {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--charcoal);
-  text-decoration: none;
-  font-weight: 400;
-  transition: color 0.15s;
-}
-.nav-links a:hover { color: var(--indigo); }
-.nav-cta {
-  border: 1px solid var(--indigo);
-  color: var(--indigo) !important;
-  padding: 6px 20px;
-  letter-spacing: 0.14em !important;
-  font-size: 11px !important;
-  transition: background 0.15s, color 0.15s !important;
-}
-.nav-cta:hover {
-  background: var(--indigo);
-  color: var(--stone) !important;
-}
+/* Nav is the shared SiteNav component (app/components/SiteNav.tsx) everywhere,
+   including the homepage — no page-specific nav rules here anymore. */
 
 /* ── HERO ── */
 .hero {
@@ -126,7 +80,6 @@ body {
 .hero-sub {
   font-family: var(--serif);
   font-size: 18px;
-  font-style: italic;
   font-weight: 300;
   color: var(--charcoal);
   line-height: 1.75;
@@ -240,7 +193,6 @@ body {
 }
 .ec-prompt {
   font-family: var(--serif);
-  font-style: italic;
   font-size: 14px;
   color: var(--label);
   line-height: 1.5;
@@ -408,7 +360,6 @@ body {
 .bb-body {
   font-family: var(--serif);
   font-size: 17px;
-  font-style: italic;
   color: var(--charcoal);
   line-height: 1.75;
   margin-bottom: 32px;
@@ -454,7 +405,6 @@ body {
 }
 .bb-card-desc {
   font-family: var(--serif);
-  font-style: italic;
   font-size: 14px;
   color: var(--charcoal);
   line-height: 1.55;
@@ -465,7 +415,7 @@ body {
 .acct-eyebrow { font-family: var(--serif-sc); font-size: 10px; letter-spacing: .32em; text-transform: uppercase; color: var(--warm-stone); }
 .acct-head { font-family: var(--serif); font-weight: 300; font-size: 40px; line-height: 1.15; margin: 14px 0 0; color: var(--stone); }
 .acct-head em { font-style: italic; }
-.acct-sub { font-family: var(--serif); font-size: 19px; font-weight: 300; font-style: italic; color: var(--vellum); margin: 16px auto 0; max-width: 54ch; }
+.acct-sub { font-family: var(--serif); font-size: 19px; font-weight: 300; color: var(--vellum); margin: 16px auto 0; max-width: 54ch; }
 .acct-cols { display: flex; justify-content: center; gap: 48px; margin: 40px 0 36px; flex-wrap: wrap; text-align: left; }
 .acct-col { max-width: 240px; }
 .acct-col-h { font-family: var(--serif); font-size: 18px; color: var(--stone); }
@@ -507,8 +457,6 @@ body {
 
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */
 @media (max-width: 900px) {
-  .nav { padding: 0 24px; }
-  .nav-links { gap: 20px; }
   .hero { grid-template-columns: 1fr; }
   .hero-left { border-right: none; border-bottom: 1px solid var(--warm-stone); padding: 64px 24px 56px; }
   .hero-right { padding: 40px 24px; }
@@ -523,7 +471,6 @@ body {
   .footer { padding: 32px 24px; }
 }
 @media (max-width: 560px) {
-  .nav-links { display: none; }
   .hero-headline { font-size: 46px; }
   .props { grid-template-columns: 1fr; }
   .prop { border-right: none; border-bottom: 1px solid var(--warm-stone); }

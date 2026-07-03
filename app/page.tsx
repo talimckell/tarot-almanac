@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteNav from "./components/SiteNav";
 import TodayEntry from "./today-entry";
 
 // The eight-pointed star mark, reused in a few places.
@@ -13,17 +14,7 @@ function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: num
 export default function Home() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav"><div className="nav-in">
-        <Link className="nav-brand" href="/">THE TAROT ALMANAC</Link>
-        <div className="nav-links">
-          <Link href="/today">Today</Link>
-          <Link href="/tarot">Cards</Link>
-          <Link href="/bearing">Bearing</Link>
-          <Link href="/how-it-works">How it works</Link>
-          <Link href="/me" className="nav-cta">Make your almanac</Link>
-        </div>
-      </div></nav>
+      <SiteNav ctaLabel="Make your almanac" />
 
       {/* HERO */}
       <section className="hero">
@@ -115,10 +106,10 @@ export default function Home() {
               <path d="M28 7 L32.5 23.5 L49 28 L32.5 32.5 L28 49 L23.5 32.5 L7 28 L23.5 23.5 Z" />
             </svg>
           </span>
-          <h3 className="prop-head">Every date, and the people you love</h3>
+          <h3 className="prop-head">Your almanac, and the people you love</h3>
           <p className="prop-body">
-            Keep your own days, go back and forward through any date, and read the natal
-            chart of anyone who matters to you.
+            Keep your own days, walk back through all of them and a month ahead, read your
+            natal chart, and make a chart for anyone you love.
           </p>
           <span className="prop-go">Make your almanac &rarr;</span>
         </Link>
@@ -172,16 +163,16 @@ export default function Home() {
       <section className="acct-band">
         <span className="acct-eyebrow">YOUR ALMANAC</span>
         <StarMark size={20} style={{ display: "block", margin: "10px auto 0" }} />
-        <h2 className="acct-head">Today is free.<br />Keep it, and <em>see who you love, in cards.</em></h2>
+        <h2 className="acct-head">Today is free.<br /><em>An account opens the rest.</em></h2>
         <p className="acct-sub">
-          Make an account and the whole of time opens: every day behind you and ahead of
-          you, your natal chart, and the natal charts of the people you want to keep
-          beside your own.
+          Your daily card is always yours, no account needed. Make one and your almanac
+          fills in: every day behind you, a month ahead, your natal chart, and the charts
+          of the people you love.
         </p>
         <div className="acct-cols">
           <div className="acct-col">
-            <div className="acct-col-h">Every date</div>
-            <div className="acct-col-b">The day you were born. The day that mattered. Any day you want to walk toward with a question.</div>
+            <div className="acct-col-h">Your whole almanac</div>
+            <div className="acct-col-b">Every day you&rsquo;ve already lived, open to walk back through. And always a month ahead, unfolding as you go.</div>
           </div>
           <div className="acct-col">
             <div className="acct-col-h">Your natal chart</div>
@@ -189,7 +180,7 @@ export default function Home() {
           </div>
           <div className="acct-col">
             <div className="acct-col-h">The people you love</div>
-            <div className="acct-col-b">Pull up the natal chart of anyone who matters to you, and see the cards they came in under.</div>
+            <div className="acct-col-b">Make a chart for anyone who matters to you, and see the cards they came in under. Yours to keep.</div>
           </div>
         </div>
         <Link href="/me" className="acct-cta">Make your almanac</Link>

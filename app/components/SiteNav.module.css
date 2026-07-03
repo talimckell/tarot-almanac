@@ -40,3 +40,21 @@
   color: var(--indigo) !important;
   border-bottom: 1px solid var(--indigo);
 }
+.cta {
+  border: 1px solid var(--indigo);
+  color: var(--indigo) !important;
+  padding: 6px 20px;
+  letter-spacing: 0.14em !important;
+  font-size: 11px !important;
+  transition: background 0.15s, color 0.15s !important;
+}
+.cta:hover {
+  background: var(--indigo);
+  color: var(--stone) !important;
+}
+
+@media (max-width: 560px) {
+  .links {
+    display: none;
+  }
+}
