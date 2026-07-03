@@ -1,0 +1,321 @@
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+.head {
+  text-align: center;
+  padding: 50px 0 10px;
+}
+.eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.head h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 46px;
+  margin: 10px 0 6px;
+}
+.bornline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--charcoal);
+}
+.gapNote {
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--charcoal);
+  margin: 30px auto 0;
+  max-width: 470px;
+}
+.readings {
+  margin-top: 42px;
+}
+.readcard {
+  display: flex;
+  gap: 20px;
+  border: 1px solid var(--warm-stone);
+  padding: 24px 26px;
+  margin-bottom: 24px;
+}
+.bearingcard {
+  background: var(--indigo);
+  border-color: var(--indigo);
+}
+.bearingcard .rcIcon svg {
+  color: var(--stone);
+}
+.bearingcard .rcSide {
+  color: var(--warm-stone);
+}
+.bearingcard .rcName,
+.bearingcard .rcText {
+  color: var(--stone);
+}
+.rcIcon {
+  flex-shrink: 0;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+.rcBody {
+  flex: 1;
+}
+.rcHead {
+  margin-bottom: 4px;
+}
+.rcSide {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.rcName {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.rcText {
+  font-size: 16px;
+}
+.rcMore {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.readcard:not(.bearingcard) .rcMore {
+  color: var(--indigo);
+}
+.teaser {
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--charcoal);
+  margin: 26px auto 0;
+  max-width: 480px;
+}
+.paywall {
+  border: 1px solid var(--indigo);
+  background: #fbf8f2;
+  padding: 36px;
+  text-align: center;
+  margin: 34px 0 0;
+}
+.paywall h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.paywall p {
+  font-size: 15px;
+  color: var(--charcoal);
+  max-width: 440px;
+  margin: 0 auto 22px;
+}
+.options {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.opt {
+  border: 1px solid var(--warm-stone);
+  background: var(--stone);
+  padding: 22px 26px;
+  width: 240px;
+}
+.opt.primary {
+  border-color: var(--indigo);
+  border-width: 2px;
+}
+.opt .price {
+  font-family: var(--serif);
+  font-size: 34px;
+}
+.opt .per {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--label);
+}
+.opt .what {
+  font-size: 13px;
+  color: var(--charcoal);
+  margin: 10px 0 16px;
+  min-height: 54px;
+}
+.opt .tagline {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 8px;
+  height: 14px;
+}
+.buy {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 11px 0;
+  width: 100%;
+  border: none;
+}
+.opt.primary .buy {
+  background: var(--indigo);
+  color: var(--stone);
+}
+.opt.secondary .buy {
+  background: var(--stone);
+  color: var(--indigo);
+  border: 1px solid var(--indigo);
+}
+.buy:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.checkoutNote {
+  font-size: 12px;
+  color: var(--warm-stone);
+  margin-top: 18px;
+}
+.addBirthday {
+  text-align: center;
+  padding: 80px 28px;
+}
+.addBirthday h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.addBirthday a {
+  color: var(--indigo);
+}
+
+/* /chart/[id] and /gift/[token] shared bits */
+.crumb {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+  padding: 30px 0 0;
+}
+.crumb a {
+  color: var(--label);
+  text-decoration: none;
+}
+.ownerActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.ownerActions a,
+.ownerActions button {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0 0 1px;
+  cursor: pointer;
+}
+.giftFrom {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--label);
+  margin-top: 10px;
+}
+.funnel {
+  border: 1px solid var(--indigo);
+  background: #fbf8f2;
+  padding: 36px;
+  text-align: center;
+  margin-top: 34px;
+}
+.funnel h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+.funnel p {
+  font-size: 16px;
+  color: var(--charcoal);
+  max-width: 460px;
+  margin: 0 auto 20px;
+}
+.funnelCta {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--indigo);
+  color: var(--stone);
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.funnelSub {
+  font-size: 13px !important;
+  color: var(--warm-stone) !important;
+  margin-top: 14px !important;
+}
+
+/* /gift/[token]'s own minimal nav (no app nav — this page is for signed-out recipients) */
+.giftNav {
+  border-bottom: 1px solid var(--warm-stone);
+  padding: 14px 0;
+}
+.giftNavIn {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navBrand {
+  font-family: var(--serif-sc);
+  font-size: 18px;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.giftNavLinks {
+  display: flex;
+  gap: 24px;
+}
+.giftNavLinks a {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  text-decoration: none;
+}

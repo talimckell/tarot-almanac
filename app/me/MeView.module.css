@@ -325,6 +325,9 @@
   font-size: 15px;
   color: var(--label);
 }
+.shelfEmpty a {
+  color: var(--indigo);
+}
 .shelf {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -338,6 +341,11 @@
   border: 1px solid var(--warm-stone);
   background: var(--stone);
   padding: 22px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.libcard:hover {
+  border-color: var(--indigo);
 }
 .libName {
   font-family: var(--serif);

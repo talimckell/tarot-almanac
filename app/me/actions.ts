@@ -32,6 +32,36 @@ export async function updateProfile(formData: FormData) {
   revalidatePath("/me");
 }
 
+// Charts are included with an active subscription (per the pricing plan — the $12
+// one-off path needs real Stripe Checkout, not built yet, so this only handles the
+// subscription case for now). Re-checks the subscription server-side rather than
+// trusting that the form was only ever rendered to a subscriber.
+export async function createChart(formData: FormData) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/sign-in?next=/me");
+
+  const profile = await prisma.profile.findUnique({ where: { id: user.id } });
+  if (profile?.subscriptionStatus !== "active") return;
+
+  const name = (formData.get("name") as string | null)?.trim();
+  const birthdayRaw = (formData.get("birthday") as string | null)?.trim() || "";
+  const parsed = parseDateSlug(birthdayRaw);
+  if (!name || !parsed) return;
+
+  await prisma.savedChart.create({
+    data: {
+      ownerId: user.id,
+      name,
+      birthDate: new Date(Date.UTC(parsed.y, parsed.m - 1, parsed.d)),
+    },
+  });
+
+  revalidatePath("/me");
+}
+
 export async function signOutAction() {
   const supabase = await createClient();
   await supabase.auth.signOut();

@@ -79,6 +79,7 @@ export default async function MePage({
           name: profile.name,
           email: profile.email,
           birthDate: birthDate ? birthDate.toISOString().slice(0, 10) : null,
+          subscribed: profile.subscriptionStatus === "active",
         }}
         savedCharts={profile.savedCharts.map((c) => ({
           id: c.id,

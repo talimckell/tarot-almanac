@@ -2,9 +2,8 @@
 // Auth itself is Supabase's (auth.users, not modeled here). Profile mirrors that user by id
 // (the Supabase UUID) so the app has somewhere to keep everything auth.users doesn't hold.
 //
-// Scoped to what unblocks accounts + /me + the giftable-chart library (build order step 4-5).
-// Sharing fields for /chart/[person] and /gift/[token] (step 6) aren't here yet — that's a
-// later migration, once those mockups are actually read.
+// Scoped to what unblocks accounts + /me + the giftable-chart library (build order step 4-5),
+// plus the sharing fields for /chart/[person] and /gift/[token] (step 6).
 
 generator client {
   provider = "prisma-client-js"
@@ -53,6 +52,10 @@ model SavedChart {
 
   purchasedPaymentIntentId String? // set if this specific chart was bought one-off ($12),
   // null if it was covered by an active subscription at creation time
+
+  // /gift/[token]'s lookup key, separate from the primary id so a leaked gift link
+  // can be revoked (regenerate this) without disturbing /chart/[person]'s own id.
+  shareToken String @unique @default(cuid())
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

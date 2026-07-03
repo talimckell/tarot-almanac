@@ -20,7 +20,7 @@ import {
   formatDateSlug,
 } from "@/lib/today";
 import { suitGlyphId, majorGlyphId } from "@/lib/pips";
-import { updateProfile, signOutAction } from "./actions";
+import { updateProfile, createChart, signOutAction } from "./actions";
 import styles from "./MeView.module.css";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
@@ -33,6 +33,7 @@ interface Profile {
   name: string | null;
   email: string;
   birthDate: string | null; // "YYYY-MM-DD"
+  subscribed: boolean;
 }
 
 interface SavedChart {
@@ -242,19 +243,31 @@ export default function MeView({
           {savedCharts.length === 0 ? "no charts yet" : `${savedCharts.length} chart${savedCharts.length === 1 ? "" : "s"}`}
         </span>
       </div>
-      {savedCharts.length === 0 ? (
-        <p className={styles.shelfEmpty}>
-          Charts you make for people you love will live here. Chart-making is coming soon.
-        </p>
-      ) : (
+      {savedCharts.length === 0 && (
+        <p className={styles.shelfEmpty}>Charts you make for people you love will live here.</p>
+      )}
+      {savedCharts.length > 0 && (
         <div className={styles.shelf}>
           {savedCharts.map((c) => (
-            <div className={styles.libcard} key={c.id}>
+            <Link className={styles.libcard} href={`/chart/${c.id}`} key={c.id}>
               <div className={styles.libName}>{c.name}</div>
               <div className={styles.libBorn}>{c.birthDate}</div>
-            </div>
+            </Link>
           ))}
         </div>
+      )}
+      {profile.subscribed ? (
+        <form className={styles.detailsForm} action={createChart}>
+          <label className={styles.fieldLabel} htmlFor="chartName">Name</label>
+          <input id="chartName" name="name" type="text" className={styles.fieldInput} placeholder="Their name" required />
+          <label className={styles.fieldLabel} htmlFor="chartBirthday">Birthday</label>
+          <input id="chartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+          <button type="submit" className={styles.saveBtn}>Add a chart</button>
+        </form>
+      ) : (
+        <p className={styles.shelfEmpty}>
+          Charts are included with a subscription. <Link href="/chart">See what a subscription unlocks</Link>.
+        </p>
       )}
 
       <div className={styles.secHead} id="your-details">
