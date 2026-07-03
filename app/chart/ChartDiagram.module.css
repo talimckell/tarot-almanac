@@ -17,6 +17,14 @@
 .chartframe {
   position: relative;
 }
+/* Wraps just the three depth rows, separate from .bearing below it. The
+   channel line's top/bottom are percentages of this box specifically, so
+   on mobile (where .bearing drops into normal flow beneath the rows) the
+   line still stops at the last row instead of stretching down into the
+   badge. */
+.rowsWrap {
+  position: relative;
+}
 .channelLine {
   position: absolute;
   left: calc(64px + (100% - 64px) / 2);

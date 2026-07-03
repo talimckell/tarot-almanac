@@ -53,8 +53,43 @@
   color: var(--stone) !important;
 }
 
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 4px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.mobileMenu {
+  display: none;
+}
+
 @media (max-width: 560px) {
   .links {
     display: none;
+  }
+  .menuBtn {
+    display: flex;
+  }
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--warm-stone);
+    background: var(--stone);
+  }
+  .mobileMenu a {
+    font-family: var(--serif-sc);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    padding: 16px 28px;
+    border-bottom: 1px solid var(--vellum);
+  }
+  .mobileMenu a.current {
+    color: var(--indigo);
+    border-bottom: 1px solid var(--vellum);
   }
 }

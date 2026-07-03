@@ -96,27 +96,29 @@ export default function ChartDiagram({
         <div className={styles.colhead}>The World</div>
       </div>
       <div className={styles.chartframe}>
-        <div className={styles.channelLine} />
+        <div className={styles.rowsWrap}>
+          <div className={styles.channelLine} />
 
-        <div className={styles.depthrow}>
-          <div className={styles.rowlabel}>Year</div>
-          <MajorCell pos={chart.personalYear} poslabel="sun · core self" unlocked={unlocked} />
-          <div />
-          <MajorCell pos={chart.collectiveYear} poslabel={`what ${subj} inherited`} unlocked={unlocked} />
-        </div>
+          <div className={styles.depthrow}>
+            <div className={styles.rowlabel}>Year</div>
+            <MajorCell pos={chart.personalYear} poslabel="sun · core self" unlocked={unlocked} />
+            <div />
+            <MajorCell pos={chart.collectiveYear} poslabel={`what ${subj} inherited`} unlocked={unlocked} />
+          </div>
 
-        <div className={styles.depthrow}>
-          <div className={styles.rowlabel}>Month</div>
-          <MajorCell pos={chart.personalMonth} poslabel="moon · inner life" unlocked={unlocked} />
-          <div />
-          <MajorCell pos={chart.collectiveMonth} poslabel={`the climate ${subj} formed in`} unlocked={unlocked} />
-        </div>
+          <div className={styles.depthrow}>
+            <div className={styles.rowlabel}>Month</div>
+            <MajorCell pos={chart.personalMonth} poslabel="moon · inner life" unlocked={unlocked} />
+            <div />
+            <MajorCell pos={chart.collectiveMonth} poslabel={`the climate ${subj} formed in`} unlocked={unlocked} />
+          </div>
 
-        <div className={styles.depthrow}>
-          <div className={styles.rowlabel}>Day</div>
-          <MinorCell card={chart.personalDayMinor} poslabel={`rising · how ${subj} meet a room`} unlocked={unlocked} />
-          <div />
-          <MinorCell card={chart.collectiveDayMinor} poslabel={`the day that caught ${obj}`} unlocked={unlocked} />
+          <div className={styles.depthrow}>
+            <div className={styles.rowlabel}>Day</div>
+            <MinorCell card={chart.personalDayMinor} poslabel={`rising · how ${subj} meet a room`} unlocked={unlocked} />
+            <div />
+            <MinorCell card={chart.collectiveDayMinor} poslabel={`the day that caught ${obj}`} unlocked={unlocked} />
+          </div>
         </div>
 
         <div className={styles.bearing}>
