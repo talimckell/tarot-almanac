@@ -7,10 +7,9 @@ import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
-import { getPersonalReading } from "@/lib/personalReadings";
-import bearings from "@/data/bearings.json";
+import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
-import { majorGlyphId } from "@/lib/pips";
+import ReadCard from "./ReadCard";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -53,9 +52,8 @@ export default async function ChartPage() {
   const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
   const unlocked = profile.subscriptionStatus === "active";
-
-  const bearingReading = bearings.find((b) => b.slug === chart.bearing.slug);
-  const dayReading = getPersonalReading(chart.personalDayMinor);
+  const readings = getChartReadings(chart, false);
+  const [bearingReading, ...otherReadings] = readings;
 
   return (
     <>
@@ -76,39 +74,14 @@ export default async function ChartPage() {
         </p>
 
         <div className={styles.readings}>
-          <div className={`${styles.readcard} ${styles.bearingcard}`}>
-            <div className={styles.rcIcon}>
-              <svg width="40" height="40" aria-hidden="true">
-                <use href={`#${majorGlyphId(chart.bearing.major)}`} />
-              </svg>
-            </div>
-            <div className={styles.rcBody}>
-              <div className={styles.rcHead}>
-                <span className={styles.rcSide}>Your Bearing · free</span>
-              </div>
-              <div className={styles.rcName}>{chart.bearing.name}</div>
-              {bearingReading && <p className={styles.rcText}>{bearingReading.reading}</p>}
-              <Link className={styles.rcMore} href={`/bearing/${chart.bearing.slug}`}>
-                Read the full Bearing of {chart.bearing.name} &rarr;
-              </Link>
-            </div>
-          </div>
+          <ReadCard
+            item={bearingReading}
+            featured
+            linkText={`Read the full Bearing of ${chart.bearing.name} →`}
+          />
 
           {unlocked ? (
-            <div className={styles.readcard}>
-              <div className={styles.rcIcon}>
-                <svg width="40" height="40" aria-hidden="true">
-                  <use href={`#${majorGlyphId(chart.collectiveDayMajor.major)}`} />
-                </svg>
-              </div>
-              <div className={styles.rcBody}>
-                <div className={styles.rcHead}>
-                  <span className={styles.rcSide}>Rising · how you meet a room</span>
-                </div>
-                <div className={styles.rcName}>{chart.personalDayMinor.minorName}</div>
-                {dayReading && <p className={styles.rcText}>{dayReading}</p>}
-              </div>
-            </div>
+            otherReadings.map((item) => <ReadCard key={item.key} item={item} />)
           ) : (
             <>
               <LockedPositionsGrid chart={chart} they={false} heading="The other six positions of your chart" />

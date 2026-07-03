@@ -6,9 +6,9 @@ import { prisma } from "@/lib/prisma";
 import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { formatDateSlug } from "@/lib/today";
-import bearings from "@/data/bearings.json";
+import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "../../chart/ChartDiagram";
-import { majorGlyphId } from "@/lib/pips";
+import ReadCard from "../../chart/ReadCard";
 import styles from "../../chart/page.module.css";
 
 export async function generateMetadata({
@@ -41,7 +41,7 @@ export default async function GiftPage({
   const bd = saved.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
 
-  const bearingReading = bearings.find((b) => b.slug === chart.bearing.slug);
+  const [bearingReading] = getChartReadings(chart, true);
   const steps = bearingStepsWord(chart.bearing.major);
   const giverName = saved.owner.name ?? saved.owner.email;
   const birthdaySlug = formatDateSlug({ y: by, m: bm, d: bd });
@@ -75,21 +75,7 @@ export default async function GiftPage({
         </p>
 
         <div className={styles.readings}>
-          <div className={`${styles.readcard} ${styles.bearingcard}`}>
-            <div className={styles.rcIcon}>
-              <svg width="40" height="40" aria-hidden="true">
-                <use href={`#${majorGlyphId(chart.bearing.major)}`} />
-              </svg>
-            </div>
-            <div className={styles.rcBody}>
-              <div className={styles.rcHead}>
-                <span className={styles.rcSide}>{saved.name}&rsquo;s Bearing &middot; free</span>
-              </div>
-              <div className={styles.rcName}>{chart.bearing.name}</div>
-              {bearingReading && <p className={styles.rcText}>{bearingReading.reading}</p>}
-            </div>
-          </div>
-
+          <ReadCard item={bearingReading} featured />
           <LockedPositionsGrid chart={chart} they heading={`${saved.name}'s six positions`} />
         </div>
 

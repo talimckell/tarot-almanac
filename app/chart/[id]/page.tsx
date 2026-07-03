@@ -7,10 +7,9 @@ import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
-import { getPersonalReading } from "@/lib/personalReadings";
-import bearings from "@/data/bearings.json";
+import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram from "../ChartDiagram";
-import { majorGlyphId } from "@/lib/pips";
+import ReadCard from "../ReadCard";
 import { removeChart } from "./actions";
 import styles from "../page.module.css";
 
@@ -50,9 +49,8 @@ export default async function ChartPersonPage({
   const bm = saved.birthDate.getUTCMonth() + 1;
   const bd = saved.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-
-  const bearingReading = bearings.find((b) => b.slug === chart.bearing.slug);
-  const dayReading = getPersonalReading(chart.personalDayMinor);
+  const readings = getChartReadings(chart, true);
+  const [bearingReading, ...otherReadings] = readings;
   const steps = bearingStepsWord(chart.bearing.major);
 
   return (
@@ -85,35 +83,10 @@ export default async function ChartPersonPage({
         </p>
 
         <div className={styles.readings}>
-          <div className={`${styles.readcard} ${styles.bearingcard}`}>
-            <div className={styles.rcIcon}>
-              <svg width="40" height="40" aria-hidden="true">
-                <use href={`#${majorGlyphId(chart.bearing.major)}`} />
-              </svg>
-            </div>
-            <div className={styles.rcBody}>
-              <div className={styles.rcHead}>
-                <span className={styles.rcSide}>{saved.name}&rsquo;s Bearing &middot; free</span>
-              </div>
-              <div className={styles.rcName}>{chart.bearing.name}</div>
-              {bearingReading && <p className={styles.rcText}>{bearingReading.reading}</p>}
-            </div>
-          </div>
-
-          <div className={styles.readcard}>
-            <div className={styles.rcIcon}>
-              <svg width="40" height="40" aria-hidden="true">
-                <use href={`#${majorGlyphId(chart.collectiveDayMajor.major)}`} />
-              </svg>
-            </div>
-            <div className={styles.rcBody}>
-              <div className={styles.rcHead}>
-                <span className={styles.rcSide}>Rising &middot; how {saved.name} meets a room</span>
-              </div>
-              <div className={styles.rcName}>{chart.personalDayMinor.minorName}</div>
-              {dayReading && <p className={styles.rcText}>{dayReading}</p>}
-            </div>
-          </div>
+          <ReadCard item={bearingReading} featured />
+          {otherReadings.map((item) => (
+            <ReadCard key={item.key} item={item} />
+          ))}
         </div>
 
         <p className={styles.gapNote}>

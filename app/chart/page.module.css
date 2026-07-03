@@ -66,6 +66,17 @@
   justify-content: center;
   padding-top: 4px;
 }
+.rcPips {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+.rcPiprow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
 .rcBody {
   flex: 1;
 }
