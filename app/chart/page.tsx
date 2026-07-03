@@ -118,7 +118,7 @@ export default async function ChartPage() {
                   $7<span className={styles.per}>/mo</span>
                 </div>
                 <div className={styles.what}>
-                  Your full chart, plus charts for everyone you love, monthly readings, and time-travel through the year.
+                  Your full chart, plus charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
                 <button className={styles.buy} disabled title="Checkout isn't wired up yet">
                   Subscribe
