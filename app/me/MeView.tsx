@@ -21,6 +21,7 @@ import {
 } from "@/lib/today";
 import { suitGlyphId, majorGlyphId } from "@/lib/pips";
 import { updateProfile, createChart, createGiftChartCheckout, signOutAction } from "./actions";
+import { startSubscriptionCheckout } from "../chart/checkoutActions";
 import DeleteAccountForm from "./DeleteAccountForm";
 import styles from "./MeView.module.css";
 
@@ -314,23 +315,46 @@ export default function MeView({
           <button type="submit" className={styles.saveBtn}>Add a chart</button>
         </form>
       ) : (
-        <>
-          <p className={styles.shelfEmpty}>
-            Charts are included with a subscription, or buy one for $12 without subscribing.{" "}
-            <Link href="/chart">See what a subscription unlocks</Link>.
-          </p>
-          <form className={styles.detailsForm} action={createGiftChartCheckout}>
-            <div className={styles.fieldGroup}>
-              <label className={styles.fieldLabel} htmlFor="giftChartName">Name</label>
-              <input id="giftChartName" name="name" type="text" className={styles.fieldInput} placeholder="Their name" required />
+        <div className={styles.paywall}>
+          <h3>Add a chart</h3>
+          <p>Subscribe for unlimited charts, or buy this one for $12 without subscribing.</p>
+          <div className={styles.options}>
+            <div className={`${styles.opt} ${styles.primary}`}>
+              <div className={styles.tagline}>Everything, always</div>
+              <div className={styles.price}>
+                $7<span className={styles.per}>/mo</span>
+              </div>
+              <div className={styles.what}>
+                Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
+              </div>
+              <form action={startSubscriptionCheckout}>
+                <button type="submit" className={styles.buy}>
+                  Subscribe
+                </button>
+              </form>
             </div>
-            <div className={styles.fieldGroup}>
-              <label className={styles.fieldLabel} htmlFor="giftChartBirthday">Birthday</label>
-              <input id="giftChartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+            <div className={`${styles.opt} ${styles.secondary}`}>
+              <div className={styles.tagline}>Just this chart</div>
+              <div className={styles.price}>
+                $12<span className={styles.per}> once</span>
+              </div>
+              <div className={styles.what}>Unlock a chart for one person to read and keep. No subscription.</div>
+              <form className={styles.optForm} action={createGiftChartCheckout}>
+                <div className={styles.fieldGroup}>
+                  <label className={styles.fieldLabel} htmlFor="giftChartName">Name</label>
+                  <input id="giftChartName" name="name" type="text" className={styles.fieldInput} placeholder="Their name" required />
+                </div>
+                <div className={styles.fieldGroup}>
+                  <label className={styles.fieldLabel} htmlFor="giftChartBirthday">Birthday</label>
+                  <input id="giftChartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+                </div>
+                <button type="submit" className={styles.buy}>
+                  Buy this chart
+                </button>
+              </form>
             </div>
-            <button type="submit" className={styles.saveBtn}>Buy this chart — $12</button>
-          </form>
-        </>
+          </div>
+        </div>
       )}
 
       <div className={styles.secHead} id="your-details">

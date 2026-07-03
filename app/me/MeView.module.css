@@ -416,6 +416,98 @@
   background: var(--indigo-mid);
 }
 
+/* subscribe/one-off paywall (mirrors /chart's paywall boxes) */
+.paywall {
+  border: 1px solid var(--indigo);
+  background: #fbf8f2;
+  padding: 36px;
+  text-align: center;
+  margin: 30px 0 0;
+}
+.paywall h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.paywall p {
+  font-size: 15px;
+  color: var(--charcoal);
+  max-width: 440px;
+  margin: 0 auto 22px;
+}
+.options {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.opt {
+  border: 1px solid var(--warm-stone);
+  background: var(--stone);
+  padding: 22px 26px;
+  width: 260px;
+}
+.opt.primary {
+  border-color: var(--indigo);
+  border-width: 2px;
+}
+.opt .price {
+  font-family: var(--serif);
+  font-size: 34px;
+}
+.opt .per {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--label);
+}
+.opt .what {
+  font-size: 13px;
+  color: var(--charcoal);
+  margin: 10px 0 16px;
+  min-height: 54px;
+}
+.opt .tagline {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 8px;
+  height: 14px;
+}
+.optForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+.optForm .fieldGroup {
+  width: 100%;
+}
+.optForm .fieldInput {
+  width: 100%;
+}
+.buy {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 11px 0;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.opt.primary .buy {
+  background: var(--indigo);
+  color: var(--stone);
+}
+.opt.secondary .buy {
+  background: var(--stone);
+  color: var(--indigo);
+  border: 1px solid var(--indigo);
+}
+
 .tiny {
   margin-top: 26px;
   padding-top: 20px;
