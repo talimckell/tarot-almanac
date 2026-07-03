@@ -65,6 +65,59 @@ export function parseDateSlug(slug: string): YMD | null {
   return { y, m, d };
 }
 
+// ===== Month helpers (for /me's calendar) =====
+export interface YM {
+  y: number;
+  m: number; // 1-indexed
+}
+
+export function parseMonthSlug(slug: string): YM | null {
+  const match = /^(\d{4})-(\d{2})$/.exec(slug);
+  if (!match) return null;
+  const y = Number(match[1]);
+  const m = Number(match[2]);
+  if (m < 1 || m > 12) return null;
+  return { y, m };
+}
+
+export function formatMonthSlug(target: YM): string {
+  return `${target.y}-${String(target.m).padStart(2, "0")}`;
+}
+
+// A single comparable integer so months can be ordered/diffed without re-deriving
+// the day-boundary math isDateOpen uses.
+export function monthIndex(target: YM): number {
+  return target.y * 12 + (target.m - 1);
+}
+
+export function addMonths(target: YM, delta: number): YM {
+  const idx = monthIndex(target) + delta;
+  return { y: Math.floor(idx / 12), m: (idx % 12) + 1 };
+}
+
+// Same product rule as isDateOpen (past fully open, future capped at current + one
+// month ahead) but at month granularity, since /me pages a whole month at a time.
+export function isMonthOpen(target: YM, now: YM): boolean {
+  return monthIndex(target) <= monthIndex(now) + 1;
+}
+
+export function daysInMonth(target: YM): number {
+  return new Date(Date.UTC(target.y, target.m, 0)).getUTCDate();
+}
+
+// 0 (Sunday) .. 6 (Saturday), for laying out the leading blank calendar cells.
+export function firstWeekday(target: YM): number {
+  return new Date(Date.UTC(target.y, target.m - 1, 1)).getUTCDay();
+}
+
+export function formatMonthLabel(target: YM): string {
+  const MONTH_NAMES = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+  return `${MONTH_NAMES[target.m - 1]} ${target.y}`;
+}
+
 // ===== Between-you synthesis =====
 // Fixed template copy from today-new-layout.html, ported verbatim — not new prose.
 const HARMONY: Record<Element, Element[]> = {

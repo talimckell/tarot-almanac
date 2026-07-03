@@ -1,13 +1,14 @@
 import Link from "next/link";
 import styles from "./SiteNav.module.css";
 
-export type SiteSection = "today" | "tarot" | "bearing" | "how-it-works";
+export type SiteSection = "today" | "tarot" | "bearing" | "how-it-works" | "me";
 
 const LINKS: { href: string; label: string; section: SiteSection }[] = [
   { href: "/today", label: "Today", section: "today" },
   { href: "/tarot", label: "Cards", section: "tarot" },
   { href: "/bearing", label: "Bearing", section: "bearing" },
   { href: "/how-it-works", label: "How it works", section: "how-it-works" },
+  { href: "/me", label: "My Almanac", section: "me" },
 ];
 
 // The nav shared by inner content pages (tarot, bearing, how-it-works, blog).
