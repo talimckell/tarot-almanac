@@ -77,7 +77,7 @@ export default async function ChartPage() {
 
         <p className={styles.gapNote}>
           {bearingStepsWord(chart.bearing.major).charAt(0).toUpperCase() + bearingStepsWord(chart.bearing.major).slice(1)} steps
-          separate you from the world at every layer. That distance, the {chart.bearing.name}, is your Bearing. It never
+          separate you from the world at every layer. That distance, {chart.bearing.name}, is your Bearing. It never
           changes, and it&rsquo;s yours to keep.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote("your")}</p>}

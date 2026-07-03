@@ -72,12 +72,16 @@ export default async function GiftPage({
 
         <p className={styles.gapNote}>
           {steps.charAt(0).toUpperCase() + steps.slice(1)} steps separate {saved.name} from the world at every layer.
-          That distance, the {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
+          That distance, {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote(`${saved.name}'s`)}</p>}
 
         <div className={styles.readings}>
-          <ReadCard item={bearingReading} featured />
+          <ReadCard
+            item={bearingReading}
+            featured
+            linkText={`Read the full Bearing of ${chart.bearing.name} →`}
+          />
           <LockedPositionsGrid chart={chart} they heading={`${saved.name}'s six positions`} />
           {repeat && (
             <p className={styles.teaser}>

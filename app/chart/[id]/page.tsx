@@ -87,13 +87,17 @@ export default async function ChartPersonPage({
 
         <p className={styles.gapNote}>
           {steps.charAt(0).toUpperCase() + steps.slice(1)} steps separate {saved.name} from the world at every layer.
-          That distance, the {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
+          That distance, {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote(`${saved.name}'s`)}</p>}
         {repeat && <p className={styles.gapNote}>{repeatedMajorNote(repeat, `${saved.name}'s`)}</p>}
 
         <div className={styles.readings}>
-          <ReadCard item={bearingReading} featured />
+          <ReadCard
+            item={bearingReading}
+            featured
+            linkText={`Read the full Bearing of ${chart.bearing.name} →`}
+          />
           {otherReadings.map((item) => (
             <ReadCard key={item.key} item={item} />
           ))}
