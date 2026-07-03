@@ -107,7 +107,7 @@ export default function TodayView({
                 <h2>Not open yet</h2>
                 <p>
                   Your almanac reaches one month ahead at a time. This date unlocks on{" "}
-                  {unlockLabel}, when it becomes next month.
+                  {unlockLabel}, when it becomes next month. See you then.
                 </p>
                 <p className={styles.gateSub}>Every date opens eventually. None of them early.</p>
                 <div className={styles.gateActions}>
