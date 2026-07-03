@@ -5,7 +5,14 @@ import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote } from "@/lib/natalChart";
+import {
+  computeNatalChart,
+  bearingStepsWord,
+  isFoolBearing,
+  foolBearingNote,
+  findRepeatedMajor,
+  repeatedMajorNote,
+} from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
@@ -52,8 +59,9 @@ export default async function ChartPage() {
   const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
   const unlocked = profile.subscriptionStatus === "active";
-  const readings = getChartReadings(chart, false);
+  const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
+  const repeat = findRepeatedMajor(chart);
 
   return (
     <>
@@ -73,6 +81,7 @@ export default async function ChartPage() {
           changes, and it&rsquo;s yours to keep.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote("your")}</p>}
+        {unlocked && repeat && <p className={styles.gapNote}>{repeatedMajorNote(repeat, "your")}</p>}
 
         <div className={styles.readings}>
           <ReadCard
@@ -87,8 +96,9 @@ export default async function ChartPage() {
             <>
               <LockedPositionsGrid chart={chart} they={false} heading="The other six positions of your chart" />
               <p className={styles.teaser}>
-                Your chart also holds the full architecture of who caught you and what you inherited &mdash; unlock it to
-                read every position.
+                {repeat
+                  ? "Your chart also holds a rare pattern: one card repeats where it almost never does, somewhere in the six positions still locked. It's waiting inside the full reading."
+                  : "Your chart also holds the full architecture of who caught you and what you inherited. Unlock it to read every position."}
               </p>
             </>
           )}
@@ -125,7 +135,7 @@ export default async function ChartPage() {
                 </button>
               </div>
             </div>
-            <p className={styles.checkoutNote}>Checkout isn&rsquo;t wired up yet &mdash; coming soon.</p>
+            <p className={styles.checkoutNote}>Checkout isn&rsquo;t wired up yet. Coming soon.</p>
           </div>
         )}
       </div>

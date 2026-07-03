@@ -1,15 +1,19 @@
 // Pulls the actual authored text for every one of a natal chart's 7 positions.
-// The 4 Year/Month Major positions each have dedicated role-specific copy in the
-// card data (positionReadings.positions.natal*, e.g. natalPersonalYear) — separate
-// from the card's general essence, the same way Minors already have distinct
-// personal-reading vs collective-reading text at the day level. That natal copy is
-// written in second person ("you"), so it's only correct for the account holder's
-// own chart; a saved/gifted chart about someone else falls back to the
-// person-neutral essence rather than misattributing "you" text to a third party.
+// Every position beyond the raw card essence has dedicated role-specific copy in
+// the card data: Majors carry positionReadings.positions.natal* (e.g.
+// natalPersonalYear) for the 4 Year/Month positions; Minors carry top-level
+// natalPersonalDay/natalCollectiveDay fields for the 2 Day positions. Distinct from
+// the generic essence, and distinct from the daily almanac's own personal/collective
+// reading fields (same card, different context).
+//
+// This natal copy is written in second person ("you"), addressed to the chart's
+// subject — which reads correctly whether the subject is the account holder or
+// someone else's saved/gifted chart (a natal reading is naturally written "to" the
+// person it's about, the way any horoscope addresses its subject). Used everywhere,
+// not just the account holder's own chart.
 import type { NatalChart } from "./natalChart";
 import type { DayCard } from "./almanac";
 import { getCardBySlug, getPositionReading } from "./cards";
-import { getPersonalReading } from "./personalReadings";
 import bearings from "../data/bearings.json";
 
 function minorSlug(card: DayCard): string {
@@ -24,41 +28,25 @@ export interface ChartReadingItem {
   text: string | undefined;
   element: string;
   major?: number; // present for Major positions — glyph is #ma-{major}
-  minorCard?: DayCard; // present only for personalDayMinor — glyph is suit pips
+  minorCard?: DayCard; // present for the two Day positions — glyph is suit pips
 }
 
-// they=false (the account holder's own chart) uses the real natal-role text and
-// its authored label; they=true (someone else's saved/gifted chart) falls back to
-// the card's general essence with a person-neutral label, since the natal text
-// itself says "you".
-function majorReading(
-  slug: string,
-  natalKey: string,
-  they: boolean,
-  fallbackLabel: string,
-): { label: string; text: string | undefined } {
-  if (!they) {
-    const pr = getPositionReading(slug, natalKey);
-    if (pr) return { label: pr.label, text: pr.body };
-  }
+function majorReading(slug: string, natalKey: string, fallbackLabel: string): { label: string; text: string | undefined } {
+  const pr = getPositionReading(slug, natalKey);
+  if (pr) return { label: pr.label, text: pr.body };
   return { label: fallbackLabel, text: getCardBySlug(slug)?.essence };
 }
 
-export function getChartReadings(chart: NatalChart, they: boolean): ChartReadingItem[] {
-  const subj = they ? "they" : "you";
-  const obj = they ? "them" : "you";
-
+export function getChartReadings(chart: NatalChart): ChartReadingItem[] {
   const bearingData = bearings.find((b) => b.slug === chart.bearing.slug);
 
-  const personalYear = majorReading(chart.personalYear.slug, "natalPersonalYear", they, "Sun · core self");
-  const collectiveYear = majorReading(chart.collectiveYear.slug, "natalCollectiveYear", they, `What ${subj} inherited`);
-  const personalMonth = majorReading(chart.personalMonth.slug, "natalPersonalMonth", they, "Moon · inner life");
-  const collectiveMonth = majorReading(
-    chart.collectiveMonth.slug,
-    "natalCollectiveMonth",
-    they,
-    `The climate ${subj} formed in`,
-  );
+  const personalYear = majorReading(chart.personalYear.slug, "natalPersonalYear", "Sun · core self");
+  const collectiveYear = majorReading(chart.collectiveYear.slug, "natalCollectiveYear", "What you inherited");
+  const personalMonth = majorReading(chart.personalMonth.slug, "natalPersonalMonth", "Moon · inner life");
+  const collectiveMonth = majorReading(chart.collectiveMonth.slug, "natalCollectiveMonth", "The climate you formed in");
+
+  const personalDayCardData = getCardBySlug(minorSlug(chart.personalDayMinor));
+  const collectiveDayCardData = getCardBySlug(minorSlug(chart.collectiveDayMinor));
 
   return [
     {
@@ -108,21 +96,21 @@ export function getChartReadings(chart: NatalChart, they: boolean): ChartReading
     },
     {
       key: "personalDayMinor",
-      label: `Rising · how ${subj} meet a room`,
+      label: "Rising · how you meet a room",
       name: chart.personalDayMinor.minorName,
       href: `/tarot/${minorSlug(chart.personalDayMinor)}`,
-      text: getPersonalReading(chart.personalDayMinor),
+      text: personalDayCardData?.natalPersonalDay,
       element: chart.personalDayMinor.element,
       minorCard: chart.personalDayMinor,
     },
     {
-      key: "collectiveDayMajor",
-      label: `The day that caught ${obj}`,
-      name: chart.collectiveDayMajor.name,
-      href: `/tarot/${chart.collectiveDayMajor.slug}`,
-      text: getCardBySlug(chart.collectiveDayMajor.slug)?.essence,
-      element: chart.collectiveDayMajor.element,
-      major: chart.collectiveDayMajor.major,
+      key: "collectiveDayMinor",
+      label: "The day that caught you",
+      name: chart.collectiveDayMinor.minorName,
+      href: `/tarot/${minorSlug(chart.collectiveDayMinor)}`,
+      text: collectiveDayCardData?.natalCollectiveDay,
+      element: chart.collectiveDayMinor.element,
+      minorCard: chart.collectiveDayMinor,
     },
   ];
 }

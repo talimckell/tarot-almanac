@@ -47,6 +47,8 @@ export interface Card {
   // the roman numeral; looked up by slug against the already-verified fixed order.
   element: Element; // lowercase, for CSS var lookups and glyph color
   positionReadings?: Record<string, PositionReading>; // majors only
+  natalPersonalDay?: string; // minors only — the natal chart's Rising position
+  natalCollectiveDay?: string; // minors only — the natal chart's "day that caught you"
 }
 
 interface RawCardReading {
@@ -66,6 +68,8 @@ interface RawCard {
   numberLabel?: string;
   cardReading: RawCardReading;
   positionReadings?: { positions: Record<string, PositionReading> };
+  natalPersonalDay?: { body: string };
+  natalCollectiveDay?: { body: string };
 }
 
 export function parseCardMeta(raw: string): CardMeta {
@@ -115,6 +119,8 @@ export function getAllCards(): Card[] {
       majorIndex,
       element: meta.element.toLowerCase() as Element,
       positionReadings: raw.positionReadings?.positions,
+      natalPersonalDay: raw.natalPersonalDay?.body,
+      natalCollectiveDay: raw.natalCollectiveDay?.body,
     };
   });
   return cache;

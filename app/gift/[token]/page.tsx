@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteFooter from "../../components/SiteFooter";
 import { prisma } from "@/lib/prisma";
-import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote } from "@/lib/natalChart";
+import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote, findRepeatedMajor } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { formatDateSlug } from "@/lib/today";
 import { getChartReadings } from "@/lib/chartReadings";
@@ -41,8 +41,9 @@ export default async function GiftPage({
   const bd = saved.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
 
-  const [bearingReading] = getChartReadings(chart, true);
+  const [bearingReading] = getChartReadings(chart);
   const steps = bearingStepsWord(chart.bearing.major);
+  const repeat = findRepeatedMajor(chart);
   const giverName = saved.owner.name ?? saved.owner.email;
   const birthdaySlug = formatDateSlug({ y: by, m: bm, d: bd });
 
@@ -78,6 +79,12 @@ export default async function GiftPage({
         <div className={styles.readings}>
           <ReadCard item={bearingReading} featured />
           <LockedPositionsGrid chart={chart} they heading={`${saved.name}'s six positions`} />
+          {repeat && (
+            <p className={styles.teaser}>
+              {saved.name}&rsquo;s chart also holds a rare pattern: one card repeats where it almost never does,
+              somewhere in the six positions still locked.
+            </p>
+          )}
         </div>
 
         <div className={styles.funnel}>

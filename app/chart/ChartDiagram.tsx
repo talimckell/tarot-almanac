@@ -31,9 +31,10 @@ function MinorPips({ card, size = 14 }: { card: DayCard; size?: number }) {
   );
 }
 
-// A Year/Month/collective-Day cell: shows the real glyph + element color even when
-// locked (matches the mockup precisely — glyphs render identically in both its full
-// and locked states). What's withheld when locked is just the name and its link.
+// A Year/Month cell (always a Major): shows the real glyph + element color even
+// when locked (matches the mockup precisely — glyphs render identically in both
+// its full and locked states). What's withheld when locked is just the name and
+// its link.
 function MajorCell({ pos, poslabel, unlocked }: { pos: MajorPosition; poslabel: string; unlocked: boolean }) {
   return (
     <div className={styles.cardcell}>
@@ -115,7 +116,7 @@ export default function ChartDiagram({
           <div className={styles.rowlabel}>Day</div>
           <MinorCell card={chart.personalDayMinor} poslabel={`rising · how ${subj} meet a room`} unlocked={unlocked} />
           <div />
-          <MajorCell pos={chart.collectiveDayMajor} poslabel={`the day that caught ${obj}`} unlocked={unlocked} />
+          <MinorCell card={chart.collectiveDayMinor} poslabel={`the day that caught ${obj}`} unlocked={unlocked} />
         </div>
 
         <div className={styles.bearing}>
@@ -193,8 +194,8 @@ export function LockedPositionsGrid({ chart, they, heading }: { chart: NatalChar
           poslabel={`How ${subj} meet a room`}
         />
         <LockedTile
-          element={chart.collectiveDayMajor.element}
-          glyph={<MajorGlyph major={chart.collectiveDayMajor.major} size={34} />}
+          element={chart.collectiveDayMinor.element}
+          glyph={<MinorPips card={chart.collectiveDayMinor} size={13} />}
           poslabel={`The day that caught ${obj}`}
         />
       </div>

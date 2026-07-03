@@ -5,7 +5,14 @@ import SiteNav from "../../components/SiteNav";
 import SiteFooter from "../../components/SiteFooter";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote } from "@/lib/natalChart";
+import {
+  computeNatalChart,
+  bearingStepsWord,
+  isFoolBearing,
+  foolBearingNote,
+  findRepeatedMajor,
+  repeatedMajorNote,
+} from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram from "../ChartDiagram";
@@ -49,9 +56,10 @@ export default async function ChartPersonPage({
   const bm = saved.birthDate.getUTCMonth() + 1;
   const bd = saved.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-  const readings = getChartReadings(chart, true);
+  const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
   const steps = bearingStepsWord(chart.bearing.major);
+  const repeat = findRepeatedMajor(chart);
 
   return (
     <>
@@ -82,6 +90,7 @@ export default async function ChartPersonPage({
           That distance, the {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote(`${saved.name}'s`)}</p>}
+        {repeat && <p className={styles.gapNote}>{repeatedMajorNote(repeat, `${saved.name}'s`)}</p>}
 
         <div className={styles.readings}>
           <ReadCard item={bearingReading} featured />
