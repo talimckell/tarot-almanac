@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { parseDateSlug } from "@/lib/today";
 
 // Closes the birthday-persistence gap: signed-in accounts previously had no way to
@@ -64,6 +65,27 @@ export async function createChart(formData: FormData) {
 
 export async function signOutAction() {
   const supabase = await createClient();
+  await supabase.auth.signOut();
+  redirect("/");
+}
+
+// Full account deletion, per the Privacy Policy's "in-app delete option": removes
+// the Profile row (SavedChart rows cascade with it, per the schema's onDelete:
+// Cascade) and the underlying Supabase auth identity itself, not just app data —
+// otherwise signing back in with the same email would silently recreate a blank
+// Profile (see /me's upsert) rather than actually ending the account.
+export async function deleteAccountAction() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/sign-in?next=/me");
+
+  await prisma.profile.delete({ where: { id: user.id } });
+
+  const admin = createAdminClient();
+  await admin.auth.admin.deleteUser(user.id);
+
   await supabase.auth.signOut();
   redirect("/");
 }

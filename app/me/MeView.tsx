@@ -21,6 +21,7 @@ import {
 } from "@/lib/today";
 import { suitGlyphId, majorGlyphId } from "@/lib/pips";
 import { updateProfile, createChart, signOutAction } from "./actions";
+import DeleteAccountForm from "./DeleteAccountForm";
 import styles from "./MeView.module.css";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
@@ -299,6 +300,14 @@ export default function MeView({
         <form action={signOutAction} className={styles.signOutForm}>
           <button type="submit" className={styles.signOutBtn}>Sign out</button>
         </form>
+      </div>
+
+      <div className={styles.dangerZone}>
+        <div className={styles.dangerText}>
+          <div className={styles.dangerH}>Delete account</div>
+          <p>Permanently removes your profile and everything in your library. This can&rsquo;t be undone.</p>
+        </div>
+        <DeleteAccountForm />
       </div>
     </div>
   );
