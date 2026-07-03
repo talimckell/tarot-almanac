@@ -186,3 +186,20 @@
     font-size: 14px;
   }
 }
+
+/* Below ~480px, 110px is too wide for the two text columns either side of the
+   channel line — the badge starts covering real words ("moon · inner life",
+   "the climate you formed in"). Dropping it into normal flow under the three
+   depth rows keeps it legible without covering anything. */
+@media (max-width: 480px) {
+  .chartframe {
+    padding-bottom: 24px;
+  }
+  .bearing {
+    position: static;
+    transform: none;
+    margin: 8px auto 0;
+    width: 130px;
+    height: 130px;
+  }
+}

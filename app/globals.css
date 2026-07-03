@@ -442,4 +442,5 @@ body {
   .hero-headline { font-size: 46px; }
   .props { grid-template-columns: 1fr; }
   .prop { border-right: none; border-bottom: 1px solid var(--warm-stone); }
+  .entry-cards { grid-template-columns: 1fr; }
 }

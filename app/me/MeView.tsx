@@ -259,10 +259,14 @@ export default function MeView({
       )}
       {profile.subscribed ? (
         <form className={styles.detailsForm} action={createChart}>
-          <label className={styles.fieldLabel} htmlFor="chartName">Name</label>
-          <input id="chartName" name="name" type="text" className={styles.fieldInput} placeholder="Their name" required />
-          <label className={styles.fieldLabel} htmlFor="chartBirthday">Birthday</label>
-          <input id="chartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+          <div className={styles.fieldGroup}>
+            <label className={styles.fieldLabel} htmlFor="chartName">Name</label>
+            <input id="chartName" name="name" type="text" className={styles.fieldInput} placeholder="Their name" required />
+          </div>
+          <div className={styles.fieldGroup}>
+            <label className={styles.fieldLabel} htmlFor="chartBirthday">Birthday</label>
+            <input id="chartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+          </div>
           <button type="submit" className={styles.saveBtn}>Add a chart</button>
         </form>
       ) : (
@@ -275,23 +279,27 @@ export default function MeView({
         <h2>Your details</h2>
       </div>
       <form className={styles.detailsForm} action={updateProfile}>
-        <label className={styles.fieldLabel} htmlFor="name">Name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          className={styles.fieldInput}
-          defaultValue={profile.name ?? ""}
-          placeholder="Your name"
-        />
-        <label className={styles.fieldLabel} htmlFor="birthday">Birthday</label>
-        <input
-          id="birthday"
-          name="birthday"
-          type="date"
-          className={styles.fieldInput}
-          defaultValue={profile.birthDate ?? ""}
-        />
+        <div className={styles.fieldGroup}>
+          <label className={styles.fieldLabel} htmlFor="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            className={styles.fieldInput}
+            defaultValue={profile.name ?? ""}
+            placeholder="Your name"
+          />
+        </div>
+        <div className={styles.fieldGroup}>
+          <label className={styles.fieldLabel} htmlFor="birthday">Birthday</label>
+          <input
+            id="birthday"
+            name="birthday"
+            type="date"
+            className={styles.fieldInput}
+            defaultValue={profile.birthDate ?? ""}
+          />
+        </div>
         <button type="submit" className={styles.saveBtn}>Save</button>
       </form>
 

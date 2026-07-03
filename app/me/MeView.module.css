@@ -128,6 +128,7 @@
   padding: 10px 4px 8px;
   text-decoration: none;
   min-height: 78px;
+  min-width: 0;
 }
 .cell:hover {
   border-color: var(--indigo);
@@ -154,6 +155,10 @@
   color: var(--charcoal);
   text-align: center;
   margin-top: 2px;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  width: 100%;
 }
 .cell.today {
   border: 1.5px solid var(--indigo);
@@ -364,6 +369,10 @@
   align-items: end;
   gap: 14px;
 }
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
 .fieldLabel {
   display: block;
   font-family: var(--serif-sc);
@@ -475,5 +484,32 @@
   }
   .monthBand {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrap {
+    padding: 0 12px 60px;
+  }
+  .cal {
+    gap: 3px;
+  }
+  .cell {
+    padding: 6px 2px;
+    min-height: 66px;
+  }
+  .cellDay {
+    font-size: 10px;
+  }
+  .cellCard {
+    font-size: 9.5px;
+  }
+  .detailsForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fieldInput,
+  .saveBtn {
+    width: 100%;
   }
 }
