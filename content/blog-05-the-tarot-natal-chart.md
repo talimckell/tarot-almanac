@@ -31,10 +31,10 @@ Only the year gets its digits added up. The month and day go in whole. (If you'v
 
 - **The world's year.** Add the digits of 1984: 1 + 9 + 8 + 4 = 22, which wraps around to 0. The Fool.
 - **The world's month.** That year number plus the birth month: 0 + 2 = 2. The High Priestess.
-- **The world's day.** That plus the birth day: 2 + 16 = 18. The Moon. (At the day level it shows up as a Minor, the Nine of Cups.)
+- **The world's day.** That plus the birth day: 2 + 16 = 18. The Moon. (At the day level it shows up as a Minor, the Three of Cups.)
 - **Your year.** Birth month and day plus the year's digits: 2 + 16 + 22 = 40, wraps to 18. The Moon.
 - **Your month.** Your year number plus the birth month: 18 + 2 = 20. Judgement.
-- **Your day.** That plus the birth day: 20 + 16 = 36, wraps to 14. Temperance, which shows up as the Six of Wands.
+- **Your day.** That plus the birth day: 20 + 16 = 36, wraps to 14. Temperance, which shows up as the Queen of Wands.
 - **The Bearing.** Birth month plus birth day: 2 + 16 = 18. The Moon.
 
 Seven cards, one birthday, nothing hidden. The Almanac will work it out and read it back to you, but you could redo any line of it at your kitchen table, and that's the point.
@@ -45,9 +45,9 @@ Seven cards, one birthday, nothing hidden. The Almanac will work it out and read
 
 **Your inner life** is the month card, the weather underneath what anyone sees, how you handle things when no one's watching. Here it's Judgement: an inside that runs on honest reckoning, going back over things, weighing them, and then deciding to rise instead of stay down.
 
-**How you meet a room** is the day card, the surface, the first thing people get from you. This one's a Minor, because it's the lived, everyday you. Here it's the Six of Wands: someone who arrives already a little at ease, who can carry a win without making it heavy.
+**How you meet a room** is the day card, the surface, the first thing people get from you. This one's a Minor, because it's the lived, everyday you. Here it's the Queen of Wands: someone who arrives already sure of herself, warm without needing the room's permission for it.
 
-Your core can be one thing and your surface another, and usually is. The Moon at the center, quietly reading the room; the Six of Wands on top, walking in easy. That gap between the deep self and the face you lead with is most of what a chart is for.
+Your core can be one thing and your surface another, and usually is. The Moon at the center, quietly reading the room; the Queen of Wands on top, walking in warm and certain. That gap between the deep self and the face you lead with is most of what a chart is for.
 
 ## The world's side: the room you walked into
 
@@ -57,7 +57,7 @@ These describe the world the day you arrived, but they aren't separate from you.
 
 **The season you formed in** is the world's month, the nearer weather, the mood actually in the air as you arrived. Here it's the High Priestess: a climate tuned to quiet knowing, that asked you to listen before you spoke.
 
-**The day that caught you** is the world's day, the most specific card of the three, because only people born your exact date stand on it with you. Here it's the Moon again, showing up as the Nine of Cups, the wish-granted card. A satisfied world having a quietly full day when it took you in.
+**The day that caught you** is the world's day, the most specific card of the three, because only people born your exact date stand on it with you. Here it's the Moon again, showing up as the Three of Cups, the gathering card. A world glad to have you, already toasting the day you arrived.
 
 ## Why the day cards are Minors
 
