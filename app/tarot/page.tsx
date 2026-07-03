@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { MAJORS, MAJOR_SLUGS, RANKS, ELEMENT_BY_MAJOR, SUIT_BY_ELEMENT, type Element } from "../../lib/almanac";
 import styles from "./page.module.css";
 
@@ -113,7 +113,7 @@ export default function TarotIndexPage() {
         })}
       </div>
 
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

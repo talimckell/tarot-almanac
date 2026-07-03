@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import {
@@ -49,7 +49,7 @@ export default async function ChartPage() {
             Your natal chart runs on your birth date. <Link href="/me#your-details">Add it in My Almanac</Link> to see your chart.
           </p>
         </div>
-        <SiteFooter />
+        <Footer />
       </>
     );
   }
@@ -139,7 +139,7 @@ export default async function ChartPage() {
           </div>
         )}
       </div>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

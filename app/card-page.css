@@ -1,6 +1,6 @@
 /* Styles for the card detail pages (/tarot/[slug], /bearing/[slug]).
    Site chrome (nav, footer) and base tokens/reset are already handled by globals.css
-   and the shared SiteNav/SiteFooter components — this file starts from the breadcrumb. */
+   and the shared SiteNav/Footer components — this file starts from the breadcrumb. */
 
 .crumb { max-width:1080px; margin:0 auto; padding:18px 28px 0; font-family:var(--serif-sc); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--label); }
 .crumb a { color:var(--label); text-decoration:none; }

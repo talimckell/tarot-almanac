@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import {
@@ -104,7 +104,7 @@ export default async function ChartPersonPage({
           &rsquo;s own to start.
         </p>
       </div>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

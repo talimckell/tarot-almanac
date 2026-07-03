@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { parseBirthday, BIRTHDAY_COOKIE, type YMD } from "../../lib/today";
 import { getSignedInBirthday } from "../../lib/accountBirthday";
 import TodayView from "./TodayView";
@@ -45,7 +45,7 @@ export default async function TodayPage({
     <>
       <SiteNav current="today" />
       <TodayView target={now} now={now} birthday={birthday} name={name} signedIn={!!account} />
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

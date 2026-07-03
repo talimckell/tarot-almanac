@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
 import { majorGlyphId } from "@/lib/pips";
@@ -151,7 +151,7 @@ export default async function BearingPage({
         </div>
       </section>
       </main>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

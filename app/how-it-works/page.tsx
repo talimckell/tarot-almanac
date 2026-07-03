@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -256,7 +256,7 @@ export default function HowItWorksPage() {
         </aside>
       </div>
 
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR, type Element } from "../../lib/almanac";
 import BearingFinder from "./bearing-finder";
 import styles from "./page.module.css";
@@ -106,7 +106,7 @@ export default function BearingPage() {
         </aside>
       </div>
 
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

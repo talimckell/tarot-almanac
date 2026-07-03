@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { getAllCards, getCardBySlug, getRelated, type Card } from "../../../lib/cards";
 import { pipRows, suitGlyphId, isCourt } from "../../../lib/pips";
 
@@ -239,7 +239,7 @@ export default async function CardPage({
         </div>
       </section>
       </main>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

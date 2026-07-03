@@ -1,0 +1,152 @@
+.article {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 28px 70px;
+}
+
+.crumb {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--label);
+  padding: 34px 0 0;
+}
+.crumb a {
+  color: var(--label);
+  text-decoration: none;
+}
+.crumb a:hover {
+  color: var(--indigo);
+}
+
+.postMark {
+  display: block;
+  margin-bottom: 16px;
+}
+.postHead {
+  padding: 24px 0 14px;
+  border-bottom: 1px solid var(--warm-stone);
+  margin-bottom: 36px;
+}
+.postEyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 14px;
+}
+.postHead h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 1.08;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.postStandfirst {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+
+.body {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.66;
+  color: var(--ink);
+}
+.body p {
+  margin-bottom: 20px;
+}
+
+.endmark {
+  text-align: center;
+  margin: 46px 0;
+  color: var(--warm-stone);
+}
+
+.signoff {
+  margin: 36px 0 8px;
+}
+.signoff p {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+.sigName {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 42px;
+  color: var(--indigo);
+  display: block;
+  margin-top: 6px;
+}
+
+/* the closing line, set apart like a pull quote rather than buried in body text */
+.closing {
+  border-top: 1px solid var(--warm-stone);
+  border-bottom: 1px solid var(--warm-stone);
+  padding: 28px 0;
+  margin: 8px 0 44px;
+  text-align: center;
+}
+.closing p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--indigo);
+  margin: 0;
+}
+
+.keep {
+  border-top: 1px solid var(--warm-stone);
+  padding-top: 30px;
+}
+.keepH {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 18px;
+}
+.keepPost {
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--vellum);
+}
+.keepPost .kt {
+  display: block;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.keepPost .kd {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+.keepPost:hover .kt {
+  color: var(--indigo);
+}
+
+@media (max-width: 640px) {
+  .postHead h1 {
+    font-size: 34px;
+  }
+  .body {
+    font-size: 18px;
+  }
+  .closing p {
+    font-size: 20px;
+  }
+}

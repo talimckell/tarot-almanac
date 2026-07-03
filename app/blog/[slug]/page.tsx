@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { BLOG_POSTS, getPostMeta, getPostHtml } from "../../../lib/blog";
 import styles from "./page.module.css";
 
@@ -90,7 +90,7 @@ export default async function BlogPostPage({
         </div>
       </article>
 
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

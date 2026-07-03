@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import {
@@ -94,7 +94,7 @@ export default async function MePage({
         birthday={birthday}
         view={resolvedView}
       />
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

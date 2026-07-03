@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteNav from "./components/SiteNav";
+import Footer from "./components/Footer";
 import TodayEntry from "./today-entry";
 
 // The eight-pointed star mark, reused in a few places.
@@ -186,15 +187,7 @@ export default function Home() {
         <Link href="/me" className="acct-cta">Make your almanac</Link>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <Link className="foot-brand" href="/">The Tarot Almanac · tarotalmanac.com</Link>
-        <span className="foot-tagline">Find your angle on the day.</span>
-        <span className="foot-line">
-          <StarMark size={13} style={{ marginRight: "8px" }} />
-          The card doesn&rsquo;t change. You do.
-        </span>
-      </footer>
+      <Footer />
     </>
   );
 }

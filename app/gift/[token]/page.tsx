@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote, findRepeatedMajor } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
@@ -100,7 +100,7 @@ export default async function GiftPage({
           <p className={styles.funnelSub}>Free to begin. See today&rsquo;s card and your full Bearing.</p>
         </div>
       </div>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

@@ -423,38 +423,6 @@ body {
 .acct-cta { display: inline-block; background: var(--stone); color: var(--indigo); font-family: var(--serif-sc); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; padding: 14px 38px; text-decoration: none; transition: .15s; }
 .acct-cta:hover { background: var(--vellum); }
 
-/* ── FOOTER ── */
-.footer {
-  padding: 44px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--warm-stone);
-}
-.foot-brand {
-  font-family: var(--serif-sc);
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  color: var(--charcoal);
-  text-decoration: none;
-}
-.foot-tagline {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 15px;
-  color: var(--label);
-}
-.foot-line {
-  font-family: var(--serif);
-  font-size: 14px;
-  color: var(--label);
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-}
-
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
@@ -468,7 +436,6 @@ body {
   .pullquote-band { padding: 40px 24px; gap: 20px; }
   .acct-band { padding: 48px 24px; }
   .acct-head { font-size: 30px; }
-  .footer { padding: 32px 24px; }
 }
 @media (max-width: 560px) {
   .hero-headline { font-size: 46px; }

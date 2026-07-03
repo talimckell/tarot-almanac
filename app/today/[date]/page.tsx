@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
-import SiteFooter from "../../components/SiteFooter";
+import Footer from "../../components/Footer";
 import { parseBirthday, parseDateSlug, BIRTHDAY_COOKIE, type YMD } from "../../../lib/today";
 import { formatLongDate } from "../../../lib/almanac";
 import { getSignedInBirthday } from "../../../lib/accountBirthday";
@@ -58,7 +58,7 @@ export default async function TodayDatePage({
     <>
       <SiteNav current="today" />
       <TodayView target={target} now={now} birthday={birthday} name={name} signedIn={!!account} />
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

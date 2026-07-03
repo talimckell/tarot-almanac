@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
-import SiteFooter from "../components/SiteFooter";
+import Footer from "../components/Footer";
 import { BLOG_POSTS } from "../../lib/blog";
 import { ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import styles from "./page.module.css";
@@ -78,7 +78,7 @@ export default function BlogIndexPage() {
         </div>
       </div>
 
-      <SiteFooter />
+      <Footer />
     </>
   );
 }
