@@ -38,6 +38,16 @@ export function isDateOpen(target: YMD, now: YMD): boolean {
   return targetMs <= boundaryMs;
 }
 
+// A locked target's whole month unlocks in one shot, the day the calendar rolls
+// into the month before it (that becomes the new "current month," making target's
+// month the new one-ahead). Signed-in accounts get told this date directly instead
+// of the anonymous-visitor pitch to sign up, since they already have an account.
+export function monthUnlockDate(target: YMD): YMD {
+  // Date.UTC normalizes month 0 into December of the previous year for us.
+  const d = new Date(Date.UTC(target.y, target.m - 2, 1));
+  return { y: d.getUTCFullYear(), m: d.getUTCMonth() + 1, d: 1 };
+}
+
 // ===== Date helpers (UTC-based, so day arithmetic never trips on DST) =====
 export function addDays(target: YMD, delta: number): YMD {
   const ms = Date.UTC(target.y, target.m - 1, target.d) + delta * 86400000;

@@ -18,6 +18,7 @@ import {
   type YMD,
   type Birthday,
   isDateOpen,
+  monthUnlockDate,
   addDays,
   formatDateSlug,
   synthesis,
@@ -44,11 +45,13 @@ export default function TodayView({
   now,
   birthday,
   name,
+  signedIn,
 }: {
   target: YMD;
   now: YMD;
   birthday: Birthday | null;
   name?: string;
+  signedIn?: boolean;
 }) {
   const open = isDateOpen(target, now);
   const prevSlug = formatDateSlug(addDays(target, -1));
@@ -88,6 +91,9 @@ export default function TodayView({
 
   // ===== Gated: no card data is computed or sent for out-of-window future dates. =====
   if (!open) {
+    const unlock = monthUnlockDate(target);
+    const unlockLabel = formatLongDate(unlock.y, unlock.m, unlock.d);
+
     return (
       <div className={styles.wrap}>
         {header}
@@ -96,17 +102,34 @@ export default function TodayView({
             <svg className={styles.star} viewBox="0 0 56 56" fill="var(--indigo)" aria-hidden="true">
               <path d="M28 7 L32.5 23.5 L49 28 L32.5 32.5 L28 49 L23.5 32.5 L7 28 L23.5 23.5 Z" />
             </svg>
-            <h2>Travel the year</h2>
-            <p>
-              Today is always free. To go back and forward through the calendar,
-              to read any date&rsquo;s cards and your own across time, keep an
-              almanac of your own.
-            </p>
-            <p className={styles.gateSub}>Every date, collective and personal, permanent and yours.</p>
-            <div className={styles.gateActions}>
-              <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
-              <Link href="/today" className={styles.btn}>Back to today</Link>
-            </div>
+            {signedIn ? (
+              <>
+                <h2>Not open yet</h2>
+                <p>
+                  Your almanac reaches one month ahead at a time. This date unlocks on{" "}
+                  {unlockLabel}, when it becomes next month.
+                </p>
+                <p className={styles.gateSub}>Every date opens eventually. None of them early.</p>
+                <div className={styles.gateActions}>
+                  <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See my almanac</Link>
+                  <Link href="/today" className={styles.btn}>Back to today</Link>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2>Travel the year</h2>
+                <p>
+                  Today is always free. To go back and forward through the calendar,
+                  to read any date&rsquo;s cards and your own across time, keep an
+                  almanac of your own.
+                </p>
+                <p className={styles.gateSub}>Every date, collective and personal, permanent and yours.</p>
+                <div className={styles.gateActions}>
+                  <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
+                  <Link href="/today" className={styles.btn}>Back to today</Link>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
