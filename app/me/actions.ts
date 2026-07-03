@@ -5,7 +5,12 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { parseDateSlug } from "@/lib/today";
+import { parseDateSlug, isOldEnough, type YMD } from "@/lib/today";
+
+function serverNow(): YMD {
+  const now = new Date();
+  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
+}
 
 // Closes the birthday-persistence gap: signed-in accounts previously had no way to
 // save a birthday to the Profile row, so /today's cookie-based birthday never
@@ -21,12 +26,17 @@ export async function updateProfile(formData: FormData) {
   const name = (formData.get("name") as string | null)?.trim() || null;
   const birthdayRaw = (formData.get("birthday") as string | null)?.trim() || "";
   const parsed = parseDateSlug(birthdayRaw);
+  // This is the account holder's own birthday (the Terms of Service's 16+ account
+  // minimum), unlike createChart below, which enters someone else's — an under-16
+  // date here is rejected the same way the rest of the site treats one: as if it
+  // were never entered.
+  const validAdultBirthday = parsed && isOldEnough(parsed.y, parsed.m, parsed.d, serverNow());
 
   await prisma.profile.update({
     where: { id: user.id },
     data: {
       name,
-      ...(parsed ? { birthDate: new Date(Date.UTC(parsed.y, parsed.m - 1, parsed.d)) } : {}),
+      ...(validAdultBirthday ? { birthDate: new Date(Date.UTC(parsed.y, parsed.m - 1, parsed.d)) } : {}),
     },
   });
 

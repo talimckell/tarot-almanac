@@ -30,16 +30,16 @@ export default async function TodayPage({
   let birthday = account?.birthday ?? null;
   let name = account ? account.name ?? undefined : n?.trim() || undefined;
 
+  const now = serverNow();
+
   // Only an anonymous (signed-out) visitor falls back to the cookie/query param —
   // a signed-in account's own birthday always wins, so a stray ?b= link (a gift
   // chart's funnel CTA, a test link, anything) can never silently override what a
   // real account shows on their own /today.
   if (!account) {
     const cookieStore = await cookies();
-    birthday = parseBirthday(b) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value);
+    birthday = parseBirthday(b, now) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, now);
   }
-
-  const now = serverNow();
 
   return (
     <>

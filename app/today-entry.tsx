@@ -10,6 +10,7 @@ import {
   type DayCard,
 } from "@/lib/almanac";
 import { getCollectiveReading } from "@/lib/collectiveReadings";
+import BirthdayRevealForm from "./components/BirthdayRevealForm";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
 function SuitPip({ suit }: { suit: string }) {
@@ -124,11 +125,7 @@ export default function TodayEntry() {
               </svg>
             </div>
             <span className="ec-role" style={{ marginBottom: "10px" }}>YOU TODAY</span>
-            <form className="reveal-form" action="/today" method="get">
-              <input type="text" name="n" placeholder="Your name" autoComplete="given-name" aria-label="Your name" />
-              <input type="date" name="b" required aria-label="Your birthdate" />
-              <button type="submit" className="btn-reveal">Reveal my card &rarr;</button>
-            </form>
+            <BirthdayRevealForm action="/today" />
           </div>
         </div>
       </div>

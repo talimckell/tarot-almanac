@@ -13,10 +13,34 @@ export interface Birthday {
   bd: number;
 }
 
-export function parseBirthday(raw: string | undefined | null): Birthday | null {
+// Minimum age to use the Almanac as yourself (Terms of Service section 2). Doesn't
+// apply to a saved chart made for someone else in an account holder's library —
+// that's the account holder's own information about another person (a minor in
+// their care, say), not a new account being opened.
+export const MIN_AGE = 16;
+
+export function ageOn(by: number, bm: number, bd: number, now: YMD): number {
+  let age = now.y - by;
+  if (now.m < bm || (now.m === bm && now.d < bd)) age--;
+  return age;
+}
+
+export function isOldEnough(by: number, bm: number, bd: number, now: YMD): boolean {
+  return ageOn(by, bm, bd, now) >= MIN_AGE;
+}
+
+// A birthdate that computes to under 16 is treated exactly like no birthdate at
+// all — it just doesn't unlock a personal reading, the same way an empty field
+// wouldn't. `now` must come from the caller (request time on the server, the
+// viewer's clock in the browser) since this file can't call Date.now() itself.
+export function parseBirthday(raw: string | undefined | null, now: YMD): Birthday | null {
   if (!raw || !BIRTHDAY_RE.test(raw)) return null;
-  const [, bmStr, bdStr] = raw.split("-");
-  return { bm: Number(bmStr), bd: Number(bdStr) };
+  const [byStr, bmStr, bdStr] = raw.split("-");
+  const by = Number(byStr);
+  const bm = Number(bmStr);
+  const bd = Number(bdStr);
+  if (!isOldEnough(by, bm, bd, now)) return null;
+  return { bm, bd };
 }
 
 // ===== Time-travel access gate =====

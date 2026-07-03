@@ -47,12 +47,12 @@ export default async function TodayDatePage({
   let birthday = account?.birthday ?? null;
   let name = account ? account.name ?? undefined : n?.trim() || undefined;
 
+  const now = serverNow();
+
   if (!account) {
     const cookieStore = await cookies();
-    birthday = parseBirthday(b) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value);
+    birthday = parseBirthday(b, now) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, now);
   }
-
-  const now = serverNow();
 
   return (
     <>

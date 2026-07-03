@@ -44,7 +44,7 @@ The Service lets you save charts for other people (a partner, family member, fri
 ## 5. Subscriptions, purchases, and payment
 
 ### 5.1 Free tier
-Your daily personal reading and your Bearing are free, permanently, with an account. Collective (public) daily, monthly, and yearly readings are published free on our Substack.
+Your daily personal reading and your Bearing are free, permanently, with an account.
 
 ### 5.2 Subscription
 A paid subscription ($7/month, or as otherwise displayed at checkout) unlocks unlimited access to deterministic content that scales with your use of the Service: your full natal chart, the chart library (saving charts for others), monthly personal readings, and time-travel through past and near-future readings.
