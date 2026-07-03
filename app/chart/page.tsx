@@ -5,7 +5,7 @@ import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
+import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
@@ -72,6 +72,7 @@ export default async function ChartPage() {
           separate you from the world at every layer. That distance, the {chart.bearing.name}, is your Bearing. It never
           changes, and it&rsquo;s yours to keep.
         </p>
+        {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote("your")}</p>}
 
         <div className={styles.readings}>
           <ReadCard

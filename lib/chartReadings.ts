@@ -1,10 +1,14 @@
-// Pulls the actual authored text for every one of a natal chart's 7 positions —
-// the Major essences already wired up for /tarot/[slug], the Minor's personal
-// reading already wired up for /today, and the Bearing's own reading. No new copy
-// written here, only assembled from what already exists.
+// Pulls the actual authored text for every one of a natal chart's 7 positions.
+// The 4 Year/Month Major positions each have dedicated role-specific copy in the
+// card data (positionReadings.positions.natal*, e.g. natalPersonalYear) — separate
+// from the card's general essence, the same way Minors already have distinct
+// personal-reading vs collective-reading text at the day level. That natal copy is
+// written in second person ("you"), so it's only correct for the account holder's
+// own chart; a saved/gifted chart about someone else falls back to the
+// person-neutral essence rather than misattributing "you" text to a third party.
 import type { NatalChart } from "./natalChart";
 import type { DayCard } from "./almanac";
-import { getCardBySlug } from "./cards";
+import { getCardBySlug, getPositionReading } from "./cards";
 import { getPersonalReading } from "./personalReadings";
 import bearings from "../data/bearings.json";
 
@@ -23,11 +27,38 @@ export interface ChartReadingItem {
   minorCard?: DayCard; // present only for personalDayMinor — glyph is suit pips
 }
 
+// they=false (the account holder's own chart) uses the real natal-role text and
+// its authored label; they=true (someone else's saved/gifted chart) falls back to
+// the card's general essence with a person-neutral label, since the natal text
+// itself says "you".
+function majorReading(
+  slug: string,
+  natalKey: string,
+  they: boolean,
+  fallbackLabel: string,
+): { label: string; text: string | undefined } {
+  if (!they) {
+    const pr = getPositionReading(slug, natalKey);
+    if (pr) return { label: pr.label, text: pr.body };
+  }
+  return { label: fallbackLabel, text: getCardBySlug(slug)?.essence };
+}
+
 export function getChartReadings(chart: NatalChart, they: boolean): ChartReadingItem[] {
   const subj = they ? "they" : "you";
   const obj = they ? "them" : "you";
 
   const bearingData = bearings.find((b) => b.slug === chart.bearing.slug);
+
+  const personalYear = majorReading(chart.personalYear.slug, "natalPersonalYear", they, "Sun · core self");
+  const collectiveYear = majorReading(chart.collectiveYear.slug, "natalCollectiveYear", they, `What ${subj} inherited`);
+  const personalMonth = majorReading(chart.personalMonth.slug, "natalPersonalMonth", they, "Moon · inner life");
+  const collectiveMonth = majorReading(
+    chart.collectiveMonth.slug,
+    "natalCollectiveMonth",
+    they,
+    `The climate ${subj} formed in`,
+  );
 
   return [
     {
@@ -41,37 +72,37 @@ export function getChartReadings(chart: NatalChart, they: boolean): ChartReading
     },
     {
       key: "personalYear",
-      label: "Sun · core self",
+      label: personalYear.label,
       name: chart.personalYear.name,
       href: `/tarot/${chart.personalYear.slug}`,
-      text: getCardBySlug(chart.personalYear.slug)?.essence,
+      text: personalYear.text,
       element: chart.personalYear.element,
       major: chart.personalYear.major,
     },
     {
       key: "collectiveYear",
-      label: `What ${subj} inherited`,
+      label: collectiveYear.label,
       name: chart.collectiveYear.name,
       href: `/tarot/${chart.collectiveYear.slug}`,
-      text: getCardBySlug(chart.collectiveYear.slug)?.essence,
+      text: collectiveYear.text,
       element: chart.collectiveYear.element,
       major: chart.collectiveYear.major,
     },
     {
       key: "personalMonth",
-      label: "Moon · inner life",
+      label: personalMonth.label,
       name: chart.personalMonth.name,
       href: `/tarot/${chart.personalMonth.slug}`,
-      text: getCardBySlug(chart.personalMonth.slug)?.essence,
+      text: personalMonth.text,
       element: chart.personalMonth.element,
       major: chart.personalMonth.major,
     },
     {
       key: "collectiveMonth",
-      label: `The climate ${subj} formed in`,
+      label: collectiveMonth.label,
       name: chart.collectiveMonth.name,
       href: `/tarot/${chart.collectiveMonth.slug}`,
-      text: getCardBySlug(chart.collectiveMonth.slug)?.essence,
+      text: collectiveMonth.text,
       element: chart.collectiveMonth.element,
       major: chart.collectiveMonth.major,
     },

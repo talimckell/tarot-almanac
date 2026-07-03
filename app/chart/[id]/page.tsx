@@ -5,7 +5,7 @@ import SiteNav from "../../components/SiteNav";
 import SiteFooter from "../../components/SiteFooter";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
+import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram from "../ChartDiagram";
@@ -81,6 +81,7 @@ export default async function ChartPersonPage({
           {steps.charAt(0).toUpperCase() + steps.slice(1)} steps separate {saved.name} from the world at every layer.
           That distance, the {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
         </p>
+        {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote(`${saved.name}'s`)}</p>}
 
         <div className={styles.readings}>
           <ReadCard item={bearingReading} featured />

@@ -80,3 +80,15 @@ const STEP_WORDS = [
 export function bearingStepsWord(bIdx: number): string {
   return STEP_WORDS[bIdx] ?? String(bIdx);
 }
+
+// A Fool Bearing (mod22(bm+bd) = 0) is a mathematical special case: it makes the
+// Personal and Collective tracks identical at every level (Year, Month, and the
+// Day position's underlying Major), since adding a zero-valued Bearing gap changes
+// nothing. Real, not a bug — worth surfacing so it doesn't read as one.
+export function isFoolBearing(chart: NatalChart): boolean {
+  return chart.bearing.major === 0;
+}
+
+export function foolBearingNote(subjectPossessive: string): string {
+  return `Because ${subjectPossessive} Bearing is the Fool, the gap to the world is zero — ${subjectPossessive} Year, Month, and Day cards match the world's exactly at every level. That's not a glitch; it's what a zero-distance Bearing means.`;
+}

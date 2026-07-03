@@ -22,6 +22,15 @@ export interface CardMeta {
   element: string; // raw casing from the data, e.g. "Water"
 }
 
+// Majors only — the role-specific reading for each of the 8 slots a Major can
+// appear in (natal chart position, or the living almanac's Year/Month links).
+// Distinct authored text per role, same pattern as personal-readings.json /
+// collective-readings.json already do for Minors at the day level.
+export interface PositionReading {
+  label: string;
+  body: string;
+}
+
 export interface Card {
   arcana: "major" | "minor";
   name: string;
@@ -37,6 +46,7 @@ export interface Card {
   majorIndex?: number; // majors only — index into MAJOR_SLUGS/MAJORS, not parsed from
   // the roman numeral; looked up by slug against the already-verified fixed order.
   element: Element; // lowercase, for CSS var lookups and glyph color
+  positionReadings?: Record<string, PositionReading>; // majors only
 }
 
 interface RawCardReading {
@@ -55,6 +65,7 @@ interface RawCard {
   slug: string;
   numberLabel?: string;
   cardReading: RawCardReading;
+  positionReadings?: { positions: Record<string, PositionReading> };
 }
 
 export function parseCardMeta(raw: string): CardMeta {
@@ -103,6 +114,7 @@ export function getAllCards(): Card[] {
       skills: cr.skills,
       majorIndex,
       element: meta.element.toLowerCase() as Element,
+      positionReadings: raw.positionReadings?.positions,
     };
   });
   return cache;
@@ -110,6 +122,16 @@ export function getAllCards(): Card[] {
 
 export function getCardBySlug(slug: string): Card | undefined {
   return getAllCards().find((c) => c.slug === slug);
+}
+
+// A Major's reading for one specific role — e.g. "natalPersonalYear" for the
+// natal chart's Personal Year position, or "ongoingPersonalMonth" for the
+// living almanac's "Your Month" link. Falls back to the card's general essence
+// if that specific position slot isn't authored (shouldn't happen for the 8
+// natal/ongoing keys, but keeps this safe if the data ever changes shape).
+export function getPositionReading(slug: string, position: string): PositionReading | undefined {
+  const card = getCardBySlug(slug);
+  return card?.positionReadings?.[position];
 }
 
 // Suit-mate/rank-mate for minors; neighbor-on-the-wheel/element-mate for majors.
