@@ -14,6 +14,12 @@ import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
 import { majorGlyphId } from "@/lib/pips";
 import { renderMarkdown } from "@/lib/markdown";
+import TarotCycleGap from "./TarotCycleGap";
+
+// Every Bearing essay uses this exact heading (verified across all 22 Majors) —
+// split the raw markdown here so the wheel diagram can sit inside the essay,
+// directly under it, rather than only before/after the whole block.
+const MEETS_WORLD_HEADING = "**Your Bearing meets the world**";
 
 const SITE = "https://tarotalmanac.com";
 
@@ -52,7 +58,11 @@ export default async function BearingPage({
   const prevIndex = (majorIndex + 21) % 22;
   const nextIndex = (majorIndex + 1) % 22;
 
-  const html = await renderMarkdown(card.bearingReading);
+  const splitAt = card.bearingReading.indexOf(MEETS_WORLD_HEADING);
+  const hasSplit = splitAt !== -1;
+  const beforeGap = hasSplit ? card.bearingReading.slice(0, splitAt + MEETS_WORLD_HEADING.length) : card.bearingReading;
+  const afterGap = hasSplit ? card.bearingReading.slice(splitAt + MEETS_WORLD_HEADING.length) : "";
+  const [htmlBefore, htmlAfter] = await Promise.all([renderMarkdown(beforeGap), renderMarkdown(afterGap)]);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -97,7 +107,13 @@ export default async function BearingPage({
 
       <section className="face gift">
         <div className="face-head"><h2>Your Bearing is {card.name}</h2><span className="tag">{card.numberLabel}</span></div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
+        {hasSplit && (
+          <div className="cycle-gap">
+            <TarotCycleGap bearingIndex={majorIndex} />
+          </div>
+        )}
+        <div dangerouslySetInnerHTML={{ __html: htmlAfter }} />
       </section>
 
       <aside className="almanac">
