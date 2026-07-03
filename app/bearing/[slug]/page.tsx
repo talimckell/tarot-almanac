@@ -107,7 +107,7 @@ export default async function BearingPage({
           {` ${card.name}`} Bearing differently than it meets any other. It is where you begin.
         </p>
         <p className="dates">
-          <Link href="/today">See today&rsquo;s card</Link> · <Link href="/bearing">Find your Bearing</Link>
+          <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/chart">See your natal chart</Link>
         </p>
       </aside>
 
