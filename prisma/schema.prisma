@@ -38,7 +38,8 @@ model Profile {
   // row — it's computed live from birthDate.
   ownChartPurchasedPaymentIntentId String?
 
-  savedCharts SavedChart[]
+  savedCharts     SavedChart[]
+  monthlyReadings MonthlyReading[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -69,4 +70,37 @@ model SavedChart {
   updatedAt DateTime @updatedAt
 
   @@index([ownerId])
+}
+
+// The monthly reading: one per (account holder, calendar month), ever. Personal only —
+// there is no equivalent for a SavedChart, since the living almanac can't be generated
+// for anyone but the account holder (see MONTHLY_READING_BUILD_BRIEF.md's hard boundaries).
+// Generated lazily the first time an open month (current, or current+1 if a subscriber
+// looks ahead) is requested; the row is then terminal — "ready" or "failed" — and is
+// never regenerated, matching the no-regen/one-call-per-month cost model.
+model MonthlyReading {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  month String // "YYYY-MM"
+
+  status String // "ready" | "failed" — terminal; a failed generation is never retried
+  // automatically (that would defeat the one-call cost cap). A human clears it manually.
+
+  // Set only when status = "ready": the AI's six prose slots, keyed exactly to
+  // MONTHLY_READING_PROMPT_v1.md's OUTPUT CONTRACT (framing, cycleLine, weekTextures,
+  // circledNotes, woven, reflections, evenMonthNote).
+  sections Json?
+
+  // Set only when status = "failed" — "api_error" | "parse_error" | "voice_gate", so a
+  // real error and a held-for-review voice-gate failure can be told apart later.
+  failureReason String?
+  // The raw generation that failed the voice gate (banned tokens), kept for owner
+  // review since there's no regen to just try again — same shape as `sections` would be.
+  heldSections Json?
+
+  createdAt DateTime @default(now())
+
+  @@unique([profileId, month])
 }

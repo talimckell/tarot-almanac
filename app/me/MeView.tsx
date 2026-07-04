@@ -223,7 +223,10 @@ export default function MeView({
       </div>
 
       {monthMajor !== null ? (
-        <Link className={styles.monthBand} href={`/tarot/${MAJOR_SLUGS[monthMajor]}`}>
+        <Link
+          className={styles.monthBand}
+          href={profile.subscribed ? `/me/reading/${monthSlug}` : `/tarot/${MAJOR_SLUGS[monthMajor]}`}
+        >
           <div className={styles.mbGlyph} style={{ color: `var(--${ELEMENT_BY_MAJOR[monthMajor]})` }}>
             <svg width="40" height="40" aria-hidden="true">
               <use href={`#${majorGlyphId(monthMajor)}`} />
@@ -235,7 +238,7 @@ export default function MeView({
             </div>
             <div className={styles.mbCard}>{MAJORS[monthMajor]}</div>
           </div>
-          <div className={styles.mbCta}>Read the card &rarr;</div>
+          <div className={styles.mbCta}>{profile.subscribed ? "Read this month" : "Read the card"} &rarr;</div>
         </Link>
       ) : (
         <a className={styles.monthBand} href="#your-details">
