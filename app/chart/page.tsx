@@ -17,6 +17,7 @@ import { formatLongDate } from "@/lib/almanac";
 import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
 import ReadCard from "./ReadCard";
+import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
 import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
 import styles from "./page.module.css";
 
@@ -135,9 +136,9 @@ export default async function ChartPage({
                   Your full chart, plus charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
                 <form action={startSubscriptionCheckout}>
-                  <button type="submit" className={styles.buy}>
+                  <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Subscribe
-                  </button>
+                  </CheckoutSubmitButton>
                 </form>
               </div>
               <div className={`${styles.opt} ${styles.secondary}`}>
@@ -147,9 +148,9 @@ export default async function ChartPage({
                 </div>
                 <div className={styles.what}>Unlock this one natal chart to read and keep. No subscription.</div>
                 <form action={startOwnChartCheckout}>
-                  <button type="submit" className={styles.buy}>
+                  <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Buy my chart
-                  </button>
+                  </CheckoutSubmitButton>
                 </form>
               </div>
             </div>
@@ -170,9 +171,9 @@ export default async function ChartPage({
                   Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
                 <form action={startSubscriptionCheckout}>
-                  <button type="submit" className={styles.buy}>
+                  <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Subscribe
-                  </button>
+                  </CheckoutSubmitButton>
                 </form>
               </div>
             </div>

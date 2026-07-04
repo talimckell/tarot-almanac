@@ -22,6 +22,7 @@ import {
 import { suitGlyphId, majorGlyphId } from "@/lib/pips";
 import { updateProfile, createChart, createGiftChartCheckout, signOutAction } from "./actions";
 import { startSubscriptionCheckout } from "../chart/checkoutActions";
+import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
 import DeleteAccountForm from "./DeleteAccountForm";
 import styles from "./MeView.module.css";
 
@@ -331,9 +332,9 @@ export default function MeView({
                 Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
               </div>
               <form action={startSubscriptionCheckout}>
-                <button type="submit" className={styles.buy}>
+                <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                   Subscribe
-                </button>
+                </CheckoutSubmitButton>
               </form>
             </div>
             <div className={`${styles.opt} ${styles.secondary}`}>
@@ -351,9 +352,9 @@ export default function MeView({
                   <label className={styles.fieldLabel} htmlFor="giftChartBirthday">Birthday</label>
                   <input id="giftChartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
                 </div>
-                <button type="submit" className={styles.buy}>
+                <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                   Buy this chart
-                </button>
+                </CheckoutSubmitButton>
               </form>
             </div>
           </div>
