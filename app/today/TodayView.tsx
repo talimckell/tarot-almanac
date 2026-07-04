@@ -268,18 +268,21 @@ export default function TodayView({
         </div>
       )}
 
-      {birthday && pCard && (
-        <div className={styles.contextPair}>
-          <div>
-            <div className={styles.contextRow}>
-              <span className={styles.rowLbl}>Collective Month</span>
-              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CM]}`}>{MAJORS[CM]}</Link>
-            </div>
-            <div className={`${styles.contextRow} ${styles.contextDivider}`}>
-              <span className={styles.rowLbl}>Collective Year</span>
-              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CY]}`}>{MAJORS[CY]}</Link>
-            </div>
+      {/* Collective Month/Year are non-personal and always shown when the day is open.
+          The personal Month/Year sit beside them only when a personal card is present;
+          without one, the box collapses to a single full-width collective column. */}
+      <div className={pCard ? styles.contextPair : `${styles.contextPair} ${styles.contextSolo}`}>
+        <div>
+          <div className={styles.contextRow}>
+            <span className={styles.rowLbl}>Collective Month</span>
+            <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CM]}`}>{MAJORS[CM]}</Link>
           </div>
+          <div className={`${styles.contextRow} ${styles.contextDivider}`}>
+            <span className={styles.rowLbl}>Collective Year</span>
+            <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CY]}`}>{MAJORS[CY]}</Link>
+          </div>
+        </div>
+        {pCard && (
           <div className={styles.colPersonalCtx}>
             <div className={styles.contextRow}>
               <span className={styles.rowLbl}>Your Month</span>
@@ -290,8 +293,8 @@ export default function TodayView({
               <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PY]}`}>{MAJORS[PY]}</Link>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {pCard && (
         <div className={styles.bearing}>
