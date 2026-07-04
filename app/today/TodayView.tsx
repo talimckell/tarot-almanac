@@ -294,6 +294,7 @@ export default function TodayView({
         <ShareButton
           imagePath={shareImagePath}
           pagePath={sharePagePath}
+          linkPath="/today"
           title={shareTitle}
           text={shareText}
         />

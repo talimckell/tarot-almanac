@@ -11,11 +11,13 @@ import styles from "./TodayView.module.css";
 export default function ShareButton({
   imagePath,
   pagePath,
+  linkPath,
   title,
   text,
 }: {
   imagePath: string; // same-origin path to the PNG, so it can be fetched without CORS
-  pagePath: string; // the /share landing page, used as the link-share fallback
+  pagePath: string; // the /share landing page, used as the no-file link-share fallback
+  linkPath: string; // where the shared image should point back to (the live /today)
   title: string;
   text: string;
 }) {
@@ -57,9 +59,14 @@ export default function ShareButton({
         // network hiccup — fall through to the link share
       }
 
+      // Attach the link back to /today alongside the image. Targets that honor a url with
+      // files (Android, Messages) surface a tappable link; image-only targets ignore it,
+      // which is why the card also prints the URL. canShare gates on files only — some
+      // browsers reject the whole payload if asked about a url they won't use with files.
+      const linkUrl = new URL(linkPath, location.origin).href;
       if (file && navigator.canShare?.({ files: [file] })) {
         try {
-          await navigator.share({ files: [file], title, text });
+          await navigator.share({ files: [file], title, text, url: linkUrl });
           return;
         } catch (err) {
           if ((err as Error).name === "AbortError") return; // user dismissed the sheet
