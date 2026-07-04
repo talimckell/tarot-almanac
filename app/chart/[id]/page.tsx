@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import ShareImageButton from "../../components/ShareImageButton";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import {
@@ -61,6 +62,10 @@ export default async function ChartPersonPage({
   const steps = bearingStepsWord(chart.bearing.major);
   const repeat = findRepeatedMajor(chart);
 
+  const shareQ = new URLSearchParams({ by: String(by), bm: String(bm), bd: String(bd), n: saved.name });
+  const chartShareImg = `/chart/share/image?${shareQ}`;
+  const chartSharePage = `/chart/share?${shareQ}`;
+
   return (
     <>
       <SiteNav current="me" />
@@ -76,6 +81,14 @@ export default async function ChartPersonPage({
           </p>
           <div className={styles.ownerActions}>
             <Link href={`/gift/${saved.shareToken}`}>Share this chart</Link>
+            <ShareImageButton
+              imagePath={chartShareImg}
+              pagePath={chartSharePage}
+              linkPath="/chart"
+              title={`${saved.name}'s natal chart`}
+              text={`${saved.name}'s natal chart · The Tarot Almanac`}
+              label="Share as image"
+            />
             <form action={removeChart} style={{ display: "inline" }}>
               <input type="hidden" name="id" value={saved.id} />
               <button type="submit">Remove</button>

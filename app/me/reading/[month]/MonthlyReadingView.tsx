@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { MonthlyPackage } from "@/lib/monthlyReading";
 import type { MonthlyReadingSections } from "@/lib/monthlyReadingPrompt";
 import { majorGlyphId, suitGlyphId } from "@/lib/pips";
+import ShareImageButton from "../../../components/ShareImageButton";
 import styles from "./MonthlyReadingView.module.css";
 
 // Ships verbatim per MONTHLY_READING_BUILD_BRIEF.md hard rule #4 ("Disclosed").
@@ -13,17 +14,28 @@ const SUPPORT_NOTE =
 
 export default function MonthlyReadingView({
   name,
+  monthSlug,
+  bm,
+  bd,
   pkg,
   status,
   sections,
 }: {
   name: string | null;
+  monthSlug: string;
+  bm: number;
+  bd: number;
   pkg: MonthlyPackage;
   status: "ready" | "failed";
   sections: MonthlyReadingSections | null;
 }) {
   const { monthCard, weeks, circledDates } = pkg;
   const wovenParagraphs = sections?.woven.split(/\n\s*\n/).filter(Boolean) ?? [];
+
+  const shareQ = new URLSearchParams({ bm: String(bm), bd: String(bd) });
+  if (name) shareQ.set("n", name);
+  const shareImg = `/me/reading/${monthSlug}/share/image?${shareQ}`;
+  const sharePage = `/me/reading/${monthSlug}/share?${shareQ}`;
 
   return (
     <div className={styles.wrap}>
@@ -35,6 +47,16 @@ export default function MonthlyReadingView({
         <span className={styles.eyebrow}>Your Month</span>
         <h1>{pkg.monthLabel}</h1>
         {name && <p className={styles.who}>for {name}</p>}
+        <div style={{ marginTop: 16 }}>
+          <ShareImageButton
+            imagePath={shareImg}
+            pagePath={sharePage}
+            linkPath="/me"
+            title={`${name ? `${name}'s` : "My"} card for ${pkg.monthLabel}`}
+            text={`${monthCard.name} · The Tarot Almanac`}
+            label="Share this month's card"
+          />
+        </div>
       </div>
 
       {sections ? (

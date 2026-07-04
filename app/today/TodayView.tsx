@@ -30,7 +30,7 @@ import { getCollectiveReading } from "@/lib/collectiveReadings";
 import { getPersonalReading } from "@/lib/personalReadings";
 import PipGrid from "./PipGrid";
 import MoonGlyph from "./MoonGlyph";
-import ShareButton from "./ShareButton";
+import ShareImageButton from "../components/ShareImageButton";
 import styles from "./TodayView.module.css";
 
 function minorSlug(card: DayCard): string {
@@ -291,12 +291,14 @@ export default function TodayView({
       )}
 
       <div className={styles.actions}>
-        <ShareButton
+        <ShareImageButton
           imagePath={shareImagePath}
           pagePath={sharePagePath}
           linkPath="/today"
           title={shareTitle}
           text={shareText}
+          className={styles.btn}
+          label="Share today"
         />
         <Link className={`${styles.btn} ${styles.btnSolid}`} href="/me">Keep your days</Link>
       </div>

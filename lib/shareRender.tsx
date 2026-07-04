@@ -3,10 +3,13 @@
 // `display: "flex"` explicitly and doesn't resolve <use href>/currentColor the way a
 // browser does, so glyphs get their color substituted at render time and every
 // container below is written flex-first, unlike the rest of the app's plain-CSS style.
-import { createElement } from "react";
+import { createElement, type ReactNode } from "react";
 import { getGlyph } from "./shareGlyph";
 import { pipRows, suitGlyphId } from "./pips";
 import type { DayCard } from "./almanac";
+
+export const WIDTH = 1200;
+export const HEIGHT = 630;
 
 export const COLORS = {
   stone: "#f6f2eb",
@@ -109,10 +112,99 @@ export function ShareFooter({ cta, left }: { cta: string; left?: string }) {
           fontFamily: "Lato",
           fontSize: 22,
           color: COLORS.label,
+          whiteSpace: "nowrap",
         }}
       >
         {cta}
       </span>
+    </div>
+  );
+}
+
+// The 1200x630 frame every share card shares: stone field, a content region, and the
+// footer. Children own their own layout inside the flex:1 content region — a centered
+// FeaturedCard for the affirmation surfaces, a bespoke grid for the chart.
+export function ShareCanvas({
+  children,
+  footerLeft,
+  cta,
+}: {
+  children: ReactNode;
+  footerLeft?: string;
+  cta: string;
+}) {
+  return (
+    <div
+      style={{
+        width: WIDTH,
+        height: HEIGHT,
+        display: "flex",
+        flexDirection: "column",
+        background: COLORS.stone,
+        padding: "40px 60px",
+      }}
+    >
+      <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>{children}</div>
+      <ShareFooter left={footerLeft} cta={cta} />
+    </div>
+  );
+}
+
+// The centered hero used by today/bearing/monthly: an eyebrow, a glyph (minor pips or a
+// Major glyph, passed in), the card name, and — optionally — the card's authored
+// affirmation. Sizes are the ones tuned on the today card.
+export function FeaturedCard({
+  eyebrow,
+  glyph,
+  title,
+  body,
+}: {
+  eyebrow: string;
+  glyph: ReactNode;
+  title: string;
+  body?: string;
+}) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        flex: 1,
+        gap: 22,
+        textAlign: "center",
+      }}
+    >
+      <span
+        style={{
+          fontFamily: "Lato",
+          fontSize: 26,
+          letterSpacing: 3,
+          textTransform: "uppercase",
+          color: COLORS.label,
+        }}
+      >
+        {eyebrow}
+      </span>
+      {glyph}
+      <span style={{ fontFamily: "Cormorant", fontSize: 64, lineHeight: 1.02, color: COLORS.ink, whiteSpace: "nowrap" }}>
+        {title}
+      </span>
+      {body ? (
+        <span
+          style={{
+            fontFamily: "Cormorant",
+            fontSize: 34,
+            lineHeight: 1.34,
+            color: COLORS.charcoal,
+            textAlign: "center",
+            maxWidth: 940,
+          }}
+        >
+          {body}
+        </span>
+      ) : null}
     </div>
   );
 }

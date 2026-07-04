@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
+import ShareImageButton from "../components/ShareImageButton";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import {
@@ -71,6 +72,11 @@ export default async function ChartPage({
   const [bearingReading, ...otherReadings] = readings;
   const repeat = findRepeatedMajor(chart);
 
+  const shareQ = new URLSearchParams({ by: String(by), bm: String(bm), bd: String(bd) });
+  if (profile.name) shareQ.set("n", profile.name);
+  const chartShareImg = `/chart/share/image?${shareQ}`;
+  const chartSharePage = `/chart/share?${shareQ}`;
+
   return (
     <>
       <SiteNav current="me" />
@@ -79,6 +85,16 @@ export default async function ChartPage({
           <span className={styles.eyebrow}>Your Tarot Natal Chart</span>
           <h1>The self you came in as</h1>
           <p className={styles.bornline}>Born {formatLongDate(by, bm, bd)}</p>
+          <div style={{ marginTop: 16 }}>
+            <ShareImageButton
+              imagePath={chartShareImg}
+              pagePath={chartSharePage}
+              linkPath="/chart"
+              title={profile.name ? `${profile.name}'s natal chart` : "My natal chart"}
+              text="My natal chart · The Tarot Almanac"
+              label="Share my chart"
+            />
+          </div>
         </div>
 
         <ChartDiagram chart={chart} unlocked={unlocked} columnLabel="You" they={false} />

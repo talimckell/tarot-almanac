@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { mod22, MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "@/lib/almanac";
+import ShareImageButton from "../components/ShareImageButton";
 import styles from "./page.module.css";
 
 const MONTHS = [
@@ -54,6 +55,16 @@ export default function BearingFinder() {
           <Link className={styles.rlink} href={`/bearing/${MAJOR_SLUGS[result]}`}>
             Read your Bearing &rarr;
           </Link>
+          <div style={{ marginTop: 14 }}>
+            <ShareImageButton
+              imagePath={`/bearing/${MAJOR_SLUGS[result]}/share/image`}
+              pagePath={`/bearing/${MAJOR_SLUGS[result]}/share`}
+              linkPath="/bearing"
+              title={`My Bearing is ${MAJORS[result]}`}
+              text={`My Bearing is ${MAJORS[result]} · The Tarot Almanac`}
+              label="Share my Bearing"
+            />
+          </div>
         </div>
       )}
     </div>

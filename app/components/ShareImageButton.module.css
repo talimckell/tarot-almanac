@@ -1,0 +1,23 @@
+/* Default look for the share button when a caller doesn't pass its own className
+   (the today card passes its own .btn). A quiet indigo outline button in the site's
+   idiom. */
+.shareBtn {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 10px 22px;
+  border: 1px solid var(--indigo);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--indigo);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.shareBtn:hover {
+  background: var(--indigo);
+  color: var(--stone);
+}
+.shareBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

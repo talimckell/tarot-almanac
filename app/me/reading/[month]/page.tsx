@@ -77,6 +77,9 @@ export default async function MonthlyReadingPage({
       <SiteNav current="me" />
       <MonthlyReadingView
         name={profile.name}
+        monthSlug={month}
+        bm={bm}
+        bd={bd}
         pkg={record.pkg}
         status={record.status}
         sections={record.status === "ready" ? record.sections : null}

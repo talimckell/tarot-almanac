@@ -10,6 +10,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import ShareImageButton from "../../components/ShareImageButton";
 import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
 import { majorGlyphId } from "@/lib/pips";
@@ -128,6 +129,16 @@ export default async function BearingPage({
         <p className="dates">
           <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/chart">See your natal chart</Link>
         </p>
+        <div style={{ marginTop: 20 }}>
+          <ShareImageButton
+            imagePath={`/bearing/${card.slug}/share/image`}
+            pagePath={`/bearing/${card.slug}/share`}
+            linkPath="/bearing"
+            title={`The Bearing of ${card.name}`}
+            text={`The Bearing of ${card.name} · The Tarot Almanac`}
+            label="Share this Bearing"
+          />
+        </div>
       </aside>
 
       <section className="related">

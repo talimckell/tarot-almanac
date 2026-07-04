@@ -26,7 +26,9 @@ const ATTR_MAP: Record<string, string> = {
 
 function parseAttrs(attrString: string): Record<string, string> {
   const attrs: Record<string, string> = {};
-  const re = /([a-zA-Z-]+)="([^"]*)"/g;
+  // Attribute names can contain digits (x1, y1, x2, y2) — excluding them silently dropped
+  // every <line> coordinate, which is why line-based glyphs rendered blank.
+  const re = /([a-zA-Z][a-zA-Z0-9-]*)="([^"]*)"/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(attrString))) {
     attrs[ATTR_MAP[m[1]] ?? m[1]] = m[2];
@@ -34,7 +36,41 @@ function parseAttrs(attrString: string): Record<string, string> {
   return attrs;
 }
 
+const SHAPE_TAGS = new Set(["path", "circle", "line", "rect", "ellipse", "polygon", "polyline"]);
+
 let cache: Map<string, GlyphData> | null = null;
+
+// Some symbols wrap their shapes in a <g> that carries the shared presentation attributes
+// (stroke, stroke-width, ...). Walk the markup in order, keeping a stack of group attrs,
+// so each shape inherits them (its own attrs win). Without this, grouped glyphs — e.g. the
+// Star (ma-17) — parse as shapes with no stroke and render invisibly.
+function parseInner(inner: string): GlyphShape[] {
+  const shapes: GlyphShape[] = [];
+  const groupStack: Record<string, string>[] = [];
+  const tokenRe = /<(\/?)([a-zA-Z]+)((?:[^>"']|"[^"]*"|'[^']*')*?)(\/?)>/g;
+  let tk: RegExpExecArray | null;
+  while ((tk = tokenRe.exec(inner))) {
+    const [, closing, tag, attrString] = tk;
+    if (tag === "g") {
+      if (closing) groupStack.pop();
+      else groupStack.push(parseAttrs(attrString));
+      continue;
+    }
+    if (!SHAPE_TAGS.has(tag)) continue;
+    const merged: Record<string, string> = {};
+    for (const g of groupStack) Object.assign(merged, g);
+    Object.assign(merged, parseAttrs(attrString));
+    // Satori doesn't render <line> — rewrite each as an equivalent stroked <path> (which
+    // it does render). fill:none keeps the zero-area path from picking up a default fill.
+    if (tag === "line") {
+      const { x1, y1, x2, y2, ...rest } = merged;
+      shapes.push({ tag: "path", attrs: { d: `M${x1} ${y1} L${x2} ${y2}`, fill: "none", ...rest } });
+      continue;
+    }
+    shapes.push({ tag: tag as GlyphShape["tag"], attrs: merged });
+  }
+  return shapes;
+}
 
 function loadSprite(): Map<string, GlyphData> {
   if (cache) return cache;
@@ -44,14 +80,7 @@ function loadSprite(): Map<string, GlyphData> {
   let sm: RegExpExecArray | null;
   while ((sm = symbolRe.exec(svg))) {
     const [, id, viewBox, inner] = sm;
-    const shapes: GlyphShape[] = [];
-    const elRe = /<(path|circle|line|rect|ellipse|polygon|polyline)\s+([^>]*?)\/?>/g;
-    let em: RegExpExecArray | null;
-    while ((em = elRe.exec(inner))) {
-      const [, tag, attrString] = em;
-      shapes.push({ tag: tag as GlyphShape["tag"], attrs: parseAttrs(attrString) });
-    }
-    parsed.set(id, { viewBox, shapes });
+    parsed.set(id, { viewBox, shapes: parseInner(inner) });
   }
   cache = parsed;
   return parsed;

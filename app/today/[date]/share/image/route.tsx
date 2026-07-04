@@ -8,12 +8,9 @@ import { parseDateSlug, isDateOpenForViewer, type YMD } from "@/lib/today";
 import { collectiveDayCard, personalDayCard, formatLongDate, type DayCard } from "@/lib/almanac";
 import { getCardBySlug } from "@/lib/cards";
 import { loadShareFonts } from "@/lib/ogFonts";
-import { COLORS, elementColor, SharePips, ShareFooter } from "@/lib/shareRender";
+import { WIDTH, HEIGHT, COLORS, elementColor, SharePips, ShareCanvas, FeaturedCard } from "@/lib/shareRender";
 
 export const runtime = "nodejs";
-
-const WIDTH = 1200;
-const HEIGHT = 630;
 
 function serverNow(): YMD {
   const now = new Date();
@@ -90,56 +87,14 @@ export async function GET(request: Request, { params }: { params: Promise<{ date
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: WIDTH,
-          height: HEIGHT,
-          display: "flex",
-          flexDirection: "column",
-          background: COLORS.stone,
-          padding: "40px 60px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            flex: 1,
-            gap: 22,
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "Lato",
-              fontSize: 26,
-              letterSpacing: 3,
-              textTransform: "uppercase",
-              color: COLORS.label,
-            }}
-          >
-            {label}
-          </span>
-          <SharePips card={card} size={46} color={color} />
-          <span style={{ fontFamily: "Cormorant", fontSize: 64, lineHeight: 1.02, color: COLORS.ink, whiteSpace: "nowrap" }}>
-            {card.minorName}
-          </span>
-          <span
-            style={{
-              fontFamily: "Cormorant",
-              fontSize: 34,
-              lineHeight: 1.34,
-              color: COLORS.charcoal,
-              textAlign: "center",
-              maxWidth: 940,
-            }}
-          >
-            {affirmation}
-          </span>
-        </div>
-        <ShareFooter left={dateLabel} cta="Get your own at tarotalmanac.com" />
-      </div>
+      <ShareCanvas footerLeft={dateLabel} cta="Get your own at tarotalmanac.com">
+        <FeaturedCard
+          eyebrow={label}
+          glyph={<SharePips card={card} size={46} color={color} />}
+          title={card.minorName}
+          body={affirmation}
+        />
+      </ShareCanvas>
     ),
     { width: WIDTH, height: HEIGHT, fonts },
   );
