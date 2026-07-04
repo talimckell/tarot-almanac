@@ -4,7 +4,7 @@ import { getAllCards } from "../lib/cards";
 import { MAJOR_SLUGS } from "../lib/almanac";
 import { BLOG_POSTS } from "../lib/blog";
 import { allBirthdays, birthdaySlug } from "../lib/birthday";
-import { addDays, formatDateSlug, type YMD } from "../lib/today";
+import { addDays, formatDateSlug, addMonths, formatMonthSlug, type YMD } from "../lib/today";
 
 // Regenerate daily so the trailing date window keeps a fresh "today". A day of
 // staleness on a sitemap is harmless.
@@ -16,6 +16,11 @@ export const revalidate = 86400;
 // dates. Raise it to list more history directly. Future dates are never listed
 // (they're gated + noindex).
 const DATE_SITEMAP_DAYS_BACK = 365;
+
+// Collective month pages seeded into the sitemap: trailing window plus one ahead.
+// The prev/next stepper lets Google crawl deeper history; far-future months are
+// gated + noindex, so they're never listed.
+const MONTH_SITEMAP_MONTHS_BACK = 24;
 
 function serverNow(): YMD {
   const n = new Date();
@@ -79,6 +84,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // Collective month pages (public, indexable): the open window is past + current +
+  // one ahead, so seed a trailing window plus next month.
+  const nowYM = { y: now.y, m: now.m };
+  const monthEntries: MetadataRoute.Sitemap = [];
+  for (let i = -MONTH_SITEMAP_MONTHS_BACK; i <= 1; i++) {
+    const mo = addMonths(nowYM, i);
+    monthEntries.push({
+      url: `${SITE_URL}/month/${formatMonthSlug(mo)}`,
+      changeFrequency: "monthly",
+      priority: i === 0 ? 0.6 : 0.4,
+    });
+  }
+
   const blogEntries: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     changeFrequency: "monthly",
@@ -91,6 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bearingEntries,
     ...birthdayEntries,
     ...dateEntries,
+    ...monthEntries,
     ...blogEntries,
   ];
 }
