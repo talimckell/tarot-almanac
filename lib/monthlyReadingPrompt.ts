@@ -126,13 +126,13 @@ export const MONTHLY_READING_OUTPUT_SCHEMA = {
       type: "array",
       items: { type: "string" },
       description:
-        "One line per week, in order. Each phrases THAT week's opens/closes/dominantSuit into a felt texture. Short. No two weeks should sound the same. Do not restate the card names mechanically; render them.",
+        "A true JSON array with one STRING ELEMENT per week, in order (never a single string joined by newlines, never wrapped in <item> tags or any other markup). Each phrases THAT week's opens/closes/dominantSuit into a felt texture. Short. No two weeks should sound the same. Do not restate the card names mechanically; render them.",
     },
     circledNotes: {
       type: "array",
       items: { type: "string" },
       description:
-        "One line per circled date, in order, saying why THIS card returning matters, from the card's meaning. Empty array if circledDates was empty.",
+        "A true JSON array with one STRING ELEMENT per circled date, in order (never a single string joined by newlines, never wrapped in <item> tags or any other markup), saying why THIS card returning matters, from the card's meaning. Empty array if circledDates was empty.",
     },
     woven: {
       type: "string",
@@ -143,7 +143,7 @@ export const MONTHLY_READING_OUTPUT_SCHEMA = {
       type: "array",
       items: { type: "string" },
       description:
-        "3 questions. Each references something specific from THIS month's actual cards or shape (a week, a repeat, the bearing relationship). Open, not leading. No yes/no questions.",
+        "A true JSON array with 3 STRING ELEMENTS, one question each (never a single string joined by newlines, never wrapped in <item> tags or any other markup). Each references something specific from THIS month's actual cards or shape (a week, a repeat, the bearing relationship). Open, not leading. No yes/no questions.",
     },
     evenMonthNote: {
       type: "string",

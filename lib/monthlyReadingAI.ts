@@ -58,7 +58,9 @@ export async function generateMonthlyReading(pkg: MonthlyPackage): Promise<Month
     correction =
       result.failureReason === "voice_gate" && result.heldSections
         ? violationCorrection(flattenSections(result.heldSections))
-        : null;
+        : result.failureReason === "parse_error"
+          ? SHAPE_CORRECTION
+          : null;
   }
 
   return lastResult;
@@ -67,6 +69,27 @@ export async function generateMonthlyReading(pkg: MonthlyPackage): Promise<Month
 function violationCorrection(text: string): string {
   const violation = findVoiceViolation(text);
   return `Your previous attempt violated a hard voice rule (${violation}). Rewrite from scratch avoiding it entirely; do not just delete the word, restructure the sentence.`;
+}
+
+const SHAPE_CORRECTION =
+  "Your previous attempt returned one or more array fields (weekTextures, circledNotes, or reflections) as a single string instead of a true JSON array of strings. Return each of those fields as an actual array with one string per element, not a string joined by newlines or wrapped in tags.";
+
+// Observed in production: the model occasionally returns an array-of-strings field as
+// one string instead, joined by newlines or wrapped in ad-hoc <item> tags — a tool-use
+// formatting slip, not a content problem (the prose itself is usually fine). Coercing
+// it back into a real array here means that slip costs nothing instead of burning a
+// retry attempt; the length check right after this still catches genuinely wrong
+// content, so this only rescues the formatting, not bad substance.
+function coerceToArray(value: unknown): unknown {
+  if (Array.isArray(value)) return value;
+  if (typeof value !== "string") return value;
+  const tagged = [...value.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1].trim());
+  if (tagged.length > 0) return tagged;
+  const lines = value
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  return lines.length > 0 ? lines : value;
 }
 
 async function attemptGeneration(
@@ -105,7 +128,13 @@ async function attemptGeneration(
     return { status: "failed", failureReason: "parse_error" };
   }
 
-  const sections = toolUse.input as MonthlyReadingSections;
+  const rawSections = toolUse.input as MonthlyReadingSections;
+  const sections: MonthlyReadingSections = {
+    ...rawSections,
+    weekTextures: coerceToArray(rawSections.weekTextures) as MonthlyReadingSections["weekTextures"],
+    circledNotes: coerceToArray(rawSections.circledNotes) as MonthlyReadingSections["circledNotes"],
+    reflections: coerceToArray(rawSections.reflections) as MonthlyReadingSections["reflections"],
+  };
   const shapeOk =
     typeof sections.framing === "string" &&
     typeof sections.cycleLine === "string" &&
