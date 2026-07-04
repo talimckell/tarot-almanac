@@ -166,6 +166,15 @@ export default function TodayView({
     pCard ? ` Mine: ${pCard.minorName}.` : " "
   } · The Tarot Almanac`;
 
+  const shareImageParams = new URLSearchParams();
+  if (birthday) {
+    shareImageParams.set("bm", String(birthday.bm));
+    shareImageParams.set("bd", String(birthday.bd));
+    if (name) shareImageParams.set("n", name);
+  }
+  const shareImageQuery = shareImageParams.toString();
+  const shareImageHref = `/today/${formatDateSlug(target)}/share${shareImageQuery ? `?${shareImageQuery}` : ""}`;
+
   return (
     <div className={styles.wrap}>
       {header}
@@ -278,6 +287,7 @@ export default function TodayView({
 
       <div className={styles.actions}>
         <ShareButton text={shareText} />
+        <Link className={styles.btn} href={shareImageHref}>Share image</Link>
         <Link className={`${styles.btn} ${styles.btnSolid}`} href="/me">Keep your days</Link>
       </div>
     </div>
