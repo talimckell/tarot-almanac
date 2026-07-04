@@ -6,6 +6,14 @@
 // request, from either window, serves the same stored copy. No cron job, no wasted calls
 // on months nobody opens, and peeking ahead naturally "pre-warms" next month by the time
 // it rolls over. See MONTHLY_READING_BUILD_BRIEF.md's cost model and hard rule #3.
+//
+// Claim-before-generate: a bare check-then-create left a real race (observed in
+// production — two near-simultaneous requests, e.g. a browser prefetch plus the actual
+// click, both saw "no row" and both paid for the AI call before either could write the
+// unique constraint). Now the row is claimed with status "pending" BEFORE the AI call,
+// so a second concurrent request sees "pending" and waits for the first to finish
+// instead of generating again — the one-call guarantee holds under real concurrency,
+// not just against duplicate writes.
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { type YM, formatMonthSlug } from "./today";
@@ -31,38 +39,54 @@ export async function getOrCreateMonthlyReading(
   const existing = await prisma.monthlyReading.findUnique({
     where: { profileId_month: { profileId, month: monthSlug } },
   });
-  if (existing) return toRecord(existing, pkg);
-
-  const result = await generateMonthlyReading(pkg);
+  if (existing) {
+    if (existing.status === "pending") return waitForPending(profileId, monthSlug, pkg);
+    return toRecord(existing, pkg);
+  }
 
   try {
-    const row = await prisma.monthlyReading.create({
-      data:
-        result.status === "ready"
-          ? { profileId, month: monthSlug, status: "ready", sections: result.sections as unknown as Prisma.InputJsonValue }
-          : {
-              profileId,
-              month: monthSlug,
-              status: "failed",
-              failureReason: result.failureReason,
-              heldSections: result.heldSections
-                ? (result.heldSections as unknown as Prisma.InputJsonValue)
-                : undefined,
-            },
-    });
-    return toRecord(row, pkg);
+    await prisma.monthlyReading.create({ data: { profileId, month: monthSlug, status: "pending" } });
   } catch (err) {
-    // Unique-constraint race: a second tab or double click generated first. Serve
-    // whatever that request stored instead of generating (and paying for) a second
-    // call — this is the one-call guarantee holding under concurrency.
     if (err instanceof Prisma.PrismaClientKnownRequestError && err.code === "P2002") {
-      const winner = await prisma.monthlyReading.findUnique({
-        where: { profileId_month: { profileId, month: monthSlug } },
-      });
-      if (winner) return toRecord(winner, pkg);
+      return waitForPending(profileId, monthSlug, pkg);
     }
     throw err;
   }
+
+  const result = await generateMonthlyReading(pkg);
+  const row = await prisma.monthlyReading.update({
+    where: { profileId_month: { profileId, month: monthSlug } },
+    data:
+      result.status === "ready"
+        ? { status: "ready", sections: result.sections as unknown as Prisma.InputJsonValue }
+        : {
+            status: "failed",
+            failureReason: result.failureReason,
+            heldSections: result.heldSections
+              ? (result.heldSections as unknown as Prisma.InputJsonValue)
+              : undefined,
+          },
+  });
+  return toRecord(row, pkg);
+}
+
+// Polls the row another request already claimed. If it's still "pending" after ~5s
+// (the claimant crashed mid-generation, or is just slow), this response degrades to
+// the support-line fallback WITHOUT writing anything — the claimant's own write lands
+// independently, so the next reload (including a reload of this same page) sees it.
+async function waitForPending(
+  profileId: string,
+  monthSlug: string,
+  pkg: MonthlyPackage
+): Promise<MonthlyReadingRecord> {
+  for (let i = 0; i < 10; i++) {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    const row = await prisma.monthlyReading.findUnique({
+      where: { profileId_month: { profileId, month: monthSlug } },
+    });
+    if (row && row.status !== "pending") return toRecord(row, pkg);
+  }
+  return { status: "failed", pkg };
 }
 
 function toRecord(

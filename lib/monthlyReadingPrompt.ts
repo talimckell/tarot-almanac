@@ -30,6 +30,10 @@ THE VOICE RULES (these are hard; violating them fails the reading)
 - Avoid this AI vocabulary: delve, tapestry, testament, navigate (figurative), realm, landscape
   (figurative), underscore, leverage, robust, nuanced, multifaceted, crucial, vital, elevate, curated,
   boasts, treasure trove, seamless, vibrant, compelling.
+- The reference material below (the card's essence and this-month reading) was written by a human
+  under different rules and may itself contain a banned word, most often "actually." That word being
+  in the source does not license you to use it. Never copy a banned word out of the reference text into
+  your own sentences, even when echoing its idea; paraphrase around it instead.
 
 WHAT IS TRUE AND WHAT YOU MUST NOT CONTRADICT
 - The cards are fixed by arithmetic. Never imply they were drawn, chosen, or shuffled.
