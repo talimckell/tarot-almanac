@@ -2,7 +2,7 @@
 
 **The Tarot Almanac**
 Effective date: July 3, 2026
-Last updated: July 3, 2026
+Last updated: July 4, 2026
 
 Welcome to The Tarot Almanac (tarotalmanac.com, the "Service"), operated by Tali Beesley, a sole proprietor doing business as The Tarot Almanac ("we," "us," "our"). By creating an account or using the Service, you agree to these Terms of Service ("Terms"). If you don't agree, please don't use the Service.
 
@@ -57,7 +57,7 @@ A paid subscription ($7/month, or as otherwise displayed at checkout) unlocks un
 Certain content is available as a one-time purchase instead of a subscription (for example, a $12 one-time natal chart unlock, or individual AI-synthesized deep readings). One-time purchases are charged once, at the time of purchase, and do not renew.
 
 ### 5.4 AI-synthesized readings
-AI-synthesized deep readings are generated on request and charged per generation, including for subscribers (typically at a reduced rate), because each generation has a real, ongoing compute cost to us. These are clearly labeled as AI-generated interpretive content, distinct from the deterministic chart math, which is never AI-generated.
+Some readings include an AI-synthesized interpretive layer generated on request. Certain AI readings are **included** in a subscription (for example, your monthly reading), while others — such as one-off AI-synthesized deep readings — are **charged per generation**, including for subscribers (typically at a reduced rate), because each generation has a real, ongoing compute cost to us. Which readings are included versus charged is shown before you generate or purchase them. All AI readings are clearly labeled as AI-generated interpretive content, distinct from the deterministic chart math, which is never AI-generated.
 
 ### 5.5 Payment processing
 All payments are processed by Stripe. We do not store your full payment card details. Billing disputes related to card charges should first be raised with us at support@tarotalmanac.com; we'll work with Stripe as needed to resolve them.

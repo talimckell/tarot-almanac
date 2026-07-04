@@ -2,7 +2,7 @@
 
 **The Tarot Almanac**
 Effective date: July 3, 2026
-Last updated: July 3, 2026
+Last updated: July 4, 2026
 
 This Privacy Policy explains what personal information The Tarot Almanac ("we," "us," "our," "the Almanac") collects when you use tarotalmanac.com (the "Service"), how we use it, who we share it with, and the choices you have. It's written to be actually readable, in keeping with how the rest of the site works: if something here is unclear, privacy@tarotalmanac.com gets you a real answer.
 
@@ -52,6 +52,7 @@ We use the information above to:
 
 - Create and maintain your account
 - Calculate and display your Bearing, natal chart, and daily/monthly/yearly readings
+- Generate the AI-synthesized interpretive layer of certain readings (such as the monthly reading) through our AI provider, Anthropic. To do this we send Anthropic only the *derived* results of the math (card names, elements, and the relevant dates) — never your name, birth date, or email
 - Process subscription payments and one-off purchases through Stripe
 - Send you transactional emails (magic-link sign-in, receipts, service notices) through our email provider, Resend
 - Maintain your saved chart library
@@ -72,7 +73,10 @@ We share information with the following categories of service providers (sometim
 | **Vercel** | Application hosting | Server logs, IP addresses (incidental to hosting) |
 | **Stripe** | Payment processing | Payment details, billing contact info |
 | **Resend** | Transactional email delivery | Email address, message content (magic links, receipts) |
+| **Anthropic** | AI-synthesized reading generation | Derived reading data only (card names, elements, and relevant dates) — no name, birth date, or email |
 | **Google (Analytics, Search Console)** | Site analytics and search indexing (planned) | Device/behavior data (Analytics only); no personal data (Search Console) |
+
+Anthropic processes the data we send only to generate the reading text we request; it does not use API inputs to train its models.
 
 We do not share your information with third parties for their own marketing purposes, and we do not sell it.
 
@@ -82,7 +86,7 @@ We may disclose information if required by law, to protect the rights or safety 
 
 ## 5. International data transfers
 
-Because Supabase, Vercel, Stripe, Resend, and Google may process data outside your home country, your information may be transferred internationally. Each of these providers maintains its own compliance mechanisms for cross-border transfers (such as Standard Contractual Clauses for EU data). If you're in the EU/UK and want details on a specific provider's transfer mechanism, contact us.
+Because Supabase, Vercel, Stripe, Resend, Anthropic, and Google may process data outside your home country, your information may be transferred internationally. Each of these providers maintains its own compliance mechanisms for cross-border transfers (such as Standard Contractual Clauses for EU data). If you're in the EU/UK and want details on a specific provider's transfer mechanism, contact us.
 
 ---
 
