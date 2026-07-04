@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import IconSprite from "./components/IconSprite";
+import CookieConsent from "./components/CookieConsent";
 import { SITE_URL } from "../lib/site";
 import "./globals.css";
 import "./card-page.css";
 
-// Set once, from the environment, so GA loads only when configured (never in
-// local dev unless you opt in). Add NEXT_PUBLIC_GA_ID in Vercel to enable it.
+// Set once, from the environment, so GA is available only when configured (never in
+// local dev unless you opt in). Add NEXT_PUBLIC_GA_ID in Vercel to enable it. Even
+// when set, GA loads only after the visitor accepts in the consent banner.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const cormorant = Cormorant({
@@ -68,8 +69,8 @@ export default function RootLayout({
       <body>
         <IconSprite />
         {children}
+        {GA_ID ? <CookieConsent gaId={GA_ID} /> : null}
       </body>
-      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }

@@ -36,13 +36,14 @@ If you save a chart for someone else (a partner, parent, friend, child) using ou
 - **Birthday cookie.** If you use the time-travel / personal-reading link format (URLs with a `?b=` birth date parameter), we set a cookie storing that birth date for about a year, so the personalized reading persists across visits without requiring an account. This is set even if you're not logged in.
 - **Session cookies.** Our authentication provider (Supabase) sets cookies necessary to keep you logged in.
 - **Payment flow cookies.** Stripe sets cookies during checkout to process your payment securely.
+- **Analytics consent cookie.** When you respond to our analytics banner, we store your choice in a first-party cookie (`ta_analytics_consent`) for about a year, so we don't ask again on every visit. This cookie holds only your yes/no answer and is set regardless of which way you answer.
 - **Server logs.** Like most web services, our hosting provider (Vercel) automatically logs basic technical information (IP address, browser type, request timing) for security and reliability purposes.
 
-### 2.4 Analytics (planned)
+### 2.4 Analytics
 
-We plan to add **Google Analytics** to understand site usage. Once live, Google Analytics will set cookies (typically `_ga` / `_gid`) and collect information such as your IP address, device type, and on-site behavior, which is sent to Google. We'll update this policy and, where required by your location (including the EU, UK, and California), provide a cookie consent mechanism before this is active.
+We use **Google Analytics** to understand site usage, but **only if you allow it**. Google Analytics is off by default: it loads nothing and sets no cookies until you accept it in the consent banner shown on your first visit. This is the case everywhere, not just in regions that require it. If you accept, Google Analytics sets cookies (typically `_ga` / `_gid`) and collects information such as your IP address, device type, and on-site behavior, which is sent to Google. If you decline (or ignore the banner), Google Analytics never loads and the site works exactly the same. You can withdraw consent at any time by clearing your cookies, which resets the banner.
 
-We may also use **Google Search Console**, which reads publicly available crawl and search-ranking data about our site. It does not collect personal information about individual visitors.
+We also use **Google Search Console**, which reads publicly available crawl and search-ranking data about our site. It does not collect personal information about individual visitors and does not depend on your analytics choice.
 
 ---
 
@@ -57,7 +58,7 @@ We use the information above to:
 - Send you transactional emails (magic-link sign-in, receipts, service notices) through our email provider, Resend
 - Maintain your saved chart library
 - Keep the Service secure and working correctly
-- Understand aggregate usage patterns (once analytics is live) to improve the Service
+- Understand aggregate usage patterns, using Google Analytics where you've consented to it, to improve the Service
 
 We do not use your birth date or chart data to make automated decisions that produce legal or similarly significant effects on you, and we do not sell your personal information.
 
@@ -74,7 +75,7 @@ We share information with the following categories of service providers (sometim
 | **Stripe** | Payment processing | Payment details, billing contact info |
 | **Resend** | Transactional email delivery | Email address, message content (magic links, receipts) |
 | **Anthropic** | AI-synthesized reading generation | Derived reading data only (card names, elements, and relevant dates) — no name, birth date, or email |
-| **Google (Analytics, Search Console)** | Site analytics and search indexing (planned) | Device/behavior data (Analytics only); no personal data (Search Console) |
+| **Google (Analytics, Search Console)** | Site analytics (only with your consent) and search indexing | Device/behavior data (Analytics, only if you consent); no personal data (Search Console) |
 
 Anthropic processes the data we send only to generate the reading text we request; and, under its commercial terms, does not use the data we submit through the API to train its models.
 
@@ -102,7 +103,7 @@ The birthday cookie expires automatically after about a year, or you can clear i
 
 **Access, correction, deletion.** You can update your profile information (name, birth date) directly in your account settings. You can request deletion of your account and associated data at any time by contacting privacy@tarotalmanac.com or using the in-app delete option.
 
-**EU/UK (GDPR) residents.** You have the right to access, correct, delete, restrict, or port your personal data, and to object to certain processing. Our legal basis for processing your birth date and profile information is performance of a contract (providing the Service you signed up for); for optional analytics, it will be consent, once implemented.
+**EU/UK (GDPR) residents.** You have the right to access, correct, delete, restrict, or port your personal data, and to object to certain processing. Our legal basis for processing your birth date and profile information is performance of a contract (providing the Service you signed up for); for optional analytics, our legal basis is your consent, which you give (or withhold) through the analytics banner and can withdraw at any time.
 
 **California (CCPA/CPRA) residents.** You have the right to know what personal information we collect, request deletion, and opt out of "sale" or "sharing" of personal information. We do not sell personal information. To exercise these rights, contact privacy@tarotalmanac.com.
 
@@ -128,7 +129,7 @@ If you believe you've discovered a security vulnerability in the Service, please
 
 ## 10. Changes to this policy
 
-We may update this Privacy Policy as the Service evolves (for example, when Google Analytics goes live). We'll update the "Last updated" date above, and for material changes, we'll provide more prominent notice (such as an email or in-app notification).
+We may update this Privacy Policy as the Service evolves (for example, when we add a new sub-processor). We'll update the "Last updated" date above, and for material changes, we'll provide more prominent notice (such as an email or in-app notification).
 
 ---
 
