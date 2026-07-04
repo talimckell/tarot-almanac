@@ -124,15 +124,42 @@ export const MONTHLY_READING_OUTPUT_SCHEMA = {
     },
     weekTextures: {
       type: "array",
-      items: { type: "string" },
+      items: {
+        type: "object",
+        properties: {
+          week: {
+            type: "integer",
+            description: "The week's number, copied verbatim from that week's `n` in the input's weeks array (1, 2, 3...). Used to match this text to the right week, so it does not need to be in any particular order.",
+          },
+          text: {
+            type: "string",
+            description:
+              "Phrases THAT week's opens/closes/dominantSuit into a felt texture. Short. No two weeks should sound the same. Do not restate the card names mechanically; render them.",
+          },
+        },
+        required: ["week", "text"],
+      },
       description:
-        "A true JSON array with one STRING ELEMENT per week, in order (never a single string joined by newlines, never wrapped in <item> tags or any other markup). Each phrases THAT week's opens/closes/dominantSuit into a felt texture. Short. No two weeks should sound the same. Do not restate the card names mechanically; render them.",
+        "One object per week in the input's weeks array, each tagged with its own week number. Exactly one entry per week, no more, no fewer.",
     },
     circledNotes: {
       type: "array",
-      items: { type: "string" },
+      items: {
+        type: "object",
+        properties: {
+          card: {
+            type: "string",
+            description: "The exact card name this note is for, copied verbatim from one of the input's circledDates[].card values.",
+          },
+          note: {
+            type: "string",
+            description: "Says why THIS card returning matters, from the card's meaning.",
+          },
+        },
+        required: ["card", "note"],
+      },
       description:
-        "A true JSON array with one STRING ELEMENT per circled date, in order (never a single string joined by newlines, never wrapped in <item> tags or any other markup), saying why THIS card returning matters, from the card's meaning. Empty array if circledDates was empty.",
+        "One object per entry in the input's circledDates array, each tagged with its own card name. Empty array if circledDates was empty.",
     },
     woven: {
       type: "string",
@@ -154,6 +181,24 @@ export const MONTHLY_READING_OUTPUT_SCHEMA = {
   required: ["framing", "cycleLine", "weekTextures", "circledNotes", "woven", "reflections", "evenMonthNote"],
 };
 
+// The wire format the model actually returns (matches MONTHLY_READING_OUTPUT_SCHEMA):
+// weekTextures/circledNotes are keyed by identity (week number / card name) rather than
+// bare positional strings, so lib/monthlyReadingAI.ts can match by key instead of
+// trusting the model to return the exact right count in the exact right order — the
+// failure mode that kept tripping the plain-string-array version of this schema.
+export interface MonthlyReadingRawSections {
+  framing: string;
+  cycleLine: string;
+  weekTextures: { week: number; text: string }[];
+  circledNotes: { card: string; note: string }[];
+  woven: string;
+  reflections: string[];
+  evenMonthNote: string;
+}
+
+// The internal shape everything downstream of the AI call actually works with (the
+// store, the view, sanitizeSections/flattenSections below) — plain ordered string
+// arrays, already reconciled against pkg.weeks/pkg.circledDates by key.
 export interface MonthlyReadingSections {
   framing: string;
   cycleLine: string;

@@ -14,6 +14,7 @@ import {
   findVoiceViolation,
   flattenSections,
   sanitizeSections,
+  type MonthlyReadingRawSections,
   type MonthlyReadingSections,
 } from "./monthlyReadingPrompt";
 
@@ -30,7 +31,12 @@ export type MonthlyReadingResult =
   | {
       status: "failed";
       failureReason: "api_error" | "parse_error" | "voice_gate";
-      heldSections?: MonthlyReadingSections;
+      // Whatever raw/partial output was available at the point of failure, for owner
+      // diagnosis straight from the database — shape varies by failureReason (a
+      // parse_error's held value won't conform to MonthlyReadingSections, since the
+      // whole point is that it didn't parse). Absent for api_error: a failed network
+      // call has no model output to hold.
+      heldSections?: unknown;
     };
 
 // Words like "actually" are a natural pull in exactly this reading's content (telling a
@@ -58,7 +64,7 @@ export async function generateMonthlyReading(pkg: MonthlyPackage): Promise<Month
     );
     correction =
       result.failureReason === "voice_gate" && result.heldSections
-        ? violationCorrection(flattenSections(result.heldSections))
+        ? violationCorrection(flattenSections(result.heldSections as MonthlyReadingSections))
         : result.failureReason === "parse_error"
           ? SHAPE_CORRECTION
           : null;
@@ -73,24 +79,38 @@ function violationCorrection(text: string): string {
 }
 
 const SHAPE_CORRECTION =
-  "Your previous attempt returned one or more array fields (weekTextures, circledNotes, or reflections) as a single string instead of a true JSON array of strings. Return each of those fields as an actual array with one string per element, not a string joined by newlines or wrapped in tags.";
+  "Your previous attempt's weekTextures or circledNotes didn't match the required shape: an array of objects, each tagged with its week number (weekTextures) or exact card name (circledNotes), with exactly one entry per week/circled date given in the input. Return that exact keyed shape this time.";
 
-// Observed in production: the model occasionally returns an array-of-strings field as
-// one string instead, joined by newlines or wrapped in ad-hoc <item> tags — a tool-use
-// formatting slip, not a content problem (the prose itself is usually fine). Coercing
-// it back into a real array here means that slip costs nothing instead of burning a
-// retry attempt; the length check right after this still catches genuinely wrong
-// content, so this only rescues the formatting, not bad substance.
-function coerceToArray(value: unknown): unknown {
-  if (Array.isArray(value)) return value;
-  if (typeof value !== "string") return value;
-  const tagged = [...value.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1].trim());
-  if (tagged.length > 0) return tagged;
-  const lines = value
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
-  return lines.length > 0 ? lines : value;
+// Matches the model's keyed output (an array of {key, text} objects, in any order)
+// against the identities the deterministic package actually has (week numbers, or exact
+// circled-card names), so a wrong count or wrong order is recoverable and diagnosable —
+// "week 3 is missing" — rather than a bare "array length didn't match" failure that
+// throws away otherwise-good content for a formatting slip.
+function matchByKey<K>(
+  raw: unknown,
+  expectedKeys: K[],
+  getKey: (item: Record<string, unknown>) => unknown,
+  getText: (item: Record<string, unknown>) => unknown
+): { values: string[]; missing: K[] } {
+  const byKey = new Map<unknown, string>();
+  if (Array.isArray(raw)) {
+    for (const item of raw) {
+      if (item && typeof item === "object") {
+        const text = getText(item as Record<string, unknown>);
+        if (typeof text === "string") byKey.set(getKey(item as Record<string, unknown>), text);
+      }
+    }
+  }
+  const missing: K[] = [];
+  const values = expectedKeys.map((key) => {
+    const text = byKey.get(key);
+    if (typeof text !== "string") {
+      missing.push(key);
+      return "";
+    }
+    return text;
+  });
+  return { values, missing };
 }
 
 async function attemptGeneration(
@@ -125,32 +145,57 @@ async function attemptGeneration(
     (block): block is Anthropic.ToolUseBlock => block.type === "tool_use"
   );
   if (!toolUse) {
-    console.error("[monthly-reading] no tool_use block in response", response);
-    return { status: "failed", failureReason: "parse_error" };
+    console.error("[monthly-reading] no tool_use block in response", response.content);
+    return { status: "failed", failureReason: "parse_error", heldSections: response.content };
   }
 
-  const rawSections = toolUse.input as MonthlyReadingSections;
-  const sections: MonthlyReadingSections = {
-    ...rawSections,
-    weekTextures: coerceToArray(rawSections.weekTextures) as MonthlyReadingSections["weekTextures"],
-    circledNotes: coerceToArray(rawSections.circledNotes) as MonthlyReadingSections["circledNotes"],
-    reflections: coerceToArray(rawSections.reflections) as MonthlyReadingSections["reflections"],
-  };
+  const raw = toolUse.input as MonthlyReadingRawSections;
+  const weekMatch = matchByKey(
+    raw.weekTextures,
+    pkg.weeks.map((w) => w.n),
+    (item) => item.week,
+    (item) => item.text
+  );
+  const circleMatch = matchByKey(
+    raw.circledNotes,
+    pkg.circledDates.map((c) => c.card),
+    (item) => item.card,
+    (item) => item.note
+  );
+
   const shapeOk =
-    typeof sections.framing === "string" &&
-    typeof sections.cycleLine === "string" &&
-    typeof sections.woven === "string" &&
-    typeof sections.evenMonthNote === "string" &&
-    Array.isArray(sections.weekTextures) &&
-    sections.weekTextures.length === pkg.weeks.length &&
-    Array.isArray(sections.circledNotes) &&
-    sections.circledNotes.length === pkg.circledDates.length &&
-    Array.isArray(sections.reflections) &&
-    sections.reflections.length > 0;
+    typeof raw.framing === "string" &&
+    typeof raw.cycleLine === "string" &&
+    typeof raw.woven === "string" &&
+    typeof raw.evenMonthNote === "string" &&
+    weekMatch.missing.length === 0 &&
+    circleMatch.missing.length === 0 &&
+    Array.isArray(raw.reflections) &&
+    raw.reflections.length > 0 &&
+    raw.reflections.every((r) => typeof r === "string");
+
   if (!shapeOk) {
-    console.error("[monthly-reading] tool output shape mismatch", sections);
-    return { status: "failed", failureReason: "parse_error" };
+    console.error("[monthly-reading] tool output shape mismatch", {
+      missingWeeks: weekMatch.missing,
+      missingCards: circleMatch.missing,
+      raw,
+    });
+    return {
+      status: "failed",
+      failureReason: "parse_error",
+      heldSections: { raw, missingWeeks: weekMatch.missing, missingCards: circleMatch.missing },
+    };
   }
+
+  const sections: MonthlyReadingSections = {
+    framing: raw.framing,
+    cycleLine: raw.cycleLine,
+    weekTextures: weekMatch.values,
+    circledNotes: circleMatch.values,
+    woven: raw.woven,
+    reflections: raw.reflections,
+    evenMonthNote: raw.evenMonthNote,
+  };
 
   // Strip safe single-word fillers (mainly "actually") before the gate runs, so an
   // otherwise-clean generation doesn't burn a retry over one mechanically removable word.
