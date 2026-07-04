@@ -162,18 +162,23 @@ export default function TodayView({
     aligned = bIdx === cCard.major;
   }
 
-  const shareText = `The world today: ${cCard.minorName}.${
-    pCard ? ` Mine: ${pCard.minorName}.` : " "
-  } · The Tarot Almanac`;
+  // The card the share image features: your card when a birthday is set, else the day's
+  // collective card (the image route applies the same rule).
+  const featured = pCard ?? cCard;
+  const shareTitle = name ? `${name}'s card for ${dateLabel}` : `My card for ${dateLabel}`;
+  const shareText = `${featured.minorName} · The Tarot Almanac`;
 
-  const shareImageParams = new URLSearchParams();
+  const shareParams = new URLSearchParams();
   if (birthday) {
-    shareImageParams.set("bm", String(birthday.bm));
-    shareImageParams.set("bd", String(birthday.bd));
-    if (name) shareImageParams.set("n", name);
+    shareParams.set("bm", String(birthday.bm));
+    shareParams.set("bd", String(birthday.bd));
+    if (name) shareParams.set("n", name);
   }
-  const shareImageQuery = shareImageParams.toString();
-  const shareImageHref = `/today/${formatDateSlug(target)}/share${shareImageQuery ? `?${shareImageQuery}` : ""}`;
+  const shareQuery = shareParams.toString();
+  const shareSuffix = shareQuery ? `?${shareQuery}` : "";
+  const slug = formatDateSlug(target);
+  const shareImagePath = `/today/${slug}/share/image${shareSuffix}`;
+  const sharePagePath = `/today/${slug}/share${shareSuffix}`;
 
   return (
     <div className={styles.wrap}>
@@ -286,8 +291,12 @@ export default function TodayView({
       )}
 
       <div className={styles.actions}>
-        <ShareButton text={shareText} />
-        <Link className={styles.btn} href={shareImageHref}>Share image</Link>
+        <ShareButton
+          imagePath={shareImagePath}
+          pagePath={sharePagePath}
+          title={shareTitle}
+          text={shareText}
+        />
         <Link className={`${styles.btn} ${styles.btnSolid}`} href="/me">Keep your days</Link>
       </div>
     </div>
