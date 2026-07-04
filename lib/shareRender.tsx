@@ -88,16 +88,16 @@ export function ShareFooter({ cta }: { cta: string }) {
         justifyContent: "space-between",
         width: "100%",
         borderTop: `1px solid ${COLORS.warmStone}`,
-        paddingTop: 28,
+        paddingTop: 26,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-        <StarMark size={26} />
-        <span style={{ fontFamily: "Cormorant", fontSize: 26, color: COLORS.ink }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+        <StarMark size={30} />
+        <span style={{ fontFamily: "Cormorant", fontSize: 32, color: COLORS.ink }}>
           The Tarot Almanac
         </span>
       </div>
-      <span style={{ fontFamily: "Lato", fontSize: 20, color: COLORS.label }}>{cta}</span>
+      <span style={{ fontFamily: "Lato", fontSize: 24, color: COLORS.label }}>{cta}</span>
     </div>
   );
 }

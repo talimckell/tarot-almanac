@@ -51,21 +51,23 @@ async function lockedImage(dateLabel: string): Promise<ImageResponse> {
 function Column({ label, card }: { label: string; card: DayCard }) {
   const color = elementColor(card.element);
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 14 }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 24 }}>
       <span
         style={{
           fontFamily: "Lato",
-          fontSize: 20,
-          letterSpacing: 2,
+          fontSize: 26,
+          letterSpacing: 3,
           textTransform: "uppercase",
           color: COLORS.label,
         }}
       >
         {label}
       </span>
-      <SharePips card={card} size={30} color={color} />
-      <span style={{ fontFamily: "Cormorant", fontSize: 40, color: COLORS.ink }}>{card.minorName}</span>
-      <span style={{ fontFamily: "Lato", fontSize: 20, color: COLORS.label }}>
+      <SharePips card={card} size={50} color={color} />
+      <span style={{ fontFamily: "Cormorant", fontSize: 54, lineHeight: 1.05, color: COLORS.ink, whiteSpace: "nowrap" }}>
+        {card.minorName}
+      </span>
+      <span style={{ fontFamily: "Lato", fontSize: 28, color: COLORS.label }}>
         {card.suit} &middot; {cap(card.element)}
       </span>
     </div>
@@ -118,21 +120,21 @@ export async function GET(request: Request, { params }: { params: Promise<{ date
           display: "flex",
           flexDirection: "column",
           background: COLORS.stone,
-          padding: "56px 64px",
+          padding: "44px 56px",
         }}
       >
-        <div style={{ display: "flex" }}>
-          <span style={{ fontFamily: "Cormorant", fontSize: 30, color: COLORS.ink }}>{dateLabel}</span>
+        <div style={{ display: "flex", alignItems: "baseline" }}>
+          <span style={{ fontFamily: "Cormorant", fontSize: 40, color: COLORS.ink }}>{dateLabel}</span>
         </div>
-        <div style={{ display: "flex", flex: 1, alignItems: "center", marginTop: 24 }}>
+        <div style={{ display: "flex", flex: 1, alignItems: "center", marginTop: 8 }}>
           <Column label="The world today" card={cCard} />
-          <div style={{ display: "flex", width: 1, alignSelf: "stretch", background: COLORS.warmStone, margin: "0 40px" }} />
+          <div style={{ display: "flex", width: 1, alignSelf: "stretch", background: COLORS.warmStone, margin: "0 32px" }} />
           {pCard ? (
             <Column label={personalLabel} card={pCard} />
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 10 }}>
-              <span style={{ fontFamily: "Cormorant", fontSize: 30, color: COLORS.label }}>Add your birthday</span>
-              <span style={{ fontFamily: "Lato", fontSize: 18, color: COLORS.label, textAlign: "center" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 16 }}>
+              <span style={{ fontFamily: "Cormorant", fontSize: 44, color: COLORS.label }}>Add your birthday</span>
+              <span style={{ fontFamily: "Lato", fontSize: 24, color: COLORS.label, textAlign: "center" }}>
                 to see your own card beside the world&rsquo;s
               </span>
             </div>
