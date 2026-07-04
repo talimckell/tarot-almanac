@@ -10,7 +10,10 @@ import Footer from "../../../components/Footer";
 import { parseDateSlug } from "@/lib/today";
 import { formatLongDate } from "@/lib/almanac";
 
-const SITE = "https://tarotalmanac.com";
+// www is the canonical host in production; the bare apex 308-redirects to it. OG/Twitter
+// image URLs must be the direct 200 host — several link-preview crawlers (iMessage) won't
+// follow a redirect for a preview image, which shows up as a broken share card.
+const SITE = "https://www.tarotalmanac.com";
 
 type ShareParams = { bm?: string; bd?: string; n?: string };
 
