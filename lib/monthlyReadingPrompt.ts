@@ -237,3 +237,50 @@ export function findVoiceViolation(text: string): string | null {
   }
   return null;
 }
+
+// A safe subset of BANNED_PHRASES: single-word intensifiers that can be mechanically
+// deleted without breaking a sentence's grammar. Observed in production to be the
+// overwhelming majority of voice-gate trips ("actually" especially, since this
+// reading's content is often literally about telling something real from something
+// that only looks like it). Stripping these before the gate runs turns what would
+// otherwise be a near-certain retry into a free cleanup. The remaining bans (multi-word
+// phrases like "worth sitting with," and content vocabulary like "delve") stay hard
+// failures that trigger a real retry — deleting those leaves a broken sentence, not a
+// clean one, so they aren't safe to auto-edit.
+const STRIPPABLE_FILLERS = [
+  "ultimately",
+  "indeed",
+  "essentially",
+  "fundamentally",
+  "genuinely",
+  "honestly",
+  "actually",
+];
+
+function stripFillerWords(text: string): string {
+  let result = text;
+  for (const word of STRIPPABLE_FILLERS) {
+    // Sentence-initial ("Actually, the moon..." -> "The moon..."): drop the word, its
+    // comma, and re-capitalize the word that now starts the sentence.
+    result = result.replace(
+      new RegExp(`(^|[.!?]\\s+)${word},?\\s+([a-z])`, "gi"),
+      (_match, lead: string, nextChar: string) => `${lead}${nextChar.toUpperCase()}`
+    );
+    // Mid-sentence ("gets to actually come down" -> "gets to come down"): drop the word
+    // and its leading space, leaving normal spacing behind.
+    result = result.replace(new RegExp(`\\s+${word}\\b`, "gi"), "");
+  }
+  return result.replace(/[ \t]{2,}/g, " ").trim();
+}
+
+export function sanitizeSections(sections: MonthlyReadingSections): MonthlyReadingSections {
+  return {
+    framing: stripFillerWords(sections.framing),
+    cycleLine: stripFillerWords(sections.cycleLine),
+    weekTextures: sections.weekTextures.map(stripFillerWords),
+    circledNotes: sections.circledNotes.map(stripFillerWords),
+    woven: stripFillerWords(sections.woven),
+    reflections: sections.reflections.map(stripFillerWords),
+    evenMonthNote: stripFillerWords(sections.evenMonthNote),
+  };
+}

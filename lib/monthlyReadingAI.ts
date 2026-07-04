@@ -13,6 +13,7 @@ import {
   buildMonthlyReadingAIInput,
   findVoiceViolation,
   flattenSections,
+  sanitizeSections,
   type MonthlyReadingSections,
 } from "./monthlyReadingPrompt";
 
@@ -151,11 +152,14 @@ async function attemptGeneration(
     return { status: "failed", failureReason: "parse_error" };
   }
 
-  const violation = findVoiceViolation(flattenSections(sections));
+  // Strip safe single-word fillers (mainly "actually") before the gate runs, so an
+  // otherwise-clean generation doesn't burn a retry over one mechanically removable word.
+  const sanitized = sanitizeSections(sections);
+  const violation = findVoiceViolation(flattenSections(sanitized));
   if (violation) {
     console.error(`[monthly-reading] voice gate rejected generation (${violation})`);
-    return { status: "failed", failureReason: "voice_gate", heldSections: sections };
+    return { status: "failed", failureReason: "voice_gate", heldSections: sanitized };
   }
 
-  return { status: "ready", sections };
+  return { status: "ready", sections: sanitized };
 }
