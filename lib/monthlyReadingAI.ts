@@ -32,11 +32,49 @@ export type MonthlyReadingResult =
       heldSections?: MonthlyReadingSections;
     };
 
-// Never throws — every failure mode (API error, malformed tool call, shape mismatch,
-// voice-gate rejection) resolves to a "failed" result instead, so the caller can store
-// the one terminal outcome and move on (no regeneration; see lib/monthlyReadingStore.ts).
+// Words like "actually" are a natural pull in exactly this reading's content (telling a
+// real ending from a rough patch invites "is this actually finished"), so a single-shot
+// voice-gate rejection is common, not rare. This is a bounded internal retry within the
+// ONE generation event, not a user-facing regeneration: nothing is stored or shown to
+// the reader until either a clean pass is found or every attempt is exhausted, so the
+// "one reading, ever" contract in MONTHLY_READING_BUILD_BRIEF.md still holds — this just
+// makes that one event resilient to an unlucky word choice instead of brittle to it.
+const MAX_ATTEMPTS = 3;
+
 export async function generateMonthlyReading(pkg: MonthlyPackage): Promise<MonthlyReadingResult> {
+  let lastResult: MonthlyReadingResult = { status: "failed", failureReason: "api_error" };
+  let correction: string | null = null;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const result = await attemptGeneration(pkg, correction);
+    if (result.status === "ready") return result;
+
+    lastResult = result;
+    console.warn(
+      `[monthly-reading] attempt ${attempt}/${MAX_ATTEMPTS} failed (${result.failureReason})${
+        attempt < MAX_ATTEMPTS ? ", retrying" : ", giving up"
+      }`
+    );
+    correction =
+      result.failureReason === "voice_gate" && result.heldSections
+        ? violationCorrection(flattenSections(result.heldSections))
+        : null;
+  }
+
+  return lastResult;
+}
+
+function violationCorrection(text: string): string {
+  const violation = findVoiceViolation(text);
+  return `Your previous attempt violated a hard voice rule (${violation}). Rewrite from scratch avoiding it entirely; do not just delete the word, restructure the sentence.`;
+}
+
+async function attemptGeneration(
+  pkg: MonthlyPackage,
+  correction: string | null
+): Promise<MonthlyReadingResult> {
   const input = buildMonthlyReadingAIInput(pkg);
+  const userContent = correction ? `${correction}\n\n${JSON.stringify(input)}` : JSON.stringify(input);
 
   let response;
   try {
@@ -52,7 +90,7 @@ export async function generateMonthlyReading(pkg: MonthlyPackage): Promise<Month
         },
       ],
       tool_choice: { type: "tool", name: MONTHLY_READING_TOOL_NAME },
-      messages: [{ role: "user", content: JSON.stringify(input) }],
+      messages: [{ role: "user", content: userContent }],
     });
   } catch (err) {
     console.error("[monthly-reading] AI call failed", err);
