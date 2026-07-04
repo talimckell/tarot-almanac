@@ -76,7 +76,7 @@ We share information with the following categories of service providers (sometim
 | **Anthropic** | AI-synthesized reading generation | Derived reading data only (card names, elements, and relevant dates) — no name, birth date, or email |
 | **Google (Analytics, Search Console)** | Site analytics and search indexing (planned) | Device/behavior data (Analytics only); no personal data (Search Console) |
 
-Anthropic processes the data we send only to generate the reading text we request; it does not use API inputs to train its models.
+Anthropic processes the data we send only to generate the reading text we request; and, under its commercial terms, does not use the data we submit through the API to train its models.
 
 We do not share your information with third parties for their own marketing purposes, and we do not sell it.
 
