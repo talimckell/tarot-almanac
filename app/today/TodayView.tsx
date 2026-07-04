@@ -19,6 +19,7 @@ import {
   type YMD,
   type Birthday,
   isDateOpenForViewer,
+  isCollectiveOpenForViewer,
   monthUnlockDate,
   addDays,
   formatDateSlug,
@@ -56,7 +57,13 @@ export default function TodayView({
   signedIn?: boolean;
   subscribed?: boolean;
 }) {
-  const open = isDateOpenForViewer(target, now, !!subscribed);
+  // Two independent gates. The collective (world) card is public for past/today so it
+  // can be indexed; the personal card stays on the subscriber gate. A "future, gated"
+  // date fails both and shows the full gate card. A past date for a non-subscriber
+  // passes collective (show the world card) but fails personal (show a subscribe nudge).
+  const collectiveOpen = isCollectiveOpenForViewer(target, now, !!subscribed);
+  const personalOpen = isDateOpenForViewer(target, now, !!subscribed);
+  const personalLocked = collectiveOpen && !personalOpen;
   const prevSlug = formatDateSlug(addDays(target, -1));
   const nextSlug = formatDateSlug(addDays(target, 1));
   const isToday = target.y === now.y && target.m === now.m && target.d === now.d;
@@ -69,13 +76,13 @@ export default function TodayView({
       <span className={styles.greeting}>{greeting}</span>
       <div className={styles.dateRow}>
         <h1>{dateLabel}</h1>
-        {open && (
+        {collectiveOpen && (
           <span className={styles.moonMark}>
             <MoonGlyph frac={moonFraction(target.y, target.m, target.d)} />
           </span>
         )}
       </div>
-      {open && (
+      {collectiveOpen && (
         <span className={styles.moonPhaseLabel}>
           {moonPhase(target.y, target.m, target.d)}
         </span>
@@ -93,7 +100,7 @@ export default function TodayView({
   );
 
   // ===== Gated: no card data is computed or sent for out-of-window future dates. =====
-  if (!open) {
+  if (!collectiveOpen) {
     const unlock = monthUnlockDate(target);
     const unlockLabel = formatLongDate(unlock.y, unlock.m, unlock.d);
 
@@ -153,7 +160,7 @@ export default function TodayView({
   let PM = 0;
   let bIdx = 0;
   let aligned = false;
-  if (birthday) {
+  if (birthday && personalOpen) {
     PY = personalYear(target.y, birthday.bm, birthday.bd);
     PM = personalMonth(target.y, target.m, birthday.bm, birthday.bd);
     pCard = personalDayCard(target.y, target.m, target.d, birthday.bm, birthday.bd);
@@ -169,7 +176,7 @@ export default function TodayView({
   const shareText = `${featured.minorName} · The Tarot Almanac`;
 
   const shareParams = new URLSearchParams();
-  if (birthday) {
+  if (birthday && pCard) {
     shareParams.set("bm", String(birthday.bm));
     shareParams.set("bd", String(birthday.bd));
     if (name) shareParams.set("n", name);
@@ -221,6 +228,22 @@ export default function TodayView({
                 {pReading && <div className={styles.reading}>{pReading}</div>}
                 <Link className={styles.fulllink} href={`/tarot/${minorSlug(pCard)}`}>Read the full card &rarr;</Link>
               </>
+            ) : personalLocked ? (
+              <>
+                <div className={styles.cardname}>Your card, kept</div>
+                <div className={styles.reading}>
+                  The world&rsquo;s card for this day is always open. Your own card for a past
+                  day is part of the almanac. Today and anything earlier this month stay free;
+                  a subscription opens every day behind you as yours to keep.
+                </div>
+                <div className={styles.gateActions}>
+                  {signedIn ? (
+                    <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
+                  ) : (
+                    <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
+                  )}
+                </div>
+              </>
             ) : (
               <>
                 <div className={styles.cardname}>Add your birthday</div>
@@ -238,10 +261,12 @@ export default function TodayView({
         </div>
       </div>
 
-      <div className={styles.between}>
-        <span className={styles.lbl}>Between you</span>
-        <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
-      </div>
+      {!personalLocked && (
+        <div className={styles.between}>
+          <span className={styles.lbl}>Between you</span>
+          <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
+        </div>
+      )}
 
       {birthday && pCard && (
         <div className={styles.contextPair}>
@@ -268,7 +293,7 @@ export default function TodayView({
         </div>
       )}
 
-      {birthday && (
+      {pCard && (
         <div className={styles.bearing}>
           <span className={styles.bGlyph}>
             <svg aria-hidden="true"><use href={`#ma-${bIdx}`} /></svg>

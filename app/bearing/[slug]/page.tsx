@@ -23,7 +23,7 @@ import TarotCycleGap from "./TarotCycleGap";
 // directly under it, rather than only before/after the whole block.
 const MEETS_WORLD_HEADING = "**Your Bearing meets the world**";
 
-const SITE = "https://tarotalmanac.com";
+const SITE = "https://www.tarotalmanac.com";
 
 export function generateStaticParams() {
   return MAJOR_SLUGS.map((slug) => ({ slug }));

@@ -71,6 +71,21 @@ export function isDateOpenForViewer(target: YMD, now: YMD, subscribed: boolean):
   return target.d <= now.d;
 }
 
+// True when target is today or earlier (UTC day granularity).
+export function isPastOrToday(target: YMD, now: YMD): boolean {
+  return Date.UTC(target.y, target.m - 1, target.d) <= Date.UTC(now.y, now.m - 1, now.d);
+}
+
+// The COLLECTIVE (non-personal) track is public for every past/today date: this is
+// the free, indexable "card of the day" archive that SEO rides on. Future dates
+// stay on the same time-travel gate as the personal track (anti-screenshot-harvest;
+// subscribers reach one month ahead). The personal track is unaffected — it always
+// uses isDateOpenForViewer, so paid past readings stay paid.
+export function isCollectiveOpenForViewer(target: YMD, now: YMD, subscribed: boolean): boolean {
+  if (isPastOrToday(target, now)) return true;
+  return isDateOpenForViewer(target, now, subscribed);
+}
+
 // A locked target's whole month unlocks in one shot, the day the calendar rolls
 // into the month before it (that becomes the new "current month," making target's
 // month the new one-ahead). Signed-in accounts get told this date directly instead

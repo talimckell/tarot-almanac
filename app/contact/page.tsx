@@ -4,7 +4,7 @@ import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
-const SITE = "https://tarotalmanac.com";
+const SITE = "https://www.tarotalmanac.com";
 
 export const metadata: Metadata = {
   title: "Contact | The Tarot Almanac",

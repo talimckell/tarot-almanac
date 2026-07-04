@@ -12,7 +12,7 @@ import Footer from "../../components/Footer";
 import { getAllCards, getCardBySlug, getRelated, type Card } from "../../../lib/cards";
 import { pipRows, suitGlyphId, isCourt } from "../../../lib/pips";
 
-const SITE = "https://tarotalmanac.com";
+const SITE = "https://www.tarotalmanac.com";
 
 export function generateStaticParams() {
   return getAllCards().map((c) => ({ slug: c.slug }));

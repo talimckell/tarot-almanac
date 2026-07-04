@@ -3,9 +3,10 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import { parseBirthday, parseDateSlug, BIRTHDAY_COOKIE, type YMD } from "../../../lib/today";
-import { formatLongDate } from "../../../lib/almanac";
+import { parseBirthday, parseDateSlug, formatDateSlug, isPastOrToday, BIRTHDAY_COOKIE, type YMD } from "../../../lib/today";
+import { formatLongDate, collectiveDayCard } from "../../../lib/almanac";
 import { getSignedInBirthday } from "../../../lib/accountBirthday";
+import { SITE_URL } from "../../../lib/site";
 import TodayView from "../TodayView";
 
 // The gate depends on the request-time date, so this can never be statically cached.
@@ -24,9 +25,24 @@ export async function generateMetadata({
   const { date } = await params;
   const target = parseDateSlug(date);
   if (!target) return {};
+  const label = formatLongDate(target.y, target.m, target.d);
+  const title = `${label} Tarot Card | The Tarot Almanac`;
+
+  // Future dates are gated (subscriber time-travel) and speculative, so they stay
+  // out of the index. Past/today collective readings are public, so they're indexed
+  // with a self-canonical and a card-specific description for the SERP snippet.
+  if (!isPastOrToday(target, serverNow())) {
+    return { title, robots: { index: false } };
+  }
+
+  const c = collectiveDayCard(target.y, target.m, target.d);
+  const description = `The collective tarot card for ${label} is the ${c.minorName}, under ${c.majorName}. See the day's card and its major, and the personal card set by your own birthday.`;
+  const url = `${SITE_URL}/today/${formatDateSlug(target)}`;
   return {
-    title: `${formatLongDate(target.y, target.m, target.d)} | The Tarot Almanac`,
-    robots: { index: false },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "article" },
   };
 }
 
