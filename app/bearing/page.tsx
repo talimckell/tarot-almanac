@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR, type Element } from "../../lib/almanac";
-import BearingFinder from "./bearing-finder";
+import BearingHero from "./BearingHero";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function BearingPage() {
           </p>
         </header>
 
-        <BearingFinder />
+        <BearingHero />
 
         {/* WHAT IS A BEARING */}
         <section className={styles.section}>

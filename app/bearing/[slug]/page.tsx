@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import ShareImageButton from "../../components/ShareImageButton";
+import YourBearingBanner from "./YourBearingBanner";
 import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
 import { majorGlyphId } from "@/lib/pips";
@@ -98,6 +99,8 @@ export default async function BearingPage({
         <h1>{card.name}</h1>
         <p className="position">how you greet the world</p>
       </header>
+
+      <YourBearingBanner majorIndex={majorIndex} slug={card.slug} cardName={card.name} />
 
       <section className="section">
         <h2>What a Bearing is</h2>
