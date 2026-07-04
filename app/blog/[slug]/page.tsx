@@ -5,6 +5,7 @@ import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import NewsletterForm from "../../components/NewsletterForm";
 import { BLOG_POSTS, getPostMeta, getPostHtml } from "../../../lib/blog";
+import { SITE_URL } from "../../../lib/site";
 import styles from "./page.module.css";
 
 export function generateStaticParams() {
@@ -19,12 +20,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const meta = getPostMeta(slug);
   if (!meta) return {};
+  const title = `${meta.seoTitle ?? meta.title} | The Tarot Almanac`;
+  const description = meta.metaDescription ?? meta.description;
+  const url = `${SITE_URL}/blog/${meta.slug}`;
   return {
-    title: `${meta.title} | The Tarot Almanac`,
-    description: meta.description,
-    alternates: {
-      canonical: `https://tarotalmanac.com/blog/${meta.slug}`,
-    },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "article" },
   };
 }
 
