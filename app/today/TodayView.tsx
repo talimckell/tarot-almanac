@@ -191,109 +191,110 @@ export default function TodayView({
     <div className={styles.wrap}>
       {header}
 
-      <div className={styles.pair}>
-        <div>
-          <div className={styles.colHead}>
-            <span className={`${styles.colHeadLbl} ${styles.world}`}>The world today</span>
-          </div>
-          <div className={styles.dayCardBlock}>
-            <PipGrid suit={cCard.suit} rank={cCard.rank} color={`var(--${cCard.element})`} />
-            <div className={styles.cardname}>
-              <Link href={`/tarot/${minorSlug(cCard)}`}>{cCard.minorName}</Link>
-            </div>
-            <div className={styles.cardsub}>{cCard.suit} · {cap(cCard.element)}</div>
-            {cReading && <div className={styles.reading}>{cReading}</div>}
-            <Link className={styles.fulllink} href={`/tarot/${minorSlug(cCard)}`}>Read the full card &rarr;</Link>
-          </div>
-          <div className={styles.majorRow}>
-            <span className={styles.rowLbl}>Day major</span>
-            <Link className={styles.majorLink} href={`/tarot/${MAJOR_SLUGS[cCard.major]}`}>{cCard.majorName}</Link>
-          </div>
+      {/* One real grid. Each labeled row (headers, cards, day-major, Between, month,
+          year) is a shared grid row via named areas, so every horizontal line spans
+          both columns and aligns. The center divider is a single left border on the
+          right-hand cells. Empty right cells are still rendered so rows stay paired. */}
+      <div className={styles.grid}>
+        <div className={styles.colHead} style={{ gridArea: "wHead" }}>
+          <span className={`${styles.colHeadLbl} ${styles.world}`}>The world today</span>
+        </div>
+        <div className={`${styles.colHead} ${styles.right}`} style={{ gridArea: "yHead" }}>
+          <span className={`${styles.colHeadLbl} ${styles.yours}`}>
+            {name ? `${name} today` : "You today"}
+          </span>
         </div>
 
-        <div className={styles.colPersonal}>
-          <div className={styles.colHead}>
-            <span className={`${styles.colHeadLbl} ${styles.yours}`}>
-              {name ? `${name} today` : "You today"}
-            </span>
+        <div className={styles.dayCardBlock} style={{ gridArea: "wCard" }}>
+          <PipGrid suit={cCard.suit} rank={cCard.rank} color={`var(--${cCard.element})`} />
+          <div className={styles.cardname}>
+            <Link href={`/tarot/${minorSlug(cCard)}`}>{cCard.minorName}</Link>
           </div>
-          <div className={styles.dayCardBlock}>
-            {pCard ? (
-              <>
-                <PipGrid suit={pCard.suit} rank={pCard.rank} color={`var(--${pCard.element})`} />
-                <div className={styles.cardname}>
-                  <Link href={`/tarot/${minorSlug(pCard)}`}>{pCard.minorName}</Link>
-                </div>
-                <div className={styles.cardsub}>{pCard.suit} · {cap(pCard.element)}</div>
-                {pReading && <div className={styles.reading}>{pReading}</div>}
-                <Link className={styles.fulllink} href={`/tarot/${minorSlug(pCard)}`}>Read the full card &rarr;</Link>
-              </>
-            ) : personalLocked ? (
-              <>
-                <div className={styles.cardname}>Your card, kept</div>
-                <div className={styles.reading}>
-                  The world&rsquo;s card for this day is always open. Your own card for a past
-                  day is part of the almanac. Today and anything earlier this month stay free;
-                  a subscription opens every day behind you as yours to keep.
-                </div>
-                <div className={styles.gateActions}>
-                  {signedIn ? (
-                    <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
-                  ) : (
-                    <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
-                  )}
-                </div>
-              </>
-            ) : (
-              <>
-                <div className={styles.cardname}>Add your birthday</div>
-                <div className={styles.reading}>See the card the day sets for you.</div>
-                <BirthdayRevealForm defaultName={name ?? ""} />
-              </>
-            )}
-          </div>
-          <div className={styles.majorRow}>
-            <span className={styles.rowLbl}>Day major</span>
-            {pCard && (
+          <div className={styles.cardsub}>{cCard.suit} · {cap(cCard.element)}</div>
+          {cReading && <div className={styles.reading}>{cReading}</div>}
+          <Link className={styles.fulllink} href={`/tarot/${minorSlug(cCard)}`}>Read the full card &rarr;</Link>
+        </div>
+        <div className={`${styles.dayCardBlock} ${styles.right}`} style={{ gridArea: "yCard" }}>
+          {pCard ? (
+            <>
+              <PipGrid suit={pCard.suit} rank={pCard.rank} color={`var(--${pCard.element})`} />
+              <div className={styles.cardname}>
+                <Link href={`/tarot/${minorSlug(pCard)}`}>{pCard.minorName}</Link>
+              </div>
+              <div className={styles.cardsub}>{pCard.suit} · {cap(pCard.element)}</div>
+              {pReading && <div className={styles.reading}>{pReading}</div>}
+              <Link className={styles.fulllink} href={`/tarot/${minorSlug(pCard)}`}>Read the full card &rarr;</Link>
+            </>
+          ) : personalLocked ? (
+            <>
+              <div className={styles.cardname}>Your card, kept</div>
+              <div className={styles.reading}>
+                The world&rsquo;s card for this day is always open. Your own card for a past
+                day is part of the almanac. Today and anything earlier this month stay free;
+                a subscription opens every day behind you as yours to keep.
+              </div>
+              <div className={styles.gateActions}>
+                {signedIn ? (
+                  <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
+                ) : (
+                  <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className={styles.cardname}>Add your birthday</div>
+              <div className={styles.reading}>See the card the day sets for you.</div>
+              <BirthdayRevealForm defaultName={name ?? ""} />
+            </>
+          )}
+        </div>
+
+        <div className={`${styles.majorRow} ${styles.rowsep}`} style={{ gridArea: "wMaj" }}>
+          <span className={styles.rowLbl}>Day major</span>
+          <Link className={styles.majorLink} href={`/tarot/${MAJOR_SLUGS[cCard.major]}`}>{cCard.majorName}</Link>
+        </div>
+        <div className={`${styles.majorRow} ${styles.rowsep} ${styles.right}`} style={{ gridArea: "yMaj" }}>
+          {pCard && (
+            <>
+              <span className={styles.rowLbl}>Day major</span>
               <Link className={styles.majorLink} href={`/tarot/${MAJOR_SLUGS[pCard.major]}`}>{pCard.majorName}</Link>
-            )}
-          </div>
+            </>
+          )}
         </div>
-      </div>
 
-      {!personalLocked && (
-        <div className={styles.between}>
-          <span className={styles.lbl}>Between you</span>
-          <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
-        </div>
-      )}
-
-      {/* Collective Month/Year are non-personal and always shown when the day is open.
-          The personal Month/Year sit beside them only when a personal card is present;
-          without one, the box collapses to a single full-width collective column. */}
-      <div className={pCard ? styles.contextPair : `${styles.contextPair} ${styles.contextSolo}`}>
-        <div>
-          <div className={styles.contextRow}>
-            <span className={styles.rowLbl}>Collective Month</span>
-            <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CM]}`}>{MAJORS[CM]}</Link>
-          </div>
-          <div className={`${styles.contextRow} ${styles.contextDivider}`}>
-            <span className={styles.rowLbl}>Collective Year</span>
-            <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CY]}`}>{MAJORS[CY]}</Link>
-          </div>
-        </div>
-        {pCard && (
-          <div className={styles.colPersonalCtx}>
-            <div className={styles.contextRow}>
-              <span className={styles.rowLbl}>Your Month</span>
-              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PM]}`}>{MAJORS[PM]}</Link>
-            </div>
-            <div className={`${styles.contextRow} ${styles.contextDivider}`}>
-              <span className={styles.rowLbl}>Your Year</span>
-              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PY]}`}>{MAJORS[PY]}</Link>
-            </div>
+        {!personalLocked && (
+          <div className={`${styles.between} ${styles.rowsep}`} style={{ gridArea: "btwn" }}>
+            <span className={styles.lbl}>Between you</span>
+            <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
           </div>
         )}
+
+        <div className={`${styles.contextRow} ${styles.rowsep}`} style={{ gridArea: "cMon" }}>
+          <span className={styles.rowLbl}>Collective Month</span>
+          <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CM]}`}>{MAJORS[CM]}</Link>
+        </div>
+        <div className={`${styles.contextRow} ${styles.rowsep} ${styles.right}`} style={{ gridArea: "yMon" }}>
+          {pCard && (
+            <>
+              <span className={styles.rowLbl}>Your Month</span>
+              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PM]}`}>{MAJORS[PM]}</Link>
+            </>
+          )}
+        </div>
+
+        <div className={`${styles.contextRow} ${styles.rowsep}`} style={{ gridArea: "cYr" }}>
+          <span className={styles.rowLbl}>Collective Year</span>
+          <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[CY]}`}>{MAJORS[CY]}</Link>
+        </div>
+        <div className={`${styles.contextRow} ${styles.rowsep} ${styles.right}`} style={{ gridArea: "yYr" }}>
+          {pCard && (
+            <>
+              <span className={styles.rowLbl}>Your Year</span>
+              <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PY]}`}>{MAJORS[PY]}</Link>
+            </>
+          )}
+        </div>
       </div>
 
       {pCard && (

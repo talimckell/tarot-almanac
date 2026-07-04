@@ -91,13 +91,25 @@ a.todayPill:hover {
 }
 
 /* THE PARALLEL COLUMNS */
-.pair {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "wHead yHead"
+    "wCard yCard"
+    "wMaj  yMaj"
+    "btwn  btwn"
+    "cMon  yMon"
+    "cYr   yYr";
   gap: 0;
   border: 1px solid var(--warm-stone);
   margin-top: 30px;
 }
+/* Center divider: one left border per right-hand cell; they stack into a
+   continuous line. Row separators span both columns because each labeled row is
+   a single grid row, so the horizontal lines always align. */
+.right { border-left: 1px solid var(--warm-stone); }
+.rowsep { border-top: 1px solid var(--warm-stone); }
 
 .colHead {
   padding: 10px 20px;
@@ -113,12 +125,10 @@ a.todayPill:hover {
 }
 .colHeadLbl.world { color: var(--label); }
 .colHeadLbl.yours { color: var(--indigo); }
-.colPersonal .colHead { border-left: 1px solid var(--warm-stone); }
 
 .dayCardBlock {
   padding: 22px 20px 18px;
 }
-.colPersonal .dayCardBlock { border-left: 1px solid var(--warm-stone); }
 
 .pips {
   display: flex;
@@ -187,10 +197,8 @@ a.todayPill:hover {
 }
 
 .majorRow {
-  border-top: 1px solid var(--warm-stone);
   padding: 12px 20px;
 }
-.colPersonal .majorRow { border-left: 1px solid var(--warm-stone); }
 .rowLbl {
   font-family: var(--serif-sc);
   font-size: 9px;
@@ -211,11 +219,9 @@ a.todayPill:hover {
   text-underline-offset: 3px;
 }
 
-/* BETWEEN YOU */
+/* BETWEEN YOU — full-width band inside the grid; .rowsep draws its top line. */
 .between {
   background: var(--vellum);
-  border: 1px solid var(--warm-stone);
-  border-top: none;
   padding: 24px 30px;
   text-align: center;
 }
@@ -237,25 +243,8 @@ a.todayPill:hover {
 }
 
 /* MONTH + YEAR */
-.contextPair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border: 1px solid var(--warm-stone);
-  border-top: none;
-}
-/* No personal card: collective Month/Year fill the row rather than leaving a gap. */
-.contextSolo {
-  grid-template-columns: 1fr;
-}
 .contextRow {
   padding: 10px 20px;
-}
-.colPersonalCtx {
-  border-left: 1px solid var(--warm-stone);
-}
-.contextDivider {
-  border-top: 1px solid var(--warm-stone);
 }
 .contextLink {
   font-family: var(--serif);
@@ -419,15 +408,25 @@ a.todayPill:hover {
   flex-direction: column;
   gap: 10px;
 }
+/* Breathing room above the unlock button in the locked personal card. */
+.dayCardBlock .gateActions {
+  margin-top: 20px;
+}
 
 @media (max-width: 640px) {
-  .pair, .contextPair {
+  /* Single column: stack world section, then you section, then Between, then
+     the month/year context. Right cells lose their left divider and gain a top
+     border so the stacked cells stay separated. */
+  .grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "wHead" "wCard" "wMaj"
+      "yHead" "yCard" "yMaj"
+      "btwn"
+      "cMon" "cYr"
+      "yMon" "yYr";
   }
-  .colPersonal .colHead,
-  .colPersonal .dayCardBlock,
-  .colPersonal .majorRow,
-  .colPersonalCtx {
+  .right {
     border-left: none;
     border-top: 1px solid var(--warm-stone);
   }
