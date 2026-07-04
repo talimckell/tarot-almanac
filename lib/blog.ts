@@ -126,6 +126,49 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Build your natal chart in the Tarot Almanac →": "/chart",
     },
   },
+  // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────
+  // Scaffold for content/blog-06-2027-tarot-year-card.md. Nothing renders, links,
+  // or indexes while this stays commented out. Write the prose (and the standfirst
+  // marked below), then uncomment to publish. Aim to go live by mid-October 2026.
+  // {
+  //   slug: "2027-tarot-year-card",
+  //   title: "Your 2027 Tarot Year Card",
+  //   seoTitle: "Your 2027 Tarot Year Card: The Year of Justice",
+  //   metaDescription:
+  //     "The tarot card for 2027 is Justice. What a Justice year asks of everyone, the card for each month, and how to find your own personal 2027 card from your birthday.",
+  //   eyebrow: "Tarot Numerology",
+  //   // STANDFIRST — write in voice before publishing (doubles as the meta fallback):
+  //   description: "[standfirst: the card everyone shares in 2027 is Justice — write in voice]",
+  //   indexTeaser: "[index blurb: shorter than the standfirst — write in voice]",
+  //   majorIndex: 11, // Justice — drives the glyph + element color
+  //   file: "blog-06-2027-tarot-year-card.md",
+  //   linkMap: {
+  //     "How Tarot Numerology Works": "/blog/how-tarot-numerology-works",
+  //     "What Is Tarot Numerology?": "/blog/what-is-tarot-numerology",
+  //     "Open The Tarot Almanac →": "/today",
+  //   },
+  // },
+  // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────
+  // Scaffold for content/blog-07-major-arcana-three-stages.md. Dormant until
+  // uncommented. Also the link target for "Initiation / Testing / Reckoning"
+  // used on the month page and natal chart — wire those as links once it's live.
+  // {
+  //   slug: "major-arcana-three-stages",
+  //   title: "The Major Arcana in Three Stages",
+  //   seoTitle: "The Three Stages of the Major Arcana: Initiation, Testing, Reckoning",
+  //   metaDescription:
+  //     "The 22 Major Arcana move through three stages of the Fool's Journey: Initiation (0-7), Testing (8-14), and Reckoning (15-21). What each stage means and why it colors a reading.",
+  //   eyebrow: "Tarot Numerology",
+  //   description: "[standfirst: the Fool's Journey in three movements — write in voice]",
+  //   indexTeaser: "[index blurb — write in voice]",
+  //   majorIndex: 0, // The Fool — the journey's starting point
+  //   file: "blog-07-major-arcana-three-stages.md",
+  //   linkMap: {
+  //     "How Tarot Numerology Works": "/blog/how-tarot-numerology-works",
+  //     "the deck": "/tarot",
+  //     "Open The Tarot Almanac →": "/today",
+  //   },
+  // },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {
