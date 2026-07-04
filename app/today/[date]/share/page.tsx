@@ -48,7 +48,7 @@ export async function generateMetadata({
   const sp = await searchParams;
   const dateLabel = formatLongDate(target.y, target.m, target.d);
   const title = sp.n ? `${sp.n}'s reading for ${dateLabel}` : `A reading for ${dateLabel}`;
-  const description = "The world's card and a personal one, side by side. The Tarot Almanac.";
+  const description = "The card the day sets for you, and the affirmation it carries. The Tarot Almanac.";
   const img = imageUrl(date, sp);
   return {
     title: `${title} | The Tarot Almanac`,

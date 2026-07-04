@@ -6,6 +6,7 @@
 import { ImageResponse } from "next/og";
 import { parseDateSlug, isDateOpenForViewer, type YMD } from "@/lib/today";
 import { collectiveDayCard, personalDayCard, formatLongDate, type DayCard } from "@/lib/almanac";
+import { getCardBySlug } from "@/lib/cards";
 import { loadShareFonts } from "@/lib/ogFonts";
 import { COLORS, elementColor, SharePips, ShareFooter } from "@/lib/shareRender";
 
@@ -19,8 +20,16 @@ function serverNow(): YMD {
   return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
 }
 
-function cap(s: string): string {
-  return s.charAt(0).toUpperCase() + s.slice(1);
+function minorSlug(card: DayCard): string {
+  return `${card.rankName.toLowerCase()}-of-${card.suit.toLowerCase()}`;
+}
+
+// The card's authored first-person affirmation (the "gift"/upright one) — the piece a
+// person would actually want to post. Every minor carries one; fall back to the neutral
+// essence if the data ever changes shape. This is wired-up authored copy, not new prose.
+function cardAffirmation(card: DayCard): string {
+  const c = getCardBySlug(minorSlug(card));
+  return c?.gift.affirmation ?? c?.essence ?? "";
 }
 
 async function lockedImage(dateLabel: string): Promise<ImageResponse> {
@@ -48,32 +57,6 @@ async function lockedImage(dateLabel: string): Promise<ImageResponse> {
   );
 }
 
-function Column({ label, card }: { label: string; card: DayCard }) {
-  const color = elementColor(card.element);
-  return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 24 }}>
-      <span
-        style={{
-          fontFamily: "Lato",
-          fontSize: 26,
-          letterSpacing: 3,
-          textTransform: "uppercase",
-          color: COLORS.label,
-        }}
-      >
-        {label}
-      </span>
-      <SharePips card={card} size={50} color={color} />
-      <span style={{ fontFamily: "Cormorant", fontSize: 54, lineHeight: 1.05, color: COLORS.ink, whiteSpace: "nowrap" }}>
-        {card.minorName}
-      </span>
-      <span style={{ fontFamily: "Lato", fontSize: 28, color: COLORS.label }}>
-        {card.suit} &middot; {cap(card.element)}
-      </span>
-    </div>
-  );
-}
-
 export async function GET(request: Request, { params }: { params: Promise<{ date: string }> }) {
   const { date } = await params;
   const target = parseDateSlug(date);
@@ -92,23 +75,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ date
     return lockedImage(dateLabel);
   }
 
-  const cCard = collectiveDayCard(target.y, target.m, target.d);
-  const pCard = hasBirthday ? personalDayCard(target.y, target.m, target.d, bm, bd) : null;
-  const personalLabel = name ? `${name} today` : "You today";
+  // One featured card: your card when a birthday is given, otherwise the day's
+  // collective card framed as "Today's card." The affirmation reads first-person
+  // either way, so a single card avoids attributing an "I can..." line to "the world."
+  const card = hasBirthday
+    ? personalDayCard(target.y, target.m, target.d, bm, bd)
+    : collectiveDayCard(target.y, target.m, target.d);
+  const label = hasBirthday ? (name ? `${name}'s card` : "Your card") : "Today's card";
+  const affirmation = cardAffirmation(card);
+  const color = elementColor(card.element);
 
-  const text = [
-    dateLabel,
-    "The world today",
-    cCard.minorName,
-    cCard.suit,
-    cap(cCard.element),
-    pCard ? personalLabel : "Add your birthday to see your own card beside the world's",
-    pCard?.minorName ?? "",
-    pCard?.suit ?? "",
-    pCard ? cap(pCard.element) : "",
-    "The Tarot Almanac",
-    "Get your own daily reading at tarotalmanac.com",
-  ].join(" ");
+  const text = [dateLabel, label, card.minorName, affirmation, "The Tarot Almanac", "Get your own at tarotalmanac.com"].join(" ");
   const fonts = await loadShareFonts(text);
 
   return new ImageResponse(
@@ -120,27 +97,48 @@ export async function GET(request: Request, { params }: { params: Promise<{ date
           display: "flex",
           flexDirection: "column",
           background: COLORS.stone,
-          padding: "44px 56px",
+          padding: "40px 60px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "baseline" }}>
-          <span style={{ fontFamily: "Cormorant", fontSize: 40, color: COLORS.ink }}>{dateLabel}</span>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            flex: 1,
+            gap: 22,
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Lato",
+              fontSize: 26,
+              letterSpacing: 3,
+              textTransform: "uppercase",
+              color: COLORS.label,
+            }}
+          >
+            {label}
+          </span>
+          <SharePips card={card} size={46} color={color} />
+          <span style={{ fontFamily: "Cormorant", fontSize: 64, lineHeight: 1.02, color: COLORS.ink, whiteSpace: "nowrap" }}>
+            {card.minorName}
+          </span>
+          <span
+            style={{
+              fontFamily: "Cormorant",
+              fontSize: 34,
+              lineHeight: 1.34,
+              color: COLORS.charcoal,
+              textAlign: "center",
+              maxWidth: 940,
+            }}
+          >
+            {affirmation}
+          </span>
         </div>
-        <div style={{ display: "flex", flex: 1, alignItems: "center", marginTop: 8 }}>
-          <Column label="The world today" card={cCard} />
-          <div style={{ display: "flex", width: 1, alignSelf: "stretch", background: COLORS.warmStone, margin: "0 32px" }} />
-          {pCard ? (
-            <Column label={personalLabel} card={pCard} />
-          ) : (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, gap: 16 }}>
-              <span style={{ fontFamily: "Cormorant", fontSize: 44, color: COLORS.label }}>Add your birthday</span>
-              <span style={{ fontFamily: "Lato", fontSize: 24, color: COLORS.label, textAlign: "center" }}>
-                to see your own card beside the world&rsquo;s
-              </span>
-            </div>
-          )}
-        </div>
-        <ShareFooter cta="Get your own daily reading at tarotalmanac.com" />
+        <ShareFooter left={dateLabel} cta="Get your own at tarotalmanac.com" />
       </div>
     ),
     { width: WIDTH, height: HEIGHT, fonts },

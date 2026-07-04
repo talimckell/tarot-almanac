@@ -76,10 +76,11 @@ export function SharePips({ card, size, color }: { card: DayCard; size: number; 
   );
 }
 
-// The footer CTA every share card ends with: star mark, site name, and a per-surface
-// call to action (copy supplied by the caller — reading/marketing copy isn't authored
-// here, see CLAUDE.md).
-export function ShareFooter({ cta }: { cta: string }) {
+// The footer every share card ends with: an optional left context slot (e.g. the date),
+// the star mark + site name, and a per-surface call to action (copy supplied by the
+// caller — reading/marketing copy isn't authored here, see CLAUDE.md). With `left` set
+// the three sit on one justified line; without it, brand sits left and CTA right.
+export function ShareFooter({ cta, left }: { cta: string; left?: string }) {
   return (
     <div
       style={{
@@ -88,16 +89,30 @@ export function ShareFooter({ cta }: { cta: string }) {
         justifyContent: "space-between",
         width: "100%",
         borderTop: `1px solid ${COLORS.warmStone}`,
-        paddingTop: 26,
+        paddingTop: 22,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-        <StarMark size={30} />
-        <span style={{ fontFamily: "Cormorant", fontSize: 32, color: COLORS.ink }}>
+      {left ? (
+        <span style={{ display: "flex", flex: 1, fontFamily: "Lato", fontSize: 22, color: COLORS.label }}>{left}</span>
+      ) : null}
+      <div style={{ display: "flex", flex: left ? 1 : 0, alignItems: "center", justifyContent: "center", gap: 12 }}>
+        <StarMark size={28} />
+        <span style={{ fontFamily: "Cormorant", fontSize: 30, color: COLORS.ink, whiteSpace: "nowrap" }}>
           The Tarot Almanac
         </span>
       </div>
-      <span style={{ fontFamily: "Lato", fontSize: 24, color: COLORS.label }}>{cta}</span>
+      <span
+        style={{
+          display: "flex",
+          flex: left ? 1 : 0,
+          justifyContent: "flex-end",
+          fontFamily: "Lato",
+          fontSize: 22,
+          color: COLORS.label,
+        }}
+      >
+        {cta}
+      </span>
     </div>
   );
 }
