@@ -18,7 +18,7 @@ function AffirmationTreatment({ day }: { day: CampaignDay }) {
   return (
     <ShareCanvas footerLeft={day.dateLabel} cta={CTA}>
       <FeaturedCard
-        eyebrow="Today's card"
+        eyebrow="Today's Collective Card"
         glyph={<SharePips card={day.card} size={46} color={color} />}
         title={day.card.minorName}
         body={day.affirmation}
@@ -51,7 +51,7 @@ function EssenceTreatment({ day }: { day: CampaignDay }) {
             color: COLORS.label,
           }}
         >
-          The card of the day
+          The Collective Card of the Day
         </span>
         <SharePips card={day.card} size={46} color={color} />
         <span style={{ fontFamily: "Cormorant", fontSize: 54, lineHeight: 1.02, color: COLORS.ink, whiteSpace: "nowrap" }}>
@@ -93,7 +93,7 @@ function KeywordsTreatment({ day }: { day: CampaignDay }) {
         }}
       >
         <span style={{ fontFamily: "Lato", fontSize: 26, letterSpacing: 3, textTransform: "uppercase", color: light, opacity: 0.85 }}>
-          Today&rsquo;s card
+          Today&rsquo;s Collective Card
         </span>
         <SharePips card={day.card} size={50} color={light} />
         <span style={{ fontFamily: "Cormorant", fontSize: 60, lineHeight: 1.02, color: light, whiteSpace: "nowrap" }}>
@@ -177,7 +177,7 @@ function CollectiveTreatment({ day }: { day: CampaignDay }) {
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           <SharePips card={day.card} size={26} color={color} />
           <span style={{ fontFamily: "Lato", fontSize: 22, color: COLORS.label }}>
-            &mdash; the card of the day, {day.card.minorName}
+            &mdash; the collective card of the day, {day.card.minorName}
           </span>
         </div>
       </div>

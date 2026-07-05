@@ -19,18 +19,27 @@ function compose(headline: string, excerpt: string): string {
   return `${headline} — ${body}\n\n${CTA}`;
 }
 
-export function captionForTreatment(day: CampaignDay, treatment: number): string {
-  const headline = day.card.minorName;
+function excerptForTreatment(day: CampaignDay, treatment: number): string {
   switch (treatment) {
     case 0:
-      return compose(headline, day.affirmation);
+      return day.affirmation;
     case 1:
-      return compose(headline, day.essence);
+      return day.essence;
     case 2:
-      return compose(headline, day.keywords.slice(0, 3).join(", "));
+      return day.keywords.slice(0, 3).join(", ");
     case 3:
-      return compose(headline, day.collectiveLine);
     default:
-      return compose(headline, day.essence);
+      return day.collectiveLine;
   }
+}
+
+// The caption deliberately pulls from a DIFFERENT content type than whatever's on the
+// image, so the post doesn't just repeat itself in two places — a keywords-treatment
+// image gets an essence caption, an essence image gets an affirmation caption, and so
+// on. Offset by -1 (mod 4) through the same four treatments; since the offset is nonzero
+// mod 4, no image treatment ever pairs with its own caption content.
+export function captionForTreatment(day: CampaignDay, imageTreatment: number): string {
+  const captionTreatment = (imageTreatment + 3) % 4;
+  const headline = day.card.minorName;
+  return compose(headline, excerptForTreatment(day, captionTreatment));
 }
