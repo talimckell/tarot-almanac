@@ -39,6 +39,7 @@ export default async function BirthdayBearingsStudioPage() {
           <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
           <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
           <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
+          <Link href="/studio/major-gift" style={{ color: "var(--indigo)" }}>Pinterest: Major Gift Board &rarr;</Link>
         </p>
         <BirthdayBearingsStudio />
       </div>

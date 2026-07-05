@@ -40,10 +40,10 @@ export function PinterestCanvas({ children, cta }: { children: ReactNode; cta: s
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <StarMark size={30} />
-          <span style={{ fontFamily: "Cormorant", fontSize: 34, color: COLORS.ink }}>The Tarot Almanac</span>
+          <StarMark size={36} />
+          <span style={{ fontFamily: "Cormorant", fontSize: 42, color: COLORS.ink }}>The Tarot Almanac</span>
         </div>
-        <span style={{ fontFamily: "Lato", fontSize: 24, color: COLORS.label }}>{cta}</span>
+        <span style={{ fontFamily: "Lato", fontSize: 30, color: COLORS.label }}>{cta}</span>
       </div>
     </div>
   );
@@ -86,10 +86,10 @@ export function PinterestCanvasSaturated({
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <StarMark size={30} color={light} />
-          <span style={{ fontFamily: "Cormorant", fontSize: 34, color: light }}>The Tarot Almanac</span>
+          <StarMark size={36} color={light} />
+          <span style={{ fontFamily: "Cormorant", fontSize: 42, color: light }}>The Tarot Almanac</span>
         </div>
-        <span style={{ fontFamily: "Lato", fontSize: 24, color: light }}>{cta}</span>
+        <span style={{ fontFamily: "Lato", fontSize: 30, color: light }}>{cta}</span>
       </div>
     </div>
   );

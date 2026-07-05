@@ -25,14 +25,14 @@ export function renderPinterestBirthday(day: BirthdayBearingDay) {
           textAlign: "center",
         }}
       >
-        <span style={{ fontFamily: "Cormorant", fontSize: 40, color: light, opacity: 0.92 }}>
+        <span style={{ fontFamily: "Cormorant", fontSize: 52, color: light, opacity: 0.92 }}>
           {`If your birthday is ${day.dateLabel}`}
         </span>
 
         <span
           style={{
             fontFamily: "Lato",
-            fontSize: 28,
+            fontSize: 36,
             letterSpacing: 2,
             textTransform: "uppercase",
             color: light,
@@ -42,19 +42,19 @@ export function renderPinterestBirthday(day: BirthdayBearingDay) {
           Your Tarot Bearing Card is
         </span>
 
-        <Glyph id={majorGlyphId(day.major)} size={130} color={light} />
+        <Glyph id={majorGlyphId(day.major)} size={160} color={light} />
 
-        <span style={{ fontFamily: "Cormorant", fontSize: 76, lineHeight: 1.05, color: light, whiteSpace: "nowrap" }}>
+        <span style={{ fontFamily: "Cormorant", fontSize: 92, lineHeight: 1.05, color: light, whiteSpace: "nowrap" }}>
           {day.bearingName}
         </span>
 
         {day.opening ? (
-          <span style={{ fontFamily: "Cormorant", fontSize: 36, fontStyle: "italic", color: light, opacity: 0.94, maxWidth: 780 }}>
+          <span style={{ fontFamily: "Cormorant", fontSize: 44, fontStyle: "italic", color: light, opacity: 0.94, maxWidth: 800 }}>
             {day.opening}
           </span>
         ) : null}
 
-        <span style={{ fontFamily: "Lato", fontSize: 26, color: light, opacity: 0.88, maxWidth: 780 }}>
+        <span style={{ fontFamily: "Lato", fontSize: 32, color: light, opacity: 0.88, maxWidth: 800 }}>
           {`Everyone born on ${day.dateLabel} shares this Tarot Bearing.`}
         </span>
       </div>

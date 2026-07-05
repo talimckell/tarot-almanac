@@ -42,6 +42,7 @@ export default async function ReclaimedReversalsStudioPage() {
           <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
           <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
           <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
+          <Link href="/studio/major-gift" style={{ color: "var(--indigo)" }}>Pinterest: Major Gift Board &rarr;</Link>
         </p>
         <ReclaimedReversalsStudio initialStatus={status} />
       </div>
