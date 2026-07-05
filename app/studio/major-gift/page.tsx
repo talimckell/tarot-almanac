@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
@@ -7,6 +6,7 @@ import { pinterestPoolStatus } from "@/lib/pinterestUsage";
 import { MAJOR_GIFT_BOARD, MAJOR_GIFT_TOTAL } from "@/lib/majorGiftBoard";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import StudioNav from "../components/StudioNav";
 import MajorGiftStudio from "./MajorGiftStudio";
 
 export const dynamic = "force-dynamic";
@@ -39,14 +39,7 @@ export default async function MajorGiftStudioPage() {
           board &mdash; one pin per Major, upright/gift meaning, 22 total. Previewing
           costs nothing; a pin is only marked done the moment you download its batch.
         </p>
-        <p style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Studio &rarr;</Link>
-          <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
-          <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
-          <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
-          <Link href="/studio/major-shadow" style={{ color: "var(--indigo)" }}>Pinterest: Major Shadow Board &rarr;</Link>
-          <Link href="/studio/major-reclaimed" style={{ color: "var(--indigo)" }}>Pinterest: Major Reclaimed Board &rarr;</Link>
-        </p>
+        <StudioNav except="/studio/major-gift" />
         <MajorGiftStudio initialStatus={status} />
       </div>
       <Footer />

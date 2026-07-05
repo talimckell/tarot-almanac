@@ -1,0 +1,20 @@
+// Single source of truth for the cross-links every studio page shows at the top ("jump to
+// another tool"). Before this, each new board meant hand-editing every existing page's link
+// list — with 12 suit-based Pinterest boards still to come, add one entry here instead.
+export interface StudioLink {
+  href: string;
+  label: string;
+}
+
+export const STUDIO_LINKS: StudioLink[] = [
+  { href: "/studio/collective", label: "Collective Studio" },
+  { href: "/studio/birthday-bearings", label: "Birthday Bearings Studio" },
+  { href: "/studio/reclaimed-reversals", label: "Reclaimed Reversals Studio" },
+  { href: "/studio/pinterest-birthday", label: "Pinterest: Birthday Board" },
+  { href: "/studio/major-gift", label: "Pinterest: Major Gift Board" },
+  { href: "/studio/major-shadow", label: "Pinterest: Major Shadow Board" },
+  { href: "/studio/major-reclaimed", label: "Pinterest: Major Reclaimed Board" },
+  { href: "/studio/cups-gift", label: "Pinterest: Cups Gift Board" },
+  { href: "/studio/cups-shadow", label: "Pinterest: Cups Shadow Board" },
+  { href: "/studio/cups-reclaimed", label: "Pinterest: Cups Reclaimed Board" },
+];

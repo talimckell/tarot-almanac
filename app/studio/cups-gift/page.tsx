@@ -3,28 +3,28 @@ import { redirect, notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
 import { pinterestPoolStatus } from "@/lib/pinterestUsage";
-import { MAJOR_RECLAIMED_BOARD, MAJOR_RECLAIMED_TOTAL } from "@/lib/majorReclaimedBoard";
+import { CUPS_GIFT_BOARD, CUPS_GIFT_TOTAL } from "@/lib/cupsGiftBoard";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import StudioNav from "../components/StudioNav";
-import MajorReclaimedStudio from "./MajorReclaimedStudio";
+import SuitBoardStudio from "../components/SuitBoardStudio";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Pinterest: Major Arcana Reclaimed Reversal Meanings Board Studio",
+  title: "Pinterest: Cups Gift Meanings Board Studio",
   robots: { index: false },
 };
 
-export default async function MajorReclaimedStudioPage() {
+export default async function CupsGiftStudioPage() {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/studio/major-reclaimed");
+  if (!user) redirect("/sign-in?next=/studio/cups-gift");
   if (user.email?.toLowerCase() !== STUDIO_OWNER_EMAIL.toLowerCase()) notFound();
 
-  const status = await pinterestPoolStatus(MAJOR_RECLAIMED_BOARD, MAJOR_RECLAIMED_TOTAL);
+  const status = await pinterestPoolStatus(CUPS_GIFT_BOARD, CUPS_GIFT_TOTAL);
 
   return (
     <>
@@ -33,15 +33,19 @@ export default async function MajorReclaimedStudioPage() {
         <p style={{ fontFamily: "var(--serif-sc)", letterSpacing: 2, textTransform: "uppercase", color: "var(--label)", fontSize: 14 }}>
           Internal tool &middot; Pinterest
         </p>
-        <h1 style={{ fontFamily: "var(--serif)", fontSize: 32, margin: "6px 0 8px" }}>Major Arcana Reclaimed Reversal Meanings Board Studio</h1>
+        <h1 style={{ fontFamily: "var(--serif)", fontSize: 32, margin: "6px 0 8px" }}>Suit of Cups Gift Meanings Board Studio</h1>
         <p style={{ color: "var(--label)", maxWidth: 640 }}>
-          Batch-generate Pinterest pins for the &ldquo;Major Arcana Reclaimed Reversal
-          Meanings&rdquo; board &mdash; one pin per Major, 22 total. Calm stone
-          background with the rotated glyph, matching the Bluesky Reclaimed Reversals
-          look, so &ldquo;reclaimed&rdquo; content reads consistently across platforms.
+          Batch-generate Pinterest pins for the &ldquo;Tarot Minor Arcana Suit of Cups Gift
+          Meanings&rdquo; board &mdash; one pin per rank, upright/gift meaning, 14 total.
+          Same bright saturated-field treatment as Major Gift.
         </p>
-        <StudioNav except="/studio/major-reclaimed" />
-        <MajorReclaimedStudio initialStatus={status} />
+        <StudioNav except="/studio/cups-gift" />
+        <SuitBoardStudio
+          boardSlug={CUPS_GIFT_BOARD}
+          boardLabel="Cups Gift"
+          total={CUPS_GIFT_TOTAL}
+          initialStatus={status}
+        />
       </div>
       <Footer />
     </>

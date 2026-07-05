@@ -17,6 +17,9 @@ import { renderPinterestBirthday, WIDTH as BIRTHDAY_W, HEIGHT as BIRTHDAY_H } fr
 import { renderMajorGift, WIDTH as GIFT_W, HEIGHT as GIFT_H } from "@/lib/majorGiftRender";
 import { renderMajorShadow, WIDTH as SHADOW_W, HEIGHT as SHADOW_H } from "@/lib/majorShadowRender";
 import { renderMajorReclaimed, WIDTH as RECLAIMED_W, HEIGHT as RECLAIMED_H } from "@/lib/majorReclaimedRender";
+import { renderSuitGift, WIDTH as SUIT_GIFT_W, HEIGHT as SUIT_GIFT_H } from "@/lib/suitGiftRender";
+import { renderSuitShadow, WIDTH as SUIT_SHADOW_W, HEIGHT as SUIT_SHADOW_H } from "@/lib/suitShadowRender";
+import { renderSuitReclaimed, WIDTH as SUIT_RECLAIMED_W, HEIGHT as SUIT_RECLAIMED_H } from "@/lib/suitReclaimedRender";
 import { loadShareFonts } from "@/lib/ogFonts";
 
 export const runtime = "nodejs";
@@ -81,6 +84,48 @@ export async function GET(request: Request, { params }: { params: Promise<{ boar
     ].join(" ");
     const fonts = await loadShareFonts(text);
     return new ImageResponse(renderMajorReclaimed(card), { width: RECLAIMED_W, height: RECLAIMED_H, fonts });
+  }
+
+  if (board === "cups-gift") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Cups") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Upright",
+      card.name,
+      card.gift.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitGift(card), { width: SUIT_GIFT_W, height: SUIT_GIFT_H, fonts });
+  }
+
+  if (board === "cups-shadow") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Cups") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Shadow",
+      card.name,
+      card.shadow.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitShadow(card), { width: SUIT_SHADOW_W, height: SUIT_SHADOW_H, fonts });
+  }
+
+  if (board === "cups-reclaimed") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Cups") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Reclaimed Reversal",
+      card.name,
+      card.reclaiming.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitReclaimed(card), { width: SUIT_RECLAIMED_W, height: SUIT_RECLAIMED_H, fonts });
   }
 
   return new Response("Not found", { status: 404 });

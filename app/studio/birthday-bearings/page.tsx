@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import StudioNav from "../components/StudioNav";
 import BirthdayBearingsStudio from "./BirthdayBearingsStudio";
 
 export const dynamic = "force-dynamic";
@@ -35,14 +35,7 @@ export default async function BirthdayBearingsStudioPage() {
           visual treatment reused every day &mdash; the Bearing itself is what changes,
           and it recurs forever since it only depends on month and day.
         </p>
-        <p style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
-          <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
-          <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
-          <Link href="/studio/major-gift" style={{ color: "var(--indigo)" }}>Pinterest: Major Gift Board &rarr;</Link>
-          <Link href="/studio/major-shadow" style={{ color: "var(--indigo)" }}>Pinterest: Major Shadow Board &rarr;</Link>
-          <Link href="/studio/major-reclaimed" style={{ color: "var(--indigo)" }}>Pinterest: Major Reclaimed Board &rarr;</Link>
-        </p>
+        <StudioNav except="/studio/birthday-bearings" />
         <BirthdayBearingsStudio />
       </div>
       <Footer />

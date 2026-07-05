@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
 import { pinterestPoolStatus } from "@/lib/pinterestUsage";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import StudioNav from "../components/StudioNav";
 import PinterestBirthdayStudio from "./PinterestBirthdayStudio";
 
 export const dynamic = "force-dynamic";
@@ -41,14 +41,7 @@ export default async function PinterestBirthdayStudioPage() {
           one pin per calendar birthday (366 total), evergreen. Previewing costs nothing;
           a pin is only marked done the moment you download its batch.
         </p>
-        <p style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Studio &rarr;</Link>
-          <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
-          <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
-          <Link href="/studio/major-gift" style={{ color: "var(--indigo)" }}>Pinterest: Major Gift Board &rarr;</Link>
-          <Link href="/studio/major-shadow" style={{ color: "var(--indigo)" }}>Pinterest: Major Shadow Board &rarr;</Link>
-          <Link href="/studio/major-reclaimed" style={{ color: "var(--indigo)" }}>Pinterest: Major Reclaimed Board &rarr;</Link>
-        </p>
+        <StudioNav except="/studio/pinterest-birthday" />
         <PinterestBirthdayStudio initialStatus={status} />
       </div>
       <Footer />
