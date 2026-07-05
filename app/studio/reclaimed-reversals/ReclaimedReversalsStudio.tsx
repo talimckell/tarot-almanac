@@ -13,6 +13,7 @@ export default function ReclaimedReversalsStudio({ initialStatus }: { initialSta
   const [count, setCount] = useState(6);
   const [batch, setBatch] = useState<string[] | null>(null);
   const [busy, setBusy] = useState(false);
+  const [downloading, setDownloading] = useState(false);
   const [resetting, setResetting] = useState(false);
 
   const generate = async () => {
@@ -24,6 +25,41 @@ export default function ReclaimedReversalsStudio({ initialStatus }: { initialSta
       setStatus(data.status);
     } finally {
       setBusy(false);
+    }
+  };
+
+  // Fetches the ZIP directly rather than a plain <a href> download: a batch of a dozen+
+  // cards can take several seconds to render server-side, and a timed page reload racing
+  // that request can abort the in-flight download before it completes (that's exactly
+  // what broke this the first time). Awaiting the full response first means there's no
+  // timing to get wrong — the status refresh only happens once the file is fully in hand.
+  const download = async () => {
+    if (!batch || batch.length === 0) return;
+    setDownloading(true);
+    try {
+      const res = await fetch(`/api/studio/reclaimed-reversals-batch?slugs=${batch.join(",")}`);
+      const blob = await res.blob();
+      const disposition = res.headers.get("content-disposition");
+      const match = disposition ? /filename="([^"]+)"/.exec(disposition) : null;
+      const filename = match ? match[1] : "tarot-reclaimed-reversals.zip";
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+
+      // The batch route already marked these used server-side; just refresh the pool
+      // count (count=1 here is a throwaway — we only want the `status` field back).
+      const statusRes = await fetch("/api/studio/reclaimed-reversals-pick?count=1");
+      const statusData = await statusRes.json();
+      setStatus(statusData.status);
+      setBatch(null);
+    } finally {
+      setDownloading(false);
     }
   };
 
@@ -39,8 +75,6 @@ export default function ReclaimedReversalsStudio({ initialStatus }: { initialSta
       setResetting(false);
     }
   };
-
-  const zipHref = batch ? `/api/studio/reclaimed-reversals-batch?slugs=${batch.join(",")}` : "";
 
   return (
     <div style={{ marginTop: 32 }}>
@@ -78,21 +112,24 @@ export default function ReclaimedReversalsStudio({ initialStatus }: { initialSta
           {busy ? "Picking…" : "Generate random batch"}
         </button>
         {batch && batch.length > 0 && (
-          <a
-            href={zipHref}
-            onClick={() => setTimeout(() => window.location.reload(), 1500)}
+          <button
+            type="button"
+            onClick={download}
+            disabled={downloading}
             style={{
               display: "inline-block",
               padding: "10px 22px",
               background: "var(--indigo)",
               color: "var(--stone)",
+              border: "none",
               borderRadius: 4,
-              textDecoration: "none",
+              cursor: downloading ? "default" : "pointer",
+              opacity: downloading ? 0.7 : 1,
               fontFamily: "var(--sans)",
             }}
           >
-            Download ZIP ({batch.length} cards + captions)
-          </a>
+            {downloading ? "Preparing download…" : `Download ZIP (${batch.length} cards + captions)`}
+          </button>
         )}
         <button
           type="button"

@@ -25,6 +25,7 @@ export default function PinterestBirthdayStudio({ initialStatus }: { initialStat
   const [count, setCount] = useState(10);
   const [items, setItems] = useState<PickItem[] | null>(null);
   const [busy, setBusy] = useState(false);
+  const [downloading, setDownloading] = useState(false);
   const [resetting, setResetting] = useState(false);
 
   const generate = async () => {
@@ -36,6 +37,42 @@ export default function PinterestBirthdayStudio({ initialStatus }: { initialStat
       setStatus(data.status);
     } finally {
       setBusy(false);
+    }
+  };
+
+  // Fetches the ZIP directly rather than a plain <a href> download: a batch of even a
+  // dozen pins can take several seconds to render server-side, and a timed page reload
+  // racing that request can abort the in-flight download before it completes (that's
+  // exactly what broke this the first time). Awaiting the full response first means
+  // there's no timing to get wrong — the status refresh below only happens once the
+  // browser has the whole file.
+  const download = async () => {
+    if (!items || items.length === 0) return;
+    setDownloading(true);
+    try {
+      const res = await fetch(`/api/studio/pinterest-birthday-batch?dates=${items.map((i) => i.dateSlug).join(",")}`);
+      const blob = await res.blob();
+      const disposition = res.headers.get("content-disposition");
+      const match = disposition ? /filename="([^"]+)"/.exec(disposition) : null;
+      const filename = match ? match[1] : "pinterest-birthday-tarot-card.zip";
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+
+      // The batch route already marked these used server-side; just refresh the pool
+      // count (count=1 here is a throwaway — we only want the `status` field back).
+      const statusRes = await fetch(`/api/studio/pinterest-birthday-pick?start=${start}&count=1`);
+      const statusData = await statusRes.json();
+      setStatus(statusData.status);
+      setItems(null);
+    } finally {
+      setDownloading(false);
     }
   };
 
@@ -51,8 +88,6 @@ export default function PinterestBirthdayStudio({ initialStatus }: { initialStat
       setResetting(false);
     }
   };
-
-  const zipHref = items && items.length > 0 ? `/api/studio/pinterest-birthday-batch?dates=${items.map((i) => i.dateSlug).join(",")}` : "";
 
   return (
     <div style={{ marginTop: 32 }}>
@@ -99,21 +134,24 @@ export default function PinterestBirthdayStudio({ initialStatus }: { initialStat
           {busy ? "Finding unused birthdays…" : "Generate next batch"}
         </button>
         {items && items.length > 0 && (
-          <a
-            href={zipHref}
-            onClick={() => setTimeout(() => window.location.reload(), 1500)}
+          <button
+            type="button"
+            onClick={download}
+            disabled={downloading}
             style={{
               display: "inline-block",
               padding: "10px 22px",
               background: "var(--indigo)",
               color: "var(--stone)",
+              border: "none",
               borderRadius: 4,
-              textDecoration: "none",
+              cursor: downloading ? "default" : "pointer",
+              opacity: downloading ? 0.7 : 1,
               fontFamily: "var(--sans)",
             }}
           >
-            Download ZIP ({items.length} pins + pins.csv)
-          </a>
+            {downloading ? "Preparing download…" : `Download ZIP (${items.length} pins + pins.csv)`}
+          </button>
         )}
         <button
           type="button"
