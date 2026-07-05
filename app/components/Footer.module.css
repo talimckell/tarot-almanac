@@ -32,6 +32,24 @@
   margin-top: 8px;
   line-height: 1.4;
 }
+.fbrand .fsocial {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--charcoal);
+  text-decoration: none;
+  line-height: 1.3;
+}
+.fbrand .fsocial svg {
+  color: var(--indigo);
+  flex-shrink: 0;
+}
+.fbrand .fsocial:hover {
+  color: var(--indigo);
+}
 .fcolH {
   font-family: var(--serif-sc);
   font-size: 12px;
