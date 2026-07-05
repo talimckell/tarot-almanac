@@ -104,3 +104,15 @@ model MonthlyReading {
 
   @@unique([profileId, month])
 }
+
+// Tracks which cards the "Reclaimed Reversals" batch campaign (studio/reclaimed-reversals)
+// has already posted, so a random pull never repeats a card until it's manually reset. A
+// row here means "used," full stop — not tied to any account, since this is an internal
+// marketing tool, not user-facing data. Not a JSON file on disk: Vercel's filesystem is
+// ephemeral in production, so this state has to live in the real database to persist
+// across deploys and requests.
+model ReclaimedReversalUsage {
+  id     String   @id @default(cuid())
+  slug   String   @unique // the card's own slug, e.g. "three-of-cups" or "tower"
+  usedAt DateTime @default(now())
+}

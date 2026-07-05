@@ -3,24 +3,27 @@ import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
+import { poolStatus } from "@/lib/reclaimedReversals";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import CollectiveStudio from "./CollectiveStudio";
+import ReclaimedReversalsStudio from "./ReclaimedReversalsStudio";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Collective Campaign Studio",
+  title: "Reclaimed Reversals Campaign Studio",
   robots: { index: false },
 };
 
-export default async function CollectiveStudioPage() {
+export default async function ReclaimedReversalsStudioPage() {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/studio/collective");
+  if (!user) redirect("/sign-in?next=/studio/reclaimed-reversals");
   if (user.email?.toLowerCase() !== STUDIO_OWNER_EMAIL.toLowerCase()) notFound();
+
+  const status = await poolStatus();
 
   return (
     <>
@@ -29,17 +32,17 @@ export default async function CollectiveStudioPage() {
         <p style={{ fontFamily: "var(--serif-sc)", letterSpacing: 2, textTransform: "uppercase", color: "var(--label)", fontSize: 14 }}>
           Internal tool
         </p>
-        <h1 style={{ fontFamily: "var(--serif)", fontSize: 32, margin: "6px 0 8px" }}>Collective Campaign Studio</h1>
+        <h1 style={{ fontFamily: "var(--serif)", fontSize: 32, margin: "6px 0 8px" }}>Reclaimed Reversals Campaign Studio</h1>
         <p style={{ color: "var(--label)", maxWidth: 640 }}>
-          Batch-generate &ldquo;card of the day&rdquo; images for Bluesky. Every four days cycles
-          through four visual treatments &mdash; affirmation, essence, keywords, and the
-          collective reading &mdash; so the feed doesn&rsquo;t look the same post to post.
+          Random batches from all 78 cards (Major + Minor), each card&rsquo;s reversed
+          reclaiming reading. Previewing costs nothing &mdash; a card is only marked
+          &ldquo;done&rdquo; the moment you download its batch.
         </p>
         <p style={{ marginTop: 8, display: "flex", gap: 16 }}>
+          <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
           <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
-          <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
         </p>
-        <CollectiveStudio />
+        <ReclaimedReversalsStudio initialStatus={status} />
       </div>
       <Footer />
     </>

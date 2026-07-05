@@ -35,8 +35,9 @@ export default async function BirthdayBearingsStudioPage() {
           visual treatment reused every day &mdash; the Bearing itself is what changes,
           and it recurs forever since it only depends on month and day.
         </p>
-        <p style={{ marginTop: 8 }}>
+        <p style={{ marginTop: 8, display: "flex", gap: 16 }}>
           <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
+          <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
         </p>
         <BirthdayBearingsStudio />
       </div>
