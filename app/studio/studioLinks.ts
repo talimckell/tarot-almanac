@@ -23,4 +23,7 @@ export const STUDIO_LINKS: StudioLink[] = [
   { href: "/studio/swords-gift", label: "Pinterest: Swords Gift Board" },
   { href: "/studio/swords-shadow", label: "Pinterest: Swords Shadow Board" },
   { href: "/studio/swords-reclaimed", label: "Pinterest: Swords Reclaimed Board" },
+  { href: "/studio/pentacles-gift", label: "Pinterest: Pentacles Gift Board" },
+  { href: "/studio/pentacles-shadow", label: "Pinterest: Pentacles Shadow Board" },
+  { href: "/studio/pentacles-reclaimed", label: "Pinterest: Pentacles Reclaimed Board" },
 ];

@@ -212,5 +212,47 @@ export async function GET(request: Request, { params }: { params: Promise<{ boar
     return new ImageResponse(renderSuitReclaimed(card), { width: SUIT_RECLAIMED_W, height: SUIT_RECLAIMED_H, fonts });
   }
 
+  if (board === "pentacles-gift") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Pentacles") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Upright",
+      card.name,
+      card.gift.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitGift(card), { width: SUIT_GIFT_W, height: SUIT_GIFT_H, fonts });
+  }
+
+  if (board === "pentacles-shadow") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Pentacles") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Shadow",
+      card.name,
+      card.shadow.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitShadow(card), { width: SUIT_SHADOW_W, height: SUIT_SHADOW_H, fonts });
+  }
+
+  if (board === "pentacles-reclaimed") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "minor" || card.meta.suit !== "Pentacles") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Reclaimed Reversal",
+      card.name,
+      card.reclaiming.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderSuitReclaimed(card), { width: SUIT_RECLAIMED_W, height: SUIT_RECLAIMED_H, fonts });
+  }
+
   return new Response("Not found", { status: 404 });
 }
