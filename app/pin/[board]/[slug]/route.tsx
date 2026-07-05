@@ -16,6 +16,7 @@ import { assembleBirthdayBearingDay } from "@/lib/birthdayCampaignContent";
 import { renderPinterestBirthday, WIDTH as BIRTHDAY_W, HEIGHT as BIRTHDAY_H } from "@/lib/pinterestBirthdayRender";
 import { renderMajorGift, WIDTH as GIFT_W, HEIGHT as GIFT_H } from "@/lib/majorGiftRender";
 import { renderMajorShadow, WIDTH as SHADOW_W, HEIGHT as SHADOW_H } from "@/lib/majorShadowRender";
+import { renderMajorReclaimed, WIDTH as RECLAIMED_W, HEIGHT as RECLAIMED_H } from "@/lib/majorReclaimedRender";
 import { loadShareFonts } from "@/lib/ogFonts";
 
 export const runtime = "nodejs";
@@ -66,6 +67,20 @@ export async function GET(request: Request, { params }: { params: Promise<{ boar
     ].join(" ");
     const fonts = await loadShareFonts(text);
     return new ImageResponse(renderMajorShadow(card), { width: SHADOW_W, height: SHADOW_H, fonts });
+  }
+
+  if (board === "major-reclaimed") {
+    const card = getCardBySlug(slug);
+    if (!card || card.arcana !== "major") return new Response("Not found", { status: 404 });
+    const text = [
+      "Tarot Card Meaning Reclaimed Reversal",
+      card.name,
+      card.reclaiming.keywords.join(" "),
+      "tarotalmanac.com/tarot",
+      "The Tarot Almanac",
+    ].join(" ");
+    const fonts = await loadShareFonts(text);
+    return new ImageResponse(renderMajorReclaimed(card), { width: RECLAIMED_W, height: RECLAIMED_H, fonts });
   }
 
   return new Response("Not found", { status: 404 });

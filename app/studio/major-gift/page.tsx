@@ -45,6 +45,7 @@ export default async function MajorGiftStudioPage() {
           <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
           <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
           <Link href="/studio/major-shadow" style={{ color: "var(--indigo)" }}>Pinterest: Major Shadow Board &rarr;</Link>
+          <Link href="/studio/major-reclaimed" style={{ color: "var(--indigo)" }}>Pinterest: Major Reclaimed Board &rarr;</Link>
         </p>
         <MajorGiftStudio initialStatus={status} />
       </div>

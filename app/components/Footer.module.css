@@ -33,7 +33,7 @@
   line-height: 1.4;
 }
 .fbrand .fsocial {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 16px;
@@ -42,6 +42,9 @@
   color: var(--charcoal);
   text-decoration: none;
   line-height: 1.3;
+}
+.fbrand .fsocial + .fsocial {
+  margin-top: 10px;
 }
 .fbrand .fsocial svg {
   color: var(--indigo);
