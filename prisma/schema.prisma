@@ -116,3 +116,20 @@ model ReclaimedReversalUsage {
   slug   String   @unique // the card's own slug, e.g. "three-of-cups" or "tower"
   usedAt DateTime @default(now())
 }
+
+// Generic "already generated" tracking for the Pinterest board tools (studio/pinterest-*).
+// One shared table across all ~16 planned boards, keyed by (board, itemKey) rather than a
+// table per board — e.g. board="birthday-tarot-card", itemKey="july-5" (a birthday slug), or
+// board="major-gift", itemKey="tower" (a card slug) for later boards. Reset is scoped to a
+// single board (delete where board = X), never all boards at once. Same reasoning as
+// ReclaimedReversalUsage: this must be a real table, not a JSON file, since Vercel's
+// filesystem is ephemeral in production.
+model PinterestPinUsage {
+  id      String   @id @default(cuid())
+  board   String
+  itemKey String
+  usedAt  DateTime @default(now())
+
+  @@unique([board, itemKey])
+  @@index([board])
+}

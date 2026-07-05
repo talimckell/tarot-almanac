@@ -38,9 +38,10 @@ export default async function ReclaimedReversalsStudioPage() {
           reclaiming reading. Previewing costs nothing &mdash; a card is only marked
           &ldquo;done&rdquo; the moment you download its batch.
         </p>
-        <p style={{ marginTop: 8, display: "flex", gap: 16 }}>
+        <p style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
           <Link href="/studio/collective" style={{ color: "var(--indigo)" }}>Collective Campaign Studio &rarr;</Link>
           <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
+          <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
         </p>
         <ReclaimedReversalsStudio initialStatus={status} />
       </div>

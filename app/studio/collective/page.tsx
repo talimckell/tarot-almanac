@@ -35,9 +35,10 @@ export default async function CollectiveStudioPage() {
           through four visual treatments &mdash; affirmation, essence, keywords, and the
           collective reading &mdash; so the feed doesn&rsquo;t look the same post to post.
         </p>
-        <p style={{ marginTop: 8, display: "flex", gap: 16 }}>
+        <p style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
           <Link href="/studio/birthday-bearings" style={{ color: "var(--indigo)" }}>Birthday Bearings Studio &rarr;</Link>
           <Link href="/studio/reclaimed-reversals" style={{ color: "var(--indigo)" }}>Reclaimed Reversals Studio &rarr;</Link>
+          <Link href="/studio/pinterest-birthday" style={{ color: "var(--indigo)" }}>Pinterest: Birthday Board &rarr;</Link>
         </p>
         <CollectiveStudio />
       </div>
