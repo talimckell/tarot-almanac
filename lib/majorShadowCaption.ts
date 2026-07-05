@@ -4,6 +4,10 @@ import { truncateField, TITLE_MAX, DESCRIPTION_MAX, type PinterestPinCopy } from
 
 const HASHTAGS = "#tarotcardmeanings #majorarcana #shadowwork";
 
+// Must match the board's exact title in the owner's Pinterest account (case-sensitive) —
+// this is how Pinterest's bulk-upload CSV routes a pin to the right board.
+const BOARD_NAME = "Major Arcana Shadow Meanings";
+
 export function majorShadowCopy(card: Card): PinterestPinCopy {
   const title = truncateField(`${card.name} Tarot Card Meaning: Shadow`, TITLE_MAX);
 
@@ -19,5 +23,7 @@ export function majorShadowCopy(card: Card): PinterestPinCopy {
     description,
     destinationUrl: `${SITE_URL}/tarot/${card.slug}`,
     altText: `${card.name} tarot card shadow meaning: ${card.shadow.keywords.slice(0, 3).join(", ")}.`,
+    boardName: BOARD_NAME,
+    keywords: card.shadow.keywords.join(", "),
   };
 }

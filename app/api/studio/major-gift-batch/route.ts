@@ -27,14 +27,18 @@ export async function GET(request: Request) {
   if (cards.length === 0) return new Response("Bad request", { status: 400 });
 
   const zip = new JSZip();
-  const csvRows = ["Filename,Title,Description,Destination URL,Alt Text,Image URL"];
+  // Column order/names match Pinterest's own official bulk-upload sample CSV exactly
+  // (help.pinterest.com/sub/helpcenter/assets/pinterest-bulk-upload-sample.csv), verified
+  // rather than assumed. Filename/Alt Text trail as extras for the owner's own reference —
+  // they aren't part of Pinterest's spec, so harmless if the importer ignores them.
+  const csvRows = ["Title,Media URL,Pinterest board,Description,Link,Keywords,Filename,Alt Text"];
 
   for (const card of cards) {
     const filename = `${card.slug}_major-gift.png`;
     const copy = majorGiftCopy(card);
     // The public, unauthenticated counterpart to this same render — Pinterest's bulk
     // uploader needs a real fetchable URL, and the studio's own routes are owner-gated.
-    const imageUrl = `${SITE_URL}/pin/${MAJOR_GIFT_BOARD}/${card.slug}`;
+    const mediaUrl = `${SITE_URL}/pin/${MAJOR_GIFT_BOARD}/${card.slug}`;
     const text = [
       "Tarot Card Meaning Upright",
       card.name,
@@ -48,7 +52,16 @@ export async function GET(request: Request) {
     zip.file(filename, buffer);
 
     csvRows.push(
-      [csvField(filename), csvField(copy.title), csvField(copy.description), csvField(copy.destinationUrl), csvField(copy.altText), csvField(imageUrl)].join(","),
+      [
+        csvField(copy.title),
+        csvField(mediaUrl),
+        csvField(copy.boardName),
+        csvField(copy.description),
+        csvField(copy.destinationUrl),
+        csvField(copy.keywords),
+        csvField(filename),
+        csvField(copy.altText),
+      ].join(","),
     );
   }
 
