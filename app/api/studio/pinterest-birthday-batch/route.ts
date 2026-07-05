@@ -13,6 +13,7 @@ import { pinterestBirthdayCopy } from "@/lib/pinterestBirthdayCaption";
 import { renderPinterestBirthday, WIDTH, HEIGHT } from "@/lib/pinterestBirthdayRender";
 import { loadShareFonts } from "@/lib/ogFonts";
 import { markPinterestUsed } from "@/lib/pinterestUsage";
+import { SITE_URL } from "@/lib/site";
 
 export const runtime = "nodejs";
 
@@ -32,13 +33,17 @@ export async function GET(request: Request) {
   if (targets.length === 0) return new Response("Bad request", { status: 400 });
 
   const zip = new JSZip();
-  const csvRows = ["Filename,Title,Description,Destination URL,Alt Text"];
+  const csvRows = ["Filename,Title,Description,Destination URL,Alt Text,Image URL"];
   const usedSlugs: string[] = [];
 
   for (const target of targets) {
     const day = assembleBirthdayBearingDay(target);
-    const filename = `${birthdaySlug(day.m, day.d)}_birthday-tarot-card.png`;
+    const slug = birthdaySlug(day.m, day.d);
+    const filename = `${slug}_birthday-tarot-card.png`;
     const copy = pinterestBirthdayCopy(day);
+    // The public, unauthenticated counterpart to this same render — Pinterest's bulk
+    // uploader needs a real fetchable URL, and the studio's own routes are owner-gated.
+    const imageUrl = `${SITE_URL}/pin/${BOARD}/${slug}`;
 
     const text = [
       `If your birthday is ${day.dateLabel}`,
@@ -55,9 +60,9 @@ export async function GET(request: Request) {
     zip.file(filename, buffer);
 
     csvRows.push(
-      [csvField(filename), csvField(copy.title), csvField(copy.description), csvField(copy.destinationUrl), csvField(copy.altText)].join(","),
+      [csvField(filename), csvField(copy.title), csvField(copy.description), csvField(copy.destinationUrl), csvField(copy.altText), csvField(imageUrl)].join(","),
     );
-    usedSlugs.push(birthdaySlug(day.m, day.d));
+    usedSlugs.push(slug);
   }
 
   zip.file("pins.csv", csvRows.join("\n"));

@@ -12,6 +12,23 @@ export const HEIGHT = 1500;
 
 export { COLORS, elementColor, Glyph };
 
+// The four element accent colors, lightened for use as TEXT/glyph color on the dark ink
+// background (used by "shadow"-toned boards — Major Shadow, and the suit Shadow boards
+// still to come). The base elementColor() values are tuned for legibility on light stone
+// backgrounds and badly fail contrast on dark ink (verified: 1.95-2.54, need >=4.5) — these
+// are the same hues lightened until they clear 4.5:1 against COLORS.ink, computed via the
+// WCAG relative-luminance formula rather than eyeballed.
+const ELEMENT_ON_DARK: Record<import("./almanac").Element, string> = {
+  fire: "#e16a53",
+  water: "#4d96c2",
+  air: "#af8924",
+  earth: "#659c61",
+};
+
+export function elementColorOnDark(element: import("./almanac").Element): string {
+  return ELEMENT_ON_DARK[element];
+}
+
 // The frame every Pinterest pin shares: stone field, a content region, and a footer with
 // the brand mark + site URL. `cta` is the destination line shown at the bottom — always
 // a bare domain/path (no https://) since this is printed text, not a clickable link;

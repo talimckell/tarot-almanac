@@ -4,11 +4,11 @@ import { ImageResponse } from "next/og";
 import JSZip from "jszip";
 import { getCardBySlug } from "@/lib/cards";
 import { requireStudioOwner } from "@/lib/studioAuth";
-import { majorGiftCopy } from "@/lib/majorGiftCaption";
-import { renderMajorGift, WIDTH, HEIGHT } from "@/lib/majorGiftRender";
+import { majorShadowCopy } from "@/lib/majorShadowCaption";
+import { renderMajorShadow, WIDTH, HEIGHT } from "@/lib/majorShadowRender";
 import { loadShareFonts } from "@/lib/ogFonts";
 import { markPinterestUsed } from "@/lib/pinterestUsage";
-import { MAJOR_GIFT_BOARD } from "@/lib/majorGiftBoard";
+import { MAJOR_SHADOW_BOARD } from "@/lib/majorShadowBoard";
 import { SITE_URL } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -30,20 +30,20 @@ export async function GET(request: Request) {
   const csvRows = ["Filename,Title,Description,Destination URL,Alt Text,Image URL"];
 
   for (const card of cards) {
-    const filename = `${card.slug}_major-gift.png`;
-    const copy = majorGiftCopy(card);
+    const filename = `${card.slug}_major-shadow.png`;
+    const copy = majorShadowCopy(card);
     // The public, unauthenticated counterpart to this same render — Pinterest's bulk
     // uploader needs a real fetchable URL, and the studio's own routes are owner-gated.
-    const imageUrl = `${SITE_URL}/pin/${MAJOR_GIFT_BOARD}/${card.slug}`;
+    const imageUrl = `${SITE_URL}/pin/${MAJOR_SHADOW_BOARD}/${card.slug}`;
     const text = [
-      "Tarot Card Meaning Upright",
+      "Tarot Card Meaning Shadow",
       card.name,
-      card.gift.keywords.join(" "),
+      card.shadow.keywords.join(" "),
       "tarotalmanac.com/tarot",
       "The Tarot Almanac",
     ].join(" ");
     const fonts = await loadShareFonts(text);
-    const image = new ImageResponse(renderMajorGift(card), { width: WIDTH, height: HEIGHT, fonts });
+    const image = new ImageResponse(renderMajorShadow(card), { width: WIDTH, height: HEIGHT, fonts });
     const buffer = Buffer.from(await image.arrayBuffer());
     zip.file(filename, buffer);
 
@@ -55,12 +55,12 @@ export async function GET(request: Request) {
   zip.file("pins.csv", csvRows.join("\n"));
   const zipBuffer = await zip.generateAsync({ type: "nodebuffer" });
 
-  await markPinterestUsed(MAJOR_GIFT_BOARD, cards.map((c) => c.slug));
+  await markPinterestUsed(MAJOR_SHADOW_BOARD, cards.map((c) => c.slug));
 
   return new Response(new Uint8Array(zipBuffer), {
     headers: {
       "Content-Type": "application/zip",
-      "Content-Disposition": `attachment; filename="pinterest-major-gift_${cards.length}pins.zip"`,
+      "Content-Disposition": `attachment; filename="pinterest-major-shadow_${cards.length}pins.zip"`,
     },
   });
 }
