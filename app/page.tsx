@@ -54,7 +54,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <TodayEntry birthday={birthday} name={name} />
+        <TodayEntry birthday={birthday} name={name} signedIn={!!account} />
       </section>
 
       {/* PULL QUOTE */}

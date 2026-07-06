@@ -31,6 +31,7 @@ import { getCollectiveReading } from "@/lib/collectiveReadings";
 import { getPersonalReading } from "@/lib/personalReadings";
 import PipGrid from "./PipGrid";
 import MoonGlyph from "./MoonGlyph";
+import LookupSomeone from "./LookupSomeone";
 import ShareImageButton from "../components/ShareImageButton";
 import styles from "./TodayView.module.css";
 
@@ -49,6 +50,9 @@ export default function TodayView({
   name,
   signedIn,
   subscribed,
+  otherBirthday = null,
+  otherName,
+  basePath = "/today",
 }: {
   target: YMD;
   now: YMD;
@@ -56,7 +60,19 @@ export default function TodayView({
   name?: string;
   signedIn?: boolean;
   subscribed?: boolean;
+  // A signed-in account looking someone else up. When set, the personal column shows
+  // that person's day (labeled with their name), not the account holder's. Only ever
+  // populated for signed-in accounts, so a lookup can't override an anonymous cookie.
+  otherBirthday?: Birthday | null;
+  otherName?: string;
+  // This route's own path (no query), for the lookup form target and the "back to your
+  // card" link — "/today" or "/today/<slug>".
+  basePath?: string;
 }) {
+  // The subject of the personal column: the looked-up person in lookup mode, else you.
+  const otherMode = !!otherBirthday;
+  const subject: Birthday | null = otherMode ? otherBirthday : birthday;
+  const subjectName = otherMode ? otherName : name;
   // Two independent gates. The collective (world) card is public for past/today so it
   // can be indexed; the personal card stays on the subscriber gate. A "future, gated"
   // date fails both and shows the full gate card. A past date for a non-subscriber
@@ -69,7 +85,11 @@ export default function TodayView({
   const isToday = target.y === now.y && target.m === now.m && target.d === now.d;
 
   const dateLabel = formatLongDate(target.y, target.m, target.d);
-  const greeting = name ? `${name}'s today` : "Find your angle on the day";
+  const greeting = otherMode
+    ? `${subjectName ? `${subjectName}'s` : "Their"} day`
+    : name
+      ? `${name}'s today`
+      : "Find your angle on the day";
 
   const header = (
     <div className={styles.dayhead}>
@@ -160,26 +180,34 @@ export default function TodayView({
   let PM = 0;
   let bIdx = 0;
   let aligned = false;
-  if (birthday && personalOpen) {
-    PY = personalYear(target.y, birthday.bm, birthday.bd);
-    PM = personalMonth(target.y, target.m, birthday.bm, birthday.bd);
-    pCard = personalDayCard(target.y, target.m, target.d, birthday.bm, birthday.bd);
-    pReading = getPersonalReading(pCard);
-    bIdx = bearingIndex(birthday.bm, birthday.bd);
-    aligned = bIdx === cCard.major;
+  if (subject && personalOpen) {
+    PY = personalYear(target.y, subject.bm, subject.bd);
+    PM = personalMonth(target.y, target.m, subject.bm, subject.bd);
+    pCard = personalDayCard(target.y, target.m, target.d, subject.bm, subject.bd);
+    // The personal reading, the "between you" synthesis and the alignment line are all
+    // authored in the second person ("your day card is…"), which only fits when the
+    // subject is the reader. Looking someone else up shows their cards and Bearing as
+    // facts, and links out for the meanings, rather than address them as "you".
+    pReading = otherMode ? undefined : getPersonalReading(pCard);
+    bIdx = bearingIndex(subject.bm, subject.bd);
+    aligned = !otherMode && bIdx === cCard.major;
   }
 
-  // The card the share image features: your card when a birthday is set, else the day's
-  // collective card (the image route applies the same rule).
+  // The card the share image features: the subject's card when a birthday is set, else
+  // the day's collective card (the image route applies the same rule).
   const featured = pCard ?? cCard;
-  const shareTitle = name ? `${name}'s card for ${dateLabel}` : `My card for ${dateLabel}`;
+  const shareTitle = subjectName
+    ? `${subjectName}'s card for ${dateLabel}`
+    : otherMode
+      ? `A card for ${dateLabel}`
+      : `My card for ${dateLabel}`;
   const shareText = `${featured.minorName} · The Tarot Almanac`;
 
   const shareParams = new URLSearchParams();
-  if (birthday && pCard) {
-    shareParams.set("bm", String(birthday.bm));
-    shareParams.set("bd", String(birthday.bd));
-    if (name) shareParams.set("n", name);
+  if (subject && pCard) {
+    shareParams.set("bm", String(subject.bm));
+    shareParams.set("bd", String(subject.bd));
+    if (subjectName) shareParams.set("n", subjectName);
   }
   const shareQuery = shareParams.toString();
   const shareSuffix = shareQuery ? `?${shareQuery}` : "";
@@ -191,6 +219,15 @@ export default function TodayView({
     <div className={styles.wrap}>
       {header}
 
+      {otherMode && (
+        <div className={styles.viewingBanner}>
+          <span className={styles.viewingText}>
+            You&rsquo;re looking up {subjectName ? `${subjectName}’s` : "someone’s"} day. This is a one-off.
+          </span>
+          <Link className={styles.viewingClear} href={basePath}>&times; Back to your card</Link>
+        </div>
+      )}
+
       {/* One real grid. Each labeled row (headers, cards, day-major, Between, month,
           year) is a shared grid row via named areas, so every horizontal line spans
           both columns and aligns. The center divider is a single left border on the
@@ -201,7 +238,13 @@ export default function TodayView({
         </div>
         <div className={`${styles.colHead} ${styles.right}`} style={{ gridArea: "yHead" }}>
           <span className={`${styles.colHeadLbl} ${styles.yours}`}>
-            {name ? `${name} today` : "You today"}
+            {otherMode
+              ? subjectName
+                ? `${subjectName} today`
+                : "Their card"
+              : name
+                ? `${name} today`
+                : "You today"}
           </span>
         </div>
 
@@ -227,11 +270,21 @@ export default function TodayView({
             </>
           ) : personalLocked ? (
             <>
-              <div className={styles.cardname}>Your card, kept</div>
+              <div className={styles.cardname}>{otherMode ? "This day is beyond the free window" : "Your card, kept"}</div>
               <div className={styles.reading}>
-                The world&rsquo;s card for this day is always open. Your own card for a past
-                day is part of the almanac. Today and anything earlier this month stay free;
-                a subscription opens every day behind you as yours to keep.
+                {otherMode ? (
+                  <>
+                    The world&rsquo;s card for this day is always open. Personal cards for past
+                    days, yours or anyone you look up, are part of the almanac. Today and
+                    anything earlier this month stay free; a subscription opens the rest.
+                  </>
+                ) : (
+                  <>
+                    The world&rsquo;s card for this day is always open. Your own card for a past
+                    day is part of the almanac. Today and anything earlier this month stay free;
+                    a subscription opens every day behind you as yours to keep.
+                  </>
+                )}
               </div>
               <div className={styles.gateActions}>
                 {signedIn ? (
@@ -263,7 +316,7 @@ export default function TodayView({
           )}
         </div>
 
-        {!personalLocked && (
+        {!personalLocked && !otherMode && (
           <div className={`${styles.between} ${styles.rowsep}`} style={{ gridArea: "btwn" }}>
             <span className={styles.lbl}>Between you</span>
             <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
@@ -277,7 +330,7 @@ export default function TodayView({
         <div className={`${styles.contextRow} ${styles.rowsep} ${styles.right}`} style={{ gridArea: "yMon" }}>
           {pCard && (
             <>
-              <span className={styles.rowLbl}>Your Month</span>
+              <span className={styles.rowLbl}>{otherMode ? (subjectName ? `${subjectName}'s Month` : "Their Month") : "Your Month"}</span>
               <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PM]}`}>{MAJORS[PM]}</Link>
             </>
           )}
@@ -290,7 +343,7 @@ export default function TodayView({
         <div className={`${styles.contextRow} ${styles.rowsep} ${styles.right}`} style={{ gridArea: "yYr" }}>
           {pCard && (
             <>
-              <span className={styles.rowLbl}>Your Year</span>
+              <span className={styles.rowLbl}>{otherMode ? (subjectName ? `${subjectName}'s Year` : "Their Year") : "Your Year"}</span>
               <Link className={styles.contextLink} href={`/tarot/${MAJOR_SLUGS[PY]}`}>{MAJORS[PY]}</Link>
             </>
           )}
@@ -303,12 +356,20 @@ export default function TodayView({
             <svg aria-hidden="true"><use href={`#ma-${bIdx}`} /></svg>
           </span>
           <div className={styles.bText}>
-            <span className={styles.bLabel}>Your Bearing</span>
+            <span className={styles.bLabel}>
+              {otherMode ? (subjectName ? `${subjectName}'s Bearing` : "Their Bearing") : "Your Bearing"}
+            </span>
             <span className={styles.bName}>
-              The lifelong card you steer by is <span className={styles.bCard}>{MAJORS[bIdx]}</span>.
+              {otherMode ? (
+                <span className={styles.bCard}>{MAJORS[bIdx]}</span>
+              ) : (
+                <>The lifelong card you steer by is <span className={styles.bCard}>{MAJORS[bIdx]}</span>.</>
+              )}
             </span>
           </div>
-          <Link className={styles.bLink} href={`/bearing/${MAJOR_SLUGS[bIdx]}`}>See your Bearing &rarr;</Link>
+          <Link className={styles.bLink} href={`/bearing/${MAJOR_SLUGS[bIdx]}`}>
+            {otherMode ? "See this Bearing" : "See your Bearing"} &rarr;
+          </Link>
         </div>
       )}
 
@@ -327,10 +388,17 @@ export default function TodayView({
           title={shareTitle}
           text={shareText}
           className={styles.btn}
-          label="Share today"
+          label={otherMode ? (subjectName ? `Share ${subjectName}'s card` : "Share their card") : "Share today"}
         />
-        <Link className={`${styles.btn} ${styles.btnSolid}`} href="/me">Keep your days</Link>
+        {otherMode ? (
+          <Link className={`${styles.btn} ${styles.btnSolid}`} href={basePath}>Back to your card</Link>
+        ) : (
+          <Link className={`${styles.btn} ${styles.btnSolid}`} href="/me">Keep your days</Link>
+        )}
       </div>
+
+      {/* Signed-in accounts can look up (and share) anyone's day — see LookupSomeone. */}
+      {signedIn && !otherMode && <LookupSomeone action={basePath} />}
     </div>
   );
 }

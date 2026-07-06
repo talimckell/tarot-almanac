@@ -249,6 +249,25 @@ body {
 .btn-reveal:hover { background: var(--indigo-mid); }
 .reveal-error { font-family: var(--sans); font-size: 12px; color: var(--fire); margin: 0; }
 
+/* signed-in "look up someone else" (hero) */
+.entry-lookup-link {
+  font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--label); background: none; border: none; cursor: pointer;
+  display: block; margin: 14px auto 0; padding: 0; text-align: center;
+}
+.entry-lookup-link:hover { color: var(--indigo); }
+.entry-lookup-links { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 14px; }
+.entry-lookup-open {
+  font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--indigo); text-decoration: none;
+}
+.entry-lookup-open:hover { text-decoration: underline; text-underline-offset: 3px; }
+.entry-lookup-back {
+  font-family: var(--serif-sc); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--label); background: none; border: none; cursor: pointer; padding: 0;
+}
+.entry-lookup-back:hover { color: var(--indigo); }
+
 /* ── PULL QUOTE ── */
 .pullquote-band {
   padding: 52px 60px;

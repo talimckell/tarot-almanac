@@ -33,13 +33,21 @@ export function isOldEnough(by: number, bm: number, bd: number, now: YMD): boole
 // all — it just doesn't unlock a personal reading, the same way an empty field
 // wouldn't. `now` must come from the caller (request time on the server, the
 // viewer's clock in the browser) since this file can't call Date.now() itself.
-export function parseBirthday(raw: string | undefined | null, now: YMD): Birthday | null {
+export function parseBirthday(
+  raw: string | undefined | null,
+  now: YMD,
+  // Looking someone else up is only offered to signed-in accounts, and there the
+  // 16+ floor doesn't apply — the account holder can check the day for a minor in
+  // their care, the same exception saved charts already make. It stays enforced for
+  // your own anonymous birthday (allowAnyAge stays false there).
+  allowAnyAge = false,
+): Birthday | null {
   if (!raw || !BIRTHDAY_RE.test(raw)) return null;
   const [byStr, bmStr, bdStr] = raw.split("-");
   const by = Number(byStr);
   const bm = Number(bmStr);
   const bd = Number(bdStr);
-  if (!isOldEnough(by, bm, bd, now)) return null;
+  if (!allowAnyAge && !isOldEnough(by, bm, bd, now)) return null;
   return { bm, bd };
 }
 

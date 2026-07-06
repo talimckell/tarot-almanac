@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { type FormEvent, useEffect, useState } from "react";
 import {
   collectiveDayCard,
   personalDayCard,
@@ -68,20 +69,33 @@ function pipCountFor(card: DayCard | null | undefined): number {
 export default function TodayEntry({
   birthday = null,
   name,
+  signedIn = false,
 }: {
   // Resolved server-side from the signed-in account (its birthday wins) or the
   // anonymous `bday` cookie. When present, the "You today" slot shows your card of
   // the day instead of the reveal form — the abbreviated version of /today (no table).
   birthday?: Birthday | null;
   name?: string;
+  // Only signed-in accounts get the "look up someone else" affordance: their own
+  // birthday is fixed, so a looked-up birthday is unambiguously not them.
+  signedIn?: boolean;
 } = {}) {
   const [today, setToday] = useState<{
+    y: number;
+    m: number;
+    d: number;
     dateLabel: string;
     card: DayCard;
     phase: string;
     moon: string;
     personal: { card: DayCard; reading?: string } | null;
   } | null>(null);
+
+  // Signed-in lookup of someone else's card — ephemeral, client-side only, never
+  // persisted. `looking` shows the input; `guest` holds the resolved card.
+  const [looking, setLooking] = useState(false);
+  const [guest, setGuest] = useState<{ name?: string; bstr: string; card: DayCard } | null>(null);
+  const [lookupError, setLookupError] = useState<string | null>(null);
 
   const bm = birthday?.bm;
   const bd = birthday?.bd;
@@ -100,6 +114,9 @@ export default function TodayEntry({
       personal = { card: pCard, reading: getPersonalReading(pCard) };
     }
     setToday({
+      y,
+      m,
+      d,
       dateLabel: formatLongDate(y, m, d),
       card,
       phase: phaseBand(card.major),
@@ -112,6 +129,38 @@ export default function TodayEntry({
   const personal = today?.personal ?? null;
   const pipCount = pipCountFor(card);
   const pPipCount = pipCountFor(personal?.card);
+  const gPipCount = pipCountFor(guest?.card);
+
+  function handleLookup(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!today) return;
+    const fd = new FormData(e.currentTarget);
+    const gName = ((fd.get("on") as string) ?? "").trim();
+    const bstr = ((fd.get("ob") as string) ?? "").trim();
+    const [byStr, bmStr, bdStr] = bstr.split("-");
+    const gbm = Number(bmStr);
+    const gbd = Number(bdStr);
+    // No 16+ gate here: a signed-in account may look up anyone (a child in their care,
+    // say). We just need a valid date. Any age is fine.
+    if (!Number(byStr) || !gbm || !gbd) {
+      setLookupError("Enter a full birthdate.");
+      return;
+    }
+    setGuest({
+      name: gName || undefined,
+      bstr,
+      card: personalDayCard(today.y, today.m, today.d, gbm, gbd),
+    });
+    setLooking(false);
+    setLookupError(null);
+  }
+
+  function guestDayHref(): string {
+    if (!guest) return "/today";
+    const params = new URLSearchParams({ ob: guest.bstr });
+    if (guest.name) params.set("on", guest.name);
+    return `/today?${params.toString()}`;
+  }
 
   return (
     <div className="hero-right">
@@ -144,9 +193,57 @@ export default function TodayEntry({
         </div>
 
         {/* Your card — shown when we know your birthday (signed in or cookie),
-            otherwise revealed by entering a birthdate. */}
+            otherwise revealed by entering a birthdate. Signed-in accounts can flip
+            this slot to look up (and open/share) someone else's card. */}
         <div className="ec">
-          {personal ? (
+          {guest ? (
+            <>
+              <span className={`ec-rule ${guest.card.element}`} />
+              <div className="ec-body">
+                <div className="ec-top">
+                  <span className="ec-role">
+                    {(guest.name ? `${guest.name} today` : "Their card").toUpperCase()}
+                  </span>
+                </div>
+                <div className="ec-pips" style={{ color: `var(--${guest.card.element})` }}>
+                  {Array.from({ length: gPipCount }).map((_, i) => (
+                    <span className="pip" key={i}>
+                      <SuitPip suit={guest.card.suit} />
+                    </span>
+                  ))}
+                </div>
+                <div className="ec-name">{guest.card.minorName}</div>
+                <div className="entry-lookup-links">
+                  <Link href={guestDayHref()} className="entry-lookup-open">Open their day &rarr;</Link>
+                  <button type="button" className="entry-lookup-back" onClick={() => setGuest(null)}>
+                    &times; back to yours
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : looking ? (
+            <>
+              <span className="ec-rule" style={{ background: "var(--warm-stone)" }} />
+              <div className="ec-body">
+                <div className="ec-top">
+                  <span className="ec-role">LOOK UP SOMEONE</span>
+                </div>
+                <form className="reveal-form" onSubmit={handleLookup} style={{ marginTop: "12px" }}>
+                  <input type="text" name="on" placeholder="Their name" aria-label="Their name" autoComplete="off" />
+                  <input type="date" name="ob" required aria-label="Their birthdate" />
+                  <button type="submit" className="btn-reveal">See their card &rarr;</button>
+                  <button
+                    type="button"
+                    className="entry-lookup-back"
+                    onClick={() => { setLooking(false); setLookupError(null); }}
+                  >
+                    Cancel
+                  </button>
+                  {lookupError && <p className="reveal-error">{lookupError}</p>}
+                </form>
+              </div>
+            </>
+          ) : personal ? (
             <>
               <span className={`ec-rule ${personal.card.element}`} />
               <div className="ec-body">
@@ -162,6 +259,11 @@ export default function TodayEntry({
                 </div>
                 <div className="ec-name">{personal.card.minorName}</div>
                 {personal.reading && <p className="ec-prompt">{personal.reading}</p>}
+                {signedIn && (
+                  <button type="button" className="entry-lookup-link" onClick={() => setLooking(true)}>
+                    Look up someone else &rarr;
+                  </button>
+                )}
               </div>
             </>
           ) : (

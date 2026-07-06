@@ -22,13 +22,13 @@ function serverNow(): YMD {
 export default async function TodayPage({
   searchParams,
 }: {
-  searchParams: Promise<{ n?: string; b?: string }>;
+  searchParams: Promise<{ n?: string; b?: string; on?: string; ob?: string }>;
 }) {
-  const { n, b } = await searchParams;
+  const { n, b, on, ob } = await searchParams;
   const account = await getSignedInBirthday();
 
   let birthday = account?.birthday ?? null;
-  let name = account ? account.name ?? undefined : n?.trim() || undefined;
+  const name = account ? account.name ?? undefined : n?.trim() || undefined;
 
   const now = serverNow();
 
@@ -41,6 +41,11 @@ export default async function TodayPage({
     birthday = parseBirthday(b, now) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, now);
   }
 
+  // Looking someone up is a signed-in-only feature (?on/?ob, never persisted, so it
+  // can't touch the cookie or the account). Any age is allowed for a lookup.
+  const otherBirthday = account ? parseBirthday(ob, now, true) : null;
+  const otherName = account ? on?.trim() || undefined : undefined;
+
   return (
     <>
       <SiteNav current="today" />
@@ -51,6 +56,9 @@ export default async function TodayPage({
         name={name}
         signedIn={!!account}
         subscribed={account?.subscribed ?? false}
+        otherBirthday={otherBirthday}
+        otherName={otherName}
+        basePath="/today"
       />
       <Footer />
     </>

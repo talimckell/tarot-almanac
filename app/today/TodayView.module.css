@@ -364,6 +364,96 @@ a.todayPill:hover {
   background: var(--indigo-mid);
 }
 
+/* LOOK UP SOMEONE (signed-in) */
+.lookup {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+.lookupToggle {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.lookupToggle:hover {
+  color: var(--indigo);
+}
+.lookupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 22px 26px;
+  width: 100%;
+  max-width: 420px;
+}
+.lookupLbl {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.lookupForm input {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--stone);
+  border: 1px solid var(--charcoal);
+  padding: 9px 11px;
+  width: 100%;
+}
+.lookupForm input:focus {
+  outline: none;
+  border-color: var(--indigo);
+}
+.lookupActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+/* VIEWING SOMEONE ELSE — banner above the grid in lookup mode */
+.viewingBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 12px 18px;
+  margin-bottom: 18px;
+}
+.viewingText {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--charcoal);
+}
+.viewingClear {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.viewingClear:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* GATED STATE — the real, server-rendered paywall page (no card data ever sent for
    gated dates), styled like the mockup's modal but as page content, not a JS overlay. */
 .gateWrap {

@@ -51,17 +51,17 @@ export default async function TodayDatePage({
   searchParams,
 }: {
   params: Promise<{ date: string }>;
-  searchParams: Promise<{ n?: string; b?: string }>;
+  searchParams: Promise<{ n?: string; b?: string; on?: string; ob?: string }>;
 }) {
   const { date } = await params;
   const target = parseDateSlug(date);
   if (!target) notFound();
 
-  const { n, b } = await searchParams;
+  const { n, b, on, ob } = await searchParams;
   const account = await getSignedInBirthday();
 
   let birthday = account?.birthday ?? null;
-  let name = account ? account.name ?? undefined : n?.trim() || undefined;
+  const name = account ? account.name ?? undefined : n?.trim() || undefined;
 
   const now = serverNow();
 
@@ -69,6 +69,10 @@ export default async function TodayDatePage({
     const cookieStore = await cookies();
     birthday = parseBirthday(b, now) ?? parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, now);
   }
+
+  // Signed-in-only lookup (?on/?ob, never persisted). Any age allowed for a lookup.
+  const otherBirthday = account ? parseBirthday(ob, now, true) : null;
+  const otherName = account ? on?.trim() || undefined : undefined;
 
   return (
     <>
@@ -80,6 +84,9 @@ export default async function TodayDatePage({
         name={name}
         signedIn={!!account}
         subscribed={account?.subscribed ?? false}
+        otherBirthday={otherBirthday}
+        otherName={otherName}
+        basePath={`/today/${formatDateSlug(target)}`}
       />
       <Footer />
     </>
