@@ -3,19 +3,15 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import { parseBirthday, parseDateSlug, formatDateSlug, isPastOrToday, BIRTHDAY_COOKIE, type YMD } from "../../../lib/today";
+import { parseBirthday, parseDateSlug, formatDateSlug, isPastOrToday, BIRTHDAY_COOKIE } from "../../../lib/today";
 import { formatLongDate, collectiveDayCard } from "../../../lib/almanac";
 import { getSignedInBirthday } from "../../../lib/accountBirthday";
+import { viewerNow } from "../../../lib/viewerNow";
 import { SITE_URL } from "../../../lib/site";
 import TodayView from "../TodayView";
 
 // The gate depends on the request-time date, so this can never be statically cached.
 export const dynamic = "force-dynamic";
-
-function serverNow(): YMD {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
-}
 
 export async function generateMetadata({
   params,
@@ -31,7 +27,11 @@ export async function generateMetadata({
   // Future dates are gated (subscriber time-travel) and speculative, so they stay
   // out of the index. Past/today collective readings are public, so they're indexed
   // with a self-canonical and a card-specific description for the SERP snippet.
-  if (!isPastOrToday(target, serverNow())) {
+  // "now" is resolved once per request from the viewer's timezone (viewerNow), so
+  // the robots decision here and the content gate below always agree within a
+  // request. Future dates stay out of the index; past/today collective readings
+  // are indexed. Sitemap coverage stays on a stable UTC clock (app/sitemap.ts).
+  if (!isPastOrToday(target, await viewerNow())) {
     return { title, robots: { index: false } };
   }
 
@@ -63,7 +63,7 @@ export default async function TodayDatePage({
   let birthday = account?.birthday ?? null;
   const name = account ? account.name ?? undefined : n?.trim() || undefined;
 
-  const now = serverNow();
+  const now = await viewerNow();
 
   if (!account) {
     const cookieStore = await cookies();

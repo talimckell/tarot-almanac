@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
-import { parseBirthday, BIRTHDAY_COOKIE, type YMD } from "../../lib/today";
+import { parseBirthday, BIRTHDAY_COOKIE } from "../../lib/today";
 import { getSignedInBirthday } from "../../lib/accountBirthday";
+import { viewerNow } from "../../lib/viewerNow";
 import TodayView from "./TodayView";
 
 // The gate depends on the request-time date, so this can never be statically cached.
@@ -13,11 +14,6 @@ export const metadata: Metadata = {
   title: "Today | The Tarot Almanac",
   robots: { index: false },
 };
-
-function serverNow(): YMD {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
-}
 
 export default async function TodayPage({
   searchParams,
@@ -30,7 +26,7 @@ export default async function TodayPage({
   let birthday = account?.birthday ?? null;
   const name = account ? account.name ?? undefined : n?.trim() || undefined;
 
-  const now = serverNow();
+  const now = await viewerNow();
 
   // Only an anonymous (signed-out) visitor falls back to the cookie/query param —
   // a signed-in account's own birthday always wins, so a stray ?b= link (a gift

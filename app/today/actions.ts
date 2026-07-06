@@ -3,12 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { parseDateSlug, isOldEnough, type YMD } from "@/lib/today";
-
-function serverNow(): YMD {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
-}
+import { parseDateSlug, isOldEnough } from "@/lib/today";
+import { viewerNow } from "@/lib/viewerNow";
 
 // /today's "Add your birthday" reveal form submits as a plain GET (?b=) for
 // anonymous visitors, which proxy.ts turns into the birthday cookie. But a
@@ -25,7 +21,7 @@ export async function saveBirthdayFromToday(formData: FormData) {
   if (!user) return;
 
   const parsed = parseDateSlug((formData.get("b") as string | null)?.trim() || "");
-  if (!parsed || !isOldEnough(parsed.y, parsed.m, parsed.d, serverNow())) return;
+  if (!parsed || !isOldEnough(parsed.y, parsed.m, parsed.d, await viewerNow())) return;
 
   const name = (formData.get("n") as string | null)?.trim() || null;
 

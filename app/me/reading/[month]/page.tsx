@@ -5,7 +5,8 @@ import Footer from "../../../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { isSubscribed } from "@/lib/compAccounts";
-import { type YM, parseMonthSlug, isMonthOpenForViewer } from "@/lib/today";
+import { parseMonthSlug, isMonthOpenForViewer } from "@/lib/today";
+import { viewerNowYM } from "@/lib/viewerNow";
 import { getOrCreateMonthlyReading } from "@/lib/monthlyReadingStore";
 import MonthlyReadingView from "./MonthlyReadingView";
 
@@ -13,10 +14,6 @@ import MonthlyReadingView from "./MonthlyReadingView";
 // signed-in session and the request-time date — never statically cached.
 export const dynamic = "force-dynamic";
 
-function serverNowYM(): YM {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1 };
-}
 
 export async function generateMetadata({
   params,
@@ -63,7 +60,7 @@ export default async function MonthlyReadingPage({
   const subscribed = isSubscribed(profile);
   if (!subscribed) redirect("/me#subscribe");
 
-  const nowYM = serverNowYM();
+  const nowYM = await viewerNowYM();
   // Same discipline as /me and /today/[date]: a locked month is never fetched or
   // rendered, just bounced back, so no data leak past the access rule.
   if (!isMonthOpenForViewer(target, nowYM, subscribed)) redirect("/me");

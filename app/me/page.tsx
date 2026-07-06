@@ -6,12 +6,12 @@ import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { isSubscribed } from "@/lib/compAccounts";
 import {
-  type YM,
   parseMonthSlug,
   formatMonthSlug,
   isMonthOpenForViewer,
   monthIndex,
 } from "@/lib/today";
+import { viewerNow } from "@/lib/viewerNow";
 import MeView from "./MeView";
 
 // Depends on the signed-in session and the request-time date — never statically cached.
@@ -21,16 +21,6 @@ export const metadata: Metadata = {
   title: "My Almanac | The Tarot Almanac",
   robots: { index: false },
 };
-
-function serverNowYM(): YM {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1 };
-}
-
-function serverToday(): { y: number; m: number; d: number } {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
-}
 
 export default async function MePage({
   searchParams,
@@ -51,7 +41,8 @@ export default async function MePage({
   });
 
   const { month, view, checkout } = await searchParams;
-  const nowYM = serverNowYM();
+  const now = await viewerNow();
+  const nowYM = { y: now.y, m: now.m };
   const requestedMonth = (month && parseMonthSlug(month)) || nowYM;
   const subscribed = isSubscribed(profile);
 
@@ -94,7 +85,7 @@ export default async function MePage({
         isCurrentMonth={monthIndex(requestedMonth) === monthIndex(nowYM)}
         nextLocked={nextLocked}
         prevLocked={prevLocked}
-        today={serverToday()}
+        today={now}
         birthday={birthday}
         view={resolvedView}
         checkout={checkout}

@@ -3,8 +3,9 @@ import { cookies } from "next/headers";
 import SiteNav from "./components/SiteNav";
 import Footer from "./components/Footer";
 import TodayEntry from "./today-entry";
-import { parseBirthday, BIRTHDAY_COOKIE, type Birthday, type YMD } from "@/lib/today";
+import { parseBirthday, BIRTHDAY_COOKIE, type Birthday } from "@/lib/today";
 import { getSignedInBirthday } from "@/lib/accountBirthday";
+import { viewerNow } from "@/lib/viewerNow";
 
 // The eight-pointed star mark, reused in a few places.
 function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: number; fill?: string; style?: React.CSSProperties }) {
@@ -13,11 +14,6 @@ function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: num
       <path d="M28 7 L32.5 23.5 L49 28 L32.5 32.5 L28 49 L23.5 32.5 L7 28 L23.5 23.5 Z" />
     </svg>
   );
-}
-
-function serverNow(): YMD {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1, d: now.getUTCDate() };
 }
 
 export default async function Home() {
@@ -31,7 +27,7 @@ export default async function Home() {
   const name = account?.name ?? undefined;
   if (!account) {
     const cookieStore = await cookies();
-    birthday = parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, serverNow());
+    birthday = parseBirthday(cookieStore.get(BIRTHDAY_COOKIE)?.value, await viewerNow());
   }
 
   return (

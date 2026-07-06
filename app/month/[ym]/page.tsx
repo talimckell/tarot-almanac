@@ -26,16 +26,11 @@ import {
   formatMonthLabel,
   isMonthOpen,
   addMonths,
-  type YM,
 } from "../../../lib/today";
+import { viewerNowYM } from "../../../lib/viewerNow";
 
 // The gate depends on the request-time month, so this can never be statically cached.
 export const dynamic = "force-dynamic";
-
-function serverNowYM(): YM {
-  const now = new Date();
-  return { y: now.getUTCFullYear(), m: now.getUTCMonth() + 1 };
-}
 
 export async function generateMetadata({
   params,
@@ -50,7 +45,7 @@ export async function generateMetadata({
 
   // Months past the open window are gated and speculative, so they stay out of the
   // index. Open months are indexed with a self-canonical and a card-specific snippet.
-  if (!isMonthOpen(target, serverNowYM())) {
+  if (!isMonthOpen(target, await viewerNowYM())) {
     return { title, robots: { index: false } };
   }
 
@@ -74,7 +69,7 @@ export default async function MonthPage({
   const target = parseMonthSlug(ym);
   if (!target) notFound();
 
-  const now = serverNowYM();
+  const now = await viewerNowYM();
   const open = isMonthOpen(target, now);
   const label = formatMonthLabel(target);
   const prev = addMonths(target, -1);
