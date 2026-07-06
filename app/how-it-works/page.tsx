@@ -31,6 +31,28 @@ export default function HowItWorksPage() {
           </p>
         </header>
 
+        {/* PLAIN-LANGUAGE ORIENTATION — what you get, before any math */}
+        <section className={styles.section}>
+          <h2>What the Almanac gives you</h2>
+          <p>
+            Every day, the Almanac hands you two cards. One is the world&rsquo;s, the
+            same for everyone alive that day. The other is yours, drawn from your
+            birthday. Read side by side, they show the weather of the day and your own
+            angle on it.
+          </p>
+          <p>
+            Behind each day card sits a Major Arcana card, the archetype the day belongs
+            to, and behind that, the month and the year you&rsquo;re moving through, each
+            its own card. Fixed for life, set the day you were born, is your Bearing: the
+            one card you carry into every day after.
+          </p>
+          <p>
+            None of it is shuffled or guessed. Every card comes from the date itself,
+            worked the same way every time, which is why you can check any of it by hand.
+            Everything below is how a date becomes those cards.
+          </p>
+        </section>
+
         {/* THE CORE IDEA */}
         <section className={styles.section}>
           <h2>The two flaws, and the fix</h2>

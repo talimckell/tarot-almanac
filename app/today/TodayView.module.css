@@ -503,6 +503,47 @@ a.todayPill:hover {
   margin-top: 20px;
 }
 
+/* HOW TO READ THIS — always-open orientation FAQ below the actions */
+.faq {
+  margin-top: 52px;
+}
+.faqHead {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 22px;
+}
+.faqItem {
+  padding: 20px 0;
+  border-top: 1px solid var(--warm-stone);
+}
+.faqItem:last-child {
+  border-bottom: 1px solid var(--warm-stone);
+}
+.faqQ {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--indigo);
+  margin-bottom: 8px;
+}
+.faqA {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.faqLink {
+  color: var(--indigo);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.faqLink:hover {
+  border-bottom-color: var(--indigo);
+}
+
 @media (max-width: 640px) {
   /* Single column: stack world section, then you section, then Between, then
      the month/year context. Right cells lose their left divider and gain a top

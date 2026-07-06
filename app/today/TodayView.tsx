@@ -399,6 +399,93 @@ export default function TodayView({
         )}
       </div>
 
+      {/* Orientation for a cold arrival: what the two cards are and how to use them,
+          no arithmetic. The last item bridges to /how-it-works for the method. */}
+      <section className={styles.faq} aria-label="How to read this page">
+        <h2 className={styles.faqHead}>How to read this</h2>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What are the two day cards?</h3>
+          <p className={styles.faqA}>
+            The card on the left is the world&rsquo;s, the same for everyone alive
+            today. Think of it as the weather the day hands all of us at once. The card
+            on the right is yours, the angle your birthday draws out of that same day.
+            Both are Minor Arcana, the texture of the day, the grain of how it&rsquo;s
+            likely to feel. Read them together and you see where you&rsquo;re moving with
+            the day and where you&rsquo;re working against it.
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>How do I use my card?</h3>
+          <p className={styles.faqA}>
+            It points to the shape the day is likely to take for you. Notice where you
+            feel it. A Cups day tends to land in your feelings and the people close to
+            you; a Swords day lives in your head and your words. The card is fixed. What
+            you do inside it is yours.
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What do the elements mean?</h3>
+          <p className={styles.faqA}>
+            Each day card belongs to a suit, and each suit carries an element that tells
+            you which part of life the day is pressing on. Fire (Wands) is drive and
+            momentum. Water (Cups) is feeling and connection. Air (Swords) is thought,
+            words, and where they cut. Earth (Pentacles) is the body, work, and what you
+            can hold in your hands.
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What&rsquo;s the day Major?</h3>
+          <p className={styles.faqA}>
+            Under each day card sits a Major Arcana card, the day&rsquo;s Major. If the
+            day card is the texture of the day, its Major is the shape underneath: the
+            archetypal current the day grows out of and belongs to. The texture is drawn
+            from it, so the two never pull against each other. When you want the deeper
+            read on why a day feels the way it does, look to its Major.
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What are the Month and Year cards?</h3>
+          <p className={styles.faqA}>
+            The day sits inside wider currents. The Year card is the archetype coloring
+            the whole year, the mood you often only name in hindsight. The Month card is
+            the season within it. Both are Majors, and each comes two ways: a collective
+            version everyone shares and a personal one shaped by your birthday. They&rsquo;re
+            the long weather you&rsquo;re moving through, the context each day lands in.
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What&rsquo;s my Bearing?</h3>
+          <p className={styles.faqA}>
+            Your day card is new every morning. Your Bearing never changes. It&rsquo;s
+            the single Major Arcana card set by your birthday, the angle you were born
+            bringing to everything. The day cards are the weather; your Bearing is how
+            you&rsquo;re built to walk through it.{" "}
+            <Link href="/bearing" className={styles.faqLink}>
+              Find your Bearing &rarr;
+            </Link>
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>How does the tarot numerology math work?</h3>
+          <p className={styles.faqA}>
+            Every card comes from plain arithmetic on the date. Your birthday and the
+            day&rsquo;s numbers run through a few steps of addition, wrapped around the
+            wheel of twenty-two Major Arcana, so nothing is shuffled or guessed and
+            you&rsquo;d land on the same cards working it by hand.{" "}
+            <Link href="/how-it-works" className={styles.faqLink}>
+              See the whole method worked out &rarr;
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* Signed-in accounts can look up (and share) anyone's day — see LookupSomeone. */}
       {signedIn && !otherMode && <LookupSomeone action={basePath} />}
     </div>
