@@ -123,7 +123,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     linkMap: {
       "here": "/blog/what-is-a-tarot-bearing",
       "its own piece": "/blog/what-is-a-tarot-bearing",
-      "Build your natal chart in the Tarot Almanac →": "/chart",
+      "Build your natal chart in the Tarot Almanac →": "/tarot-birth-chart",
     },
   },
   // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────

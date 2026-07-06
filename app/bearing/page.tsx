@@ -57,6 +57,11 @@ export default function BearingPage() {
             distance: the gap between how the world reads a day and how you
             read it never changes, and that constant is your Bearing.
           </p>
+          <p>
+            Your Bearing is also the anchor of your full{" "}
+            <Link className={styles.inline} href="/tarot-birth-chart">tarot birth chart</Link>, the
+            seven-card reading built from your birthday.
+          </p>
           <p className={styles.mathnote}>
             It&rsquo;s set by your birth month plus your birth day, brought
             around the wheel of 22. That sum never changes, so neither does

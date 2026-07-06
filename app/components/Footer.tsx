@@ -46,7 +46,7 @@ export default function Footer() {
             <div className={styles.fcolH}>The Almanac</div>
             <Link href="/today">Today</Link>
             <Link href="/bearing">Your Bearing</Link>
-            <Link href="/chart">Your Chart</Link>
+            <Link href="/tarot-birth-chart">Your Chart</Link>
             <Link href="/me">My Almanac</Link>
           </div>
 

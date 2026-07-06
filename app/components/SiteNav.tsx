@@ -4,12 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./SiteNav.module.css";
 
-export type SiteSection = "today" | "tarot" | "bearing" | "how-it-works" | "me";
+export type SiteSection = "today" | "tarot" | "bearing" | "chart" | "how-it-works" | "me";
 
 const LEADING_LINKS: { href: string; label: string; section: SiteSection }[] = [
   { href: "/today", label: "Today", section: "today" },
   { href: "/tarot", label: "Cards", section: "tarot" },
-  { href: "/bearing", label: "Bearing", section: "bearing" },
+  // "Chart" points at the public /tarot-birth-chart landing (indexable, targets the
+  // "tarot birth chart" search term), not the noindex/gated /chart app. Its own CTA
+  // hands off to /chart to build one. Bearing stays reachable via the footer + interlinks.
+  { href: "/tarot-birth-chart", label: "Chart", section: "chart" },
   { href: "/how-it-works", label: "How it works", section: "how-it-works" },
 ];
 
