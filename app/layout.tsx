@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
 import IconSprite from "./components/IconSprite";
 import CookieConsent from "./components/CookieConsent";
@@ -54,6 +54,13 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+};
+
+// Explicit viewport, matching Next's default. Stated for clarity so the mobile
+// scaling contract is visible in one place rather than left implicit.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

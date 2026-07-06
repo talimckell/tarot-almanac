@@ -64,6 +64,34 @@ entry the obvious fallback, and verify the return path in a real in-app browser.
 
 **Effort.** ~Half a day; needs manual testing in real in-app browsers.
 
+### 🟠 Homepage value-prop reorder (value ladder)
+**Added:** 2026-07-06
+
+**Problem / root cause.** The homepage value props don't read as the funnel they actually
+are. The three commercial things are a value ladder — daily card (free front door / SEO),
+birth chart ($12 one-off, **giftable** = referral loop), living almanac ($7/mo, personal,
+can't be gifted) — but the current order (Today → The Cards → Bearing → Almanac) buries the
+money. The birth chart has no dedicated slot despite being the first purchase, the giftable
+referral driver, and the top search term; it's only a sub-clause of the account band. The
+homepage **never links to `/tarot-birth-chart`**, our indexable pitch page. The Bearing (a
+free lead magnet) gets two treatments (prop + full band) while the $12 entrée gets none.
+
+**Direction (mockup + decisions).** A reorder mockup was built in-session (faithful tokens +
+typefaces): props become a legible ladder — **Today (Free) → Bearing (Free) → Birth chart
+($12 · giftable) → Almanac ($7/mo)** with access chips; the birth chart is promoted to its
+own band (with a live mini chart diagram) that finally links `/tarot-birth-chart` and carries
+the Bearing→chart upsell ("one card is your Bearing; seven is the whole chart"); "The Cards"
+(all 78) demoted to a quiet secondary link; the account band sharpened to almanac-as-personal
+("the one thing here you can't make for anyone else"). Confirmed calls: **show real prices**
+on the chips (not vague tiers), and keep the **Bearing as a prop only** (its old standalone
+band is replaced by the chart band, not duplicated).
+
+Mockup Artifact: https://claude.ai/code/artifact/042f2e57-b88d-441b-ad61-3b3680597c96
+
+**Status.** Not started. Tali flagged there are a few problems with the mockup and wants to
+dig in more before any build. Revisit the copy and structure, then wire into `app/page.tsx`
++ CSS. All homepage prose stays authored / in-voice.
+
 ### Personal year card calculator
 A reusable personal-year-card calculator, plus a standalone landing page for it. Banked in
 the paid-reading funnel ideas. Free = the year card; a woven reading is the paid upsell.
@@ -78,13 +106,6 @@ An AI-assisted paid year-ahead reading as a new product. Banked in the paid-read
 ### Paid compatibility reading
 Paid product paired with the birth-card compatibility post (below): free post = the concept,
 paid = the woven compatibility reading.
-
-### 🟡 Minor mobile polish (from the 2026-07-06 audit)
-- **Hero `90vh` → `svh`.** Mobile toolbars nudge content below the fold; use `svh`/`dvh`.
-- **Birthday select placeholder graying.** iOS renders the empty "Month/Day/Year" options in
-  normal text, reading like real values. Small styling tweak.
-- **Explicit `viewport` export.** None in `app/layout.tsx`; Next's default is fine, so
-  clarity-only.
 
 ### 🟡 Timezone Option B — device-accurate zone
 "Today" localizes via Vercel's IP timezone (shipped). IP can be wrong on VPNs / some
@@ -151,6 +172,16 @@ All 16 boards are built — these are the scheduling/publishing passes:
 ---
 
 ## Shipped
+
+### 2026-07-06 — minor mobile polish (audit follow-ups)
+- **Hero `90vh` → `svh`.** `.hero` in `app/globals.css` now sets `min-height: 90vh` as a
+  fallback then `90svh`, so mobile browser toolbars no longer push the hero below the fold.
+- **Birthday select placeholder graying.** `app/components/BirthdayFields.tsx` mutes each
+  Month/Day/Year select to `--warm-stone` while empty and drops the override once a value is
+  picked (CSS `--ink` wins), so iOS no longer renders the placeholders like real values. One
+  shared component, so it applies everywhere birthdays are entered.
+- **Explicit `viewport` export.** `app/layout.tsx` now exports `viewport` (`device-width`,
+  `initialScale: 1`), matching Next's default but stated for clarity.
 
 ### 2026-07-06 — mobile hardening
 - **Birthday entry: date picker → Month/Day/Year selects (site-wide).** Native

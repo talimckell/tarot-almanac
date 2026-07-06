@@ -47,7 +47,11 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* svh (small viewport height) keeps the hero above the fold on mobile: the
+     dynamic browser toolbars are counted as present, so content isn't pushed
+     under them. vh fallback for browsers without svh support. */
   min-height: 90vh;
+  min-height: 90svh;
   border-bottom: 1px solid var(--warm-stone);
 }
 .hero-left {

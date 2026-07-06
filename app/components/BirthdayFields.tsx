@@ -63,13 +63,19 @@ export default function BirthdayFields({
 
   const selectStyle = { flex: 1, minWidth: 0 } as const;
 
+  // iOS renders an empty select's placeholder option ("Month"/"Day"/"Year") in
+  // normal text, so it reads like a chosen value. Mute it while empty; once a
+  // real value is picked, drop the override so the CSS `color: var(--ink)` wins.
+  const fieldStyle = (value: string) =>
+    value ? selectStyle : { ...selectStyle, color: "var(--warm-stone)" };
+
   return (
     <div className={`birthday-fields ${className}`.trim()} style={{ display: "flex", gap: 8, width: "100%" }}>
       <select
         id={id}
         aria-label="Birth month"
         className={selectClassName}
-        style={selectStyle}
+        style={fieldStyle(m)}
         required={required}
         value={m}
         onChange={(e) => {
@@ -85,7 +91,7 @@ export default function BirthdayFields({
       <select
         aria-label="Birth day"
         className={selectClassName}
-        style={selectStyle}
+        style={fieldStyle(d)}
         required={required}
         value={d}
         onChange={(e) => setD(e.target.value)}
@@ -98,7 +104,7 @@ export default function BirthdayFields({
       <select
         aria-label="Birth year"
         className={selectClassName}
-        style={selectStyle}
+        style={fieldStyle(y)}
         required={required}
         value={y}
         onChange={(e) => {
