@@ -4,19 +4,21 @@ Living roadmap. **This file is the source of truth.** A rendered view is publish
 an Artifact (link below) for easy reading.
 
 When something comes up in a working session, say **"add it to the roadmap"** and it
-gets appended here in the format below, then the Artifact is refreshed.
+gets appended here, then the Artifact is refreshed.
 
 **Artifact view:** https://claude.ai/code/artifact/bd532d6a-d42b-417a-8b3b-11ce3204993d
 (redeploy to this same URL when the file changes — pass it as the Artifact `url`)
 
-## How entries are written
-Each open item captures: **Problem / root cause**, **When it happens** (concrete use
-cases), **Planned fix**, and **Effort / dependencies**. Priority markers:
-🔴 blocker · 🟠 important · 🟡 polish.
+## Structure
+Items are grouped into three workstream lanes — **Product & Monetization**, **Writing &
+Readings**, **Social & Scheduling** — plus a **Shipped** log. A **[Soon]** tag marks the
+next-up items. Priority chips (🔴 blocker · 🟠 important · 🟡 polish) apply to engineering
+items where they carry weight. Heavier items keep the full format: **Problem / root
+cause**, **When it happens**, **Planned fix**, **Effort**.
 
 ---
 
-## Open
+## Product & Monetization
 
 ### 🔴 Magic-link sign-in strands in-app-browser users
 **Added:** 2026-07-06
@@ -28,100 +30,138 @@ cookie store is what opens the link. If the link opens in any other browser cont
 sign-in fails and bounces back to `/sign-in`.
 
 **When it happens.**
-1. **In-app browser → phone's default browser** (the Shannon case). User is on the site
-   inside an app's in-app browser (Gmail, Instagram, Facebook, LinkedIn, X, TikTok,
-   Slack…), requests the link there, then opens email and taps the link → launches
-   Safari/Chrome, a *different* cookie store.
+1. **In-app browser → phone's default browser** (the Shannon case). Requests the link inside
+   an app's in-app browser (Gmail, Instagram, Facebook, LinkedIn, X, TikTok, Slack), then
+   taps the link in email → launches Safari/Chrome, a different cookie store.
 2. **Requested on laptop, opened on phone** (or vice versa). Different device = no verifier.
-3. **Two browsers on one device.** Requests in Chrome, but the mail app opens links in Safari.
-4. **Mail app's own in-app browser.** Gmail/Outlook/Yahoo apps open links in *their* webview,
-   not the requesting browser.
-5. **Normal ↔ private/incognito, or aggressive cookie clearing** dropping the verifier
-   between request and click.
+3. **Two browsers on one device.** Requests in Chrome, mail app opens links in Safari.
+4. **Mail app's own in-app browser.** Gmail/Outlook/Yahoo open links in *their* webview.
+5. **Normal ↔ private/incognito, or aggressive cookie clearing** dropping the verifier.
 6. **Desktop mail client → non-default browser.**
 
-Works only when the *same* browser both requests and opens the link. It's probabilistic —
-some users sail through, others hit a dead-end loop (click → bounced to `/sign-in` → retry
-→ same). Silently blocks signup, which gates everything (subscriptions, saved birthday).
+Works only when the same browser both requests and opens the link — probabilistic, and it
+silently blocks signup, which gates everything.
 
-**Planned fix.** Add a 6-digit email code path (`verifyOtp`): the user reads the code from
-the email and types it into the page they're already on, so the link never has to open in
-the same browser. Keep the existing magic link as-is (no regression) — the code is a purely
-additive, context-proof path. Two parts: (1) code-entry UI on `/sign-in`; (2) a one-line
-Supabase email-template change to include `{{ .Token }}`.
+**Planned fix.** Add a 6-digit email code path (`verifyOtp`): user reads the code and types
+it into the page they're already on. Keep the magic link as-is (no regression). Two parts:
+(1) code-entry UI on `/sign-in`; (2) Supabase email-template change to include `{{ .Token }}`.
 
-**Effort / dependencies.** ~Half a day of code + a Supabase dashboard template edit (owner
-action). Also fix the misleading "Open it on this device" copy on the sent screen (the real
-requirement is the same *browser*, not just device).
-
----
+**Effort.** ~Half a day of code + a Supabase dashboard edit (owner). Also fix the misleading
+"Open it on this device" copy.
 
 ### 🟠 Stripe Checkout unreliable in in-app webviews
 **Added:** 2026-07-06
 
-**Problem / root cause.** When a user in an in-app browser taps Subscribe, the redirect to
-Stripe Checkout is unreliable in embedded webviews, and Apple Pay / Google Pay aren't
-offered there at all — so the fastest mobile payment path silently disappears, and some
-webviews mishandle the return redirect after payment.
+**Problem / root cause.** In an in-app browser, the redirect to Stripe Checkout is
+unreliable, Apple Pay / Google Pay aren't offered at all, and some webviews mishandle the
+return redirect after payment.
 
-**When it happens.** Any subscribe or one-off checkout started from inside an in-app browser
-on mobile. Lower frequency than the auth issue (fewer users reach checkout in a webview),
-but it's real revenue.
+**When it happens.** Any checkout started from inside an in-app browser on mobile. Lower
+frequency than the auth issue, but real revenue.
 
-**Planned fix.** Detect in-app webviews and nudge "open in Safari/Chrome to pay," and/or
-make sure card entry (which does work) is the obvious fallback. Verify the return/redirect
-path in a real in-app browser.
+**Planned fix.** Detect in-app webviews and nudge "open in Safari/Chrome to pay," make card
+entry the obvious fallback, and verify the return path in a real in-app browser.
 
-**Effort / dependencies.** ~Half a day; needs manual testing in real in-app browsers.
+**Effort.** ~Half a day; needs manual testing in real in-app browsers.
 
----
+### Personal year card calculator
+A reusable personal-year-card calculator, plus a standalone landing page for it. Banked in
+the paid-reading funnel ideas. Free = the year card; a woven reading is the paid upsell.
+
+### "Your Bearing in a given year" — or a deeper natal chart reading
+Decide the shape: a focused "your Bearing in year X" feature, or fold it into a deeper natal
+chart reading. Needs a scoping call before build.
+
+### Paid "year ahead" reading (new SKU)
+An AI-assisted paid year-ahead reading as a new product. Banked in the paid-reading funnel.
+
+### Paid compatibility reading
+Paid product paired with the birth-card compatibility post (below): free post = the concept,
+paid = the woven compatibility reading.
 
 ### 🟡 Minor mobile polish (from the 2026-07-06 audit)
-**Added:** 2026-07-06
+- **Hero `90vh` → `svh`.** Mobile toolbars nudge content below the fold; use `svh`/`dvh`.
+- **Birthday select placeholder graying.** iOS renders the empty "Month/Day/Year" options in
+  normal text, reading like real values. Small styling tweak.
+- **Explicit `viewport` export.** None in `app/layout.tsx`; Next's default is fine, so
+  clarity-only.
 
-- **Hero `90vh` → `svh`.** `globals.css` `.hero` uses `min-height: 90vh`; mobile toolbars
-  still nudge content below the fold. Use `svh`/`dvh` units.
-- **Birthday select placeholder graying.** On iOS the empty "Month/Day/Year" options render
-  in normal text, reading a bit like real values. Small styling tweak.
-- **Explicit `viewport` export.** No `viewport` in `app/layout.tsx`; Next's default is fine
-  (zoom allowed), so this is clarity-only, not a bug.
+### 🟡 Timezone Option B — device-accurate zone
+"Today" localizes via Vercel's IP timezone (shipped). IP can be wrong on VPNs / some
+cellular routing. Fix: client writes the device's `Intl` zone to a cookie; `viewerNow()`
+prefers cookie → header → UTC. ~1–2 hours, optional.
 
 ---
 
-### 🟡 Timezone Option B — device-accurate zone
-**Added:** 2026-07-06
+## Writing & Readings
 
-**Problem.** "Today" now localizes via Vercel's IP timezone header (shipped). IP
-geolocation is right the vast majority of the time but can be wrong on VPNs or some
-cellular routing.
+### Personal month post `[Soon]`
+A post covering the personal-month reading.
 
-**Planned fix.** A tiny client snippet writes the device's `Intl` timezone to a cookie;
-`viewerNow()` prefers the cookie over the header (cookie → header → UTC). Layers cleanly on
-the existing helper.
+### Get August's month reading `[Soon-ish]`
+Author the August collective month reading.
 
-**Effort.** ~1–2 hours. Optional; Option A covers the common case.
+### Blog assets: schedule 2 & 3, create 4 & 5 `[Soon]`
+Blog post 2 and 3's assets are done (in the Tarot Almanac folder) and need scheduling. Blog
+4 and 5's assets still need to be created. (Per prior work, 3/5 posts' social sets exist.)
+
+### Initiation / Testing / Reckoning post `[Soon]`
+The arcana-stages post (a dormant blog scaffold exists for this).
+
+### 2027 year-ahead post
+The 2027 year-ahead post (a dormant blog scaffold exists).
+
+### Birth-card compatibility post
+Compatibility-by-birth-card post; pairs with the paid compatibility reading above.
+
+---
+
+## Social & Scheduling
+
+### More Pinterest for the rest of the week `[Soon]`
+Keep the Pinterest posting cadence going through the week.
+
+### Share with friends `[Soon]`
+Share the almanac with friends. (Scope TBD — referral push vs. direct outreach.)
+
+### Bluesky: celebrity birthday design + posts
+New Bluesky campaign: celebrity-birthday treatment and posts (a sibling to the existing
+Birthday Bearings / Collective / Reclaimed campaigns).
+
+### Bluesky: this-day-in-history design + posts
+New Bluesky campaign: "this day in history" treatment and posts.
+
+### Schedule remaining Pinterest boards (14)
+All 16 boards are built — these are the scheduling/publishing passes:
+- [ ] Finish scheduling — Birthday Tarot Card
+- [ ] Major Arcana — Reclaimed Reversal Meanings
+- [ ] Cups — Gift Meanings
+- [ ] Wands — Gift Meanings
+- [ ] Swords — Gift Meanings
+- [ ] Pentacles — Gift Meanings
+- [ ] Cups — Shadow Meanings
+- [ ] Wands — Shadow Meanings
+- [ ] Swords — Shadow Meanings
+- [ ] Pentacles — Shadow Meanings
+- [ ] Cups — Reclaimed Reversal Meanings
+- [ ] Wands — Reclaimed Reversal Meanings
+- [ ] Swords — Reclaimed Reversal Meanings
+- [ ] Pentacles — Reclaimed Reversal Meanings
 
 ---
 
 ## Shipped
 
 ### 2026-07-06 — mobile hardening
-- **Birthday entry: native date picker → Month/Day/Year selects (site-wide).** The native
-  `<input type="date">` rendered a month/year-only picker with no day in Gmail's in-app
-  browser, so a comped user couldn't complete a birthday. Replaced with explicit M/D/Y
-  selects (`BirthdayFields`) on the reveal form (/today + homepage), /me → Your details,
-  both "look up someone" fields, and both chart-creation fields. Studio tools left on native
-  inputs (owner-only, desktop).
-- **Signed-in birthday save from /today.** A signed-in account's /today birthday form was a
-  silent no-op (it submitted `?b=`, which the page ignores for logged-in users). Added the
-  `saveBirthdayFromToday` server action to persist straight to the Profile.
-- **Timezone-aware "today" (Option A).** "Today" was computed in server UTC everywhere, so
-  viewers in behind/ahead-of-UTC zones saw the wrong day. Added `lib/viewerNow.ts` reading
-  Vercel's `x-vercel-ip-timezone` header (UTC fallback); centralized ~8 duplicated
-  `serverNow()` helpers across today, home, /me, month, and the birthday actions. Sitemap
+- **Birthday entry: date picker → Month/Day/Year selects (site-wide).** Native
+  `<input type="date">` showed a month/year-only picker with no day in Gmail's in-app
+  browser. Replaced with explicit M/D/Y selects across the reveal form, /me, both lookup
+  fields, and both chart-creation fields.
+- **Signed-in birthday save from /today.** The /today form was a silent no-op for signed-in
+  accounts (submitted `?b=`, ignored). Added the `saveBirthdayFromToday` server action.
+- **Timezone-aware "today" (Option A).** Added `lib/viewerNow.ts` reading Vercel's
+  `x-vercel-ip-timezone` header (UTC fallback); centralized ~8 duplicated helpers. Sitemap
   stays UTC.
-- **iOS input-zoom fix.** All form controls were 14–15px, triggering iOS Safari's focus
-  zoom. One mobile-only rule bumps inputs/selects/textareas to 16px at ≤640px; desktop
-  unchanged.
-- **Hamburger tap target.** The mobile menu button was a ~30px target; now a 44px box with
-  the icon centered.
+- **iOS input-zoom fix.** Form controls were 14–15px, triggering iOS focus zoom. One
+  mobile-only rule bumps them to 16px at ≤640px; desktop unchanged.
+- **Hamburger tap target.** Was ~30px; now a 44px box with the icon centered.
