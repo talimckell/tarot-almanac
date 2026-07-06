@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   collectiveDayCard,
+  personalDayCard,
   phaseBand,
   moonPhase,
   formatLongDate,
@@ -10,6 +11,8 @@ import {
   type DayCard,
 } from "@/lib/almanac";
 import { getCollectiveReading } from "@/lib/collectiveReadings";
+import { getPersonalReading } from "@/lib/personalReadings";
+import type { Birthday } from "@/lib/today";
 import BirthdayRevealForm from "./components/BirthdayRevealForm";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
@@ -57,32 +60,58 @@ const ELEMENT_LABEL: Record<Element, string> = {
   earth: "Earth",
 };
 
-export default function TodayEntry() {
+function pipCountFor(card: DayCard | null | undefined): number {
+  // Ace–Ten show their number; courts (Page..King) show a single mark.
+  return card ? (card.rank >= 11 ? 1 : card.rank) : 0;
+}
+
+export default function TodayEntry({
+  birthday = null,
+  name,
+}: {
+  // Resolved server-side from the signed-in account (its birthday wins) or the
+  // anonymous `bday` cookie. When present, the "You today" slot shows your card of
+  // the day instead of the reveal form — the abbreviated version of /today (no table).
+  birthday?: Birthday | null;
+  name?: string;
+} = {}) {
   const [today, setToday] = useState<{
     dateLabel: string;
     card: DayCard;
     phase: string;
     moon: string;
+    personal: { card: DayCard; reading?: string } | null;
   } | null>(null);
 
+  const bm = birthday?.bm;
+  const bd = birthday?.bd;
+
   useEffect(() => {
-    // Compute from the viewer's local calendar day.
+    // Compute from the viewer's local calendar day. The personal card uses the same
+    // local day so it can't drift a day off the collective card shown beside it.
     const now = new Date();
     const y = now.getFullYear();
     const m = now.getMonth() + 1;
     const d = now.getDate();
     const card = collectiveDayCard(y, m, d);
+    let personal: { card: DayCard; reading?: string } | null = null;
+    if (bm && bd) {
+      const pCard = personalDayCard(y, m, d, bm, bd);
+      personal = { card: pCard, reading: getPersonalReading(pCard) };
+    }
     setToday({
       dateLabel: formatLongDate(y, m, d),
       card,
       phase: phaseBand(card.major),
       moon: moonPhase(y, m, d),
+      personal,
     });
-  }, []);
+  }, [bm, bd]);
 
   const card = today?.card;
-  // Pip count: Ace–Ten show their number; courts (Page..King) show a single mark.
-  const pipCount = card ? (card.rank >= 11 ? 1 : card.rank) : 0;
+  const personal = today?.personal ?? null;
+  const pipCount = pipCountFor(card);
+  const pPipCount = pipCountFor(personal?.card);
 
   return (
     <div className="hero-right">
@@ -114,19 +143,42 @@ export default function TodayEntry() {
           </div>
         </div>
 
-        {/* Your card — revealed by entering a birthdate */}
+        {/* Your card — shown when we know your birthday (signed in or cookie),
+            otherwise revealed by entering a birthdate. */}
         <div className="ec">
-          <span className="ec-rule" style={{ background: "var(--warm-stone)" }} />
-          <div className="ec-body">
-            <div className="ec-top">
-              <span className="ec-num">?</span>
-              <svg className="ec-elem-mark" viewBox="0 0 40 40" fill="none" stroke="var(--warm-stone)" strokeWidth="2">
-                <circle cx="20" cy="20" r="13" />
-              </svg>
-            </div>
-            <span className="ec-role" style={{ marginBottom: "10px" }}>YOU TODAY</span>
-            <BirthdayRevealForm action="/today" />
-          </div>
+          {personal ? (
+            <>
+              <span className={`ec-rule ${personal.card.element}`} />
+              <div className="ec-body">
+                <div className="ec-top">
+                  <span className="ec-role">YOU TODAY</span>
+                </div>
+                <div className="ec-pips" style={{ color: `var(--${personal.card.element})` }}>
+                  {Array.from({ length: pPipCount }).map((_, i) => (
+                    <span className="pip" key={i}>
+                      <SuitPip suit={personal.card.suit} />
+                    </span>
+                  ))}
+                </div>
+                <div className="ec-name">{personal.card.minorName}</div>
+                {personal.reading && <p className="ec-prompt">{personal.reading}</p>}
+              </div>
+            </>
+          ) : (
+            <>
+              <span className="ec-rule" style={{ background: "var(--warm-stone)" }} />
+              <div className="ec-body">
+                <div className="ec-top">
+                  <span className="ec-num">?</span>
+                  <svg className="ec-elem-mark" viewBox="0 0 40 40" fill="none" stroke="var(--warm-stone)" strokeWidth="2">
+                    <circle cx="20" cy="20" r="13" />
+                  </svg>
+                </div>
+                <span className="ec-role" style={{ marginBottom: "10px" }}>YOU TODAY</span>
+                <BirthdayRevealForm action="/today" defaultName={name ?? ""} />
+              </div>
+            </>
+          )}
         </div>
       </div>
 
