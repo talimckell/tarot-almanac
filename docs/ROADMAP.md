@@ -143,7 +143,7 @@ Compatibility-by-birth-card post; pairs with the paid compatibility reading abov
 Keep the Pinterest posting cadence going through the week.
 
 ### Share with friends `[Soon]`
-Share the almanac with friends. (Scope TBD — referral push vs. direct outreach.)
+Marketing push to get the almanac in front of friends — direct outreach / word of mouth.
 
 ### Bluesky: celebrity birthday design + posts
 New Bluesky campaign: celebrity-birthday treatment and posts (a sibling to the existing
