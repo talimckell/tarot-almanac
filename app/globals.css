@@ -246,6 +246,20 @@ body {
   background: var(--stone); border: 1px solid var(--charcoal); padding: 9px 11px; border-radius: 0;
 }
 .reveal-form .birthday-fields select:focus { outline: none; border-color: var(--indigo); }
+
+/* iOS Safari auto-zooms the viewport whenever a text field under 16px is focused,
+   and never zooms back out — leaving the page stuck enlarged. Bump every editable
+   control to 16px on phones so focus never triggers it; desktop keeps the 14px
+   design. !important is deliberate: it overrides each form's own per-field rule in
+   one place, and covers forms not individually styled (newsletter, contact).
+   Checkboxes/radios are exempt (font-size is irrelevant to them). */
+@media (max-width: 640px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
 .btn-reveal {
   font-family: var(--serif-sc); font-size: 11px; font-weight: 400; letter-spacing: .18em;
   text-transform: uppercase; color: var(--stone); background: var(--indigo);

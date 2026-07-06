@@ -55,6 +55,12 @@
 
 .menuBtn {
   display: none;
+  /* 44px min tap target (Apple HIG / WCAG) with the 22px icon centered — the old
+     4px padding left only a ~30px target, hard to hit on a phone. */
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: none;
   border: none;
   padding: 4px;
