@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BirthdayRevealForm from "../components/BirthdayRevealForm";
+import { saveBirthdayFromToday } from "./actions";
 import {
   MAJORS,
   MAJOR_SLUGS,
@@ -298,7 +299,10 @@ export default function TodayView({
             <>
               <div className={styles.cardname}>Add your birthday</div>
               <div className={styles.reading}>See the card the day sets for you.</div>
-              <BirthdayRevealForm defaultName={name ?? ""} />
+              <BirthdayRevealForm
+                defaultName={name ?? ""}
+                saveAction={signedIn ? saveBirthdayFromToday : undefined}
+              />
             </>
           )}
         </div>

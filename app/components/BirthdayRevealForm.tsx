@@ -12,9 +12,14 @@ import { isOldEnough, type YMD } from "@/lib/today";
 export default function BirthdayRevealForm({
   action = "",
   defaultName = "",
+  saveAction,
 }: {
   action?: string;
   defaultName?: string;
+  // Signed-in visitors get a server action that writes the birthday to their
+  // Profile — the plain GET below only persists for anonymous visitors (via the
+  // proxy.ts cookie), so without this a signed-in reveal is a silent no-op.
+  saveAction?: (formData: FormData) => void | Promise<void>;
 }) {
   const [error, setError] = useState<string | null>(null);
 
@@ -35,7 +40,12 @@ export default function BirthdayRevealForm({
   }
 
   return (
-    <form className="reveal-form" action={action} method="get" onSubmit={handleSubmit}>
+    <form
+      className="reveal-form"
+      action={saveAction ?? action}
+      method={saveAction ? undefined : "get"}
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         name="n"

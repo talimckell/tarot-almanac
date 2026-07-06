@@ -15,6 +15,7 @@ import { getCollectiveReading } from "@/lib/collectiveReadings";
 import { getPersonalReading } from "@/lib/personalReadings";
 import type { Birthday } from "@/lib/today";
 import BirthdayRevealForm from "./components/BirthdayRevealForm";
+import { saveBirthdayFromToday } from "./today/actions";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
 function SuitPip({ suit }: { suit: string }) {
@@ -280,7 +281,11 @@ export default function TodayEntry({
                   </svg>
                 </div>
                 <span className="ec-role" style={{ marginBottom: "10px" }}>YOU TODAY</span>
-                <BirthdayRevealForm action="/today" defaultName={name ?? ""} />
+                <BirthdayRevealForm
+                  action="/today"
+                  defaultName={name ?? ""}
+                  saveAction={signedIn ? saveBirthdayFromToday : undefined}
+                />
               </div>
             </>
           )}
