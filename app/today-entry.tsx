@@ -94,7 +94,7 @@ export default function TodayEntry({
   // Signed-in lookup of someone else's card — ephemeral, client-side only, never
   // persisted. `looking` shows the input; `guest` holds the resolved card.
   const [looking, setLooking] = useState(false);
-  const [guest, setGuest] = useState<{ name?: string; bstr: string; card: DayCard } | null>(null);
+  const [guest, setGuest] = useState<{ name?: string; bstr: string; card: DayCard; reading?: string } | null>(null);
   const [lookupError, setLookupError] = useState<string | null>(null);
 
   const bm = birthday?.bm;
@@ -146,10 +146,12 @@ export default function TodayEntry({
       setLookupError("Enter a full birthdate.");
       return;
     }
+    const gCard = personalDayCard(today.y, today.m, today.d, gbm, gbd);
     setGuest({
       name: gName || undefined,
       bstr,
-      card: personalDayCard(today.y, today.m, today.d, gbm, gbd),
+      card: gCard,
+      reading: getPersonalReading(gCard),
     });
     setLooking(false);
     setLookupError(null);
@@ -213,6 +215,7 @@ export default function TodayEntry({
                   ))}
                 </div>
                 <div className="ec-name">{guest.card.minorName}</div>
+                {guest.reading && <p className="ec-prompt">{guest.reading}</p>}
                 <div className="entry-lookup-links">
                   <Link href={guestDayHref()} className="entry-lookup-open">Open their day &rarr;</Link>
                   <button type="button" className="entry-lookup-back" onClick={() => setGuest(null)}>

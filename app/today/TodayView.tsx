@@ -184,13 +184,13 @@ export default function TodayView({
     PY = personalYear(target.y, subject.bm, subject.bd);
     PM = personalMonth(target.y, target.m, subject.bm, subject.bd);
     pCard = personalDayCard(target.y, target.m, target.d, subject.bm, subject.bd);
-    // The personal reading, the "between you" synthesis and the alignment line are all
-    // authored in the second person ("your day card is…"), which only fits when the
-    // subject is the reader. Looking someone else up shows their cards and Bearing as
-    // facts, and links out for the meanings, rather than address them as "you".
-    pReading = otherMode ? undefined : getPersonalReading(pCard);
+    // The reading is authored in the second person ("your day card is…"). When you look
+    // someone up, "you" reads as that person — the banner and the "<name> today" column
+    // header establish whose day it is — so the full reading shows for them too, exactly
+    // as it does for your own. Only the chrome labels (below) name the person.
+    pReading = getPersonalReading(pCard);
     bIdx = bearingIndex(subject.bm, subject.bd);
-    aligned = !otherMode && bIdx === cCard.major;
+    aligned = bIdx === cCard.major;
   }
 
   // The card the share image features: the subject's card when a birthday is set, else
@@ -316,9 +316,11 @@ export default function TodayView({
           )}
         </div>
 
-        {!personalLocked && !otherMode && (
+        {!personalLocked && (
           <div className={`${styles.between} ${styles.rowsep}`} style={{ gridArea: "btwn" }}>
-            <span className={styles.lbl}>Between you</span>
+            <span className={styles.lbl}>
+              {otherMode ? `Between ${subjectName ?? "them"} and the world` : "Between you"}
+            </span>
             <p className={styles.syn}>{pCard ? synthesis(cCard, pCard) : NO_BIRTHDAY_SYNTHESIS}</p>
           </div>
         )}
@@ -360,11 +362,7 @@ export default function TodayView({
               {otherMode ? (subjectName ? `${subjectName}'s Bearing` : "Their Bearing") : "Your Bearing"}
             </span>
             <span className={styles.bName}>
-              {otherMode ? (
-                <span className={styles.bCard}>{MAJORS[bIdx]}</span>
-              ) : (
-                <>The lifelong card you steer by is <span className={styles.bCard}>{MAJORS[bIdx]}</span>.</>
-              )}
+              The lifelong card you steer by is <span className={styles.bCard}>{MAJORS[bIdx]}</span>.
             </span>
           </div>
           <Link className={styles.bLink} href={`/bearing/${MAJOR_SLUGS[bIdx]}`}>
