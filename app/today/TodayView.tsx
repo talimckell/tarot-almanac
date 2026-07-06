@@ -399,6 +399,9 @@ export default function TodayView({
         )}
       </div>
 
+      {/* Signed-in accounts can look up (and share) anyone's day — see LookupSomeone. */}
+      {signedIn && !otherMode && <LookupSomeone action={basePath} />}
+
       {/* Orientation for a cold arrival: what the two cards are and how to use them,
           no arithmetic. The last item bridges to /how-it-works for the method. */}
       <section className={styles.faq} aria-label="How to read this page">
@@ -485,9 +488,6 @@ export default function TodayView({
           </p>
         </div>
       </section>
-
-      {/* Signed-in accounts can look up (and share) anyone's day — see LookupSomeone. */}
-      {signedIn && !otherMode && <LookupSomeone action={basePath} />}
     </div>
   );
 }
