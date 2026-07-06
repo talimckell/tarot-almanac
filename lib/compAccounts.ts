@@ -20,6 +20,7 @@ export const COMP_EMAILS: string[] = [
   "abigail.sylvester@gmail.com", // Abigail Sylvester
   "taynardo@mac.com", // Taylor Hughes
   "bholt1104@gmail.com", // Blake Holt
+  "tali@tarotalmanac.com", // Tali
 ];
 
 const COMP_SET = new Set(COMP_EMAILS.map((e) => e.trim().toLowerCase()));
