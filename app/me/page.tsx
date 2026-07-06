@@ -4,6 +4,7 @@ import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { isSubscribed } from "@/lib/compAccounts";
 import {
   type YM,
   parseMonthSlug,
@@ -52,7 +53,7 @@ export default async function MePage({
   const { month, view, checkout } = await searchParams;
   const nowYM = serverNowYM();
   const requestedMonth = (month && parseMonthSlug(month)) || nowYM;
-  const subscribed = profile.subscriptionStatus === "active";
+  const subscribed = isSubscribed(profile);
 
   // No data leak: a locked month is never fetched or rendered, just bounced to
   // the current month (same discipline as /today/[date]'s per-day gate).

@@ -4,6 +4,7 @@ import SiteNav from "../../../components/SiteNav";
 import Footer from "../../../components/Footer";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { isSubscribed } from "@/lib/compAccounts";
 import { type YM, parseMonthSlug, isMonthOpenForViewer } from "@/lib/today";
 import { getOrCreateMonthlyReading } from "@/lib/monthlyReadingStore";
 import MonthlyReadingView from "./MonthlyReadingView";
@@ -59,7 +60,7 @@ export default async function MonthlyReadingPage({
   // /me's pricing copy already advertises) — unlike /today's per-day gate, there is no
   // free/preview tier here, since a month's reading necessarily covers days that
   // haven't happened yet even within the "free" current-month window.
-  const subscribed = profile.subscriptionStatus === "active";
+  const subscribed = isSubscribed(profile);
   if (!subscribed) redirect("/me#subscribe");
 
   const nowYM = serverNowYM();

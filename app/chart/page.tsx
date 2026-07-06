@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import ShareImageButton from "../components/ShareImageButton";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { isSubscribed } from "@/lib/compAccounts";
 import {
   computeNatalChart,
   bearingStepsWord,
@@ -66,7 +67,7 @@ export default async function ChartPage({
   const bm = profile.birthDate.getUTCMonth() + 1;
   const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-  const subscribed = profile.subscriptionStatus === "active";
+  const subscribed = isSubscribed(profile);
   const unlocked = subscribed || !!profile.ownChartPurchasedPaymentIntentId;
   const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;

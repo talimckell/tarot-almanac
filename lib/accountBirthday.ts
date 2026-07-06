@@ -1,5 +1,6 @@
 import { prisma } from "./prisma";
 import { createClient } from "./supabase/server";
+import { isSubscribed } from "./compAccounts";
 import type { Birthday } from "./today";
 
 export interface SignedInBirthday {
@@ -27,6 +28,6 @@ export async function getSignedInBirthday(): Promise<SignedInBirthday | null> {
       ? { bm: profile.birthDate.getUTCMonth() + 1, bd: profile.birthDate.getUTCDate() }
       : null,
     name: profile.name,
-    subscribed: profile.subscriptionStatus === "active",
+    subscribed: isSubscribed(profile),
   };
 }
