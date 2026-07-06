@@ -15,6 +15,7 @@ import { getCollectiveReading } from "@/lib/collectiveReadings";
 import { getPersonalReading } from "@/lib/personalReadings";
 import type { Birthday } from "@/lib/today";
 import BirthdayRevealForm from "./components/BirthdayRevealForm";
+import BirthdayFields from "./components/BirthdayFields";
 import { saveBirthdayFromToday } from "./today/actions";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
@@ -234,7 +235,7 @@ export default function TodayEntry({
                 </div>
                 <form className="reveal-form" onSubmit={handleLookup} style={{ marginTop: "12px" }}>
                   <input type="text" name="on" placeholder="Their name" aria-label="Their name" autoComplete="off" />
-                  <input type="date" name="ob" required aria-label="Their birthdate" />
+                  <BirthdayFields name="ob" required />
                   <button type="submit" className="btn-reveal">See their card &rarr;</button>
                   <button
                     type="button"

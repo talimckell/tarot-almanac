@@ -315,7 +315,7 @@ export default function MeView({
           </div>
           <div className={styles.fieldGroup}>
             <label className={styles.fieldLabel} htmlFor="chartBirthday">Birthday</label>
-            <input id="chartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+            <BirthdayFields id="chartBirthday" name="birthday" selectClassName={styles.fieldInput} required />
           </div>
           <button type="submit" className={styles.saveBtn}>Add a chart</button>
         </form>
@@ -351,7 +351,7 @@ export default function MeView({
                 </div>
                 <div className={styles.fieldGroup}>
                   <label className={styles.fieldLabel} htmlFor="giftChartBirthday">Birthday</label>
-                  <input id="giftChartBirthday" name="birthday" type="date" className={styles.fieldInput} required />
+                  <BirthdayFields id="giftChartBirthday" name="birthday" selectClassName={styles.fieldInput} required />
                 </div>
                 <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                   Buy this chart

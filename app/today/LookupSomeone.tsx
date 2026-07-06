@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./TodayView.module.css";
+import BirthdayFields from "../components/BirthdayFields";
 
 // Signed-in only. Because a signed-in account's own birthday is fixed (it always
 // wins on the default view), a looked-up birthday is unambiguously "not you", so we
@@ -33,7 +34,7 @@ export default function LookupSomeone({ action }: { action: string }) {
           aria-label="Their name"
           autoComplete="off"
         />
-        <input type="date" name="ob" required aria-label="Their birthdate" />
+        <BirthdayFields name="ob" required />
         <div className={styles.lookupActions}>
           <button type="submit" className={`${styles.btn} ${styles.btnSolid}`}>See their day</button>
           <button type="button" className={styles.btn} onClick={() => setOpen(false)}>Cancel</button>

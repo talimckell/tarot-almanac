@@ -416,6 +416,20 @@ a.todayPill:hover {
   outline: none;
   border-color: var(--indigo);
 }
+/* Month/Day/Year selects (BirthdayFields renders a global .birthday-fields wrapper) */
+.lookupForm :global(.birthday-fields) select {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--stone);
+  border: 1px solid var(--charcoal);
+  padding: 9px 11px;
+}
+.lookupForm :global(.birthday-fields) select:focus {
+  outline: none;
+  border-color: var(--indigo);
+}
 .lookupActions {
   display: flex;
   gap: 10px;

@@ -64,7 +64,7 @@ export default function BirthdayFields({
   const selectStyle = { flex: 1, minWidth: 0 } as const;
 
   return (
-    <div className={`birthday-fields ${className}`.trim()} style={{ display: "flex", gap: 8 }}>
+    <div className={`birthday-fields ${className}`.trim()} style={{ display: "flex", gap: 8, width: "100%" }}>
       <select
         id={id}
         aria-label="Birth month"
