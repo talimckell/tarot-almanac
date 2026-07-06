@@ -2,6 +2,7 @@
 
 import { type FormEvent, useState } from "react";
 import { isOldEnough, type YMD } from "@/lib/today";
+import BirthdayFields from "./BirthdayFields";
 
 // Shared by the homepage's "You today" block (today-entry.tsx) and /today's own
 // "Add your birthday" empty state (TodayView.tsx) — same reveal form, same age
@@ -54,7 +55,7 @@ export default function BirthdayRevealForm({
         aria-label="Your name"
         defaultValue={defaultName}
       />
-      <input type="date" name="b" required aria-label="Your birthdate" />
+      <BirthdayFields name="b" required />
       <button type="submit" className="btn-reveal">Reveal my card &rarr;</button>
       {error && <p className="reveal-error">{error}</p>}
     </form>

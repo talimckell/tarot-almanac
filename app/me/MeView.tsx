@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BirthdayFields from "../components/BirthdayFields";
 import {
   MAJORS,
   MAJOR_SLUGS,
@@ -378,11 +379,10 @@ export default function MeView({
         </div>
         <div className={styles.fieldGroup}>
           <label className={styles.fieldLabel} htmlFor="birthday">Birthday</label>
-          <input
+          <BirthdayFields
             id="birthday"
             name="birthday"
-            type="date"
-            className={styles.fieldInput}
+            selectClassName={styles.fieldInput}
             defaultValue={profile.birthDate ?? ""}
           />
         </div>
