@@ -193,7 +193,8 @@ export default function TarotBirthChartPage() {
           </p>
           <p className="dates">
             <Link href="/chart">Build your natal chart &rarr;</Link> ·{" "}
-            <Link href="/bearing">Find your Bearing first</Link>
+            <Link href="/bearing">Find your Bearing first</Link> ·{" "}
+            <Link href="/personal-year-card">See your year card</Link>
           </p>
         </aside>
       </main>

@@ -1,0 +1,351 @@
+/* Personal year card — calculator hub + 22 card pages.
+   Namespaced .pyc-* so it can't collide with card-page.css / globals.css.
+   Tokens (stone/vellum/indigo + element colors, Cormorant/Lato) come from globals.css. */
+
+.pyc-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.pyc-crumb {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--label);
+  margin-bottom: 28px;
+}
+.pyc-crumb a { color: var(--indigo); text-decoration: none; }
+.pyc-crumb a:hover { text-decoration: underline; }
+
+.pyc-eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 18px;
+}
+
+.pyc-h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.04;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+
+.pyc-lede {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--charcoal);
+  max-width: 60ch;
+  margin: 0 0 16px;
+}
+
+.pyc-body { font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.68; color: var(--ink); }
+.pyc-body p { margin: 0 0 16px; }
+
+/* ── Element chip ── */
+.pyc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: 1px solid var(--warm-stone);
+  border-radius: 100px;
+  padding: 3px 12px;
+}
+.pyc-chip .dot { width: 9px; height: 9px; border-radius: 50%; }
+.pyc-chip.fire .dot { background: var(--fire); }
+.pyc-chip.water .dot { background: var(--water); }
+.pyc-chip.air .dot { background: var(--air); }
+.pyc-chip.earth .dot { background: var(--earth); }
+
+/* ── Glyph ── */
+.pyc-glyph { display: inline-flex; line-height: 0; }
+.pyc-glyph svg { display: block; }
+
+/* ── Section scaffolding ── */
+.pyc-section { margin-top: 52px; }
+.pyc-section > h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.pyc-section > .pyc-subhead {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--label);
+  margin: 0 0 22px;
+}
+
+/* ── Card-page hero ── */
+.pyc-hero { text-align: center; padding-top: 8px; }
+.pyc-hero .pyc-glyph { margin-bottom: 16px; }
+.pyc-hero .num {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 10px;
+}
+.pyc-hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(40px, 7vw, 60px);
+  line-height: 1.02;
+  color: var(--ink);
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+.pyc-hero .pyc-chip { margin: 0 auto; }
+
+.pyc-blurb {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 36px 0 0;
+}
+
+.pyc-whattodo {
+  margin-top: 24px;
+  padding: 18px 22px;
+  background: var(--vellum);
+  border-left: 3px solid var(--indigo);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.pyc-whattodo .lbl {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 6px;
+}
+
+/* ── The 12-month arc ── */
+.pyc-arc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px;
+  background: var(--warm-stone);
+  border: 1px solid var(--warm-stone);
+}
+.pyc-arc-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--stone);
+}
+.pyc-arc-item .mon {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.pyc-arc-item .cardname {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.pyc-arc-item .pyc-glyph svg { width: 30px; height: 30px; }
+
+/* ── Element weather ── */
+.pyc-weather { display: flex; flex-wrap: wrap; gap: 10px; }
+.pyc-weather .bar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border: 1px solid var(--warm-stone);
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+}
+.pyc-weather .bar .dot { width: 11px; height: 11px; border-radius: 50%; }
+.pyc-weather .bar.fire .dot { background: var(--fire); }
+.pyc-weather .bar.water .dot { background: var(--water); }
+.pyc-weather .bar.air .dot { background: var(--air); }
+.pyc-weather .bar.earth .dot { background: var(--earth); }
+.pyc-weather .bar b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.pyc-weather .bar .el { color: var(--charcoal); }
+
+/* ── Rest of cycle (untouched) ── */
+.pyc-rest { display: flex; flex-wrap: wrap; gap: 18px 22px; }
+.pyc-rest .item { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 64px; opacity: 0.45; }
+.pyc-rest .item .pyc-glyph svg { width: 34px; height: 34px; }
+.pyc-rest .item .nm { font-family: var(--serif); font-size: 12px; color: var(--charcoal); text-align: center; line-height: 1.1; }
+
+/* ── Calculator ── */
+.pyc-calc {
+  margin: 8px 0 0;
+  padding: 26px 24px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+}
+.pyc-calc .flabel {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 8px;
+}
+.pyc-calc-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+.pyc-field { display: flex; flex-direction: column; gap: 6px; }
+.pyc-calc select {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--stone);
+  border: 1px solid var(--charcoal);
+  border-radius: 0;
+  padding: 9px 11px;
+}
+.pyc-calc select:focus { outline: none; border-color: var(--indigo); }
+.pyc-calc button {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  border: none;
+  padding: 11px 20px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.15s;
+}
+.pyc-calc button:hover { background: var(--indigo-mid); }
+.pyc-calc .hint { font-family: var(--sans); font-size: 13px; color: var(--label); margin-top: 12px; }
+
+.pyc-result {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--warm-stone);
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.pyc-result .pyc-glyph svg { width: 64px; height: 64px; }
+.pyc-result .rlead { font-family: var(--sans); font-size: 14px; color: var(--label); margin: 0 0 2px; }
+.pyc-result .rname { font-family: var(--serif); font-size: 30px; color: var(--ink); line-height: 1.05; margin: 0 0 10px; }
+.pyc-result .rblurb { font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.6; color: var(--ink); margin: 0 0 14px; }
+.pyc-result a.cta {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+  padding-bottom: 2px;
+}
+.pyc-result a.cta:hover { border-bottom-color: var(--indigo); }
+
+/* ── 22-card index grid (hub) ── */
+.pyc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px;
+  background: var(--warm-stone);
+  border: 1px solid var(--warm-stone);
+}
+.pyc-grid a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  background: var(--stone);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.pyc-grid a:hover { background: var(--vellum); }
+.pyc-grid a .pyc-glyph svg { width: 28px; height: 28px; }
+.pyc-grid a .nm { font-family: var(--serif); font-size: 16px; color: var(--ink); line-height: 1.05; }
+.pyc-grid a .ix { font-family: var(--mono); font-size: 11px; color: var(--label); }
+
+/* ── FAQ ── */
+.pyc-faq details {
+  border-bottom: 1px solid var(--warm-stone);
+  padding: 4px 0;
+}
+.pyc-faq summary {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  padding: 14px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.pyc-faq summary::-webkit-details-marker { display: none; }
+.pyc-faq summary::after { content: "+"; float: right; color: var(--label); font-family: var(--sans); }
+.pyc-faq details[open] summary::after { content: "\2013"; }
+.pyc-faq .ans {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.66;
+  color: var(--ink);
+  padding: 0 0 18px;
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* ── Paid teaser ── */
+.pyc-teaser {
+  margin-top: 52px;
+  padding: 26px 26px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+}
+.pyc-teaser .eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 10px;
+}
+.pyc-teaser h2 { font-family: var(--serif); font-weight: 500; font-size: 25px; color: var(--ink); margin: 0 0 12px; }
+.pyc-teaser p { font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.6; color: var(--ink); margin: 0 0 12px; max-width: 60ch; }
+.pyc-teaser ul { margin: 0 0 4px; padding-left: 20px; }
+.pyc-teaser li { font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.55; color: var(--charcoal); margin: 4px 0; }
+.pyc-teaser .soon { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--label); }
+
+/* ── Cross-links ── */
+.pyc-links { margin-top: 44px; font-family: var(--sans); font-size: 15px; color: var(--label); }
+.pyc-links a { color: var(--indigo); text-decoration: none; }
+.pyc-links a:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .pyc-wrap { padding: 40px 18px 72px; }
+  .pyc-result { flex-direction: column; }
+}

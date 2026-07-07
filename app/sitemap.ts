@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-it-works",
     "/tarot",
     "/tarot-birth-chart",
+    "/personal-year-card",
     "/bearing",
     "/about",
     "/blog",
@@ -60,6 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 22 Bearing pages.
   const bearingEntries: MetadataRoute.Sitemap = MAJOR_SLUGS.map((slug) => ({
     url: `${SITE_URL}/bearing/${slug}`,
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  // 22 personal year card pages ("[Major] as your personal year card").
+  const yearCardEntries: MetadataRoute.Sitemap = MAJOR_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/personal-year-card/${slug}`,
     changeFrequency: "yearly",
     priority: 0.6,
   }));
@@ -108,6 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticEntries,
     ...cardEntries,
     ...bearingEntries,
+    ...yearCardEntries,
     ...birthdayEntries,
     ...dateEntries,
     ...monthEntries,

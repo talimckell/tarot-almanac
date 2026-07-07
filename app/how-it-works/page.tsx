@@ -180,7 +180,12 @@ export default function HowItWorksPage() {
             identically, with your birth month and day joining at the first
             step. Your birth year never enters, because the reading is about
             where you stand in the cycle now, not how many turns you&rsquo;ve
-            taken around it.
+            taken around it. Your personal year card is that first layer on its
+            own, and you can{" "}
+            <Link href="/personal-year-card" style={{ color: "var(--indigo)" }}>
+              look yours up for any year
+            </Link>
+            .
           </p>
           <h3>The day is a Minor, tied to its Major</h3>
           <p>

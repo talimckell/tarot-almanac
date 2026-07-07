@@ -62,6 +62,11 @@ export default function BearingPage() {
             <Link className={styles.inline} href="/tarot-birth-chart">tarot birth chart</Link>, the
             seven-card reading built from your birthday.
           </p>
+          <p>
+            It&rsquo;s where each year starts from too: your{" "}
+            <Link className={styles.inline} href="/personal-year-card">personal year card</Link> is
+            your Bearing carried forward by the year&rsquo;s own number.
+          </p>
           <p className={styles.mathnote}>
             It&rsquo;s set by your birth month plus your birth day, brought
             around the wheel of 22. That sum never changes, so neither does
