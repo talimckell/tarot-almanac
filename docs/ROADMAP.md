@@ -128,11 +128,27 @@ un-walked Majors dimmed ("where you are in the cycle, and where you're not this 
   + `/gift/[token]`). Daily engine (day cards, minors, time-travel) stays subscription-only so
   the ladder holds; the year reading is a referral driver and an on-ramp to the sub.
 
-**Status.** Free copy banked and approved: 22 year-card blurbs, 22 "what to do with a [Major]
-year" lines, and the hub FAQ/explainer, all in `content/year-card-reading.md`. Next: phase 1
-build (route, cycle-ring visual, free gating, the profile/content schema), then wire month
-readings + the paid generation payload (now including the Bearing×Year layer). Elements sourced
-from card JSON `element` / master xlsx, not the calculations doc (it drifted).
+**Status. Phase 1 shipped & live (2026-07-07).** `/personal-year-card` calculator hub + 22 static
+SEO card pages (`/personal-year-card/[slug]`): year-card blurb, "what to do", the deterministic
+12-month arc (element-tinted glyphs), element weather, the 9 untouched Majors, FAQ/explainer with
+FAQPage schema. `lib/yearCard.ts` (fs-free compute) + `content/year-cards.json` (build source,
+mirrors `content/year-card-reading.md`). In the sitemap; internal links in from /bearing,
+/tarot-birth-chart, /how-it-works. Copy/metadata targets the validated search phrases ("tarot
+year card", "card of the year", "calculator") after live SERP research, not just "personal year
+card" (which bleeds into numerology). FAQ owns the method difference (we keep the whole wheel;
+most calculators over-reduce) with a link to /how-it-works. Two sample paid readings drafted and
+reviewed (a Bearing×Year clash and a harmony) to confirm the paid tier is compellingly distinct
+from the free structure; conclusion: the Bearing×Year weave + structural facts (e.g. in 2026
+December returns everyone to their Bearing) can't be self-assembled from the free page, so free
+stays SEO-generous.
+
+**Phase 2 (next).** The Satori cycle-ring share image; wire the authored personal-month readings;
+paid checkout + gift (mirror `startOwnChartCheckout` / `createGiftChartCheckout`) + the AI
+generation, with the Bearing×Year layer as the spine and the voice guardrails in the prompt.
+Elements sourced from card JSON `element` / master xlsx, not the calculations doc (it drifted).
+
+**Open (small):** homepage link to the hub is parked pending a placement call (the year card isn't
+in the planned value-ladder reorder, so where it sits on the homepage is best decided there).
 
 ### "Your Bearing in a given year" — folded into the year-card reading
 Resolved: your Bearing in year Y *is* your year card (`yearCard = mod22(Bearing + sumDigits(Y))`),
