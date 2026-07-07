@@ -13,9 +13,9 @@ import { YEAR_CARD_FAQ } from "../../lib/yearCard";
 import YearCardCalculator from "./YearCardCalculator";
 import "./styles.css";
 
-const TITLE = "Personal Year Card Calculator | The Tarot Almanac";
+const TITLE = "Tarot Year Card Calculator: Your Card of the Year | The Tarot Almanac";
 const DESCRIPTION =
-  "Find your personal year card through tarot numerology. Your birthday and the year set a single Major Arcana card, the same every time, no shuffle. See what it means and how to work with it.";
+  "Find your tarot year card, the Major Arcana card of the year set by your birthday through tarot numerology. Get your card and what it means, the same every time, no shuffle.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -36,7 +36,7 @@ export default function PersonalYearCardHub() {
     mainEntity: YEAR_CARD_FAQ.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: f.link ? `${f.a} ${f.link.text}.` : f.a },
     })),
   };
 
@@ -50,12 +50,12 @@ export default function PersonalYearCardHub() {
           <Link href="/">Home</Link> · Personal Year Card
         </nav>
 
-        <p className="pyc-eyebrow">Tarot Numerology</p>
-        <h1 className="pyc-h1">Your personal year card</h1>
+        <p className="pyc-eyebrow">Tarot Numerology · Year Card Calculator</p>
+        <h1 className="pyc-h1">Your tarot year card</h1>
         <p className="pyc-lede">
-          Every calendar year sets one Major Arcana card for you, found from your birthday through
-          tarot numerology. It&rsquo;s given, not shuffled, so it&rsquo;s the same card every time you
-          check. Think of it as the theme the year is working on with you.
+          Every calendar year sets one Major Arcana card for you, your tarot card of the year, found
+          from your birthday through tarot numerology. It&rsquo;s given, not shuffled, so it&rsquo;s
+          the same card every time you check. Think of it as the theme the year is working on with you.
         </p>
 
         <YearCardCalculator />
@@ -85,7 +85,18 @@ export default function PersonalYearCardHub() {
           {YEAR_CARD_FAQ.map((f) => (
             <details key={f.q}>
               <summary>{f.q}</summary>
-              <p className="ans">{f.a}</p>
+              <p className="ans">
+                {f.a}
+                {f.link && (
+                  <>
+                    {" "}
+                    <Link href={f.link.href} style={{ color: "var(--indigo)" }}>
+                      {f.link.text}
+                    </Link>
+                    .
+                  </>
+                )}
+              </p>
             </details>
           ))}
         </section>

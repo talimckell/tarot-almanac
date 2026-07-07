@@ -30,6 +30,7 @@ export interface YearCardContent {
 export interface FaqItem {
   q: string;
   a: string;
+  link?: { href: string; text: string };
 }
 
 const CARDS = data.cards as YearCardContent[];

@@ -37,8 +37,8 @@ export async function generateMetadata({
   const idx = MAJOR_SLUGS.indexOf(slug as (typeof MAJOR_SLUGS)[number]);
   if (idx < 0) return {};
   const name = MAJORS[idx];
-  const title = `${name} as Your Personal Year Card | The Tarot Almanac`;
-  const description = `${name} as a personal year card: ${yearCardContent(idx).blurb}`.slice(0, 158);
+  const title = `${name} as Your Tarot Year Card | The Tarot Almanac`;
+  const description = `${name} as your tarot year card, your card of the year: ${yearCardContent(idx).blurb}`.slice(0, 158);
   return {
     title,
     description,
@@ -70,8 +70,8 @@ export default async function YearCardPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${name} as Your Personal Year Card`,
-    about: `${name} personal year`,
+    headline: `${name} as Your Tarot Year Card`,
+    about: `${name} tarot year card`,
     author: { "@type": "Organization", name: "The Tarot Almanac" },
     publisher: { "@type": "Organization", name: "The Tarot Almanac" },
     mainEntityOfPage: `${SITE_URL}/personal-year-card/${slug}`,
@@ -84,7 +84,7 @@ export default async function YearCardPage({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
         <nav className="pyc-crumb">
-          <Link href="/">Home</Link> · <Link href="/personal-year-card">Personal Year Card</Link> · {name}
+          <Link href="/">Home</Link> · <Link href="/personal-year-card">Tarot Year Card</Link> · {name}
         </nav>
 
         <header className="pyc-hero">

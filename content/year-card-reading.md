@@ -130,6 +130,9 @@ No. The card doesn't decide what happens to you. It offers an angle on the year 
 **How is this different from a normal tarot reading?**
 A normal reading is drawn: you shuffle, and chance sets the cards. This one is given. Your birthday and the year fix the card through numerology, so it's the same every time and you're not hoping for a lucky pull. It reflects the pattern your dates already make.
 
+**Why is my card different from one I got somewhere else?**
+Most tarot year card calculators reduce your numbers all the way down, which can only ever reach part of the Major Arcana. The Almanac keeps the whole wheel of twenty-two and wraps around instead of reducing, so it can land on any card, including the ones a reduced method never reaches. If another calculator gave you a different card, that's the reason. [Links out to /how-it-works: "See how the math works".]
+
 **Does the card change every year? What about the months?**
 Yes, it changes from year to year. And within a year, each of the twelve months has its own card, stepping forward one place at a time from your year card, so the year reads as a path rather than a single note. The full year-ahead reading walks all twelve, with the woven narrative and your reflection questions.
 
