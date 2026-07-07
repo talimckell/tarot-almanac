@@ -92,13 +92,52 @@ Mockup Artifact: https://claude.ai/code/artifact/042f2e57-b88d-441b-ad61-3b36805
 dig in more before any build. Revisit the copy and structure, then wire into `app/page.tsx`
 + CSS. All homepage prose stays authored / in-voice.
 
-### Personal year card calculator
-A reusable personal-year-card calculator, plus a standalone landing page for it. Banked in
-the paid-reading funnel ideas. Free = the year card; a woven reading is the paid upsell.
+### Personal year card calculator (+ paid woven year-ahead reading)
+**Added:** 2026-07-07
 
-### "Your Bearing in a given year" — or a deeper natal chart reading
-Decide the shape: a focused "your Bearing in year X" feature, or fold it into a deeper natal
-chart reading. Needs a scoping call before build.
+**What it is.** A standalone SEO page where a birthday + chosen year computes the **Personal
+Year Card** (`mod22(BM+BD+sumDigits(Y))`, a Major), with a paid woven "year ahead" reading on
+top. Deliberately the deterministic counter to a shuffled year-ahead spread: same birthday
+always yields the same year card and the same twelve months, forever.
+
+**The structural spine (verified).** Within a calendar year the twelve months are
+`yearCard+1 … yearCard+12`: twelve consecutive Majors, one step each month, **no repeats**.
+That clean arc is a *calendar-year* property only, so the framing is locked to **calendar-year,
+single year card, buyer picks the year** (a rolling window breaks both the one-step and
+no-repeat properties, confirmed by node script). Visual is the full 22-Major cycle ring with
+the 12 consecutive steps lit and element-tinted, the year card as the doorway, and the 10
+un-walked Majors dimmed ("where you are in the cycle, and where you're not this year").
+
+**Free vs paid.**
+- **Free (hard-wired, SEO):** year card + a static authored meaning (22 blurbs, one per Major,
+  adapted from each card's own copy) + element + link to the full card. Arc *structure* visible,
+  months locked server-side (mirrors chart preview leak-proofing). Never calls a model.
+- **Paid ~$12 (AI-generated deep reading):** the lit cycle-ring image, element weather, the 12
+  personal-month readings (wired from existing authored copy), plus an AI-woven synthesis —
+  year-card meaning, **how your Bearing meets the year** (your fixed signature against the year
+  card, e.g. a Devil Bearing in a Tower year), arc + what's left behind, element-weather read,
+  pull-it-together narrative, skills this year asks, reflection questions. Generated per purchase,
+  personalized by name, stored against the token, run through the voice guardrails (em-dash/seesaw
+  bans in the prompt).
+  - *Bearing×Year is structurally exact (verified):* `yearCard = mod22(Bearing + sumDigits(Y))`, so
+    your year card is your Bearing advanced by the year's own number, and the Bearing→year-card gap
+    is identical for everyone in a given year (10 in 2026, 11 in 2027). 22 Bearings × 22 year cards
+    = 484 pairings, which is why it's an AI-woven layer, not authored. This also **subsumes** the
+    separate "Your Bearing in a given year" item below: your Bearing in year Y is your year card.
+- **Giftable:** fixed artifact, so it rides the existing chart-gift flow (`createGiftChartCheckout`
+  + `/gift/[token]`). Daily engine (day cards, minors, time-travel) stays subscription-only so
+  the ladder holds; the year reading is a referral driver and an on-ramp to the sub.
+
+**Status.** Free copy banked and approved: 22 year-card blurbs, 22 "what to do with a [Major]
+year" lines, and the hub FAQ/explainer, all in `content/year-card-reading.md`. Next: phase 1
+build (route, cycle-ring visual, free gating, the profile/content schema), then wire month
+readings + the paid generation payload (now including the Bearing×Year layer). Elements sourced
+from card JSON `element` / master xlsx, not the calculations doc (it drifted).
+
+### "Your Bearing in a given year" — folded into the year-card reading
+Resolved: your Bearing in year Y *is* your year card (`yearCard = mod22(Bearing + sumDigits(Y))`),
+so the Bearing×Year read now lives inside the personal year card reading above rather than as its
+own feature. A deeper natal chart reading, if wanted, stays a separate future scoping call.
 
 ### Paid "year ahead" reading (new SKU)
 An AI-assisted paid year-ahead reading as a new product. Banked in the paid-reading funnel.
