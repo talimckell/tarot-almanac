@@ -2,6 +2,7 @@
 
 import { type FormEvent, useState } from "react";
 import { isOldEnough, type YMD } from "@/lib/today";
+import { trackFormSubmit } from "@/lib/analytics";
 import BirthdayFields from "./BirthdayFields";
 
 // Shared by the homepage's "You today" block (today-entry.tsx) and /today's own
@@ -37,7 +38,11 @@ export default function BirthdayRevealForm({
     if (!isOldEnough(by, bm, bd, nowYMD)) {
       e.preventDefault();
       setError("You need to be 16 or older for your own daily reading.");
+      return;
     }
+    // Passed the age check, so the form is really submitting (GET reveal for
+    // anonymous visitors, or the save server action for signed-in ones).
+    trackFormSubmit("birthday_reveal", { mode: saveAction ? "save" : "anon" });
   }
 
   return (

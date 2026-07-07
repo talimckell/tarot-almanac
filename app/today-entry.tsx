@@ -13,6 +13,7 @@ import {
 } from "@/lib/almanac";
 import { getCollectiveReading } from "@/lib/collectiveReadings";
 import { getPersonalReading } from "@/lib/personalReadings";
+import { trackFormSubmit } from "@/lib/analytics";
 import type { Birthday } from "@/lib/today";
 import BirthdayRevealForm from "./components/BirthdayRevealForm";
 import BirthdayFields from "./components/BirthdayFields";
@@ -157,6 +158,7 @@ export default function TodayEntry({
     });
     setLooking(false);
     setLookupError(null);
+    trackFormSubmit("lookup_someone", { context: "home" });
   }
 
   function guestDayHref(): string {

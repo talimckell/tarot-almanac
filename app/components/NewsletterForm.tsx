@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { subscribeToNewsletter } from "../blog/actions";
+import { trackFormSubmit } from "@/lib/analytics";
 import styles from "./NewsletterForm.module.css";
 
 export default function NewsletterForm({
@@ -29,6 +30,7 @@ export default function NewsletterForm({
       return;
     }
     setStatus("sent");
+    trackFormSubmit("newsletter");
   }
 
   if (status === "sent") {

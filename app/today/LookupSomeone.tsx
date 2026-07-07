@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./TodayView.module.css";
+import { trackFormSubmit } from "@/lib/analytics";
 import BirthdayFields from "../components/BirthdayFields";
 
 // Signed-in only. Because a signed-in account's own birthday is fixed (it always
@@ -25,7 +26,12 @@ export default function LookupSomeone({ action }: { action: string }) {
 
   return (
     <div className={styles.lookup}>
-      <form className={styles.lookupForm} action={action} method="get">
+      <form
+        className={styles.lookupForm}
+        action={action}
+        method="get"
+        onSubmit={() => trackFormSubmit("lookup_someone", { context: "today" })}
+      >
         <span className={styles.lookupLbl}>Look up someone&rsquo;s day</span>
         <input
           type="text"

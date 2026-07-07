@@ -10,6 +10,7 @@ import {
   majorSlug,
   majorElement,
 } from "../../lib/yearCard";
+import { trackFormSubmit } from "@/lib/analytics";
 
 // The year card depends only on birth month + birth day and the calendar year
 // being read (birth year is not used, same as the Bearing). So we ask for month
@@ -49,6 +50,7 @@ export default function YearCardCalculator() {
     if (!m || !d) return;
     const idx = yearCardIndex(Number(y), Number(m), Number(d));
     setResult({ idx, year: Number(y) });
+    trackFormSubmit("personal_year_card", { year_read: Number(y) });
   }
 
   const selectStyle = (v: string) => (v ? undefined : { color: "var(--warm-stone)" });

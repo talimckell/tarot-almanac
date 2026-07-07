@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { mod22, MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "@/lib/almanac";
+import { trackFormSubmit } from "@/lib/analytics";
 import ShareImageButton from "../components/ShareImageButton";
 import styles from "./page.module.css";
 
@@ -17,7 +18,10 @@ export default function BearingFinder() {
   const [day, setDay] = useState(1);
   const [result, setResult] = useState<number | null>(null);
 
-  const reveal = () => setResult(mod22(month + day));
+  const reveal = () => {
+    setResult(mod22(month + day));
+    trackFormSubmit("bearing_finder");
+  };
 
   return (
     <div className={styles.finder}>
