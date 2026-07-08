@@ -27,6 +27,7 @@ export interface YearMonthEntry {
 export interface YearPackage {
   name: string;
   year: number;
+  birth: { month: number; day: number };
   bearing: { name: string; element: Element; essence: string; meaning: string };
   yearCard: {
     name: string;
@@ -79,6 +80,7 @@ export function buildYearPackage(
   return {
     name: name.trim() || "you",
     year,
+    birth: { month: bm, day: bd },
     bearing: {
       name: MAJORS[bIdx],
       element: ELEMENT_BY_MAJOR[bIdx],

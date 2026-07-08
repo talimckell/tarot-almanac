@@ -126,9 +126,15 @@ export default function YearReadingPreview() {
           <p style={{ ...para, marginBottom: 6, fontSize: 14, color: "var(--charcoal)" }}>
             Weather: {pkg.elementWeather.map((e) => `${e.count} ${e.element}`).join(" · ")}
           </p>
-          <p style={{ ...para, marginBottom: 0, fontSize: 14, color: "var(--charcoal)" }}>
+          <p style={{ ...para, marginBottom: 12, fontSize: 14, color: "var(--charcoal)" }}>
             Months: {pkg.months.map((m) => `${m.monthName.slice(0, 3)} ${m.card}`).join(" · ")}
           </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/personal-year-card/wheel/image?bm=${pkg.birth.month}&bd=${pkg.birth.day}&y=${pkg.year}&n=${encodeURIComponent(pkg.name)}`}
+            alt="Year wheel"
+            style={{ width: "100%", maxWidth: 600, border: "1px solid var(--warm-stone)" }}
+          />
         </div>
       )}
 
