@@ -333,6 +333,7 @@ export default function MeView({
                 Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
               </div>
               <form action={startSubscriptionCheckout}>
+                <input type="hidden" name="location" value="me_library" />
                 <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                   Subscribe
                 </CheckoutSubmitButton>

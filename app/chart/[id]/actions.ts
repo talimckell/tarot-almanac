@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { trackFormSubmitServer } from "@/lib/analytics-server";
 
 export async function removeChart(formData: FormData) {
   const supabase = await createClient();
@@ -19,5 +20,6 @@ export async function removeChart(formData: FormData) {
   // not-found" discipline as the page's own lookup.
   await prisma.savedChart.deleteMany({ where: { id, ownerId: user.id } });
 
+  await trackFormSubmitServer("remove_chart", undefined, user.email);
   redirect("/me");
 }

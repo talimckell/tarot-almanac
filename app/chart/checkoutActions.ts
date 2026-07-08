@@ -9,12 +9,18 @@ import {
   STRIPE_PRICE_ID_CHART,
   getOrCreateStripeCustomerId,
 } from "@/lib/stripe";
+import { trackFormSubmitServer } from "@/lib/analytics-server";
 
 // Starts Stripe Checkout for the $7/mo subscription (the "Subscribe" button on
 // /chart's paywall). Redirects the browser to Stripe's hosted page; Stripe redirects
 // back to success_url/cancel_url on completion/abandon. The actual unlock happens
 // via the webhook (app/api/webhooks/stripe/route.ts), not this action.
-export async function startSubscriptionCheckout() {
+export async function startSubscriptionCheckout(formData?: FormData) {
+  // The Subscribe button appears in three places (chart paywall, chart upsell,
+  // /me library); each form passes a hidden `location` so the dashboard can show
+  // which placement drives subscription intent.
+  const location = (formData?.get("location") as string | null) ?? "unknown";
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -43,6 +49,7 @@ export async function startSubscriptionCheckout() {
     subscription_data: { metadata: { supabaseUserId: user.id } },
   });
 
+  await trackFormSubmitServer("subscribe_checkout", { location }, user.email);
   redirect(session.url!);
 }
 
@@ -76,5 +83,6 @@ export async function startOwnChartCheckout() {
     payment_intent_data: { metadata: { kind: "own-chart", supabaseUserId: user.id } },
   });
 
+  await trackFormSubmitServer("buy_own_chart", undefined, user.email);
   redirect(session.url!);
 }

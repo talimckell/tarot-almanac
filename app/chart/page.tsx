@@ -153,6 +153,7 @@ export default async function ChartPage({
                   Your full chart, plus charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
                 <form action={startSubscriptionCheckout}>
+                  <input type="hidden" name="location" value="chart_paywall" />
                   <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Subscribe
                   </CheckoutSubmitButton>
@@ -188,6 +189,7 @@ export default async function ChartPage({
                   Charts for everyone you love, monthly readings, and time-travel through past and near-future readings.
                 </div>
                 <form action={startSubscriptionCheckout}>
+                  <input type="hidden" name="location" value="chart_upsell" />
                   <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Subscribe
                   </CheckoutSubmitButton>

@@ -8,6 +8,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { stripe, STRIPE_PRICE_ID_CHART, getOrCreateStripeCustomerId } from "@/lib/stripe";
 import { parseDateSlug, isOldEnough } from "@/lib/today";
 import { viewerNow } from "@/lib/viewerNow";
+import { trackFormSubmitServer } from "@/lib/analytics-server";
 
 // Closes the birthday-persistence gap: signed-in accounts previously had no way to
 // save a birthday to the Profile row, so /today's cookie-based birthday never
@@ -37,6 +38,7 @@ export async function updateProfile(formData: FormData) {
     },
   });
 
+  await trackFormSubmitServer("update_profile", undefined, user.email);
   revalidatePath("/me");
 }
 
@@ -67,6 +69,7 @@ export async function createChart(formData: FormData) {
     },
   });
 
+  await trackFormSubmitServer("create_chart", undefined, user.email);
   revalidatePath("/me");
 }
 
@@ -115,12 +118,17 @@ export async function createGiftChartCheckout(formData: FormData) {
     },
   });
 
+  await trackFormSubmitServer("gift_chart_checkout", undefined, user.email);
   redirect(session.url!);
 }
 
 export async function signOutAction() {
   const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   await supabase.auth.signOut();
+  await trackFormSubmitServer("sign_out", undefined, user?.email);
   redirect("/");
 }
 
@@ -142,5 +150,6 @@ export async function deleteAccountAction() {
   await admin.auth.admin.deleteUser(user.id);
 
   await supabase.auth.signOut();
+  await trackFormSubmitServer("delete_account", undefined, user.email);
   redirect("/");
 }

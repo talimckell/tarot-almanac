@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { createClient } from "../../lib/supabase/client";
+import { trackFormSubmit } from "@/lib/analytics";
 import styles from "./page.module.css";
 
 export default function SignInPage() {
@@ -31,6 +32,7 @@ export default function SignInPage() {
       setStatus("error");
       return;
     }
+    trackFormSubmit("sign_in");
     setStatus("sent");
   }
 

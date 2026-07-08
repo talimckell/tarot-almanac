@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import VercelAnalytics from "./components/VercelAnalytics";
 import IconSprite from "./components/IconSprite";
 import CookieConsent from "./components/CookieConsent";
 import { SITE_URL } from "../lib/site";
@@ -78,7 +78,7 @@ export default function RootLayout({
         <IconSprite />
         {children}
         {GA_ID ? <CookieConsent gaId={GA_ID} /> : null}
-        <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
