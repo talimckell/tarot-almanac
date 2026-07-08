@@ -186,9 +186,10 @@ A post covering the personal-month reading.
 ### Get August's month reading `[Soon-ish]`
 Author the August collective month reading.
 
-### Blog assets: schedule 4, create 5 `[Soon]`
-Blog post 2 and 3's assets are done and scheduled (2026-07-08). Blog 4's assets are created and
-need scheduling. Remaining: blog 5's assets still need to be created. (4/5 posts' social sets exist.)
+### Blog assets: schedule 4 & 5 `[Soon]`
+Blog posts 2 and 3's assets are done and scheduled (2026-07-08). Blog 4 and 5's assets are now
+created (2026-07-08) but not yet scheduled. All 5 published posts' social sets exist — only the
+scheduling passes for 4 and 5 remain.
 
 ### Initiation / Testing / Reckoning post `[Soon]`
 The arcana-stages post (a dormant blog scaffold exists for this).
