@@ -61,35 +61,7 @@ function voiceCorrection(text: string): string {
 }
 
 const SHAPE_CORRECTION =
-  "Your previous attempt's `months` array didn't match the required shape: an array of objects, each with a `month` copied verbatim from the input and a `text`, exactly one per month in the input. Return that exact keyed shape this time, all twelve months.";
-
-// Match the model's month objects against the twelve month names the package actually
-// has, so a wrong count or order is recoverable rather than a bare length mismatch.
-function matchMonths(
-  raw: unknown,
-  expected: string[]
-): { values: { month: string; text: string }[]; missing: string[] } {
-  const byMonth = new Map<string, string>();
-  if (Array.isArray(raw)) {
-    for (const item of raw) {
-      if (item && typeof item === "object") {
-        const m = (item as Record<string, unknown>).month;
-        const t = (item as Record<string, unknown>).text;
-        if (typeof m === "string" && typeof t === "string") byMonth.set(m, t);
-      }
-    }
-  }
-  const missing: string[] = [];
-  const values = expected.map((month) => {
-    const text = byMonth.get(month);
-    if (typeof text !== "string") {
-      missing.push(month);
-      return { month, text: "" };
-    }
-    return { month, text };
-  });
-  return { values, missing };
-}
+  "Your previous attempt was missing a required field or returned a section in the wrong shape. Return all of: framing, bearingMeetsYear, stagesAndArc, elementWeather (strings), and reflections (a JSON array of strings).";
 
 async function attemptGeneration(
   pkg: YearPackage,
@@ -128,33 +100,26 @@ async function attemptGeneration(
   }
 
   const raw = toolUse.input as YearReadingRawSections;
-  const monthMatch = matchMonths(raw.months, pkg.months.map((m) => m.monthName));
 
   const shapeOk =
-    typeof raw.yearOpening === "string" &&
+    typeof raw.framing === "string" &&
     typeof raw.bearingMeetsYear === "string" &&
-    typeof raw.arc === "string" &&
+    typeof raw.stagesAndArc === "string" &&
     typeof raw.elementWeather === "string" &&
-    monthMatch.missing.length === 0 &&
-    Array.isArray(raw.skills) &&
-    raw.skills.length > 0 &&
-    raw.skills.every((s) => typeof s === "string") &&
     Array.isArray(raw.reflections) &&
     raw.reflections.length > 0 &&
     raw.reflections.every((r) => typeof r === "string");
 
   if (!shapeOk) {
-    console.error("[year-reading] tool output shape mismatch", { missing: monthMatch.missing, raw });
-    return { status: "failed", failureReason: "parse_error", held: { raw, missing: monthMatch.missing } };
+    console.error("[year-reading] tool output shape mismatch", { raw });
+    return { status: "failed", failureReason: "parse_error", held: { raw } };
   }
 
   const sections: YearReadingSections = {
-    yearOpening: raw.yearOpening,
+    framing: raw.framing,
     bearingMeetsYear: raw.bearingMeetsYear,
-    arc: raw.arc,
+    stagesAndArc: raw.stagesAndArc,
     elementWeather: raw.elementWeather,
-    months: monthMatch.values,
-    skills: raw.skills,
     reflections: raw.reflections,
   };
 

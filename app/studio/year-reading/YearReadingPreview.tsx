@@ -67,7 +67,6 @@ export default function YearReadingPreview() {
   const pkg = res?.pkg;
   const result = res?.result;
   const sections = result?.status === "ready" ? result.sections : null;
-  const monthText = new Map((sections?.months ?? []).map((m) => [m.month, m.text]));
 
   return (
     <div>
@@ -149,28 +148,37 @@ export default function YearReadingPreview() {
 
       {sections && pkg && (
         <div style={{ ...box, background: "var(--stone)" }}>
-          <span style={label}>The reading</span>
-          {paras(sections.yearOpening)}
+          <span style={label}>The reading <span style={{ color: "var(--warm-stone)" }}>· grey labels are AI weave, black text is authored/wired</span></span>
+          {paras(sections.framing)}
+
+          <span style={{ ...label, marginTop: 18, color: "var(--charcoal)" }}>
+            Your {pkg.year} year · {pkg.yearCard.name} <span style={{ color: "var(--label)" }}>({pkg.yearCard.stage})</span>
+          </span>
+          {paras(pkg.yearCard.personalYearReading)}
 
           <span style={{ ...label, marginTop: 18 }}>How your Bearing meets the year</span>
           {paras(sections.bearingMeetsYear)}
 
-          <span style={{ ...label, marginTop: 18 }}>The shape of the year</span>
-          {paras(sections.arc)}
+          <span style={{ ...label, marginTop: 18 }}>The stages you move through, and the ones you don&rsquo;t</span>
+          {paras(sections.stagesAndArc)}
 
           <span style={{ ...label, marginTop: 18 }}>Element weather</span>
           {paras(sections.elementWeather)}
 
-          <span style={{ ...label, marginTop: 18 }}>Month by month</span>
+          <span style={{ ...label, marginTop: 18, color: "var(--charcoal)" }}>Month by month (authored)</span>
           {pkg.months.map((m) => (
             <p key={m.monthName} style={para}>
-              <b>{m.monthName} · {m.card}.</b> {monthText.get(m.monthName)}
+              <b>
+                {m.monthName} · {m.card}{" "}
+                <span style={{ fontSize: 12, color: "var(--label)", fontWeight: 400 }}>({m.stage})</span>.
+              </b>{" "}
+              {m.reading}
             </p>
           ))}
 
-          <span style={{ ...label, marginTop: 18 }}>What this year asks you to practice</span>
+          <span style={{ ...label, marginTop: 18, color: "var(--charcoal)" }}>Skills this year asks (authored)</span>
           <ul style={{ margin: "0 0 12px", paddingLeft: 20 }}>
-            {sections.skills.map((s, i) => <li key={i} style={{ ...para, margin: "4px 0" }}>{s}</li>)}
+            {pkg.yearCard.skills.map((s, i) => <li key={i} style={{ ...para, margin: "4px 0" }}>{s}</li>)}
           </ul>
 
           <span style={{ ...label, marginTop: 6 }}>Reflection questions</span>

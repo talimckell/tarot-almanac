@@ -1,12 +1,19 @@
-// Deterministic package for the paid year-ahead reading. Everything the AI is allowed
-// to phrase is computed here first (same contract as lib/monthlyReading.ts): the year
-// card, the twelve months and their authored readings, the Bearing, the Bearing×Year
-// facts, the element weather, and the untouched part of the cycle. The AI weaves; it
-// never chooses cards or imports outside meaning. Server-only (reads card JSON via
-// lib/cards).
+// Deterministic package for the paid year-ahead reading. Everything the reader sees that
+// was already authored is wired here verbatim (the year card's ongoingPersonalYear text,
+// each month's ongoingPersonalMonth text, the year card's skills). The AI only writes the
+// connective weave: a personalized framing, the Bearing×Year spine, the stages/arc, the
+// element weather, and reflection questions. It never rewrites the authored readings.
+// Server-only (reads card JSON via lib/cards).
 
 import { getCardBySlug } from "./cards";
-import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR, sumDigits, type Element } from "./almanac";
+import {
+  MAJORS,
+  MAJOR_SLUGS,
+  ELEMENT_BY_MAJOR,
+  sumDigits,
+  phaseBand,
+  type Element,
+} from "./almanac";
 import {
   yearCardIndex,
   yearMonths,
@@ -17,40 +24,53 @@ import {
   MONTH_NAMES,
 } from "./yearCard";
 
+export type Stage = "Initiation" | "Testing" | "Reckoning";
+
 export interface YearMonthEntry {
   monthName: string; // "January" … "December"
   card: string;
   element: Element;
-  reading: string; // authored ongoingPersonalMonth body (grounding, not final copy)
+  stage: Stage;
+  reading: string; // authored ongoingPersonalMonth body — shown verbatim, never rewritten
 }
 
 export interface YearPackage {
   name: string;
   year: number;
   birth: { month: number; day: number };
-  bearing: { name: string; element: Element; essence: string; meaning: string };
+  bearing: { name: string; element: Element; stage: Stage; essence: string; meaning: string };
   yearCard: {
     name: string;
     element: Element;
+    stage: Stage;
     essence: string;
     blurb: string; // the free-tier authored year blurb
-    personalYearReading: string; // authored ongoingPersonalYear body
+    personalYearReading: string; // authored ongoingPersonalYear body — shown verbatim
     whatToDo: string;
-    skills: string[];
+    skills: string[]; // authored skills — shown verbatim
   };
-  // The Bearing×Year relationship, all pre-computed so the AI only phrases it.
   bearingVsYear: {
     gap: number; // sumDigits(year): steps from the Bearing to the year card
-    sameElement: boolean; // does the Bearing share the year card's element
-    decemberReturnsToBearing: boolean; // true when December's month card == the Bearing
+    sameElement: boolean;
+    decemberReturnsToBearing: boolean; // December's month card == the Bearing
   };
   months: YearMonthEntry[]; // 12, January → December
   elementWeather: { element: Element; count: number }[];
-  restOfCycle: { name: string; element: Element }[]; // the 9 Majors the year never touches
+  restOfCycle: { name: string; element: Element; stage: Stage }[]; // the 9 untouched Majors
+  // How the year moves through the Fool's-Journey stages (blog-07): month counts per stage
+  // for the twelve months, and which stages the untouched cards sit in.
+  stageSummary: {
+    touched: Record<Stage, number>;
+    untouched: Record<Stage, number>;
+  };
 }
 
 function major(idx: number) {
   return getCardBySlug(MAJOR_SLUGS[idx]);
+}
+
+function emptyStages(): Record<Stage, number> {
+  return { Initiation: 0, Testing: 0, Reckoning: 0 };
 }
 
 export function buildYearPackage(
@@ -62,6 +82,7 @@ export function buildYearPackage(
   const ycIdx = yearCardIndex(year, bm, bd);
   const bIdx = bearingForBirthday(bm, bd);
   const monthsIdx = yearMonths(ycIdx);
+  const restIdx = restOfCycle(ycIdx);
 
   const yc = major(ycIdx);
   const bearing = major(bIdx);
@@ -73,9 +94,15 @@ export function buildYearPackage(
       monthName: MONTH_NAMES[i],
       card: MAJORS[mi],
       element: ELEMENT_BY_MAJOR[mi],
+      stage: phaseBand(mi),
       reading: c?.positionReadings?.ongoingPersonalMonth?.body ?? c?.essence ?? "",
     };
   });
+
+  const touched = emptyStages();
+  for (const mi of monthsIdx) touched[phaseBand(mi)]++;
+  const untouched = emptyStages();
+  for (const ri of restIdx) untouched[phaseBand(ri)]++;
 
   return {
     name: name.trim() || "you",
@@ -84,12 +111,14 @@ export function buildYearPackage(
     bearing: {
       name: MAJORS[bIdx],
       element: ELEMENT_BY_MAJOR[bIdx],
+      stage: phaseBand(bIdx),
       essence: bearing?.essence ?? "",
       meaning: bearing?.gift.body ?? "",
     },
     yearCard: {
       name: MAJORS[ycIdx],
       element: ELEMENT_BY_MAJOR[ycIdx],
+      stage: phaseBand(ycIdx),
       essence: yc?.essence ?? "",
       blurb: content.blurb,
       personalYearReading: yc?.positionReadings?.ongoingPersonalYear?.body ?? "",
@@ -103,9 +132,11 @@ export function buildYearPackage(
     },
     months,
     elementWeather: elementTally(monthsIdx),
-    restOfCycle: restOfCycle(ycIdx).map((ri) => ({
+    restOfCycle: restIdx.map((ri) => ({
       name: MAJORS[ri],
       element: ELEMENT_BY_MAJOR[ri],
+      stage: phaseBand(ri),
     })),
+    stageSummary: { touched, untouched },
   };
 }
