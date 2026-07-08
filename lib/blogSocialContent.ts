@@ -484,6 +484,56 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
       keywords: "tarot natal chart, tarot birth chart, tarot numerology",
     },
   },
+
+  "major-arcana-three-stages": {
+    slug: "major-arcana-three-stages",
+    postTitle: "The Major Arcana in Three Stages",
+    majorIndex: 0, // The Fool — the journey's starting point
+    blueskyQuotes: [
+      {
+        eyebrow: "The Fool's Journey",
+        quote: "The 22 Major Arcana aren't 22 separate ideas. They're one story, told in order.",
+        caption:
+          "The 22 Major Arcana aren't 22 separate ideas. They're one story told in order, the Fool's Journey, and it moves in three stages: Initiation, Testing, Reckoning.",
+      },
+      {
+        eyebrow: "Three Movements",
+        quote: "First you become someone. Then that someone gets tested. Then you reckon with what it was.",
+        caption:
+          "The whole arc of the Major Arcana in one breath: first you become someone, then that someone gets tested by everything you can't control, then you come out the far side and reckon with what the journey was.",
+      },
+      {
+        eyebrow: "The Testing Stage",
+        quote: "The Major Arcana has a middle stretch that exists to test you.",
+        caption:
+          "The 22 tarot Major Arcana move in three stages. The middle one, Strength through Temperance, is Testing: the stretch where the self you built meets everything you can't control. A card that lands here is asking what you're made of.",
+      },
+      {
+        eyebrow: "Orientation, Not Verdict",
+        quote: "The card fixes where you're standing. What you do there is still yours.",
+        caption:
+          "In The Tarot Almanac, a date always lands on the same card, no shuffle, and every card sits in one stage of the Fool's Journey. That stage is orientation, a way to know where you're standing. It's no verdict on how your day goes. The card fixes the spot; what you do there is still yours.",
+      },
+    ],
+    pinterestQuotes: [
+      {
+        eyebrow: "The Tarot Wheel in Three Stages",
+        quote: "The 22 tarot Major Arcana are one story, and it runs in three stages: Initiation, Testing, Reckoning.",
+        pinTitle: "The Tarot Wheel in Three Stages (The Fool's Journey)",
+        description:
+          "The 22 Major Arcana move through three stages of the Fool's Journey: Initiation (cards 0-7), Testing (8-14), and Reckoning (15-21). What each stage means, and why the one your card sits in colors a reading.",
+        keywords: "fools journey, major arcana stages, tarot wheel",
+      },
+      {
+        eyebrow: "The Testing Stage",
+        quote: "The middle of the tarot's Major Arcana, Strength through Temperance, is where the self meets what tries it.",
+        pinTitle: "The Testing Stage of the Major Arcana",
+        description:
+          "In the Fool's Journey, the Major Arcana's middle seven cards, Strength through Temperance, are the Testing stage, where the self you built meets what it can't control. Why a card here asks what you're made of.",
+        keywords: "tarot testing stage, major arcana meaning, fools journey",
+      },
+    ],
+  },
 };
 
 export function getBlogSocialContent(slug: string): BlogSocialContent | undefined {

@@ -148,27 +148,27 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   //     "Open The Tarot Almanac →": "/today",
   //   },
   // },
-  // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────
-  // Scaffold for content/blog-07-major-arcana-three-stages.md. Dormant until
-  // uncommented. Also the link target for "Initiation / Testing / Reckoning"
-  // used on the month page and natal chart — wire those as links once it's live.
-  // {
-  //   slug: "major-arcana-three-stages",
-  //   title: "The Major Arcana in Three Stages",
-  //   seoTitle: "The Three Stages of the Major Arcana: Initiation, Testing, Reckoning",
-  //   metaDescription:
-  //     "The 22 Major Arcana move through three stages of the Fool's Journey: Initiation (0-7), Testing (8-14), and Reckoning (15-21). What each stage means and why it colors a reading.",
-  //   eyebrow: "Tarot Numerology",
-  //   description: "[standfirst: the Fool's Journey in three movements — write in voice]",
-  //   indexTeaser: "[index blurb — write in voice]",
-  //   majorIndex: 0, // The Fool — the journey's starting point
-  //   file: "blog-07-major-arcana-three-stages.md",
-  //   linkMap: {
-  //     "How Tarot Numerology Works": "/blog/how-tarot-numerology-works",
-  //     "the deck": "/tarot",
-  //     "Open The Tarot Almanac →": "/today",
-  //   },
-  // },
+  // Published 2026-07-08. Also the link target for "Initiation / Testing / Reckoning"
+  // on the month page and natal chart — still to wire those references as links.
+  {
+    slug: "major-arcana-three-stages",
+    title: "The Major Arcana in Three Stages",
+    seoTitle: "The Fool's Journey: The Major Arcana in Three Stages",
+    metaDescription:
+      "The 22 Major Arcana run in three stages of the Fool's Journey: Initiation (0-7), Testing (8-14), Reckoning (15-21). Why the stage your card sits in colors the reading.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "The twenty-two Major Arcana are one story, the Fool's Journey, told in three movements: Initiation, Testing, Reckoning. What each stage means, and why the one your card sits in changes how it reads.",
+    indexTeaser:
+      "The Fool's Journey moves in three stages: Initiation, Testing, Reckoning. What each means, and why your card's stage colors the reading.",
+    majorIndex: 0, // The Fool — the journey's starting point
+    file: "blog-07-major-arcana-three-stages.md",
+    linkMap: {
+      "How Tarot Numerology Works": "/blog/how-tarot-numerology-works",
+      "the deck": "/tarot",
+      "Open The Tarot Almanac →": "/today",
+    },
+  },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {

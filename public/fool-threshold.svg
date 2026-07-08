@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="The Fool as an engraved plate: the emblem of the Major Arcana zero, a ring with a centered dot, poised in open space above a threshold line, where the Fool's Journey begins.">
+<defs><style>@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&amp;family=Cormorant+SC:wght@400;500&amp;family=Lato:wght@300;400&amp;display=swap");</style></defs>
+<rect x="0" y="0" width="600" height="800" fill="#f6f2eb"/>
+
+<!-- manuscript corner brackets -->
+<path d="M 34 58 L 34 34 L 58 34" fill="none" stroke="#b8a890" stroke-width="1"/>
+<path d="M 566 742 L 566 766 L 542 766" fill="none" stroke="#b8a890" stroke-width="1"/>
+
+<!-- faint aura ring -->
+<circle cx="300" cy="292" r="122" fill="none" stroke="#b8a890" stroke-width="1" stroke-dasharray="1.5 7"/>
+
+<!-- the Fool emblem: ring + centered dot (ma-0, enlarged) -->
+<circle cx="300" cy="292" r="94" fill="none" stroke="#2e2418" stroke-width="2.4"/>
+<circle cx="300" cy="292" r="12" fill="#2e2418"/>
+
+<!-- plumb line: the poised step, down to the edge -->
+<line x1="300" y1="386" x2="300" y2="556" stroke="#b8a890" stroke-width="1" stroke-dasharray="2 6"/>
+
+<!-- the threshold, broken at the point of stepping off -->
+<line x1="78" y1="560" x2="286" y2="560" stroke="#b8a890" stroke-width="1.4"/>
+<line x1="314" y1="560" x2="522" y2="560" stroke="#b8a890" stroke-width="1.4"/>
+
+<!-- the drop below: faint engraved hatching -->
+<g stroke="#b8a890" stroke-width="0.7" opacity="0.6">
+  <line x1="120" y1="560" x2="120" y2="582"/>
+  <line x1="170" y1="560" x2="170" y2="590"/>
+  <line x1="220" y1="560" x2="220" y2="580"/>
+  <line x1="380" y1="560" x2="380" y2="580"/>
+  <line x1="430" y1="560" x2="430" y2="590"/>
+  <line x1="480" y1="560" x2="480" y2="582"/>
+</g>
+
+<!-- type -->
+<text x="300" y="648" text-anchor="middle" font-family="'Cormorant',Georgia,serif" font-style="italic" font-size="46" fill="#2e2418">The Fool</text>
+<text x="300" y="686" text-anchor="middle" font-family="'Cormorant SC','Cormorant',Georgia,serif" font-size="15" letter-spacing="3" fill="#1e3a58">ZERO · WHERE THE JOURNEY BEGINS</text>
+<text x="300" y="726" text-anchor="middle" font-family="'Cormorant',Georgia,serif" font-style="italic" font-size="19" fill="#4a3e30">No map, and no railing.</text>
+</svg>
