@@ -22,6 +22,10 @@ Dormant scaffold (commented out, `.md` still has SCAFFOLD markers):
 - **Your 2027 Tarot Year Card** (`blog-06`) — the *collective* year card, Justice
   (2+0+2+7 = 11). See the in-flight entry below.
 
+Related live product (not a blog post): the **personal year card calculator** ships
+at `/personal-year-card` (Phase 1). The matching blog post is held until the paid
+"year ahead" report (Phase 2) exists — see that entry below.
+
 ---
 
 ## Your 2027 Tarot Year Card (the Year of Justice)
@@ -44,7 +48,13 @@ Dormant scaffold (commented out, `.md` still has SCAFFOLD markers):
   This is a scaffold to complete, not a new topic to green-light.
 
 ## Your Personal Tarot Year Card (find yours from your birthday)
-- Status: idea
+- Status: hold (Phase 1 shipped; wait for the paid report before writing)
+- Product state: the calculator + landing is **already live** at
+  `/personal-year-card` (verified: `app/personal-year-card/page.tsx`,
+  `YearCardCalculator.tsx`, and per-card `[slug]` pages). Phase 2 — a full paid
+  "year ahead" report — is the missing piece. Per owner (2026-07-08): **do not
+  write this post until the paid report also exists**, so the post lands readers on
+  a finished funnel (free calculator → paid report) instead of a dead end.
 - Intent: "how do I calculate my personal tarot year card / what's my tarot card
   for this year" — evergreen, recurs every January, and different for every person
   (unlike the collective year card above).
@@ -56,14 +66,14 @@ Dormant scaffold (commented out, `.md` still has SCAFFOLD markers):
   month and day beneath the year, or place the year card inside the Fool's-Journey
   stage it falls in. Our formula (Personal Year = mod22(BM + BD + sumDigits(Y)))
   matches the mainstream method exactly, so we rank on depth + the deterministic
-  hook, not a math fight. Strong product-funnel fit (a reusable personal-year
-  calculator / paid "year ahead" reading is already a banked idea).
-- Internal links: How Tarot Numerology Works (the formula), The Major Arcana in
-  Three Stages (which stage your year card sits in), Your 2027 Tarot Year Card (the
-  collective counterpart), What Is a Tarot Bearing? (the *lifelong* card vs the
-  yearly one); CTA to /today.
-- Priority: high — highest-volume evergreen gap we can own, distinct from every
-  existing post, and it feeds a real product. Best single *new* topic to green-light.
+  hook, not a math fight. The strongest content angle we can own — but the post
+  exists to feed the paid report, so its value is gated on that shipping.
+- Internal links: the live `/personal-year-card` calculator (primary CTA), How
+  Tarot Numerology Works (the formula), The Major Arcana in Three Stages (which
+  stage your year card sits in), Your 2027 Tarot Year Card (the collective
+  counterpart), What Is a Tarot Bearing? (the *lifelong* card vs the yearly one).
+- Priority: high once unblocked — highest-volume evergreen gap we can own, but
+  **held** behind the paid "year ahead" report. Revisit the moment that ships.
 
 ## Why Some Calculators Give You Two Tarot Birth Cards (and We Give One)
 - Status: idea
@@ -81,8 +91,9 @@ Dormant scaffold (commented out, `.md` still has SCAFFOLD markers):
   this post's distinct angle is the *count* (one vs two), not the *which card*.
 - Internal links: What Is a Tarot Bearing?, What Is Tarot Numerology?, The Shadow
   and the Reclaiming (reduction / faces); CTA to /bearing.
-- Priority: medium-high — sharp differentiation and a defensible wedge, but narrower
-  search volume than the personal year card.
+- Priority: high — **the top actionable new topic** while the personal-year post is
+  held. Sharp differentiation, a defensible wedge, and no product dependency; the
+  only caveat is narrower search volume than the personal year card.
 
 ## Tarot Birth Card vs. Your Numerology Life Path Number
 - Status: idea
