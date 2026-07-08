@@ -88,6 +88,15 @@ band is replaced by the chart band, not duplicated).
 
 Mockup Artifact: https://claude.ai/code/artifact/042f2e57-b88d-441b-ad61-3b3680597c96
 
+**Update 2026-07-07 — the year card adds a rung.** The `/personal-year-card` free tool
+(shipped) is now a *third* free hook alongside the daily card and Bearing, and its paid ~$12
+year-ahead reading (coming) is a *second* giftable $12 reading alongside the birth chart. A
+single flat 4-prop row can't hold that cleanly. Proposed reframe: **group by tier** instead of
+one row — **Free** (today's cards as hero, + Bearing and year card as the two birthday
+calculators) → **$12 giftable readings** (birth chart = who you are; year ahead = where the
+year takes you, the two deep readings that ride the gift flow) → **$7/mo almanac** (the living,
+personal, non-giftable engine). Revisit the mockup with this pairing before any build.
+
 **Status.** Not started. Tali flagged there are a few problems with the mockup and wants to
 dig in more before any build. Revisit the copy and structure, then wire into `app/page.tsx`
 + CSS. All homepage prose stays authored / in-voice.
@@ -177,9 +186,9 @@ A post covering the personal-month reading.
 ### Get August's month reading `[Soon-ish]`
 Author the August collective month reading.
 
-### Blog assets: schedule 2 & 3, create 4 & 5 `[Soon]`
-Blog post 2 and 3's assets are done (in the Tarot Almanac folder) and need scheduling. Blog
-4 and 5's assets still need to be created. (Per prior work, 3/5 posts' social sets exist.)
+### Blog assets: create 4 & 5 `[Soon]`
+Blog post 2 and 3's assets are done and **scheduled** (2026-07-08). Remaining: blog 4 and 5's
+assets still need to be created. (3/5 posts' social sets exist.)
 
 ### Initiation / Testing / Reckoning post `[Soon]`
 The arcana-stages post (a dormant blog scaffold exists for this).
