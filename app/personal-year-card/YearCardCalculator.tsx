@@ -10,6 +10,8 @@ import {
   majorSlug,
   majorElement,
 } from "../../lib/yearCard";
+import { YEAR_READING_PRICE_DISPLAY } from "../../lib/yearReadingPricing";
+import { startYearReadingCheckout } from "./checkoutActions";
 import { trackFormSubmit } from "@/lib/analytics";
 
 // The year card depends only on birth month + birth day and the calendar year
@@ -41,7 +43,7 @@ export default function YearCardCalculator() {
   const [m, setM] = useState("");
   const [d, setD] = useState("");
   const [y, setY] = useState(String(now));
-  const [result, setResult] = useState<{ idx: number; year: number } | null>(null);
+  const [result, setResult] = useState<{ idx: number; year: number; m: string; d: string } | null>(null);
 
   const dayCount = m ? maxDay(Number(m)) : 31;
 
@@ -49,7 +51,7 @@ export default function YearCardCalculator() {
     e.preventDefault();
     if (!m || !d) return;
     const idx = yearCardIndex(Number(y), Number(m), Number(d));
-    setResult({ idx, year: Number(y) });
+    setResult({ idx, year: Number(y), m, d });
     trackFormSubmit("personal_year_card", { year_read: Number(y) });
   }
 
@@ -108,8 +110,18 @@ export default function YearCardCalculator() {
             <p className="rname">{majorName(result.idx)}</p>
             <p className="rblurb">{yearCardContent(result.idx).blurb}</p>
             <Link className="cta" href={`/personal-year-card/${majorSlug(result.idx)}`}>
-              Read the full {majorShortName(result.idx)} year &rarr;
+              Read the full {`${majorShortName(result.idx)} year`} &rarr;
             </Link>
+
+            <form action={startYearReadingCheckout} className="pyc-buy">
+              <input type="hidden" name="bm" value={result.m} />
+              <input type="hidden" name="bd" value={result.d} />
+              <input type="hidden" name="year" value={String(result.year)} />
+              <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
+              <button type="submit" className="pyc-cta-btn">
+                Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
+              </button>
+            </form>
           </div>
         </div>
       )}

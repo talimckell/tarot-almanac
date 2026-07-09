@@ -456,6 +456,20 @@
 }
 .pyc-cta-btn:hover { background: var(--indigo-mid); }
 
+/* Buy form on the calculator result */
+.pyc-buy { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; max-width: 360px; }
+.pyc-buy-name {
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 9px 11px;
+  border: 1px solid var(--charcoal);
+  background: var(--stone);
+  border-radius: 0;
+  color: var(--ink);
+}
+.pyc-buy-name:focus { outline: none; border-color: var(--indigo); }
+.pyc-buy .pyc-cta-btn { text-align: center; }
+
 @media (max-width: 560px) {
   .pyc-wrap { padding: 40px 18px 72px; }
   .pyc-result { flex-direction: column; }

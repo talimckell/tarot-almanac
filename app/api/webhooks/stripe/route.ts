@@ -1,6 +1,7 @@
 import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
+import { yearCardIndex, bearingForBirthday } from "@/lib/yearCard";
 
 // Stripe webhook receiver. Raw body must be read via req.text() (NOT req.json())
 // because signature verification (constructEvent) needs the exact original bytes —
@@ -90,6 +91,33 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
         name: chartName,
         birthDate: new Date(Date.UTC(y, m - 1, d)),
         purchasedPaymentIntentId: paymentIntentId,
+      },
+    });
+    return;
+  }
+
+  if (kind === "year-reading") {
+    const name = session.metadata?.yrName?.trim() || "you";
+    const bm = Number(session.metadata?.yrBm);
+    const bd = Number(session.metadata?.yrBd);
+    const year = Number(session.metadata?.yrYear);
+    if (!bm || !bd || !year) return; // malformed metadata — nothing safe to do
+
+    // Idempotent by paymentIntentId (unique). The woven reading generates lazily on
+    // first view of the reading page; here we only create the pending row.
+    await prisma.yearReading.upsert({
+      where: { purchasedPaymentIntentId: paymentIntentId },
+      update: {},
+      create: {
+        ownerId: supabaseUserId,
+        name,
+        birthMonth: bm,
+        birthDay: bd,
+        readingYear: year,
+        yearCardIndex: yearCardIndex(year, bm, bd),
+        bearingIndex: bearingForBirthday(bm, bd),
+        purchasedPaymentIntentId: paymentIntentId,
+        status: "pending",
       },
     });
   }

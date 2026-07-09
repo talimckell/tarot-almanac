@@ -11,6 +11,11 @@ export const STRIPE_PRICE_ID_SUBSCRIPTION =
   process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_SUBSCRIPTION!;
 export const STRIPE_PRICE_ID_CHART = process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_CHART!;
 
+// The paid year-ahead reading (one-off, giftable). Price copy lives in
+// lib/yearReadingPricing.ts; this is the matching Stripe Price object's id.
+export const STRIPE_PRICE_ID_YEAR_READING =
+  process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_YEAR_READING!;
+
 // Resolves (creating if needed) the Stripe Customer for a Profile, persisting the
 // id immediately rather than deferring to the webhook, so a Profile<->Customer link
 // exists before Checkout Session creation even if the tab closes before any webhook
