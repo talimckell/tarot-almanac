@@ -211,15 +211,15 @@ function cap(s: string): string {
 
 export function synthesis(collective: DayCard, personal: DayCard): string {
   if (collective.suit === personal.suit) {
-    return `You and the world share an element today, both ${ELEMENT_VERB[collective.element]}, at different points along it. The weather outside and the weather in you rhyme, even if they're not the same note.`;
+    return `You and the world share an element today, both ${ELEMENT_VERB[collective.element]}, at different points along it. The weather outside and the weather in you rhyme, even when the two cards are telling different stories.`;
   }
   if (collective.rank >= 11 && personal.rank >= 11) {
     return "Today is about selves and how they meet, the world showing up as one kind of figure, you as another. A day to notice the roles people are playing, including yours.";
   }
   if (HARMONY[collective.element].includes(personal.element)) {
-    return `The world's element and yours sit easily together today. ${cap(ELEMENT_VERB[collective.element])} and ${ELEMENT_VERB[personal.element]} tend to feed each other. What's around you and what's in you are likely to support one another.`;
+    return `The world's element and yours run with the same grain today, ${ELEMENT_VERB[collective.element]} and ${ELEMENT_VERB[personal.element]}. Elements this close share a way of moving, a kind of kinship. What each of you is actually doing still lives in the cards above, and those can pull opposite ways even while the grain underneath agrees.`;
   }
-  return `The world's element and yours pull different ways today, ${ELEMENT_VERB[collective.element]} against ${ELEMENT_VERB[personal.element]}. That friction isn't a problem to solve so much as a tension to feel honestly. The gap between the world's grain and your own is the reading.`;
+  return `The world's element and yours run against each other today, ${cap(ELEMENT_VERB[collective.element])} and ${ELEMENT_VERB[personal.element]}. Elements this far apart don't share a way of moving. Where the two cards above land is the reading, and the distance between the world's grain and yours is part of what it's saying.`;
 }
 
 // Shown in the personal column's synthesis slot when no birthday has been entered.
