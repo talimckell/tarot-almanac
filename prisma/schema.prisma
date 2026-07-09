@@ -40,6 +40,7 @@ model Profile {
 
   savedCharts     SavedChart[]
   monthlyReadings MonthlyReading[]
+  yearReadings    YearReading[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -103,6 +104,46 @@ model MonthlyReading {
   createdAt DateTime @default(now())
 
   @@unique([profileId, month])
+}
+
+// A paid year-ahead reading: a fixed, giftable artifact for one (birthday, calendar year),
+// bought one-off ($12) or gifted. Unlike MonthlyReading (per-account, the living almanac),
+// this is a chart-like object — it can be made for anyone and opened by its shareToken, so it
+// carries the recipient's name/birthday/reading year rather than being tied to the owner's own
+// account state. The woven AI sections generate once on first view (pending → ready|failed) and
+// are never regenerated, matching MonthlyReading's one-call cost model. The authored year and
+// month readings the report shows are not stored here — they're wired live from the card data.
+model YearReading {
+  id      String  @id @default(cuid())
+  ownerId String
+  owner   Profile @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  name        String // the person the reading is for
+  birthMonth  Int // 1-12  (birth year is not used by the year-card math, so it isn't stored)
+  birthDay    Int // 1-31
+  readingYear Int // the calendar year the reading covers
+
+  // Denormalized deterministic anchors so a gift/list view needn't recompute them.
+  yearCardIndex Int
+  bearingIndex  Int
+
+  // Set if bought one-off ($12); null if covered by a subscription at creation time.
+  // @unique doubles as the webhook's idempotency key (upsert), like SavedChart.
+  purchasedPaymentIntentId String? @unique
+
+  // /personal-year-card/reading/[token] lookup key, revocable independently of id.
+  shareToken String @unique @default(cuid())
+
+  // Generation state, same contract as MonthlyReading.
+  status        String // "pending" | "ready" | "failed"
+  sections      Json? // the woven slots (framing, bearingMeetsYear, stagesAndArc, elementWeather, reflections)
+  failureReason String?
+  heldSections  Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
 }
 
 // Tracks which cards the "Reclaimed Reversals" batch campaign (studio/reclaimed-reversals)
