@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import ShareImageButton from "../components/ShareImageButton";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { stripe } from "@/lib/stripe";
+import { STUDIO_OWNER_EMAIL } from "@/lib/studioAuth";
 import { isSubscribed } from "@/lib/compAccounts";
 import {
   computeNatalChart,
@@ -20,6 +22,8 @@ import { getChartReadings } from "@/lib/chartReadings";
 import ChartDiagram, { LockedPositionsGrid } from "./ChartDiagram";
 import ReadCard from "./ReadCard";
 import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
+import AdsConsent from "../components/AdsConsent";
+import AdsPurchaseConversion from "../components/AdsPurchaseConversion";
 import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
 import styles from "./page.module.css";
 
@@ -33,9 +37,9 @@ export const metadata: Metadata = {
 export default async function ChartPage({
   searchParams,
 }: {
-  searchParams: Promise<{ checkout?: string }>;
+  searchParams: Promise<{ checkout?: string; session_id?: string }>;
 }) {
-  const { checkout } = await searchParams;
+  const { checkout, session_id } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
@@ -47,6 +51,32 @@ export default async function ChartPage({
     update: {},
     create: { id: user.id, email: user.email ?? user.id },
   });
+
+  // Just back from a successful Stripe Checkout: resolve the real amount from the
+  // session so the Google Ads conversion carries a verified value (not a spoofable
+  // URL param) and dedupes on transaction_id. Ownership + paid are both checked so a
+  // replayed or borrowed session id can't fire a phantom conversion. Owner's own
+  // purchases are excluded, mirroring how server analytics drops owner events.
+  let purchase: { value: number; currency: string; transactionId: string } | null = null;
+  const isOwner = (user.email ?? "").toLowerCase() === STUDIO_OWNER_EMAIL.toLowerCase();
+  if (checkout === "success" && session_id && !isOwner) {
+    try {
+      const s = await stripe.checkout.sessions.retrieve(session_id);
+      if (
+        s.payment_status === "paid" &&
+        s.metadata?.supabaseUserId === user.id &&
+        s.amount_total
+      ) {
+        purchase = {
+          value: s.amount_total / 100,
+          currency: (s.currency ?? "usd").toUpperCase(),
+          transactionId: s.id,
+        };
+      }
+    } catch {
+      purchase = null;
+    }
+  }
 
   if (!profile.birthDate) {
     return (
@@ -80,6 +110,16 @@ export default async function ChartPage({
 
   return (
     <>
+      {/* Headless loader: no banner here (the ask happens on the landing page). If the
+          visitor opted in there, this loads the Ads tag so the conversion below can fire. */}
+      <AdsConsent />
+      {purchase && (
+        <AdsPurchaseConversion
+          value={purchase.value}
+          currency={purchase.currency}
+          transactionId={purchase.transactionId}
+        />
+      )}
       <SiteNav current="me" />
       <div className={styles.wrap}>
         <div className={styles.head}>

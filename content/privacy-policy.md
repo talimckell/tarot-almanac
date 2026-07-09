@@ -2,7 +2,7 @@
 
 **The Tarot Almanac**
 Effective date: July 3, 2026
-Last updated: July 4, 2026
+Last updated: July 9, 2026
 
 This Privacy Policy explains what personal information The Tarot Almanac ("we," "us," "our," "the Almanac") collects when you use tarotalmanac.com (the "Service"), how we use it, who we share it with, and the choices you have. It's written to be actually readable, in keeping with how the rest of the site works: if something here is unclear, privacy@tarotalmanac.com gets you a real answer.
 
@@ -36,14 +36,16 @@ If you save a chart for someone else (a partner, parent, friend, child) using ou
 - **Birthday cookie.** If you use the time-travel / personal-reading link format (URLs with a `?b=` birth date parameter), we set a cookie storing that birth date for about a year, so the personalized reading persists across visits without requiring an account. This is set even if you're not logged in.
 - **Session cookies.** Our authentication provider (Supabase) sets cookies necessary to keep you logged in.
 - **Payment flow cookies.** Stripe sets cookies during checkout to process your payment securely.
-- **Analytics consent cookie.** When you respond to our analytics banner, we store your choice in a first-party cookie (`ta_analytics_consent`) for about a year, so we don't ask again on every visit. This cookie holds only your yes/no answer and is set regardless of which way you answer.
+- **Ad-measurement consent cookie.** If you land on our tarot birth chart page, we show a banner asking whether we may measure ad performance. We store your yes/no answer in a first-party cookie (`ta_ads_consent`) for about a year, so we don't ask again. This cookie holds only your answer and is set whichever way you choose.
 - **Server logs.** Like most web services, our hosting provider (Vercel) automatically logs basic technical information (IP address, browser type, request timing) for security and reliability purposes.
 
-### 2.4 Analytics
+### 2.4 Analytics and advertising measurement
 
-We use **Google Analytics** to understand site usage, but **only if you allow it**. Google Analytics is off by default: it loads nothing and sets no cookies until you accept it in the consent banner shown on your first visit. This is the case everywhere, not just in regions that require it. If you accept, Google Analytics sets cookies (typically `_ga` / `_gid`) and collects information such as your IP address, device type, and on-site behavior, which is sent to Google. If you decline (or ignore the banner), Google Analytics never loads and the site works exactly the same. You can withdraw consent at any time by clearing your cookies, which resets the banner.
+For general site analytics we use **Vercel Web Analytics**, which is cookieless and privacy-first. It sets no cookies, doesn't track you across sites, and doesn't collect personal information. It records only aggregate, anonymous usage such as page views and referrers, so it needs no consent banner and runs the same for everyone.
 
-We also use **Google Search Console**, which reads publicly available crawl and search-ranking data about our site. It does not collect personal information about individual visitors and does not depend on your analytics choice.
+We run paid ads on Google, so we use **Google Ads conversion measurement** to see whether an ad click led to a purchase. This is the only tracker we run that sets cookies, so it's off by default and loads nothing until you opt in. We ask only on the landing page our ads point to. If you accept, Google sets cookies (typically `_gcl_au` / `_gcl_aw`) that record the ad-click identifier so a later purchase can be attributed back to the ad, and that information is shared with Google. If you decline or ignore the banner, none of this loads and the site works exactly the same. You can withdraw consent at any time by clearing your cookies.
+
+We also use **Google Search Console**, which reads publicly available crawl and search-ranking data about our site. It does not collect personal information about individual visitors and does not depend on your consent choice.
 
 ---
 
@@ -58,7 +60,7 @@ We use the information above to:
 - Send you transactional emails (magic-link sign-in, receipts, service notices) through our email provider, Resend
 - Maintain your saved chart library
 - Keep the Service secure and working correctly
-- Understand aggregate usage patterns, using Google Analytics where you've consented to it, to improve the Service
+- Understand aggregate usage patterns through cookieless Vercel Web Analytics, and, where you've consented, measure whether one of our ads led to a purchase, to improve the Service
 
 We do not use your birth date or chart data to make automated decisions that produce legal or similarly significant effects on you, and we do not sell your personal information.
 
@@ -71,11 +73,11 @@ We share information with the following categories of service providers (sometim
 | Provider | Purpose | What they process |
 |---|---|---|
 | **Supabase** | Authentication and database hosting | Email, birth date, profile and chart data |
-| **Vercel** | Application hosting | Server logs, IP addresses (incidental to hosting) |
+| **Vercel** | Application hosting and cookieless web analytics | Server logs, IP addresses (incidental to hosting); aggregate, anonymous usage data |
 | **Stripe** | Payment processing | Payment details, billing contact info |
 | **Resend** | Transactional email delivery | Email address, message content (magic links, receipts) |
 | **Anthropic** | AI-synthesized reading generation | Derived reading data only (card names, elements, and relevant dates) — no name, birth date, or email |
-| **Google (Analytics, Search Console)** | Site analytics (only with your consent) and search indexing | Device/behavior data (Analytics, only if you consent); no personal data (Search Console) |
+| **Google (Ads, Search Console)** | Ad conversion measurement (only with your consent) and search indexing | Ad-click identifier and purchase event (Ads, only if you consent); no personal data (Search Console) |
 
 Anthropic processes the data we send only to generate the reading text we request; and, under its commercial terms, does not use the data we submit through the API to train its models.
 

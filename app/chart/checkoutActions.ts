@@ -40,7 +40,9 @@ export async function startSubscriptionCheckout(formData?: FormData) {
     mode: "subscription",
     customer: customerId,
     line_items: [{ price: STRIPE_PRICE_ID_SUBSCRIPTION, quantity: 1 }],
-    success_url: `${siteUrl}/chart?checkout=success`,
+    // session_id lets /chart verify the real amount (for the Google Ads conversion) and
+    // dedupe on reload. Stripe substitutes the literal {CHECKOUT_SESSION_ID} template.
+    success_url: `${siteUrl}/chart?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/chart?checkout=cancelled`,
     metadata: { supabaseUserId: user.id },
     // subscription_data.metadata: the Subscription object itself (not just the
@@ -77,7 +79,9 @@ export async function startOwnChartCheckout() {
     mode: "payment",
     customer: customerId,
     line_items: [{ price: STRIPE_PRICE_ID_CHART, quantity: 1 }],
-    success_url: `${siteUrl}/chart?checkout=success`,
+    // session_id lets /chart verify the real amount (for the Google Ads conversion) and
+    // dedupe on reload. Stripe substitutes the literal {CHECKOUT_SESSION_ID} template.
+    success_url: `${siteUrl}/chart?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/chart?checkout=cancelled`,
     metadata: { kind: "own-chart", supabaseUserId: user.id },
     payment_intent_data: { metadata: { kind: "own-chart", supabaseUserId: user.id } },

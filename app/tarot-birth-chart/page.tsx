@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
+import AdsConsent from "../components/AdsConsent";
 import ChartDiagram from "../chart/ChartDiagram";
 import { computeNatalChart } from "../../lib/natalChart";
 import { SITE_URL } from "../../lib/site";
@@ -82,6 +83,9 @@ export default function TarotBirthChartPage() {
 
   return (
     <>
+      {/* Ad-funnel consent: this is the page ad traffic lands on, so the ask lives here.
+          Opting in loads the Ads tag, which captures the gclid for later attribution. */}
+      <AdsConsent showBanner />
       <SiteNav current="chart" />
       <main className="wrap">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />

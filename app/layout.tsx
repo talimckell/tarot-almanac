@@ -2,15 +2,14 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
 import VercelAnalytics from "./components/VercelAnalytics";
 import IconSprite from "./components/IconSprite";
-import CookieConsent from "./components/CookieConsent";
 import { SITE_URL } from "../lib/site";
 import "./globals.css";
 import "./card-page.css";
 
-// Set once, from the environment, so GA is available only when configured (never in
-// local dev unless you opt in). Add NEXT_PUBLIC_GA_ID in Vercel to enable it. Even
-// when set, GA loads only after the visitor accepts in the consent banner.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// Product analytics is Vercel Web Analytics (cookieless, no consent banner needed).
+// The only cookie-setting tracker is Google Ads conversion measurement, which is
+// scoped to the ad funnel via <AdsConsent> on /tarot-birth-chart and /chart — not
+// loaded site-wide from here.
 
 const cormorant = Cormorant({
   subsets: ["latin"],
@@ -77,7 +76,6 @@ export default function RootLayout({
       <body>
         <IconSprite />
         {children}
-        {GA_ID ? <CookieConsent gaId={GA_ID} /> : null}
         <VercelAnalytics />
       </body>
     </html>
