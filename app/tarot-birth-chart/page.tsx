@@ -102,6 +102,28 @@ export default function TarotBirthChartPage() {
           <p className="position">a natal chart, built from your birthday</p>
         </header>
 
+        <div style={{ textAlign: "center", margin: "4px 0 8px" }}>
+          <Link
+            href="/chart"
+            style={{
+              display: "inline-block",
+              fontFamily: "var(--serif-sc)",
+              fontSize: 13,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              background: "var(--indigo)",
+              color: "var(--stone)",
+              padding: "14px 32px",
+              textDecoration: "none",
+            }}
+          >
+            Build your birth chart · $12 &rarr;
+          </Link>
+          <p className="dates" style={{ marginTop: 12 }}>
+            <Link href="/tarot-birth-chart/sample">Or see a full sample first</Link> · included with a subscription
+          </p>
+        </div>
+
         <section className="section">
           <h2>What is a tarot birth chart?</h2>
           <p>
@@ -117,7 +139,8 @@ export default function TarotBirthChartPage() {
         <section className="section" aria-label="Example tarot birth chart">
           <ChartDiagram chart={chart} unlocked columnLabel="You" they={false} />
           <p className="dates" style={{ textAlign: "center", marginTop: 14 }}>
-            An example tarot birth chart, for someone born February 16, 1984.
+            An example tarot birth chart, for someone born February 16, 1984.{" "}
+            <Link href="/tarot-birth-chart/sample">See a chart read all the way through &rarr;</Link>
           </p>
         </section>
 
@@ -193,6 +216,7 @@ export default function TarotBirthChartPage() {
           </p>
           <p className="dates">
             <Link href="/chart">Build your natal chart &rarr;</Link> ·{" "}
+            <Link href="/tarot-birth-chart/sample">See a full sample chart</Link> ·{" "}
             <Link href="/bearing">Find your Bearing first</Link> ·{" "}
             <Link href="/personal-year-card">See your year card</Link>
           </p>
