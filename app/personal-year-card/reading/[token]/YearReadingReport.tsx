@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MAJORS } from "@/lib/almanac";
 import { ELEMENT_LABEL } from "@/lib/yearCard";
+import { YEAR_READING_PRICE_DISPLAY } from "@/lib/yearReadingPricing";
 import type { YearPackage } from "@/lib/yearReading";
 import type { YearReadingSections } from "@/lib/yearReadingPrompt";
 import "../../styles.css";
@@ -19,9 +20,11 @@ function idxOf(name: string): number {
 export default function YearReadingReport({
   pkg,
   sections,
+  sample = false,
 }: {
   pkg: YearPackage;
   sections: YearReadingSections | null;
+  sample?: boolean;
 }) {
   const shortName = pkg.yearCard.name.replace(/^The /, "");
   const named = pkg.name && pkg.name !== "you";
@@ -31,8 +34,16 @@ export default function YearReadingReport({
   return (
     <main className="pyc-wrap">
       <nav className="pyc-crumb">
-        <Link href="/personal-year-card">Tarot Year Card</Link> · Your reading
+        <Link href="/personal-year-card">Tarot Year Card</Link> · {sample ? "Sample reading" : "Your reading"}
       </nav>
+
+      {sample && (
+        <div className="pyc-sample-banner">
+          <span className="lbl">A sample reading</span>
+          This is {pkg.name}&rsquo;s {pkg.year}, written the same way yours will be. Your own reading
+          is built from your birthday, so the cards, the months, and the whole weave are yours.
+        </div>
+      )}
 
       <p className="pyc-eyebrow">{named ? `${pkg.name}'s ${pkg.year}` : `Your ${pkg.year}`}</p>
       <h1 className="pyc-h1">The {shortName} Year</h1>
@@ -128,9 +139,23 @@ export default function YearReadingReport({
         </section>
       )}
 
-      <p className="pyc-links">
-        Made with <Link href="/personal-year-card">the tarot year card calculator</Link> at The Tarot Almanac.
-      </p>
+      {sample ? (
+        <div className="pyc-sample-cta">
+          <span className="eyebrow">Your year, woven like this</span>
+          <h2>See your own year ahead</h2>
+          <p>
+            Enter your birthday and we&rsquo;ll write your year the same way, from your own cards.
+            A keepsake you can read once and return to all year, or give to someone you love.
+          </p>
+          <Link href="/personal-year-card" className="pyc-cta-btn">
+            Get your year-ahead reading · {YEAR_READING_PRICE_DISPLAY}
+          </Link>
+        </div>
+      ) : (
+        <p className="pyc-links">
+          Made with <Link href="/personal-year-card">the tarot year card calculator</Link> at The Tarot Almanac.
+        </p>
+      )}
     </main>
   );
 }

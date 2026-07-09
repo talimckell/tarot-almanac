@@ -114,7 +114,11 @@ export default function PersonalYearCardHub() {
             <li>A woven reading, month by month, in the Almanac&rsquo;s voice</li>
             <li>How your Bearing meets the year, and the skills and reflection questions it calls for</li>
           </ul>
-          <p className="soon">Coming soon</p>
+          <p style={{ marginTop: 4 }}>
+            <Link href="/personal-year-card/sample" style={{ color: "var(--indigo)", fontFamily: "var(--serif-sc)", letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 13, textDecoration: "none" }}>
+              See a sample reading &rarr;
+            </Link>
+          </p>
         </section>
 
         <p className="pyc-links">

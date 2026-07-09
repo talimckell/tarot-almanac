@@ -388,6 +388,74 @@
 }
 .pyc-list li { margin: 7px 0; }
 
+/* ── Sample reading banner + CTA ── */
+.pyc-sample-banner {
+  margin: 6px 0 26px;
+  padding: 14px 18px;
+  background: var(--vellum);
+  border-left: 3px solid var(--indigo);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+.pyc-sample-banner .lbl {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 5px;
+}
+
+.pyc-sample-cta {
+  margin-top: 56px;
+  padding: 32px 28px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  text-align: center;
+}
+.pyc-sample-cta .eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 10px;
+}
+.pyc-sample-cta h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.pyc-sample-cta p {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 52ch;
+  margin: 0 auto 22px;
+}
+.pyc-cta-btn {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  padding: 13px 26px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.pyc-cta-btn:hover { background: var(--indigo-mid); }
+
 @media (max-width: 560px) {
   .pyc-wrap { padding: 40px 18px 72px; }
   .pyc-result { flex-direction: column; }

@@ -174,7 +174,11 @@ export default async function YearCardPage({
             voice, reads the element weather, brings in how your Bearing meets the year, and closes
             with the skills and reflection questions {aShort} year calls for.
           </p>
-          <p className="soon">Coming soon</p>
+          <p style={{ marginTop: 4 }}>
+            <Link href="/personal-year-card/sample" style={{ color: "var(--indigo)", fontFamily: "var(--serif-sc)", letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 13, textDecoration: "none" }}>
+              See a sample reading &rarr;
+            </Link>
+          </p>
         </section>
 
         <p className="pyc-links">

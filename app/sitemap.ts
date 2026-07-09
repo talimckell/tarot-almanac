@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tarot",
     "/tarot-birth-chart",
     "/personal-year-card",
+    "/personal-year-card/sample",
     "/bearing",
     "/about",
     "/blog",
