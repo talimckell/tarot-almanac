@@ -345,7 +345,51 @@
 .pyc-links a { color: var(--indigo); text-decoration: none; }
 .pyc-links a:hover { text-decoration: underline; }
 
+/* ── Paid reading report ── */
+.pyc-report-wheel {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 30px auto 8px;
+  border: 1px solid var(--warm-stone);
+}
+.pyc-blurb + .pyc-report-wheel { margin-top: 24px; }
+
+.pyc-months { display: flex; flex-direction: column; gap: 26px; }
+.pyc-month { display: flex; gap: 16px; align-items: flex-start; }
+.pyc-month .pyc-glyph svg { width: 40px; height: 40px; flex: none; }
+.pyc-month > div { flex: 1; }
+.pyc-month-head {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.pyc-month-head .stage {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-left: 6px;
+}
+.pyc-month .pyc-body { margin: 0; }
+
+.pyc-list {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  padding-left: 20px;
+}
+.pyc-list li { margin: 7px 0; }
+
 @media (max-width: 560px) {
   .pyc-wrap { padding: 40px 18px 72px; }
   .pyc-result { flex-direction: column; }
+  .pyc-month .pyc-glyph svg { width: 32px; height: 32px; }
 }
