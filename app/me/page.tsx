@@ -37,7 +37,10 @@ export default async function MePage({
     where: { id: user.id },
     update: {},
     create: { id: user.id, email: user.email ?? user.id },
-    include: { savedCharts: { orderBy: { createdAt: "asc" } } },
+    include: {
+      savedCharts: { orderBy: { createdAt: "asc" } },
+      yearReadings: { orderBy: { createdAt: "desc" } },
+    },
   });
 
   const { month, view, checkout } = await searchParams;
@@ -79,6 +82,13 @@ export default async function MePage({
           id: c.id,
           name: c.name,
           birthDate: c.birthDate.toISOString().slice(0, 10),
+        }))}
+        yearReadings={profile.yearReadings.map((r) => ({
+          token: r.shareToken,
+          name: r.name,
+          year: r.readingYear,
+          yearCardIndex: r.yearCardIndex,
+          status: r.status,
         }))}
         month={requestedMonth}
         monthSlug={formatMonthSlug(requestedMonth)}

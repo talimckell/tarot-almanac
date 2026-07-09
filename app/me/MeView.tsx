@@ -46,9 +46,18 @@ interface SavedChart {
   birthDate: string;
 }
 
+interface YearReadingItem {
+  token: string;
+  name: string;
+  year: number;
+  yearCardIndex: number;
+  status: string;
+}
+
 export default function MeView({
   profile,
   savedCharts,
+  yearReadings,
   month,
   monthSlug,
   isCurrentMonth,
@@ -61,6 +70,7 @@ export default function MeView({
 }: {
   profile: Profile;
   savedCharts: SavedChart[];
+  yearReadings: YearReadingItem[];
   month: YM;
   monthSlug: string;
   isCurrentMonth: boolean;
@@ -361,6 +371,30 @@ export default function MeView({
             </div>
           </div>
         </div>
+      )}
+
+      {yearReadings.length > 0 && (
+        <>
+          <div className={styles.secHead}>
+            <h2>Your year readings</h2>
+            <span className={styles.count}>
+              {yearReadings.length} reading{yearReadings.length === 1 ? "" : "s"}
+            </span>
+          </div>
+          <div className={styles.shelf}>
+            {yearReadings.map((r) => (
+              <Link className={styles.libcard} href={`/personal-year-card/reading/${r.token}`} key={r.token}>
+                <div className={styles.libName}>
+                  {r.name && r.name !== "you" ? `${r.name}’s ${r.year}` : `Your ${r.year}`}
+                </div>
+                <div className={styles.libBorn}>
+                  The {MAJORS[r.yearCardIndex].replace(/^The /, "")} Year
+                  {r.status !== "ready" ? " · preparing" : ""}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </>
       )}
 
       <div className={styles.secHead} id="your-details">

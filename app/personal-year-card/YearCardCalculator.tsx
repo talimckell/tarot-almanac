@@ -60,7 +60,7 @@ export default function YearCardCalculator() {
   return (
     <div className="pyc-calc">
       <form onSubmit={onSubmit}>
-        <span className="flabel">Your birthday and the year to read</span>
+        <span className="flabel">Your birthday</span>
         <div className="pyc-calc-row">
           <div className="pyc-field">
             <select
@@ -86,6 +86,14 @@ export default function YearCardCalculator() {
               ))}
             </select>
           </div>
+        </div>
+        <p className="hint" style={{ marginTop: 8 }}>Month and day only. Your birth year isn&rsquo;t needed.</p>
+
+        <span className="flabel" style={{ marginTop: 20 }}>Which year do you want to read?</span>
+        <p className="hint" style={{ marginTop: 4, marginBottom: 10 }}>
+          Not your birth year. The calendar year you want the reading for, usually this one.
+        </p>
+        <div className="pyc-calc-row">
           <div className="pyc-field">
             <select aria-label="Year to read" value={y} onChange={(e) => setY(e.target.value)}>
               {YEARS.map((yr) => (
@@ -95,7 +103,6 @@ export default function YearCardCalculator() {
           </div>
           <button type="submit">Find my card</button>
         </div>
-        <p className="hint">Your birth year isn&rsquo;t needed. The year card is set by your month, your day, and the year you&rsquo;re reading.</p>
       </form>
 
       {result && (
