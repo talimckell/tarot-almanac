@@ -8,6 +8,7 @@ export interface StudioLink {
 
 export const STUDIO_LINKS: StudioLink[] = [
   { href: "/studio/collective", label: "Collective Studio" },
+  { href: "/studio/collective-vs-you", label: "Substack: Collective vs You" },
   { href: "/studio/birthday-bearings", label: "Birthday Bearings Studio" },
   { href: "/studio/reclaimed-reversals", label: "Reclaimed Reversals Studio" },
   { href: "/studio/pinterest-birthday", label: "Pinterest: Birthday Board" },
