@@ -2,11 +2,12 @@
 // design reused every day (like the Birthday Bearings campaign) — the collective card is
 // what changes. Portrait 1080x1350, sized for the Notes feed. The two zones are contained
 // cards (vellum on stone, hairline border, a top accent border like the calendar's "today"
-// cell): the collective card is real and shown; the lower card is the call to action, since
-// a person's own card is set by their birthday and is the reason to visit the site.
+// cell): the collective card is the day's real MINOR (pips + name + its authored collective
+// reading), matching what /today and the today share image feature — the day Major is only
+// context there, not the card, so it isn't shown. The lower card is the call to action,
+// since a person's own card is set by their birthday and is the reason to visit the site.
 import type { CollectiveVsYouDay } from "./collectiveVsYouContent";
-import { COLORS, Glyph, StarMark, elementColor } from "./shareRender";
-import { majorGlyphId, suitGlyphId } from "./pips";
+import { COLORS, StarMark, SharePips, elementColor } from "./shareRender";
 
 export const WIDTH = 1080;
 export const HEIGHT = 1350;
@@ -19,7 +20,6 @@ export function collectiveVsYouText(day: CollectiveVsYouDay): string {
     "Card of the day",
     day.dateLabel,
     "The collective card",
-    day.card.majorName,
     day.card.minorName,
     day.opening,
     "And you?",
@@ -56,7 +56,7 @@ export function renderCollectiveVsYou(day: CollectiveVsYouDay) {
 
       {/* The two contained cards, centered in the space between header and footer */}
       <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "center", gap: 22 }}>
-        {/* Collective card (the real one) */}
+        {/* Collective card (the day's real Minor) */}
         <div
           style={{
             display: "flex",
@@ -64,7 +64,7 @@ export function renderCollectiveVsYou(day: CollectiveVsYouDay) {
             alignItems: "center",
             textAlign: "center",
             width: "100%",
-            gap: 14,
+            gap: 16,
             background: COLORS.vellum,
             border: `1px solid ${COLORS.warmStone}`,
             borderTop: `3px solid ${field}`,
@@ -74,16 +74,12 @@ export function renderCollectiveVsYou(day: CollectiveVsYouDay) {
           <span style={{ fontFamily: "Lato", fontSize: 21, letterSpacing: 4, textTransform: "uppercase", color: field }}>
             The collective card
           </span>
-          <Glyph id={majorGlyphId(day.card.major)} size={124} color={field} />
+          <SharePips card={day.card} size={42} color={field} />
           <span
-            style={{ fontFamily: "Cormorant", fontSize: 58, lineHeight: 1.04, color: COLORS.ink, textAlign: "center", maxWidth: 860 }}
+            style={{ fontFamily: "Cormorant", fontSize: 56, lineHeight: 1.04, color: COLORS.ink, textAlign: "center", maxWidth: 860 }}
           >
-            {day.card.majorName}
+            {day.card.minorName}
           </span>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <Glyph id={suitGlyphId(day.card.suit)} size={24} color={field} />
-            <span style={{ fontFamily: "Cormorant", fontSize: 31, color: COLORS.charcoal }}>{day.card.minorName}</span>
-          </div>
           {day.opening ? (
             <span
               style={{

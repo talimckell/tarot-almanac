@@ -30,7 +30,7 @@ export async function GET(request: Request) {
   for (let i = 0; i < count; i++) {
     const date = addDays(start, i);
     const day = assembleCollectiveVsYouDay(date);
-    const filename = `${formatDateSlug(date)}_collective-vs-you_${day.card.majorName.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "")}.png`;
+    const filename = `${formatDateSlug(date)}_collective-vs-you_${day.card.minorName.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "")}.png`;
 
     const fonts = await loadShareFonts(collectiveVsYouText(day));
     const image = new ImageResponse(renderCollectiveVsYou(day), { width: WIDTH, height: HEIGHT, fonts });

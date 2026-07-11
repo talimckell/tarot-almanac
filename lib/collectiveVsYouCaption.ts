@@ -8,7 +8,7 @@ export function captionForCollectiveVsYou(day: CollectiveVsYouDay): string {
   return [
     day.dateLabel,
     "",
-    `The collective card today is ${card.majorName}, carried by the ${card.minorName}. Everyone shares it.`,
+    `The collective card today is the ${card.minorName}. Everyone shares it.`,
     "Your own card is set by your birthday. Find yours at tarotalmanac.com/today.",
   ].join("\n");
 }
