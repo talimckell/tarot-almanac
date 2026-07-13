@@ -293,8 +293,9 @@ body {
 
 /* ── PULL QUOTE ── */
 .pullquote-band {
-  padding: 52px 60px;
-  border-bottom: 1px solid var(--warm-stone);
+  padding: 64px 60px;
+  background: var(--indigo);
+  border-bottom: 1px solid var(--indigo);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,7 +304,7 @@ body {
 .pq-rule {
   flex: 1;
   height: 1px;
-  background: var(--warm-stone);
+  background: var(--indigo-mid);
   max-width: 120px;
 }
 .pq-text {
@@ -311,7 +312,7 @@ body {
   font-size: 26px;
   font-style: italic;
   font-weight: 300;
-  color: var(--indigo);
+  color: var(--stone);
   text-align: center;
   line-height: 1.4;
   max-width: 540px;
@@ -319,27 +320,112 @@ body {
 .pq-text em {
   font-style: normal;
   font-weight: 400;
+  color: var(--warm-stone);
 }
 
 /* ── VALUE PROPS ── */
-.props {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* ── NUMEROLOGY EXPLAINER ── */
+.numerology-band {
+  padding: 88px 60px;
   border-bottom: 1px solid var(--warm-stone);
 }
-.prop {
-  padding: 52px 40px;
-  border-right: 1px solid var(--warm-stone);
-  position: relative;
+.nb-inner { max-width: 660px; margin: 0 auto; }
+.nb-eyebrow {
   display: block;
-  text-decoration: none;
-  transition: background .15s;
+  text-align: center;
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--label);
 }
-.prop:hover { background: var(--vellum); }
-.prop:hover .prop-go { color: var(--indigo); }
+.nb-head {
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.12;
+  color: var(--ink);
+  margin: 14px 0 30px;
+}
+.nb-head em { font-style: italic; color: var(--indigo); }
+.nb-body p {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--charcoal);
+  margin-bottom: 18px;
+}
+.nb-body p:last-child { margin-bottom: 0; }
+.nb-foot { text-align: center; margin-top: 30px; }
+.nb-more {
+  display: inline-block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--label);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nb-more:hover { color: var(--charcoal); border-color: var(--charcoal); }
+
+/* ── TOOLS ── */
+.tools-band {
+  padding: 76px 60px;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.tools-intro { max-width: 60ch; margin: 0 auto 44px; text-align: center; }
+.ti-eyebrow {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.tools-intro h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-top: 10px;
+}
+.tools-intro p {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-top: 12px;
+}
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.tool {
+  flex: 0 1 300px;
+  max-width: 320px;
+  border: 1px solid var(--warm-stone);
+  background: var(--stone);
+  padding: 34px 30px 30px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.15s, border-color 0.15s;
+}
+.tool:hover { background: var(--vellum); border-color: var(--label); }
+.tool:hover .prop-go { color: var(--indigo); }
 .prop-go {
   display: block;
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   font-family: var(--serif-sc);
   font-size: 10px;
   letter-spacing: .18em;
@@ -347,7 +433,6 @@ body {
   color: var(--label);
   transition: color .15s;
 }
-.prop:last-child { border-right: none; }
 .prop-glyph { width: 30px; height: 30px; margin-bottom: 16px; display: block; }
 .prop-glyph svg { width: 30px; height: 30px; }
 .prop-head {
@@ -373,41 +458,44 @@ body {
   display: block;
 }
 
-/* ── BEARING CTA ── */
-.bearing-band {
-  padding: 80px 60px;
+/* ── FEATURE BANDS (one per tool, below the grid; alternating sides + bg) ── */
+.feature-band {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 72px;
   align-items: center;
+  padding: 84px 60px;
   border-bottom: 1px solid var(--warm-stone);
-  background: var(--vellum);
 }
-.bb-eyebrow {
+.feature-band.fb-vellum { background: var(--vellum); }
+.feature-band.fb-flip .fb-text { order: 2; }
+.fb-eyebrow {
   font-family: var(--serif-sc);
   font-size: 9px;
   letter-spacing: 0.32em;
+  text-transform: uppercase;
   color: var(--label);
   margin-bottom: 20px;
   display: block;
 }
-.bb-head {
+.fb-head {
   font-family: var(--serif);
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.12;
   color: var(--ink);
   margin-bottom: 20px;
 }
-.bb-head em { font-style: italic; color: var(--indigo); }
-.bb-body {
+.fb-head em { font-style: italic; color: var(--indigo); }
+.fb-body {
   font-family: var(--serif);
   font-size: 17px;
+  font-weight: 300;
   color: var(--charcoal);
   line-height: 1.75;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
-.bb-cta {
+.fb-cta {
   display: inline-block;
   border: 1px solid var(--indigo);
   color: var(--indigo);
@@ -415,30 +503,32 @@ body {
   font-family: var(--serif-sc);
   font-size: 11px;
   letter-spacing: 0.18em;
+  text-transform: uppercase;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
-.bb-cta:hover { background: var(--indigo); color: var(--stone); }
-.bb-right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.bb-card {
-  background: var(--stone);
+.fb-cta:hover { background: var(--indigo); color: var(--stone); }
+
+/* visual column */
+.fb-visual { display: flex; flex-direction: column; gap: 18px; }
+
+/* sample cards (Bearing) */
+.fb-card {
+  background: var(--vellum);
   padding: 22px 24px;
-  position: relative;
   border-left: 2px solid var(--indigo);
 }
-.bb-card-label {
+.feature-band.fb-vellum .fb-card { background: var(--stone); }
+.fb-card-label {
   font-family: var(--serif-sc);
   font-size: 9px;
   letter-spacing: 0.28em;
+  text-transform: uppercase;
   color: var(--label);
   margin-bottom: 8px;
   display: block;
 }
-.bb-card-name {
+.fb-card-name {
   font-family: var(--serif);
   font-size: 22px;
   color: var(--ink);
@@ -446,12 +536,89 @@ body {
   display: flex;
   align-items: center;
 }
-.bb-card-desc {
+.fb-card-desc {
   font-family: var(--serif);
   font-size: 14px;
   color: var(--charcoal);
   line-height: 1.55;
 }
+
+/* single specimen panel (Year card) */
+.fb-specimen {
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 44px 32px;
+  text-align: center;
+}
+.feature-band.fb-vellum .fb-specimen { background: var(--stone); }
+.fb-specimen-glyph { width: 46px; height: 46px; margin: 0 auto 18px; display: block; }
+.fb-specimen-year {
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+}
+.fb-specimen-cap {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-top: 14px;
+  line-height: 1.55;
+}
+
+/* birth-chart structure (Chart) */
+.fb-chart { display: flex; align-items: stretch; justify-content: center; gap: 16px; }
+.fb-chart-col { display: flex; flex-direction: column; gap: 10px; flex: 1; max-width: 150px; }
+.fb-chart-colhead {
+  font-family: var(--serif-sc);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--label);
+  text-align: center;
+  margin-bottom: 2px;
+}
+.fb-chart-cell {
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 13px 8px;
+  text-align: center;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+.feature-band.fb-vellum .fb-chart-cell { background: var(--stone); }
+.fb-chart-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.fb-medallion {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--indigo);
+  display: flex; align-items: center; justify-content: center;
+}
+.fb-medallion svg { width: 26px; height: 26px; }
+.fb-medallion-label {
+  font-family: var(--serif-sc);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-top: 8px;
+}
+
+/* per-tool element accent (element colors are AA-safe on stone/vellum) */
+.feature-band.fb-fire .fb-eyebrow,
+.feature-band.fb-fire .fb-head em { color: var(--fire); }
+.feature-band.fb-fire .fb-cta { border-color: var(--fire); color: var(--fire); }
+.feature-band.fb-fire .fb-cta:hover { background: var(--fire); color: var(--stone); }
+.feature-band.fb-fire .fb-card { border-left-color: var(--fire); }
+.feature-band.fb-water .fb-eyebrow,
+.feature-band.fb-water .fb-head em,
+.feature-band.fb-water .fb-chart-colhead { color: var(--water); }
+.feature-band.fb-water .fb-cta { border-color: var(--water); color: var(--water); }
+.feature-band.fb-water .fb-cta:hover { background: var(--water); color: var(--stone); }
 
 /* ── ACCOUNT PROPOSITION ── */
 .acct-band { background: var(--indigo); color: var(--stone); padding: 72px 60px; text-align: center; }
@@ -472,17 +639,21 @@ body {
   .hero-left { border-right: none; border-bottom: 1px solid var(--warm-stone); padding: 64px 24px 56px; }
   .hero-right { padding: 40px 24px; }
   .hero-headline { font-size: 56px; }
-  .props { grid-template-columns: 1fr 1fr; }
-  .prop:nth-child(2) { border-right: none; }
-  .prop:nth-child(1), .prop:nth-child(2) { border-bottom: 1px solid var(--warm-stone); }
-  .bearing-band { grid-template-columns: 1fr; gap: 40px; padding: 56px 24px; }
+  .numerology-band { padding: 64px 24px; }
+  .nb-head { font-size: 32px; }
+  .tools-band { padding: 56px 24px; }
+  .tools-intro h2 { font-size: 30px; }
+  .feature-band { grid-template-columns: 1fr; gap: 40px; padding: 56px 24px; }
+  .feature-band.fb-flip .fb-text { order: 0; }
+  .fb-head { font-size: 30px; }
   .pullquote-band { padding: 40px 24px; gap: 20px; }
   .acct-band { padding: 48px 24px; }
   .acct-head { font-size: 30px; }
 }
 @media (max-width: 560px) {
   .hero-headline { font-size: 46px; }
-  .props { grid-template-columns: 1fr; }
-  .prop { border-right: none; border-bottom: 1px solid var(--warm-stone); }
+  .nb-head { font-size: 27px; }
+  .tools-intro h2 { font-size: 26px; }
+  .tool { flex: 1 1 100%; max-width: none; }
   .entry-cards { grid-template-columns: 1fr; }
 }

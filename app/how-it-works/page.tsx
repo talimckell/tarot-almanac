@@ -22,12 +22,12 @@ export default function HowItWorksPage() {
       <div className={styles.wrap}>
         <header className={styles.hero}>
           <span className={styles.eyebrow}>How it works</span>
-          <h1>Making tarot numerology actually work</h1>
+          <h1>How a date becomes your cards</h1>
           <p className={styles.deck}>
-            Most tarot numerology has two flaws: it reduces too far, and it
-            ignores the Tarot Cycle. Reduction loses half the deck. Ignoring
-            the cycle flattens the order the cards were built in. The Almanac
-            fixes both.
+            Nothing here is shuffled or guessed. Every card comes from a date,
+            worked the same way every time, so you can always check it yourself.
+            This page walks through the whole method, tarot numerology, in plain
+            language, starting with what it actually gives you.
           </p>
         </header>
 
@@ -47,15 +47,14 @@ export default function HowItWorksPage() {
             one card you carry into every day after.
           </p>
           <p>
-            None of it is shuffled or guessed. Every card comes from the date itself,
-            worked the same way every time, which is why you can check any of it by hand.
-            Everything below is how a date becomes those cards.
+            You never have to take any of it on trust. Work a date by hand and you land on
+            the same cards the app shows. Everything below is how.
           </p>
         </section>
 
         {/* THE CORE IDEA */}
         <section className={styles.section}>
-          <h2>The two flaws, and the fix</h2>
+          <h2>Why every card can come up</h2>
           <p>
             Traditional numerology reduces a date down to a single small
             number, adding digits until almost nothing is left. Run that
