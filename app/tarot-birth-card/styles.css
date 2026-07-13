@@ -1,0 +1,301 @@
+/* Tarot birth card — calculator landing page.
+   Namespaced .tbc-* so it can't collide with card-page.css / globals.css.
+   Tokens (stone/vellum/indigo + element colors, Cormorant/Lato) come from globals.css. */
+
+.tbc-wrap { max-width: 780px; margin: 0 auto; padding: 48px 24px 96px; }
+
+.tbc-crumb { font-family: var(--sans); font-size: 13px; color: var(--label); margin-bottom: 28px; }
+.tbc-crumb a { color: var(--indigo); text-decoration: none; }
+.tbc-crumb a:hover { text-decoration: underline; }
+
+/* ── Hero ── */
+.tbc-hero { margin-bottom: 26px; }
+.tbc-eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin: 0 0 16px;
+}
+.tbc-h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(40px, 7vw, 62px);
+  line-height: 1.02;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+.tbc-lede {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--charcoal);
+  max-width: 58ch;
+  margin: 0;
+}
+
+/* ── Calculator ── */
+.tbc-calc {
+  padding: 26px 24px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  scroll-margin-top: 20px;
+}
+.tbc-flabel {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 8px;
+}
+.tbc-calc-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+.tbc-field { display: flex; flex-direction: column; }
+.tbc-calc select {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--stone);
+  border: 1px solid var(--charcoal);
+  border-radius: 0;
+  padding: 10px 12px;
+  min-width: 130px;
+}
+.tbc-calc select:focus { outline: none; border-color: var(--indigo); }
+.tbc-calc button[type="submit"] {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.15s;
+}
+.tbc-calc button[type="submit"]:hover { background: var(--indigo-mid); }
+.tbc-hint { font-family: var(--sans); font-size: 13px; color: var(--label); margin: 12px 0 0; }
+
+.tbc-result {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--warm-stone);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.tbc-glyph { display: inline-flex; line-height: 0; flex: none; }
+.tbc-glyph svg { display: block; width: 72px; height: 72px; }
+.tbc-result-body { flex: 1; }
+.tbc-rlead { font-family: var(--sans); font-size: 14px; color: var(--label); margin: 0 0 3px; }
+.tbc-rname { font-family: var(--serif); font-size: 32px; color: var(--ink); line-height: 1.03; margin: 0 0 12px; }
+
+.tbc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: 1px solid var(--warm-stone);
+  border-radius: 100px;
+  padding: 3px 12px;
+}
+.tbc-chip .dot { width: 9px; height: 9px; border-radius: 50%; }
+.tbc-chip.fire .dot { background: var(--fire); }
+.tbc-chip.water .dot { background: var(--water); }
+.tbc-chip.air .dot { background: var(--air); }
+.tbc-chip.earth .dot { background: var(--earth); }
+
+.tbc-result-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 16px 0 0; }
+.tbc-cta-link {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+  padding-bottom: 2px;
+}
+.tbc-cta-link:hover { border-bottom-color: var(--indigo); }
+.tbc-upnudge { font-family: var(--sans); font-weight: 300; font-size: 14px; color: var(--charcoal); margin: 16px 0 0; }
+.tbc-upnudge a { color: var(--indigo); }
+
+/* ── Trust strip ── */
+.tbc-trust { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.tbc-trust span {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: 1px solid var(--warm-stone);
+  border-radius: 100px;
+  padding: 5px 13px;
+}
+
+/* ── Sections ── */
+.tbc-section { margin-top: 52px; }
+.tbc-section > h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 27px;
+  color: var(--ink);
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+.tbc-section > .tbc-subhead { font-family: var(--sans); font-size: 14px; color: var(--label); margin: 0 0 22px; }
+.tbc-prose {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.68;
+  color: var(--ink);
+  max-width: 64ch;
+}
+.tbc-prose p { margin: 0 0 16px; }
+.tbc-prose p:last-child { margin-bottom: 0; }
+.tbc-prose a { color: var(--indigo); }
+.tbc-morelink {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid var(--warm-stone);
+  padding-bottom: 2px;
+  margin-top: 4px;
+}
+.tbc-morelink:hover { border-bottom-color: var(--indigo); }
+
+/* ── Upsell teaser ── */
+.tbc-teaser { margin-top: 56px; padding: 30px 28px; background: var(--vellum); border: 1px solid var(--warm-stone); }
+.tbc-teaser .eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 10px;
+}
+.tbc-teaser h2 { font-family: var(--serif); font-weight: 500; font-size: 27px; color: var(--ink); margin: 0 0 12px; }
+.tbc-teaser p { font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.62; color: var(--ink); max-width: 60ch; margin: 0 0 14px; }
+.tbc-teaser ul { margin: 0 0 18px; padding-left: 20px; }
+.tbc-teaser li { font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.55; color: var(--charcoal); margin: 6px 0; }
+.tbc-teaser .price { font-family: var(--sans); font-size: 15px; color: var(--charcoal); margin: 0 0 18px; }
+
+.tbc-btn {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  padding: 13px 26px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.tbc-btn:hover { background: var(--indigo-mid); }
+.tbc-btn-ghost {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  padding: 13px 20px;
+  text-decoration: none;
+}
+.tbc-btn-ghost:hover { text-decoration: underline; }
+
+/* ── 22-card grid ── */
+.tbc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px;
+  background: var(--warm-stone);
+  border: 1px solid var(--warm-stone);
+}
+.tbc-grid a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  background: var(--stone);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.tbc-grid a:hover { background: var(--vellum); }
+.tbc-grid a svg { width: 28px; height: 28px; display: block; flex: none; }
+.tbc-grid a .ix { font-family: var(--mono); font-size: 11px; color: var(--label); }
+.tbc-grid a .nm { font-family: var(--serif); font-size: 16px; color: var(--ink); line-height: 1.05; }
+
+/* ── FAQ ── */
+.tbc-faq details { border-bottom: 1px solid var(--warm-stone); }
+.tbc-faq summary {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.tbc-faq summary::-webkit-details-marker { display: none; }
+.tbc-faq summary::after { content: "+"; float: right; color: var(--label); font-family: var(--sans); }
+.tbc-faq details[open] summary::after { content: "\2013"; }
+.tbc-faq .ans {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.66;
+  color: var(--ink);
+  padding: 0 0 18px;
+  margin: 0;
+  max-width: 64ch;
+}
+.tbc-faq .ans a { color: var(--indigo); }
+
+/* ── Final CTA ── */
+.tbc-final { margin-top: 56px; padding: 34px 28px; background: var(--vellum); border: 1px solid var(--warm-stone); text-align: center; }
+.tbc-final .eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 10px;
+}
+.tbc-final h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; color: var(--ink); margin: 0 0 12px; text-wrap: balance; }
+.tbc-final p { font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.6; color: var(--ink); max-width: 52ch; margin: 0 auto 22px; }
+.tbc-final-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+
+/* ── Cross-links ── */
+.tbc-links { margin-top: 44px; font-family: var(--sans); font-size: 15px; color: var(--label); }
+.tbc-links a { color: var(--indigo); text-decoration: none; }
+.tbc-links a:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .tbc-wrap { padding: 36px 18px 72px; }
+  .tbc-calc-row { flex-direction: column; align-items: stretch; }
+  .tbc-calc select, .tbc-calc button[type="submit"] { width: 100%; }
+  .tbc-result { flex-direction: column; gap: 14px; }
+  .tbc-final-actions { flex-direction: column; }
+}
