@@ -152,6 +152,7 @@
   border-color: var(--indigo);
 }
 .captureBtn {
+  display: inline-block;
   font-family: var(--serif-sc);
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -160,6 +161,7 @@
   background: var(--indigo);
   color: var(--stone);
   border: none;
+  text-decoration: none;
   cursor: pointer;
 }
 .captureBtn:hover {

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
-import NewsletterForm from "../components/NewsletterForm";
 import { BLOG_POSTS } from "../../lib/blog";
 import { ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import styles from "./page.module.css";
@@ -65,13 +64,17 @@ export default function BlogIndexPage() {
           <h3>New pieces, now and then</h3>
           <p>
             No schedule, no noise. Just a note when there&rsquo;s a new piece
-            on how the Almanac works, or something worth reading.
+            on how the Almanac works, or something worth reading. It&rsquo;s all
+            free on Substack.
           </p>
-          <NewsletterForm
-            formClassName={styles.captureForm}
-            inputClassName={styles.captureInput}
-            buttonClassName={styles.captureBtn}
-          />
+          <a
+            className={styles.captureBtn}
+            href="https://tarotalmanac.substack.com/subscribe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Subscribe on Substack
+          </a>
         </div>
       </div>
 

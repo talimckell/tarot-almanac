@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import NewsletterForm from "../../components/NewsletterForm";
 import { BLOG_POSTS, getPostMeta, getPostHtml } from "../../../lib/blog";
 import { SITE_URL } from "../../../lib/site";
 import styles from "./page.module.css";
@@ -85,9 +84,16 @@ export default async function BlogPostPage({
         <div className={styles.postCapture}>
           <div className={styles.pcText}>
             <div className={styles.pcH}>New pieces, now and then</div>
-            <div className={styles.pcSub}>A note when there&rsquo;s something new worth reading. No noise.</div>
+            <div className={styles.pcSub}>A note when there&rsquo;s something new worth reading, free on Substack.</div>
           </div>
-          <NewsletterForm formClassName={styles.pcForm} />
+          <a
+            className={styles.pcBtn}
+            href="https://tarotalmanac.substack.com/subscribe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Subscribe on Substack
+          </a>
         </div>
       </article>
 

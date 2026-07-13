@@ -293,6 +293,22 @@
 .pcForm button:hover {
   background: var(--indigo-mid);
 }
+.pcBtn {
+  flex-shrink: 0;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  background: var(--indigo);
+  color: var(--stone);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pcBtn:hover {
+  background: var(--indigo-mid);
+}
 
 @media (max-width: 640px) {
   .postHead h1 { font-size: 34px; }
