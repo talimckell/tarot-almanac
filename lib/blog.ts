@@ -169,6 +169,30 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Open The Tarot Almanac →": "/today",
     },
   },
+  // Published 2026-07-13. Targets the high-volume "tarot birth card" search term
+  // (Personality/Soul cards) and bridges to the Bearing. Numbers verified against
+  // the engine; two inline figures in public/ (birthcard-vs-bearing, soul-card-ceiling).
+  {
+    slug: "tarot-birth-card",
+    title: "What Is Your Tarot Birth Card?",
+    seoTitle: "Your Tarot Birth Card: The Personality and Soul Cards",
+    metaDescription:
+      "Your tarot birth card: how the Personality and Soul cards are calculated, why they leave out half the deck, and the card the Almanac reads from your birthday instead.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "The card your birthday hands you for life. How the standard Personality and Soul card calculation works, and why the Almanac reads your birthday a different way.",
+    indexTeaser:
+      "The card your birthday points to for life. How the Personality and Soul cards are found, and why the Almanac reads yours differently.",
+    majorIndex: 19, // The Sun — the birth-card number (the 19 → Sun/Wheel/Magician case)
+    file: "blog-08-tarot-birth-card.md",
+    linkMap: {
+      "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+      "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
+      "your Bearing": "/blog/what-is-a-tarot-bearing",
+      "your natal chart": "/blog/the-tarot-natal-chart",
+      "Find your Bearing →": "/bearing",
+    },
+  },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {

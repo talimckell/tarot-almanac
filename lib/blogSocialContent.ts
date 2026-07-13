@@ -534,6 +534,66 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
       },
     ],
   },
+
+  "tarot-birth-card": {
+    slug: "tarot-birth-card",
+    postTitle: "What Is Your Tarot Birth Card?",
+    majorIndex: 19, // The Sun — the birth-card number (the 19 → Sun/Wheel/Magician case)
+    blueskyQuotes: [
+      {
+        eyebrow: "What Is Your Tarot Birth Card?",
+        quote: "Your birthday is a fixed thing, so the card it points to should be fixed too.",
+        caption:
+          "A tarot birth card is the Major Arcana card set by your birthday, yours for life. Your birthday is a fixed thing, so the card it points to should be fixed too. No shuffle, no draw, the same answer every time you ask.",
+      },
+      {
+        eyebrow: "The Soul Card's Ceiling",
+        quote: "Your Soul card can only ever be one of the first nine. The whole back half of the deck is out of reach.",
+        caption:
+          "The usual method reduces your number to a single digit to find your Soul card, so it can only ever be one of the first nine Major Arcana. The Tower, the Star, the Moon, the World: none of them can be your Soul card.",
+      },
+      {
+        eyebrow: "Why Birth Cards Feel Like Sun Signs",
+        quote: "It rounds a world of people off toward a short list of types.",
+        caption:
+          "Because the calculation reduces every birthday toward the small end of the deck, it sorts everyone into a short list of types. That's why tarot birth cards can start to feel like sun signs: everyone slots into one of a handful.",
+      },
+      {
+        eyebrow: "Portrait, or Angle",
+        quote: "The Personality and Soul cards ask what kind of person you are. The Bearing asks where you stand.",
+        caption:
+          "There are two ways to read the card in your birthday. The Personality and Soul cards ask what kind of person you are, and answer from a short list. The Bearing asks where you stand in relation to the world, and answers with any card on the wheel. One is a portrait. The other is an angle.",
+      },
+    ],
+    pinterestQuotes: [
+      {
+        eyebrow: "The Soul Card's Ceiling",
+        quote: "Your Soul card can only ever be one of the first nine cards. The back half of the deck can't reach it.",
+        pinTitle: "Why Your Tarot Soul Card Is Always One of Nine",
+        description:
+          "The standard tarot birth card method reduces your number to a single digit to find your Soul card, so it can only ever be one of the first nine Major Arcana. The Wheel of Fortune through the World can never be your Soul card.",
+        keywords: "tarot birth card, tarot soul card, tarot personality card",
+      },
+      {
+        eyebrow: "Two Ways to Read Your Birthday",
+        quote: "One is a portrait. The other is an angle.",
+        pinTitle: "Tarot Birth Card vs. Your Bearing",
+        description:
+          "Your tarot Personality and Soul cards ask what kind of person you are, from a short list of types. The Almanac's Bearing asks where you stand in relation to the world, and can be any of the 22 Major Arcana. One is a portrait, the other an angle.",
+        keywords: "tarot birth card, tarot bearing, tarot numerology",
+      },
+    ],
+    math: {
+      eyebrow: "One Card From Your Birthday",
+      dateLabel: "June 11",
+      steps: ["6 + 11 = 17"],
+      resultMajorIndex: 17, // The Star
+      pinTitle: "How the Almanac Reads Your Birthday",
+      description:
+        "Instead of reducing your whole birthdate, the Almanac adds just your birth month and day and wraps around the 22-card wheel. June 11 gives 6 plus 11, which is 17, the Star.",
+      keywords: "tarot birth card, tarot bearing, tarot numerology",
+    },
+  },
 };
 
 export function getBlogSocialContent(slug: string): BlogSocialContent | undefined {
