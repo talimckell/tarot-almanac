@@ -24,6 +24,8 @@ import {
   monthUnlockDate,
   addDays,
   formatDateSlug,
+  formatMonthSlug,
+  formatMonthLabel,
   synthesis,
   NO_BIRTHDAY_SYNTHESIS,
   alignmentText,
@@ -458,7 +460,13 @@ export default function TodayView({
             the whole year, the mood you often only name in hindsight. The Month card is
             the season within it. Both are Majors, and each comes two ways: a collective
             version everyone shares and a personal one shaped by your birthday. They&rsquo;re
-            the long weather you&rsquo;re moving through, the context each day lands in.
+            the long weather you&rsquo;re moving through, the context each day lands in.{" "}
+            <Link
+              href={`/month/${formatMonthSlug({ y: target.y, m: target.m })}`}
+              className={styles.faqLink}
+            >
+              {`See ${formatMonthLabel({ y: target.y, m: target.m })} in full →`}
+            </Link>
           </p>
         </div>
 

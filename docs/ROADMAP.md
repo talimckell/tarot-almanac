@@ -164,8 +164,26 @@ Resolved: your Bearing in year Y *is* your year card (`yearCard = mod22(Bearing 
 so the Bearing×Year read now lives inside the personal year card reading above rather than as its
 own feature. A deeper natal chart reading, if wanted, stays a separate future scoping call.
 
-### Paid "year ahead" reading (new SKU)
-An AI-assisted paid year-ahead reading as a new product. Banked in the paid-reading funnel.
+### 🟠 Paid "year ahead" report (new SKU) `[Soon]`
+**Added:** 2026-07-07 · **promoted to next-up 2026-07-08**
+
+**What it is.** The paid ~$12 AI-woven year-ahead report that sits on top of the shipped
+`/personal-year-card` free calculator. Full scope lives as **Phase 2** of the *Personal year
+card calculator* item above — the Bearing×Year spine (`yearCard = mod22(Bearing + sumDigits(Y))`),
+the 12 personal-month readings, the Satori cycle-ring share image, and the gift flow. This card
+tracks it as its own deliverable so it doesn't stay buried inside the calculator entry.
+
+**Why now.** It's the second giftable $12 reading alongside the birth chart, and an on-ramp to
+the sub. It also **gates content:** the personal-year blog post is deliberately held until this
+ships, so the post feeds a finished free→paid funnel instead of dead-ending at the free
+calculator (owner call, 2026-07-08; recorded in `docs/BLOG_IDEAS.md`).
+
+**Planned build.** Mirror `startOwnChartCheckout` / `createGiftChartCheckout` for checkout + gift;
+AI generation keyed to the purchase token and run through the voice guardrails (em-dash / seesaw
+bans in the prompt); elements sourced from card JSON `element` / master xlsx, not the drifted
+calculations doc.
+
+**Effort.** Multi-day — new AI-generation path + checkout/gift wiring + the share image.
 
 ### Paid compatibility reading
 Paid product paired with the birth-card compatibility post (below): free post = the concept,
@@ -199,6 +217,28 @@ The 2027 year-ahead post (a dormant blog scaffold exists).
 
 ### Birth-card compatibility post
 Compatibility-by-birth-card post; pairs with the paid compatibility reading above.
+
+### "Every U.S. President's Bearing" — original-data link-bait post
+**Added:** 2026-07-13
+
+**What it is.** A data post that runs the Bearing formula (`mod22(bm+bd)`, birth-year
+excluded) over every U.S. president's birthday and lays out the result: each president, their
+birthday, their Bearing, and the pattern across all 46 (which Majors cluster, which never
+appear, any runs of shared Bearings). The deterministic system makes this a factual, citable
+dataset no shuffle-based tarot site can produce, which is exactly what earns links.
+
+**Why it's worth doing.** It's the clearest first play for the authority strategy: a piece
+built to attract backlinks and brand searches rather than to convert. History/trivia and
+astrology/tarot writers link to novel datasets as a source. Reuses the existing Bearing engine
+and glyph system, so the build is mostly assembling and presenting data we already compute.
+Each president's row links to its `/bearing/[slug]` and `/birthday/[md]` page, so it also feeds
+the internal-linking web the overhaul just built.
+
+**Notes / open.** Verify each birthday against a reliable source before publishing (a wrong
+birthday yields a wrong Bearing, and the whole appeal is that it's checkable). Bearing excludes
+birth year, so no need to resolve disputed birth-year cases. Could extend later to a small
+family of these ("every president / every state's founding date / notable figures") off the
+same template. Authored copy and framing stay in-voice (owner-written).
 
 ---
 

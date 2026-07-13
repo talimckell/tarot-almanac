@@ -59,6 +59,13 @@
 .rel-card .rel-name { font-family:var(--serif); font-size:18px; color:var(--ink); }
 @media (max-width:640px){ .cardhead h1 { font-size:40px; } .rel-grid { grid-template-columns:1fr; } .essence { font-size:20px; } }
 
+/* Day grid — the "every day in this month" links on /month/[ym], flattening the
+   crawl path to every dated /today page. Compact numbered cells, same borders as
+   .rel-card so the page reads as one system. */
+.daygrid { display:grid; grid-template-columns:repeat(auto-fill, minmax(52px, 1fr)); gap:8px; }
+.daygrid a { border:1px solid var(--warm-stone); text-decoration:none; text-align:center; padding:11px 0; font-family:var(--sans); font-size:14px; color:var(--ink); }
+.daygrid a:hover { border-color:var(--indigo); color:var(--indigo); }
+
 /* additions for the React template */
 .cardhead .pips { display:flex; flex-direction:column; align-items:center; gap:10px; margin:0 auto 24px; }
 .cardhead .pip-row { display:flex; justify-content:center; gap:16px; }

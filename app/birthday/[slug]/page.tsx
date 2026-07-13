@@ -84,7 +84,8 @@ export default async function BirthdayPage({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
         <nav className="crumb">
-          <Link href="/">Home</Link> · <Link href="/bearing">Bearing</Link> · {label}
+          <Link href="/">Home</Link> · <Link href="/bearing">Bearing</Link> ·{" "}
+          <Link href="/birthday">Birthdays</Link> · {label}
         </nav>
 
         <header className="cardhead">
@@ -138,6 +139,9 @@ export default async function BirthdayPage({
 
         <section className="related">
           <h2>Nearby birthdays</h2>
+          <p className="dates" style={{ textAlign: "center", marginBottom: 20 }}>
+            <Link href="/birthday">See every birthday&rsquo;s card &rarr;</Link>
+          </p>
           <div className="rel-grid">
             {[prev, next].map((x) => {
               const bi = bearingIndex(x.m, x.d);

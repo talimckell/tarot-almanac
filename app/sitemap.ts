@@ -39,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/personal-year-card",
     "/personal-year-card/sample",
     "/bearing",
+    "/birthday",
+    "/month",
     "/about",
     "/blog",
     "/contact",

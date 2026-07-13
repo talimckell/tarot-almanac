@@ -40,12 +40,25 @@ export default function Footer() {
               </svg>
               Follow @tarotalmanac on Pinterest
             </a>
+            <a
+              className={styles.fsocial}
+              href="https://tarotalmanac.substack.com/"
+              target="_blank"
+              rel="me noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+              </svg>
+              Read the Almanac on Substack
+            </a>
           </div>
 
           <div className={styles.fcol}>
             <div className={styles.fcolH}>The Almanac</div>
             <Link href="/today">Today</Link>
+            <Link href="/month">Card by Month</Link>
             <Link href="/bearing">Your Bearing</Link>
+            <Link href="/birthday">Card by Birthday</Link>
             <Link href="/personal-year-card">Your Year Card</Link>
             <Link href="/tarot-birth-chart">Your Chart</Link>
             <Link href="/me">My Almanac</Link>

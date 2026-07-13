@@ -1,0 +1,52 @@
+/* Birthday index — the 366-day archive, grouped by month. Compact, scannable,
+   on-brand: date label left, its Bearing card right. Uses the shared design
+   tokens; no new colors or type. */
+.monthBlock {
+  padding: 26px 0;
+  border-top: 1px solid var(--warm-stone);
+}
+.monthName {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 14px;
+}
+.dayList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0 20px;
+  padding: 0;
+  margin: 0;
+}
+.dayLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+}
+.dayLink:hover {
+  border-bottom-color: var(--warm-stone);
+}
+.dayNum {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.dayCard {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--label);
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .dayList { grid-template-columns: 1fr 1fr; }
+}

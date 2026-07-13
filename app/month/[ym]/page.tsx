@@ -24,6 +24,8 @@ import {
   parseMonthSlug,
   formatMonthSlug,
   formatMonthLabel,
+  formatDateSlug,
+  daysInMonth,
   isMonthOpen,
   addMonths,
 } from "../../../lib/today";
@@ -176,6 +178,17 @@ export default async function MonthPage({
             <Link href="/me">Open your almanac</Link> · <Link href="/today">See today</Link>
           </p>
         </aside>
+
+        <section className="related">
+          <h2>Every day in {label}</h2>
+          <div className="daygrid">
+            {Array.from({ length: daysInMonth(target) }, (_, i) => i + 1).map((d) => (
+              <Link href={`/today/${formatDateSlug({ y: target.y, m: target.m, d })}`} key={d}>
+                {d}
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <section className="related">
           <h2>Nearby months</h2>
