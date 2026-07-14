@@ -35,127 +35,6 @@ entry the obvious fallback, and verify the return path in a real in-app browser.
 
 **Effort.** ~Half a day; needs manual testing in real in-app browsers.
 
-### 🟠 Homepage value-prop reorder (value ladder)
-**Added:** 2026-07-06
-
-**Problem / root cause.** The homepage value props don't read as the funnel they actually
-are. The three commercial things are a value ladder — daily card (free front door / SEO),
-birth chart ($12 one-off, **giftable** = referral loop), living almanac ($7/mo, personal,
-can't be gifted) — but the current order (Today → The Cards → Bearing → Almanac) buries the
-money. The birth chart has no dedicated slot despite being the first purchase, the giftable
-referral driver, and the top search term; it's only a sub-clause of the account band. The
-homepage **never links to `/tarot-birth-chart`**, our indexable pitch page. The Bearing (a
-free lead magnet) gets two treatments (prop + full band) while the $12 entrée gets none.
-
-**Direction (mockup + decisions).** A reorder mockup was built in-session (faithful tokens +
-typefaces): props become a legible ladder — **Today (Free) → Bearing (Free) → Birth chart
-($12 · giftable) → Almanac ($7/mo)** with access chips; the birth chart is promoted to its
-own band (with a live mini chart diagram) that finally links `/tarot-birth-chart` and carries
-the Bearing→chart upsell ("one card is your Bearing; seven is the whole chart"); "The Cards"
-(all 78) demoted to a quiet secondary link; the account band sharpened to almanac-as-personal
-("the one thing here you can't make for anyone else"). Confirmed calls: **show real prices**
-on the chips (not vague tiers), and keep the **Bearing as a prop only** (its old standalone
-band is replaced by the chart band, not duplicated).
-
-Mockup Artifact: https://claude.ai/code/artifact/042f2e57-b88d-441b-ad61-3b3680597c96
-
-**Update 2026-07-07 — the year card adds a rung.** The `/personal-year-card` free tool
-(shipped) is now a *third* free hook alongside the daily card and Bearing, and its paid ~$12
-year-ahead reading (coming) is a *second* giftable $12 reading alongside the birth chart. A
-single flat 4-prop row can't hold that cleanly. Proposed reframe: **group by tier** instead of
-one row — **Free** (today's cards as hero, + Bearing and year card as the two birthday
-calculators) → **$12 giftable readings** (birth chart = who you are; year ahead = where the
-year takes you, the two deep readings that ride the gift flow) → **$7/mo almanac** (the living,
-personal, non-giftable engine). Revisit the mockup with this pairing before any build.
-
-**Status.** Not started. Tali flagged there are a few problems with the mockup and wants to
-dig in more before any build. Revisit the copy and structure, then wire into `app/page.tsx`
-+ CSS. All homepage prose stays authored / in-voice.
-
-### Personal year card calculator (+ paid woven year-ahead reading)
-**Added:** 2026-07-07
-
-**What it is.** A standalone SEO page where a birthday + chosen year computes the **Personal
-Year Card** (`mod22(BM+BD+sumDigits(Y))`, a Major), with a paid woven "year ahead" reading on
-top. Deliberately the deterministic counter to a shuffled year-ahead spread: same birthday
-always yields the same year card and the same twelve months, forever.
-
-**The structural spine (verified).** Within a calendar year the twelve months are
-`yearCard+1 … yearCard+12`: twelve consecutive Majors, one step each month, **no repeats**.
-That clean arc is a *calendar-year* property only, so the framing is locked to **calendar-year,
-single year card, buyer picks the year** (a rolling window breaks both the one-step and
-no-repeat properties, confirmed by node script). Visual is the full 22-Major cycle ring with
-the 12 consecutive steps lit and element-tinted, the year card as the doorway, and the 10
-un-walked Majors dimmed ("where you are in the cycle, and where you're not this year").
-
-**Free vs paid.**
-- **Free (hard-wired, SEO):** year card + a static authored meaning (22 blurbs, one per Major,
-  adapted from each card's own copy) + element + link to the full card. Arc *structure* visible,
-  months locked server-side (mirrors chart preview leak-proofing). Never calls a model.
-- **Paid ~$12 (AI-generated deep reading):** the lit cycle-ring image, element weather, the 12
-  personal-month readings (wired from existing authored copy), plus an AI-woven synthesis —
-  year-card meaning, **how your Bearing meets the year** (your fixed signature against the year
-  card, e.g. a Devil Bearing in a Tower year), arc + what's left behind, element-weather read,
-  pull-it-together narrative, skills this year asks, reflection questions. Generated per purchase,
-  personalized by name, stored against the token, run through the voice guardrails (em-dash/seesaw
-  bans in the prompt).
-  - *Bearing×Year is structurally exact (verified):* `yearCard = mod22(Bearing + sumDigits(Y))`, so
-    your year card is your Bearing advanced by the year's own number, and the Bearing→year-card gap
-    is identical for everyone in a given year (10 in 2026, 11 in 2027). 22 Bearings × 22 year cards
-    = 484 pairings, which is why it's an AI-woven layer, not authored. This also **subsumes** the
-    separate "Your Bearing in a given year" item below: your Bearing in year Y is your year card.
-- **Giftable:** fixed artifact, so it rides the existing chart-gift flow (`createGiftChartCheckout`
-  + `/gift/[token]`). Daily engine (day cards, minors, time-travel) stays subscription-only so
-  the ladder holds; the year reading is a referral driver and an on-ramp to the sub.
-
-**Status. Phase 1 shipped & live (2026-07-07).** `/personal-year-card` calculator hub + 22 static
-SEO card pages (`/personal-year-card/[slug]`): year-card blurb, "what to do", the deterministic
-12-month arc (element-tinted glyphs), element weather, the 9 untouched Majors, FAQ/explainer with
-FAQPage schema. `lib/yearCard.ts` (fs-free compute) + `content/year-cards.json` (build source,
-mirrors `content/year-card-reading.md`). In the sitemap; internal links in from /bearing,
-/tarot-birth-chart, /how-it-works. Copy/metadata targets the validated search phrases ("tarot
-year card", "card of the year", "calculator") after live SERP research, not just "personal year
-card" (which bleeds into numerology). FAQ owns the method difference (we keep the whole wheel;
-most calculators over-reduce) with a link to /how-it-works. Two sample paid readings drafted and
-reviewed (a Bearing×Year clash and a harmony) to confirm the paid tier is compellingly distinct
-from the free structure; conclusion: the Bearing×Year weave + structural facts (e.g. in 2026
-December returns everyone to their Bearing) can't be self-assembled from the free page, so free
-stays SEO-generous.
-
-**Phase 2 (next).** The Satori cycle-ring share image; wire the authored personal-month readings;
-paid checkout + gift (mirror `startOwnChartCheckout` / `createGiftChartCheckout`) + the AI
-generation, with the Bearing×Year layer as the spine and the voice guardrails in the prompt.
-Elements sourced from card JSON `element` / master xlsx, not the calculations doc (it drifted).
-
-**Open (small):** homepage link to the hub is parked pending a placement call (the year card isn't
-in the planned value-ladder reorder, so where it sits on the homepage is best decided there).
-
-### "Your Bearing in a given year" — folded into the year-card reading
-Resolved: your Bearing in year Y *is* your year card (`yearCard = mod22(Bearing + sumDigits(Y))`),
-so the Bearing×Year read now lives inside the personal year card reading above rather than as its
-own feature. A deeper natal chart reading, if wanted, stays a separate future scoping call.
-
-### 🟠 Paid "year ahead" report (new SKU) `[Soon]`
-**Added:** 2026-07-07 · **promoted to next-up 2026-07-08**
-
-**What it is.** The paid ~$12 AI-woven year-ahead report that sits on top of the shipped
-`/personal-year-card` free calculator. Full scope lives as **Phase 2** of the *Personal year
-card calculator* item above — the Bearing×Year spine (`yearCard = mod22(Bearing + sumDigits(Y))`),
-the 12 personal-month readings, the Satori cycle-ring share image, and the gift flow. This card
-tracks it as its own deliverable so it doesn't stay buried inside the calculator entry.
-
-**Why now.** It's the second giftable $12 reading alongside the birth chart, and an on-ramp to
-the sub. It also **gates content:** the personal-year blog post is deliberately held until this
-ships, so the post feeds a finished free→paid funnel instead of dead-ending at the free
-calculator (owner call, 2026-07-08; recorded in `docs/BLOG_IDEAS.md`).
-
-**Planned build.** Mirror `startOwnChartCheckout` / `createGiftChartCheckout` for checkout + gift;
-AI generation keyed to the purchase token and run through the voice guardrails (em-dash / seesaw
-bans in the prompt); elements sourced from card JSON `element` / master xlsx, not the drifted
-calculations doc.
-
-**Effort.** Multi-day — new AI-generation path + checkout/gift wiring + the share image.
-
 ### Paid compatibility reading
 Paid product paired with the birth-card compatibility post (below): free post = the concept,
 paid = the woven compatibility reading.
@@ -248,6 +127,19 @@ All 16 boards are built — these are the scheduling/publishing passes:
 ---
 
 ## Shipped
+
+### 2026-07-14 — homepage value ladder + year-card paid tier
+- **Homepage reordered into the value ladder.** `app/page.tsx` now reads Free → giftable
+  $12 readings → $7/mo almanac, promotes the birth chart to its own band that links
+  `/tarot-birth-chart` (the homepage never linked it before), and surfaces the year card as a
+  free hook. Closes the 🟠 homepage value-prop reorder item.
+- **Paid year-ahead report shipped (year-card Phase 2).** The ~$12 AI-woven year-ahead reading
+  now sits on top of the free `/personal-year-card` calculator (Phase 1 shipped 2026-07-07).
+  Live: `/personal-year-card/reading` + `/reading/success` + token delivery at `/reading/[token]`,
+  the Satori cycle-ring share image (`/wheel/image`), `startYearReadingCheckout` +
+  `generateYearReading` (`personal-year-card/checkoutActions.ts`), and a `/studio/year-reading`
+  tool. Bearing×Year spine, gift flow, and voice guardrails per the original scope. Subsumes
+  the separate "Paid year-ahead report (new SKU)" and "Your Bearing in a given year" items.
 
 ### 2026-07-14 — sign-in code path (kills the magic-link cross-browser trap)
 - **6-digit code alongside the magic link.** The PKCE magic link only completes when the
