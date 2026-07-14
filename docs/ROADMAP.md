@@ -54,14 +54,6 @@ A post covering the personal-month reading.
 ### Get August's month reading `[Soon-ish]`
 Author the August collective month reading.
 
-### Blog assets: schedule 4 & 5 `[Soon]`
-Blog posts 2 and 3's assets are done and scheduled (2026-07-08). Blog 4 and 5's assets are now
-created (2026-07-08) but not yet scheduled. All 5 published posts' social sets exist — only the
-scheduling passes for 4 and 5 remain.
-
-### Initiation / Testing / Reckoning post `[Soon]`
-The arcana-stages post (a dormant blog scaffold exists for this).
-
 ### 2027 year-ahead post
 The 2027 year-ahead post (a dormant blog scaffold exists).
 
@@ -127,6 +119,14 @@ All 16 boards are built — these are the scheduling/publishing passes:
 ---
 
 ## Shipped
+
+### 2026-07-14 — blog: arcana-stages post live + posts 4-5 social sets scheduled
+- **"The Major Arcana in Three Stages" published.** The Initiation / Testing / Reckoning post
+  (formerly a dormant scaffold) is live — `content/blog-07-major-arcana-three-stages.md`,
+  ~1,350 words in voice, with the three-stage wheel and Fool-threshold diagrams.
+- **Blog 4 & 5 social sets scheduled.** All 5 published posts now have their social sets created
+  and scheduled (posts 2-3 scheduled 2026-07-08; 4 & 5 assets created 2026-07-08, scheduling
+  passes now complete).
 
 ### 2026-07-14 — homepage value ladder + year-card paid tier
 - **Homepage reordered into the value ladder.** `app/page.tsx` now reads Free → giftable
