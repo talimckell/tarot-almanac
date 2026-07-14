@@ -20,35 +20,6 @@ cause**, **When it happens**, **Planned fix**, **Effort**.
 
 ## Product & Monetization
 
-### 🔴 Magic-link sign-in strands in-app-browser users
-**Added:** 2026-07-06
-
-**Problem / root cause.** Sign-in uses a PKCE magic link. Requesting the link stores a
-secret `code_verifier` in the cookie store of the browser that requested it; the
-`/auth/callback` step (`exchangeCodeForSession`) can only finish sign-in if that *same*
-cookie store is what opens the link. If the link opens in any other browser context,
-sign-in fails and bounces back to `/sign-in`.
-
-**When it happens.**
-1. **In-app browser → phone's default browser** (the Shannon case). Requests the link inside
-   an app's in-app browser (Gmail, Instagram, Facebook, LinkedIn, X, TikTok, Slack), then
-   taps the link in email → launches Safari/Chrome, a different cookie store.
-2. **Requested on laptop, opened on phone** (or vice versa). Different device = no verifier.
-3. **Two browsers on one device.** Requests in Chrome, mail app opens links in Safari.
-4. **Mail app's own in-app browser.** Gmail/Outlook/Yahoo open links in *their* webview.
-5. **Normal ↔ private/incognito, or aggressive cookie clearing** dropping the verifier.
-6. **Desktop mail client → non-default browser.**
-
-Works only when the same browser both requests and opens the link — probabilistic, and it
-silently blocks signup, which gates everything.
-
-**Planned fix.** Add a 6-digit email code path (`verifyOtp`): user reads the code and types
-it into the page they're already on. Keep the magic link as-is (no regression). Two parts:
-(1) code-entry UI on `/sign-in`; (2) Supabase email-template change to include `{{ .Token }}`.
-
-**Effort.** ~Half a day of code + a Supabase dashboard edit (owner). Also fix the misleading
-"Open it on this device" copy.
-
 ### 🟠 Stripe Checkout unreliable in in-app webviews
 **Added:** 2026-07-06
 
@@ -277,6 +248,19 @@ All 16 boards are built — these are the scheduling/publishing passes:
 ---
 
 ## Shipped
+
+### 2026-07-14 — sign-in code path (kills the magic-link cross-browser trap)
+- **6-digit code alongside the magic link.** The PKCE magic link only completes when the
+  same browser both requests and opens it, so in-app-browser and cross-device users were
+  silently stranded (the old 🔴 blocker). `/sign-in`'s "Check your email" screen now also
+  shows a code field; `verifyOtp` runs on the browser client, so the session is created in
+  the page the user is already on — the `code_verifier` never has to match. Magic link
+  untouched (no regression). `app/sign-in/page.tsx`.
+- **Supabase Magic Link template** now renders `{{ .Token }}` (branded, in voice + tokens)
+  so the code actually reaches the inbox. OTP length set to 6.
+- **Field is length-agnostic (6–10).** First cut hard-capped at 6 while the project was
+  issuing 8-digit codes, so verification always failed; the field now accepts any valid
+  Supabase OTP length. Also fixed the misleading "Open it on this device" copy.
 
 ### 2026-07-06 — minor mobile polish (audit follow-ups)
 - **Hero `90vh` → `svh`.** `.hero` in `app/globals.css` now sets `min-height: 90vh` as a
