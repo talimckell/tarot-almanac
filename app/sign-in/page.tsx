@@ -77,8 +77,8 @@ export default function SignInPage() {
         <span className={styles.eyebrow}>Sign in</span>
         <h1 className={styles.sentTitle}>Check your email</h1>
         <p className={styles.sentBody}>
-          I sent a sign-in link and a 6-digit code to {email}. Tap the link, or
-          enter the code below to sign in right here.
+          I sent a sign-in link and a code to {email}. Tap the link, or enter
+          the code below to sign in right here.
         </p>
         <form
           className={styles.form}
@@ -86,7 +86,7 @@ export default function SignInPage() {
           style={{ marginTop: 28 }}
         >
           <label className={styles.label} htmlFor="code">
-            6-digit code
+            Sign-in code
           </label>
           <input
             id="code"
@@ -94,7 +94,7 @@ export default function SignInPage() {
             inputMode="numeric"
             autoComplete="one-time-code"
             pattern="[0-9]*"
-            maxLength={6}
+            maxLength={10}
             required
             className={styles.input}
             value={code}
