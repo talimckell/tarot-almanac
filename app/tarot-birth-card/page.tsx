@@ -237,6 +237,7 @@ export default function TarotBirthCardPage() {
           Related: <Link href="/bearing">your Bearing</Link> ·{" "}
           <Link href="/tarot-birth-chart">your tarot birth chart</Link> ·{" "}
           <Link href="/personal-year-card">your year card</Link> ·{" "}
+          <Link href="/birthday">your card by birthday</Link> ·{" "}
           <Link href="/tarot">all seventy-eight cards</Link> ·{" "}
           <Link href="/how-it-works">how the almanac works</Link>
         </p>
