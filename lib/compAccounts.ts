@@ -20,6 +20,9 @@ export const COMP_EMAILS: string[] = [
   "abigail.sylvester@gmail.com", // Abigail Sylvester
   "taynardo@mac.com", // Taylor Hughes
   "bholt1104@gmail.com", // Blake Holt
+  "jillianrspringer@gmail.com", // Jill Springer
+  "alexandra.madsen@gmail.com", // Alex Madsen
+  "akzobel@gmail.com", // Alex Zobel
   "tali@tarotalmanac.com", // Tali
 ];
 
