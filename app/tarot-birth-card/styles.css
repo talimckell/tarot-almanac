@@ -225,6 +225,23 @@
 }
 .tbc-btn-ghost:hover { text-decoration: underline; }
 
+/* ── Secondary capture (newsletter) ── */
+.tbc-capture { margin-top: 20px; padding: 24px 28px; border: 1px solid var(--warm-stone); text-align: center; }
+.tbc-capture .eyebrow {
+  font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--label); display: block; margin-bottom: 8px;
+}
+.tbc-capture p {
+  font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.55;
+  color: var(--charcoal); max-width: 50ch; margin: 0 auto 16px;
+}
+.tbc-btn-outline {
+  display: inline-block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--indigo); background: transparent; border: 1px solid var(--indigo);
+  padding: 11px 22px; text-decoration: none; transition: background 0.15s, color 0.15s;
+}
+.tbc-btn-outline:hover { background: var(--indigo); color: var(--stone); }
+
 /* ── 22-card grid ── */
 .tbc-grid {
   display: grid;

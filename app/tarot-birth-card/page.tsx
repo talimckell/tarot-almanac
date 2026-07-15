@@ -184,6 +184,19 @@ export default function TarotBirthCardPage() {
           <Link className="tbc-btn" href="/tarot-birth-chart">See what your chart holds &rarr;</Link>
         </aside>
 
+        <aside className="tbc-capture">
+          <span className="eyebrow">Not ready for the full chart?</span>
+          <p>Follow along for free. The Almanac&rsquo;s newsletter brings readings and the cards straight to your inbox, no account needed.</p>
+          <a
+            className="tbc-btn-outline"
+            href="https://tarotalmanac.substack.com/subscribe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get the free newsletter &rarr;
+          </a>
+        </aside>
+
         <section className="tbc-section">
           <h2>Every tarot birth card</h2>
           <p className="tbc-subhead">All twenty-two of the Major Arcana. Find yours above, or read any of them.</p>
