@@ -7,6 +7,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { stripe, STRIPE_PRICE_ID_CHART, getOrCreateStripeCustomerId } from "@/lib/stripe";
 import { parseDateSlug, isOldEnough } from "@/lib/today";
+import { isSubscribed } from "@/lib/compAccounts";
 import { viewerNow } from "@/lib/viewerNow";
 import { trackFormSubmitServer } from "@/lib/analytics-server";
 
@@ -54,7 +55,10 @@ export async function createChart(formData: FormData) {
   if (!user) redirect("/sign-in?next=/me");
 
   const profile = await prisma.profile.findUnique({ where: { id: user.id } });
-  if (profile?.subscriptionStatus !== "active") return;
+  // Must mirror MeView's own gate (isSubscribed), which shows this form to comped
+  // friends too — not just Stripe "active". Inlining subscriptionStatus here let the
+  // form render for a comped account while every submission silently no-op'd.
+  if (!profile || !isSubscribed(profile)) return;
 
   const name = (formData.get("name") as string | null)?.trim();
   const birthdayRaw = (formData.get("birthday") as string | null)?.trim() || "";
