@@ -36,6 +36,10 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     a: "Your tarot birth card is the single Major Arcana card set by the day you were born. It doesn't get shuffled and it doesn't change, so it's the same card every time you check. The Almanac calls it your Bearing, the angle you carry into a room before you've decided anything.",
   },
   {
+    q: "What is my arcana, or my major arcana card?",
+    a: "Same thing as your tarot birth card. Your arcana is the one Major Arcana card set by your birthday, the card you carry your whole life. The calculator above finds it: enter your month and day and it names your Major Arcana card at once.",
+  },
+  {
     q: "How do I find my tarot birth card?",
     a: "Enter your birth month and day in the calculator above and it appears at once, free and with no sign-up. By hand, you add your birth month and birth day and wrap the total around the twenty-two Major Arcana.",
   },
@@ -47,6 +51,11 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     q: "Why is my card different from other birth-card calculators?",
     a: "Because the Almanac calculates it differently, on purpose. Most calculators add up your whole birth date, year included, and reduce it to a small number that can only land on a handful of cards. The Almanac uses your month and day around the full wheel of twenty-two, so every card is in play.",
     link: { href: BLOG, text: "Here's the full explanation, with both methods side by side" },
+  },
+  {
+    q: "Is this the same as the Mary Greer or Tarot School birth card method?",
+    a: "No, and that's on purpose. The popular Mary Greer and Tarot School method adds up your whole birth date, year included, and reduces it to a Personality card and a Soul card. The Almanac uses only your month and day, carried around the wheel of twenty-two, so it lands on a different single card and keeps every arcana in play.",
+    link: { href: BLOG, text: "See both methods side by side" },
   },
   {
     q: "Is a tarot birth card the same as an astrology sign?",
@@ -139,9 +148,11 @@ export default function TarotBirthCardPage() {
               decided anything about it.
             </p>
             <p>
-              The Almanac calls it your <Link href="/bearing">Bearing</Link>, the still point the rest of
-              your cards turn around. It&rsquo;s set by tarot numerology: your birth month and day carried
-              around the wheel of the twenty-two Major Arcana, so the card is given rather than drawn.
+              You may also see it called your arcana, or your major arcana card. It&rsquo;s all the same
+              thing: the one Major Arcana card your birthday points to. The Almanac calls it your{" "}
+              <Link href="/bearing">Bearing</Link>, the still point the rest of your cards turn around.
+              It&rsquo;s set by tarot numerology: your birth month and day carried around the wheel of the
+              twenty-two Major Arcana, so the card is given rather than drawn.
             </p>
           </div>
         </section>
