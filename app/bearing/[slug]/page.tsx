@@ -130,7 +130,7 @@ export default async function BearingPage({
           {` ${card.name}`} Bearing differently than it meets any other. It is where you begin.
         </p>
         <p className="dates">
-          <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/chart">See your natal chart</Link>
+          <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/tarot-birth-card">Find your tarot birth card</Link> · <Link href="/chart">See your natal chart</Link>
         </p>
         <div style={{ marginTop: 20 }}>
           <ShareImageButton

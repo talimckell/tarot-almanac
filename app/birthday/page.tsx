@@ -51,8 +51,9 @@ export default function BirthdayIndexPage() {
           <p>
             Every date on the calendar carries one Tarot Bearing, the single card you steer by for
             life. It&rsquo;s set by tarot numerology from your birth month and day alone, so the year
-            never changes it. Find your date below, or start with{" "}
-            <Link href="/bearing">what a Bearing is</Link>.
+            never changes it. Find your date below, start with{" "}
+            <Link href="/bearing">what a Bearing is</Link>, or{" "}
+            <Link href="/tarot-birth-card">find your tarot birth card</Link>.
           </p>
         </section>
 
