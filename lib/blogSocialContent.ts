@@ -603,7 +603,7 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
         eyebrow: "The Life Path Ceiling",
         quote: "It reduced them out of range before you were out of bed.",
         caption:
-          "Your life path number folds your whole birthday to a single digit, and a single digit stops at nine. Death, the Tower, the Star, the Moon, the World: a life path number can't land on any of them. It reduced them out of range before you were out of bed.",
+          "Your life path number folds your birthday to a single digit, and a single digit stops at nine. Death, the Tower, the Star, the Moon, the World: it can't land on any of them. It reduced them out of range before you were out of bed.",
       },
       {
         eyebrow: "Nine of Twenty-Two",
@@ -621,7 +621,7 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
         eyebrow: "What the Almanac Reads Instead",
         quote: "Nobody gets rounded down into the first nine, because nothing is being rounded.",
         caption:
-          "The Almanac adds your birth month and your birth day and wraps the twenty-two-card wheel, so your birthday lands on a position instead of collapsing to a digit. Some birthdays land on Death. Some on the Tower, some on the Star, some on the World.",
+          "The Almanac adds your birth month and day and wraps the twenty-two-card wheel, so your birthday lands on a position instead of collapsing to a digit. Some birthdays land on Death. Some on the Tower, the Star, the World.",
       },
     ],
     pinterestQuotes: [
