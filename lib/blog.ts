@@ -199,6 +199,33 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Find your Bearing →": "/bearing",
     },
   },
+  // Drafted 2026-07-17. Targets the adjacent "life path number tarot" audience and
+  // bridges to the birth-card post and the Bearing. Numbers verified against the
+  // engine (life path 1-9 → Majors 1-9, 8 = Strength; master 11 → Justice; Bearing
+  // March 3 = the Lovers). Inline figure /life-path-ceiling.svg produced 2026-07-20,
+  // built as a matched sibling of soul-card-ceiling.svg.
+  {
+    slug: "life-path-number-tarot",
+    title: "Your Life Path Number and Your Tarot Card",
+    seoTitle: "Your Life Path Number and Your Tarot Birth Card",
+    metaDescription:
+      "Your life path number maps to a tarot card, but that reduction reaches only nine of the twenty-two Majors. How it works, and the card the Almanac reads instead.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "The number numerology folds your whole birthday down to, and the tarot card it points to. Why a single digit reaches only the first nine Majors, and how the Almanac reads your birthday instead.",
+    indexTeaser:
+      "Your life path number points to a tarot card. Why a single digit reaches only the first nine Majors, and how the Almanac reads your birthday instead.",
+    majorIndex: 9, // The Hermit — the last card a single-digit life path can reach
+    file: "blog-09-life-path-number-tarot.md",
+    linkMap: {
+      "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+      "tarot birth card": "/blog/tarot-birth-card",
+      "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
+      "your Bearing": "/blog/what-is-a-tarot-bearing",
+      "your natal chart": "/blog/the-tarot-natal-chart",
+      "Find your Bearing →": "/bearing",
+    },
+  },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {
