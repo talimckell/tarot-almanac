@@ -169,15 +169,21 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Open The Tarot Almanac →": "/today",
     },
   },
-  // Published 2026-07-13. Targets the high-volume "tarot birth card" search term
-  // (Personality/Soul cards) and bridges to the Bearing. Numbers verified against
-  // the engine; two inline figures in public/ (birthcard-vs-bearing, soul-card-ceiling).
+  // Published 2026-07-13. Numbers verified against the engine; two inline figures in
+  // public/ (birthcard-vs-bearing, soul-card-ceiling).
+  //
+  // SEO SPLIT (2026-07-20): this post used to open its seoTitle on the bare head term
+  // "tarot birth card", which put it in a two-horse race with /tarot-birth-card — GSC
+  // showed both indexed and both stuck at pos 80-87 on the same query. The head term and
+  // calculator intent belong to /tarot-birth-card. This post takes the method-comparison
+  // intent (Personality/Soul, Mary Greer, "why is my birth card different"), which the
+  // hub only answers in an FAQ row. Keep the two titles off each other.
   {
     slug: "tarot-birth-card",
     title: "What Is Your Tarot Birth Card?",
-    seoTitle: "Your Tarot Birth Card: The Personality and Soul Cards",
+    seoTitle: "Personality & Soul Cards: How the Birth Card Method Works",
     metaDescription:
-      "Your tarot birth card: how the Personality and Soul cards are calculated, why they leave out half the deck, and the card the Almanac reads from your birthday instead.",
+      "How the Personality and Soul cards are calculated, why reducing your birthdate leaves out half the deck, and how the Almanac's method differs. The calculator lives on the birth card page.",
     eyebrow: "Tarot Numerology",
     description:
       "The card your birthday hands you for life. How the standard Personality and Soul card calculation works, and why the Almanac reads your birthday a different way.",

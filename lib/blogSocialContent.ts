@@ -594,6 +594,65 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
       keywords: "tarot birth card, tarot bearing, tarot numerology",
     },
   },
+  "life-path-number-tarot": {
+    slug: "life-path-number-tarot",
+    postTitle: "Your Life Path Number and Your Tarot Card",
+    majorIndex: 9, // The Hermit — the last card a single-digit life path can reach
+    blueskyQuotes: [
+      {
+        eyebrow: "The Life Path Ceiling",
+        quote: "It reduced them out of range before you were out of bed.",
+        caption:
+          "Your life path number folds your whole birthday to a single digit, and a single digit stops at nine. Death, the Tower, the Star, the Moon, the World: a life path number can't land on any of them. It reduced them out of range before you were out of bed.",
+      },
+      {
+        eyebrow: "Nine of Twenty-Two",
+        quote: "The deck has twenty-two doors and a single digit knocks on nine of them.",
+        caption:
+          "One is the Magician, two the High Priestess, on to nine and the Hermit. That's the whole life path conversion, and it's where it stops. The deck has twenty-two doors and a single digit knocks on nine of them.",
+      },
+      {
+        eyebrow: "The Tell in the Master Numbers",
+        quote: "Even with the patch you reach eleven of the twenty-two. The other half still never arrives.",
+        caption:
+          "Master numbers are numerology quietly conceding that reducing everything to one digit throws away something real. Eleven buys back Justice. Twenty-two goes home to the Fool. Even with the patch you reach eleven of the twenty-two.",
+      },
+      {
+        eyebrow: "What the Almanac Reads Instead",
+        quote: "Nobody gets rounded down into the first nine, because nothing is being rounded.",
+        caption:
+          "The Almanac adds your birth month and your birth day and wraps the twenty-two-card wheel, so your birthday lands on a position instead of collapsing to a digit. Some birthdays land on Death. Some on the Tower, some on the Star, some on the World.",
+      },
+    ],
+    pinterestQuotes: [
+      {
+        eyebrow: "The Life Path Ceiling",
+        quote: "The deck has twenty-two doors and a single digit knocks on nine of them.",
+        pinTitle: "Why Your Life Path Number Only Reaches 9 Tarot Cards",
+        description:
+          "Your life path number maps to a Major Arcana card, but folding your birthday to a single digit stops at nine. The Wheel of Fortune through the World is out of range, and the master-number rule patches back only two.",
+        keywords: "life path number tarot, tarot numerology, tarot birth card",
+      },
+      {
+        eyebrow: "What the Almanac Reads Instead",
+        quote: "Nobody gets rounded down into the first nine, because nothing is being rounded.",
+        pinTitle: "Life Path Number vs. Your Tarot Bearing",
+        description:
+          "Instead of reducing your birthday to one digit, the Almanac adds your birth month and day and wraps the 22-card wheel. Every Major Arcana card is reachable, including the ones a life path number folds out of range.",
+        keywords: "life path number tarot, tarot bearing, tarot numerology",
+      },
+    ],
+    math: {
+      eyebrow: "The Same Birthday, Unreduced",
+      dateLabel: "March 3",
+      steps: ["3 + 3 = 6"],
+      resultMajorIndex: 6, // The Lovers — where a life path reading sends March 3 to the Chariot
+      pinTitle: "Life Path 7, or the Lovers?",
+      description:
+        "A life path reading folds March 3, 1990 down to seven and calls it the Chariot. The Almanac adds just the month and the day, three plus three, and lands on six, the Lovers, with all 22 Major Arcana in reach.",
+      keywords: "life path number tarot, tarot bearing, tarot numerology",
+    },
+  },
 };
 
 export function getBlogSocialContent(slug: string): BlogSocialContent | undefined {
