@@ -59,6 +59,10 @@ export default async function MonthIndexPage() {
             and set by the date alone. Pick a month to see its card and how it&rsquo;s calculated, or
             see <Link href="/today">today&rsquo;s card</Link>.
           </p>
+          <p>
+            This is the world&rsquo;s card for the month. Your birthday sets a second one that&rsquo;s
+            yours alone: <Link href="/personal-month-card">find your personal month card</Link>.
+          </p>
         </section>
 
         <section className="related">

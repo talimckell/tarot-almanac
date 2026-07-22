@@ -49,10 +49,9 @@ prefers cookie → header → UTC. ~1–2 hours, optional.
 ## Writing & Readings
 
 ### Personal month post `[Soon]`
-A post covering the personal-month reading.
-
-### Get August's month reading `[Soon-ish]`
-Author the August collective month reading.
+The `/personal-month-card` calculator + 22 SEO pages shipped 2026-07-22 (see Shipped). What's left
+is the optional blog-10 explainer post feeding the calculator: the myth-bust angle (numerology stops
+at a digit; here you get a whole Major Arcana card), owner-authored, linking into the tool.
 
 ### 2027 year-ahead post
 The 2027 year-ahead post (a dormant blog scaffold exists).
@@ -89,9 +88,6 @@ same template. Authored copy and framing stay in-voice (owner-written).
 ### More Pinterest for the rest of the week `[Soon]`
 Keep the Pinterest posting cadence going through the week.
 
-### Share with friends `[Soon]`
-Marketing push to get the almanac in front of friends — direct outreach / word of mouth.
-
 ### Bluesky: celebrity birthday design + posts
 New Bluesky campaign: celebrity-birthday treatment and posts (a sibling to the existing
 Birthday Bearings / Collective / Reclaimed campaigns).
@@ -119,6 +115,30 @@ All 16 boards are built — these are the scheduling/publishing passes:
 ---
 
 ## Shipped
+
+### 2026-07-22 — personal month card funnel (calculator + 22 SEO pages)
+- **`/personal-month-card` calculator hub + 22 evergreen `[slug]` pages**, mirroring the year-card
+  funnel. Birthday + month/year in → the Major Arcana card for that month out (`personalMonth` =
+  `mod22(BM+BD+sumDigits(Y)+M)`, birth year excluded), same every time. Reuses `personal-year-card`
+  styles wholesale; new files: `lib/monthCard.ts`, `content/month-cards.json` (FAQ/SEO copy only),
+  `app/personal-month-card/{page,PersonalMonthCardCalculator,[slug]/page}.tsx`.
+- **No duplicated reading copy.** The 22 per-Major month meanings already existed (authored, in-voice)
+  in each card JSON at `positionReadings.positions.ongoingPersonalMonth.body`; the hub reads them
+  server-side via `getPositionReading` and hands them to the client calculator as props. Those stay
+  DRAFT-flagged — worth a review pass before heavy promotion, but they're live on these pages now.
+- **SEO wedge:** targets the fused long-tail (`personal month tarot card`, `tarot card for this month
+  by birthday`) that bridges the numerology and tarot clusters no competitor spans. FAQPage JSON-LD,
+  canonicals, sitemap (+23 URLs), footer + reciprocal year-card cross-links all wired.
+- **Paid CTA points at the subscription** (`/me#subscribe`), not a new one-off — the living almanac
+  already generates every month, so zero net-new checkout/AI code.
+- Verified in the local preview: March 15 → August 2026 resolves to Temperance (steps forward from
+  the Lovers year card) with the authored body; typecheck clean, no console errors.
+
+### 2026-07-22 — August collective month reading live + share-with-friends push done
+- **August month reading published on Substack.** The August collective month reading is live
+  (Substack-only per the monthly-reading pattern, links out to `/month` + `/today`).
+- **Share-with-friends outreach complete.** The direct-outreach / word-of-mouth push to the
+  intended set of friends is done.
 
 ### 2026-07-14 — blog: arcana-stages post live + posts 4-5 social sets scheduled
 - **"The Major Arcana in Three Stages" published.** The Initiation / Testing / Reckoning post

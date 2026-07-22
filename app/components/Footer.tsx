@@ -56,12 +56,13 @@ export default function Footer() {
           <div className={styles.fcol}>
             <div className={styles.fcolH}>The Almanac</div>
             <Link href="/today">Today</Link>
-            <Link href="/month">Card by Month</Link>
             <Link href="/bearing">Your Bearing</Link>
             <Link href="/tarot-birth-card">Your Birth Card</Link>
-            <Link href="/birthday">Card by Birthday</Link>
-            <Link href="/personal-year-card">Your Year Card</Link>
             <Link href="/tarot-birth-chart">Your Chart</Link>
+            <Link href="/personal-year-card">Your Year Card</Link>
+            <Link href="/personal-month-card">Your Month Card</Link>
+            <Link href="/birthday">Card by Birthday</Link>
+            <Link href="/month">Card by Month</Link>
             <Link href="/me">My Almanac</Link>
           </div>
 

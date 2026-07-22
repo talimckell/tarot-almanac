@@ -122,7 +122,8 @@ export default function PersonalYearCardHub() {
         </section>
 
         <p className="pyc-links">
-          Related: <Link href="/bearing">your Bearing</Link> ·{" "}
+          Related: <Link href="/personal-month-card">your month card</Link> ·{" "}
+          <Link href="/bearing">your Bearing</Link> ·{" "}
           <Link href="/tarot-birth-card">your tarot birth card</Link> ·{" "}
           <Link href="/tarot-birth-chart">your birth chart</Link> ·{" "}
           <Link href="/tarot">all seventy-eight cards</Link> ·{" "}

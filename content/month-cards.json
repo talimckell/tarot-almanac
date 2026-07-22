@@ -1,0 +1,45 @@
+{
+  "_note": "Structural + SEO copy for the personal month card feature (hub FAQ). The per-Major month MEANINGS are NOT here: they live in each card JSON under positionReadings.positions.ongoingPersonalMonth and are read server-side via lib/cards.ts. This file stays client-safe (bundled, no fs) so lib/monthCard.ts can import it into the calculator. faq answers double as the ranking body copy on /personal-month-card. Worked example uses the same person as the year-card FAQ (born March 15, 2026 year card The Lovers) so the two pages agree.",
+  "faq": [
+    {
+      "q": "What's a personal month card?",
+      "a": "It's the one Major Arcana card set for you for a given calendar month, found from your birthday through tarot numerology. Everyone has one, and it's the same card every time you check for that month. Where your year card names the theme of the whole year, your month card names the weather inside one of its twelve stretches."
+    },
+    {
+      "q": "How is it worked out?",
+      "a": "Add your birth month, your birth day, the digits of the year, and the number of the month you're reading, then wrap the total onto the 22 Major Arcana. Born March 15, reading August 2026: 3 + 15 + (2 + 0 + 2 + 6) + 8 = 36, and 36 wraps around to 14, Temperance. Nothing is shuffled. The same birthday and month always land on the same card."
+    },
+    {
+      "q": "How does it relate to my year card?",
+      "a": "Your month card steps forward one place from your year card for each month of the year, so the twelve months read as a path rather than twelve unrelated notes. The same March 15 birthday has The Lovers for its 2026 year: January starts one card along and each month moves one more, so by August it has reached Temperance. Read the year card for the throughline and the month card for where you are in it right now.",
+      "link": {
+        "href": "/personal-year-card",
+        "text": "Find your year card"
+      }
+    },
+    {
+      "q": "Why isn't it just a number from one to nine?",
+      "a": "Most personal month calculators come out of numerology, which reduces your total all the way down to a single digit, so the answer is always one of nine numbers. The Almanac keeps the whole wheel of twenty-two Majors and wraps around instead of reducing. You get an actual tarot card with a name and a picture and a meaning, including the cards a reduced method can never reach. If a numerology calculator handed you a number and this one hands you a card, that's the difference.",
+      "link": {
+        "href": "/how-it-works",
+        "text": "See how the math works"
+      }
+    },
+    {
+      "q": "Is this telling my future?",
+      "a": "No. The card doesn't decide what your month holds. It offers an angle on these few weeks and a thing or two worth watching, and what you do with that is yours. It can shape how you move through the month if you let it, which is different from fate."
+    },
+    {
+      "q": "How is it different from pulling a card for the month?",
+      "a": "A monthly spread is drawn: you shuffle, and chance sets the card. This one is given. Your birthday and the month fix it through numerology, so it's the same every time and you're not hoping for a lucky pull. It reflects the pattern your own dates already make, month after month, in an order you can see coming."
+    },
+    {
+      "q": "Does it change every month?",
+      "a": "Yes. Each month has its own card, one step forward from the last, all twelve set by your birthday and the year. The living almanac walks them with you month by month, in the Almanac's voice, alongside your daily cards and your Bearing.",
+      "link": {
+        "href": "/me#subscribe",
+        "text": "See the living almanac"
+      }
+    }
+  ]
+}
