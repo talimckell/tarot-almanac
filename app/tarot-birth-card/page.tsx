@@ -36,6 +36,10 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     a: "Your tarot birth card is the single Major Arcana card set by the day you were born. It doesn't get shuffled and it doesn't change, so it's the same card every time you check. The Almanac calls it your Bearing, the angle you carry into a room before you've decided anything.",
   },
   {
+    q: "What is my tarot card?",
+    a: "If you mean the one card that's yours for life, that's your tarot birth card, and the calculator above finds it. Enter your birth month and day and it names the Major Arcana card your birthday points to, the same one every time you check.",
+  },
+  {
     q: "What is my arcana, or my major arcana card?",
     a: "Same thing as your tarot birth card. Your arcana is the one Major Arcana card set by your birthday, the card you carry your whole life. The calculator above finds it: enter your month and day and it names your Major Arcana card at once.",
   },
