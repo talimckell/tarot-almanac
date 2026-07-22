@@ -14,6 +14,68 @@ up across several pages at once.
 
 ---
 
+## 2026-07-22 (window: Jul 4–20, 17 days)
+
+| | | vs last week |
+|---|---|---|
+| Impressions | 155 | +44 (two new days) |
+| **Clicks** | **1** | **+1 — first ever** |
+| CTR | 0.65% | first non-zero |
+| Avg position | ~44 | improving (Jul 19–20 daily pos 42–48, vs 44–61 the week before) |
+| Indexed pages appearing | 45 | +6 |
+| Queries appearing | 61 | +6 |
+
+### The first click
+
+**Jul 20 · `/month/2026-08` · position 8.77 · mobile · Australia · CTR 7.7%** (1 click / 13 impr).
+
+This is the thesis from last week landing exactly where predicted. The click came from the
+"already at pos 3–12" band, on a proprietary page nobody else has. `/month/2026-08` climbed
+14.3 → 8.8 week-over-week and converted the moment it reached page 1. First clicks come from
+proprietary pages at page-1 positions, not from the generic `/tarot/*` fight. Keep pushing that
+band.
+
+Daily impressions are also rising: ~12–15/day the first two weeks, now 22/day on Jul 19–20.
+
+### Movers
+
+- **`/month/2026-08`** — pos 14.3 → 8.8, impr 3 → 13. The click page. Next-month page is the
+  seasonal winner (people searching August ahead of time); worth remembering the pattern rolls
+  forward — `/month/2026-09` should be the one to watch late August.
+- **`/tarot-birth-card`** — impr 16 → 30 (nearly doubled), pos ~82 flat. Google is surfacing the
+  hub much more on the birth-card cluster. Position hasn't moved yet, but impression share is
+  the leading indicator and it's growing.
+- **New commercial-intent queries** appearing: "tarot birth card calculator" (4 impr, pos 81),
+  "tarot birth card meaning" (3), "tarot card calculator", "arcana birth chart", "birth card
+  calculator astrology". The calculator/commercial cluster is widening — good for the hub.
+- **Birthday cluster keeps expanding**: april-3, july-31, january-25, august-27 newly appearing,
+  all pos 8–13. The 2026-07-13 orphan rescue continues to pay out.
+
+### Birth-card split — too early to read
+
+`/blog/tarot-birth-card` is unchanged from last week to the decimal (11 impr, pos 87.18), and
+both it and the hub still show on "tarot birth card". The retitle deployed right at the edge of
+this window (2026-07-20), so GSC hasn't reflected it yet. **Verdict deferred to next week.** What
+to look for on 2026-07-29: the blog's impressions shifting onto method queries (Personality/Soul,
+Mary Greer) and off the bare head term, while the hub holds it.
+
+### Watch
+
+- **Mobile pos 20.8 vs desktop 74.2** held a second week, now on 55 mobile impressions (was 33).
+  Still most likely page/query mix — the well-ranking birthday/month/personal-year pages skew
+  mobile, the generic `/tarot/*` pages skew desktop — not a device advantage per se. But it has
+  held twice now, so it's a real skew worth naming, even if the cause is mix.
+- **blog-09 (`/blog/life-path-number-tarot`)** shipped this week but isn't in GSC yet (brand new,
+  not crawled). Nothing to read; just noting it's live so next week's new-page appearance is
+  expected, not a surprise.
+
+### Baseline to beat next week
+
+Impressions 155 · clicks 1 · CTR 0.65% · avg position ~44 · 45 pages · 61 queries.
+Next milestones: second click, first click on a *different* page, and the birth-card split verdict.
+
+---
+
 ## 2026-07-20 (window: Jul 4–18, 15 days)
 
 | | |
