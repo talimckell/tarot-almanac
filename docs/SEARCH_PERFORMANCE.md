@@ -14,6 +14,96 @@ up across several pages at once.
 
 ---
 
+## 2026-07-27 (window: Jul 4–25, 22 days)
+
+> Export label changed to "Last 28 days" (was "Last 3 months"). Same true window —
+> the Chart tab still starts Jul 4 (first indexed day). Just Google's default label.
+
+| | | vs last week |
+|---|---|---|
+| Impressions | 329 | +174 (more than doubled; +7 days but daily rate also ~2×'d) |
+| **Clicks** | **5** | **+4** |
+| CTR | 1.52% | +0.87pt |
+| Avg position | ~55 blended | noisier — daily swings 14 → 60 on query mix |
+| Indexed pages appearing | 71 | +26 |
+| Queries appearing | 100 | +39 |
+
+Daily impressions are climbing fast: 22/day (Jul 19–20) → 45 (Jul 23) → 50 (Jul 25).
+Clicks landed Jul 20, 21, 22, 23, 25.
+
+### The 5 clicks
+
+| Page | Clicks | Impr | Pos | CTR |
+|---|---|---|---|---|
+| `/month/2026-08` | 4 | 51 | 12.7 | 7.8% |
+| `/personal-month-card/hierophant` | 1 | 2 | 16.0 | 50% |
+
+Both clicks come from the same place: **proprietary pages at page-1 positions.** `/month/2026-08`
+is the workhorse (4 of 5 clicks) and confirms the seasonal next-month pattern — people search the
+month ahead. `/month/2026-09` is the one to watch as August starts. The `/personal-month-card/*`
+funnel (shipped 2026-07-22) produced its first click at 50% CTR; small sample, but it's live and
+converting. **Desktop also converted for the first time** (2 of the 5 clicks were desktop, vs 0
+ever before).
+
+### Birth-card split — verdict: inconclusive, leaning "didn't separate them"
+
+This was the week the retitle was supposed to show. What actually happened:
+
+| | last week | this week |
+|---|---|---|
+| `/tarot-birth-card` (hub) | 30 impr, pos 82.4 | 68 impr, pos 81.7 |
+| `/blog/tarot-birth-card` | 11 impr, pos 87.2 | 32 impr, pos 81.2 |
+
+The blog **climbed** (87 → 81) and tripled its impressions, and the two pages are now essentially
+**tied at position 81, both still surfacing on "tarot birth card" (12 impr this week).** That is
+not the separation the retitle was going for — the goal was to move the blog *off* the head term
+onto method queries, and instead it rose *on* the head term to meet the hub.
+
+**But I can't call it a failure yet, for two honest reasons:**
+1. **The window blends pre- and post-retitle days.** The change deployed Jul 20; this window is
+   Jul 4–25, so ~16 of 22 days are pre-change. The blended position tells us little. The first
+   *clean* read is next week (a window that's mostly/entirely post-Jul-20).
+2. **This export is query-level, not query×page.** I can see "tarot birth card" got 12 impressions
+   but not which page served them. To truly verify the split I'd need the GSC UI: filter to the
+   query "tarot birth card", look at the Pages tab, and see whether the blog still appears there.
+   Worth doing by hand in Search Console this week.
+
+**Decision:** hold one more week for a clean window. If the two are still tied at ~81 both on the
+head term on 2026-08-03, escalate to the next lever already teed up — change the blog post's
+visible H1 off "What Is Your Tarot Birth Card?" (currently still the head term), or consolidate
+the two with a canonical. Don't touch it before then; the site is gaining authority site-wide and
+both pages rising together may just be that, not mutual suppression.
+
+### Movers
+
+- **Proprietary long-tail keeps widening and ranking.** New this week at strong positions:
+  `/privacy` (pos 1 — incidental), `/birthday/october-7` (2), homepage `/` (3), `/bearing/world`
+  (4), plus a wave of new `/personal-year-card/*` (devil, empress, emperor, death, fool, lovers)
+  and `/personal-month-card/*` (fool, hierophant) pages, nearly all pos 9–16. The 2026-07-13
+  orphan rescue + the year/month-card funnels are compounding.
+- **Commercial birth-card cluster deepening**: "tarot birth card calculator" now 8 impr at pos 65
+  (up from pos 81), "tarot calculator", "birth card calculator", "what is my tarot card", "birth
+  arcana". Good for the hub — this is its intent.
+- **`/tarot` index still stuck** at pos 87 (33 impr) on generic "all tarot cards" / "tarot cards
+  list" queries. Same multi-year fight; still not worth optimizing for. Its job stays internal
+  linking + calculator conversion.
+
+### Watch
+
+- **Mobile pos 16.5 vs desktop 69.5 held a THIRD week** (now 116 vs 209 impr). This is durable,
+  so treat it as a structural fact, not noise: desktop gets more impressions because Google shows
+  the poorly-ranking generic `/tarot/*` pages more there, while the well-ranking
+  birthday/month/personal pages skew mobile. Both convert now. Not a device lever to pull, just
+  the shape of the page mix.
+
+### Baseline to beat next week
+
+Impressions 329 · clicks 5 · CTR 1.5% · avg position ~55 blended · 71 pages · 100 queries.
+Next milestones: the clean birth-card split read, first click on a *third* distinct page, and
+`/month/2026-09` beginning its climb.
+
+---
+
 ## 2026-07-22 (window: Jul 4–20, 17 days)
 
 | | | vs last week |
