@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
-import { BLOG_POSTS } from "../../lib/blog";
+import { BLOG_POSTS, BLOG_SECTIONS } from "../../lib/blog";
 import { ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import styles from "./page.module.css";
 
@@ -23,6 +23,7 @@ export default function BlogIndexPage() {
     <>
       <SiteNav />
 
+      <main>
       <div className={styles.wrap}>
         <div className={styles.crumb}>
           <Link href="/how-it-works">How it works</Link> &nbsp;/&nbsp; The Blog
@@ -45,20 +46,32 @@ export default function BlogIndexPage() {
           </p>
         </div>
 
-        {BLOG_POSTS.map((post) => (
-          <Link className={styles.entry} href={`/blog/${post.slug}`} key={post.slug}>
-            <span
-              className={styles.entryGlyph}
-              style={{ color: `var(--${ELEMENT_BY_MAJOR[post.majorIndex]})` }}
-            >
-              <svg aria-hidden="true"><use href={`#ma-${post.majorIndex}`} /></svg>
-            </span>
-            <span className={styles.entryBody}>
-              <h2 className={styles.entryTitle}>{post.title}</h2>
-              <p className={styles.entrySf}>{post.indexTeaser}</p>
-            </span>
-          </Link>
-        ))}
+        {BLOG_SECTIONS.map((section) => {
+          const posts = BLOG_POSTS.filter((p) => p.section === section.key);
+          if (posts.length === 0) return null;
+          return (
+            <section className={styles.section} key={section.key}>
+              <div className={styles.sectionHead}>
+                <h2 className={styles.sectionLabel}>{section.label}</h2>
+                <p className={styles.sectionIntro}>{section.intro}</p>
+              </div>
+              {posts.map((post) => (
+                <Link className={styles.entry} href={`/blog/${post.slug}`} key={post.slug}>
+                  <span
+                    className={styles.entryGlyph}
+                    style={{ color: `var(--${ELEMENT_BY_MAJOR[post.majorIndex]})` }}
+                  >
+                    <svg aria-hidden="true"><use href={`#ma-${post.majorIndex}`} /></svg>
+                  </span>
+                  <span className={styles.entryBody}>
+                    <h3 className={styles.entryTitle}>{post.title}</h3>
+                    <p className={styles.entrySf}>{post.indexTeaser}</p>
+                  </span>
+                </Link>
+              ))}
+            </section>
+          );
+        })}
 
         <div className={styles.capture}>
           <h3>New pieces, now and then</h3>
@@ -77,6 +90,7 @@ export default function BlogIndexPage() {
           </a>
         </div>
       </div>
+      </main>
 
       <Footer />
     </>

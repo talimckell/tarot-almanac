@@ -66,6 +66,30 @@
   margin: 0 auto;
 }
 
+.sectionHead {
+  padding: 40px 0 4px;
+}
+.section:first-of-type .sectionHead {
+  padding-top: 18px;
+}
+.sectionLabel {
+  font-family: var(--serif-sc);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 10px;
+}
+.sectionIntro {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--charcoal);
+  max-width: 560px;
+}
+
 .entry {
   display: flex;
   gap: 24px;
@@ -172,6 +196,8 @@
   .hero h1 { font-size: 36px; }
   .entryTitle { font-size: 25px; }
   .entry { gap: 16px; }
+  .sectionIntro { font-size: 16px; }
+  .sectionHead { padding-top: 32px; }
 }
 @media (max-width: 520px) {
   .glyphRow { gap: 14px; }
