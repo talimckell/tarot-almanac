@@ -2,9 +2,46 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { renderMarkdown } from "./markdown";
 
+/** The three journey sections the /blog index groups posts under, in order:
+ * foundations → ideas → your-cards. See BLOG_SECTIONS for labels and intros. */
+export type BlogSection = "foundations" | "ideas" | "your-cards";
+
+export interface BlogSectionMeta {
+  key: BlogSection;
+  /** Section header shown on the index. */
+  label: string;
+  /** One-sentence intro under the header (authored by Tali). */
+  intro: string;
+}
+
+/** Ordered. The index renders sections top-to-bottom in this order; posts sit
+ * under their `section` in BLOG_POSTS array order. */
+export const BLOG_SECTIONS: BlogSectionMeta[] = [
+  {
+    key: "foundations",
+    label: "Start here",
+    intro:
+      "New here? Start with what tarot numerology is, and what you can learn about how your birthday influences your orientation to the world.",
+  },
+  {
+    key: "ideas",
+    label: "The ideas underneath",
+    intro:
+      "A card contains multitudes: a gift, a shadow, a reclaiming, a small piece of a larger narrative. Let’s dive in.",
+  },
+  {
+    key: "your-cards",
+    label: "Find your own cards",
+    intro:
+      "The day you were born, all of your cards were set. Discover what they are, and what that means for how you move through life. Remember, the cards may be set, but what you do with them isn’t.",
+  },
+];
+
 export interface BlogPostMeta {
   slug: string;
   title: string;
+  /** Which journey section this post sits under on the /blog index. */
+  section: BlogSection;
   eyebrow: string;
   /** Optional keyword-tuned <title> tag; falls back to `title`. Lets the meta
    * title carry search terms without changing the on-page H1. */
@@ -28,6 +65,7 @@ export interface BlogPostMeta {
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
     slug: "what-is-tarot-numerology",
+    section: "foundations",
     title: "What Is Tarot Numerology?",
     // Keyword-tuned meta tags (title/description below stay as the visible H1/standfirst).
     seoTitle: "What Is Tarot Numerology, and Why Your Birth Card Differs",
@@ -48,6 +86,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "how-tarot-numerology-works",
+    section: "foundations",
     // The index mockup shortens this to "How Tarot Numerology Works" in the entry
     // list; using the full authored title (matching the post's own H1) everywhere
     // for consistency rather than reproducing that one-off truncation.
@@ -69,6 +108,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "the-shadow-and-the-reclaiming",
+    section: "ideas",
     // Same truncation-vs-full-title situation as above.
     title: "The Shadow and the Reclaiming: Why a Reversed Card Has Two Meanings",
     seoTitle: "Reversed Tarot Card Meanings: The Shadow and the Reclaiming",
@@ -86,52 +126,13 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "how the Almanac turns a date into a card": "/blog/what-is-tarot-numerology",
     },
   },
-  {
-    slug: "what-is-a-tarot-bearing",
-    title: "What Is a Tarot Bearing?",
-    seoTitle: "What Is a Tarot Bearing? Your Lifelong Tarot Birth Card",
-    metaDescription:
-      "Your tarot Bearing is the birth card you carry your whole life, set by your birthday: the fixed distance between you and the world. What it is, and how to find yours.",
-    eyebrow: "Tarot Numerology",
-    description:
-      "Your Bearing is the one tarot card you carry your whole life, the fixed distance between you and the world. Here is what it is and how to find yours.",
-    indexTeaser:
-      "Your Bearing is the one card you carry your whole life, the fixed distance between you and the world. What it is, and how to find yours.",
-    majorIndex: 17, // The Star
-    file: "blog-04-what-is-a-tarot-bearing.md",
-    linkMap: {
-      "Find your Bearing →": "/bearing",
-    },
-  },
-  {
-    slug: "the-tarot-natal-chart",
-    title: "Your Tarot Natal Chart",
-    // Keyword-tuned meta tags: catch "tarot birth chart" (the commoner phrasing)
-    // alongside "natal chart," without touching the visible H1/standfirst.
-    seoTitle: "Your Tarot Natal Chart (a Tarot Birth Chart)",
-    metaDescription:
-      "Your tarot natal chart, or tarot birth chart, is seven cards read from your birthday: the self you arrived as, the world that met you, and the Bearing that ties them together.",
-    eyebrow: "Tarot Numerology",
-    // No distinct standfirst/meta-description was authored separately for this post
-    // (unlike the Bearing post) — reusing the index teaser rather than writing new copy.
-    description:
-      "The whole picture: seven cards built from your birthday, the self you came in as and the world that caught you, and the Bearing that ties them together.",
-    indexTeaser:
-      "The whole picture: seven cards built from your birthday, the self you came in as and the world that caught you, and the Bearing that ties them together.",
-    majorIndex: 21, // The World
-    file: "blog-05-the-tarot-natal-chart.md",
-    linkMap: {
-      "here": "/blog/what-is-a-tarot-bearing",
-      "its own piece": "/blog/what-is-a-tarot-bearing",
-      "Build your natal chart in the Tarot Almanac →": "/tarot-birth-chart",
-    },
-  },
   // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────
   // Scaffold for content/blog-06-2027-tarot-year-card.md. Nothing renders, links,
   // or indexes while this stays commented out. Write the prose (and the standfirst
   // marked below), then uncomment to publish. Aim to go live by mid-October 2026.
   // {
   //   slug: "2027-tarot-year-card",
+  //   section: "your-cards",
   //   title: "Your 2027 Tarot Year Card",
   //   seoTitle: "Your 2027 Tarot Year Card: The Year of Justice",
   //   metaDescription:
@@ -152,6 +153,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   // on the month page and natal chart — still to wire those references as links.
   {
     slug: "major-arcana-three-stages",
+    section: "ideas",
     title: "The Major Arcana in Three Stages",
     seoTitle: "The Fool's Journey: The Major Arcana in Three Stages",
     metaDescription:
@@ -180,6 +182,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   // hub only answers in an FAQ row. Keep the two titles off each other.
   {
     slug: "tarot-birth-card",
+    section: "your-cards",
     title: "What Is Your Tarot Birth Card?",
     seoTitle: "Personality & Soul Cards: How the Birth Card Method Works",
     metaDescription:
@@ -206,6 +209,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   // built as a matched sibling of soul-card-ceiling.svg.
   {
     slug: "life-path-number-tarot",
+    section: "your-cards",
     title: "Your Life Path Number and Your Tarot Card",
     seoTitle: "Your Life Path Number and Your Tarot Birth Card",
     metaDescription:
@@ -226,6 +230,92 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Find your Bearing →": "/bearing",
     },
   },
+  // Bearing and natal chart close the "your-cards" section on the index, after the
+  // birth-card / life-path pair — the finale escalates to the full seven-card chart.
+  {
+    slug: "what-is-a-tarot-bearing",
+    section: "your-cards",
+    title: "What Is a Tarot Bearing?",
+    seoTitle: "What Is a Tarot Bearing? Your Lifelong Tarot Birth Card",
+    metaDescription:
+      "Your tarot Bearing is the birth card you carry your whole life, set by your birthday: the fixed distance between you and the world. What it is, and how to find yours.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "Your Bearing is the one tarot card you carry your whole life, the fixed distance between you and the world. Here is what it is and how to find yours.",
+    indexTeaser:
+      "Your Bearing is the one card you carry your whole life, the fixed distance between you and the world. What it is, and how to find yours.",
+    majorIndex: 17, // The Star
+    file: "blog-04-what-is-a-tarot-bearing.md",
+    linkMap: {
+      "Find your Bearing →": "/bearing",
+    },
+  },
+  {
+    slug: "the-tarot-natal-chart",
+    section: "your-cards",
+    title: "Your Tarot Natal Chart",
+    // Keyword-tuned meta tags: catch "tarot birth chart" (the commoner phrasing)
+    // alongside "natal chart," without touching the visible H1/standfirst.
+    seoTitle: "Your Tarot Natal Chart (a Tarot Birth Chart)",
+    metaDescription:
+      "Your tarot natal chart, or tarot birth chart, is seven cards read from your birthday: the self you arrived as, the world that met you, and the Bearing that ties them together.",
+    eyebrow: "Tarot Numerology",
+    // No distinct standfirst/meta-description was authored separately for this post
+    // (unlike the Bearing post) — reusing the index teaser rather than writing new copy.
+    description:
+      "The whole picture: seven cards built from your birthday, the self you came in as and the world that caught you, and the Bearing that ties them together.",
+    indexTeaser:
+      "The whole picture: seven cards built from your birthday, the self you came in as and the world that caught you, and the Bearing that ties them together.",
+    majorIndex: 21, // The World
+    file: "blog-05-the-tarot-natal-chart.md",
+    linkMap: {
+      "here": "/blog/what-is-a-tarot-bearing",
+      "its own piece": "/blog/what-is-a-tarot-bearing",
+      "Build your natal chart in the Tarot Almanac →": "/tarot-birth-chart",
+    },
+  },
+  // ─── DRAFT, NOT PUBLISHED ─────────────────────────────────────────────────
+  // Scaffold for content/blog-10-personal-month-number-tarot.md. Drafted 2026-07-27.
+  // Sibling of blog-09 (life-path): enters through the NUMEROLOGY head term
+  // "personal month number", NOT the "personal month card" term. That split is
+  // deliberate and anti-cannibalization: the /personal-month-card HUB already owns
+  // "personal month tarot card / calculator / card of the month" and answers the
+  // reduce-to-one-digit comparison in an FAQ row. This post owns that comparison at
+  // full length (the nine-card loop vs. the 22-card walk), the way blog-08 took the
+  // Personality/Soul method intent the /tarot-birth-card hub only had in an FAQ.
+  // Keep this seoTitle/H1/slug off the hub's "personal month card" phrasing.
+  // Numbers node-verified against lib/almanac.ts (Mar 15, 2026: year card the Lovers;
+  // Aug month card Temperance #14; the wheel walks 12 distinct Majors, the numerology
+  // number loops through 9 and repeats from September).
+  // Inline figure: public/personal-month-loop-vs-walk.svg, GENERATED by
+  // scripts/gen-personal-month-diagram.mjs (highlighted sets resolved live from the
+  // engine, so the picture can't drift). Same visual family as life-path-ceiling.svg.
+  // RECIPROCAL LINK (wire at publish): add a link from /personal-month-card (the FAQ
+  // "Why isn't it just a number from one to nine?" answer, or the Related line) to
+  // /blog/personal-month-number-tarot, so hub and post point at each other. Not added
+  // to the live hub yet because the /blog route 404s until this entry is uncommented.
+  // {
+  //   slug: "personal-month-number-tarot",
+  //   section: "your-cards",
+  //   title: "Your Personal Month Number and Your Tarot Card",
+  //   seoTitle: "Your Personal Month Number and Your Tarot Card",
+  //   metaDescription:
+  //     "Your personal month number folds to one digit, reaching only nine tarot cards and repeating within the year. How tarot numerology reads all twenty-two instead.",
+  //   eyebrow: "Tarot Numerology",
+  //   description:
+  //     "The number numerology sets for your month, and the tarot card it points to. Why a single digit walks a nine-card loop, and how the Almanac reads your month across the whole wheel of twenty-two instead.",
+  //   indexTeaser:
+  //     "Your personal month number points to a tarot card, but a single digit reaches only nine of them and repeats. How the Almanac reads your month across all twenty-two instead.",
+  //   majorIndex: 14, // Temperance — the month card the reduced method can never reach
+  //   file: "blog-10-personal-month-number-tarot.md",
+  //   linkMap: {
+  //     "your life path number": "/blog/life-path-number-tarot",
+  //     "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+  //     "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
+  //     "your personal year card": "/personal-year-card",
+  //     "Find your month card →": "/personal-month-card",
+  //   },
+  // },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {
