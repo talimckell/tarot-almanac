@@ -12,6 +12,14 @@ and last row as the true window.
 position by tens of places. A metric is only worth acting on if it holds for two weeks or shows
 up across several pages at once.
 
+**Include a "Page 1 roster" each week** — the pages averaging position ≤ 10 in the window, grouped
+by page type. It's the clearest running picture of what's actually ranking. To regenerate from an
+export: filter the Pages tab to `position <= 10`, sort ascending. Two standing caveats to repeat
+in the read: (1) these are *averages over the queries a page appeared for*, mostly on 1–2
+impressions, so only the higher-impression rows are trustworthy; (2) "page 1" ≠ "where clicks come
+from" — a page can rank just off page 1 yet out-earn everything on it by showing for far more
+searches (see `/month/2026-08`).
+
 ---
 
 ## 2026-07-27 (window: Jul 4–25, 22 days)
@@ -73,6 +81,34 @@ head term on 2026-08-03, escalate to the next lever already teed up — change t
 visible H1 off "What Is Your Tarot Birth Card?" (currently still the head term), or consolidate
 the two with a canonical. Don't touch it before then; the site is gaining authority site-wide and
 both pages rising together may just be that, not mutual suppression.
+
+### Page 1 roster (avg pos ≤ 10) — 35 pages
+
+Trustworthy rows (≥ 3 impressions) in **bold**; the rest are 1–2 impressions, so directional.
+
+**Birthday cards — 20 (the engine of page-1 presence)**
+`february-25` 5.3 (4 impr) · `july-2` 4.5 · `september-24` 5.0 · `september-17` 6.0 ·
+`december-20` 6.5 · `october-7` 2.0 · `october-31` 7.0 · `march-26` 8.0 · `november-7` 8.0 ·
+`april-25` 8.0 · `january-25` 8.0 · `october-11` 8.0 · `january-26` 8.5 · **`july-21` 8.8 (4)** ·
+`april-3` 9.0 · **`july-25` 9.3 (7 — most-tested on the list)** · **`august-1` 9.3 (3)** ·
+`july-31` 9.5 · `august-27` 10.0 · `december-16` 10.0
+
+**Personal year / month cards — 7**
+`personal-year-card/`: `emperor` 9.0 · `strength` 9.0 · `devil` 9.5 · `empress` 9.5 · `death` 10.0
+· `fool` 10.0 — `personal-month-card/fool` 9.0
+
+**Core brand & structural — 8**
+**`/bearing` 3.3 (3)** · `/bearing/world` 4.0 · `/` (home) 3.0 · `/blog` 7.5 ·
+`/today/2026-02-26` 2.0 · `/today/2026-07-07` 5.0 · `/tarot/six-of-swords` 3.0 (fluke, off-target
+query) · `/privacy` 1.0 (fluke)
+
+**Just off page 1 (10–13) worth watching:** `/month/2026-08` **12.7 but 51 impr + 4 clicks —
+out-earns the whole list above**; `personal-year-card/justice` 10.5, `/high-priestess` 11.0,
+`/sun` 12.0; `birthday/april-14` 10.5, `august-28` 11.0.
+
+The generic `/tarot/*` card pages are **absent** — all sit pos 66–100. Page 1 is entirely
+proprietary pages (birthday / bearing / personal-year / month), which is the whole SEO thesis
+holding: win the pages nobody else has, don't fight incumbents on card meanings.
 
 ### Movers
 
