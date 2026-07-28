@@ -136,6 +136,7 @@ export default function PersonalMonthCardHub() {
         <p className="pyc-links">
           Related: <Link href="/month">the month&rsquo;s collective card</Link> ·{" "}
           <Link href="/personal-year-card">your year card</Link> ·{" "}
+          <Link href="/blog/personal-month-number-tarot">your personal month number, explained</Link> ·{" "}
           <Link href="/bearing">your Bearing</Link> ·{" "}
           <Link href="/tarot-birth-card">your tarot birth card</Link> ·{" "}
           <Link href="/tarot">all seventy-eight cards</Link> ·{" "}
