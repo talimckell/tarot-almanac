@@ -22,6 +22,136 @@ searches (see `/month/2026-08`).
 
 ---
 
+## 2026-08-03 (window: Jul 4–Aug 1, 29 days)
+
+| | | vs last week |
+|---|---|---|
+| Impressions | 957 | +628 (nearly 3×) |
+| **Clicks** | **12** | **+7** |
+| CTR | 1.25% | ~flat (clicks scaling with impressions) |
+| Avg position | ~58 blended | noisy; daily 39–65 |
+| Indexed pages appearing | 136 | +65 |
+| Queries appearing | (not re-counted) | — |
+
+Daily impressions crossed 100/day (Jul 30: 105, Jul 31: 100). The site is being crawled and
+surfaced far more; this is the authority-building phase showing up as impression growth.
+
+### The 12 clicks — now diversifying
+
+| Page | Clicks | Impr | Pos |
+|---|---|---|---|
+| `/month/2026-08` | 5 | 85 | 11.9 |
+| `/personal-month-card/hierophant` | 2 | 4 | 10.8 |
+| `/personal-month-card/chariot` | 1 | 10 | 13.5 |
+| `/personal-month-card/lovers` | 1 | 2 | 6.0 |
+| `/birthday/august-17` | 1 | 10 | 4.8 |
+| `/birthday/november-7` | 1 | 5 | 6.4 |
+| `/tarot` (index) | 1 | 66 | 85.7 |
+
+Clicks spread across **7 distinct pages** this week (was 2). Milestone hit: clicks on a third,
+fourth, fifth distinct page. `/month/2026-08` is still the leader but now only 5 of 12.
+
+**The `/personal-month-card/*` funnel is earning** — 4 clicks this week (hierophant, chariot,
+lovers) from a funnel shipped 2026-07-22. That's the second proprietary funnel (after birthday/
+month) to start converting. The lone `/tarot` click at pos 85.7 is a fluke (some long-tail query
+where it surfaced high once), not the generic index starting to rank.
+
+### Birth-card split — VERDICT: retitle did not separate them; closing the thread
+
+This is the clean-enough read I deferred twice. The retitle didn't work, and the data explains why.
+
+| | 07-20 | 07-27 | 08-03 |
+|---|---|---|---|
+| `/tarot-birth-card` (hub) | 30 impr / 82.4 | 68 / 81.7 | 125 / 83.1 |
+| `/blog/tarot-birth-card` | 11 impr / 87.2 | 32 / 81.2 | 66 / 82.5 |
+
+Both pages keep gaining impressions in lockstep and both sit flat at ~82–83, still tied, still on
+the same cluster. The retitle moved nothing.
+
+**Why, and why I'm now recommending against the escalation I pre-committed to:** I said if they
+were still tied today I'd pull the blog's H1 or canonical them together. I don't think either is
+right, because the diagnosis changed. You can't *title* a page off a term when its whole body is
+about that term — the blog post is 1,259 words about birth cards, so Google ranks it on "tarot
+birth card" regardless of the title tag. And the deeper point: **neither page is anywhere near
+ranking** (both page 8–9), so they aren't suppressing each other — they're both just weak on a
+competitive head term until the site has more authority. Cannibalization was the wrong frame.
+
+**Decision: stop treating this as a bug.** Keep the retitle (it's marginally better-targeted, no
+harm). Don't touch the blog H1 — it would cost authored voice for zero evidence of gain. Leave the
+canonical alone — the blog earns its keep for /blog readers and internal linking. Revisit only if
+the two ever *diverge* (one climbing while the other holds flat), which would be actual
+suppression. Parallel flatness is not. This thread is closed.
+
+### Page 1 roster (avg pos ≤ 10) — 78 pages (was 35)
+
+More than doubled. Composition: **50 birthday · 8 personal-year · 5 personal-month · 15 other.**
+
+Trustworthy rows (≥ 3 impr): `/bearing` 3.3 · `/birthday/february-25` 5.9 (7) · `/february-26`
+5.8 (6) · `/february-27` 6.6 (5) · `/june-22` 5.7 · `/september-17` 7.7 (7) · `/january-26` 7.3 ·
+`/august-29` 7.7 · `/july-21` 8.8 (4) · `/december-20` 9.1 (9) · `/july-25` 9.3 (7) · `/august-1`
+9.6 (7) · `/april-25` 9.3 · `/april-14` 9.7 · `/july-31` 9.8 (4) · `/october-7` 6.3 (4) ·
+`/personal-month-card` 6.7 · `/personal-month-card/magician` 8.0 · `/blog` 7.5. The remaining ~59
+are 1–2 impressions — directional, and mostly a wave of new birthday dates being crawled.
+
+The generic `/tarot/*` card pages remain **absent from page 1** (all pos 66–95). The whole page-1
+roster is still proprietary pages. Thesis holds, and it's compounding — page-1 count 35 → 78 in a
+week.
+
+### Watch
+
+- **Mobile pos 15.9 vs desktop 70.1 — fourth straight week.** Fully durable now. Desktop carries
+  592 of 925 impressions (the generic `/tarot/*` pages Google shows there) but ranks in the 70s;
+  mobile carries the proprietary pages and ranks ~16. Structural, not a lever.
+- **`/month/2026-08` still just off page 1** (11.9) yet still the top earner. `/month/2026-09`
+  hasn't appeared yet — watch for it now that it's August.
+
+### Paid campaign post-mortem (Google Ads → birth-chart/card, ~May–Jul 2026, now OFF)
+
+Recorded 2026-08-03 from Vercel Web Analytics (window May 3–Aug 3), so the SEO context isn't lost.
+**Ads ran and were switched off for not hitting the metrics to continue.** What the data shows:
+
+- **The traffic was paid, not organic.** 315 visitors / 161 google.com referrals over the window,
+  with 225 of them landing on `/tarot-birth-chart` (119) and `/tarot-birth-card` (106) — the two
+  Google Ads landing pages. Both rank **pos 66–83 organically** (Google page 7–8), so they can't
+  have earned that traffic from search. It was ad spend.
+- **The failure was downstream conversion, not clicks.** Top-of-funnel worked: 24% of visitors
+  fired a `form_submit` (calculator use). But the funnel collapsed at the free→paid step —
+  ~225 paid landings produced **1 visible return from `checkout.stripe.com`**. Steps in between:
+  `/sign-in` 42, `/chart` 31, `/me` 17. The campaign bought engaged calculator users who took the
+  free card and left without buying the $12 chart.
+  - *Measurement caveat:* "1" counts visitors who returned via a Stripe referrer; a few completed
+    checkouts could land without that referrer. The order of magnitude (near-zero paid conversion)
+    is not in doubt, but don't treat 1 as an exact purchase count.
+- **Possible contributing factor: broad geo.** US was 47%, but India / Indonesia / Mexico / Brazil
+  / Vietnam were large slices — low-monetizing geos for a USD product. If targeting wasn't tight,
+  some spend bought clicks that were never going to check out.
+
+**Diagnosis:** a conversion/offer problem, not a traffic problem. The `/tarot-birth-chart` landing
+page hands over the free value and doesn't convert to the paid product.
+
+**Implications carried forward:**
+1. **Expect Vercel traffic to fall toward the organic baseline** (~12 clicks/wk) now that the ad
+   scaffolding is down. When the birth-chart/card pages drop out of the Vercel top list, that's the
+   paid residue clearing, not a regression.
+2. **Don't re-run paid until the `/tarot-birth-chart` free→$12 conversion path is fixed** — same
+   leak would repeat. (Landing-page conversion diagnosis deferred, not done.)
+3. **Validates the organic long-tail as the acquisition engine.** Paid didn't pay for itself at
+   this conversion rate; free traffic we own is the right thing to keep compounding. Fixing the
+   conversion path also serves every organic visitor who lands on the same page later.
+
+### Baseline to beat next week
+
+Impressions 957 · clicks 12 · CTR 1.25% · ~58 blended · 136 pages · 78 on page 1.
+Next milestones: first proprietary page to *hold* page 1 at real impression volume, `/month/2026-09`
+appearing, and the first double-digit-CTR page at >10 impressions.
+
+**Organic learning applied this week:** none actionable — continue course. Standing lens going
+forward: **chase impression volume, not position.** Month pages at pos ~12 out-earn birthday pages
+at pos 5 because they show for more searches; don't over-invest in nudging already-high, low-volume
+pages higher.
+
+---
+
 ## 2026-07-27 (window: Jul 4–25, 22 days)
 
 > Export label changed to "Last 28 days" (was "Last 3 months"). Same true window —
