@@ -124,7 +124,10 @@ async function attemptGeneration(
   try {
     response = await getClient().messages.create({
       model: MODEL,
-      max_tokens: 2000,
+      // Teaching the reader what each suit and card means (added in prompt v2) roughly
+      // doubled the output length; at 2000 the tool call was truncated mid-response (no
+      // woven/reflections), which surfaced as a parse_error and burned all retries.
+      max_tokens: 4096,
       system: MONTHLY_READING_SYSTEM_PROMPT,
       tools: [
         {

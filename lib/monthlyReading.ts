@@ -19,6 +19,7 @@ import {
 } from "./almanac";
 import { type YM, addMonths, daysInMonth, firstWeekday } from "./today";
 import { getCardBySlug } from "./cards";
+import { SUIT_MEANINGS } from "./suitMeanings";
 
 const MONTH_ABBR = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -27,6 +28,15 @@ const MONTH_ABBR = [
 
 export type BearingVsMonthRelation = "agree" | "clash" | "in-step-fool";
 
+// The authored meaning the reading teaches FROM, per card — so the AI can tell a reader
+// who knows nothing about tarot what a card means (its light and its shadow) instead of
+// naming a card it can't explain. Pulled from each minor's own BLESSED card JSON.
+export interface MinorMeaning {
+  essence: string;
+  light: string[]; // gift.keywords
+  shadow: string[]; // shadow.keywords
+}
+
 export interface MonthlyWeek {
   n: number;
   span: string; // "Jul 1–4"
@@ -34,12 +44,19 @@ export interface MonthlyWeek {
   opens: DayCard;
   closes: DayCard;
   dominantSuit: string;
+  // Meanings so the week can be taught, not just named: what the opening and closing
+  // cards mean, and the light/shadow of the suit that dominates the week.
+  opensMeaning: MinorMeaning;
+  closesMeaning: MinorMeaning;
+  suitLight: string;
+  suitShadow: string;
 }
 
 export interface CircledDate {
   card: string; // exact minor name, e.g. "King of Wands"
   dayNumbers: number[];
   dates: string; // formatted, e.g. "Jul 1 & 29"
+  meaning: MinorMeaning; // so a repeat is explained by what the card MEANS, not by the calendar
 }
 
 export interface MonthlyPackage {
@@ -65,6 +82,23 @@ export interface MonthlyPackage {
 
 function majorFacts(major: number) {
   return { major, name: MAJORS[major], slug: MAJOR_SLUGS[major], element: ELEMENT_BY_MAJOR[major] };
+}
+
+// Minor name ("Three of Cups") -> its slug ("three-of-cups"), the key its card JSON uses.
+function minorSlug(minorName: string): string {
+  return minorName.toLowerCase().replace(/ /g, "-");
+}
+
+// The authored meaning for a minor, pulled from its own card JSON. Empty fallbacks keep a
+// missing card from throwing (the reading degrades to naming it rather than crashing), but
+// every one of the 56 minors has these fields, so in practice this always resolves.
+function minorMeaning(minorName: string): MinorMeaning {
+  const card = getCardBySlug(minorSlug(minorName));
+  return {
+    essence: card?.essence ?? "",
+    light: card?.gift.keywords ?? [],
+    shadow: card?.shadow.keywords ?? [],
+  };
 }
 
 function dominantSuit(days: { card: DayCard }[]): string {
@@ -102,13 +136,21 @@ function groupWeeks(month: YM, days: { d: number; card: DayCard }[]): MonthlyWee
     const first = weekDays[0].d;
     const last = weekDays[weekDays.length - 1].d;
     const abbr = MONTH_ABBR[month.m - 1];
+    const opens = weekDays[0].card;
+    const closes = weekDays[weekDays.length - 1].card;
+    const suit = dominantSuit(weekDays);
+    const suitMeaning = SUIT_MEANINGS[suit];
     return {
       n: i + 1,
       span: first === last ? `${abbr} ${first}` : `${abbr} ${first}–${last}`,
       days: weekDays,
-      opens: weekDays[0].card,
-      closes: weekDays[weekDays.length - 1].card,
-      dominantSuit: dominantSuit(weekDays),
+      opens,
+      closes,
+      dominantSuit: suit,
+      opensMeaning: minorMeaning(opens.minorName),
+      closesMeaning: minorMeaning(closes.minorName),
+      suitLight: suitMeaning?.light ?? "",
+      suitShadow: suitMeaning?.shadow ?? "",
     };
   });
 }
@@ -134,7 +176,12 @@ function findCircledDates(month: YM, days: { d: number; card: DayCard }[]): Circ
   const out: CircledDate[] = [];
   for (const [card, dayNumbers] of byCard) {
     if (dayNumbers.length < 2) continue;
-    out.push({ card, dayNumbers, dates: formatCircleDates(month, dayNumbers) });
+    out.push({
+      card,
+      dayNumbers,
+      dates: formatCircleDates(month, dayNumbers),
+      meaning: minorMeaning(card),
+    });
   }
   return out.sort((a, b) => a.dayNumbers[0] - b.dayNumbers[0]);
 }
