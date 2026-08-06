@@ -118,6 +118,16 @@ export interface BlogNatalChartDiagram extends BlogPinterestCopy {
   caption: string;
 }
 
+// Post 7's own diagram type — the full 22-card Major Arcana wheel banded into the post's
+// three stages (Initiation 0–7, Testing 8–14, Reckoning 15–21). The band membership is the
+// post's own, verified against content/blog-07 and the engine's MAJORS order; the render
+// colors each glyph by the stage it sits in, so the picture is the post's thesis made
+// visual. The boundaries are structural (fixed in the render), so this carries only text.
+export interface BlogThreeStagesDiagram extends BlogPinterestCopy {
+  eyebrow: string;
+  title: string;
+}
+
 export interface BlogSocialContent {
   slug: string;
   postTitle: string;
@@ -133,6 +143,7 @@ export interface BlogSocialContent {
   threeFaces?: BlogThreeFacesDiagram;
   gapHolds?: BlogGapHoldsDiagram;
   natalChart?: BlogNatalChartDiagram;
+  threeStages?: BlogThreeStagesDiagram;
 }
 
 export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
@@ -533,6 +544,14 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
         keywords: "tarot testing stage, major arcana meaning, fools journey",
       },
     ],
+    threeStages: {
+      eyebrow: "The Fool's Journey",
+      title: "The 22 Major Arcana are one story, told in three stages.",
+      pinTitle: "The Major Arcana in Three Stages (The Fool's Journey)",
+      description:
+        "The 22 tarot Major Arcana aren't 22 separate ideas, they're one story told in order: Initiation (cards 0–7), Testing (8–14), and Reckoning (15–21). Which stage a card sits in changes how it reads.",
+      keywords: "major arcana stages, fools journey, tarot wheel",
+    },
   },
 
   "tarot-birth-card": {
@@ -651,6 +670,65 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
       description:
         "A life path reading folds March 3, 1990 down to seven and calls it the Chariot. The Almanac adds just the month and the day, three plus three, and lands on six, the Lovers, with all 22 Major Arcana in reach.",
       keywords: "life path number tarot, tarot bearing, tarot numerology",
+    },
+  },
+
+  // The three entries below are infographic-only, added for the "one Pinterest infographic
+  // per post" pass. Their Bluesky/Pinterest quote SETS aren't built yet (hence the empty
+  // arrays); the pin's own Pinterest SEO copy lives on its diagram object. All numbers are
+  // node-verified against lib/almanac.ts (collectiveYear/personalYear/personalMonth) and
+  // match each post's own worked examples.
+  "2027-tarot-year-card": {
+    slug: "2027-tarot-year-card",
+    postTitle: "Your 2027 Tarot Year Card",
+    majorIndex: 11, // Justice — the 2027 collective year card
+    blueskyQuotes: [],
+    pinterestQuotes: [],
+    math: {
+      eyebrow: "The 2027 Collective Year Card",
+      dateLabel: "2027",
+      steps: ["2 + 0 + 2 + 7 = 11"],
+      resultMajorIndex: 11, // Justice
+      pinTitle: "The 2027 Tarot Year Card Is Justice",
+      description:
+        "The tarot card for 2027 is Justice, the card every person alive is under for the same twelve months. Add the digits of the year, 2 + 0 + 2 + 7 = 11, and card eleven is Justice. Nothing wraps this year.",
+      keywords: "2027 tarot year card, tarot numerology, justice tarot",
+    },
+  },
+
+  "personal-year-number-tarot": {
+    slug: "personal-year-number-tarot",
+    postTitle: "Your Personal Year Number and Your Tarot Card",
+    majorIndex: 20, // Judgement — a card a reduced personal year can never reach
+    blueskyQuotes: [],
+    pinterestQuotes: [],
+    math: {
+      eyebrow: "Your Personal Year Card",
+      dateLabel: "March 15, 2026",
+      steps: ["(2 + 0 + 2 + 6) = 10", "3 + 15 + 10 = 28", "28 − 22 = 6"],
+      resultMajorIndex: 6, // The Lovers
+      pinTitle: "Your Personal Year Card on the Full Wheel",
+      description:
+        "A personal year number folds your birthday down to one of just nine cards. The Almanac keeps the whole wheel instead: add your birth month and day to the year's digits and wrap the 22 Majors. March 15 in 2026 comes out at the Lovers.",
+      keywords: "personal year number tarot, tarot numerology, tarot year card",
+    },
+  },
+
+  "personal-month-number-tarot": {
+    slug: "personal-month-number-tarot",
+    postTitle: "Your Personal Month Number and Your Tarot Card",
+    majorIndex: 14, // Temperance — the month card the reduced method can never reach
+    blueskyQuotes: [],
+    pinterestQuotes: [],
+    math: {
+      eyebrow: "Your Personal Month Card",
+      dateLabel: "August 2026",
+      steps: ["Year card: the Lovers = 6", "6 + 8 (August) = 14"],
+      resultMajorIndex: 14, // Temperance
+      pinTitle: "Your Personal Month Card, Unfolded",
+      description:
+        "A personal month number loops through nine cards and repeats before December. The Almanac steps forward on the full wheel: your year card plus the month. For March 15 in 2026, the Lovers plus August lands on Temperance, a card the folding never reaches.",
+      keywords: "personal month number tarot, tarot numerology, temperance tarot",
     },
   },
 };

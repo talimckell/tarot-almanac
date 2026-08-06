@@ -20,6 +20,7 @@ import { renderBlogRankComparison, WIDTH as RANK_W, HEIGHT as RANK_H } from "@/l
 import { renderBlogThreeFaces, WIDTH as FACES_W, HEIGHT as FACES_H } from "@/lib/blogThreeFacesRender";
 import { renderBlogGapHolds, WIDTH as GAP_W, HEIGHT as GAP_H } from "@/lib/blogGapHoldsRender";
 import { renderBlogNatalChart, WIDTH as NATAL_W, HEIGHT as NATAL_H } from "@/lib/blogNatalChartRender";
+import { renderBlogThreeStages, WIDTH as STAGES_W, HEIGHT as STAGES_H } from "@/lib/blogThreeStagesRender";
 import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
 import { collectiveDayCard, collectiveYear, personalYear } from "@/lib/almanac";
 import { getCardBySlug } from "@/lib/cards";
@@ -146,6 +147,14 @@ export async function GET(request: Request) {
       `${n.eyebrow} ${n.title} Born January February March April May June July August September October November December You The World Year Month Day the core inner life the surface The Bearing ${bearingStepsWord(chart.bearing.major)} steps at every layer ${names} ${n.caption} The Tarot Almanac tarotalmanac.com/blog 0123456789,`,
     );
     return new ImageResponse(renderBlogNatalChart(n), { width: NATAL_W, height: NATAL_H, fonts });
+  }
+
+  if (kind === "three-stages" && content.threeStages) {
+    const s = content.threeStages;
+    const fonts = await loadShareFonts(
+      `${s.eyebrow} ${s.title} Initiation Testing Reckoning Cards The Tarot Almanac tarotalmanac.com/blog 0123456789–`,
+    );
+    return new ImageResponse(renderBlogThreeStages(s), { width: STAGES_W, height: STAGES_H, fonts });
   }
 
   return new Response("Not found", { status: 404 });
