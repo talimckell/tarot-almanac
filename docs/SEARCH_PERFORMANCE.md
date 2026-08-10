@@ -22,6 +22,132 @@ searches (see `/month/2026-08`).
 
 ---
 
+## Reference: ad-revenue path (Mediavine) — added 2026-08-06
+
+Strategic context, not a weekly entry. Rationale: paid acquisition failed on conversion (see the
+post-mortem) and getting anyone to pay for a $12 chart is a long road, so display ads are a
+game-plan *supplement*. Mediavine is the chosen "quality" network. Verified 2026-08-06 against
+Mediavine's own pages.
+
+**The thresholds changed Jan 2026.** The old flat 50,000-sessions entry bar is retired. New shape:
+- **Journey by Mediavine** (the on-ramp, and it *is* Mediavine, not a lesser network): **1,000
+  sessions / 30 days**, no revenue minimum, 70% rev share, runs on the Grow plugin.
+- **Official** (full ad management): auto-upgrade once the site earns **$5,000 in ad revenue over a
+  trailing 12 months**. Higher tiers (Select/Signature/Premiere) are revenue bands far above us.
+
+**Track SESSIONS, not impressions.** Mediavine counts sessions (≈ visitors, ~20–30% below
+pageviews) — that's the Vercel "visitors" number, NOT GSC clicks or impressions. The chain is
+impressions → clicks (organic CTR ~1.3%) → sessions. So the weekly number to watch against the
+1,000 target comes from Vercel Web Analytics, once the paid-traffic residue clears and it reads
+true organic.
+
+**Where we stand (2026-08):** roughly ~150–300 organic sessions/mo (hard to pin — the Vercel 315
+visitors/3mo was ad-inflated). Call it ~15–25% of the way to Journey entry.
+
+**The 50k wall didn't vanish, it moved.** At an estimated ~$10 blended RPM, the $5,000/12-mo
+auto-upgrade needs ~40,000 sessions/mo. Rough revenue ladder (all ±wide, see RPM caveat):
+
+| Milestone | Sessions/mo | ~Monthly ad $ |
+|---|---|---|
+| Journey entry | 1,000 | ~$10 |
+| — | 5,000 | ~$50 |
+| Meaningful | 20,000 | ~$200 |
+| Official upgrade ($5k/yr) | ~40,000 | ~$400 |
+
+So: entering Journey (1,000 sessions) is a real 2027 milestone; ads producing *meaningful* money
+(hundreds/mo) needs tens of thousands of sessions = 2028+ on the current organic curve. Long-game
+supplement, not a near-term revenue fix.
+
+**RPM reality (the real constraint):** no tarot-specific RPM data exists in the by-niche datasets
+— the niche is too small to appear, which itself signals thin advertiser demand. Proxies: finance
+$15–40+, health/wellness $10–28, gaming/entertainment $2–7. Tarot/spiritual most likely ~$5–15
+blended, brand-safety-discounted. **Geo drags it lower:** non-US/UK/CA/AU traffic earns 50–80%
+less, and our traffic is only ~47% US (big India/Indonesia/Mexico slices). Blended RPM likely sits
+low in that range.
+
+**Content policy: no ban found; risk is RPM softness, not rejection.** Mediavine placing advertiser
+ads on a tarot site is a different transaction from ad networks (Teads/LinkedIn) banning tarot
+*service ads* — the latter is what blocked us on Google Ads and doesn't apply here. Mediavine's
+stated bar is original/audience-first content + brand-safe human traffic + good Google AdSense
+standing, and our human-authored, non-generated content is exactly their stated preference — a real
+approval edge as they fight AI filler. **OPEN / to verify:** couldn't read the Journey prohibited-
+content list directly (page 403'd); confirm with Mediavine in writing that tarot/divination content
+is in bounds before building around this.
+
+**What to do now:** nothing to act on — it's a sessions game and we're early. Start noting the
+weekly organic **sessions** figure (from Vercel) alongside impressions, tracking toward 1,000.
+
+---
+
+## 2026-08-10 (window: Jul 4–Aug 8, 36 days) — first clean organic week
+
+| | | vs last week |
+|---|---|---|
+| Impressions | ~1,500 | +540 |
+| **Clicks** | **22** | **+10** |
+| CTR | ~1.5% | +0.25pt |
+| Page 1 (pos ≤ 10) | **114** | +36 |
+| **Organic sessions (Vercel, clean)** | **~37 / 7 days ≈ ~160/mo** | first true read |
+
+### Two engines, now cleanly separated
+
+**Ads residue cleared, exactly as the post-mortem predicted.** Vercel fell from 315 visitors/3mo
+(ad-inflated) to **~37 visitors in the Aug 3–10 week** — pure organic + direct. That's the real
+baseline: **~160 sessions/month.** Not a regression; the paid scaffolding came down on schedule.
+- Search referrals: google 11, duckduckgo 6, yahoo 1. Rest direct.
+- **Geo got healthier: US is now 61%** (was 47% with ads). Organic traffic skews US, which is
+  better for eventual RPM — the ads had been buying the low-value geo share.
+
+**Mediavine Journey tracker:** ~160 sessions/mo ÷ 1,000 target = **~16% of the way to the door.**
+Matches the reference-section estimate. This is the number to grow; it's the one that matters for
+the ad-revenue path.
+
+### The ramp has plateaued — reality is tracking the *conservative* curve
+
+Daily impressions have flattened: Aug 2–8 ran ~570 (~81/day) vs the prior week's ~596. August is
+pacing ~2,500 for the month — **below the conservative projection (3,000)**, not the realistic one.
+The explosive discovery ramp is over; we're in slow-compounding territory now. (GSC under-reports
+the last 1–2 days, so Aug 7–8 may revise up a little, but the flattening is real.)
+
+**But the maturation signals are the good kind**, and they're why clicks (22) outgrew impressions:
+page-1 count 78 → 114, CTR rising, recent-day positions improving (Aug 7–8 hit pos 22–32). Pages
+are climbing *within* a flat impression pool — quality over quantity, which is the healthier way to
+grow at this stage.
+
+### Best new signal: timely content ranks fast AND brings sessions
+
+`/blog/2027-tarot-year-card` went live and immediately hit **pos 8.2 (25 impr, 2 clicks)** — and was
+the **#1 Vercel page (10 visitors)**. Timely/seasonal content ("tarot august 2026" ranks pos 8 too)
+is the fastest path to both rankings and sessions, and it's exactly the kind of content that gives
+people a reason to *return* (ties to the pay-to-keep thread). Worth leaning into: dated, "what's
+coming" content beats evergreen card meanings for this site.
+
+### Page 1 roster (pos ≤ 10) — 114 pages (was 78)
+
+Composition: **74 birthday · 16 today · 10 personal-year · 6 personal-month · 3 blog · 1 bearing ·
+4 other.** Trustworthy rows (≥ 5 impr) worth naming: `/birthday/october-29` 7.4 (22i, click) ·
+`/blog/2027-tarot-year-card` 8.2 (25i, 2 clicks) · `/birthday/august-17` 5.4 (17i, click) ·
+`/personal-month-card/hierophant` 7.0 (9i, 2 clicks) · `/birthday/december-20` 7.9 (13i) ·
+`/personal-month-card/magician` 5.7 (10i) · `/birthday/february-27` 5.8 (11i) · `/birthday/october-31`
+6.5 (11i). Generic `/tarot/*` still absent from page 1 (nine-of-wands cluster pulls 148 impr but
+sits pos 83).
+
+### Unchanged threads
+
+- **Birth-card split stays closed.** Hub `/tarot-birth-card` 82.0, blog 77.8 — still parallel,
+  still both weak on the head term, no divergence. Correctly a non-bug.
+- **`/month/2026-09` still hasn't appeared.** The seasonal Sept climb I flagged for "watch this
+  week" hasn't started; `/month/2026-08` is the only month page with volume and it's slipping
+  (11.9 → 12.6) as August matures. Keep watching — Sept should surface as searches shift.
+
+### Baseline to beat next week
+
+Impressions ~1,500 · clicks 22 · CTR ~1.5% · 114 on page 1 · **organic ~160 sessions/mo (~16% to
+Journey)**. Milestones: `/month/2026-09` appearing, sessions trend (is ~160 the floor or does it
+climb?), and whether the impression plateau breaks or holds.
+
+---
+
 ## 2026-08-03 (window: Jul 4–Aug 1, 29 days)
 
 | | | vs last week |
