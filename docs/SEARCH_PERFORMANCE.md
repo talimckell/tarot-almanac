@@ -79,6 +79,84 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-08-17 (window: Jul 4–Aug 15, 43 days) — first soft week on the margin
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | ~1,900 | +400 |
+| Clicks | 25 | +3 |
+| CTR | ~1.3% | ~flat |
+| Page 1 (pos ≤ 10) | 120 | +6 |
+| **Organic sessions (Vercel)** | **~28 / 7 days ≈ ~120/mo** | down from ~160/mo |
+
+**Read the margin, not the cumulative.** The trailing-window totals keep rising, but the *new week*
+(Aug 9–15) softened on both metrics:
+
+| Marginal week | Impressions | Clicks |
+|---|---|---|
+| Aug 2–8 | ~570 (~81/day) | 10 |
+| Aug 9–15 | ~358 (~51/day) | 3 |
+
+That's the first genuinely down week since indexing began. Honest read: **volume is receding, not
+just plateauing.** Most likely a mix of (1) mid-August seasonality (summer lull), (2) `/month/2026-08`
+decaying as its month ends — it's the top earner and August demand fades late-month, (3) small-site
+volatility. GSC also under-reports the last 1–2 days, so Aug 14–15 will revise up somewhat and soften
+the drop — but the direction is down regardless.
+
+**Structure kept improving through the volume dip**, same as last week but starker: page-1 count
+114 → 120, mobile position 14.5 → 13.6, `/blog/2027-tarot-year-card` holding pos 8.3. So pages are
+still climbing and multiplying inside a shrinking impression pool. The question next week answers:
+is Aug 9–15 seasonal (recovers in September) or the early shape of a lower ceiling? One soft week on
+a 6-week-old site isn't a verdict — don't overreact — but it's the first data point that isn't up.
+
+### Notable
+
+- **`/tarot-birth-chart` is quietly earning organically** — pos 57 → 48, 30 impr, 2 clicks. The page
+  ads pointed at is slowly picking up organic traction on its own. Worth remembering when the
+  conversion-path work eventually happens: it'll have a small warm organic stream by then.
+- **`/month/2026-08` still the top earner** (6 clicks, 102 impr) even while decaying — confirms the
+  month pages are the workhorse, and the late-month fade is why watching the September handoff matters.
+- **Timely content holds:** `/blog/2027-tarot-year-card` steady at pos 8.3 (27 impr, 2 clicks). The
+  lesson from last week stands — dated/seasonal content is the fastest ranker.
+
+### `/month/2026-09` — cause found: indexing was never requested
+
+Flagged two weeks running for not appearing. Verified 2026-08-17 that the page is live (200), in the
+sitemap, and linked from the `/month` hub — but the actual cause was simpler: **indexing had never
+been requested for it in Search Console.** Requested manually 2026-08-17. Expect it to get crawled
+and start appearing within a few days to ~2 weeks (if September demand has started).
+
+**Recurring lesson — index month pages EARLY.** `/month/2026-08` became the top earner precisely
+because it was indexed in time to catch July's ahead-of-time "August 2026 tarot" searches. Month
+pages are seasonal and time-sensitive: the "next month" page should be index-requested ~4–6 weeks
+ahead so it's live in the index before the ahead-of-time demand arrives. Requesting 2026-09 only on
+Aug 17 likely means it misses some of the early September-ahead demand. Standing action: each month,
+request indexing on the following month's `/month/[ym]` page well ahead of time.
+
+### Unchanged
+
+Birth-card thread stays closed (hub 78.4, blog 77.8 — tied, parallel, no divergence). Generic
+`/tarot/*` still absent from page 1 (nine-of-wands 150 impr at pos 83; `/tarot` index 126 impr, one
+fluke click at pos 87).
+
+### Sessions also softened — but it's noise-level
+
+Vercel Aug 10–17: ~28 visitors (US 54%, Singapore 5 the notable one) ≈ **~120 sessions/mo, down from
+~160** → ~12% to Journey's 1,000 (was ~16%). Both datasets dipped together, which points to the same
+August-lull cause. But at 28-vs-37 visitors, a 9-visitor swing is inside the noise band at this
+scale — don't read it as a trend on its own; read it as "GSC and Vercel both soft, consistent with
+summer." `/month/2026-09` already drew 2 direct visitors here before indexing — it'll pick up once
+crawled. Search referrals split ddg 5 / google 3 / bing 2 / ecosia 2 (DuckDuckGo edged Google — tiny
+numbers, just noting).
+
+### Baseline to beat next week
+
+Cumulative: impressions ~1,900 · clicks 25 · 120 on page 1 · organic ~120 sessions/mo (~12% to
+Journey). **The real watch: does the margin recover after August** (both GSC ~51/day and Vercel ~28
+visitors dipped), and does `/month/2026-09` surface now that indexing was requested 2026-08-17.
+
+---
+
 ## 2026-08-10 (window: Jul 4–Aug 8, 36 days) — first clean organic week
 
 | | | vs last week |
