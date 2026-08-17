@@ -3,11 +3,11 @@
 Maintained by the weekly Blog Topic Scout (the `blog` skill, Stages 1–2 only). Research and
 proposals only: nothing here is a decision, and no post gets written until Tali picks one.
 
-**Last run:** 2026-08-14. Entry format is the one defined in the blog skill's Search stage.
+**Last run:** 2026-08-17. Entry format is the one defined in the blog skill's Search stage.
 
 ---
 
-## Account (verified against the files, 2026-08-14)
+## Account (verified against the files, 2026-08-17)
 
 All **11 entries in `lib/blog.ts` are published** (uncommented). There are **no dormant
 scaffolds left**: the 2027 year-card post was the last one, and it went live 2026-08-04.
@@ -37,11 +37,45 @@ NUMEROLOGY term and take the comparison at full length. Where that discipline sl
 **One draft exists outside the registry:** `content/drafts/every-us-presidents-bearing.md`
 (uncommitted). Tracked below as in-flight.
 
-**What the search log says to weight this round** (`docs/SEARCH_PERFORMANCE.md`, 2026-08-10):
-timely/dated content ranks fastest and brings the most sessions. `/blog/2027-tarot-year-card`
-hit position 8.2 within days of going live and was the top page by visitors. Sessions are now
-the number that matters (Mediavine Journey needs 1,000/mo; we're at ~160). Evergreen
-card-meaning content is the slow lane; dated "what's coming" content is the fast one.
+**What the search log says to weight this round** (`docs/SEARCH_PERFORMANCE.md`, 2026-08-17):
+timely/dated content is still the fast lane, and it held through a soft week. The marginal week
+Aug 9–15 was the **first down week since indexing began** (~51 impressions/day vs ~81 the week
+before, 3 clicks vs 10, sessions ~120/mo down from ~160), most likely August lull plus
+`/month/2026-08` decaying late-month. Structure kept improving inside the shrinking pool:
+page-1 count 114 → 120, and `/blog/2027-tarot-year-card` holds **position 8.3**. So the
+2026-08-10 lesson survives its first stress test: dated "what's coming" content ranks fast and
+keeps ranking, while evergreen card-meaning content stays the slow lane.
+
+Two things that read as blog-relevant this week, both arguing the same way:
+
+- **Seasonal pages earn by being indexed early, not by being better.** `/month/2026-09` never
+  appeared because indexing was never requested; it was requested 2026-08-17. That's a hub
+  chore, not a blog job, but it is the same clock the seasonal blog candidates run on: publish
+  with runway, because the ramp is ~3 weeks and the demand window doesn't wait.
+- **A receding impression pool argues for the timely candidates over the big-SERP ones.** In a
+  soft month the winnable thing is a term with no incumbent yet (2027, 2028), not a term where
+  Biddy and Labyrinthos are already sitting.
+
+---
+
+## Ranking this week (2026-08-17)
+
+Candidates run top-to-bottom below in priority order. The short version:
+
+| | Candidate | Priority | Note |
+|---|---|---|---|
+| 1 | 2027 Universal Year Number | high | timely, runway, verified; unchanged at the top |
+| 2 | Compatibility by birthday | high, blocked | wants the engine shipped first |
+| 3 | Every US President's Bearing | medium-high | drafted, waiting on Tali's read |
+| 4 | The card of the year you were born | medium-high | **new this week** |
+| 5 | Master numbers 11 and 22 | medium-high | cheap, narrow, slots into the series |
+| 6 | Zodiac card vs birthday card | medium | biggest audience, hardest SERP |
+| 7 | The card of the day | medium | conversion piece, unwinnable head term |
+| 8 | Every famous person's Bearing | low-medium | **new this week**, follows the presidents piece |
+| 9 | The four suits and four elements | low | a paragraph, not a post |
+| 10 | Your 2028 tarot year card | low now, high Aug 2027 | listed so the timing isn't missed |
+
+Nothing was demoted this round; two candidates were added and the top four are unchanged.
 
 ---
 
@@ -64,6 +98,16 @@ card-meaning content is the slow lane; dated "what's coming" content is the fast
 - Internal links: blog-11 (personal year number) and blog-10 (personal month number) are the
   direct siblings; blog-06 is the reciprocal (the card term ↔ the number term); blog-01 for
   the cornerstone. CTA to `/personal-year-card`.
+- Re-surveyed 2026-08-17, unchanged and worth two new notes. (1) The competitor vocabulary is
+  settled and specific: "Universal Year 2 (11 undertone)", "master number 11 year", the 11
+  "operating on the chassis of the 2". Use their words for coverage, then show the arithmetic
+  they don't. (2) **tarot.com publishes a per-year ruling-card page** ("The Ruling Tarot Card of
+  2026: The Wheel of Fortune") and its method agrees with ours — verified
+  `collectiveYear(2026) = 10` = Wheel of Fortune. So the strongest site on this SERP will
+  eventually publish a 2027 page, and the runway we have is a lead, not a moat. Meanwhile the
+  smaller sites are visibly inconsistent about 2027 (one chart in the live SERP lists it as the
+  Hanged One, which is 2028 under the standard sum — verified `collectiveYear(2028) = 12`).
+  Naming that disagreement is a paragraph the incumbents can't write.
 - Priority: **high** — it is the only candidate on this list that is both *timely* (the
   Nov–Jan 2027 spike, with enough runway for the ~3-week ramp) and a clean extension of the
   number-vs-hub split that has already earned clicks. Must keep its seoTitle and H1 off
@@ -103,6 +147,35 @@ card-meaning content is the slow lane; dated "what's coming" content is the fast
 - Priority: **medium-high** — furthest along of anything here, and it does a job no SEO post
   does. Needs Tali's read on the political-commentary temperature before it goes anywhere,
   which is exactly why it stays a draft until she says otherwise.
+
+## The Card of the Year You Were Born
+- Status: idea (new 2026-08-17)
+- Intent: "what tarot card is my birth year" — someone who has already met the birthday-card idea
+  and wants the *year* read on its own. A distinct term from birth card, and distinct from
+  everything the site currently has a page for (`/birthday/[month-day]` is month-and-day only;
+  the birth year appears only inside the natal chart).
+- Head term: **birth year tarot card** (+ "what tarot card represents my birth year", "tarot card
+  for the year I was born", "1990 tarot card")
+- Competition & gap: **Parade owns the term** ("The Tarot Card That Represents You, Based on Your
+  Birth Year"), with Yahoo/MSN syndication behind it and a pile of calculators (sagelon,
+  darkforesttarotcards, flickerdeck, deckaura, tarot.com) ranking on the adjacent birth-card
+  phrasings. Parade is a hard SERP neighbour, but the incumbents all do the same reduction: fold
+  the year to one digit, land in nine cards, and conflate the year card with the birth card in
+  the same breath (the live SERP mixes them mid-answer). Our gap is the sibling-series argument
+  on a fresh term, and it is arithmetically strong: verified against `lib/almanac.ts`, birth
+  years 1925–2025 reach **all 22 Majors** (1985 → the Magician, 1990 → the Sun, 1999 → the
+  Lovers, 2000 → the High Priestess), where the reduced method reaches nine. The asset is a
+  **century table, one row per birth year**, each linking to `/tarot/[slug]` — the same
+  internal-link shape that rescued the orphan pages, and a genuine reason for a reader to scroll
+  to their own row. Second gift: the year you were born is a *collective* card, the world's card
+  the year you arrived, which is the site's own personal-vs-collective spine restated.
+- Internal links: blog-11 (personal year number) and blog-09 (life path) are the direct siblings;
+  blog-05 (natal chart) is where the birth year already lives; blog-01 for the cornerstone. CTA
+  to `/tarot-birth-chart` (the chart is the page that actually uses the birth year), not
+  `/personal-year-card`.
+- Priority: **medium-high** — a real term with a clean, verified argument and a table asset, on
+  ground no existing page of ours claims. Below the 2027 post only because it is evergreen
+  (slow lane) and Parade is the ceiling on position.
 
 ## Master Numbers 11 and 22, and What the 22-Card Wheel Does With Them
 - Status: idea
@@ -158,6 +231,23 @@ card-meaning content is the slow lane; dated "what's coming" content is the fast
   subscription, but the head term is unwinnable, so it has to be pitched at the long-tail
   question phrasings and treated as a conversion piece rather than a traffic piece.
 
+## Every Famous Person's Bearing (the celebrity version of the presidents piece)
+- Status: idea (new 2026-08-17)
+- Intent: browsing curiosity, arriving through a name people already search.
+- Head term: **celebrity tarot birth cards** (+ "Taylor Swift tarot birth card", "celebrity birth
+  card", "what is [name]'s tarot card")
+- Competition & gap: **Biddy Tarot owns this outright**, with Starsinsider and its MSN
+  syndication next to it. Biddy's own page states the ceiling out loud, that there are "only
+  twelve possible combinations" of birth cards, which is the exact limitation the sibling series
+  exists to argue with. So the gap is real: their celebrity list can only ever sort famous people
+  into twelve buckets, and a Bearing sorts them into twenty-two without needing a birth year at
+  all (which matters here, because celebrity birth years are exactly the fact that gets disputed).
+- Internal links: blog-04 (Bearing) is the parent; the presidents piece, if it ships, is the
+  sibling. CTA to `/bearing`.
+- Priority: **low-medium** — the job it does (link bait, spreading the word "Bearing") is already
+  being done by the presidents draft, which is further along and doesn't have Biddy sitting on
+  its term. Keep it as the follow-up if the presidents piece lands well, not as competition for it.
+
 ## The Four Suits and the Four Elements
 - Status: idea
 - Intent: beginner reference lookup.
@@ -183,6 +273,22 @@ card-meaning content is the slow lane; dated "what's coming" content is the fast
   August 2027. Listed so the timing isn't missed.
 
 ---
+
+## Better as an upgrade to an existing page, not a new post
+
+Found while surveying, worth recording so they don't get re-proposed as posts every week.
+
+- **"Why do tarot birth card calculators disagree?"** The live SERP is a mess in a way that's
+  useful: The Tarot School, HowStuffWorks, tarot.com and healingthrutarot all describe *different*
+  reduction conventions (MM+DD+19+YY vs digit-by-digit vs stopping at two cards vs three), and
+  one page claims every method "magically" agrees while readers plainly get different answers from
+  different calculators. That is a real, high-intent question with no clean answer ranking for it.
+  But it is **blog-08's ground already** ("why is my birth card different"), so the move is a
+  section inside blog-08 naming the specific conventions and what each one throws away, plus an
+  FAQ row on the `/tarot-birth-card` hub. A separate post would re-open the cannibalization the
+  2026-07-20 → 08-03 thread just closed.
+- **The four suits and the four elements** (its own entry above, kept at low priority for the same
+  reason): one paragraph inside another post, or a `/tarot` hub improvement.
 
 ## Deliberately not proposed
 
