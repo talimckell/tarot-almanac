@@ -96,9 +96,23 @@ Ahrefs is not connected, so keyword work is done through the live web.
 
 ## Stage 3 — Write
 
-Draft the prose fresh, in Tali's voice, held to the voice doc. The hard,
-near-absolute rules (the reliable AI tells) are: **no em-dashes in prose** and
-**no "not X but Y" / "isn't about X, it's about Y" seesaws.** Beyond those: stay
+Draft the prose fresh, in Tali's voice, held to the voice doc. **Read
+`THE BLOG REGISTER` in the voice doc before drafting** (added 2026-08-17): blog
+posts run in the historian's mode, chronology as the spine, the stake stated
+late and flat, rival positions attributed fairly, warmth returning for the
+second-person sections. Contractions throughout, with one deliberate
+uncontracted short sentence per post to do the turning.
+
+The word-level rules below are a *second* pass and they do not catch the thing
+that most often makes a draft read as machine-made. That failure is
+architectural: a post shaped as a rebuttal, every section built identically,
+every paragraph closing on a small aphorism, and no person anywhere in the
+piece. Sentence-rhythm metrics will look completely normal while it happens.
+Check the shape first, then the sentences.
+
+The hard, near-absolute sentence rules (the reliable AI tells) are: **no
+em-dashes in prose** and **no "not X but Y" / "isn't about X, it's about Y"
+seesaws.** Beyond those: stay
 concrete over abstract (show with a lived, bodily example, never define in the
 air), vary sentence length, break the rule-of-three drumbeat, drop the
 signposting and the tidy-bow endings, and honor the forbidden-phrase blocklist and

@@ -26,7 +26,7 @@ Both methods circle. Nine years on, March 15 is back on the Lovers in 2035, the 
 
 Your year card is your own fixed card, advanced by the world's. The numerology version has no equivalent for this part, because a single digit has nowhere to keep the second half of it.
 
-March 15's [Bearing](#) is the Moon, card eighteen, the card that birthday carries in every year there is. The card everybody shares in 2026 is the Wheel of Fortune, card ten. Eighteen and ten make twenty-eight, which wraps to six, the Lovers. That's the entire derivation: your Bearing, plus the world's number, on the wheel.
+March 15's [Bearing](#) is the Moon, card eighteen, the card that birthday carries in every year there is. [The card everybody shares](#) in 2026 is the Wheel of Fortune, card ten. Eighteen and ten make twenty-eight, which wraps to six, the Lovers. That's the entire derivation: your Bearing, plus the world's number, on the wheel.
 
 <figure><img class="diagram" src="/year-card-derivation.svg" alt="The twenty-two Major Arcana arranged in a circle. The Wheel of Fortune at ten is marked as the card everyone shares in 2026, and the Moon at eighteen as the Bearing for a March 15 birthday. A dashed arc runs ten steps clockwise from the Moon, past the top of the wheel, to the Lovers at six, that birthday's 2026 card." /><figcaption>Your Bearing is where you always stand. The world's card for the year is how far you get moved. March 15 starts at the Moon, takes 2026's ten steps, and lands on the Lovers.</figcaption></figure>
 

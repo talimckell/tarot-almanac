@@ -159,10 +159,67 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     linkMap: {
       "How Tarot Numerology Works": "/blog/how-tarot-numerology-works",
       "the Major Arcana's three stages": "/blog/major-arcana-three-stages",
+      // Reciprocal, added when blog-12 went live: this post's one-sentence 11/2 aside is that post at length.
+      "keeps eleven as a master number and reads it as an 11/2 year": "/blog/2027-universal-year-number",
       "your Bearing": "/bearing",
       "your personal year number": "/blog/personal-year-number-tarot",
       "What Is Tarot Numerology?": "/blog/what-is-tarot-numerology",
       "Find your 2027 card →": "/personal-year-card",
+    },
+  },
+  // DRAFTED 2026-08-17, NOT PUBLISHED — commented out pending the Illustrate and Review gates.
+  //
+  // Owner decisions, 2026-08-17: majorIndex 2 (the High Priestess) and section "your-cards",
+  // both confirmed. The glyph is a deliberate DUPLICATE — blog-02 also runs majorIndex 2 — and
+  // it's the first repeated glyph on the index. It reads fine because the two sit in different
+  // sections (blog-02 under "Start here", this under "Find your own cards"), so they never
+  // render adjacent. Don't "fix" this later by reassigning one of them.
+  //
+  // Voice: this is the first post written in THE BLOG REGISTER (the historian's mode with
+  // contractions), settled here and written up in the voice doc + the blog skill's Write stage.
+  //
+  // The numerology-door sibling of blog-06, running the same anti-cannibalization split the
+  // series already uses: blog-06 owns the CARD term ("2027 tarot year card"); this owns the NUMBER term
+  // ("universal year number 2027" / "2027 numerology"), which is a separate SERP occupied by
+  // numato / elunara / tisyasetu / lunary, none of whom show the arithmetic. Keep this post's
+  // seoTitle, H1 and slug off "2027 tarot year card", and keep blog-06's off "universal year".
+  // blog-06 already touches the 11/2 question in ONE sentence; this post is that sentence at
+  // full length. Don't re-do Justice's reading or the month table here.
+  //
+  // Numbers node-verified against lib/almanac.ts (scratchpad script, 2026-08-17):
+  // sumDigits(2027) = 11 and collectiveYear(2027) = 11 = Justice; MAJORS[2] = the High
+  // Priestess; the 2020s table row by row (2020-2025 all sum to 9 or less so both systems
+  // agree, 2026-2029 sum to 10/11/12/13 and diverge, 2030 rejoins at 5 = the Hierophant);
+  // 164 of the 201 years from 1900 to 2100 have a digit sum above 9; the seven digit-sum-22
+  // years since 1900 are 1939/1948/1957/1966/1975/1984/1993 and every one wraps to 0, the
+  // Fool; March 15's Bearing is the Moon (18), its 2027 Almanac card is the Chariot (7), and
+  // its folded numerology personal year for 2027 is 2. Card copy for Justice and the High
+  // Priestess is quoted from content/cards/{justice,high-priestess}.json, not newly written.
+  //
+  // No figures yet (Illustrate is the next gate) and no lib/blogSocialContent.ts entry yet.
+  // On publish: wire a reciprocal link from blog-06 and from blog-11, both of which currently
+  // carry the 11/2 point in passing.
+  {
+    slug: "2027-universal-year-number",
+    section: "your-cards",
+    title: "The 2027 Universal Year Number and Its Tarot Card",
+    seoTitle: "2027 Numerology: Universal Year Number and Its Tarot Card",
+    metaDescription:
+      "The universal year number for 2027 is 11, and numerology folds it to a 2. On the wheel of twenty-two it stays eleven and lands on Justice. What the fold costs.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "Every year has a number everyone shares, and 2027's is eleven. Numerology names eleven a master number and then reads it as a two. The wheel of twenty-two keeps it at eleven, which is where Justice sits, and those are two very different years.",
+    indexTeaser:
+      "2027's universal year number is eleven. Numerology reads it as a two; the wheel of twenty-two keeps it at eleven, where Justice sits. Two very different years out of one sum.",
+    majorIndex: 2, // The High Priestess — the card the fold hands you instead of Justice
+    file: "blog-12-2027-universal-year-number.md",
+    linkMap: {
+      "reverse twice": "/blog/the-shadow-and-the-reclaiming",
+      "your personal year number": "/blog/personal-year-number-tarot",
+      "your Bearing": "/blog/what-is-a-tarot-bearing",
+      "The 2027 tarot year card": "/blog/2027-tarot-year-card",
+      "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+      "See where 2027 puts you →": "/personal-year-card",
     },
   },
   // Published 2026-07-08. Also the link target for "Initiation / Testing / Reckoning"
@@ -335,6 +392,8 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
       "Bearing": "/blog/what-is-a-tarot-bearing",
       "The 2027 year card": "/blog/2027-tarot-year-card",
+      // Reciprocal, added when blog-12 went live: where the world's number for a year comes from.
+      "The card everybody shares": "/blog/2027-universal-year-number",
       "personal month card": "/personal-month-card",
       "Find your year card →": "/personal-year-card",
     },

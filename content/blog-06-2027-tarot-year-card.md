@@ -67,7 +67,7 @@ The gap between your card and the collective card stays your Bearing. It doesn't
 
 None of the above needs to be taken on trust, which is the point of running tarot on arithmetic. Add the digits of 2027 and you get eleven. Count to the eleventh Major Arcana card and you get Justice. Add a month number and wrap at twenty-two and you get the table above, every row of it, in about the time it takes to find a pen.
 
-2027 is a good year to make that point, because it's one where the methods converge. The Almanac and the standard tarot year-card count both land on Justice. Numerology proper keeps eleven as a master number and reads it as an 11/2 year, so the digit stays put and a second reading rides alongside it. Where the methods part company is birthdays, where reduction folds everyone down into the first nine cards while the wheel keeps all twenty-two in play. See [What Is Tarot Numerology?](#) for why none of this has to be taken on faith.
+2027 is a good year to make that point, because it's one where the methods converge. The Almanac and the standard tarot year-card count both land on Justice. Numerology proper [keeps eleven as a master number and reads it as an 11/2 year](#), so the digit stays put and a second reading rides alongside it. Where the methods part company is birthdays, where reduction folds everyone down into the first nine cards while the wheel keeps all twenty-two in play. See [What Is Tarot Numerology?](#) for why none of this has to be taken on faith.
 
 See where 2027 places you.
 
