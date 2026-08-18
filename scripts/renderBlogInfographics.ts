@@ -8,7 +8,7 @@ import { mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { BLOG_SOCIAL } from "../lib/blogSocialContent";
+import { BLOG_SOCIAL, type BlogSocialContent } from "../lib/blogSocialContent";
 import { MAJORS, ELEMENT_BY_MAJOR, collectiveDayCard, collectiveYear, personalYear } from "../lib/almanac";
 import { getCardBySlug } from "../lib/cards";
 import { computeNatalChart, bearingStepsWord } from "../lib/natalChart";
@@ -153,7 +153,7 @@ async function main() {
   for (const slug of SLUG_ORDER) {
     const content = BLOG_SOCIAL[slug];
     if (!content) throw new Error(`no blog social content for ${slug}`);
-    const present = KINDS.filter((k) => (content as Record<string, unknown>)[k]);
+    const present = KINDS.filter((k) => content[k as keyof BlogSocialContent]);
 
     for (const kind of present) {
       const built = await build(content, kind);
