@@ -84,6 +84,25 @@ export function isPastOrToday(target: YMD, now: YMD): boolean {
   return Date.UTC(target.y, target.m - 1, target.d) <= Date.UTC(now.y, now.m - 1, now.d);
 }
 
+// Trailing window of dated /today pages exposed to search: indexable AND seeded into
+// the sitemap. The collective archive is public for ALL past dates (see
+// isCollectiveOpenForViewer), but only this rolling window is indexable — older dates
+// still render for anyone time-travelling, they just carry robots:noindex, so the
+// unbounded past (every day back to year 1) can't become a crawl trap that dilutes
+// crawl budget. app/sitemap.ts seeds exactly this many days and app/today/[date] gates
+// robots on isIndexableDate, so the sitemap and the index gate can never drift.
+export const INDEXABLE_DATE_DAYS_BACK = 365;
+
+// True when target falls in the trailing INDEXABLE_DATE_DAYS_BACK-day window ending
+// today (UTC day granularity): today back through (N-1) days ago. Future dates and
+// dates older than the window are excluded. This is the SEO-indexable set only, NOT an
+// access gate — access stays isCollectiveOpenForViewer / isDateOpenForViewer.
+export function isIndexableDate(target: YMD, now: YMD): boolean {
+  const t = Date.UTC(target.y, target.m - 1, target.d);
+  const n = Date.UTC(now.y, now.m - 1, now.d);
+  return t <= n && t > n - INDEXABLE_DATE_DAYS_BACK * 86400000;
+}
+
 // The COLLECTIVE (non-personal) track is public for every past/today date: this is
 // the free, indexable "card of the day" archive that SEO rides on. Future dates
 // stay on the same time-travel gate as the personal track (anti-screenshot-harvest;

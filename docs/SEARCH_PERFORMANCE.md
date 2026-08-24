@@ -125,9 +125,29 @@ in order. So true human organic is below 176. Search referrers (the real signal)
 
 ### Mediavine / Journey tracker
 
-Muddy this week — the 30-day Vercel window mixes ad-tail + bots, so no clean weekly session count.
-Estimate real human organic ~130–160/mo → **~14% to Journey's 1,000.** Grab a clean 7-day Vercel pull
-next time for a truer read. Directionally flat-to-up with the GSC recovery.
+Clean 7-day Vercel pull (Aug 17–24): **70 visitors (+89%)**, 203 pageviews (+269%), bounce 61%.
+- Anchor number: last 30 days = 176 visitors → **~18% to Journey's 1,000/mo.** Rising.
+- This week's 70/wk pace, if sustained, annualizes to ~300/mo (~30%) — but it's one strong week,
+  ~2× the recent ~35/wk baseline, driven by the `/month/2026-09` spike. Don't rebaseline on it yet.
+- **Pageviews +269% vs visitors +89% is the bot tell** — 2.9 pv/visitor (was ~1.5). The `/today/`
+  crawler (see below) inflates pageviews, so discount engagement metrics accordingly.
+
+### Crawl-trap fix shipped (2026-08-24) — `/today/[date]` unbounded indexable past
+
+The bot pattern (`/today/2006-04-*`, `/today/2026-04-*` sequential walks) led to a real SEO bug.
+Verified on the live site: past `/today/[date]` pages were **indexable with no lower bound** — even
+`/today/1900-01-01` returned 200 + indexable — and the Earlier/Later stepper links every adjacent
+day, so a crawler (or Googlebot) could walk day-by-day into an unbounded indexable past. Classic
+crawl trap; a plausible contributor to `/today` sitting in "discovered – not indexed" (per the
+2026-07 GSC state). The sitemap already capped at a 365-day window, but the noindex gate didn't —
+they disagreed.
+
+**Fix:** added `INDEXABLE_DATE_DAYS_BACK` + `isIndexableDate()` to `lib/today.ts` as the single
+source of truth; `app/today/[date]` now noindexes dates outside the trailing 365-day window (matching
+the sitemap, which now imports the same constant so they can't drift). **Access is unchanged** — old
+dates still render 200 for time-travellers; only indexability changed. Verified: tsc clean; unit test
+confirms today/yesterday/now-364 indexable, now-365/1900/future noindex. Watch GSC `/today` coverage
+over the next few weeks to see if crawl budget frees up.
 
 ### Also moving
 

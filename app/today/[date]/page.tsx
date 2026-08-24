@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import { parseBirthday, parseDateSlug, formatDateSlug, isPastOrToday, BIRTHDAY_COOKIE } from "../../../lib/today";
+import { parseBirthday, parseDateSlug, formatDateSlug, isIndexableDate, BIRTHDAY_COOKIE } from "../../../lib/today";
 import { formatLongDate, collectiveDayCard } from "../../../lib/almanac";
 import { getSignedInBirthday } from "../../../lib/accountBirthday";
 import { viewerNow } from "../../../lib/viewerNow";
@@ -24,14 +24,14 @@ export async function generateMetadata({
   const label = formatLongDate(target.y, target.m, target.d);
   const title = `${label} Tarot Card | The Tarot Almanac`;
 
-  // Future dates are gated (subscriber time-travel) and speculative, so they stay
-  // out of the index. Past/today collective readings are public, so they're indexed
-  // with a self-canonical and a card-specific description for the SERP snippet.
-  // "now" is resolved once per request from the viewer's timezone (viewerNow), so
-  // the robots decision here and the content gate below always agree within a
-  // request. Future dates stay out of the index; past/today collective readings
-  // are indexed. Sitemap coverage stays on a stable UTC clock (app/sitemap.ts).
-  if (!isPastOrToday(target, await viewerNow())) {
+  // Only the trailing INDEXABLE_DATE_DAYS_BACK-day window is indexed, matching the
+  // sitemap (both share the constant, so they can't drift). Future dates are gated
+  // (subscriber time-travel) and speculative; dates older than the window stay fully
+  // viewable for time-travellers but carry robots:noindex — otherwise the Earlier/Later
+  // stepper exposes an unbounded past (every day back to year 1), a crawl trap that
+  // dilutes crawl budget. Only indexability changes here; access stays open via the
+  // collective gate. "now" is the viewer's-timezone day (viewerNow).
+  if (!isIndexableDate(target, await viewerNow())) {
     return { title, robots: { index: false } };
   }
 

@@ -4,7 +4,7 @@ import { getAllCards } from "../lib/cards";
 import { MAJOR_SLUGS } from "../lib/almanac";
 import { BLOG_POSTS } from "../lib/blog";
 import { allBirthdays, birthdaySlug } from "../lib/birthday";
-import { addDays, formatDateSlug, addMonths, formatMonthSlug, type YMD } from "../lib/today";
+import { addDays, formatDateSlug, addMonths, formatMonthSlug, INDEXABLE_DATE_DAYS_BACK, type YMD } from "../lib/today";
 
 // Regenerate daily so the trailing date window keeps a fresh "today". A day of
 // staleness on a sitemap is harmless.
@@ -12,10 +12,11 @@ export const revalidate = 86400;
 
 // How many days of dated /today pages to seed into the sitemap. The Earlier/Later
 // stepper links every adjacent date, so Google can crawl deeper history from any
-// seeded page — this window just bounds crawl focus on the freshest, most-searched
-// dates. Raise it to list more history directly. Future dates are never listed
-// (they're gated + noindex).
-const DATE_SITEMAP_DAYS_BACK = 365;
+// seeded page — but dates outside this window now carry robots:noindex (the index
+// gate in app/today/[date] shares this exact constant via isIndexableDate), so
+// crawling deeper history no longer indexes an unbounded past. Future dates are
+// never listed (they're gated + noindex). Change the window in one place: lib/today.
+const DATE_SITEMAP_DAYS_BACK = INDEXABLE_DATE_DAYS_BACK;
 
 // Collective month pages seeded into the sitemap: trailing window plus one ahead.
 // The prev/next stepper lets Google crawl deeper history; far-future months are
