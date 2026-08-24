@@ -32,7 +32,7 @@ The Almanac keeps your birthday pointing to a lifelong card and drops the reduci
 
 March 3 is three plus three, which is six, the Lovers. That's [your Bearing](#), the card March 3 carries in every year there is. A life path reading of that same birthday sends you to the Chariot; the wheel sends you to the Lovers, and the Lovers had to beat out all twenty-one other cards to get there. Some birthdays land on Death. Some on the Tower, some on the Star, some on the World. Nobody gets rounded down into the first nine, because nothing is being rounded.
 
-Your birth year isn't lost in the trade. A life path number actually spends most of its arithmetic on the year, since a four-digit year is the biggest thing in the sum. The Bearing leaves the year out on purpose: it measures the gap between you and the world, and the year sits on both sides of that gap and cancels. The year still has a place. It lives in [your natal chart](#), the fuller reading that runs your exact birthdate, year and all. The Bearing is only the piece of that chart that never moves.
+Your birth year isn't lost in the trade. A life path number actually spends most of its arithmetic on the year, since a four-digit year is the biggest thing in the sum. The Bearing leaves the year out on purpose: it measures the gap between you and the world, and the year sits on both sides of that gap and cancels. The year still has a place. It lives in [your natal chart](#), the fuller reading that runs your exact birthdate, year and all, where it carries [a card of its own](#). The Bearing is only the piece of that chart that never moves.
 
 ## So is your life path card wrong?
 

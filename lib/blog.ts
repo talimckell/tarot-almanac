@@ -300,6 +300,8 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
       "your Bearing": "/blog/what-is-a-tarot-bearing",
       "your natal chart": "/blog/the-tarot-natal-chart",
+      // Reciprocal, added when blog-13 went live: the birth year's own card.
+      "a card of its own": "/blog/birth-year-tarot-card",
       "Find your Bearing →": "/bearing",
     },
   },
@@ -394,6 +396,8 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "The 2027 year card": "/blog/2027-tarot-year-card",
       // Reciprocal, added when blog-12 went live: where the world's number for a year comes from.
       "The card everybody shares": "/blog/2027-universal-year-number",
+      // Reciprocal, added when blog-13 went live: the collective card of your birth year.
+      "the one you were born in": "/blog/birth-year-tarot-card",
       "personal month card": "/personal-month-card",
       "Find your year card →": "/personal-year-card",
     },
