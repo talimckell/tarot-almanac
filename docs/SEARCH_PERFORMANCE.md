@@ -79,6 +79,74 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-08-24 (window: Jul 4–Aug 22, 50 days) — soft week reversed; /month/2026-09 breaks out
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | 2,602 | +700 |
+| Clicks | 44 | +19 |
+| CTR | 1.7% | +0.4pt |
+| Page 1 (pos ≤ 10) | 139 | +19 |
+| Mobile CTR | 3.1% | climbing (was ~2.5%) |
+
+**The "soft week" was the August lull, and it fully reversed.** Last week I said one down week wasn't
+a verdict — hold before reacting. Correct call: the marginal week snapped back hard.
+
+| Marginal week | Impressions | Clicks |
+|---|---|---|
+| Aug 9–15 (the dip) | ~358 (~51/day) | 3 |
+| Aug 16–22 | ~747 (~107/day) | 19 |
+
+Aug 18–22 ran 100–138 impr/day — **new highs, above the July peak.** The lull was `/month/2026-08`
+decaying late-month plus summer; new demand more than replaced it.
+
+### The headline: `/month/2026-09` broke out — the reminder/early-index play worked
+
+Requested indexing 2026-08-17. One week later it's the **#1 click-earner on the whole site:
+pos 6.38, 66 impr, 10 clicks, ~15% CTR** — past `/month/2026-08` (6 clicks). This is direct proof of
+the standing lesson: **month pages are the golden organic product**, because the query
+("september 2026 tarot") is an exact match to the page, so page-1 rank converts at 15% instead of
+1–2%. It also validates the monthly indexing reminder — the payoff landed inside a week. Keep feeding
+that pipeline; the Sept-1 routine (→ `/month/2026-10`) is the next one.
+
+### Reconciling the scary Vercel dashboard: −35% is the ads clearing, NOT decline
+
+Vercel's 30-day view shows **visitors 176 (−35%), pageviews 415 (−43%), bounce 66% (+5%)** — alarming
+at a glance, and the exact opposite of the GSC story (organic at new highs). They don't conflict: the
+Vercel comparison baseline is the *prior* 30 days, which still had **paid ad traffic**. So the drop is
+the ad scaffolding coming down (as the post-mortem predicted), not organic falling. Organic search is
+up. Don't read the −35% as a problem; it's the residue finishing its clear-out.
+
+**And a chunk of even that 176 is bots.** Confirmed signatures this window: SG 13 visitors (up from 5),
+DE 9 visitors → 48 pageviews (5.3 pv/visitor) and FR 7 → 30 (bot-like ratios), plus a **sequential
+crawl of `/today/2006-04-07…21` and `/today/2026-04-07…21`** date URLs — a classic bot walking pages
+in order. So true human organic is below 176. Search referrers (the real signal): google 43, ddg 28
+(DuckDuckGo is a genuine chunk now), bing 9, ecosia 4, yahoo 3, Pinterest 2 (boards showing up).
+
+### Mediavine / Journey tracker
+
+Muddy this week — the 30-day Vercel window mixes ad-tail + bots, so no clean weekly session count.
+Estimate real human organic ~130–160/mo → **~14% to Journey's 1,000.** Grab a clean 7-day Vercel pull
+next time for a truer read. Directionally flat-to-up with the GSC recovery.
+
+### Also moving
+
+- `/blog/2027-tarot-year-card` holds pos 8.1 (40 impr, 3 clicks) — timely content keeps earning; the
+  early-publish bet (ran it in August for the Nov–Jan spike) is looking right.
+- `/personal-month-card/*` funnel: hierophant 3c, chariot 2c, lovers/fool 1c each — second funnel
+  compounding.
+- `/tarot-birth-chart` still climbing organically: pos 50 (47 impr, 2 clicks) — the ex-ad landing page
+  building its own free stream.
+- Generic `/tarot/*` still absent from page 1 (nine-of-wands cluster 154 impr at pos 83). Unchanged.
+
+### Baseline to beat next week
+
+Cumulative: impressions 2,602 · clicks 44 · CTR 1.7% · 139 on page 1. Watch: does the Aug-18+ new-high
+daily rate (100–138/day) hold into September, `/month/2026-10` after the Sept-1 reminder, and a clean
+Vercel weekly for the sessions tracker.
+
+---
+
 ## 2026-08-17 (window: Jul 4–Aug 15, 43 days) — first soft week on the margin
 
 | cumulative | | vs last week |
