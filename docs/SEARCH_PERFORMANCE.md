@@ -79,6 +79,61 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-08-31 (window: Jul 4–Aug 29, 57 days) — new highs held; /month/2026-09 runs away
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | 3,480 | +878 |
+| Clicks | 61 | +17 |
+| CTR | 1.75% | ~flat |
+| Page 1 (pos ≤ 10) | 152 | +13 |
+| Mobile position | 11.4 | inching toward page 1 |
+
+**The new-high daily rate held** — that was last week's main watch item. Aug 23–29 ran ~878 impr
+(~125/day), sustaining the 100–155/day set Aug 18. No post-spike collapse. (Aug 27–29 show 0 clicks
+on 114–155 impr — recency lag; those will revise up.)
+
+### `/month/2026-09` is the runaway engine
+
+**pos 8.93, 150 impr, 16 clicks — 26% of the site's entire click total on one page.** Up from last
+week's 66 impr / 10 clicks. This is the seasonal ahead-of-time demand for September peaking right as
+September arrives (today is Aug 31). It's the clearest proof yet: get a month page indexed and onto
+page 1 before its month, and it prints. `/month/2026-10` isn't showing yet — the Sept-1 reminder
+fires *tomorrow* to request its indexing, right on cadence.
+
+### Vercel: spike settled higher than baseline; bots quieter
+
+Clean 7-day: **56 visitors (−25% from last week's 70 spike)** — but that's the spike settling, and it
+landed **above the ~35/wk pre-spike baseline**, so net up. Pageviews 136 (2.4 pv/visitor, down from
+2.9): **the `/today/` crawler quieted** (that route is 2 visitors / 2 pageviews this week, was 4/22),
+so this count is cleaner. 3-month total 495. Bing referrals jumped to 8 (was 2–9). US 20, then CA/PH.
+
+**Mediavine / Journey:** recent run-rate ~200–230/mo → **~20% to Journey's 1,000, rising** (was ~18%).
+
+### Crawl-trap fix — deployed green, recrawl lag as expected
+
+Confirmed via `vercel ls`: the Aug 24 fix is live (production Ready). But GSC still shows **38
+`/today/[date]` pages indexed**, including out-of-window ones like `/today/2025-08-02` (5 impr) — one
+even took a click (`/today/2026-04-21`, pos 3). That's expected: `noindex` only takes effect once
+Google recrawls each page, which is weeks, not days. The fix is working as designed; the index will
+thin over the coming weeks. Keep watching the `/today` count trend down.
+
+### Unchanged threads
+
+- Birth-card: hub `/tarot-birth-card` is slowly climbing (pos 82 → 75 over three weeks, now 375 impr),
+  blog 77.6 — still both page-8, still parallel, thread stays closed.
+- Generic `/tarot/*` absent from page 1 (nine-of-wands 158 impr pos 83; five-of-cups a new 106-impr
+  cluster at pos 86). But note `/tarot/[slug]` cards pulled **19 Vercel visitors** this week — people
+  *browse* cards even though the pages don't rank. Product value without SEO value; fine as-is.
+
+### Baseline to beat next week
+
+Cumulative: impressions 3,480 · clicks 61 · CTR 1.75% · 152 on page 1 · ~20% to Journey. Watch:
+`/month/2026-10` surfacing after the Sept-1 reminder, whether Sept demand keeps `/month/2026-09`
+climbing or it fades post-month, and the `/today` indexed count starting to drop.
+
+---
+
 ## 2026-08-24 (window: Jul 4–Aug 22, 50 days) — soft week reversed; /month/2026-09 breaks out
 
 | cumulative | | vs last week |
