@@ -507,6 +507,71 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Find your month card →": "/personal-month-card",
     },
   },
+  // DRAFTED 2026-08-31, NOT PUBLISHED. Commented out pending the Illustrate and Review gates.
+  //
+  // Topic picked by Tali from the broadened 2026-08-31 scout sweep, after the personal-day
+  // candidate was declined. Enters a search space the site has never touched: WEDDING DATE
+  // NUMEROLOGY is a mature, commercial term (The Knot ranks for it, plus a stack of calculator
+  // sites) and every incumbent folds the date to a digit 1-9. The tarot side of the same
+  // question is birth-date-only (Parade, tarot.com, Mystic Mondays all compute YOUR card and
+  // stop). Nobody gives an arbitrary date a card. No hub of ours claims this ground either,
+  // so there is nothing to cannibalize: /birthday is month-and-day, /today owns dated pages
+  // but is noindex on its landing and only indexable for a trailing 365 days.
+  //
+  // The post leads on PAST dates on purpose. lib/today.ts:76 caps future access at the current
+  // month plus one, even for subscribers, so a wedding next spring has no page. Rather than
+  // hide that, the last section states the limit and walks the three-step arithmetic by hand
+  // for 14 June 2027, which is the brand's own "you can check this yourself" commitment doing
+  // the work. If the future cap ever changes, that section needs revisiting.
+  //
+  // Numbers node-verified against lib/almanac.ts (scratchpad scripts, 2026-08-31):
+  // 14 June 2014 = the Hierophant (5) with the Three of Pentacles; the anniversary table
+  // 2014-2026 row by row; the walk steps exactly +1 a year except 2019->2020, where the year's
+  // digit sum falls 12 -> 4 and the card drops Wheel of Fortune -> the High Priestess, a fall
+  // of 8 which on a 22-wheel equals a climb of 14; 14 June reaches all 22 Majors across
+  // 1950-2050; 8 October 2011 = the Fool with the Five of Swords; 14 June 2027 = the Hermit
+  // (sumDigits 11 -> +6 = 17 -> +14 = 31 -> 9).
+  // CAUTION, a claim that did NOT survive checking: an earlier draft said the ~40 other dates
+  // folding to a nine in 2014 land elsewhere on the wheel. False. 41 dates fold to nine and
+  // TWELVE of them also carry the Hierophant, because within a single year sumDigits(y) is
+  // constant so both methods key off m+d. The published ladder (41 fold to nine, 13 carry the
+  // Hierophant, 2 carry it with the Three of Pentacles) is the verified version. Don't
+  // "restore" the stronger-sounding claim.
+  // Card copy is quoted verbatim from content/cards/{hierophant,strength}.json, not written here.
+  //
+  // OPEN FOR TALI: (1) section is set to "your-cards", the closest of the three, but that
+  // section's authored intro says "the day you were born, all of your cards were set" and this
+  // post is about dates that aren't your birthday. Her copy, her call. (2) majorIndex 6, the
+  // Lovers, chosen as the legible couples glyph; the Hierophant (5) is also free and is the
+  // post's actual worked card. (3) The H1 carries no keyword by design, matching blog-13; the
+  // seoTitle carries "wedding date tarot card".
+  //
+  // No figures and no lib/blogSocialContent.ts entry yet: Illustrate is the next gate.
+  // On publish: consider a reciprocal link from blog-13 (the collective-card sibling) and
+  // from blog-04, and note this is the first post whose CTA is /today.
+  // {
+  //   slug: "wedding-date-tarot-card",
+  //   section: "your-cards",
+  //   title: "The Card of the Day You Met",
+  //   seoTitle: "Your Wedding Date's Tarot Card (and Your Anniversary's)",
+  //   metaDescription:
+  //     "Wedding date numerology folds your date to one digit. Tarot numerology gives it a card instead, and gives your anniversary a different one every year.",
+  //   eyebrow: "Tarot Numerology",
+  //   description:
+  //     "Wedding sites fold your date to a single digit and read that. Kept whole, the same date lands on one of the twenty-two Majors, and every anniversary after it lands somewhere new.",
+  //   indexTeaser:
+  //     "A wedding date folded to one digit is one number forever. Kept whole it's a card, and the anniversary that follows is a different card every year.",
+  //   majorIndex: 6, // The Lovers — the couples glyph; the Hierophant (5) is the post's worked card
+  //   file: "blog-14-wedding-date-tarot-card.md",
+  //   linkMap: {
+  //     "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+  //     "the wheel of twenty-two": "/blog/how-tarot-numerology-works",
+  //     "your Bearing": "/blog/what-is-a-tarot-bearing",
+  //     "the card of the year they were born": "/blog/birth-year-tarot-card",
+  //     "The dated pages here": "/today",
+  //     "Look up a day →": "/today",
+  //   },
+  // },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {

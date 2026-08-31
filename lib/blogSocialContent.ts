@@ -731,6 +731,73 @@ export const BLOG_SOCIAL: Record<string, BlogSocialContent> = {
       keywords: "personal month number tarot, tarot numerology, temperance tarot",
     },
   },
+  // blog-14, NOT YET PUBLISHED (its lib/blog.ts entry is still commented out). Added during
+  // the Illustrate stage so the assets are ready when the post is. Unlike the three
+  // infographic-only entries above, this one carries a full Bluesky/Pinterest quote set.
+  // Every quote is lifted from content/blog-14-wedding-date-tarot-card.md; the captions add
+  // only the surrounding sentences needed to make each one stand alone in a feed.
+  // Numbers node-verified against lib/almanac.ts: 14 June 2014 = the Hierophant (7 → 13 → 27
+  // → 5), 14 June 2027 = the Hermit, and the folded digit for 14 June returns every nine
+  // years exactly across 2014–2053.
+  "wedding-date-tarot-card": {
+    slug: "wedding-date-tarot-card",
+    postTitle: "The Card of the Day You Met",
+    majorIndex: 6, // The Lovers — matches the post's own glyph in lib/blog.ts
+    blueskyQuotes: [
+      {
+        eyebrow: "What a Wedding Borrows",
+        quote: "You say words other people wrote, in front of witnesses, because they were said before.",
+        caption:
+          "14 June 2014 works out to the Hierophant, card five, tradition and lineage and belonging to something older than yourself. Not the card you would pick for a wedding, and then you think about what a wedding is. You say words other people wrote, in front of witnesses, because they were said before.",
+      },
+      {
+        eyebrow: "The Dates You Didn’t Pick",
+        quote: "A wedding date is chosen. Most of the dates that matter aren’t.",
+        caption:
+          "The day you met, the day you moved in, the day someone was born. Every one of them already had a card sitting under it, settled by arithmetic long before anybody went looking. A wedding date is chosen. Most of the dates that matter aren’t.",
+      },
+      {
+        eyebrow: "Nine Slots, Twenty-Two Cards",
+        quote: "The nine-year return is exact and it never breaks.",
+        caption:
+          "Fold an anniversary to a single digit and it climbs one a year, then lands back where it started every ninth year, forever. The wheel of twenty-two climbs too, and the decade turns keep breaking the loop. Nine folded numbers for a whole marriage, against a date that reaches all twenty-two Majors across a century.",
+      },
+      {
+        eyebrow: "Settled in Advance",
+        quote: "Whatever your dates are, they were settled before you got there.",
+        caption:
+          "You can work out the card for a date that hasn’t happened yet. Add the digits of the year, add the month, add the day, and wrap at twenty-two. 14 June 2027 is the Hermit, whoever gets married on it.",
+      },
+    ],
+    pinterestQuotes: [
+      {
+        eyebrow: "The Dates You Didn’t Pick",
+        quote: "A wedding date is chosen. Most of the dates that matter aren’t.",
+        pinTitle: "Your Wedding Date Has a Tarot Card",
+        description:
+          "Wedding date numerology folds your date to a single digit and reads that. Tarot numerology gives the date a Major Arcana card instead, and gives the day you met, the day you moved in, and every anniversary after one of their own.",
+        keywords: "wedding date tarot card, tarot numerology, anniversary tarot",
+      },
+      {
+        eyebrow: "Nine Slots, Twenty-Two Cards",
+        quote: "The nine-year return is exact and it never breaks.",
+        pinTitle: "Wedding Date Numerology vs. the 22-Card Wheel",
+        description:
+          "A folded anniversary date returns to the same digit every nine years, forever, so a marriage gets nine numbers. On the wheel of twenty-two the decade turns break that loop, and one date reaches all 22 Majors across a century.",
+        keywords: "wedding date numerology, tarot numerology, anniversary tarot card",
+      },
+    ],
+    math: {
+      eyebrow: "One Date, One Card",
+      dateLabel: "14 June 2014",
+      steps: ["2 + 0 + 1 + 4 = 7", "7 + 6 (June) = 13", "13 + 14 = 27", "27 − 22 = 5"],
+      resultMajorIndex: 5, // The Hierophant
+      pinTitle: "What Tarot Card Is Your Wedding Date?",
+      description:
+        "Wedding date numerology folds the date down to one digit. Tarot numerology keeps the whole wheel: add the year's digits, then the month, then the day, and wrap the 22 Majors. 14 June 2014 lands on the Hierophant.",
+      keywords: "wedding date tarot card, tarot numerology, hierophant tarot",
+    },
+  },
 };
 
 export function getBlogSocialContent(slug: string): BlogSocialContent | undefined {
