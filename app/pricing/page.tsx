@@ -7,7 +7,7 @@ import { SITE_URL } from "../../lib/site";
 import styles from "./page.module.css";
 
 const URL = `${SITE_URL}/pricing`;
-const TITLE = "Pricing | The Tarot Almanac";
+const TITLE = "Tarot Subscription & Reading Pricing | The Tarot Almanac";
 const DESCRIPTION =
   "What The Tarot Almanac costs: a free daily card with no account, a $7/month subscription for the full almanac, or one-off purchases — a $12 natal chart or a $15 year-ahead reading.";
 
