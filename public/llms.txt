@@ -1,0 +1,14 @@
+# The Tarot Almanac
+
+> The Tarot Almanac is a deterministic tarot reading app that assigns fixed cards to dates and birthdays via tarot numerology.
+
+The Tarot Almanac is the astro.com of tarot: every date resolves to fixed cards through modular arithmetic, not shuffling or chance. A birth date always maps to the same cards, and every calendar day carries its own fixed collective and personal cards.
+
+## Key pages
+
+- [Homepage](https://www.tarotalmanac.com/): overview of the deterministic tarot-numerology system.
+- [How It Works](https://www.tarotalmanac.com/how-it-works): the math and method behind the fixed-card system.
+- [Pricing](https://www.tarotalmanac.com/pricing): subscription and one-off chart pricing.
+- [Tarot Birth Card](https://www.tarotalmanac.com/tarot-birth-card): calculate your tarot birth card from your birthday.
+- [Tarot Birth Chart](https://www.tarotalmanac.com/tarot-birth-chart): full natal tarot birth chart.
+- [The Tarot Almanac vs. Raka](https://www.tarotalmanac.com/vs/raka): how The Tarot Almanac compares to Raka.
