@@ -5,7 +5,7 @@
 // borrows (Satori wants every multi-child element to declare display: "flex").
 import { ImageResponse } from "next/og";
 import { loadShareFonts } from "@/lib/ogFonts";
-import { COLORS } from "@/lib/shareTokens";
+import { COLORS } from "@/lib/shareRender";
 
 export const runtime = "nodejs";
 export const alt = "The Tarot Almanac — find your angle on the day";
