@@ -34,6 +34,7 @@ export default async function Home() {
     <>
       <SiteNav ctaLabel="Make your almanac" />
 
+      <main>
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
@@ -334,8 +335,10 @@ export default async function Home() {
             <div className="acct-col-b">Make a chart for anyone who matters to you, and see the cards they came in under. Yours to keep.</div>
           </div>
         </div>
+        <p className="acct-price">Your whole almanac, $7/month. Cancel anytime.</p>
         <Link href="/me" className="acct-cta">Make your almanac</Link>
       </section>
+      </main>
 
       <Footer />
     </>

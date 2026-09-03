@@ -43,7 +43,11 @@ export default function SiteNav({ current, ctaLabel }: { current?: SiteSection; 
               {link.label}
             </Link>
           ))}
-          <Link href="/me" className={ctaLabel ? styles.cta : current === "me" ? styles.current : undefined}>
+          <Link
+            href="/me"
+            className={ctaLabel ? styles.cta : current === "me" ? styles.current : undefined}
+            title={ctaLabel ? "$7/month. Cancel anytime." : undefined}
+          >
             {ctaLabel ?? "My Almanac"}
           </Link>
         </div>
