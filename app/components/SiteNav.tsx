@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./SiteNav.module.css";
 
-export type SiteSection = "today" | "tarot" | "bearing" | "chart" | "how-it-works" | "me";
+export type SiteSection = "today" | "tarot" | "bearing" | "chart" | "how-it-works" | "pricing" | "me";
 
 const LEADING_LINKS: { href: string; label: string; section: SiteSection }[] = [
   { href: "/today", label: "Today", section: "today" },
@@ -14,6 +14,7 @@ const LEADING_LINKS: { href: string; label: string; section: SiteSection }[] = [
   // hands off to /chart to build one. Bearing stays reachable via the footer + interlinks.
   { href: "/tarot-birth-chart", label: "Chart", section: "chart" },
   { href: "/how-it-works", label: "How it works", section: "how-it-works" },
+  { href: "/pricing", label: "Pricing", section: "pricing" },
 ];
 
 // The nav shared by every page, including the homepage. The trailing /me link

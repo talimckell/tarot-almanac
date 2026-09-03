@@ -1,0 +1,236 @@
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+/* HERO — same conventions as /how-it-works's page.module.css */
+.hero {
+  text-align: center;
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--warm-stone);
+}
+.eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--label);
+  display: block;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.08;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--charcoal);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* THREE TIERS */
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 48px 0 8px;
+  align-items: start;
+}
+.tier {
+  position: relative;
+  border: 1px solid var(--warm-stone);
+  background: var(--stone);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+}
+.tierFeatured {
+  border: 1px solid var(--indigo);
+  background: var(--vellum);
+  margin-top: -16px;
+  padding-top: 44px;
+  padding-bottom: 40px;
+  box-shadow: 0 12px 28px rgba(30, 58, 88, 0.14);
+}
+.badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--indigo);
+  color: var(--stone);
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  white-space: nowrap;
+}
+.tierTagline {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 6px;
+}
+.tierName {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.tierPrice {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 36px;
+  color: var(--indigo);
+  margin-bottom: 14px;
+}
+.tierPer {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--label);
+}
+.tierWhat {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--charcoal);
+  margin-bottom: 22px;
+  flex: 1;
+}
+.tierCta {
+  display: block;
+  text-align: center;
+  background: var(--indigo);
+  color: var(--stone);
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 20px;
+  transition: background 0.15s;
+}
+.tierCta:hover { background: var(--indigo-mid); }
+.tierCtaSecondary {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--indigo);
+  color: var(--indigo);
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: background 0.15s, color 0.15s;
+}
+.tierCtaSecondary:hover { background: var(--indigo); color: var(--stone); }
+.tierFine {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--label);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* one-off tier holds two stacked products, not one CTA */
+.oneOffItem:first-of-type { margin-top: 4px; }
+.oneOffItem .tierPrice { font-size: 28px; margin-bottom: 10px; }
+.oneOffItem .tierWhat { margin-bottom: 16px; }
+.oneOffDivider {
+  border-top: 1px solid var(--warm-stone);
+  margin: 22px 0;
+}
+
+/* COMPARISON TABLE */
+.compare { padding: 56px 0 40px; }
+.compare h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.tableWrap { overflow-x: auto; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.table th, .table td {
+  padding: 13px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--warm-stone);
+  white-space: nowrap;
+}
+.table thead th {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--label);
+}
+.rowLabel {
+  text-align: left !important;
+  font-family: var(--sans);
+  font-weight: 400;
+  color: var(--ink);
+  white-space: normal !important;
+  min-width: 220px;
+}
+.colFeatured { background: var(--vellum); }
+.yes { color: var(--indigo); font-weight: 700; }
+.no { color: var(--warm-stone); }
+.note { color: var(--charcoal); font-size: 13px; }
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.trust {
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--label);
+  padding-top: 8px;
+}
+.trust a { color: var(--indigo); }
+
+@media (max-width: 860px) {
+  .tiers { grid-template-columns: 1fr; }
+  .tierFeatured { margin-top: 0; padding-top: 32px; }
+  .badge { top: -13px; }
+}
+@media (max-width: 560px) {
+  .hero h1 { font-size: 34px; }
+  .deck { font-size: 18px; }
+  .table th, .table td { padding: 10px 8px; font-size: 13px; }
+  .rowLabel { min-width: 160px; }
+}
