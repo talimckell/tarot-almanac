@@ -280,6 +280,18 @@ export default async function Home() {
             <span className="prop-go">Make your almanac &rarr;</span>
           </Link>
         </div>
+
+        <div className="tools-compare">
+          <span className="tc-label">How does this compare?</span>
+          <div className="tc-links">
+            <Link href="/vs/raka" className="tc-link">
+              Vs. Raka <span className="tc-desc">a fixed reading vs. an AI reading</span>
+            </Link>
+            <Link href="/vs/labyrinthos" className="tc-link">
+              Vs. Labyrinthos <span className="tc-desc">a daily almanac vs. lessons and decks</span>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* FEATURE BAND — BEARING */}

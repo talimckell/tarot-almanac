@@ -458,6 +458,43 @@ body {
   display: block;
 }
 
+.tools-compare {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  max-width: 1000px;
+  margin: 36px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--warm-stone);
+}
+.tc-label {
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.tc-links { display: flex; flex-wrap: wrap; gap: 6px 28px; }
+.tc-link {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.tc-link:hover { color: var(--indigo); }
+.tc-link:hover .tc-desc { color: var(--indigo); }
+.tc-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-left: 4px;
+  transition: color 0.15s;
+}
+
 /* ── FEATURE BANDS (one per tool, below the grid; alternating sides + bg) ── */
 .feature-band {
   display: grid;
@@ -665,6 +702,8 @@ body {
   .nb-head { font-size: 32px; }
   .tools-band { padding: 56px 24px; }
   .tools-intro h2 { font-size: 30px; }
+  .tools-compare { flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .tc-links { flex-direction: column; align-items: center; gap: 10px; }
   .feature-band { grid-template-columns: 1fr; gap: 40px; padding: 56px 24px; }
   .feature-band.fb-flip .fb-text { order: 0; }
   .fb-head { font-size: 30px; }
