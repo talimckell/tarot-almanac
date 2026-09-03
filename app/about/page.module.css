@@ -87,6 +87,38 @@
   margin-top: 6px;
 }
 
+.founder {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0 0;
+  margin: 0 0 8px;
+}
+.founderPhoto {
+  width: 72px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.founderName {
+  display: block;
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.founderBio {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+.founderBio a {
+  color: var(--indigo);
+}
+
 /* the closing line, set apart like a pull quote rather than buried in body text */
 .closing {
   border-top: 1px solid var(--warm-stone);

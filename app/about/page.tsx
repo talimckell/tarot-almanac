@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
@@ -85,6 +86,25 @@ export default function AboutPage() {
         <div className={styles.signoff}>
           <p>With more curiosity than certainty,</p>
           <span className={styles.sigName}>Tali</span>
+        </div>
+
+        <div className={styles.founder}>
+          <Image
+            src="/tali-headshot.jpg"
+            alt="Tali Beesley"
+            width={512}
+            height={640}
+            className={styles.founderPhoto}
+          />
+          <div>
+            <span className={styles.founderName}>Tali Beesley</span>
+            <p className={styles.founderBio}>
+              Founder of The Tarot Almanac. Based in the US.{" "}
+              <a href="https://www.linkedin.com/in/talibeesley" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </p>
+          </div>
         </div>
 
         <div className={styles.endmark}>
