@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { cookies } from "next/headers";
 import SiteNav from "./components/SiteNav";
@@ -6,6 +7,31 @@ import TodayEntry from "./today-entry";
 import { parseBirthday, BIRTHDAY_COOKIE, type Birthday } from "@/lib/today";
 import { getSignedInBirthday } from "@/lib/accountBirthday";
 import { viewerNow } from "@/lib/viewerNow";
+import { SITE_URL } from "@/lib/site";
+
+// Kept identical to the root layout's title/description (app/layout.tsx) — this file
+// exists to add the openGraph/twitter block the homepage was missing, not to change
+// what's already showing in the browser tab or in search results.
+const TITLE = "The Tarot Almanac · Find your angle on the day";
+const DESCRIPTION =
+  "A perpetual tarot almanac. Every date has cards, set by tarot numerology: the collective card of the day, and the card set by your birth day.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
 
 // The eight-pointed star mark, reused in a few places.
 function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: number; fill?: string; style?: React.CSSProperties }) {
