@@ -19,6 +19,7 @@ export default function HowItWorksPage() {
     <>
       <SiteNav current="how-it-works" />
 
+      <main>
       <div className={styles.wrap}>
         <header className={styles.hero}>
           <span className={styles.eyebrow}>How it works</span>
@@ -273,6 +274,20 @@ export default function HowItWorksPage() {
               <span className={styles.arrow}>→</span>
             </div>
           </Link>
+          <Link className={styles.post} href="/vs/raka">
+            <div className={styles.postTitle}>The Tarot Almanac vs. Raka</div>
+            <div className={styles.postDesc}>
+              How this fixed formula compares to an AI-generated reading.{" "}
+              <span className={styles.arrow}>→</span>
+            </div>
+          </Link>
+          <Link className={styles.post} href="/vs/labyrinthos">
+            <div className={styles.postTitle}>The Tarot Almanac vs. Labyrinthos</div>
+            <div className={styles.postDesc}>
+              A fixed reading versus lessons plus an AI reading feature.{" "}
+              <span className={styles.arrow}>→</span>
+            </div>
+          </Link>
         </section>
 
         {/* CTA */}
@@ -281,6 +296,7 @@ export default function HowItWorksPage() {
           <Link className={styles.btn} href="/">Find your cards</Link>
         </aside>
       </div>
+      </main>
 
       <Footer />
     </>
