@@ -638,6 +638,23 @@ body {
 .acct-guarantee a:hover { color: var(--vellum); }
 .acct-cta:hover { background: var(--vellum); }
 
+/* ── HOMEPAGE FAQ ── */
+.faq-band { padding: 76px 60px; border-bottom: 1px solid var(--warm-stone); }
+.faq-intro { max-width: 60ch; margin: 0 auto 44px; text-align: center; }
+.faq-eyebrow {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.faq-intro h2 { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.15; color: var(--ink); margin-top: 10px; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 56px; max-width: 920px; margin: 0 auto; }
+.faq-q { font-family: var(--serif); font-size: 19px; font-weight: 500; color: var(--ink); line-height: 1.3; margin-bottom: 8px; }
+.faq-a { font-family: var(--sans); font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--charcoal); }
+.faq-a a { color: var(--indigo); }
+
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
@@ -654,6 +671,8 @@ body {
   .pullquote-band { padding: 40px 24px; gap: 20px; }
   .acct-band { padding: 48px 24px; }
   .acct-head { font-size: 30px; }
+  .faq-band { padding: 56px 24px; }
+  .faq-intro h2 { font-size: 28px; }
 }
 @media (max-width: 560px) {
   .hero-headline { font-size: 46px; }
@@ -661,4 +680,5 @@ body {
   .tools-intro h2 { font-size: 26px; }
   .tool { flex: 1 1 100%; max-width: none; }
   .entry-cards { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; gap: 32px; }
 }

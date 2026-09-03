@@ -42,6 +42,53 @@ function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: num
   );
 }
 
+// Homepage FAQ — the top 4 objections a first-time visitor arrives with
+// (audience.md), not a duplicate of /tarot-birth-chart's 14-question FAQ
+// (that one is about the chart specifically; this one is about the site).
+// `answer` is plain text for the schema; `render` is the same copy with the
+// /about link wired in for Q3. Kept in one place so the visible section and
+// the JSON-LD stay in sync.
+const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
+  {
+    q: "Is this just another random card app?",
+    answer: "No. Your cards are set by tarot numerology, the same every time you look. Nobody shuffles.",
+    render: "No. Your cards are set by tarot numerology, the same every time you look. Nobody shuffles.",
+  },
+  {
+    q: "Why $7/month when free apps exist?",
+    answer:
+      "Free apps give you a random draw. The Almanac gives you a fixed, verifiable system: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+    render:
+      "Free apps give you a random draw. The Almanac gives you a fixed, verifiable system: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+  },
+  {
+    q: "Who is behind this?",
+    answer:
+      "Tali Beesley, a US-based founder who built the Almanac from a tarot practice passed down at 11. More about her at tarotalmanac.com/about.",
+    render: (
+      <>
+        Tali Beesley, a US-based founder who built the Almanac from a tarot practice passed down at 11.{" "}
+        <Link href="/about">More about her &rarr;</Link>
+      </>
+    ),
+  },
+  {
+    q: "Can I give a chart as a gift?",
+    answer: "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday.",
+    render: "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday.",
+  },
+];
+
+const homeFaqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map(({ q, answer }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
 export default async function Home() {
   // Same resolution as /today: a signed-in account's own birthday always wins; only a
   // signed-out visitor falls back to the anonymous `bday` cookie (set by /today). When
@@ -374,6 +421,24 @@ export default async function Home() {
           Try it for 14 days. If it&rsquo;s not yours, <Link href="/contact">email us</Link>{" "}
           and we&rsquo;ll refund you, no questions asked.
         </p>
+      </section>
+
+      {/* FAQ — the top 4 objections a first-time visitor arrives with, not
+          the full 14-question chart FAQ that lives on /tarot-birth-chart. */}
+      <section className="faq-band" aria-labelledby="faq-heading">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqLd) }} />
+        <div className="faq-intro">
+          <span className="faq-eyebrow">Common questions</span>
+          <h2 id="faq-heading">Before you go</h2>
+        </div>
+        <div className="faq-grid">
+          {HOME_FAQ.map(({ q, render }) => (
+            <div className="faq-item" key={q}>
+              <h3 className="faq-q">{q}</h3>
+              <p className="faq-a">{render}</p>
+            </div>
+          ))}
+        </div>
       </section>
       </main>
 
