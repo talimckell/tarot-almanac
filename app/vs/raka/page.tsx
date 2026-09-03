@@ -16,7 +16,7 @@ import "../styles.css";
 
 const TITLE = "The Tarot Almanac vs. Raka: A Tarot App Comparison | The Tarot Almanac";
 const DESCRIPTION =
-  "Raka reads your cards with AI, generated fresh each time you ask. The Tarot Almanac fixes them with arithmetic, the same card every time, and every reading is written by hand. Here's the actual difference, side by side.";
+  "Raka reads your cards with AI, generated fresh each time you ask. The Tarot Almanac fixes your card with arithmetic, the same one every time, and the card meanings are written by hand. Here's the actual difference, side by side.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -41,7 +41,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Does The Tarot Almanac use AI to write your reading?",
-    a: "No. Which card you get is decided by a fixed formula, not a model, and the text explaining that card was written once, by a person, and reads the same for everyone who lands on it. Nothing on the page was generated for you specifically.",
+    a: "Not for the card or its meaning. Which card you get is always decided by the fixed formula, never a model, and the card meanings on the site were written once, by a person, the same for everyone who lands on them. Two paid products work differently: the month-ahead reading, bundled in the subscription, and the $15 year-ahead reading both use AI to write the connective narrative around your cards, generated once when you first ask and then locked, not rewritten each time you come back. The cards inside those readings are still chosen by the same formula as everywhere else on the site.",
   },
   {
     q: "Which is cheaper, The Tarot Almanac or Raka?",
@@ -107,9 +107,12 @@ export default function VsRakaPage() {
 
           <h3>Who wrote what you&rsquo;re reading</h3>
           <p>
-            The Tarot Almanac&rsquo;s card meanings, Bearings, and month and year readings are each
-            written once, by a person, and read the same by everyone who lands on that card. Nothing
-            you read was assembled for you in the last second. It was written, and it stays.
+            The Tarot Almanac&rsquo;s card meanings and Bearings are each written once, by a person,
+            and read the same by everyone who lands on that card. Two paid readings work
+            differently: the month-ahead reading in the subscription and the $15 year-ahead reading
+            both use AI to write the narrative that connects your cards, generated once when you
+            first ask and then fixed, not regenerated on your next visit. The cards themselves are
+            never chosen by the model, in any reading on the site, free or paid.
           </p>
 
           <h3>Price</h3>
