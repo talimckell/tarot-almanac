@@ -41,9 +41,9 @@ export default async function Home() {
           <p className="eyebrow">A PERPETUAL TAROT ALMANAC</p>
           <h1 className="hero-headline">Find your<br />angle on<br /><em>the day.</em></h1>
           <p className="hero-sub">
-            Every day has its cards, set by tarot numerology, the same every time you look.
-            One the whole world shares, and one that&rsquo;s yours alone. See where you stand
-            today, and what it has to show you.
+            Every day has its cards, set by tarot numerology, not shuffled at random. The same
+            every time you look. One the whole world shares, and one that&rsquo;s yours alone.
+            See where you stand today, and what it has to show you.
           </p>
           <div className="cta-group">
             <Link href="/today" className="btn-primary">SEE TODAY&rsquo;S CARDS</Link>
