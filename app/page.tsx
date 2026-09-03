@@ -8,6 +8,7 @@ import { parseBirthday, BIRTHDAY_COOKIE, type Birthday } from "@/lib/today";
 import { getSignedInBirthday } from "@/lib/accountBirthday";
 import { viewerNow } from "@/lib/viewerNow";
 import { SITE_URL } from "@/lib/site";
+import { organizationLd, serviceLd } from "@/lib/organizationSchema";
 
 // Kept identical to the root layout's title/description (app/layout.tsx) — this file
 // exists to add the openGraph/twitter block the homepage was missing, not to change
@@ -89,6 +90,15 @@ const homeFaqLd = {
   })),
 };
 
+const subscriptionLd = serviceLd({
+  name: "The Tarot Almanac subscription",
+  description:
+    "Full access to the living tarot almanac: every day behind you, a month ahead, your natal chart, and charts for the people you love.",
+  url: `${SITE_URL}/me`,
+  price: 7,
+  billingIncrement: "P1M",
+});
+
 export default async function Home() {
   // Same resolution as /today: a signed-in account's own birthday always wins; only a
   // signed-out visitor falls back to the anonymous `bday` cookie (set by /today). When
@@ -105,6 +115,7 @@ export default async function Home() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
       <SiteNav ctaLabel="Make your almanac" />
 
       <main>
@@ -427,6 +438,7 @@ export default async function Home() {
           the full 14-question chart FAQ that lives on /tarot-birth-chart. */}
       <section className="faq-band" aria-labelledby="faq-heading">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(subscriptionLd) }} />
         <div className="faq-intro">
           <span className="faq-eyebrow">Common questions</span>
           <h2 id="faq-heading">Before you go</h2>

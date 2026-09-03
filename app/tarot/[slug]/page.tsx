@@ -11,6 +11,7 @@ import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import { getAllCards, getCardBySlug, getRelated, type Card } from "../../../lib/cards";
 import { pipRows, suitGlyphId, isCourt } from "../../../lib/pips";
+import { organizationRef } from "../../../lib/organizationSchema";
 
 const SITE = "https://www.tarotalmanac.com";
 
@@ -115,8 +116,8 @@ export default async function CardPage({
     "@type": "Article",
     headline: `${card.name}: Tarot Card Meaning, Reversed & Upright`,
     about: card.name,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE}/tarot/${card.slug}`,
   };
 

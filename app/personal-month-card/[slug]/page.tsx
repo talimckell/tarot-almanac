@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import { SITE_URL } from "../../../lib/site";
+import { organizationRef } from "../../../lib/organizationSchema";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "../../../lib/almanac";
 import { getCardBySlug, getPositionReading } from "../../../lib/cards";
 import { majorShortName, indefiniteArticle, ELEMENT_LABEL } from "../../../lib/monthCard";
@@ -61,8 +62,8 @@ export default async function MonthCardPage({
     "@type": "Article",
     headline: `${name} as Your Personal Month Card`,
     about: `${name} tarot month card`,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE_URL}/personal-month-card/${slug}`,
   };
 

@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import { SITE_URL } from "../../../lib/site";
+import { organizationRef } from "../../../lib/organizationSchema";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "../../../lib/almanac";
 import { getCardBySlug } from "../../../lib/cards";
 import {
@@ -72,8 +73,8 @@ export default async function YearCardPage({
     "@type": "Article",
     headline: `${name} as Your Tarot Year Card`,
     about: `${name} tarot year card`,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE_URL}/personal-year-card/${slug}`,
   };
 

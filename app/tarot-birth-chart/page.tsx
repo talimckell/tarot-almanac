@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import ChartDiagram from "../chart/ChartDiagram";
 import { computeNatalChart } from "../../lib/natalChart";
 import { SITE_URL } from "../../lib/site";
+import { organizationRef, serviceLd } from "../../lib/organizationSchema";
 
 const URL = `${SITE_URL}/tarot-birth-chart`;
 const TITLE = "Tarot Birth Chart & Natal Chart | The Tarot Almanac";
@@ -56,8 +57,8 @@ export default function TarotBirthChartPage() {
     "@type": "Article",
     headline: "Tarot Birth Chart & Natal Chart",
     about: "Tarot natal chart (tarot numerology)",
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: URL,
   };
   const faqLd = {
@@ -69,6 +70,13 @@ export default function TarotBirthChartPage() {
       acceptedAnswer: { "@type": "Answer", text: a },
     })),
   };
+  const chartServiceLd = serviceLd({
+    name: "Tarot birth chart",
+    description:
+      "A seven-card tarot natal chart built from your birthday: the self you arrived as, the world that met you, and the Bearing between them. A fixed object, yours to keep or give.",
+    url: `${SITE_URL}/chart`,
+    price: 12,
+  });
 
   const label = {
     fontFamily: "var(--serif-sc)",
@@ -86,6 +94,7 @@ export default function TarotBirthChartPage() {
       <main className="wrap">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(chartServiceLd) }} />
 
         <nav className="crumb">
           <Link href="/">Home</Link> · Tarot Birth Chart

@@ -20,6 +20,7 @@ import {
 } from "../../../lib/almanac";
 import { majorGlyphId } from "../../../lib/pips";
 import { SITE_URL } from "../../../lib/site";
+import { organizationRef } from "../../../lib/organizationSchema";
 import {
   parseMonthSlug,
   formatMonthSlug,
@@ -118,8 +119,8 @@ export default async function MonthPage({
     "@type": "Article",
     headline: `${label} Tarot Card: ${MAJORS[cmIdx]}`,
     about: `${MAJORS[cmIdx]} (collective month card)`,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE_URL}/month/${formatMonthSlug(target)}`,
   };
 

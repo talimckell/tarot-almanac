@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { SITE_URL } from "../../lib/site";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import { YEAR_CARD_FAQ } from "../../lib/yearCard";
+import { serviceLd } from "../../lib/organizationSchema";
 import YearCardCalculator from "./YearCardCalculator";
 import "./styles.css";
 
@@ -39,12 +40,20 @@ export default function PersonalYearCardHub() {
       acceptedAnswer: { "@type": "Answer", text: f.link ? `${f.a} ${f.link.text}.` : f.a },
     })),
   };
+  const yearReadingServiceLd = serviceLd({
+    name: "Tarot year-ahead reading",
+    description:
+      "A full year-ahead tarot reading woven from your year card: the twelve months that follow from it, the element weather of the year, and how your Bearing meets it.",
+    url: `${SITE_URL}/personal-year-card/sample`,
+    price: 15,
+  });
 
   return (
     <>
       <SiteNav />
       <main className="pyc-wrap">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(yearReadingServiceLd) }} />
 
         <nav className="pyc-crumb">
           <Link href="/">Home</Link> · Personal Year Card

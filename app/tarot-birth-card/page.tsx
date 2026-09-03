@@ -12,6 +12,7 @@ import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "../../lib/almanac";
 import { SITE_URL } from "../../lib/site";
+import { organizationRef, serviceLd } from "../../lib/organizationSchema";
 import BirthCardCalculator from "./BirthCardCalculator";
 import "./styles.css";
 
@@ -98,8 +99,8 @@ export default function TarotBirthCardPage() {
     "@type": "Article",
     headline: "Tarot Birth Card Calculator",
     about: "Tarot birth card (tarot numerology)",
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: URL,
   };
   const faqLd = {
@@ -111,6 +112,15 @@ export default function TarotBirthCardPage() {
       acceptedAnswer: { "@type": "Answer", text: link ? `${a} ${link.text}.` : a },
     })),
   };
+  // Same $12 chart product as /tarot-birth-chart — this page's own upsell aside links
+  // there, so the Service node's url points at /chart (the checkout), not this page.
+  const chartServiceLd = serviceLd({
+    name: "Tarot birth chart",
+    description:
+      "A seven-card tarot natal chart built from your birthday: the self you arrived as, the world that met you, and the Bearing between them. A fixed object, yours to keep or give.",
+    url: `${SITE_URL}/chart`,
+    price: 12,
+  });
 
   return (
     <>
@@ -118,6 +128,7 @@ export default function TarotBirthCardPage() {
       <main className="tbc-wrap">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(chartServiceLd) }} />
 
         <nav className="tbc-crumb">
           <Link href="/">Home</Link> · Tarot Birth Card

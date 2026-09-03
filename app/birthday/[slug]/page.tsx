@@ -11,6 +11,7 @@ import { getCardBySlug } from "../../../lib/cards";
 import { MAJORS, MAJOR_SLUGS, bearingIndex } from "../../../lib/almanac";
 import { majorGlyphId } from "../../../lib/pips";
 import { SITE_URL } from "../../../lib/site";
+import { organizationRef } from "../../../lib/organizationSchema";
 import {
   allBirthdays,
   birthdaySlug,
@@ -72,8 +73,8 @@ export default async function BirthdayPage({
     "@type": "Article",
     headline: `${label} Tarot Card: ${bearingName}`,
     about: `${bearingName} (tarot Bearing)`,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE_URL}/birthday/${birthdaySlug(md.m, md.d)}`,
   };
 

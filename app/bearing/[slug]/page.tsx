@@ -16,6 +16,7 @@ import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
 import { majorGlyphId } from "@/lib/pips";
 import { renderMarkdown } from "@/lib/markdown";
+import { organizationRef } from "@/lib/organizationSchema";
 import TarotCycleGap from "./TarotCycleGap";
 
 // Every Bearing essay uses this exact heading (verified across all 22 Majors) —
@@ -74,8 +75,8 @@ export default async function BearingPage({
     "@type": "Article",
     headline: `${card.name} Bearing`,
     about: `${card.name} (tarot)`,
-    author: { "@type": "Organization", name: "The Tarot Almanac" },
-    publisher: { "@type": "Organization", name: "The Tarot Almanac" },
+    author: organizationRef,
+    publisher: organizationRef,
     mainEntityOfPage: `${SITE}/bearing/${card.slug}`,
   };
 
