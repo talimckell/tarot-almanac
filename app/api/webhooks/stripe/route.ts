@@ -2,6 +2,7 @@ import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
 import { yearCardIndex, bearingForBirthday } from "@/lib/yearCard";
+import { analytics } from "@/lib/serverAnalytics";
 
 // Stripe webhook receiver. Raw body must be read via req.text() (NOT req.json())
 // because signature verification (constructEvent) needs the exact original bytes —
@@ -59,6 +60,10 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
         subscriptionCurrentPeriodEnd: new Date(subscription.items.data[0].current_period_end * 1000),
       },
     });
+
+    // HeyCatch: the backend is the only side that actually knows a paid
+    // subscription started — send it here, not from the client.
+    await analytics.trackEvent("subscription_started", {}, { userId: supabaseUserId });
     return;
   }
 
