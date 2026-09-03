@@ -370,6 +370,10 @@ export default async function Home() {
           </svg>
           Secured by Stripe
         </p>
+        <p className="acct-guarantee">
+          Try it for 14 days. If it&rsquo;s not yours, <Link href="/contact">email us</Link>{" "}
+          and we&rsquo;ll refund you, no questions asked.
+        </p>
       </section>
       </main>
 

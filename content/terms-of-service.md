@@ -51,7 +51,8 @@ A paid subscription ($7/month, or as otherwise displayed at checkout) unlocks un
 
 - Subscriptions renew automatically each billing period until canceled.
 - You can cancel at any time through your account's billing management (powered by Stripe); your subscription remains active through the end of the current billing period.
-- We do not provide prorated refunds for partial billing periods, except where required by law.
+- **14-day money-back guarantee:** if you're not satisfied within 14 days of your first subscription charge, email support@tarotalmanac.com and we'll refund that charge in full, no questions asked.
+- Outside that 14-day window, we do not provide prorated refunds for partial billing periods, except where required by law.
 
 ### 5.3 One-time purchases
 Certain content is available as a one-time purchase instead of a subscription (for example, a $12 one-time natal chart unlock, or individual AI-synthesized deep readings). One-time purchases are charged once, at the time of purchase, and do not renew.
