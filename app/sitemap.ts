@@ -44,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/bearing",
     "/birthday",
     "/month",
+    "/vs/raka",
+    "/vs/labyrinthos",
     "/about",
     "/blog",
     "/contact",

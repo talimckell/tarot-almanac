@@ -71,6 +71,7 @@ export default function Footer() {
             <Link href="/tarot">All 78 Cards</Link>
             <Link href="/how-it-works">How It Works</Link>
             <Link href="/vs/raka">Vs. Raka</Link>
+            <Link href="/vs/labyrinthos">Vs. Labyrinthos</Link>
           </div>
 
           <div className={styles.fcol}>

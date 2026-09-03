@@ -1,0 +1,215 @@
+/* /vs/[competitor] comparison pages. Namespaced .vs-* so it can't collide with
+   card-page.css / globals.css. Tokens (stone/vellum/indigo + element colors,
+   Cormorant/Lato) come from globals.css. Shared by every /vs/* page. */
+
+.vs-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.vs-crumb {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--label);
+  margin-bottom: 28px;
+}
+.vs-crumb a { color: var(--indigo); text-decoration: none; }
+.vs-crumb a:hover { text-decoration: underline; }
+
+.vs-eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 18px;
+}
+
+.vs-h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(36px, 6vw, 54px);
+  line-height: 1.04;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+
+.vs-lede {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--charcoal);
+  max-width: 62ch;
+  margin: 0 0 16px;
+}
+
+.vs-section { margin-top: 52px; }
+.vs-section > h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.vs-section > .vs-subhead {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--label);
+  margin: 0 0 20px;
+}
+.vs-section h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--ink);
+  margin: 26px 0 8px;
+}
+.vs-section p {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.vs-section p:last-child { margin-bottom: 0; }
+
+/* ── Where they agree: plain list, no icon chrome ── */
+.vs-agree {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  padding-left: 20px;
+}
+.vs-agree li { margin: 7px 0; }
+
+/* ── Comparison table ── */
+.vs-table-wrap { overflow-x: auto; margin-top: 8px; }
+.vs-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--warm-stone);
+  font-family: var(--sans);
+  font-size: 15px;
+}
+.vs-table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 10px;
+}
+.vs-table th, .vs-table td {
+  border: 1px solid var(--warm-stone);
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--ink);
+}
+.vs-table thead th {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  background: var(--vellum);
+}
+.vs-table tbody th {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label);
+  font-weight: 400;
+  background: var(--stone);
+  white-space: nowrap;
+}
+.vs-table td { font-weight: 300; line-height: 1.5; }
+.vs-table td.vs-yes { color: var(--indigo); }
+
+/* ── FAQ ── */
+.vs-faq details {
+  border-bottom: 1px solid var(--warm-stone);
+  padding: 4px 0;
+}
+.vs-faq summary {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  padding: 14px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.vs-faq summary::-webkit-details-marker { display: none; }
+.vs-faq summary::after { content: "+"; float: right; color: var(--label); font-family: var(--sans); }
+.vs-faq details[open] summary::after { content: "\2013"; }
+.vs-faq .ans {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.66;
+  color: var(--ink);
+  padding: 0 0 18px;
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* ── Paid teaser ── */
+.vs-teaser {
+  margin-top: 52px;
+  padding: 32px 28px;
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  text-align: center;
+}
+.vs-teaser .eyebrow {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 10px;
+}
+.vs-teaser h2 { font-family: var(--serif); font-weight: 500; font-size: 28px; color: var(--ink); margin: 0 0 12px; }
+.vs-teaser p {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 52ch;
+  margin: 0 auto 22px;
+}
+.vs-cta-btn {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  padding: 13px 26px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.vs-cta-btn:hover { background: var(--indigo-mid); }
+
+/* ── Cross-links ── */
+.vs-links { margin-top: 44px; font-family: var(--sans); font-size: 15px; color: var(--label); }
+.vs-links a { color: var(--indigo); text-decoration: none; }
+.vs-links a:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .vs-wrap { padding: 40px 18px 72px; }
+  .vs-table { font-size: 14px; }
+  .vs-table th, .vs-table td { padding: 10px 12px; }
+}
