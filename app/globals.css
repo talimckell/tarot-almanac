@@ -632,6 +632,7 @@ body {
 .acct-col-b { font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--vellum); margin-top: 6px; line-height: 1.6; }
 .acct-price { font-family: var(--sans); font-size: 13px; font-weight: 400; letter-spacing: .02em; color: var(--stone); margin: 0 0 20px; }
 .acct-cta { display: inline-block; background: var(--stone); color: var(--indigo); font-family: var(--serif-sc); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; padding: 14px 38px; text-decoration: none; transition: .15s; }
+.acct-trust { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 16px 0 0; font-family: var(--sans); font-size: 11px; letter-spacing: .03em; color: var(--warm-stone); }
 .acct-cta:hover { background: var(--vellum); }
 
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */

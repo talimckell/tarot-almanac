@@ -119,7 +119,26 @@ export default function TarotBirthChartPage() {
           >
             Build your birth chart · $12 &rarr;
           </Link>
-          <p className="dates" style={{ marginTop: 12 }}>
+          <p
+            className="dates"
+            style={{
+              marginTop: 12,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+              fontSize: 11,
+              letterSpacing: "0.03em",
+              color: "var(--warm-stone)",
+            }}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="4" y="11" width="16" height="10" rx="1.5" />
+              <path d="M7.5 11V7a4.5 4.5 0 0 1 9 0v4" />
+            </svg>
+            Secured by Stripe &middot; Pay once, yours to keep
+          </p>
+          <p className="dates" style={{ marginTop: 8 }}>
             <Link href="/tarot-birth-chart/sample">Or see a full sample first</Link> · included with a subscription
           </p>
         </div>
