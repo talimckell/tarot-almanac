@@ -70,6 +70,7 @@ export default function Footer() {
             <div className={styles.fcolH}>The Cards</div>
             <Link href="/tarot">All 78 Cards</Link>
             <Link href="/how-it-works">How It Works</Link>
+            <Link href="/vs/raka">Vs. Raka</Link>
           </div>
 
           <div className={styles.fcol}>
@@ -78,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.fcol}>
-            <div className={styles.fcolH}>The Almanac Co.</div>
+            <div className={styles.fcolH}>About</div>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>
