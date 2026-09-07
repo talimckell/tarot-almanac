@@ -79,6 +79,80 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-09-07 (window: Jul 4–Sep 5, 64 days) — CTR crosses 2%; the +1 reminder cadence proves out
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | 4,115 | +635 |
+| Clicks | 84 | +23 |
+| **CTR** | **2.0%** | first time ≥ 2% |
+| Page 1 (pos ≤ 10) | 164 | +12 |
+| Mobile position | 10.7 | ~page-1 average |
+
+### Impressions normalized down, quality up — the healthy trade
+
+Early September flipped shape: daily impressions fell to ~62–89 (from ~120–155 late Aug) but
+**positions jumped to ~9–23 (from ~40–51) and clicks surged** — ~20 clicks in Sep 1–5 alone, CTR
+6–8% on several days. The late-August impression highs were mostly low-position (pos ~50, page 5)
+impressions that never converted; September's fewer impressions are far higher quality. Net: clicks
+accelerating, CTR crossed 2% cumulative for the first time.
+
+### `/month/2026-10` surfaced via the Sept-1 reminder — the cadence works on its own
+
+Last week's open question ("does the +1 reminder cadence work on time?") is answered: **yes.** The
+Sept-1 routine fired, `/month/2026-10` got indexed, and it's already earning — **8 impr, 4 clicks,
+pos 18.25** (50% CTR, early). Second month running the index→rank→click loop worked, and this time
+**automatically**, no manual request. **This resolves the two-months-ahead question from last week:**
+the +1 cadence, run on time by the reminder, gets the page in and converting — so the +2 indexability
+hedge isn't needed. Don't build it. Just let the reminder run.
+
+### `/month/2026-09` held as the current month — didn't fade
+
+The other open question: does the September page fade once September arrives? **No — it grew.**
+208 impr, **19 clicks** (23% of all site clicks), pos 10.75, up from 150 impr / 16 clicks. Month
+pages earn both the ahead-of-time bulge *and* the during-the-month demand. The engine is durable,
+not just a pre-month spike.
+
+### Secondary engine: personal-month-card firing
+
+With September here, `/personal-month-card/*` lit up: hierophant 3c, lovers 3c, magician 2c,
+chariot 2c, plus fool/emperor/tower/empress single clicks — ~13 clicks across the cluster. The
+funnel shipped 2026-07-22 is now a real monthly contributor alongside the month pages.
+
+### Crawl-trap fix: still pre-recrawl
+
+`/today` still shows **39 indexed pages, now including 2025 dates** (`/today/2025-07-17`,
+`/today/2025-08-02`) that are out-of-window and noindexed post-fix but not yet recrawled/dropped
+(one, `/today/2026-04-21`, still took a click at pos 3). Deployed Aug 24, so ~2 weeks in — Google
+recrawl lag, exactly as expected. No thinning visible yet; keep watching over the next few weeks.
+
+### Vercel: headline up, but a heavy bot week — read the human number
+
+7-day: **101 visitors (+60%), 413 pageviews (+89%), bounce 55% (−5%, improving).** But **pageviews
+grew far faster than visitors again** (4.1 pv/visitor, up from 2.4) — bots are back heavy. The tells:
+Poland 2 visitors / **52 pageviews**, Brazil 5 / 48, Spain 1 / 20 — datacenter-crawler ratios. So
+real human traffic is well below 101, call it **~70–85** — still up from ~50 last week, but don't
+take 101 at face value.
+- **Engagement genuinely up:** 19 form_submits (was 5) = 19% of visitors used a calculator. Real.
+- **New referral sources:** Facebook (2) and **ChatGPT (1)** — first sign of an LLM answer-engine
+  sending traffic. Tiny, but worth watching as a channel. DuckDuckGo strong again (16).
+- **`/month/2026-10` drew 6 real visitors** (16 pageviews) — the new month page landing in Vercel
+  too, confirming the reminder loop end-to-end.
+- **New page spotted:** `/vs/labyrinthos` (3 visitors) — a competitor-comparison page went live.
+  Worth tracking whether the `/vs/` play earns rankings.
+
+**Mediavine/Journey:** human ~70–85/wk → ~300/mo *if it holds and net of bots* → **~22–25%**, rising.
+Bot-inflated, so anchor on the human subset (Mediavine filters bots anyway). Call it ~22% and up.
+
+### Baseline to beat next week
+
+Cumulative: impressions 4,115 · clicks 84 · CTR 2.0% · 164 on page 1 · ~22% to Journey. Watch:
+`/month/2026-10` climbing from pos 18 as October demand ramps, `/month/2026-09` through mid-September,
+whether the bot surge persists (may warrant the Vercel Firewall conversation), and the first sign of
+`/today` old pages dropping out of the index.
+
+---
+
 ## 2026-08-31 (window: Jul 4–Aug 29, 57 days) — new highs held; /month/2026-09 runs away
 
 | cumulative | | vs last week |
