@@ -124,6 +124,8 @@ export default async function BirthdayPage({
             <Link href={`/bearing/${bearingSlug}`}>Read the full {bearingName} Bearing &rarr;</Link>
             {" · "}
             <Link href={`/tarot/${bearingSlug}`}>See the card</Link>
+            {" · "}
+            <Link href="/tarot-birth-card">What is a tarot birth card?</Link>
           </p>
         </section>
 
