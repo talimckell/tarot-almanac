@@ -507,6 +507,81 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Find your month card →": "/personal-month-card",
     },
   },
+  // Published 2026-09-10, same day it was drafted. Tali chose to publish from the
+  // Review gate rather than take a separate reading pass.
+  //
+  // Replaces the 2026-08-31 draft on the old `blog-14-wedding-date-tarot-card` branch,
+  // which Tali read as "too math/engineering-y": it spent 41% of its words on one
+  // arithmetic section and 16% on the couple, and it opened on a competitor's method.
+  // This version was rebuilt through the new Stage 3 in the blog skill (value props and
+  // a written friends-conversation, both gated, before any drafting). Register is the
+  // KITCHEN-TABLE FRIEND, not the historian's mode — the first post to depart from it,
+  // chosen at step 3.2 because this reader arrives with a personal stake rather than a
+  // question about how a system works.
+  //
+  // The structural fix: the old draft leaned entirely on one invented couple's dates, so
+  // it only landed for readers who share them. This one gives the reader her own month.
+  // Consecutive days step exactly one card (checked across every consecutive pair from
+  // 2020 to 2035, 5,652 of them, zero exceptions), so any 30- or 31-day month contains all
+  // 22 Majors in order. Work out the 1st and count.
+  //
+  // CORRECTION carried in from the old draft, worth not reintroducing: it had the shape
+  // and texture metaphor INVERTED, printing the Minor as sitting "underneath" the Major.
+  // The site says the opposite (app/today/TodayView.tsx:449, and blog-02): the Major is the
+  // shape underneath, the Minor is the texture on top, drawn from it. Minors are a DAY-level
+  // card only — collectiveYear/personalYear/collectiveMonth/personalMonth return bare
+  // numbers — so the anniversary table deliberately carries no Minor column.
+  //
+  // Numbers node-verified against lib/almanac.ts (2026-09-10): the whole June 2027 table
+  // day by day; 14 June 2027 = the Hermit with the Ace of Pentacles and a digit sum of 22
+  // (which the wedding sites rank as a master number, so the two methods disagree in
+  // emotional temperature on the same date); 8 October 2011 = the Fool with the Five of
+  // Swords; 13 June 2027 = Strength with the Four of Wands, the card the wider tarot world
+  // already treats as the wedding card, attributed to them rather than claimed; in 2027
+  // thirty-six days sum to 22, thirteen are the Hermit, two of those carry the Ace of
+  // Pentacles; the anniversary run 2027-2036; the Hermit returning every ninth year.
+  // Over the first fifty anniversaries the fold reaches 9 values and the wheel reaches 13.
+  // NOTE the old draft's "reaches all twenty-two" claim does NOT hold for a single date
+  // over a marriage — that was only ever true of the 1950-2050 window. Don't restore it.
+  // Card copy for the Hermit, Death, the Tower and the Hierophant is quoted verbatim from
+  // content/cards/*.json, not written here.
+  //
+  // Illustrate is DONE: public/wedding-month-wheel.svg and public/anniversary-two-methods.svg,
+  // both from scripts/gen-wedding-date-diagrams.mjs with values resolved live from the engine.
+  // Canvas is 520 wide, not the older siblings' 720, because .diagram caps at 420px.
+  // No lib/blogSocialContent.ts entry, by Tali's decision 2026-09-10. The old branch's entry
+  // quotes prose that no longer exists and should be deleted rather than carried over.
+  //
+  // OPEN FOR TALI: (1) section is "your-cards", the closest of the three, but that section's
+  // authored intro says "the day you were born" and this post is about dates that aren't your
+  // birthday. Her copy, her call. (2) majorIndex 6, the Lovers, as the legible couples glyph;
+  // it's currently unused elsewhere, and the post's own worked card is the Hermit, which
+  // blog-09 already holds.
+  //
+  // On publish: consider reciprocal links from blog-13 (the collective-card sibling) and
+  // blog-04. Note the CTA goes to /today via the day they MET, not the wedding: the
+  // time-travel rule stops one month ahead, so a future wedding has no page, but the past
+  // is fully open. That resolves the CTA problem this post carried from the backlog.
+  {
+    slug: "wedding-date-tarot-card",
+    section: "your-cards",
+    title: "The Card of the Day You Met",
+    seoTitle: "Your Wedding Date's Tarot Card, and Every Anniversary After",
+    metaDescription:
+      "Your wedding date already has a tarot card, and you can work it out in three steps. Why the usual fold to one digit loses most of the deck, and what every anniversary gives you instead.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "Every date has a card already, set before anyone picked it. How to find the one under your wedding day, the day you met, or any date you've come to care about, and why it changes every year you come back to it.",
+    indexTeaser:
+      "Your wedding date already has a card, and so does the day you met. How to find them in three steps, and why the anniversary is a different card every year.",
+    majorIndex: 6, // The Lovers — the couples glyph; the post's worked card is the Hermit, held by blog-09
+    file: "blog-14-wedding-date-tarot-card.md",
+    linkMap: {
+      "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+      "The dated pages here": "/today",
+      "Look up the day you met →": "/today",
+    },
+  },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {
