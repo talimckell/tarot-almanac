@@ -507,7 +507,8 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       "Find your month card →": "/personal-month-card",
     },
   },
-  // DRAFTED 2026-09-10, NOT PUBLISHED — commented out pending the Review gate.
+  // Published 2026-09-10, same day it was drafted. Tali chose to publish from the
+  // Review gate rather than take a separate reading pass.
   //
   // Replaces the 2026-08-31 draft on the old `blog-14-wedding-date-tarot-card` branch,
   // which Tali read as "too math/engineering-y": it spent 41% of its words on one
@@ -561,26 +562,26 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   // blog-04. Note the CTA goes to /today via the day they MET, not the wedding: the
   // time-travel rule stops one month ahead, so a future wedding has no page, but the past
   // is fully open. That resolves the CTA problem this post carried from the backlog.
-  // {
-  //   slug: "wedding-date-tarot-card",
-  //   section: "your-cards",
-  //   title: "The Card of the Day You Met",
-  //   seoTitle: "Your Wedding Date's Tarot Card, and Every Anniversary After",
-  //   metaDescription:
-  //     "Your wedding date already has a tarot card, and you can work it out in three steps. Why the usual fold to one digit loses most of the deck, and what every anniversary gives you instead.",
-  //   eyebrow: "Tarot Numerology",
-  //   description:
-  //     "Every date has a card already, set before anyone picked it. How to find the one under your wedding day, the day you met, or any date you've come to care about, and why it changes every year you come back to it.",
-  //   indexTeaser:
-  //     "Your wedding date already has a card, and so does the day you met. How to find them in three steps, and why the anniversary is a different card every year.",
-  //   majorIndex: 6, // The Lovers — the couples glyph; the post's worked card is the Hermit, held by blog-09
-  //   file: "blog-14-wedding-date-tarot-card.md",
-  //   linkMap: {
-  //     "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
-  //     "The dated pages here": "/today",
-  //     "Look up the day you met →": "/today",
-  //   },
-  // },
+  {
+    slug: "wedding-date-tarot-card",
+    section: "your-cards",
+    title: "The Card of the Day You Met",
+    seoTitle: "Your Wedding Date's Tarot Card, and Every Anniversary After",
+    metaDescription:
+      "Your wedding date already has a tarot card, and you can work it out in three steps. Why the usual fold to one digit loses most of the deck, and what every anniversary gives you instead.",
+    eyebrow: "Tarot Numerology",
+    description:
+      "Every date has a card already, set before anyone picked it. How to find the one under your wedding day, the day you met, or any date you've come to care about, and why it changes every year you come back to it.",
+    indexTeaser:
+      "Your wedding date already has a card, and so does the day you met. How to find them in three steps, and why the anniversary is a different card every year.",
+    majorIndex: 6, // The Lovers — the couples glyph; the post's worked card is the Hermit, held by blog-09
+    file: "blog-14-wedding-date-tarot-card.md",
+    linkMap: {
+      "why reduction can only reach half the deck": "/blog/what-is-tarot-numerology",
+      "The dated pages here": "/today",
+      "Look up the day you met →": "/today",
+    },
+  },
 ];
 
 export function getPostMeta(slug: string): BlogPostMeta | undefined {
