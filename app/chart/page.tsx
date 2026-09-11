@@ -44,7 +44,7 @@ export default async function ChartPage({
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/chart");
+  if (!user) redirect("/sign-in?next=/chart&reason=chart");
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },
@@ -82,12 +82,14 @@ export default async function ChartPage({
     return (
       <>
         <SiteNav current="me" />
+        <main>
         <div className={styles.addBirthday}>
           <h1>Add your birthday first</h1>
           <p>
             Your natal chart runs on your birth date. <Link href="/me#your-details">Add it in My Almanac</Link> to see your chart.
           </p>
         </div>
+        </main>
         <Footer />
       </>
     );
@@ -121,6 +123,7 @@ export default async function ChartPage({
         />
       )}
       <SiteNav current="me" />
+      <main>
       <div className={styles.wrap}>
         <div className={styles.head}>
           <span className={styles.eyebrow}>Your Tarot Natal Chart</span>
@@ -239,6 +242,7 @@ export default async function ChartPage({
           </div>
         )}
       </div>
+      </main>
       <Footer />
     </>
   );

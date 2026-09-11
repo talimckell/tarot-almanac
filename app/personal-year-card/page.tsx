@@ -30,7 +30,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PersonalYearCardHub() {
+export default async function PersonalYearCardHub({
+  searchParams,
+}: {
+  // Present only when resumed from the sign-in redirect in checkoutActions.ts, which
+  // carries the calculator's inputs through so the result doesn't get dropped.
+  searchParams: Promise<{ bm?: string; bd?: string; year?: string }>;
+}) {
+  const { bm, bd, year } = await searchParams;
+  const resume = bm && bd && year ? { bm, bd, year } : undefined;
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -67,7 +75,7 @@ export default function PersonalYearCardHub() {
           the same card every time you check. Think of it as the theme the year is working on with you.
         </p>
 
-        <YearCardCalculator />
+        <YearCardCalculator resume={resume} />
 
         <section className="pyc-section">
           <h2>Every year card</h2>

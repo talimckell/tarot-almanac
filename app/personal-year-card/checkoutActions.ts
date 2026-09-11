@@ -26,7 +26,18 @@ export async function startYearReadingCheckout(formData: FormData) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/personal-year-card");
+  if (!user) {
+    // Carry the already-calculated inputs through sign-in so the result is still on
+    // screen (and the buy button still clickable) when they land back here, instead of
+    // silently dropping their birthday/year and making them redo the calculator.
+    const resumeParams = new URLSearchParams({
+      bm: String(bm).padStart(2, "0"),
+      bd: String(bd).padStart(2, "0"),
+      year: String(year),
+    });
+    const next = encodeURIComponent(`/personal-year-card?${resumeParams}`);
+    redirect(`/sign-in?next=${next}&reason=year-reading`);
+  }
 
   if (!bm || bm < 1 || bm > 12 || !bd || bd < 1 || bd > 31 || !year || year < 1000 || year > 3000) {
     redirect("/personal-year-card");

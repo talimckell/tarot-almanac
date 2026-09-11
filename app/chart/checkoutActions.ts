@@ -25,7 +25,7 @@ export async function startSubscriptionCheckout(formData?: FormData) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/chart");
+  if (!user) redirect("/sign-in?next=/chart&reason=chart");
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },
@@ -64,7 +64,7 @@ export async function startOwnChartCheckout() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/chart");
+  if (!user) redirect("/sign-in?next=/chart&reason=chart");
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },

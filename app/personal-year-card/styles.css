@@ -257,6 +257,21 @@
 .pyc-result .rlead { font-family: var(--sans); font-size: 14px; color: var(--label); margin: 0 0 2px; }
 .pyc-result .rname { font-family: var(--serif); font-size: 30px; color: var(--ink); line-height: 1.05; margin: 0 0 10px; }
 .pyc-result .rblurb { font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.6; color: var(--ink); margin: 0 0 14px; }
+.pyc-result-wheel {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--warm-stone);
+}
+.pyc-result-wheel .pyc-eyebrow { margin-bottom: 0; }
+.pyc-result-wheel .pyc-arc-item .pyc-glyph svg { width: 24px; height: 24px; }
+
+/* Buy form sits full-width below the wheel now, not squeezed into the result's text
+   column, so let it breathe instead of the original narrow (360px) cap. */
+.pyc-result-wheel + .pyc-buy {
+  max-width: 420px;
+  margin-top: 26px;
+}
+
 .pyc-result a.cta {
   font-family: var(--serif-sc);
   font-size: 12px;

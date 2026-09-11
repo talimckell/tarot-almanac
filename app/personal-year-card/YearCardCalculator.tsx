@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   yearCardIndex,
   yearCardContent,
+  yearMonths,
   majorName,
   majorShortName,
   majorSlug,
@@ -36,14 +37,46 @@ function maxDay(month: number): number {
   return 31;
 }
 
-export default function YearCardCalculator() {
+// Validates a resumed (bm, bd, year) triple before trusting it to compute a card —
+// it arrives as a URL query param (see page.tsx), so treat it as unverified input,
+// not just as the app's own recently-submitted state.
+function validResume(r: { bm: string; bd: string; year: string }): boolean {
+  const bm = Number(r.bm);
+  const bd = Number(r.bd);
+  const year = Number(r.year);
+  return (
+    Number.isInteger(bm) && bm >= 1 && bm <= 12 &&
+    Number.isInteger(bd) && bd >= 1 && bd <= maxDay(bm) &&
+    Number.isInteger(year) && year >= 1000 && year <= 3000
+  );
+}
+
+export default function YearCardCalculator({
+  resume,
+}: {
+  // Set only when landing back here from the sign-in redirect in checkoutActions.ts —
+  // lets the result reappear immediately instead of making them redo the calculator.
+  resume?: { bm: string; bd: string; year: string };
+}) {
   const now = new Date().getFullYear();
   const YEARS = [now - 1, now, now + 1, now + 2, now + 3];
+  const initial = resume && validResume(resume) ? resume : undefined;
 
-  const [m, setM] = useState("");
-  const [d, setD] = useState("");
-  const [y, setY] = useState(String(now));
-  const [result, setResult] = useState<{ idx: number; year: number; m: string; d: string } | null>(null);
+  const [m, setM] = useState(initial?.bm ?? "");
+  const [d, setD] = useState(initial?.bd ?? "");
+  const [y, setY] = useState(initial?.year ?? String(now));
+  // Not re-tracked as a form_submit: the original submit already fired client-side
+  // before the sign-in redirect, so restoring it here isn't a new submission.
+  const [result, setResult] = useState<{ idx: number; year: number; m: string; d: string } | null>(() =>
+    initial
+      ? {
+          idx: yearCardIndex(Number(initial.year), Number(initial.bm), Number(initial.bd)),
+          year: Number(initial.year),
+          m: initial.bm,
+          d: initial.bd,
+        }
+      : null,
+  );
 
   const dayCount = m ? maxDay(Number(m)) : 31;
 
@@ -106,31 +139,64 @@ export default function YearCardCalculator() {
       </form>
 
       {result && (
-        <div className="pyc-result">
-          <span className="pyc-glyph" style={{ color: `var(--${majorElement(result.idx)})` }}>
-            <svg viewBox="0 0 46 46" aria-label={`${majorName(result.idx)} glyph`}>
-              <use href={`#ma-${result.idx}`} />
-            </svg>
-          </span>
-          <div>
-            <p className="rlead">Your {result.year} year card is</p>
-            <p className="rname">{majorName(result.idx)}</p>
-            <p className="rblurb">{yearCardContent(result.idx).blurb}</p>
-            <Link className="cta" href={`/personal-year-card/${majorSlug(result.idx)}`}>
-              Read the full {`${majorShortName(result.idx)} year`} &rarr;
-            </Link>
-
-            <form action={startYearReadingCheckout} className="pyc-buy">
-              <input type="hidden" name="bm" value={result.m} />
-              <input type="hidden" name="bd" value={result.d} />
-              <input type="hidden" name="year" value={String(result.year)} />
-              <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
-              <button type="submit" className="pyc-cta-btn">
-                Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
-              </button>
-            </form>
+        <>
+          <div className="pyc-result">
+            <span className="pyc-glyph" style={{ color: `var(--${majorElement(result.idx)})` }}>
+              <svg viewBox="0 0 46 46" aria-label={`${majorName(result.idx)} glyph`}>
+                <use href={`#ma-${result.idx}`} />
+              </svg>
+            </span>
+            <div>
+              <p className="rlead">Your {result.year} year card is</p>
+              <p className="rname">{majorName(result.idx)}</p>
+              <p className="rblurb">{yearCardContent(result.idx).blurb}</p>
+              <Link className="cta" href={`/personal-year-card/${majorSlug(result.idx)}`}>
+                Read the full {`${majorShortName(result.idx)} year`} &rarr;
+              </Link>
+            </div>
           </div>
-        </div>
+
+          {/* Free preview of the actual paid product's structure: the same twelve-month
+              wheel the $15 report walks month by month, computed the same way
+              (buildYearPackage), but glyph + card name only, no reading text. Mirrors the
+              chart preview's leak-proofing pattern (structure free, prose paid) — this is
+              personalized to the birthday just entered, not a generic sample. */}
+          <div className="pyc-result-wheel">
+            <span className="pyc-eyebrow" style={{ marginBottom: 10 }}>
+              Your {result.year} year wheel
+            </span>
+            <p className="hint" style={{ marginTop: 0, marginBottom: 14 }}>
+              The twelve months that follow from your year card, one Major each. The full
+              reading walks each one; this is just the shape of it.
+            </p>
+            <div className="pyc-arc">
+              {yearMonths(result.idx).map((mi, i) => (
+                <div className="pyc-arc-item" key={i}>
+                  <span className="pyc-glyph" style={{ color: `var(--${majorElement(mi)})` }}>
+                    <svg viewBox="0 0 46 46" aria-hidden="true">
+                      <use href={`#ma-${mi}`} />
+                    </svg>
+                  </span>
+                  <span>
+                    <span className="mon">{MONTHS[i]}</span>
+                    <br />
+                    <span className="cardname">{majorName(mi)}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <form action={startYearReadingCheckout} className="pyc-buy">
+            <input type="hidden" name="bm" value={result.m} />
+            <input type="hidden" name="bd" value={result.d} />
+            <input type="hidden" name="year" value={String(result.year)} />
+            <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
+            <button type="submit" className="pyc-cta-btn">
+              Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
+            </button>
+          </form>
+        </>
       )}
     </div>
   );

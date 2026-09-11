@@ -1,11 +1,40 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { createClient } from "../../lib/supabase/client";
 import { trackFormSubmit } from "@/lib/analytics";
 import styles from "./page.module.css";
 
+// Every checkout flow (year reading, chart, gift chart, /me) lands here mid-purchase with
+// no explanation of why — the generic "Your almanac" framing only makes sense if someone
+// clicked in from /today or /me directly. A `reason` param on the redirect (set alongside
+// `next`) lets the checkout action that sent them here say what the account is actually
+// for, so this reads as "create your account to get this" instead of an unexplained wall.
+const REASON_COPY: Record<string, { eyebrow: string; title: string; deck: string }> = {
+  "year-reading": {
+    eyebrow: "Create your account",
+    title: "One thing first",
+    deck: "Your year-ahead reading needs an account to live in, so you can come back and read it again. It's a one-time $15 purchase, not a subscription. Enter your email and I'll send you a link and a code. No password to remember.",
+  },
+  chart: {
+    eyebrow: "Create your account",
+    title: "See your chart",
+    deck: "Your natal chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
+  },
+};
+const DEFAULT_COPY = {
+  eyebrow: "Sign in",
+  title: "Your almanac",
+  deck: "Enter your email and I'll send you a link and a 6-digit code to sign in. No password to remember.",
+};
+
 export default function SignInPage() {
+  const [copy, setCopy] = useState(DEFAULT_COPY);
+  useEffect(() => {
+    const reason = new URLSearchParams(window.location.search).get("reason");
+    if (reason && REASON_COPY[reason]) setCopy(REASON_COPY[reason]);
+  }, []);
+
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
@@ -115,12 +144,9 @@ export default function SignInPage() {
 
   return (
     <div className={styles.wrap}>
-      <span className={styles.eyebrow}>Sign in</span>
-      <h1>Your almanac</h1>
-      <p className={styles.deck}>
-        Enter your email and I&rsquo;ll send you a link and a 6-digit code to
-        sign in. No password to remember.
-      </p>
+      <span className={styles.eyebrow}>{copy.eyebrow}</span>
+      <h1>{copy.title}</h1>
+      <p className={styles.deck}>{copy.deck}</p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label} htmlFor="email">
           Email
