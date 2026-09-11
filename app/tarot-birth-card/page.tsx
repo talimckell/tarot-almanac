@@ -210,18 +210,17 @@ export default function TarotBirthCardPage() {
           <Link className="tbc-btn" href="/tarot-birth-chart">See what your chart holds &rarr;</Link>
         </aside>
 
-        <aside className="tbc-capture">
-          <span className="eyebrow">Not ready for the full chart?</span>
-          <p>Follow along for free. The Almanac&rsquo;s newsletter brings readings and the cards straight to your inbox, no account needed.</p>
+        <p className="tbc-capture">
+          Not ready for the full chart?{" "}
           <a
-            className="tbc-btn-outline"
+            className="tbc-btn-ghost"
             href="https://tarotalmanac.substack.com/subscribe"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get the free newsletter &rarr;
+            Get the free newsletter instead &rarr;
           </a>
-        </aside>
+        </p>
 
         <section className="tbc-section">
           <h2>Every tarot birth card</h2>
