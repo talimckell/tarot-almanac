@@ -20,7 +20,16 @@ import {
 } from "../../../lib/yearCard";
 import { YEAR_READING_PRICE_DISPLAY } from "../../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "../checkoutActions";
+import { buildYearPackage } from "../../../lib/yearReading";
+import type { YearReadingSections } from "../../../lib/yearReadingPrompt";
+import ReportBody from "../reading/[token]/ReportBody";
+import sampleData from "../../../content/year-reading-sample.json";
 import "../styles.css";
+
+// Same pinned sample used publicly at /personal-year-card/sample — Maya, born March 3,
+// read for 2026. Fictional name on purpose; a real reading is never shown here, this is
+// just proof of what the $15 buys, right at the point of deciding to buy it.
+const SAMPLE = { name: "Maya", year: 2026, bm: 3, bd: 3 };
 
 export const metadata: Metadata = {
   title: "Continue your year reading | The Tarot Almanac",
@@ -51,6 +60,9 @@ export default async function ContinueYearReading({
   const months = yearMonths(idx);
   const bmPadded = String(parsed.bm).padStart(2, "0");
   const bdPadded = String(parsed.bd).padStart(2, "0");
+
+  const samplePkg = buildYearPackage(SAMPLE.name, SAMPLE.year, SAMPLE.bm, SAMPLE.bd);
+  const sampleSections = sampleData.sections as unknown as YearReadingSections;
 
   return (
     <>
@@ -114,6 +126,15 @@ export default async function ContinueYearReading({
             Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
           </button>
         </form>
+
+        <div className="pyc-faq" style={{ marginTop: 18 }}>
+          <details>
+            <summary>See a full sample reading</summary>
+            <div className="ans" style={{ maxWidth: "none" }}>
+              <ReportBody pkg={samplePkg} sections={sampleSections} sample />
+            </div>
+          </details>
+        </div>
 
         <p className="pyc-links">
           <Link href="/personal-year-card">Not right now, back to the calculator</Link>

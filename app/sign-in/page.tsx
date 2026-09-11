@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, type FormEvent } from "react";
+import Link from "next/link";
 import { createClient } from "../../lib/supabase/client";
 import { trackFormSubmit } from "@/lib/analytics";
 import styles from "./page.module.css";
@@ -10,7 +11,15 @@ import styles from "./page.module.css";
 // clicked in from /today or /me directly. A `reason` param on the redirect (set alongside
 // `next`) lets the checkout action that sent them here say what the account is actually
 // for, so this reads as "create your account to get this" instead of an unexplained wall.
-const REASON_COPY: Record<string, { eyebrow: string; title: string; deck: string }> = {
+// `sample` is an optional proof link — somewhere free to see what the thing they're
+// signing in for actually looks like before they hand over an email.
+interface ReasonCopy {
+  eyebrow: string;
+  title: string;
+  deck: string;
+  sample?: { href: string; label: string };
+}
+const REASON_COPY: Record<string, ReasonCopy> = {
   "year-reading": {
     eyebrow: "Create your account",
     title: "One thing first",
@@ -21,8 +30,17 @@ const REASON_COPY: Record<string, { eyebrow: string; title: string; deck: string
     title: "See your chart",
     deck: "Your natal chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
   },
+  // The homepage's "Make your almanac" CTA and /me both land here — this is the main
+  // subscription entry point, not a one-off purchase, so the value prop covers the
+  // whole thing (reusing the same line /pricing already uses for this tier).
+  almanac: {
+    eyebrow: "Create your account",
+    title: "Make your almanac",
+    deck: "Every day you've already lived, open to walk back through, and always a month ahead. Your full natal chart. A monthly personal reading. $7 a month, cancel anytime. Enter your email and I'll send you a link and a code. No password to remember.",
+    sample: { href: "/today", label: "See today's cards free, no account needed" },
+  },
 };
-const DEFAULT_COPY = {
+const DEFAULT_COPY: ReasonCopy = {
   eyebrow: "Sign in",
   title: "Your almanac",
   deck: "Enter your email and I'll send you a link and a 6-digit code to sign in. No password to remember.",
@@ -147,6 +165,11 @@ export default function SignInPage() {
       <span className={styles.eyebrow}>{copy.eyebrow}</span>
       <h1>{copy.title}</h1>
       <p className={styles.deck}>{copy.deck}</p>
+      {copy.sample && (
+        <Link href={copy.sample.href} className={styles.sampleLink}>
+          {`${copy.sample.label} →`}
+        </Link>
+      )}
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label} htmlFor="email">
           Email

@@ -31,7 +31,7 @@ export default async function MePage({
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/me");
+  if (!user) redirect("/sign-in?next=/me&reason=almanac");
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },
@@ -71,6 +71,7 @@ export default async function MePage({
   return (
     <>
       <SiteNav current="me" />
+      <main>
       <MeView
         profile={{
           name: profile.name,
@@ -100,6 +101,7 @@ export default async function MePage({
         view={resolvedView}
         checkout={checkout}
       />
+      </main>
       <Footer />
     </>
   );

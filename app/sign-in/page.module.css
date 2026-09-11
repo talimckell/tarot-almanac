@@ -30,6 +30,17 @@
   margin-bottom: 40px;
 }
 
+.sampleLink {
+  display: inline-block;
+  color: var(--indigo);
+  font-size: 14px;
+  text-decoration: none;
+  margin: -26px 0 40px;
+}
+.sampleLink:hover {
+  text-decoration: underline;
+}
+
 .form {
   display: flex;
   flex-direction: column;
