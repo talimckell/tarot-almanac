@@ -86,7 +86,7 @@ export default async function ChartPage({
         <div className={styles.addBirthday}>
           <h1>Add your birthday first</h1>
           <p>
-            Your natal chart runs on your birth date. <Link href="/me#your-details">Add it in My Almanac</Link> to see your chart.
+            Your natal chart runs on your birth date. <Link href="/me?next=/chart#your-details">Add it in My Almanac</Link> to see your chart.
           </p>
         </div>
         </main>

@@ -37,7 +37,7 @@
       "q": "Does it change every month?",
       "a": "Yes. Each month has its own card, one step forward from the last, all twelve set by your birthday and the year. The living almanac walks them with you month by month, in the Almanac's voice, alongside your daily cards and your Bearing.",
       "link": {
-        "href": "/me#subscribe",
+        "href": "/me?subscribe=1#subscribe",
         "text": "See the living almanac"
       }
     }

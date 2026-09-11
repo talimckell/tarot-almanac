@@ -202,7 +202,7 @@ export default function VsLabyrinthosPage() {
           <Link href="/bearing">your Bearing</Link> ·{" "}
           <Link href="/tarot">all seventy-eight cards</Link> ·{" "}
           <Link href="/vs/raka">The Tarot Almanac vs. Raka</Link> ·{" "}
-          <Link href="/me#subscribe">subscribe for $7/month</Link>
+          <Link href="/me?subscribe=1#subscribe">subscribe for $7/month</Link>
         </p>
       </main>
       <Footer />

@@ -85,7 +85,7 @@ export default function PricingPage() {
               ahead. Your full natal chart. Charts for anyone you love, included. A monthly
               personal reading.
             </p>
-            <Link href="/me#subscribe" className={styles.tierCta}>
+            <Link href="/me?subscribe=1#subscribe" className={styles.tierCta}>
               Make your almanac
             </Link>
             <p className={styles.tierFine}>Cancel anytime. 14-day money-back guarantee.</p>

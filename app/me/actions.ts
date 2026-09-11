@@ -40,6 +40,16 @@ export async function updateProfile(formData: FormData) {
   });
 
   await trackFormSubmitServer("update_profile", undefined, user.email);
+
+  // Set only when a gated page (e.g. /chart, before a birthday was on file) sent the
+  // visitor here to fill in a detail it needs — carries them back instead of stranding
+  // them on /me after Save. Re-validated here (not just trusted from the hidden input)
+  // since form submissions are attacker-controllable regardless of what the page rendered.
+  const returnTo = formData.get("returnTo") as string | null;
+  if (returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//")) {
+    redirect(returnTo);
+  }
+
   revalidatePath("/me");
 }
 

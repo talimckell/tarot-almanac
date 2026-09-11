@@ -157,7 +157,7 @@ export default function TodayView({
                 <p className={styles.gateSub}>Every date, collective and personal, permanent and yours.</p>
                 <div className={styles.gateActions}>
                   {signedIn ? (
-                    <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
+                    <Link href="/me?subscribe=1#subscribe" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
                   ) : (
                     <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
                   )}
@@ -291,7 +291,7 @@ export default function TodayView({
               </div>
               <div className={styles.gateActions}>
                 {signedIn ? (
-                  <Link href="/chart" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
+                  <Link href="/me?subscribe=1#subscribe" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
                 ) : (
                   <Link href="/me" className={`${styles.btn} ${styles.btnSolid}`}>See what an account holds</Link>
                 )}

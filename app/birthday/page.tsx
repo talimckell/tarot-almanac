@@ -55,6 +55,13 @@ export default function BirthdayIndexPage() {
             <Link href="/bearing">what a Bearing is</Link>, or{" "}
             <Link href="/tarot-birth-card">find your tarot birth card</Link>.
           </p>
+          <p>
+            Your Bearing is one position of seven. A full natal chart sets it among the other six,
+            the collective and personal cards of your birth year, month, and day, read as one shape.
+          </p>
+          <div className="cta-group">
+            <Link href="/chart" className="btn-primary">SEE YOUR FULL CHART</Link>
+          </div>
         </section>
 
         {months.map(({ name, days }) => (

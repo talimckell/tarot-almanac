@@ -126,9 +126,9 @@ export default function PersonalMonthCardHub() {
             <li>Your Bearing, and how it meets each month as it arrives</li>
             <li>Time travel to any past month, and the month ahead</li>
           </ul>
-          <p style={{ marginTop: 4 }}>
-            <Link href="/me#subscribe" style={{ color: "var(--indigo)", fontFamily: "var(--serif-sc)", letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 13, textDecoration: "none" }}>
-              See the living almanac &rarr;
+          <p style={{ marginTop: 16 }}>
+            <Link href="/me?subscribe=1#subscribe" className="pyc-cta-btn">
+              See the living almanac · $7/mo
             </Link>
           </p>
         </section>

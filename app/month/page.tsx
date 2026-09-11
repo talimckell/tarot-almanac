@@ -63,6 +63,13 @@ export default async function MonthIndexPage() {
             This is the world&rsquo;s card for the month. Your birthday sets a second one that&rsquo;s
             yours alone: <Link href="/personal-month-card">find your personal month card</Link>.
           </p>
+          <p>
+            Every month here is free to browse. A subscription walks all twelve as they come, your
+            own day cards alongside the world&rsquo;s, personal and collective side by side.
+          </p>
+          <div className="cta-group">
+            <Link href="/me?subscribe=1#subscribe" className="btn-primary">SEE THE LIVING ALMANAC</Link>
+          </div>
         </section>
 
         <section className="related">

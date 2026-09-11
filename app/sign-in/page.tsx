@@ -29,6 +29,7 @@ const REASON_COPY: Record<string, ReasonCopy> = {
     eyebrow: "Create your account",
     title: "See your chart",
     deck: "Your natal chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
+    sample: { href: "/tarot-birth-chart/sample", label: "See a full sample chart" },
   },
   // The homepage's "Make your almanac" CTA and /me both land here — this is the main
   // subscription entry point, not a one-off purchase, so the value prop covers the

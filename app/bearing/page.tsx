@@ -27,6 +27,7 @@ export default function BearingPage() {
     <>
       <SiteNav current="bearing" />
 
+      <main>
       <div className={styles.wrap}>
         <header className={styles.hero}>
           <span className={styles.eyebrow}>Your Bearing</span>
@@ -113,8 +114,13 @@ export default function BearingPage() {
             shape together.
           </p>
           <Link className={styles.btn} href="/chart">See your full chart</Link>
+          <p className={styles.ctaFine}>
+            $12 once, or included with a subscription. Free to preview first, structure and
+            all, no purchase required.
+          </p>
         </aside>
       </div>
+      </main>
 
       <Footer />
     </>

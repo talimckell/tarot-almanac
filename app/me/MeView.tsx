@@ -67,6 +67,7 @@ export default function MeView({
   birthday,
   view,
   checkout,
+  returnTo,
 }: {
   profile: Profile;
   savedCharts: SavedChart[];
@@ -80,6 +81,10 @@ export default function MeView({
   birthday: { bm: number; bd: number } | null;
   view: "personal" | "collective";
   checkout?: string;
+  // Set when a gated page (e.g. /chart, before a birthday's on file) sent someone here
+  // to fill in a detail it needs — carries them back after Save instead of stranding
+  // them on /me. Validated (internal path only) by app/me/page.tsx before it gets here.
+  returnTo?: string;
 }) {
   const prevSlug = formatMonthSlug(addMonths(month, -1));
   const nextMonth = addMonths(month, 1);
@@ -401,6 +406,7 @@ export default function MeView({
         <h2>Your details</h2>
       </div>
       <form className={styles.detailsForm} action={updateProfile}>
+        {returnTo && <input type="hidden" name="returnTo" value={returnTo} />}
         <div className={styles.fieldGroup}>
           <label className={styles.fieldLabel} htmlFor="name">Name</label>
           <input

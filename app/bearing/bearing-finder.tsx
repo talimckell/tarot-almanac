@@ -59,6 +59,11 @@ export default function BearingFinder() {
           <Link className={styles.rlink} href={`/bearing/${MAJOR_SLUGS[result]}`}>
             Read your Bearing &rarr;
           </Link>
+          <div>
+            <Link className={styles.rlink} href="/chart" style={{ marginTop: 4 }}>
+              See it in your full chart · $12 &rarr;
+            </Link>
+          </div>
           <div style={{ marginTop: 14 }}>
             <ShareImageButton
               imagePath={`/bearing/${MAJOR_SLUGS[result]}/share/image`}

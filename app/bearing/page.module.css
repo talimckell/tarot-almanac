@@ -249,6 +249,12 @@
   background: var(--stone);
   color: var(--indigo);
 }
+.ctaFine {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--warm-stone);
+  margin: 16px 0 0;
+}
 
 @media (max-width: 680px) {
   .hero h1 { font-size: 38px; }

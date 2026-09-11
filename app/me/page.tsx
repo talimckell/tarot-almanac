@@ -25,13 +25,31 @@ export const metadata: Metadata = {
 export default async function MePage({
   searchParams,
 }: {
-  searchParams: Promise<{ month?: string; view?: string; checkout?: string }>;
+  searchParams: Promise<{ month?: string; view?: string; checkout?: string; subscribe?: string; next?: string }>;
 }) {
+  const { subscribe, next: returnTo } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/me&reason=almanac");
+  if (!user) {
+    // #subscribe never reaches the server (fragments aren't sent in requests), so a
+    // signed-out click on a "/me?subscribe=1#subscribe" link needs the query param to
+    // carry the intent here. Once decoded back out on the sign-in page, the fragment
+    // rides along inside `next` as plain text and works on the final client-side
+    // navigation after verifying the code, landing straight on the paywall instead of
+    // the top of the page. Same idea for `next` itself (a gated page like /chart
+    // sending someone here for a missing detail) — not normally hit signed-out in
+    // practice (the gated page's own sign-in gate runs first), but a stale session
+    // mid-flow shouldn't silently drop where they were headed either.
+    const validReturnTo = returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//") ? returnTo : null;
+    const next = validReturnTo
+      ? `/me?next=${encodeURIComponent(validReturnTo)}#your-details`
+      : subscribe === "1"
+        ? "/me#subscribe"
+        : "/me";
+    redirect(`/sign-in?next=${encodeURIComponent(next)}&reason=almanac`);
+  }
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },
@@ -100,6 +118,7 @@ export default async function MePage({
         birthday={birthday}
         view={resolvedView}
         checkout={checkout}
+        returnTo={returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//") ? returnTo : undefined}
       />
       </main>
       <Footer />
