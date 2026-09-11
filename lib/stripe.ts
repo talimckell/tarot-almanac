@@ -26,7 +26,21 @@ export async function getOrCreateStripeCustomerId(profile: {
   email: string;
   stripeCustomerId: string | null;
 }): Promise<string> {
-  if (profile.stripeCustomerId) return profile.stripeCustomerId;
+  if (profile.stripeCustomerId) {
+    // Verify the stored id actually resolves against the key this deployment is
+    // running, not just that the field is non-null. Test and live mode are separate
+    // customer spaces on the same id format, so a stored id written against the
+    // wrong mode (e.g. a webhook event that fired against the shared dev database
+    // before live mode was cut over) looks valid here but throws deep inside
+    // Checkout Session creation instead. Self-heal by falling through to create a
+    // fresh one rather than crashing the whole checkout on every attempt forever.
+    try {
+      const existing = await stripe.customers.retrieve(profile.stripeCustomerId);
+      if (!existing.deleted) return profile.stripeCustomerId;
+    } catch {
+      // Not found (wrong mode, deleted, or never existed) — fall through and create.
+    }
+  }
 
   const customer = await stripe.customers.create({
     email: profile.email,
