@@ -27,15 +27,15 @@ export async function startYearReadingCheckout(formData: FormData) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    // Carry the already-calculated inputs through sign-in so the result is still on
-    // screen (and the buy button still clickable) when they land back here, instead of
-    // silently dropping their birthday/year and making them redo the calculator.
+    // Carry the already-calculated inputs through sign-in, landing back on the narrow
+    // /continue confirm step rather than the full calculator, so finishing doesn't feel
+    // like starting over (just their card again + one button, not the whole page).
     const resumeParams = new URLSearchParams({
       bm: String(bm).padStart(2, "0"),
       bd: String(bd).padStart(2, "0"),
       year: String(year),
     });
-    const next = encodeURIComponent(`/personal-year-card?${resumeParams}`);
+    const next = encodeURIComponent(`/personal-year-card/continue?${resumeParams}`);
     redirect(`/sign-in?next=${next}&reason=year-reading`);
   }
 

@@ -109,3 +109,31 @@ export function majorElement(i: number): Element {
 export function bearingForBirthday(bm: number, bd: number): number {
   return bearingIndex(bm, bd);
 }
+
+// Days per month for a birthday. Feb allows 29 (leap-year births), since the birth
+// year isn't collected. Shared by the calculator (client) and the post-sign-in
+// resume/confirm step (server) so the two never drift on what counts as a valid day.
+export function maxDay(month: number): number {
+  if (month === 2) return 29;
+  if ([4, 6, 9, 11].includes(month)) return 30;
+  return 31;
+}
+
+// Validates a (bm, bd, year) triple arriving as URL query params — from the
+// resume-through-sign-in redirect in personal-year-card/checkoutActions.ts, so
+// untrusted user input, not the app's own recently-submitted state. Returns the
+// parsed numbers, or null if anything's out of range.
+export function parseYearCardResumeParams(
+  bm: string | undefined,
+  bd: string | undefined,
+  year: string | undefined,
+): { bm: number; bd: number; year: number } | null {
+  if (!bm || !bd || !year) return null;
+  const m = Number(bm);
+  const d = Number(bd);
+  const y = Number(year);
+  if (!Number.isInteger(m) || m < 1 || m > 12) return null;
+  if (!Number.isInteger(d) || d < 1 || d > maxDay(m)) return null;
+  if (!Number.isInteger(y) || y < 1000 || y > 3000) return null;
+  return { bm: m, bd: d, year: y };
+}

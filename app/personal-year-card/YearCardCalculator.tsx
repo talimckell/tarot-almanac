@@ -10,6 +10,8 @@ import {
   majorShortName,
   majorSlug,
   majorElement,
+  maxDay,
+  parseYearCardResumeParams,
 } from "../../lib/yearCard";
 import { YEAR_READING_PRICE_DISPLAY } from "../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "./checkoutActions";
@@ -29,38 +31,22 @@ function pad(n: number): string {
   return String(n).padStart(2, "0");
 }
 
-// Days per month for a birthday. Feb allows 29 (leap-year births), since the birth
-// year isn't collected.
-function maxDay(month: number): number {
-  if (month === 2) return 29;
-  if ([4, 6, 9, 11].includes(month)) return 30;
-  return 31;
-}
-
-// Validates a resumed (bm, bd, year) triple before trusting it to compute a card —
-// it arrives as a URL query param (see page.tsx), so treat it as unverified input,
-// not just as the app's own recently-submitted state.
-function validResume(r: { bm: string; bd: string; year: string }): boolean {
-  const bm = Number(r.bm);
-  const bd = Number(r.bd);
-  const year = Number(r.year);
-  return (
-    Number.isInteger(bm) && bm >= 1 && bm <= 12 &&
-    Number.isInteger(bd) && bd >= 1 && bd <= maxDay(bm) &&
-    Number.isInteger(year) && year >= 1000 && year <= 3000
-  );
-}
-
 export default function YearCardCalculator({
   resume,
 }: {
   // Set only when landing back here from the sign-in redirect in checkoutActions.ts —
   // lets the result reappear immediately instead of making them redo the calculator.
+  // The main post-sign-in path now goes through /personal-year-card/continue instead
+  // (a focused confirm step, not the full calculator), so this is a fallback for
+  // anyone who lands on this bare page with the params some other way.
   resume?: { bm: string; bd: string; year: string };
 }) {
   const now = new Date().getFullYear();
   const YEARS = [now - 1, now, now + 1, now + 2, now + 3];
-  const initial = resume && validResume(resume) ? resume : undefined;
+  const parsed = resume && parseYearCardResumeParams(resume.bm, resume.bd, resume.year);
+  const initial = parsed
+    ? { bm: String(parsed.bm).padStart(2, "0"), bd: String(parsed.bd).padStart(2, "0"), year: String(parsed.year) }
+    : undefined;
 
   const [m, setM] = useState(initial?.bm ?? "");
   const [d, setD] = useState(initial?.bd ?? "");
