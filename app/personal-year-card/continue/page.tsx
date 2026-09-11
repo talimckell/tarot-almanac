@@ -78,6 +78,16 @@ export default async function ContinueYearReading({
           Your card&rsquo;s still right here. Confirm and I&rsquo;ll take you to checkout.
         </p>
 
+        <form action={startYearReadingCheckout} className="pyc-buy" style={{ marginTop: 8 }}>
+          <input type="hidden" name="bm" value={bmPadded} />
+          <input type="hidden" name="bd" value={bdPadded} />
+          <input type="hidden" name="year" value={String(parsed.year)} />
+          <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
+          <button type="submit" className="pyc-cta-btn">
+            Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
+          </button>
+        </form>
+
         <div className="pyc-result" style={{ marginTop: 32 }}>
           <span className="pyc-glyph" style={{ color: `var(--${majorElement(idx)})` }}>
             <svg viewBox="0 0 46 46" aria-label={`${majorName(idx)} glyph`}>
@@ -116,16 +126,6 @@ export default async function ContinueYearReading({
             ))}
           </div>
         </div>
-
-        <form action={startYearReadingCheckout} className="pyc-buy">
-          <input type="hidden" name="bm" value={bmPadded} />
-          <input type="hidden" name="bd" value={bdPadded} />
-          <input type="hidden" name="year" value={String(parsed.year)} />
-          <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
-          <button type="submit" className="pyc-cta-btn">
-            Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
-          </button>
-        </form>
 
         <div className="pyc-faq" style={{ marginTop: 18 }}>
           <details>
