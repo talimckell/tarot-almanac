@@ -96,11 +96,21 @@ and haven't come back down. Clicks spiked with it (Sep 9–11: 12, 10, 11/day). 
 than doubled, 164 → 392 — almost all birthday** (`/birthday/*` on page 1: 115 → 310). ~200 birthday
 pages that were sitting at pos 11–20 crossed onto page 1 at once.
 
-**What caused it — honest read:** most likely accumulated authority tipping the near-page-1 birthday
-cluster over the threshold in a step (rankings move in steps, not smoothly), possibly amplified by a
-Google refresh around that date. **I can't credit the crawl-trap fix** — if freed crawl budget were
-the driver, `/today` indexing would shrink, but it *grew* (39 → 72 pages). So: broad ranking
-expansion, cause not cleanly attributable. Either way it's real and it held for five days.
+**What caused it — CONFIRMED via GSC Crawl Stats (added 2026-09-14):** a recrawl-then-reindex event.
+Daily crawl requests spiked **Sep 4: 137 → Sep 5: 429 → Sep 6: 443** against a ~15–20/day baseline —
+~1,000 pages in three days, the **biggest crawl event since launch** (Jul 3 discovery was ~9,800;
+nothing since came close). The rankings jumped Sep 8–9, a normal 2–4 day lag after the crawl. 92% of
+crawls were **"Refresh"** (re-crawling *known* pages, not discovery) — i.e. Google re-evaluated the
+already-known birthday/`today` backlog and ranked ~200 of them. Because it's indexing-driven, expect
+it to **hold**, not evaporate like an algo wobble.
+
+**Trigger — partial attribution:** Tali resubmitted the homepage to GSC "last week," and wondered if
+that caused it. Verdict: her instinct that *a recrawl happened* is confirmed. But a single homepage
+resubmit usually triggers a small targeted recrawl, not a ~1,000-page site-wide sweep — that scale
+looks like Google independently deciding to deep-crawl the site (a trust/authority threshold), with
+the resubmit at most a nudge. Can't cleanly separate the two. Either way the milestone is real: Google
+is now investing serious crawl budget in the site. (Not the crawl-trap fix — that noindexes old
+`/today`, but `/today` indexing *grew* 39 → 72, so the fix isn't what drove this.)
 
 ### Watch items — resolved and pending
 
