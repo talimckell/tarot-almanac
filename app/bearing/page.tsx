@@ -104,6 +104,19 @@ export default function BearingPage() {
           </div>
         </section>
 
+        {/* READER QUOTE — real proof right before the chart CTA below. */}
+        <div className="trust-solo" style={{ margin: "48px auto" }}>
+          <div className="trust-card">
+            <span className="trust-card-label">On the Bearing</span>
+            <p className="trust-quote">
+              &ldquo;Finding my Bearing gave me a much better entry point into tarot.
+              Instead of some label I had to live up to, it was more like the
+              perspective I view the world from. It resonated immediately.&rdquo;
+            </p>
+            <span className="trust-name">Mara</span>
+          </div>
+        </div>
+
         {/* CHART CTA */}
         <aside className={styles.cta}>
           <span className={styles.ctaEyebrow}>Your Bearing is one position of seven</span>

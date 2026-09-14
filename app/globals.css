@@ -718,6 +718,12 @@ body {
 .trust-quote { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); line-height: 1.75; }
 .trust-name { display: block; margin-top: 16px; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.1em; color: var(--ink); }
 
+/* Single-quote variant, reused across the funnel pages (/bearing,
+   /personal-year-card, /tarot-birth-chart, /today's gate card) - one
+   .trust-card centered in its own band, sized down from the homepage's
+   2x2 grid to a single reading width. */
+.trust-solo { max-width: 480px; margin: 0 auto; }
+
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }

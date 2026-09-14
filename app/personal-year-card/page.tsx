@@ -118,6 +118,18 @@ export default async function PersonalYearCardHub({
           ))}
         </section>
 
+        {/* READER QUOTE — real proof right before the paid-reading teaser below. */}
+        <div className="trust-solo" style={{ margin: "48px auto" }}>
+          <div className="trust-card">
+            <span className="trust-card-label">On the year card</span>
+            <p className="trust-quote">
+              &ldquo;I like having one card that frames the year without reducing the
+              whole year to one idea.&rdquo;
+            </p>
+            <span className="trust-name">Valerie</span>
+          </div>
+        </div>
+
         <section className="pyc-teaser">
           <span className="eyebrow">The full year-ahead reading</span>
           <h2>Your whole year, woven</h2>

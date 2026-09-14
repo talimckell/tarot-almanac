@@ -155,6 +155,16 @@ export default function TodayView({
                   Subscribing lets you go back further and see what&rsquo;s ahead.
                 </p>
                 <p className={styles.gateSub}>Every date, collective and personal, permanent and yours.</p>
+                {/* READER QUOTE — real proof right before the subscribe ask below. */}
+                <div className="trust-card" style={{ textAlign: "left", margin: "20px 0" }}>
+                  <span className="trust-card-label">On the daily card</span>
+                  <p className="trust-quote">
+                    &ldquo;What I like is that it gives me something to sit with rather than
+                    telling me what&rsquo;s going to happen. Some days it immediately clicks,
+                    but other days I only get it in retrospect.&rdquo;
+                  </p>
+                  <span className="trust-name">Alina</span>
+                </div>
                 <div className={styles.gateActions}>
                   {signedIn ? (
                     <Link href="/me?subscribe=1#subscribe" className={`${styles.btn} ${styles.btnSolid}`}>Subscribe</Link>
@@ -288,6 +298,17 @@ export default function TodayView({
                     a subscription opens every day behind you as yours to keep.
                   </>
                 )}
+              </div>
+              {/* READER QUOTE — real proof right before the subscribe ask below;
+                  center-aligned to match this column's own convention. */}
+              <div className="trust-card" style={{ textAlign: "center", margin: "16px 0" }}>
+                <span className="trust-card-label">On the daily card</span>
+                <p className="trust-quote">
+                  &ldquo;What I like is that it gives me something to sit with rather than
+                  telling me what&rsquo;s going to happen. Some days it immediately clicks,
+                  but other days I only get it in retrospect.&rdquo;
+                </p>
+                <span className="trust-name">Alina</span>
               </div>
               <div className={styles.gateActions}>
                 {signedIn ? (

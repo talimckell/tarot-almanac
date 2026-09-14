@@ -234,6 +234,20 @@ export default function TarotBirthChartPage() {
           ))}
         </section>
 
+        {/* READER QUOTE — real proof right before the closing CTA below. */}
+        <div className="trust-solo" style={{ margin: "48px auto" }}>
+          <div className="trust-card">
+            <span className="trust-card-label">On the birth chart</span>
+            <p className="trust-quote">
+              &ldquo;I have read a lot of astrology and tarot content, and this felt
+              more focused and less overwhelming. The chart gave me a clear place
+              to start, then let me explore the details at my own pace. Thank
+              you!&rdquo;
+            </p>
+            <span className="trust-name">Tay</span>
+          </div>
+        </div>
+
         <aside className="almanac">
           <span className="eyebrow">Build your own</span>
           <p>
