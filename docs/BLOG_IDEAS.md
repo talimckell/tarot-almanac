@@ -115,6 +115,11 @@ reasoning is a standing filter, not a one-off:
   whether there's another angle, suggesting celebrities. That question is answered below, and it
   turned into this week's top pick.
 
+**Decisions, later the same day.** Tali greenlit **two** posts, not one: the celebrity post
+**and** the zodiac post, both to be written. **"Your Baby's Card" is deferred** for a careful
+think, on a product question she raised from memory and that is verified below: the site gates
+looking up a child's information behind having an account.
+
 **What this adds up to as a filter for future runs.** Three of the four cuts share a shape: the
 scout keeps proposing posts that are *arguments about method* — a numbering convention, a
 divergence in arithmetic, a day-level formula. Those are the posts that are easiest to research and
@@ -128,14 +133,14 @@ and treat "the math is the story" as a red flag rather than a selling point.
 
 | | Candidate | Priority | Change |
 |---|---|---|---|
-| 1 | Who shares your card (famous people by Bearing) | **high** | **new** — the celebrity reframe of the presidents draft |
-| 2 | Your baby's card (the newborn / new-parent post) | **medium-high** | **new this week** |
-| 3 | Zodiac card vs birthday card | medium | unchanged |
-| 4 | Every US President's Bearing | medium, on hold | **owner unsure**; superseded by #1 unless she wants both |
-| 5 | Compatibility by birthday | high, blocked | still blocked; engine unbuilt (roadmap) |
-| 6 | Your 2028 tarot year card | low now, high Aug 2027 | unchanged |
-| 7 | Master numbers 11 and 22 | **low** | **down from medium** — same inside-baseball flavor as the deleted entry |
-| 8 | The four suits and four elements | low | unchanged, still a paragraph not a post |
+| 1 | Who shares your card (famous people by Bearing) | **GREENLIT** | **new**, and picked the same day — write first |
+| 2 | Zodiac card vs birthday card | **GREENLIT** | **up from 3** — picked alongside #1, write second |
+| — | Your baby's card (newborn / new-parent) | **deferred** | owner wants a careful think; product gate verified below |
+| 3 | Every US President's Bearing | medium, on hold | **owner unsure**; superseded by #1 unless she wants both |
+| 4 | Compatibility by birthday | high, blocked | still blocked; engine unbuilt (roadmap) |
+| 5 | Your 2028 tarot year card | low now, high Aug 2027 | unchanged |
+| 6 | Master numbers 11 and 22 | **low** | **down from medium** — same inside-baseball flavor as the deleted entry |
+| 7 | The four suits and four elements | low | unchanged, still a paragraph not a post |
 | — | The tarot card of the month | **held by owner** | see the entry below |
 | — | ~~Why Strength is eight and Justice is eleven~~ | **deleted** | — |
 | — | ~~Your personal day number~~ | **killed, do not re-propose** | — |
@@ -143,7 +148,7 @@ and treat "the math is the story" as a red flag rather than a selling point.
 ---
 
 ## Who Shares Your Card: Famous People by Bearing
-- Status: **idea, new 2026-09-14.** This is the celebrity angle Tali asked for, and it absorbs the
+- Status: **GREENLIT 2026-09-14, write first.** This is the celebrity angle Tali asked for, and it absorbs the
   old "Every famous person's Bearing" entry, which sat at low-medium for weeks because Biddy Tarot
   owns its head term. The reframe is what changes the priority: it enters through the *birthday*
   door instead of the *tarot* door.
@@ -194,47 +199,11 @@ and treat "the math is the story" as a red flag rather than a selling point.
   it is the only candidate whose natural internal links point at the 310 pages that just landed on
   page one.
 
-## Your Baby's Card
-- Status: **idea, new 2026-09-14**
-- Intent: a new or expecting parent, days or weeks in, looking up what their child's birth date
-  means. Personal stake, high emotion, and the most gift-shaped intent on this list.
-- Head term: **baby birth chart** / **tarot card for my baby's birthday** (+ "what does my baby's
-  birth date mean", "newborn numerology", "birth chart gift for newborn")
-- Competition & gap, surveyed 2026-09-14, and the two halves are lopsided in our favour:
-  - **The gift market is large, commercial and entirely astrological.** Etsy runs whole categories
-    ("newborn astrology," "baby birth chart," "personalized birth chart book"), Amazon sells
-    framed natal-chart prints as newborn gifts, Gossby sells nursery wall art, and several sellers
-    bundle a "destiny matrix" numerology reading with the chart. People already pay for a
-    personalized chart as a baby present. That demand is proven by transactions, not by keyword
-    tools.
-  - **The tarot half is unclaimed.** Searching the baby framing returns the same generic birth-card
-    calculators (Parade, tarot.com, HowStuffWorks, Flickerdeck) with nothing written for a parent.
-    Nobody has made the tarot version of the thing Etsy sells hundreds of times a week.
-- **Why it fits the product better than anything else on this list.** The product plan is explicit
-  that **charts are giftable and the living almanac is not** — you can make a natal chart for
-  anyone, and the $12 gift-chart checkout already exists (`createGiftChartCheckout`). A baby is
-  the purest case of a chart made *for* someone, by someone else, as an object. Every other
-  candidate here sends readers to a free calculator; this one sends them to the thing that
-  already takes money.
-- **What it must not do, and this needs deciding before drafting.** The voice doc bans predicting
-  events, and a post about a baby is the single easiest place on the site to slide into telling a
-  parent who their child will become. The honest version reads the chart as a record of the day
-  rather than a forecast of the person: the card the world was standing on when they arrived, the
-  Bearing they'll carry, the gap between their column and everyone else's. That is a real
-  constraint, and it's also the thing that separates it from the Etsy listings, which promise
-  personality.
-- Register: kitchen-table friend, on blog-14's precedent. Not the historian's mode.
-- Cannibalization: keep the seoTitle, H1 and slug off "tarot birth chart," which is
-  `/tarot-birth-chart`'s term. This post enters on the **baby/newborn** framing, which no page of
-  ours targets, and CTAs to the chart. Same split that worked for blog-08 and blog-11.
-- Internal links: blog-05 (the natal chart) is the parent, blog-13 (the card of the year you were
-  born) is the direct sibling and is genuinely about the same thing from the child's side,
-  blog-04 for the Bearing. CTA to `/tarot-birth-chart` or the gift flow.
-- Priority: **medium-high** — smaller search pool than #1, but the highest purchase intent of
-  anything on the list, and it's a warm post rather than a proof.
-
 ## Your Zodiac Sign's Tarot Card vs the Card Your Birthday Actually Makes
-- Status: idea
+- Status: **GREENLIT 2026-09-14, write second.** Picked alongside the celebrity post. The two are
+  a natural pair and should be written in that order: both enter through a door the reader already
+  knows (a famous name, a sun sign) and both land on the same place, the specific card a specific
+  birthday makes. Cross-link them when the second ships.
 - Intent: high-volume curiosity ("what tarot card am I") arriving through the astrology door,
   which is the door most people know.
 - Head term: **tarot card for your zodiac sign** (+ "what tarot card represents my zodiac sign",
@@ -248,8 +217,80 @@ and treat "the math is the story" as a red flag rather than a selling point.
   month candidate is held.
 - Internal links: blog-01 and blog-08; CTA to `/birthday/[month-day]`, the page type that just
   doubled its page-1 footprint and now carries 310 page-1 pages.
-- Priority: **medium** — biggest audience on the list, hardest SERP, and it borrows authority from
-  astrology rather than building ours. Worth doing once, framed as the comparison, not the table.
+- Shape: the reader's situation (they know their sign, they've been handed "your sign's tarot
+  card," and they want to know if that's really their card) → where the correspondence comes from
+  and that it's a real, old, deliberate system, attributed fairly → what it can and can't tell you,
+  twelve buckets and a month-long window shared with a twelfth of the world → what a birthday makes
+  instead, one number, month plus day → the two answers side by side for a worked birthday → why
+  they disagree, and what each is actually good for → find yours.
+- **Register: historian's mode**, on blog-12 and blog-13's precedent. The reader's question here is
+  how a system works and whether it applies to them, not a personal stake, and the post has to
+  treat the astrological correspondence fairly rather than as a thing to beat. That fairness is the
+  post: Labyrinthos and Biddy are not wrong, they're answering a different question.
+- **Before drafting, one thing to verify against the files, not from memory:** whether the site
+  anywhere asserts a sign-to-card correspondence of its own. The Almanac derives element per Major
+  (`ELEMENT_BY_MAJOR`), not sign per Major, and the calculations doc has drifted on elements before.
+  Do not let the post imply we run a zodiac correspondence we don't have.
+- Priority: **GREENLIT** — biggest audience on the list and the hardest SERP, which is why it goes
+  second rather than first: it borrows authority from astrology rather than building ours, and it
+  is better launched into a `/birthday` footprint the celebrity post has already warmed. Frame it
+  as the comparison, never as a table.
+
+## Your Baby's Card
+- Status: **deferred by the owner, 2026-09-14.** Not rejected: she wants to think about it
+  carefully, and flagged from memory that the site gates looking up a child's information behind
+  having an account. **Verified against the files, and she's right** — details below, because they
+  shape whether this post can exist and what it would have to say.
+- Intent: a new or expecting parent, days or weeks in, looking up what their child's birth date
+  means. Personal stake, high emotion, and the most gift-shaped intent on this list.
+- Head term: **baby birth chart** / **tarot card for my baby's birthday** (+ "what does my baby's
+  birth date mean", "newborn numerology", "birth chart gift for newborn")
+- Competition & gap, surveyed 2026-09-14, and the two halves are lopsided in our favour:
+  - **The gift market is large, commercial and entirely astrological.** Etsy runs whole categories
+    ("newborn astrology," "baby birth chart," "personalized birth chart book"), Amazon sells
+    framed natal-chart prints as newborn gifts, Gossby sells nursery wall art, and several sellers
+    bundle a "destiny matrix" numerology reading with the chart. People already pay for a
+    personalized chart as a baby present. That demand is proven by transactions, not keyword tools.
+  - **The tarot half is unclaimed.** Searching the baby framing returns the same generic birth-card
+    calculators (Parade, tarot.com, HowStuffWorks, Flickerdeck) with nothing written for a parent.
+- **The product gate, verified 2026-09-14 (this is the thing to think about).** `MIN_AGE = 16` in
+  `lib/today.ts:20`, and it is applied unevenly on purpose:
+  - **Anonymous visitor: refused.** `parseBirthday()` runs with `allowAnyAge = false`, so an
+    under-16 birthday is treated as though no birthday were entered at all.
+    `app/today/actions.ts:24` silently drops it, and `BirthdayRevealForm.tsx:40` says
+    **"You need to be 16 or older for your own daily reading."**
+  - **Signed-in account holder: allowed.** The same function takes `allowAnyAge = true` for a
+    signed-in lookup, with the comment stating the intent outright: the account holder can check
+    the day "for a minor in their care."
+  - **Saved charts: allowed, no floor at all.** `createChart` in `app/me/actions.ts` applies no age
+    check to the chart's subject; the 16+ test there is only ever run against the account holder's
+    *own* profile birthday.
+  - The legal copy backs all of it twice. Terms §2 sets the 16+ account floor and §4 covers
+    entering someone else's data ("or, if they are a minor in your care, that you are their parent
+    or legal guardian"); Privacy §8 explains the 16 as clearing COPPA and the strictest EU
+    GDPR age, and says plainly that the minimum "does not prevent an account holder from saving a
+    chart for a minor in their care (for example, a parent saving a chart for their child)."
+- **So the product does support the post — through exactly one door.** A parent can absolutely make
+  their baby's chart; they have to have an account to do it. The friction is that the free,
+  anonymous path is the first thing a parent from a search result would try, and what it tells them
+  is "You need to be 16 or older for your own daily reading," which reads as a refusal rather than
+  as a signpost toward the thing that *is* allowed. Sending newly-acquired, emotionally invested
+  search traffic straight into that sentence is the risk, and it's a copy-and-funnel question
+  before it's an editorial one.
+- **The other thing to weigh, and it isn't technical.** The voice doc bans predicting events, and a
+  post about a baby is the easiest place on the site to slide into telling a parent who their child
+  will become. The honest version reads the day, not the person: the card the world was standing on
+  when they arrived, the Bearing they'll carry, the gap between their column and everyone else's.
+  That's also what separates it from the Etsy listings, which promise personality.
+- Register: kitchen-table friend, on blog-14's precedent.
+- Cannibalization: keep the seoTitle, H1 and slug off "tarot birth chart," which is
+  `/tarot-birth-chart`'s term. Enter on the **baby/newborn** framing, which no page of ours targets.
+- Internal links: blog-05 (the natal chart) is the parent, blog-13 (the card of the year you were
+  born) is the direct sibling and is the same subject from the child's side, blog-04 for the
+  Bearing. CTA to `/tarot-birth-chart` or the gift flow.
+- Priority: **deferred, and worth returning to.** It has the highest purchase intent on the list
+  and points at the $12 giftable chart rather than a free calculator. What it needs first is a
+  decision about that one sentence in the anonymous form, not more research.
 
 ## Every US President's Bearing
 - Status: **in-flight but on hold.** `content/drafts/every-us-presidents-bearing.md`, uncommitted,
@@ -393,6 +434,13 @@ Found while surveying, worth recording so they don't get re-proposed as posts ev
 - **The four suits and the four elements** (its own entry above, same reason).
 - **The three missing `lib/blogSocialContent.ts` entries** (blog-12, blog-13, blog-14). Not a
   topic, a finished-work item, and now three posts deep.
+- **The under-16 message on the anonymous birthday form.** Found while verifying the baby entry:
+  `BirthdayRevealForm.tsx:40` tells a visitor "You need to be 16 or older for your own daily
+  reading," which is accurate for the account floor and silent about the thing the product
+  actually allows — a signed-in account holder can look up a minor in their care, and can save
+  that child's chart with no age floor at all (Terms §4, Privacy §8, `createChart`). One sentence
+  pointing there would turn a dead end into the sign-up it's already entitled to. Blocks nothing
+  today; it would matter the moment a post sends parents at it.
 - **A blog link from the `/month/[ym]` pages.** Fourth week verified as absent, on the page type
   earning the largest share of the site's clicks. With the collective-month post held, the fix is
   no longer waiting on a topic decision: **link blog-02 from `app/month/` and be done with it.**
