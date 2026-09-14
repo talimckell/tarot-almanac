@@ -133,8 +133,8 @@ and treat "the math is the story" as a red flag rather than a selling point.
 
 | | Candidate | Priority | Change |
 |---|---|---|---|
-| 1 | Who shares your card (famous people by Bearing) | **GREENLIT** | **new**, and picked the same day — write first |
-| 2 | Zodiac card vs birthday card | **GREENLIT** | **up from 3** — picked alongside #1, write second |
+| — | ~~Who shares your card~~ | **SHIPPED 2026-09-14** | blog-15, live |
+| 1 | Zodiac card vs birthday card | **GREENLIT, next** | greenlit alongside blog-15; now the top of the queue |
 | — | Your baby's card (newborn / new-parent) | **deferred** | owner wants a careful think; product gate verified below |
 | 3 | Every US President's Bearing | medium, on hold | **owner unsure**; superseded by #1 unless she wants both |
 | 4 | Compatibility by birthday | high, blocked | still blocked; engine unbuilt (roadmap) |
@@ -148,7 +148,7 @@ and treat "the math is the story" as a red flag rather than a selling point.
 ---
 
 ## Who Shares Your Card: Famous People by Bearing
-- Status: **GREENLIT 2026-09-14, write first.** This is the celebrity angle Tali asked for, and it absorbs the
+- Status: **SHIPPED 2026-09-14** as blog-15. Kept for the research trail. This was the celebrity angle Tali asked for, and it absorbed the
   old "Every famous person's Bearing" entry, which sat at low-medium for weeks because Biddy Tarot
   owns its head term. The reframe is what changes the priority: it enters through the *birthday*
   door instead of the *tarot* door.
@@ -406,6 +406,13 @@ and treat "the math is the story" as a red flag rather than a selling point.
 - Priority: **held.** Not re-proposed next week unless Tali reopens it.
 ## Published from this backlog
 
+- **Who Shares Your Card** → shipped **2026-09-14**, the same day it was proposed, as blog-15,
+  `/blog/famous-people-born-on-your-birthday`. Twenty-two famous people, one per Major, entering
+  on "famous people born on my birthday". Two engine-derived figures
+  (`public/bearing-wrap.svg`, `public/bearing-spread.svg`); no social assets, by decision.
+  The prose is Tali's own rewrite after two rejected drafts, and both failures became voice-doc
+  rules: **Don't build the piece against someone else** and a new **KITCHEN-TABLE REGISTER**
+  section. The pronoun rule was relaxed in the same pass ("we" is the Almanac now).
 - **The Card of the Day You Met** → shipped **2026-09-10** as blog-14,
   `/blog/wedding-date-tarot-card`, 1,876 words, the first post in the kitchen-table register.
   Tracked here as in-flight for three runs. Still owed: a `lib/blogSocialContent.ts` entry (the
