@@ -75,8 +75,15 @@ const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
   },
   {
     q: "Can I give a chart as a gift?",
-    answer: "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday.",
-    render: "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday.",
+    answer:
+      "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday, no subscription needed.",
+    render: (
+      <>
+        Yes. A $12 natal chart is a fixed object you can give someone, built from their
+        birthday, no subscription needed.{" "}
+        <Link href="/me?subscribe=1#subscribe">Make one &rarr;</Link>
+      </>
+    ),
   },
 ];
 
@@ -441,8 +448,8 @@ export default async function Home() {
           Secured by Stripe
         </p>
         <p className="acct-guarantee">
-          Try it for 14 days. If it&rsquo;s not yours, <Link href="/contact">email us</Link>{" "}
-          and we&rsquo;ll refund you, no questions asked.
+          $7 charged today, then monthly. Not for you? <Link href="/contact">Email us</Link>{" "}
+          within 14 days and we&rsquo;ll refund it, no questions asked.
         </p>
       </section>
 
