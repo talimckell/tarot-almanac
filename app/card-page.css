@@ -72,3 +72,9 @@
 .cardhead .pips svg { display:block; }
 .face .inline-label { font-family:var(--serif-sc); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--label); }
 .numbering-note { font-size:.9rem; color:var(--label); font-style:italic; margin-top:24px; }
+
+/* Authored collective-month reading (Tali's voice). Softer register than the formal
+   card-page sections: casual sentence-case headers instead of the small-caps eyebrow. */
+.reading h2 { font-family:var(--serif); font-weight:500; font-size:22px; letter-spacing:normal; text-transform:none; color:var(--indigo); margin:34px 0 14px; }
+.reading p { font-size:16px; color:var(--ink); margin-bottom:14px; line-height:1.7; }
+.reading p:last-child { margin-bottom:0; }

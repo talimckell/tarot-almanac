@@ -31,6 +31,7 @@ import {
   addMonths,
 } from "../../../lib/today";
 import { viewerNowYM } from "../../../lib/viewerNow";
+import { getCollectiveMonthReadingHtml } from "../../../lib/collectiveMonthReading";
 
 // The gate depends on the request-time month, so this can never be statically cached.
 export const dynamic = "force-dynamic";
@@ -113,6 +114,9 @@ export default async function MonthPage({
   if (!card) notFound();
   const rawSum = cyIdx + target.m;
   const band = phaseBand(cmIdx);
+  // Authored reading in Tali's voice, if one exists for this month. When present it
+  // replaces the templated card-intro + calculation prose (it covers both in voice).
+  const readingHtml = await getCollectiveMonthReadingHtml(formatMonthSlug(target));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -145,29 +149,42 @@ export default async function MonthPage({
           <p className="position">the world&rsquo;s card for the month</p>
         </header>
 
-        <section className="section">
-          <p>
-            The collective card for {label} is <strong>{card.name}</strong>. It&rsquo;s the same for
-            everyone alive this month, set by the date alone, and it sits in the {band.toLowerCase()}{" "}
-            third of the wheel.
-          </p>
-          <p>{card.essence}</p>
-          <p className="dates">
-            <Link href={`/tarot/${card.slug}`}>See {card.name} in full &rarr;</Link>
-          </p>
-        </section>
+        {readingHtml ? (
+          <>
+            <section className="section reading" dangerouslySetInnerHTML={{ __html: readingHtml }} />
+            <section className="section">
+              <p className="dates">
+                <Link href={`/tarot/${card.slug}`}>See {card.name} in full &rarr;</Link>
+              </p>
+            </section>
+          </>
+        ) : (
+          <>
+            <section className="section">
+              <p>
+                The collective card for {label} is <strong>{card.name}</strong>. It&rsquo;s the same for
+                everyone alive this month, set by the date alone, and it sits in the {band.toLowerCase()}{" "}
+                third of the wheel.
+              </p>
+              <p>{card.essence}</p>
+              <p className="dates">
+                <Link href={`/tarot/${card.slug}`}>See {card.name} in full &rarr;</Link>
+              </p>
+            </section>
 
-        <section className="section">
-          <h2>How {label} becomes {card.name}</h2>
-          <p>
-            The collective year card for {target.y} is{" "}
-            <Link href={`/tarot/${MAJOR_SLUGS[cyIdx]}`}>{MAJORS[cyIdx]}</Link> ({cyIdx}). Add the
-            month number ({formatMonthLabel(target).split(" ")[0]} is month {target.m}): {cyIdx} + {target.m} ={" "}
-            {rawSum}
-            {rawSum !== cmIdx ? `, which wraps around the twenty-two to ${cmIdx}` : ""}. Card {cmIdx} is{" "}
-            {card.name}.
-          </p>
-        </section>
+            <section className="section">
+              <h2>How {label} becomes {card.name}</h2>
+              <p>
+                The collective year card for {target.y} is{" "}
+                <Link href={`/tarot/${MAJOR_SLUGS[cyIdx]}`}>{MAJORS[cyIdx]}</Link> ({cyIdx}). Add the
+                month number ({formatMonthLabel(target).split(" ")[0]} is month {target.m}): {cyIdx} + {target.m} ={" "}
+                {rawSum}
+                {rawSum !== cmIdx ? `, which wraps around the twenty-two to ${cmIdx}` : ""}. Card {cmIdx} is{" "}
+                {card.name}.
+              </p>
+            </section>
+          </>
+        )}
 
         <aside className="almanac">
           <span className="eyebrow">Your month, not just the world&rsquo;s</span>
