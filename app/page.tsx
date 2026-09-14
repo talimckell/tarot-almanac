@@ -402,6 +402,55 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS — real reader quotes, each keyed to a different part of
+          the product (day / Bearing / year / chart) so it reads as proof
+          across the whole system rather than one feature. Placed right
+          before the account pitch so the ask has something to stand on. */}
+      <section className="trust-band">
+        <div className="trust-intro">
+          <span className="tb-eyebrow">What readers say</span>
+          <h2>In their own words.</h2>
+        </div>
+        <div className="trust-grid">
+          <div className="trust-card">
+            <span className="trust-card-label">On the daily card</span>
+            <p className="trust-quote">
+              &ldquo;What I like is that it gives me something to sit with rather than
+              telling me what&rsquo;s going to happen. Some days it immediately clicks,
+              but other days I only get it in retrospect.&rdquo;
+            </p>
+            <span className="trust-name">Alina</span>
+          </div>
+          <div className="trust-card">
+            <span className="trust-card-label">On the Bearing</span>
+            <p className="trust-quote">
+              &ldquo;Finding my Bearing gave me a much better entry point into tarot.
+              Instead of some label I had to live up to, it was more like the
+              perspective I view the world from. It resonated immediately.&rdquo;
+            </p>
+            <span className="trust-name">Mara</span>
+          </div>
+          <div className="trust-card">
+            <span className="trust-card-label">On the year card</span>
+            <p className="trust-quote">
+              &ldquo;I like having one card that frames the year without reducing the
+              whole year to one idea.&rdquo;
+            </p>
+            <span className="trust-name">Valerie</span>
+          </div>
+          <div className="trust-card">
+            <span className="trust-card-label">On the birth chart</span>
+            <p className="trust-quote">
+              &ldquo;I have read a lot of astrology and tarot content, and this felt
+              more focused and less overwhelming. The chart gave me a clear place
+              to start, then let me explore the details at my own pace. Thank
+              you!&rdquo;
+            </p>
+            <span className="trust-name">Tay</span>
+          </div>
+        </div>
+      </section>
+
       {/* ACCOUNT PROPOSITION */}
       <section className="acct-band">
         <span className="acct-eyebrow">YOUR ALMANAC</span>
