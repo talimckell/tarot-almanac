@@ -90,240 +90,189 @@ The weekly GSC entry was filed today, so unlike last week the evidence is curren
 **What this changes for topic choice:** the birthday page type just doubled its page-1 footprint
 without any editorial help, which is evidence that *hub pages rank on their own* and that the
 scarce resource is the thing hubs can't do — an argument, an explainer, and internal links
-pointing at them. The month hub is the one earning most and the one with no editorial companion.
+pointing at them. `/birthday/[month-day]` is now 310 page-1 pages with no editorial parent, and
+the top-ranked candidate below is the post that would link into all of them.
 
 ---
 
-## Ranking this week (2026-09-14)
+
+---
+
+## Owner review, 2026-09-14 (after the first pass)
+
+Tali read the first version of this ranking and cut most of it. Recorded here because the
+reasoning is a standing filter, not a one-off:
+
+- **"Why Strength is eight and Justice is eleven" — deleted.** "Lame." Removed from the backlog
+  entirely rather than demoted.
+- **"Your personal day number and your tarot card" — killed permanently, stop proposing it.**
+  Her reasons: the card changes every day, and the arithmetic is too complicated to carry a post.
+  Moved to *Deliberately not proposed* below so it stops resurfacing. It had ranked first for
+  three consecutive weeks, so this is the scout being wrong three times, not once.
+- **"The tarot card of the month" — held**, on the grounds that it would compete with pages she is
+  already trying to rank for those terms. Kept below with that decision recorded.
+- **"Every US President's Bearing" — unsure it brings the right attention**, and she asked directly
+  whether there's another angle, suggesting celebrities. That question is answered below, and it
+  turned into this week's top pick.
+
+**What this adds up to as a filter for future runs.** Three of the four cuts share a shape: the
+scout keeps proposing posts that are *arguments about method* — a numbering convention, a
+divergence in arithmetic, a day-level formula. Those are the posts that are easiest to research and
+the hardest to want to read. The two that survived contact (blog-13, blog-14) and the two ranked
+highest below are all posts about **a person and a date they care about**. Weight that from now on,
+and treat "the math is the story" as a red flag rather than a selling point.
+
+---
+
+## Ranking this week (2026-09-14, post-review)
 
 | | Candidate | Priority | Change |
 |---|---|---|---|
-| 1 | The tarot card of the month, and where it comes from | **high** | **up from 2** — the write-by arrived, and a real incumbent surfaced |
-| 2 | Your personal day number and your tarot card | high | **down from 1** on sequencing, not merit |
-| 3 | Every US President's Bearing | medium-high | **moving again** — edited Sep 11 after eight weeks parked |
-| 4 | Why Strength is eight and Justice is eleven | medium | **new this week** |
-| 5 | Master numbers 11 and 22 | medium | unchanged; partly absorbed by #4 |
-| 6 | Compatibility by birthday | high, blocked | still blocked; engine unbuilt (roadmap) |
-| 7 | Zodiac card vs birthday card | medium | unchanged |
-| 8 | Every famous person's Bearing | low-medium | unchanged |
-| 9 | The four suits and four elements | low | unchanged, still a paragraph not a post |
-| 10 | Your 2028 tarot year card | low now, high Aug 2027 | unchanged |
-| — | ~~The card you can never have (the Tower year)~~ | **not proposed** | surveyed and rejected this week; already blog-11's ground |
-
-**The one real change, and the reasoning behind it.** The personal-day post held first place for
-three consecutive weeks and nothing about it got worse. Three things about its rival got better:
-
-1. Its dated write-by ("write it in October, not December") has effectively arrived.
-2. blog-14 shipped on 2026-09-10 **with a `/today` CTA**, which is the personal-day post's CTA
-   too. Last week's entry already flagged that as an argument for spacing the two rather than
-   running them back to back.
-3. A named incumbent appeared on the collective-month term this week, publishing **our exact
-   arithmetic** (below). That converts the entry from "nobody has made this argument" into
-   "somebody is making it monthly, on a domain older than ours," which is a reason to move, not a
-   reason to drop it.
-
-If Tali disagrees with the sequencing, the personal-day post is still the stronger post on merit
-and nothing is lost by taking it first.
+| 1 | Who shares your card (famous people by Bearing) | **high** | **new** — the celebrity reframe of the presidents draft |
+| 2 | Your baby's card (the newborn / new-parent post) | **medium-high** | **new this week** |
+| 3 | Zodiac card vs birthday card | medium | unchanged |
+| 4 | Every US President's Bearing | medium, on hold | **owner unsure**; superseded by #1 unless she wants both |
+| 5 | Compatibility by birthday | high, blocked | still blocked; engine unbuilt (roadmap) |
+| 6 | Your 2028 tarot year card | low now, high Aug 2027 | unchanged |
+| 7 | Master numbers 11 and 22 | **low** | **down from medium** — same inside-baseball flavor as the deleted entry |
+| 8 | The four suits and four elements | low | unchanged, still a paragraph not a post |
+| — | The tarot card of the month | **held by owner** | see the entry below |
+| — | ~~Why Strength is eight and Justice is eleven~~ | **deleted** | — |
+| — | ~~Your personal day number~~ | **killed, do not re-propose** | — |
 
 ---
 
-## The Tarot Card of the Month, and Where It Comes From
-- Status: idea (new 2026-08-31, ranked 2 on 2026-09-07, **ranked 1 this week**)
-- Intent: someone who wants to know what *this month* holds, arriving on the commonest phrasing
-  in the whole seasonal lane. Also the reader who lands on a `/month/[ym]` page and wants to know
-  where that card came from, which right now nothing on the site tells them.
-- Head term: **tarot card of the month** (+ "what tarot card represents each month of the year",
-  "collective tarot card for [month]", "monthly tarot forecast")
-- **Competition & gap, materially revised 2026-09-14.** The top of the SERP is unchanged and
-  still monthly *tarotscope* content — tarot.com, horoscope.com, YourTango, astroyogi, all of it
-  twelve-signs listicles or a reader-drawn spread. Underneath it, last week's entry claimed
-  "nobody derives a card for the calendar month itself." **That is no longer true, and the
-  correction is the most useful thing found this run.**
+## Who Shares Your Card: Famous People by Bearing
+- Status: **idea, new 2026-09-14.** This is the celebrity angle Tali asked for, and it absorbs the
+  old "Every famous person's Bearing" entry, which sat at low-medium for weeks because Biddy Tarot
+  owns its head term. The reframe is what changes the priority: it enters through the *birthday*
+  door instead of the *tarot* door.
+- Intent: "who shares my birthday." Curiosity, browsing, and the most reliably shareable intent
+  in this whole space.
+- Head term: **famous people born on my birthday** (+ "celebrity birth card", "who shares my
+  birthday", "what tarot card is [celebrity]", "celebrities with my birthday")
+- **Competition & gap, surveyed 2026-09-14. The two demand pools don't touch, and that's the
+  opening.**
+  - The birthday pool is enormous and industrial. famousbirthdays.com is **ranked ~#1015 in the
+    US with 14–22M monthly visitors, ~70% of it Google organic**, and it is surrounded by
+    playback.fm ("Top 25 Famous People Born on My Birthday"), who2, birthdaybuddies and
+    born-today. Every one of them answers the question the same way: here is a list of names.
+    **Not one of them tells you what you and those people actually share.**
+  - The tarot pool is small and Biddy owns it ("Celebrity Tarot Birth Cards"), with
+    cardblueprints doing the same thing in Cardology (playing cards, not Majors). Biddy's page
+    states the ceiling in its own words: there are **"only twelve possible combinations"** of
+    birth cards, and it observes that most world-changing figures land in just two of them
+    (Temperance/Hierophant and Wheel/Magician). A celebrity list that sorts every famous person
+    who has ever lived into ten usable buckets is a list that cannot say anything specific.
+- **Why this is ours and nobody else's: the Bearing needs no birth year.** That is the single
+  fact the whole post rests on, and it is worth more here than anywhere else on the site, because
+  the birth year is precisely the fact celebrities hide, dispute, or have wrong on the internet.
+  Everyone born on your calendar day has your Bearing, whatever year they arrived — so "who
+  shares your card" is answerable for a birthday, exactly, with no research into anybody's age.
+  The presidents draft already found the cleanest demonstration of this (Chester Arthur's Bearing
+  survives his disputed birth year); the celebrity version is the same mechanic with a subject
+  people search 14 million times a month.
+- **It points straight at the page type that's winning.** `/birthday/[month-day]` went from 115 to
+  310 page-1 pages this week and is the site's ranking engine. This post is the editorial parent
+  those 366 pages don't have, and every example in it links to one.
+- **The compounding version, which is product work rather than a post, and worth raising
+  separately:** a name-per-birthday dataset would let each `/birthday/[md]` page say who else has
+  that Bearing. That is the famousbirthdays value proposition, answered in cards. Flagged, not
+  proposed: it's a build, and the scout doesn't propose builds.
+- No cannibalization: this enters on "famous people born on my birthday," which **no page on the
+  site targets**. `/birthday/[md]` owns the dated card terms and this post feeds it. `/bearing`
+  owns the term itself and takes the CTA.
+- Shape: the question people actually type → the list everyone gives them → what a shared
+  birthday actually shares (one number, month plus day) → the celebrity roll, grouped by Bearing,
+  a handful per group → the age-lying section, where the method stops needing the disputed fact →
+  why twelve buckets can't hold famous people and twenty-two can → find yours.
+- Internal links: blog-04 (the Bearing) is the parent, blog-08 for the birth-card method it's
+  answering, blog-05 for the chart upsell. CTA to `/bearing`, with in-body links to
+  `/birthday/[md]` for each name used.
+- Priority: **high.** It is the answer to the question Tali asked, it is a person-and-a-date post
+  rather than a method argument, it has no politics in it, it competes with nothing we own, and
+  it is the only candidate whose natural internal links point at the 310 pages that just landed on
+  page one.
 
-  **OMTimes Magazine runs a monthly series ("Tarot Arcana [Month] [Year]") that derives a
-  collective card for the calendar month using the same formula this site uses.** Fetched and
-  read 2026-09-14. Their August 2026 piece prints the arithmetic in the open: "The digits of the
-  year: 2 + 0 + 2 + 6 = 10. The number of the month: 8. The final result: 10 + 8 = 18," giving
-  the Moon, and states that "the collective card for each month is determined through a
-  numerological calculation." That is `mod22(sumDigits(Y) + M)`, which is `collectiveMonth()` in
-  `lib/almanac.ts`.
+## Your Baby's Card
+- Status: **idea, new 2026-09-14**
+- Intent: a new or expecting parent, days or weeks in, looking up what their child's birth date
+  means. Personal stake, high emotion, and the most gift-shaped intent on this list.
+- Head term: **baby birth chart** / **tarot card for my baby's birthday** (+ "what does my baby's
+  birth date mean", "newborn numerology", "birth chart gift for newborn")
+- Competition & gap, surveyed 2026-09-14, and the two halves are lopsided in our favour:
+  - **The gift market is large, commercial and entirely astrological.** Etsy runs whole categories
+    ("newborn astrology," "baby birth chart," "personalized birth chart book"), Amazon sells
+    framed natal-chart prints as newborn gifts, Gossby sells nursery wall art, and several sellers
+    bundle a "destiny matrix" numerology reading with the chart. People already pay for a
+    personalized chart as a baby present. That demand is proven by transactions, not by keyword
+    tools.
+  - **The tarot half is unclaimed.** Searching the baby framing returns the same generic birth-card
+    calculators (Parade, tarot.com, HowStuffWorks, Flickerdeck) with nothing written for a parent.
+    Nobody has made the tarot version of the thing Etsy sells hundreds of times a week.
+- **Why it fits the product better than anything else on this list.** The product plan is explicit
+  that **charts are giftable and the living almanac is not** — you can make a natal chart for
+  anyone, and the $12 gift-chart checkout already exists (`createGiftChartCheckout`). A baby is
+  the purest case of a chart made *for* someone, by someone else, as an object. Every other
+  candidate here sends readers to a free calculator; this one sends them to the thing that
+  already takes money.
+- **What it must not do, and this needs deciding before drafting.** The voice doc bans predicting
+  events, and a post about a baby is the single easiest place on the site to slide into telling a
+  parent who their child will become. The honest version reads the chart as a record of the day
+  rather than a forecast of the person: the card the world was standing on when they arrived, the
+  Bearing they'll carry, the gap between their column and everyone else's. That is a real
+  constraint, and it's also the thing that separates it from the Etsy listings, which promise
+  personality.
+- Register: kitchen-table friend, on blog-14's precedent. Not the historian's mode.
+- Cannibalization: keep the seoTitle, H1 and slug off "tarot birth chart," which is
+  `/tarot-birth-chart`'s term. This post enters on the **baby/newborn** framing, which no page of
+  ours targets, and CTAs to the chart. Same split that worked for blog-08 and blog-11.
+- Internal links: blog-05 (the natal chart) is the parent, blog-13 (the card of the year you were
+  born) is the direct sibling and is genuinely about the same thing from the child's side,
+  blog-04 for the Bearing. CTA to `/tarot-birth-chart` or the gift flow.
+- Priority: **medium-high** — smaller search pool than #1, but the highest purchase intent of
+  anything on the list, and it's a warm post rather than a proof.
 
-  Verified against the engine, 2026-09-14: **their August 2026 answer and ours are the same card,
-  and so is every other month of 2026.** Our twelve for 2026 are Justice, the Hanged One, Death,
-  Temperance, the Devil, the Tower, the Star, the Moon, the Sun, Judgement, the World, the Fool —
-  twelve distinct Majors, January through December, and the Moon is August in both systems.
-- **Where the two part company, which is the post's best asset now.** The agreement is a
-  coincidence of 2026 being a small year: `sumDigits(2026) = 10`, so no month's total exceeds 22
-  and there is nothing to resolve. The moment a total crosses 22 the published method has to
-  reduce and ours wraps. Checked across 2026–2030:
-  - **2026: zero divergences.** Every month agrees.
-  - **2027: one.** December is raw 23 — the Magician on the wheel, the Hierophant if reduced.
-  - **2028: two.** November and December (raw 23, 24 → the Magician and the High Priestess vs the
-    Hierophant and the Lovers).
-  - **2029: three.** October, November, December (raw 23, 24, 25 → the Magician, the High
-    Priestess, the Empress vs the Hierophant, the Lovers, the Chariot).
-  - **2030: zero again** (`sumDigits(2030) = 5`).
-
-  So the honest framing is not "they're wrong and we're right." It's that the two methods are the
-  same method until the number gets big, and the site's whole argument — keep it whole, wrap at
-  22 — is exactly the disagreement that appears at the end of every year whose digits run high.
-  That is a far better post than the one last week's entry described, and it is checkable.
-- **A second incumbent framing worth naming in the post:** elsewhere on the SERP the "collective
-  card for September 2026" is given as Justice on the grounds that September is ruled by Libra.
-  That is zodiac correspondence, not arithmetic, and it produces the same twelve cards every year
-  forever. Ours gives September the Sun in 2026 and Judgement in 2027. Worth one sentence, both
-  for readers and for topical coverage.
-- **The seasonal argument, unchanged and now due.** The competing intent for "a card for each
-  month" is the **year-ahead spread**, twelve cards pulled for twelve months, run by Biddy Tarot,
-  Deckaura, Moli Tarot, Elvi Tarot, Taro's Tarot and a long tail of readers. Re-surveyed this
-  week, and their own instructions fix the window: New Year's Day, the winter solstice, or your
-  birthday. Demand peaks late December through January. blog-06 shipped sixteen months early on
-  exactly this logic and had page-one traction in days. **Writing it now gives it a full quarter
-  of runway into that window.**
-- Why it's also an internal-linking fix: `/month/2026-09` is still the site's single biggest
-  earner (208 impressions, 19 clicks, pos 10.75) and `app/month/` links to no blog post at all,
-  four weeks verified. `/month/2026-10` is at pos 11 and climbing into its own month.
-- Cannibalization: real and manageable, the same split the series already runs. The `/month/[ym]`
-  hubs own the **dated** terms; this post owns the **evergreen method** term and must keep its
-  `seoTitle`, H1 and slug off any specific month. Distinct from blog-10, which is the *personal*
-  month; this is the *collective* month, the same personal-vs-collective split blog-13 drew for
-  the year.
-- Shape: what a "card of the month" usually means (the tarotscope, the year-ahead spread, the
-  Libra-is-Justice table) → the arithmetic, shown once → 2026's twelve, walked → the year-on-year
-  walk for one month (September: Death, Temperance, the Devil, the Tower, the Star, the Moon, the
-  Sun in 2026, Judgement, the World, the Fool, then the decade turn drops it back to Temperance in
-  2030) → where the published method and this one split, at the end of a big year → what the
-  collective card is and isn't (it is not your card; that's the Bearing away) → CTA.
-- Internal links: blog-02 (the formula) is the parent; blog-10 (personal month) is the mirror and
-  should link here; blog-13 (birth year) is the collective-card sibling; blog-06 for the year
-  above it. CTA to `/month`, and the post is the natural place to wire the reciprocal link back
-  from the month pages that currently link nowhere.
-- Priority: **high** — a term with a live incumbent using our own arithmetic, a checkable
-  divergence nobody has published, a seasonal window opening in about a quarter, and a job to do
-  underneath the page type that earns most of the site's clicks.
-
-## Your Personal Day Number and Your Tarot Card
-- Status: idea (carried from 2026-08-24, 08-31 and 09-07, where it ranked first three times)
-- Intent: someone who has met the personal-year and personal-month idea wants the same thing for
-  today. Daily-ritual intent, which is repeat-visit intent, which is the only intent on this list
-  that matches what a subscription actually sells.
-- Head term: **personal day number** (+ "personal day number tarot card", "how to calculate your
-  personal day number", "what tarot card is today for me", "tarot card of the day numerology")
-- Competition & gap: re-surveyed 2026-09-14 and the picture is stable. birthcharthoroscopes runs
-  a personal-day calculator ("enter your date to reveal your Personal Day Number and read an
-  intuitive forecast"), with numerologist.com and numerology.com owning the head term and
-  affinitynumerology and sunsigns.org underneath. The adjacent daily-tarot SERP is a different
-  crowd entirely — tarot.com's card of the day, the gumroad and churned tarotscope tail. The two
-  still don't cross: search the number term and you get digits with no cards, search the card term
-  and you get shuffle widgets with no arithmetic.
-- **The argument, unchanged and still the sharpest on this list.** The incumbent formula is
-  printed the same way everywhere: reduce the birth month, birth day, current month, current day
-  and current year, add the five, reduce again. Those are the same five inputs the Almanac uses.
-  Identical ingredients, one arithmetic step apart, and the answers diverge completely.
-
-  Re-verified against `lib/almanac.ts` on 2026-09-14 for a March 15 birthday across September
-  2026: the incumbent method yields **9 distinct values, repeating every nine days**, while the
-  Almanac's personal day card reaches **all 22 Majors inside that one 30-day month**. Two further
-  facts only we can print: the day card also carries a **Minor** (Sept 1 2026 is the Tower with
-  the Queen of Wands), which no competitor produces at all, and the **Bearing gap holds at the day
-  level** — personal day minus collective day equals the Bearing (the Moon, 18, for March 15) on
-  all 30 days, checked. That last one is the site's whole spine landing on the smallest unit.
-- Internal links: blog-11 (personal year) and blog-10 (personal month) are the direct siblings and
-  should both link here, completing life path → year → month → day; blog-02 for the formula;
-  blog-01 for the cornerstone. CTA to **`/today`**.
-- No cannibalization risk: there is **no `/personal-day-card` hub** (re-verified against `app/`,
-  2026-09-14 — the hubs are `birthday`, `month`, `personal-month-card`, `personal-year-card`,
-  `today`, `tarot-birth-card`, `tarot-birth-chart`), so unlike the year and month posts this one
-  has no sibling hub to collide with. If a day hub is ever built, this post keeps the number term
-  and the hub takes the card term.
-- Absorbs the old "Card of the Day, Without Shuffling" entry, which entered on the unwinnable
-  product head term and is a paragraph here rather than a post.
-- Priority: **high, and second only on sequencing.** It completes the sibling series, enters on a
-  term whose incumbents all stop at a digit, the arithmetic is verified and unusually vivid, and
-  it is the only candidate whose CTA is the subscription product rather than a free calculator.
-  What moved it to 2 is that blog-14 shipped on 2026-09-10 carrying the same `/today` CTA, and
-  the month post has a seasonal deadline this one doesn't.
+## Your Zodiac Sign's Tarot Card vs the Card Your Birthday Actually Makes
+- Status: idea
+- Intent: high-volume curiosity ("what tarot card am I") arriving through the astrology door,
+  which is the door most people know.
+- Head term: **tarot card for your zodiac sign** (+ "what tarot card represents my zodiac sign",
+  "zodiac tarot correspondences", "is my tarot card my sun sign")
+- Competition & gap: Labyrinthos, Biddy, Deckaura, PaganGrimoire, masteringthezodiac. Deep,
+  well-linked, and they own the correspondence tables outright. Do not try to out-table them. The
+  winnable angle is the comparison itself: the sign gives twelve buckets and a month-long window;
+  the birthday gives a specific number and a specific card, and the two answers disagree for most
+  people. Noted this week that the same correspondence logic is what produces "September's
+  collective card is Justice, because Libra." That vocabulary belongs to this entry now that the
+  month candidate is held.
+- Internal links: blog-01 and blog-08; CTA to `/birthday/[month-day]`, the page type that just
+  doubled its page-1 footprint and now carries 310 page-1 pages.
+- Priority: **medium** — biggest audience on the list, hardest SERP, and it borrows authority from
+  astrology rather than building ours. Worth doing once, framed as the comparison, not the table.
 
 ## Every US President's Bearing
-- Status: **in-flight, and moving again.** `content/drafts/every-us-presidents-bearing.md`,
-  uncommitted, **2,976 words**, last edited **2026-09-11** after eight weeks untouched.
-- Intent: not a search play. Link bait, brand-vocabulary seeding, and a public demonstration
-  that the Bearing is arithmetic anyone can check.
-- Head term: none worth chasing ("presidents tarot cards" is negligible volume). Any traffic
-  comes from shares and from the term "Bearing" spreading.
-- Competition & gap: nobody has run this, because nobody else has a year-free birthday number
-  to run. The Chester Arthur line (his Bearing survives the disputed birth year) is the proof
-  the whole piece rests on.
-- Internal links: blog-04 is the natural parent; the piece should CTA to `/bearing`.
-- Priority: **medium-high**, and the framing has changed. For three weeks this entry asked for a
-  yes or a no on a parked draft. It is no longer parked, so the useful note is a different one:
-  it is a **political** piece on a site whose other fourteen posts are not, its lead reads a
-  sitting president's card as being about accountability, and that is a positioning decision
-  rather than an editorial one. Worth deciding deliberately, not by default. If it ships, it is
-  also the only thing on this list that could plausibly earn links.
-
-## Why Strength Is Eight and Justice Is Eleven
-- Status: **idea, new 2026-09-14**
-- Intent: a tarot reader who has noticed their deck disagrees with a chart, a calculator or
-  another deck, and wants to know which one is wrong. Learner intent, not commercial, but it is
-  the question that sits directly underneath this site's own foundation.
-- Head term: **strength justice tarot numbering** (+ "why is strength 8 and justice 11", "the
-  Golden Dawn swap", "tarot de marseille vs rider waite order", "is justice 8 or 11")
-- Competition & gap: surveyed 2026-09-14. Real, answered, and answered by hobbyists: C. LaVielle
-  ("The Strength-Justice Tarot Controversy"), Parsifal's Wheel ("The 'Golden Dawn Swap'"),
-  wmjas's "Why Waite switched Justice and Strength," a 3am Tarot post on the numerology of it, and
-  a long Tarot Forum thread. No large domain owns it. The published answers are all **historical**
-  and they agree on the history: the older decks had Justice at 8, Waite and Colman Smith moved
-  the pair in 1909 to fit Leo and Libra, and Crowley moved them back. Every one of them ends on
-  "use whichever your deck uses," because for a card-drawing practice it genuinely does not matter.
-- **The gap, and it is ours alone: on this site it is not a preference, it is load-bearing.** A
-  deterministic system cannot shrug at its own numbering, because the number *is* the card.
-  Verified against `lib/almanac.ts`, 2026-09-14:
-  - **25 of the 365 collective days in 2026 (6.8%) land on 8 or 11**, so on roughly one day in
-    fifteen the two traditions hand a reader a different card for the same date.
-  - **57 of the 612 collective months between 2000 and 2050** do the same.
-  - And the one that makes it live: **2027 is a Justice year under Golden Dawn order and would be
-    a Strength year under Marseille order.** blog-06, the site's most seasonal post, is titled
-    "The Year of Justice." The whole seasonal play rests on a convention half of tarot history
-    disagrees with, and nowhere on the site says so at length.
-- **Cannibalization, and it is the reason this is 4 and not higher.** blog-01 already carries the
-  note, at line 33: "the Almanac places Strength at 8 and Justice at 11, the Golden Dawn ordering
-  that most modern decks follow. Older Marseille decks swap the two." `app/how-it-works` repeats
-  it. So this post is an existing paragraph at full length, which is exactly the shape blog-08 and
-  blog-11 took successfully (a hub's FAQ row grown into a post) — but it needs the same discipline:
-  keep the seoTitle, H1 and slug on the **numbering** question, and leave blog-01's cornerstone
-  term alone.
-- Shape: the reader's actual situation (deck says one thing, the chart says another) → what the
-  older decks did → what Waite changed in 1909 and why (Leo and Libra) → why Crowley put them
-  back → why a drawing practice can shrug and a dated system can't → what actually changes if you
-  swap them, with the 2026 count and the 2027 year card → what this site picked and why.
-- Internal links: blog-01 is the parent and already has the anchor sentence; blog-02 (the formula)
-  and blog-06 (the Justice year) both depend on the answer; blog-07 for the Fool's Journey order.
-  CTA to `/how-it-works` or `/tarot`.
-- Priority: **medium** — no commercial intent and a modest term, but it is cheap (the history is
-  well documented, the arithmetic is three lines), it is genuinely unclaimed by any large site,
-  and it retires a question that currently gets two sentences on a site whose entire premise is
-  that you can check the math. It also absorbs most of what was left of the master-numbers entry.
-
-## Master Numbers 11 and 22, and What the 22-Card Wheel Does With Them
-- Status: idea
-- Intent: someone who knows their life path is a master number wants to know which card it
-  maps to, and why the answer they got elsewhere feels arbitrary.
-- Head term: **master number tarot card** (+ "life path 11 tarot birth card", "life path 22
-  tarot birth card", "what tarot card is master number 11")
-- Competition & gap: as re-surveyed 2026-09-07, numerologist.com holds the first page with three
-  dedicated pages and **agrees with us** — `mod22(11) = 11`, `mod22(22) = 0`, verified. Agreeing
-  loudly with the strongest incumbent is a weak opening. What survives is vocabulary worth
-  borrowing: eleven as the exact centre of the Major Arcana, with every pair equidistant from it
-  summing to 22, and the Fool's dual numbering as both 0 and 22, which stops being a hedge on a
-  wheel that wraps.
-- **Changed this week:** the third thread this entry was holding — the Justice-at-8-versus-11
-  split — has been promoted to its own entry above, which is where it belongs. What's left here is
-  thinner than it was.
-- Internal links: blog-09 (life path) is the direct parent and should link here; blog-08, blog-02
-  and blog-12 all touch it. blog-12 owns the *year* fold, this owns the *life path* fold.
-- Priority: **medium** — low effort, slots into the sibling series, narrow long-tail pot, and its
-  best material has just moved next door.
+- Status: **in-flight but on hold.** `content/drafts/every-us-presidents-bearing.md`, uncommitted,
+  2,976 words, last edited 2026-09-11 after eight weeks parked. **Owner is unsure it brings the
+  right attention** (2026-09-14).
+- Intent: not a search play. Link bait, brand-vocabulary seeding, and a public demonstration that
+  the Bearing is arithmetic anyone can check.
+- The concern, stated plainly: it is a political piece on a site whose other fourteen posts are
+  not, and its lead reads a sitting president's card as being about accountability. Whatever its
+  merits, it invites a kind of attention the rest of the site doesn't.
+- **The other angle, which is #1 above.** The celebrity version keeps everything that makes the
+  presidents piece work — a roll of known birthdays, the year-free Bearing, the disputed-birth-year
+  proof — and swaps the subject for one with 14M monthly searches behind it and no politics in it.
+  Chester Arthur's disputed birth year becomes any celebrity who shaves five years off their age.
+- Three ways to play it, and it's Tali's call:
+  1. **Shelve the presidents piece** and write the celebrity version. The draft's mechanics are
+     reusable even if none of its prose is.
+  2. **Write the celebrity version first**, and hold the presidents piece as a follow-up once the
+     Bearing has a bigger public footprint and the site has more to lose from a quiet week than
+     from a loud one.
+  3. **Ship both**, celebrities first, presidents as the sequel that borrows its authority.
+- Priority: **medium, and not the recommendation this week.** Recorded rather than dropped,
+  because 2,976 words already exist and somebody sat down with them three days ago.
 
 ## Tarot Compatibility by Birthday: two Bearings on one wheel
 - Status: idea (product-dependent, **still blocked**)
@@ -346,54 +295,6 @@ and nothing is lost by taking it first.
   2026-08-31, not re-verified this week). Writing the post first would send its traffic to a page
   with nothing to do. Sequence it after the engine.
 
-## Your Zodiac Sign's Tarot Card vs the Card Your Birthday Actually Makes
-- Status: idea
-- Intent: high-volume curiosity ("what tarot card am I") arriving through the astrology door,
-  which is the door most people know.
-- Head term: **tarot card for your zodiac sign** (+ "what tarot card represents my zodiac sign",
-  "zodiac tarot correspondences", "is my tarot card my sun sign")
-- Competition & gap: Labyrinthos, Biddy, Deckaura, PaganGrimoire, masteringthezodiac. Deep,
-  well-linked, and they own the correspondence tables outright. Do not try to out-table them. The
-  winnable angle is the comparison itself: the sign gives twelve buckets and a month-long window;
-  the birthday gives a specific number and a specific card, and the two answers disagree for most
-  people. Noted this week that the same correspondence logic is what produces "September's
-  collective card is Justice, because Libra," so the month candidate above will touch this ground
-  in one sentence; keep the two apart.
-- Internal links: blog-01 and blog-08; CTA to `/birthday/[month-day]`, the page type that just
-  doubled its page-1 footprint and now carries 310 page-1 pages.
-- Priority: **medium** — biggest audience on the list, hardest SERP, and it borrows authority from
-  astrology rather than building ours. Worth doing once, framed as the comparison, not the table.
-
-## Every Famous Person's Bearing (the celebrity version of the presidents piece)
-- Status: idea
-- Intent: browsing curiosity, arriving through a name people already search.
-- Head term: **celebrity tarot birth cards** (+ "Taylor Swift tarot birth card", "celebrity birth
-  card", "what is [name]'s tarot card")
-- Competition & gap: **Biddy Tarot owns this outright**, with Starsinsider and its MSN syndication
-  next to it. Biddy's own page states the ceiling out loud, that there are "only twelve possible
-  combinations" of birth cards, which is the exact limitation the sibling series exists to argue
-  with. A Bearing sorts people into twenty-two without needing a birth year at all, which matters
-  here because celebrity birth years are exactly the fact that gets disputed.
-- Internal links: blog-04 (Bearing) is the parent; the presidents piece, if it ships, is the
-  sibling. CTA to `/bearing`.
-- Priority: **low-medium** — the job it does is already being done by the presidents draft, which
-  is further along and doesn't have Biddy sitting on its term. It is also the non-political
-  version of the same idea, which is worth remembering if the presidents piece is held back on
-  positioning grounds.
-
-## The Four Suits and the Four Elements
-- Status: idea
-- Intent: beginner reference lookup.
-- Head term: **tarot suits meanings** (+ "tarot elements", "what element is each tarot suit")
-- Competition & gap: Biddy and Labyrinthos own this at the top and it is one of the most saturated
-  beginner terms in tarot. Our only distinct claim is small: the Almanac tethers the day's minor
-  suit to the day-Major's element (Fire→Wands, Water→Cups, Air→Swords, Earth→Pentacles), so the
-  suit isn't chosen, it follows. One good paragraph, not a post. blog-02 already has that
-  paragraph, at line 31.
-- Internal links: blog-02. The personal-day candidate needs exactly this paragraph, so if that
-  post is written, this stops being a candidate at all.
-- Priority: **low** — write it as a section inside another post, or as a `/tarot` hub improvement.
-
 ## Your 2028 Tarot Year Card
 - Status: idea (scheduled, not now)
 - Intent: the same seasonal engine that made blog-06 work, one year on. `collectiveYear(2028) = 12`
@@ -410,6 +311,58 @@ and nothing is lost by taking it first.
 
 ---
 
+## Master Numbers 11 and 22, and What the 22-Card Wheel Does With Them
+- Status: idea
+- Intent: someone who knows their life path is a master number wants to know which card it
+  maps to, and why the answer they got elsewhere feels arbitrary.
+- Head term: **master number tarot card** (+ "life path 11 tarot birth card", "life path 22
+  tarot birth card", "what tarot card is master number 11")
+- Competition & gap: as re-surveyed 2026-09-07, numerologist.com holds the first page with three
+  dedicated pages and **agrees with us** — `mod22(11) = 11`, `mod22(22) = 0`, verified. Agreeing
+  loudly with the strongest incumbent is a weak opening. What survives is vocabulary worth
+  borrowing: eleven as the exact centre of the Major Arcana, with every pair equidistant from it
+  summing to 22, and the Fool's dual numbering as both 0 and 22, which stops being a hedge on a
+  wheel that wraps.
+- **Changed 2026-09-14:** the Justice-at-8-versus-11 thread this entry used to hold was written up
+  as its own candidate and **deleted by the owner as "lame."** That is a signal about this entry
+  too: it is the same flavour of post, an argument about a numbering convention, aimed at readers
+  who already know what a master number is. What's left here is thinner than it looks.
+- Internal links: blog-09 (life path) is the direct parent and should link here; blog-08, blog-02
+  and blog-12 all touch it. blog-12 owns the *year* fold, this owns the *life path* fold.
+- Priority: **low** (down from medium) — low effort and it slots into the sibling series, but it is
+  a method argument on a narrow long-tail term, which is precisely the shape the 2026-09-14 review
+  cut three times in one sitting.
+
+## The Four Suits and the Four Elements
+- Status: idea
+- Intent: beginner reference lookup.
+- Head term: **tarot suits meanings** (+ "tarot elements", "what element is each tarot suit")
+- Competition & gap: Biddy and Labyrinthos own this at the top and it is one of the most saturated
+  beginner terms in tarot. Our only distinct claim is small: the Almanac tethers the day's minor
+  suit to the day-Major's element (Fire→Wands, Water→Cups, Air→Swords, Earth→Pentacles), so the
+  suit isn't chosen, it follows. One good paragraph, not a post. blog-02 already has that
+  paragraph, at line 31.
+- Internal links: blog-02. The personal-day candidate needs exactly this paragraph, so if that
+  post is written, this stops being a candidate at all.
+- Priority: **low** — write it as a section inside another post, or as a `/tarot` hub improvement.
+
+## The Tarot Card of the Month, and Where It Comes From
+- Status: **held by the owner, 2026-09-14.** Her read: it would compete with pages she's already
+  trying to rank for those terms.
+- **One clarification the scout owes, since it may change the call, and then the decision stands.**
+  The proposal was not a dated post. `/month/[ym]` owns the dated terms ("september 2026 tarot"),
+  and a dated post was already on the *deliberately not proposed* list for exactly the reason she
+  gave. The proposed post targets the evergreen method term ("tarot card of the month," "what
+  tarot card represents each month"), the same personal-vs-collective split blog-13 drew for the
+  year, and its main job was to be the first blog link `app/month/` has ever carried. If the worry
+  is that the two are closer than that split admits, that's a fair read and the entry stays held.
+- The research, kept so it isn't re-done: **OMTimes Magazine** runs a monthly "Tarot Arcana"
+  series deriving a collective card for the calendar month with **our exact formula**. Their
+  August 2026 piece prints it: "2 + 0 + 2 + 6 = 10. The number of the month: 8. The final result:
+  18," the Moon. Verified against `lib/almanac.ts`: they agree with us on **all twelve months of
+  2026**, and diverge from **December 2027** onward, when totals cross 22 and their method reduces
+  where ours wraps (2027: 1 divergence, 2028: 2, 2029: 3, 2030: 0).
+- Priority: **held.** Not re-proposed next week unless Tali reopens it.
 ## Published from this backlog
 
 - **The Card of the Day You Met** → shipped **2026-09-10** as blog-14,
@@ -441,11 +394,21 @@ Found while surveying, worth recording so they don't get re-proposed as posts ev
 - **The three missing `lib/blogSocialContent.ts` entries** (blog-12, blog-13, blog-14). Not a
   topic, a finished-work item, and now three posts deep.
 - **A blog link from the `/month/[ym]` pages.** Fourth week verified as absent, on the page type
-  earning the largest share of the site's clicks. If the collective-month post above is written it
-  becomes the obvious target; if it isn't, blog-02 should be linked there anyway.
+  earning the largest share of the site's clicks. With the collective-month post held, the fix is
+  no longer waiting on a topic decision: **link blog-02 from `app/month/` and be done with it.**
 
 ## Deliberately not proposed
 
+- **Your personal day number and your tarot card. Killed by the owner on 2026-09-14; do not
+  propose it again.** Her reasons, recorded because they generalise: the card changes every day,
+  and the arithmetic is too complicated to carry a post. Worth noting that this entry ranked
+  **first for three consecutive weeks** on the strength of its argument (9 values vs 22 Majors in
+  one month, the Minor underneath, the Bearing gap holding at day level) and none of that moved
+  her, because the reader-facing promise underneath it was "here is a harder sum." The research is
+  in the 2026-09-07 revision of this file if it is ever wanted for a section inside another post.
+- **"Why Strength is eight and Justice is eleven."** Proposed 2026-09-14, deleted the same day.
+  The history is well documented, the swap is genuinely load-bearing here, and none of that makes
+  it a post anyone wants to read. blog-01 line 33 already carries the two sentences it needs.
 - **"The card you can never have" / the Tower year.** Surveyed 2026-09-14 because the emotional
   intent is real and heavily searched (tarot.com runs a dedicated "Personal Tarot Card of the
   Year: The Tower" page, Archetypal Tarot runs one per card, and the general Tower-and-Death
