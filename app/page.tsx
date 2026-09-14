@@ -287,18 +287,6 @@ export default async function Home() {
             <span className="prop-go">Make your almanac &rarr;</span>
           </Link>
         </div>
-
-        <div className="tools-compare">
-          <span className="tc-label">How does this compare?</span>
-          <div className="tc-links">
-            <Link href="/vs/raka" className="tc-link">
-              Vs. Raka <span className="tc-desc">a fixed reading vs. an AI reading</span>
-            </Link>
-            <Link href="/vs/labyrinthos" className="tc-link">
-              Vs. Labyrinthos <span className="tc-desc">a daily almanac vs. lessons and decks</span>
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* FEATURE BAND — BEARING */}
@@ -451,6 +439,23 @@ export default async function Home() {
           $7 charged today, then monthly. Not for you? <Link href="/contact">Email us</Link>{" "}
           within 14 days and we&rsquo;ll refund it, no questions asked.
         </p>
+      </section>
+
+      {/* COMPARE — moved below the primary funnel (tools grid, feature bands,
+          account pitch) so it no longer competes with first-look conversion;
+          still useful for high-intent visitors who scroll this far unconverted. */}
+      <section className="tools-band">
+        <div className="tools-compare">
+          <span className="tc-label">How does this compare?</span>
+          <div className="tc-links">
+            <Link href="/vs/raka" className="tc-link">
+              Vs. Raka <span className="tc-desc">a fixed reading vs. an AI reading</span>
+            </Link>
+            <Link href="/vs/labyrinthos" className="tc-link">
+              Vs. Labyrinthos <span className="tc-desc">a daily almanac vs. lessons and decks</span>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* FAQ — the top 4 objections a first-time visitor arrives with, not
