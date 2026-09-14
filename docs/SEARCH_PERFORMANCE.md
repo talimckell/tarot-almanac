@@ -114,14 +114,26 @@ expansion, cause not cleanly attributable. Either way it's real and it held for 
   dates (`/today/2025-02-05`, `/today/2025-11-27`) still indexed and getting hits. Recrawl lag plus
   the broad expansion is masking any thinning. Still pending; watch over coming weeks.
 
-### The birth-card reframe: it's a Google-rank problem, not a page problem
+### The birth-card page: converts well; buried on BOTH engines (Bing hypothesis retracted)
 
 Vercel shows `/tarot-birth-card` was the **#1 page (31 visitors)** and its calculator, `birth_card_finder`,
 was the **#1 event (17 uses)** — 55% of visitors on that page ran the calculator. So the page *works
-and converts*; it just can't crack Google's page 8 on the head term. And the traffic it does get isn't
-from Google — **DuckDuckGo (32) and Ecosia (19) are now major referrers**, both Bing-indexed, which
-suggests the page ranks far better on Bing than Google. Worth confirming in Bing Webmaster Tools; if
-so, the birth-card audience is already findable, just not via Google.
+and converts*; it just can't crack page 8 on the head term.
+
+**Correction to last week's guess:** I hypothesized it "probably ranks on Bing" because DDG (32) +
+Ecosia (19) rival Google as referrers. **Checked it 2026-09-14 on live Bing SERPs — it does not.**
+"tarot birth card" on Bing returns the same incumbents as Google (Tarot.com, Labyrinthos, fulltarot,
+arcanacalculator); "september 2026 tarot" returns big astrology sites (Astrology.com, YourTango). The
+site isn't on Bing page 1 for either. So the birth-card gap is a **both-engines authority/competition
+problem**, not a Google-specific quirk. The DDG/Ecosia traffic is real but it's the same long-tail
+distribution (specific birthday/card queries), not a Bing head-term advantage.
+
+**The genuinely useful takeaway:** Bing-index engines (DDG 32 + Ecosia 19 + Bing 8 = **59**) now
+*outweigh* Google (44) as this week's search referrers. That's a real blind spot — we track GSC but
+have no Bing data. **Set up Bing Webmaster Tools** (free, ~2 min via "Import from Google Search
+Console") to see which pages/queries drive the majority-non-Google search traffic. Not to confirm a
+ranking (retracted), but because Bing's index is now the bigger search channel and we're flying blind
+on it.
 
 ### Vercel: 171 visitors but a heavy bot week; real engagement strong
 
@@ -139,8 +151,8 @@ but don't over-anchor on one spiky, bot-heavy week; Mediavine counts clean sessi
 
 Cumulative: impressions 5,945 · clicks 131 · CTR 2.2% · **392 on page 1** · mobile pos 9.7 · ~30% to
 Journey. Watch: whether the Sep-8 expansion holds or was a spike, `/month/2026-10` toward page 1,
-birth-card hub after the link recrawl, `/today` count finally dropping, and a Bing-rank check on the
-birth-card page.
+birth-card hub after the link recrawl, `/today` count finally dropping, and setting up Bing Webmaster
+Tools (Bing-index engines are now the majority search referrer — a real blind spot).
 
 ---
 
