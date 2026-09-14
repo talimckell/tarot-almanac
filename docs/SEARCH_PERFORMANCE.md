@@ -79,6 +79,71 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-09-14 (window: Jul 4–Sep 12, 71 days) — page-1 count doubles; a ranking-expansion event
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | 5,945 | +1,830 |
+| Clicks | 131 | +47 |
+| CTR | 2.2% | +0.2pt |
+| **Page 1 (pos ≤ 10)** | **392** | **+228** |
+| Mobile position | **9.74** | crossed under 10 (page-1 avg) |
+
+### A step-change around Sep 8–9
+
+Daily impressions jumped from ~60–115 to **218–412** overnight (Sep 8: 218, Sep 9: 412, Sep 10: 370)
+and haven't come back down. Clicks spiked with it (Sep 9–11: 12, 10, 11/day). **Page-1 pages more
+than doubled, 164 → 392 — almost all birthday** (`/birthday/*` on page 1: 115 → 310). ~200 birthday
+pages that were sitting at pos 11–20 crossed onto page 1 at once.
+
+**What caused it — honest read:** most likely accumulated authority tipping the near-page-1 birthday
+cluster over the threshold in a step (rankings move in steps, not smoothly), possibly amplified by a
+Google refresh around that date. **I can't credit the crawl-trap fix** — if freed crawl budget were
+the driver, `/today` indexing would shrink, but it *grew* (39 → 72 pages). So: broad ranking
+expansion, cause not cleanly attributable. Either way it's real and it held for five days.
+
+### Watch items — resolved and pending
+
+- **`/month/2026-10` climbing on schedule:** pos 18 → **11**, 27 impr, 5 clicks. The reminder-indexed
+  page is maturing exactly as the +1 cadence predicts. `/month/2026-09` held (pos 10.75, 208 impr,
+  19 clicks) — still the top single earner.
+- **Birth-card hub: pos 73.7 → 72.2, still page 8, still 0 clicks.** The internal-link change shipped
+  Sep 7 (232074c) — too early to read; Google has to recrawl 132 birthday pages and re-weigh the hub,
+  which is weeks out. Impressions grew (423 → 458). Keep watching. *But note the reframe below.*
+- **Crawl-trap fix: NOT yet reflected.** `/today` indexed count went 39 → 72, not down; old 2025
+  dates (`/today/2025-02-05`, `/today/2025-11-27`) still indexed and getting hits. Recrawl lag plus
+  the broad expansion is masking any thinning. Still pending; watch over coming weeks.
+
+### The birth-card reframe: it's a Google-rank problem, not a page problem
+
+Vercel shows `/tarot-birth-card` was the **#1 page (31 visitors)** and its calculator, `birth_card_finder`,
+was the **#1 event (17 uses)** — 55% of visitors on that page ran the calculator. So the page *works
+and converts*; it just can't crack Google's page 8 on the head term. And the traffic it does get isn't
+from Google — **DuckDuckGo (32) and Ecosia (19) are now major referrers**, both Bing-indexed, which
+suggests the page ranks far better on Bing than Google. Worth confirming in Bing Webmaster Tools; if
+so, the birth-card audience is already findable, just not via Google.
+
+### Vercel: 171 visitors but a heavy bot week; real engagement strong
+
+7-day: **171 (+53%), 625 pageviews.** Bot-inflated again — **Japan: 6 visitors / 155 pageviews** (26
+pv/visitor, pure crawler). Real humans ~145. But engagement is genuinely strong: **37 calculator/form
+events** (birth_card_finder 17, personal_year_card 11, birthday_reveal 4). Privacy search engines
+(DDG 32, Ecosia 19) rival Google (44) as referrers now. `/vs/labyrinthos` and `/vs/raka` comparison
+pages live; `/pricing` appeared.
+
+**Mediavine / Journey:** trend strongly up (weekly visitors ~35 → 56 → 101 → 171 over five weeks) but
+increasingly bot-contaminated and volatile. Rough human run-rate → **~30% to Journey, climbing** —
+but don't over-anchor on one spiky, bot-heavy week; Mediavine counts clean sessions.
+
+### Baseline to beat next week
+
+Cumulative: impressions 5,945 · clicks 131 · CTR 2.2% · **392 on page 1** · mobile pos 9.7 · ~30% to
+Journey. Watch: whether the Sep-8 expansion holds or was a spike, `/month/2026-10` toward page 1,
+birth-card hub after the link recrawl, `/today` count finally dropping, and a Bing-rank check on the
+birth-card page.
+
+---
+
 ## 2026-09-07 (window: Jul 4–Sep 5, 64 days) — CTR crosses 2%; the +1 reminder cadence proves out
 
 | cumulative | | vs last week |
