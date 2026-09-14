@@ -715,7 +715,7 @@ body {
   margin-bottom: 12px;
   display: block;
 }
-.trust-quote { font-family: var(--serif); font-size: 15px; font-style: italic; font-weight: 300; color: var(--charcoal); line-height: 1.6; }
+.trust-quote { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); line-height: 1.75; }
 .trust-name { display: block; margin-top: 16px; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.1em; color: var(--ink); }
 
 /* ── RESPONSIVE (the mockup was desktop-only; stack cleanly on small screens) ── */
