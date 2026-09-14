@@ -502,6 +502,12 @@ a.todayPill:hover {
   color: var(--charcoal);
   margin-bottom: 8px;
 }
+/* .gateCard p above (higher specificity than the global .trust-quote rule)
+   was shrinking the reader-quote card's text back down to 15px - restore it. */
+.gateCard :global(.trust-quote) {
+  font-size: 17px;
+  margin-bottom: 0;
+}
 .gateSub {
   font-size: 13px;
   color: var(--label);
