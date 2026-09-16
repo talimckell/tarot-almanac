@@ -8,6 +8,14 @@ import { MAJORS, type DayCard, type Element } from "./almanac";
 export const BIRTHDAY_COOKIE = "bday";
 export const BIRTHDAY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
+// Device-accurate timezone (Timezone Option B). `TimezoneSync` (a client component
+// mounted in the root layout) writes the browser's own `Intl` zone here; `viewerNow()`
+// prefers it over Vercel's IP-derived `x-vercel-ip-timezone` header, which can be wrong
+// on VPNs or some cellular routing. IANA zone names only use letters, digits, and
+// `/ _ + -`, so a simple charset check is enough validation before trusting the value.
+export const TZ_COOKIE = "tz";
+export const TZ_RE = /^[A-Za-z0-9/_+-]{1,64}$/;
+
 export interface Birthday {
   bm: number;
   bd: number;

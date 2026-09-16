@@ -1,12 +1,11 @@
-import { headers } from "next/headers";
-import type { YMD, YM } from "./today";
+import { cookies, headers } from "next/headers";
+import { TZ_COOKIE, TZ_RE, type YMD, type YM } from "./today";
 
 // Resolve "now" as the calendar date in the VIEWER's timezone, not the server's
-// UTC. On Vercel every request carries `x-vercel-ip-timezone` — an IANA zone
-// (e.g. "America/Los_Angeles") derived from the request IP — so we can format the
-// current instant in the viewer's own day without any client JS or hydration
-// dance. When the header is absent (local dev, or a non-Vercel host) or invalid,
-// we fall back to UTC, which is exactly the prior behavior.
+// UTC. Preference order: the `tz` cookie (the device's own `Intl` zone, written
+// client-side by `TimezoneSync` — exact, but only present after a first page load
+// sets it) → Vercel's `x-vercel-ip-timezone` header (IP-derived, present on every
+// request but wrong on VPNs / some cellular routing) → UTC.
 //
 // This only changes WHICH date is "today" for a given viewer. The card<->date
 // mapping is untouched and stays identical worldwide, so it doesn't conflict with
@@ -36,7 +35,10 @@ function ymdInZone(tz: string | null | undefined): YMD {
 }
 
 export async function viewerNow(): Promise<YMD> {
-  const tz = (await headers()).get("x-vercel-ip-timezone")?.trim();
+  const cookieTz = (await cookies()).get(TZ_COOKIE)?.value;
+  const tz =
+    (cookieTz && TZ_RE.test(cookieTz) ? cookieTz : null) ??
+    (await headers()).get("x-vercel-ip-timezone")?.trim();
   return ymdInZone(tz);
 }
 

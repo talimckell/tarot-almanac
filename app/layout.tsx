@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant, Cormorant_SC, Lato, JetBrains_Mono } from "next/font/google";
 import VercelAnalytics from "./components/VercelAnalytics";
 import IconSprite from "./components/IconSprite";
+import TimezoneSync from "./components/TimezoneSync";
 import { SITE_URL } from "../lib/site";
 import "./globals.css";
 import "./card-page.css";
@@ -83,6 +84,7 @@ export default function RootLayout({
     >
       <body>
         <IconSprite />
+        <TimezoneSync />
         {children}
         <VercelAnalytics />
       </body>
