@@ -25,6 +25,7 @@ export default function AboutPage() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" />
       <SiteNav />
 
+      <main>
       <article className={styles.article}>
         <div className={styles.crumb}>
           <Link href="/">Home</Link>
@@ -129,6 +130,7 @@ export default function AboutPage() {
           )}
         </div>
       </article>
+      </main>
 
       <Footer />
     </>

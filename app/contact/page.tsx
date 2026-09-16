@@ -40,6 +40,7 @@ export default function ContactPage() {
     <>
       <SiteNav />
 
+      <main>
       <article className={styles.article}>
         <div className={styles.crumb}>
           <Link href="/">Home</Link>
@@ -76,6 +77,7 @@ export default function ContactPage() {
           </svg>
         </div>
       </article>
+      </main>
 
       <Footer />
     </>

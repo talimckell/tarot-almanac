@@ -1,0 +1,55 @@
+TAROT BIRTH CARD — social assets
+=========================================
+
+IMAGES TO RENDER (owner-gated studio route, PNG):
+  Bluesky quote cards (1080x1350):  kind=bluesky-quote&index=0..3
+  Pinterest quote pins (1000x1500): kind=pinterest-quote&index=0..1
+  Pinterest math pin (1000x1500):   kind=math
+  Studio URL base: /studio/blog-social/preview?slug=tarot-birth-card&<kind>
+
+------------------------------------------
+BLUESKY POSTS (4 — each a SEPARATE standalone post)
+------------------------------------------
+
+[Bluesky 1] image: bluesky-quote index=0
+A tarot birth card is the Major Arcana card set by your birthday, yours for life. Your birthday is a fixed thing, so the card it points to should be fixed too. No shuffle, no draw, the same answer every time you ask.
+
+https://www.tarotalmanac.com/blog/tarot-birth-card #tarotsky
+
+[Bluesky 2] image: bluesky-quote index=1
+The usual method reduces your number to a single digit to find your Soul card, so it can only ever be one of the first nine Major Arcana. The Tower, the Star, the Moon, the World: none of them can be your Soul card.
+
+https://www.tarotalmanac.com/blog/tarot-birth-card #tarotsky
+
+[Bluesky 3] image: bluesky-quote index=2
+Because the calculation reduces every birthday toward the small end of the deck, it sorts everyone into a short list of types. That's why tarot birth cards can start to feel like sun signs: everyone slots into one of a handful.
+
+https://www.tarotalmanac.com/blog/tarot-birth-card #tarotsky
+
+[Bluesky 4] image: bluesky-quote index=3
+There are two ways to read the card in your birthday. The Personality and Soul cards ask what kind of person you are, and answer from a short list. The Bearing asks where you stand in relation to the world, and answers with any card on the wheel. One is a portrait. The other is an angle.
+
+https://www.tarotalmanac.com/blog/tarot-birth-card #tarotsky
+
+------------------------------------------
+PINTEREST PINS
+------------------------------------------
+
+[Pin 1] title: Why Your Tarot Soul Card Is Always One of Nine
+  description: The standard tarot birth card method reduces your number to a single digit to find your Soul card, so it can only ever be one of the first nine Major Arcana. The Wheel of Fortune through the World can never be your Soul card.
+  keywords: tarot birth card, tarot soul card, tarot personality card
+  link: https://www.tarotalmanac.com/blog/tarot-birth-card
+  board: Tarot Numerology Explained (CONFIRM exact board name)
+
+[Pin 2] title: Tarot Birth Card vs. Your Bearing
+  description: Your tarot Personality and Soul cards ask what kind of person you are, from a short list of types. The Almanac's Bearing asks where you stand in relation to the world, and can be any of the 22 Major Arcana. One is a portrait, the other an angle.
+  keywords: tarot birth card, tarot bearing, tarot numerology
+  link: https://www.tarotalmanac.com/blog/tarot-birth-card
+  board: Tarot Numerology Explained (CONFIRM exact board name)
+
+[Pin 3] title: How the Almanac Reads Your Birthday
+  description: Instead of reducing your whole birthdate, the Almanac adds just your birth month and day and wraps around the 22-card wheel. June 11 gives 6 plus 11, which is 17, the Star.
+  keywords: tarot birth card, tarot bearing, tarot numerology
+  link: https://www.tarotalmanac.com/blog/tarot-birth-card
+  board: Tarot Numerology Explained (CONFIRM exact board name)
+

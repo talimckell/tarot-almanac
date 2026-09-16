@@ -45,6 +45,7 @@ export default async function TodayPage({
   return (
     <>
       <SiteNav current="today" />
+      <main>
       <TodayView
         target={now}
         now={now}
@@ -56,6 +57,7 @@ export default async function TodayPage({
         otherName={otherName}
         basePath="/today"
       />
+      </main>
       <Footer />
     </>
   );

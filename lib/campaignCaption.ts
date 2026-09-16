@@ -4,7 +4,7 @@ import type { CampaignDay } from "./campaignContent";
 // must always survive intact even after truncating the excerpt. The full https:// URL
 // (not the bare "tarotalmanac.com/today" text) so Bluesky's composer reliably auto-links
 // it — a bare domain+path isn't guaranteed to be recognized as a link.
-const CTA = "Find your personal card today → https://tarotalmanac.com/today #tarotsky";
+const CTA = "Find your personal card today → https://tarotalmanac.com/today #tarot";
 const BLUESKY_MAX = 300;
 
 function truncate(text: string, budget: number): string {

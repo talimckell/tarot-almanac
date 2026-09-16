@@ -9,11 +9,11 @@ function truncate(text: string, budget: number): string {
 }
 
 // As much of the reclaiming reading as fits, headed by the card name and closed with the
-// card's own /tarot/[slug] URL (full https:// so Bluesky reliably auto-links it) + #tarotsky.
+// card's own /tarot/[slug] URL (full https:// so Bluesky reliably auto-links it) + #tarot.
 export function captionForReclaimedReversal(card: Card): string {
   const headline = `${card.name} Reversed`;
   const url = `${SITE_URL}/tarot/${card.slug}`;
-  const tail = `\n\n${url} #tarotsky`;
+  const tail = `\n\n${url} #tarot`;
   const room = BLUESKY_MAX - headline.length - tail.length - 2; // 2 for the headline/body join
   const body = truncate(card.reclaiming.body, Math.max(room, 40));
   return `${headline}\n\n${body}${tail}`;

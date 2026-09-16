@@ -6,7 +6,7 @@ import { truncateField, TITLE_MAX, DESCRIPTION_MAX, type PinterestPinCopy } from
 import type { BlogQuote, BlogPinterestCopy, BlogSocialContent } from "./blogSocialContent";
 
 const BLUESKY_MAX = 300;
-const HASHTAG = "#tarotsky";
+const HASHTAG = "#tarot";
 
 function truncate(text: string, budget: number): string {
   if (text.length <= budget) return text;

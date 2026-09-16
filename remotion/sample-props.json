@@ -1,0 +1,51 @@
+{
+  "dateLabel": "July 16, 2026",
+  "minorName": "Ace of Swords",
+  "rank": 1,
+  "element": "air",
+  "essence": "The Ace of Swords is the moment of sudden clarity. It is truth, mental breakthrough, the clean cut that separates what's real from what isn't, the idea that arrives sharp enough to change everything.",
+  "affirmation": "I can see this clearly and name what's true. A clean cut is the start of being able to act.",
+  "keywords": [
+    "clarity",
+    "truth",
+    "breakthrough"
+  ],
+  "collectiveLine": "A clarity cuts through the world today, sudden and sharp, a truth opening like a window. A day of breakthrough, bracing and a little ruthless, the clean cut that frees and can also wound.",
+  "treatment": 0,
+  "hasMusic": false,
+  "glyph": {
+    "viewBox": "0 0 44 44",
+    "shapes": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M22 6 L24 11 L24 30 L20 30 L20 11 Z",
+          "fill": "none",
+          "stroke": "currentColor",
+          "strokeWidth": "2.2",
+          "strokeLinejoin": "round"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M14 30 L30 30",
+          "fill": "none",
+          "stroke": "currentColor",
+          "strokeWidth": "2.2",
+          "strokeLinecap": "round"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M22 30 L22 37",
+          "fill": "none",
+          "stroke": "currentColor",
+          "strokeWidth": "2.2",
+          "strokeLinecap": "round"
+        }
+      }
+    ]
+  }
+}

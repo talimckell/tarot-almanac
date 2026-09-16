@@ -18,10 +18,16 @@ const cormorant = Cormorant({
   variable: "--font-cormorant",
 });
 
+// Only Cormorant (above) is preloaded: it's the hero/headline face and the LCP
+// element on the homepage. The three below are secondary — small-caps labels,
+// body copy, and mono indices — so we let them load at normal priority instead
+// of contending on the critical path. `display: "swap"` + Next's auto size-adjusted
+// fallbacks mean they swap in with no layout shift.
 const cormorantSC = Cormorant_SC({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   display: "swap",
+  preload: false,
   variable: "--font-cormorant-sc",
 });
 
@@ -30,6 +36,7 @@ const lato = Lato({
   weight: ["300", "400", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: false,
   variable: "--font-lato",
 });
 
@@ -37,6 +44,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: false,
   variable: "--font-jetbrains-mono",
 });
 

@@ -67,9 +67,9 @@ Ahrefs is not connected, so keyword work is done through the live web.
 - Maintain **`docs/BLOG_IDEAS.md`**, a ranked backlog. If it doesn't exist, create
   it (format below). Each entry: candidate title, the search intent it serves, the
   head term + a couple of long-tail/question phrasings, a rough read on
-  competition and content-gap, which existing posts would link to it, and a
-  priority. Dormant scaffolds already in `lib/blog.ts` belong here too, marked
-  in-flight.
+  competition and content-gap, the shape the post wants to take, which existing
+  posts would link to it, and a priority. Dormant scaffolds already in
+  `lib/blog.ts` belong here too, marked in-flight.
 - Use `WebSearch` to survey the real SERP for candidate topics and for the chosen
   post's terms: what ranks, the "People also ask" style questions, and how
   competitors frame the subject (their vocabulary matters for topical coverage).
@@ -90,35 +90,112 @@ Ahrefs is not connected, so keyword work is done through the live web.
 - Intent: what the searcher wants
 - Head term: the main phrase (+ 2-3 long-tail / question variants)
 - Competition & gap: who ranks, what's missing we can own
+- Shape: the sections the post wants, in order, one line
 - Internal links: existing posts that would point here
 - Priority: high | medium | low — one line why
 ```
 
 ## Stage 3 — Write
 
-Draft the prose fresh, in Tali's voice, held to the voice doc. **Read
-`THE BLOG REGISTER` in the voice doc before drafting** (added 2026-08-17): blog
-posts run in the historian's mode, chronology as the spine, the stake stated
-late and flat, rival positions attributed fairly, warmth returning for the
-second-person sections. Contractions throughout, with one deliberate
-uncontracted short sentence per post to do the turning.
+Settled 2026-09-10, after blog-14 (the wedding-date draft) passed every word-level
+rule and still read, in Tali's words, "too math/engineering-y." Drafting straight
+from the SEO brief is what produced it. **Do not open a draft file until steps 1-3
+are done and step 3 has been through its gate.**
 
-The word-level rules below are a *second* pass and they do not catch the thing
-that most often makes a draft read as machine-made. That failure is
-architectural: a post shaped as a rebuttal, every section built identically,
-every paragraph closing on a small aphorism, and no person anywhere in the
-piece. Sentence-rhythm metrics will look completely normal while it happens.
-Check the shape first, then the sentences.
+The five steps, in order:
 
-The hard, near-absolute sentence rules (the reliable AI tells) are: **no
-em-dashes in prose** and **no "not X but Y" / "isn't about X, it's about Y"
-seesaws.** Beyond those: stay
-concrete over abstract (show with a lived, bodily example, never define in the
-air), vary sentence length, break the rule-of-three drumbeat, drop the
-signposting and the tidy-bow endings, and honor the forbidden-phrase blocklist and
-AI-vocab watchlist in the voice doc. Write first in the voice, then do a review
-pass against the rules; applied as a generation straitjacket they make copy
-stilted.
+### 3.1 — SEO phrases and ideal structure
+
+Carried over from Search, not re-derived. The head term, the long-tail and question
+phrasings, the competitors' vocabulary, and the entry's `Shape:` line. If the entry
+has no `Shape:`, write one now: the sections the post wants, in order.
+
+### 3.2 — Value props, and the register
+
+Write these down before anything else, in a few sentences each:
+
+- **Who is reading this, and what brought them here today.** A real situation, not a
+  persona. "Engaged, picked a June date, googling to find out whether it's a good one."
+- **What they're hoping to walk away with.** Usually something they can say, feel, or
+  use, rarely a system they can operate.
+- **How we meet them there**, and what we can honestly give that the incumbents can't.
+  Where our answer refuses their question (the wedding SERP grades dates lucky and
+  unlucky; the voice bans predicting events), say so here rather than discovering it
+  in the draft.
+- **The register, and one line of why.** This is a real choice, made per post:
+  - **The historian's mode** (`THE BLOG REGISTER` in the voice doc). Chronology as the
+    spine, the stake stated late and flat, rival positions attributed fairly. Right when
+    the reader's question is about how a system works, and the post's job is to make them
+    understand it. blog-12 and blog-13 are this.
+  - **The kitchen-table friend** (`WHO IS TALKING` and `WHAT IT SOUNDS LIKE`, the site's
+    base voice at full warmth). Second person most of the way through, concrete and
+    lived, the machinery kept to what's needed for trust. Right when the reader arrives
+    with a personal stake and wants to know what their own thing means. A wedding, a
+    birthday, the day they met.
+
+  Machinery post, historian. Personal-stake post, friend. When a post is both, name which
+  one governs and let the other appear in a section, not as an alternating rhythm.
+
+Whichever register step 3.2 picks, everything else in the voice doc still applies:
+contractions throughout, one deliberate uncontracted short sentence doing the turning,
+and the word-level rules in 3.5.
+
+### 3.3 — The conversation between two friends
+
+**Write it out as dialogue, in the scratchpad. Don't imagine it and skip to the draft.**
+Two people at a kitchen table: one who knows this material, one who came in with the
+reader's actual situation from 3.2. Let the friend ask the dumb question and get a plain
+answer. Keep going until the hard idea has been said in words a person would use out loud.
+
+This is where the post's plain language comes from. The wedding draft needed the sentence
+"they turn the 14th into a five, because they add the one and the four, and we just add
+fourteen," and instead shipped "tarot numerology can take a date and leave it whole,"
+which is private vocabulary used four paragraphs before it's defined. The first sentence
+is what falls out of a conversation. The second is what falls out of a brief.
+
+**Gate:** bring 3.2 and 3.3 to Tali on one page and stop. This is the cheapest place to
+fix a framing problem. blog-14 cost a full draft, two figures, a generator script and a
+complete set of social assets before anyone noticed it was a proof with a wedding in it.
+
+### 3.4 — Marry them into the post
+
+Now draft, in the register 3.2 picked, built on the shape from 3.1, lifting sentences
+from 3.3 where they're better than what you'd write cold. Card meanings come from
+`content/cards/*.json` verbatim, never freshly written; the authored `gift`, `shadow`
+and `reclaiming` bodies are warmer and more concrete than anything a draft invents, and
+they are usually the emotional center the post is missing.
+
+Two checks on the shape before the sentences:
+
+- **Where do the words go?** Count them by section. If the arithmetic outweighs what the
+  reader came for, the post is a proof with a topic in it. blog-14 spent 41% of itself on
+  one arithmetic section and 16% on the couple.
+- **Is any rule used before it's defined?** The register's rule 5 says assume no prior
+  knowledge and define the rule before using it. This is the rule most often broken, and
+  private vocabulary ("kept whole," "the fold") is how it breaks.
+
+### 3.5 — The anti-AI language pass
+
+A separate pass over the finished draft, never a generation straitjacket; applied while
+writing it makes the copy stilted. Grep first, then reread.
+
+- Hard bans: **no em-dashes**, and **no "not X but Y" / "isn't about X, it's about Y"
+  seesaws.**
+- Then: no three-part list drumbeat, no "From X to Y" openers, no hollow connectives
+  ("it's worth noting," "at its core," "in a sense," "ultimately"), no signposting or
+  meta-talk, no tidy-bow or rhetorical-question endings, no padding hedges, no
+  promotional adjectives the content didn't earn.
+- Then the forbidden-phrase blocklist and AI-vocab watchlist in the voice doc, plus
+  "genuinely," "honestly" and "actually" as intensifiers.
+- Vary sentence length, and stay concrete over abstract. Show with a lived example rather
+  than defining in the air.
+
+The pass is lexical and it will not catch an architectural failure. A post can clear every
+item here and still be shaped as a rebuttal, built of identical sections, closing every
+paragraph on a small aphorism, with no person anywhere in it. That is what steps 3.2 and
+3.3 are for. Check the shape first, then the sentences.
+
+### Mechanics that hold across all five steps
 
 - **Verify every number.** Any formula, card name, band, or date in the post must
   match the calculations doc and the live engine. Don't trust a worked example

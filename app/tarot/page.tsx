@@ -46,6 +46,7 @@ export default function TarotIndexPage() {
     <>
       <SiteNav current="tarot" />
 
+      <main>
       <div className={styles.wrap}>
         <header className={styles.hero}>
           <span className={styles.eyebrow}>The Cards</span>
@@ -112,6 +113,7 @@ export default function TarotIndexPage() {
           );
         })}
       </div>
+      </main>
 
       <Footer />
     </>

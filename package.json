@@ -2,12 +2,24 @@
   "name": "tarot-almanac",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 111",
+    "safari >= 16.4"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "short:props": "tsx scripts/assembleShortProps.ts",
+    "proof:props": "tsx scripts/assembleBearingProof.ts",
+    "proof:render": "remotion render BearingProofSynced --timeout=120000",
+    "short:studio": "remotion studio",
+    "short:render": "remotion render DailyCard",
+    "short:month": "tsx scripts/renderShortsMonth.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.110.0",
@@ -33,6 +45,11 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@remotion/bundler": "^4.0.490",
+    "@remotion/cli": "^4.0.490",
+    "@remotion/fonts": "^4.0.490",
+    "@remotion/paths": "^4.0.490",
+    "@remotion/renderer": "^4.0.490",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/pg": "^8.20.0",
@@ -41,7 +58,9 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "prisma": "^7.8.0",
+    "remotion": "^4.0.490",
     "tailwindcss": "^4",
+    "tsx": "^4.23.1",
     "typescript": "^5"
   }
 }

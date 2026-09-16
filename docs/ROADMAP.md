@@ -11,7 +11,7 @@ gets appended here, then the Artifact is refreshed.
 
 ## Structure
 Items are grouped into three workstream lanes — **Product & Monetization**, **Writing &
-Readings**, **Social & Scheduling** — plus a **Shipped** log. A **[Soon]** tag marks the
+Readings**, **Social & Scheduling** (currently paused) — plus a **Shipped** log. A **[Soon]** tag marks the
 next-up items. Priority chips (🔴 blocker · 🟠 important · 🟡 polish) apply to engineering
 items where they carry weight. Heavier items keep the full format: **Problem / root
 cause**, **When it happens**, **Planned fix**, **Effort**.
@@ -48,73 +48,29 @@ prefers cookie → header → UTC. ~1–2 hours, optional.
 
 ## Writing & Readings
 
-### Personal month post `[Soon]`
-The `/personal-month-card` calculator + 22 SEO pages shipped 2026-07-22 (see Shipped). What's left
-is the optional blog-10 explainer post feeding the calculator: the myth-bust angle (numerology stops
-at a digit; here you get a whole Major Arcana card), owner-authored, linking into the tool.
-
-### 2027 year-ahead post
-The 2027 year-ahead post (a dormant blog scaffold exists).
-
 ### Birth-card compatibility post
 Compatibility-by-birth-card post; pairs with the paid compatibility reading above.
 
-### "Every U.S. President's Bearing" — original-data link-bait post
-**Added:** 2026-07-13
-
-**What it is.** A data post that runs the Bearing formula (`mod22(bm+bd)`, birth-year
-excluded) over every U.S. president's birthday and lays out the result: each president, their
-birthday, their Bearing, and the pattern across all 46 (which Majors cluster, which never
-appear, any runs of shared Bearings). The deterministic system makes this a factual, citable
-dataset no shuffle-based tarot site can produce, which is exactly what earns links.
-
-**Why it's worth doing.** It's the clearest first play for the authority strategy: a piece
-built to attract backlinks and brand searches rather than to convert. History/trivia and
-astrology/tarot writers link to novel datasets as a source. Reuses the existing Bearing engine
-and glyph system, so the build is mostly assembling and presenting data we already compute.
-Each president's row links to its `/bearing/[slug]` and `/birthday/[md]` page, so it also feeds
-the internal-linking web the overhaul just built.
-
-**Notes / open.** Verify each birthday against a reliable source before publishing (a wrong
-birthday yields a wrong Bearing, and the whole appeal is that it's checkable). Bearing excludes
-birth year, so no need to resolve disputed birth-year cases. Could extend later to a small
-family of these ("every president / every state's founding date / notable figures") off the
-same template. Authored copy and framing stay in-voice (owner-written).
-
 ---
 
-## Social & Scheduling
+## Social & Scheduling — paused
 
-### More Pinterest for the rest of the week `[Soon]`
-Keep the Pinterest posting cadence going through the week.
-
-### Bluesky: celebrity birthday design + posts
-New Bluesky campaign: celebrity-birthday treatment and posts (a sibling to the existing
-Birthday Bearings / Collective / Reclaimed campaigns).
-
-### Bluesky: this-day-in-history design + posts
-New Bluesky campaign: "this day in history" treatment and posts.
-
-### Schedule remaining Pinterest boards (14)
-All 16 boards are built — these are the scheduling/publishing passes:
-- [ ] Finish scheduling — Birthday Tarot Card
-- [ ] Major Arcana — Reclaimed Reversal Meanings
-- [ ] Cups — Gift Meanings
-- [ ] Wands — Gift Meanings
-- [ ] Swords — Gift Meanings
-- [ ] Pentacles — Gift Meanings
-- [ ] Cups — Shadow Meanings
-- [ ] Wands — Shadow Meanings
-- [ ] Swords — Shadow Meanings
-- [ ] Pentacles — Shadow Meanings
-- [ ] Cups — Reclaimed Reversal Meanings
-- [ ] Wands — Reclaimed Reversal Meanings
-- [ ] Swords — Reclaimed Reversal Meanings
-- [ ] Pentacles — Reclaimed Reversal Meanings
+**Paused 2026-08-05.** Not doing socials for a while. The infrastructure is all built and
+sitting ready when this picks back up: 16 Pinterest boards (see the [pinterest-boards-complete]
+memory), the Bluesky campaign studios (Collective / Birthday Bearings / Reclaimed Reversals),
+and the Remotion daily-Shorts pipeline. Ideas banked for when it resumes: finish the Pinterest
+scheduling passes (14 boards still unscheduled), a Bluesky celebrity-birthday campaign, and a
+Bluesky this-day-in-history campaign.
 
 ---
 
 ## Shipped
+
+### 2026-08-05 — personal month explainer + 2027 year-ahead posts
+- **Personal month explainer post** written and live — the myth-bust angle (numerology stops at
+  a digit; here you get a whole Major Arcana card) feeding the `/personal-month-card` calculator.
+  Closes the last open item on that funnel.
+- **2027 year-ahead post** written and live (the dormant blog scaffold is now a real post).
 
 ### 2026-07-22 — personal month card funnel (calculator + 22 SEO pages)
 - **`/personal-month-card` calculator hub + 22 evergreen `[slug]` pages**, mirroring the year-card
