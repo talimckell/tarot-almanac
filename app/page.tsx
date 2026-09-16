@@ -58,17 +58,18 @@ const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
   {
     q: "Why $7/month when free apps exist?",
     answer:
-      "Free apps give you a random draw. The Almanac gives you a fixed, verifiable system: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+      "Free apps give you a random draw. The Almanac gives you a fixed system you can check yourself: every day behind you, a month ahead, your natal chart, and charts for people you love.",
     render:
-      "Free apps give you a random draw. The Almanac gives you a fixed, verifiable system: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+      "Free apps give you a random draw. The Almanac gives you a fixed system you can check yourself: every day behind you, a month ahead, your natal chart, and charts for people you love.",
   },
   {
     q: "Who is behind this?",
     answer:
-      "Tali Beesley, a US-based founder who built the Almanac from a tarot practice passed down at 11. More about her at tarotalmanac.com/about.",
+      "Tali Beesley, a US-based founder. Her family handed down her first tarot deck when she was 11, and the Almanac grew out of that. More about her at tarotalmanac.com/about.",
     render: (
       <>
-        Tali Beesley, a US-based founder who built the Almanac from a tarot practice passed down at 11.{" "}
+        Tali Beesley, a US-based founder. Her family handed down her first tarot deck when
+        she was 11, and the Almanac grew out of that.{" "}
         <Link href="/about">More about her &rarr;</Link>
       </>
     ),
@@ -161,21 +162,21 @@ export default async function Home() {
             <p>
               So every day arrives already carrying a card, the same one for everyone alive
               that day. And you meet it from somewhere. Your birthday sets your own cards, the
-              angle you bring to whatever the day is holding. Two people live through the same
-              Tuesday and can stand in very different places on it.
+              angle you bring to whatever the day is holding. The same Tuesday can be an easy
+              day for me and a hard one for you.
             </p>
             <p>
-              Knowing your cards ahead of time is a quiet kind of preparation. You can see
-              what a day, a month, a whole year tends to be working on, and get ready to meet
-              it instead of being caught off guard. And there&rsquo;s room in it for you. The
-              day hands you a card. How you play it is the part that stays in your hands.
+              Knowing your cards ahead of time means you can see what a day, a month, or a
+              whole year tends to be working on, and get ready for it instead of being caught
+              off guard. And there&rsquo;s room in it for you. The day hands you a card. How
+              you play it is the part that stays in your hands.
             </p>
             <p>
               That&rsquo;s what makes it an almanac. Like the old farmers&rsquo; almanacs that
               could name the season before it turned, your birthday lays out a lifetime of
-              cards, every day behind you and ahead of you already spoken for. None of it is
-              something you have to take on faith. It was sitting in the cards the whole time,
-              waiting to be read.
+              cards — every day you&rsquo;ve lived and every day coming already has one
+              waiting. None of it is something you have to take on faith. Do the arithmetic
+              yourself and you land on the same cards.
             </p>
           </div>
           <div className="nb-foot">
@@ -327,8 +328,8 @@ export default async function Home() {
               The Empress
             </div>
             <div className="fb-card-desc">
-              The world comes alive in your hands. An Empress Bearing means abundance is
-              your native register, and learning where to pour all of it is the work.
+              The world comes alive in your hands. An Empress Bearing means abundance comes
+              naturally to you. The hard part is choosing where to put it.
             </div>
           </div>
         </div>
@@ -367,12 +368,12 @@ export default async function Home() {
       <section className="feature-band fb-vellum fb-water">
         <div className="fb-text">
           <span className="fb-eyebrow">Your tarot birth chart</span>
-          <h2 className="fb-head">Seven cards, the<br />whole shape of<br /><em>your arrival.</em></h2>
+          <h2 className="fb-head">Seven cards,<br />set the day<br /><em>you arrived.</em></h2>
           <p className="fb-body">
-            Your birth chart is the tarot answer to an astrology chart. Three cards for the
-            person you arrived as, three for the world that met you, and your Bearing seated
-            in the middle, drawing the distance between the two. One page that holds the whole
-            picture at once.
+            Your birth chart is the tarot answer to an astrology chart. Three cards for
+            who you were when you arrived, three for the world that was waiting, and your
+            Bearing in the middle — the distance between the two, which never changes. One
+            page that holds the whole picture at once.
           </p>
           <Link href="/tarot-birth-chart" className="fb-cta">See your birth chart &rarr;</Link>
         </div>
