@@ -65,8 +65,8 @@ export default function BearingPage() {
           </p>
           <p>
             It&rsquo;s where each year starts from too: your{" "}
-            <Link className={styles.inline} href="/personal-year-card">personal year card</Link> is
-            your Bearing carried forward by the year&rsquo;s own number.
+            <Link className={styles.inline} href="/personal-year-card">personal year card</Link>{" "}
+            is your Bearing carried forward by the year&rsquo;s own number.
           </p>
           <p className={styles.mathnote}>
             It&rsquo;s set by your birth month plus your birth day, brought
