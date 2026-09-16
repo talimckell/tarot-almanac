@@ -15,6 +15,7 @@ import {
 } from "../../lib/yearCard";
 import { YEAR_READING_PRICE_DISPLAY } from "../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "./checkoutActions";
+import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import { trackFormSubmit } from "@/lib/analytics";
 
 // The year card depends only on birth month + birth day and the calendar year
@@ -172,6 +173,8 @@ export default function YearCardCalculator({
               ))}
             </div>
           </div>
+
+          <InAppBrowserNotice />
 
           <form action={startYearReadingCheckout} className="pyc-buy">
             <input type="hidden" name="bm" value={result.m} />

@@ -20,6 +20,7 @@ import {
 } from "../../../lib/yearCard";
 import { YEAR_READING_PRICE_DISPLAY } from "../../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "../checkoutActions";
+import InAppBrowserNotice from "../../components/InAppBrowserNotice";
 import { buildYearPackage } from "../../../lib/yearReading";
 import type { YearReadingSections } from "../../../lib/yearReadingPrompt";
 import ReportBody from "../reading/[token]/ReportBody";
@@ -77,6 +78,8 @@ export default async function ContinueYearReading({
         <p className="pyc-lede">
           Your card&rsquo;s still right here. Confirm and I&rsquo;ll take you to checkout.
         </p>
+
+        <InAppBrowserNotice />
 
         <form action={startYearReadingCheckout} className="pyc-buy" style={{ marginTop: 8 }}>
           <input type="hidden" name="bm" value={bmPadded} />

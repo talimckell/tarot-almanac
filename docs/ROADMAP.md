@@ -20,29 +20,20 @@ cause**, **When it happens**, **Planned fix**, **Effort**.
 
 ## Product & Monetization
 
-### 🟠 Stripe Checkout unreliable in in-app webviews
-**Added:** 2026-07-06
+### 🟠 Stripe Checkout in in-app webviews — return path still unverified
+**Added:** 2026-07-06 · **Narrowed:** 2026-09-16
 
-**Problem / root cause.** In an in-app browser, the redirect to Stripe Checkout is
-unreliable, Apple Pay / Google Pay aren't offered at all, and some webviews mishandle the
-return redirect after payment.
+The detect-and-nudge half shipped 2026-09-16 (see Shipped). What's left is the part that
+needs hardware: confirming what actually happens to the **return redirect** after a real
+payment made from inside a real in-app browser, on both iOS and Android. If the return
+does get lost, the fix is probably a polling/recovery step on the success page rather than
+anything in Checkout itself, since the webhook already does the real unlock.
 
-**When it happens.** Any checkout started from inside an in-app browser on mobile. Lower
-frequency than the auth issue, but real revenue.
-
-**Planned fix.** Detect in-app webviews and nudge "open in Safari/Chrome to pay," make card
-entry the obvious fallback, and verify the return path in a real in-app browser.
-
-**Effort.** ~Half a day; needs manual testing in real in-app browsers.
+**Effort.** An hour or two, but it needs a phone and a real test purchase.
 
 ### Paid compatibility reading
 Paid product paired with the birth-card compatibility post (below): free post = the concept,
 paid = the woven compatibility reading.
-
-### 🟡 Timezone Option B — device-accurate zone
-"Today" localizes via Vercel's IP timezone (shipped). IP can be wrong on VPNs / some
-cellular routing. Fix: client writes the device's `Intl` zone to a cookie; `viewerNow()`
-prefers cookie → header → UTC. ~1–2 hours, optional.
 
 ---
 
@@ -65,6 +56,34 @@ Bluesky this-day-in-history campaign.
 ---
 
 ## Shipped
+
+### 2026-09-16 — in-app webview nudge on every paywall
+- **`lib/inAppBrowser.ts`**, a pure user-agent read that names the host app (Instagram,
+  Facebook, Messenger, TikTok, Snapchat, the Google app, X, LinkedIn, Threads, WeChat,
+  LINE, Pinterest, Reddit) and falls back to the generic markers: Android's `wv` token,
+  and an iOS UA carrying `Mobile/` with no `Safari/`. Checked against a 22-case table of
+  real UA strings, including the browsers that must NOT trigger it (Safari, CriOS, FxiOS,
+  Chrome/Samsung/Firefox on Android, desktop).
+- **`<InAppBrowserNotice />`** above all four paywalls (`/chart` ×2, `/me`,
+  `/personal-year-card` + its continue step). Says why paying there is a bad idea, then
+  offers the way out: an `intent://` link that hands the page straight to Chrome on
+  Android, a copy-link button on iOS (degrading to a selectable URL field when the
+  webview denies clipboard access). Checkout buttons still work, so nothing is blocked.
+- **Detection runs client-side** through `useSyncExternalStore` with a null server
+  snapshot, so no page loses its caching and there's no hydration mismatch. An installed
+  PWA is cleared via `navigator.standalone`, since it has no Safari token either and pays
+  fine.
+- Still open: what happens to the **return redirect** after a real payment from inside a
+  real in-app browser. That needs a phone (see the narrowed item above).
+
+### 2026-09-16 — Timezone Option B (device-accurate zone)
+- **`viewerNow()` now prefers a `tz` cookie** written by a new `<TimezoneSync />` client
+  component (the browser's own `Intl` zone) over Vercel's IP-derived
+  `x-vercel-ip-timezone`, falling back to UTC when neither is present or valid. Fixes
+  "today" being wrong for anyone on a VPN or cellular routing that geolocates badly.
+- Verified live: a `tz=Pacific/Kiritimati` request reads a day ahead of a bare one, and
+  invalid or malformed cookie values fall through to the header/UTC without erroring.
+- Closes the last 🟡 item in Product & Monetization.
 
 ### 2026-08-05 — personal month explainer + 2027 year-ahead posts
 - **Personal month explainer post** written and live — the myth-bust angle (numerology stops at

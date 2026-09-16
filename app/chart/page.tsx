@@ -25,6 +25,7 @@ import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
 import AdsConsent from "../components/AdsConsent";
 import AdsPurchaseConversion from "../components/AdsPurchaseConversion";
 import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
+import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -186,6 +187,7 @@ export default async function ChartPage({
               Your Bearing is yours free. Unlock the other six positions, the self you came in as and the world that
               caught you.
             </p>
+            <InAppBrowserNotice />
             <div className={styles.options}>
               <div className={`${styles.opt} ${styles.primary}`}>
                 <div className={styles.tagline}>Everything, always</div>
@@ -222,6 +224,7 @@ export default async function ChartPage({
           <div className={styles.paywall}>
             <h3>You&rsquo;ve unlocked this chart</h3>
             <p>A subscription covers everything else: charts for everyone you love, monthly readings, and time-travel.</p>
+            <InAppBrowserNotice />
             <div className={styles.options}>
               <div className={`${styles.opt} ${styles.primary}`}>
                 <div className={styles.tagline}>Everything, always</div>

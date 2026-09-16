@@ -1,0 +1,64 @@
+.notice {
+  border: 1px solid var(--warm-stone);
+  border-left: 3px solid var(--indigo);
+  background: var(--stone);
+  padding: 14px 16px 16px;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 6px;
+}
+
+.body {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.action {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  border: 1px solid var(--indigo);
+  padding: 9px 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.action:hover {
+  background: var(--indigo-mid);
+  border-color: var(--indigo-mid);
+}
+
+.manual {
+  display: block;
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--vellum);
+  border: 1px solid var(--warm-stone);
+  padding: 8px 10px;
+}
+
+.hint {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--label);
+  margin: 10px 0 0;
+}

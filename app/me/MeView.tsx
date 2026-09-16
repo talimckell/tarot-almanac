@@ -23,6 +23,7 @@ import {
 import { suitGlyphId, majorGlyphId } from "@/lib/pips";
 import { updateProfile, createChart, createGiftChartCheckout, signOutAction } from "./actions";
 import { startSubscriptionCheckout } from "../chart/checkoutActions";
+import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
 import DeleteAccountForm from "./DeleteAccountForm";
 import styles from "./MeView.module.css";
@@ -338,6 +339,7 @@ export default function MeView({
         <div className={styles.paywall} id="subscribe">
           <h3>Add a chart</h3>
           <p>Subscribe for unlimited charts, or buy this one for $12 without subscribing.</p>
+          <InAppBrowserNotice />
           <div className={styles.options}>
             <div className={`${styles.opt} ${styles.primary}`}>
               <div className={styles.tagline}>Everything, always</div>
