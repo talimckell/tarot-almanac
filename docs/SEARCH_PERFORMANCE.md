@@ -79,6 +79,31 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-09-17 — MILESTONE: first organic sale; the corner turned
+
+Not a full weekly review (GSC only advanced 2 days since the 09-14 entry). Recording the milestone.
+
+**First organic sale.** Someone found the site through search — no ad paying for them — and paid.
+`checkout.stripe.com` shows in the Vercel referrers and a saved chart was reached. One sale isn't a
+revenue model, but it's the first proof the whole chain works on its own traffic: stranger → search →
+page → wallet. This is the thing that was in question at the low point; it survived contact with reality.
+
+**The Sep-8 crawl-bump held and grew** (it didn't evaporate, as the crawl-stats predicted): page-1
+pages 392 → **408**, mobile position **9.56** (page one), cumulative clicks **136**, CTR ~2%. Daily
+impressions stayed elevated all week (~260–345/day).
+
+**Where it stands at ~10.5 weeks post-index (indexed Jul 4):** 0 → 136 clicks, 0 → 408 page-1 pages,
+mobile to page one, ~40% to Mediavine Journey, first organic sale. Fast for the age. **The honest
+frame: be excited about the slope, not the size** — absolute numbers are still modest, ~319 of the 408
+page-1 pages are the broad-shallow birthday long-tail, and the commercial head term (birth-card) is
+still page 8. Trajectory is the story.
+
+**Open threads:** `/month/2026-10` climbing (pos 10.1, 5 clicks); `/month/2026-11` reading live and
+gated until Oct 1; birth-card internal link (Sep 7) not yet recrawled (hub flat ~73); `/today`
+crawl-trap still not thinned (79 indexed — long noindex lag).
+
+---
+
 ## 2026-09-14 (window: Jul 4–Sep 12, 71 days) — page-1 count doubles; a ranking-expansion event
 
 | cumulative | | vs last week |
