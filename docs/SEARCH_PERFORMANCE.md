@@ -128,11 +128,33 @@ strong (31 form_submits). **New referrers worth noting:** Threads (5), Instagram
 Facebook (6) — social and LLM channels starting to trickle. `checkout.stripe.com` again (2) — more
 checkout activity. DDG 25 + Ecosia 10 + Bing 3 = 38 Bing-index vs Google 39, still ~even.
 
+### Bing Webmaster Tools live (~48h after signup) — corrects the Sep-14 "buried on Bing" retraction
+
+First BWT data (Sep 18–19) reverses what the 09-14 entry concluded. **`/tarot-birth-card` ranks
+pos 7.7 on Bing (page 1)** vs pos 73 on Google. The whole Bing keyword list sits pos 1–10 (e.g.
+"tarot birth card" pos 9, "tarot birth chart" pos 8, "tarot card of the year calculator" pos 5). So
+the birth-card gap is **Google-specific** — Bing ranks the page fairly; it's a content-is-fine,
+Google-authority-wall situation, not a both-engines problem. My Sep-14 manual SERP check was degraded
+and I trusted it over the signal; BWT is authoritative and the original "ranks on Bing" hypothesis was
+correct. Corrected the 09-14 note in place.
+
+- **The "0 Bing clicks" is misleading.** BWT counts only bing.com (~17 impr/day, tiny). But DDG (25)
+  + Ecosia (10) run on Bing's *index* and sent ~35 visitors this week — Bing-index-driven traffic that
+  no single report attributes to "Bing." The page-1 Bing ranking likely feeds a chunk of the
+  birth-card page's real traffic via DDG/Ecosia.
+- **Bing-index (DDG+Ecosia+Bing ≈ 38) ≈ Google (39) as referrers this week** — non-Google is now ~half
+  the search traffic. Watch this.
+- **AI citations (BWT AI report, Sep 18–19):** 7 → 26 citations. Top cited pages: `/blog/how-tarot-
+  numerology-works` (13), `/tarot-birth-card` (9), `/tarot/two-of-cups` (5), `/` (4). **AI cites the
+  pages Google buries** — the blog explainers and card/birth-card pages. Reframes the blog: low-ROI for
+  search clicks, but the #1 AI-citation asset (accuracy > voice for that use). All 2-day, tiny —
+  directional. Start tracking as its own line once a week+ accrues.
+
 ### Baseline to beat next week
 
 Cumulative: impressions 7,717 · clicks 162 · CTR 2.15% · 428 on page 1 · mobile pos 9.23. Watch:
 `/vs/` pages climbing, more bearing pages surfacing, `/month/2026-11` opening ~Oct 1 with the reading
-live, and confirming the `/today` fix drops old dates.
+live, confirming the `/today` fix drops old dates, and the Bing/AI-citation channels building.
 
 ---
 
@@ -207,6 +229,12 @@ is now investing serious crawl budget in the site. (Not the crawl-trap fix — t
   the broad expansion is masking any thinning. Still pending; watch over coming weeks.
 
 ### The birth-card page: converts well; buried on BOTH engines (Bing hypothesis retracted)
+
+> **SUPERSEDED 2026-09-21 — this "buried on Bing too" retraction was WRONG.** Bing Webmaster Tools
+> data (live 09-18/19) shows `/tarot-birth-card` at **pos 7.7 on Bing (page 1)** while Google buries
+> it at pos 73. The Sep-14 live-SERP check below was degraded/unreliable; BWT is authoritative. The
+> original hypothesis (ranks better on Bing) was right. See the 2026-09-21 entry.
+
 
 Vercel shows `/tarot-birth-card` was the **#1 page (31 visitors)** and its calculator, `birth_card_finder`,
 was the **#1 event (17 uses)** — 55% of visitors on that page ran the calculator. So the page *works
