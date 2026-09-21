@@ -79,6 +79,63 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-09-21 (window: Jul 4–Sep 19, 78 days) — bump settled to a new baseline; /vs/ index requests paid off
+
+| cumulative | | vs last week |
+|---|---|---|
+| Impressions | 7,717 | +1,062 |
+| Clicks | 162 | +26 |
+| CTR | 2.15% | ~flat |
+| Page 1 (pos ≤ 10) | 428 | +20 |
+| Mobile position | 9.23 | tightening (was 9.56) |
+
+**The Sep-8 bump is a durable new baseline, not a spike.** Daily impressions settled at ~200–260
+(Sep 15–19: 191, 197, 184, 217, 261) — down from the 293–412 peak but ~2× the pre-bump ~60–115/day.
+It held for two full weeks. This is the real level now.
+
+### Wins
+
+- **`/month/2026-10` crossed onto page 1: pos 8.58** (was 10.1), 64 impr, 5 clicks — ranking ahead of
+  October demand, exactly what the +1 indexing reminder is for. The month machine is working on its own.
+- **The `/vs/` index requests paid off fast.** Requested ~Sep 17; four days later `/vs/raka` is
+  **pos 5.81 (page 1)** on 26 impr and `/vs/labyrinthos` is pos 11.8 on 20 impr — from absent-in-GSC
+  to ranking in under a week. Validates the manual-index call; competitor-comparison pages are a good,
+  high-intent surface. Watch them build.
+- **Bearing index push is starting.** Of the manually-requested `/bearing/[slug]` pages, a few have
+  surfaced (`fool` p3, `wheel-of-fortune` p4, `world` p4, `lovers` p6, `magician` p10) — 1 impr each,
+  early, but at **strong positions.** The signal is positive: when the bearing pages get indexed they
+  rank well (low competition on "[Major] bearing"). Keep requesting the rest / let the crawl catch up.
+
+### Still stuck / watch
+
+- **Birth-card hub: pos 72.9, 0 clicks, two weeks after the internal-link change (Sep 7).** No
+  movement. Impressions keep growing (496 → 515) but position is flat on page 8. Honest read: the
+  internal link was correct and harmless, but it can't move a head term that's walled by competition
+  and domain authority. This is an authority problem, not a linking one. Don't expect the link to fix
+  it; it's a slow grind that rides overall site authority.
+- **`/today` crawl-trap fix — total count is the wrong metric.** Indexed `/today` went 39 → 72 → 79 →
+  88, i.e. *rising*, which looks like the noindex isn't working. But the total conflates recent dates
+  (which *should* index) with far-past ones (which should drop). Recent-date indexing is outpacing
+  old-date dropping. **To actually confirm the fix works, check in GSC whether specific >365-day dates
+  (e.g. `/today/2025-11-27`) are being dropped** — the total count can't tell us. Four weeks post-fix,
+  still unconfirmed either way.
+
+### Vercel: cleaner week, social referrers emerging
+
+7-day: **158 visitors (−13%), 433 pageviews (−33%).** Pageviews fell much more than visitors → **fewer
+bots this week** (no Japan-crawler spike), so this count is cleaner; real humans ~130–140. Engagement
+strong (31 form_submits). **New referrers worth noting:** Threads (5), Instagram (1), ChatGPT (3),
+Facebook (6) — social and LLM channels starting to trickle. `checkout.stripe.com` again (2) — more
+checkout activity. DDG 25 + Ecosia 10 + Bing 3 = 38 Bing-index vs Google 39, still ~even.
+
+### Baseline to beat next week
+
+Cumulative: impressions 7,717 · clicks 162 · CTR 2.15% · 428 on page 1 · mobile pos 9.23. Watch:
+`/vs/` pages climbing, more bearing pages surfacing, `/month/2026-11` opening ~Oct 1 with the reading
+live, and confirming the `/today` fix drops old dates.
+
+---
+
 ## 2026-09-17 — MILESTONE: first organic sale; the corner turned
 
 Not a full weekly review (GSC only advanced 2 days since the 09-14 entry). Recording the milestone.
