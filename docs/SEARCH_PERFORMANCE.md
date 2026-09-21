@@ -1,8 +1,25 @@
 # Search performance log
 
-Weekly review of the Google Search Console export. Newest entry at the top. Each week:
-export Performance → Search results (last 3 months, all tabs) → drop the xlsx in ~/Downloads →
-diff against the entry below and add a new one.
+Weekly review, newest entry at the top. **As of 2026-09-21 this tracks FOUR channels** — the pages
+that lose on Google are winning on Bing and in AI answers, so Google alone tells half the story.
+
+**The four channels to pull and cover each week:**
+1. **Google (GSC)** — Performance → Search results, last 3 months, all tabs → xlsx. The impressions/
+   clicks/position spine. Include the Page 1 roster (below).
+2. **Vercel Web Analytics** — Top Pages / Countries / Referrers / Events CSVs + the dashboard totals.
+   Real human traffic + engagement (form_submits) + referral mix. Discount bots (watch pageviews-vs-
+   visitors divergence, esp. Japan/PL/BR high-pageview crawlers).
+3. **Bing-index (Bing Webmaster Tools)** — Search Performance + Page Traffic + Keyword reports. Bing
+   ranks pages Google buries (birth-card page 1 on Bing vs page 8 on Google). NOTE: "Bing clicks"
+   counts only bing.com; DDG + Ecosia run on Bing's index and show as their own referrers in Vercel —
+   so Bing-index reach = DDG + Ecosia + Bing combined (~half of search traffic now).
+4. **AI citations (BWT AI Performance report)** — AI Performance Overview + AI Page Stats. How often
+   answer engines (Copilot, ChatGPT via Bing) cite the site. AI cites the pages Google buries (blog
+   explainers, birth-card, card pages). Citations ≠ clicks; it's a visibility/authority signal. Watch
+   whether it grows AND whether chatgpt.com-style referrals grow with it.
+
+Each week: drop the exports in ~/Downloads → diff against the last entry → add a new one covering all
+four. Not every channel needs a fresh export every week, but the entry should note what moved in each.
 
 **Read the dates, not the label.** The export always says "Last 3 months" but the site has only
 been indexed since early July 2026, so the real window is much shorter. Use the Chart tab's first
