@@ -133,9 +133,9 @@ export default async function Home() {
           <p className="eyebrow">A PERPETUAL TAROT ALMANAC</p>
           <h1 className="hero-headline">Find your<br />angle on<br /><em>the day.</em></h1>
           <p className="hero-sub">
-            Every day has its cards, set by tarot numerology, not shuffled at random. The same
-            every time you look. One the whole world shares, and one that&rsquo;s yours alone.
-            See where you stand today, and what it has to show you.
+            Every day already has its cards, set by tarot numerology. One is the collective card,
+            the one we all share. The other is your personal card, set by your birthday. Check
+            them in the morning, and you&rsquo;ll know whether to bring an umbrella.
           </p>
           <div className="cta-group">
             <Link href="/today" className="btn-primary">SEE TODAY&rsquo;S CARDS</Link>
@@ -175,7 +175,7 @@ export default async function Home() {
               So that&rsquo;s how we make the Almanac. Like the old farmers&rsquo; almanacs that
               could name the season before it turned, your birthday lays out a lifetime of
               cards — every day you&rsquo;ve lived and every day coming already has its
-              cards. The Almanac helps you know whether to bring an umbrella.
+              cards.
             </p>
           </div>
           <div className="nb-foot">
