@@ -154,29 +154,28 @@ export default async function Home() {
           <div className="nb-body">
             <p>
               Think of an astrology birth chart. Nobody shuffles the sky. The planets were
-              where they were the minute you were born, and an astrologer reads what was
-              already there. Tarot can work the same way. Instead of a card you draw at
-              random, your cards are set by your birthday and the date on the calendar, the
-              same ones every time you look. That&rsquo;s tarot numerology, and it has a long lineage.
+              where they were the minute you were born, and an astrologer reads those fixed
+              points. Tarot can work the same way. Instead of a card you draw randomly, your
+              cards are set by your birthday and the date on the calendar. We call it tarot
+              numerology, and it has a long lineage.
             </p>
             <p>
-              So every day arrives already carrying a card, the same one for everyone alive
-              that day. And you meet it from somewhere. Your birthday sets your own cards, the
-              angle you bring to whatever the day is holding. The same Tuesday can be an easy
-              day for me and a hard one for you.
+              So every day arrives already carrying a couple of cards. One of them is the
+              collective card, the one we all share. And then there&rsquo;s your personal card,
+              which is set by your birthday. It&rsquo;s the angle you bring to whatever the day
+              is holding. The same Tuesday can be a hard day for me and an easy one for you.
             </p>
             <p>
               Knowing your cards ahead of time means you can see what a day, a month, or a
               whole year tends to be working on, and get ready for it instead of being caught
-              off guard. And there&rsquo;s room in it for you. The day hands you a card. How
-              you play it is the part that stays in your hands.
+              off guard. The day hands you a card. But don&rsquo;t forget that how you choose
+              to play your hand is still up to you.
             </p>
             <p>
-              That&rsquo;s what makes it an almanac. Like the old farmers&rsquo; almanacs that
+              So that&rsquo;s how we make the Almanac. Like the old farmers&rsquo; almanacs that
               could name the season before it turned, your birthday lays out a lifetime of
-              cards — every day you&rsquo;ve lived and every day coming already has one
-              waiting. None of it is something you have to take on faith. Do the arithmetic
-              yourself and you land on the same cards.
+              cards — every day you&rsquo;ve lived and every day coming already has its
+              cards. The Almanac helps you know whether to bring an umbrella.
             </p>
           </div>
           <div className="nb-foot">
