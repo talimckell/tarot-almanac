@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 export default async function MePage({
   searchParams,
 }: {
-  searchParams: Promise<{ month?: string; view?: string; checkout?: string; subscribe?: string; next?: string }>;
+  searchParams: Promise<{ month?: string; view?: string; checkout?: string; subscribe?: string; gift?: string; next?: string }>;
 }) {
-  const { subscribe, next: returnTo } = await searchParams;
+  const { subscribe, gift, next: returnTo } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
@@ -45,10 +45,14 @@ export default async function MePage({
     const validReturnTo = returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//") ? returnTo : null;
     const next = validReturnTo
       ? `/me?next=${encodeURIComponent(validReturnTo)}#your-details`
-      : subscribe === "1"
+      : subscribe === "1" || gift === "1"
         ? "/me#subscribe"
         : "/me";
-    redirect(`/sign-in?next=${encodeURIComponent(next)}&reason=almanac`);
+    // A gift-chart link (e.g. the homepage FAQ) lands on the same #subscribe box, which
+    // holds the $12 "just this chart" option, but the sign-in page should explain a
+    // one-off chart, not pitch the subscription.
+    const reason = !validReturnTo && gift === "1" ? "gift-chart" : "almanac";
+    redirect(`/sign-in?next=${encodeURIComponent(next)}&reason=${reason}`);
   }
 
   const profile = await prisma.profile.upsert({

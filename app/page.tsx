@@ -83,7 +83,7 @@ const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
       <>
         Yes. A $12 birth chart is made from their birthday, and it&rsquo;s theirs to keep.
         You don&rsquo;t need a subscription.{" "}
-        <Link href="/me?subscribe=1#subscribe">Make one &rarr;</Link>
+        <Link href="/me?gift=1#subscribe">Make one &rarr;</Link>
       </>
     ),
   },

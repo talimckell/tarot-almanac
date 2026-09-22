@@ -24,12 +24,18 @@ const REASON_COPY: Record<string, ReasonCopy> = {
   "year-reading": {
     eyebrow: "Create your account",
     title: "One thing first",
-    deck: "Your year-ahead reading needs an account to live in, so you can come back and read it again. It's a one-time $15 purchase, not a subscription. Enter your email and I'll send you a link and a code. No password to remember.",
+    deck: "Your year-ahead reading needs an account to live in, so you can come back and read it again. It's a one-time $15 purchase, not a subscription. Enter your email and I'll send you a link and a code to set up your account and sign in. No password to remember.",
   },
   chart: {
     eyebrow: "Create your account",
     title: "See your chart",
-    deck: "Your birth chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
+    deck: "Your birth chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code to set up your account and sign in. No password to remember.",
+    sample: { href: "/tarot-birth-chart/sample", label: "See a full sample chart" },
+  },
+  "gift-chart": {
+    eyebrow: "Create your account",
+    title: "Give a chart",
+    deck: "Charts you make live in your account, so you can come back and read them again. A chart for someone else is a one-time $12 purchase, no subscription needed. Enter your email and I'll send you a link and a code to set up your account and sign in. No password to remember.",
     sample: { href: "/tarot-birth-chart/sample", label: "See a full sample chart" },
   },
   // The homepage's "Start your Almanac" CTA and /me both land here — this is the main
@@ -38,7 +44,7 @@ const REASON_COPY: Record<string, ReasonCopy> = {
   almanac: {
     eyebrow: "Create your account",
     title: "Start your Almanac",
-    deck: "Every day you've lived, plus the month ahead. Your full birth chart, and a personal reading every month. $7 a month, cancel anytime. Enter your email and I'll send you a link and a code. No password to remember.",
+    deck: "Every day you've lived, plus the month ahead. Your full birth chart, and a personal reading every month. $7 a month, cancel anytime. Enter your email and I'll send you a link and a code to set up your account and sign in. No password to remember.",
     sample: { href: "/today", label: "See today's cards free, no account needed" },
   },
 };
