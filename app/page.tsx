@@ -197,8 +197,8 @@ export default async function Home() {
           <span className="ti-eyebrow">Everything from one birthday</span>
           <h2>Enter your birthday once, and it opens all of these.</h2>
           <p>
-            Every card below comes from the same arithmetic. Start with today, or go
-            straight to the reading you came for.
+            Every card below comes from your birthday and tarot numerology. Start with
+            today, or explore other parts of the Almanac.
           </p>
         </div>
 
@@ -216,10 +216,11 @@ export default async function Home() {
                 </g>
               </svg>
             </span>
-            <h3 className="prop-head">The card of the day, and yours</h3>
+            <h3 className="prop-head">The cards of the day, ours and yours</h3>
             <p className="prop-body">
-              The card today hands everyone, next to the one your birthday draws from it.
-              See where they line up and where they pull apart. Free, every day.
+              The collective card is the one we all share today. Your personal card sits
+              next to it, set by your birthday. Some days they line up and some days they
+              pull against each other. Free, every day.
             </p>
             <span className="prop-go">See today &rarr;</span>
           </Link>
@@ -231,10 +232,10 @@ export default async function Home() {
                 <path d="M28 8 A15 15 0 1 0 28 38 A11 15 0 0 1 28 8 Z" fill="var(--air)" />
               </svg>
             </span>
-            <h3 className="prop-head">The one card you were born under</h3>
+            <h3 className="prop-head">Your Tarot birth card</h3>
             <p className="prop-body">
-              Your tarot birth card, what we call your Bearing. One Major Arcana card fixed
-              by your birthday, the angle you carry into every day after.
+              The card you were born under, which we call your Bearing. One Major Arcana
+              card fixed by your birthday, which shows you the angle you carry on the world.
             </p>
             <span className="prop-go">Find your Bearing &rarr;</span>
           </Link>
@@ -247,7 +248,7 @@ export default async function Home() {
                 <circle cx="23" cy="10" r="2.4" fill="var(--fire)" stroke="none" />
               </svg>
             </span>
-            <h3 className="prop-head">The card this year is working on</h3>
+            <h3 className="prop-head">The card your year is working on</h3>
             <p className="prop-body">
               Every calendar year sets one Major Arcana card for you, drawn from your
               birthday. Think of it as the theme the year keeps handing you.
@@ -266,8 +267,8 @@ export default async function Home() {
             </span>
             <h3 className="prop-head">Seven cards from your birthday</h3>
             <p className="prop-body">
-              The tarot answer to an astrology birth chart. Three cards for you, three for
-              the world you were born into, and your Bearing seated between them.
+              Like an astrology birth chart, in tarot. Three cards for you, three for the
+              world you were born into, and your Bearing in the middle.
             </p>
             <span className="prop-go">See your birth chart &rarr;</span>
           </Link>
@@ -279,12 +280,13 @@ export default async function Home() {
                 <path d="M28 7 L32.5 23.5 L49 28 L32.5 32.5 L28 49 L23.5 32.5 L7 28 L23.5 23.5 Z" />
               </svg>
             </span>
-            <h3 className="prop-head">Your whole almanac, kept for you</h3>
+            <h3 className="prop-head">Your whole Almanac, kept for you</h3>
             <p className="prop-body">
-              The subscription. Every day behind you, a month ahead, your natal chart, and a
-              chart for anyone you love, all in one place you can return to.
+              This is the subscription. Every day you&rsquo;ve lived, the month ahead, your
+              birth chart, and charts for the people you love. We keep it all in one place
+              so you can come back to it whenever you like.
             </p>
-            <span className="prop-go">Make your almanac &rarr;</span>
+            <span className="prop-go">Start your Almanac &rarr;</span>
           </Link>
         </div>
       </section>
