@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Your Tarot Bearing: The Lifelong Card Set By Your Birthday | The Tarot Almanac",
   description:
-    "Your Bearing is the one tarot card you carry your whole life, fixed by your birthday. Find yours, and read what it means to greet the world through it.",
+    "Your Bearing is the one tarot card you carry your whole life, set by your birthday. It's the angle you bring to the world. Find yours and read what it means.",
   alternates: {
     canonical: "https://tarotalmanac.com/bearing",
   },
@@ -33,9 +33,9 @@ export default function BearingPage() {
           <span className={styles.eyebrow}>Your Bearing</span>
           <h1>The one card you carry your whole life</h1>
           <p className={styles.deck}>
-            The daily cards turn and the months change their weather. Your
-            Bearing holds still: the fixed card set by your birthday, the way
-            you greet the world before you&rsquo;ve decided anything about it.
+            Your daily cards change, and so do your monthly ones. Your Bearing
+            stays the same. It&rsquo;s the one card set by your birthday, and
+            it&rsquo;s the angle you bring to the world.
           </p>
         </header>
 
@@ -46,32 +46,37 @@ export default function BearingPage() {
           <h2>What a Bearing is</h2>
           <p>
             Most of what the Almanac shows you moves. The collective card
-            changes with the date; your personal card shifts day to day. Your
-            Bearing is the one thing that doesn&rsquo;t. It&rsquo;s the single
-            Major Arcana card fixed by the day you were born, and it stays
-            the same for your whole life.
+            changes with the date, and so does your personal card. Your
+            Bearing is the one card that doesn&rsquo;t. It&rsquo;s the Major
+            Arcana card set by the day you were born, and it&rsquo;s yours for
+            life.
           </p>
           <p>
-            Think of it less as something that happens to you and more as the
-            angle you bring to whatever happens, the stance you carry into a
-            room before a word is spoken. Underneath, it&rsquo;s a fixed
-            distance: the gap between how the world reads a day and how you
-            read it never changes, and that constant is your Bearing.
+            It&rsquo;s the angle you bring to whatever happens, how you tend to
+            walk into a room. And it&rsquo;s built into every day in the
+            Almanac. The gap between the collective card and your personal card
+            is always the same, and that gap is your Bearing.
           </p>
           <p>
-            Your Bearing is also the anchor of your full{" "}
+            Your Bearing works a lot like your sun sign. It&rsquo;s the one thing
+            about yourself you can name in a word, and once you know it, you
+            start to see it everywhere. Look up the Bearings of the people you
+            love, and a lot of things start making sense.
+          </p>
+          <p>
+            Your Bearing sits at the center of your{" "}
             <Link className={styles.inline} href="/tarot-birth-chart">tarot birth chart</Link>, the
-            seven-card reading built from your birthday.
+            seven cards set by your birthday.
           </p>
           <p>
-            It&rsquo;s where each year starts from too: your{" "}
+            It&rsquo;s where each year starts from, too. Your{" "}
             <Link className={styles.inline} href="/personal-year-card">personal year card</Link>{" "}
             is your Bearing carried forward by the year&rsquo;s own number.
           </p>
           <p className={styles.mathnote}>
-            It&rsquo;s set by your birth month plus your birth day, brought
-            around the wheel of 22. That sum never changes, so neither does
-            your Bearing.{" "}
+            It&rsquo;s your birth month plus your birth day, wrapped around the
+            wheel of 22. That sum never changes, so neither does your
+            Bearing.{" "}
             <Link className={styles.inline} href="/how-it-works">
               See how the math works.
             </Link>
@@ -121,15 +126,15 @@ export default function BearingPage() {
         <aside className={styles.cta}>
           <span className={styles.ctaEyebrow}>Your Bearing is one position of seven</span>
           <p>
-            Your Bearing is the still point. Your full Tarot Natal Chart sets
-            it among the other six positions, the collective and personal
-            cards of your birth year, month, and day, and reads the whole
-            shape together.
+            Your Bearing is one card. Your birth chart is the whole picture:
+            three cards for you, three for the world you were born into, and
+            your Bearing in the middle. It&rsquo;s the reason you&rsquo;re the
+            way you are, laid out on one page.
           </p>
           <Link className={styles.btn} href="/chart">See your full chart</Link>
           <p className={styles.ctaFine}>
-            $12 once, or included with a subscription. Free to preview first, structure and
-            all, no purchase required.
+            $12 once, or included with a subscription. You can preview it for
+            free first.
           </p>
         </aside>
       </div>
