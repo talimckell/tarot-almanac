@@ -142,6 +142,21 @@ export default async function Home() {
             <Link href="/today" className="btn-primary">SEE TODAY&rsquo;S CARDS</Link>
             <Link href="/how-it-works" className="btn-ghost">How it works &rarr;</Link>
           </div>
+          {/* Product Hunt launch badge (Sept 2026). */}
+          <a
+            href="https://www.producthunt.com/products/tarot-almanac?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tarot-almanac"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", marginTop: 20 }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt="Tarot Almanac - The astro.com of tarot: every date maps to its own cards. | Product Hunt"
+              width={250}
+              height={54}
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258332&theme=neutral&t=1790090596736"
+            />
+          </a>
         </div>
 
         <TodayEntry birthday={birthday} name={name} signedIn={!!account} />
