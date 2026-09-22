@@ -297,10 +297,10 @@ export default async function Home() {
           <span className="fb-eyebrow">Your Bearing</span>
           <h2 className="fb-head">The card you<br />came in under<br />is still <em>with you.</em></h2>
           <p className="fb-body">
-            Your Bearing is the one Major Arcana card fixed by your birthday, your tarot
-            birth card. It shapes the angle you bring to every day: how you tend to meet the
-            world, what you keep working with and working through. It doesn&rsquo;t change.
-            You do.
+            Your Bearing is your tarot birth card, the one Major Arcana card set by your
+            birthday. It&rsquo;s the angle you bring to every day: how you tend to meet the
+            world, and what you keep coming back to. The card stays with you for life, and
+            you get to keep deepening your understanding of it.
           </p>
           <Link href="/bearing" className="fb-cta">Find your Bearing &rarr;</Link>
         </div>
@@ -314,9 +314,8 @@ export default async function Home() {
               The Moon
             </div>
             <div className="fb-card-desc">
-              Born to navigate by feeling rather than logic. A Moon Bearing gives you a
-              gift for sensing what others miss, and a lifelong practice of learning to
-              trust it.
+              You read the world by feel. A Moon Bearing gives you a gift for sensing what
+              other people walk past, and a lifelong practice of learning to trust it.
             </div>
           </div>
           <div className="fb-card" style={{ borderLeftColor: "var(--label)" }}>
@@ -329,8 +328,8 @@ export default async function Home() {
               The Empress
             </div>
             <div className="fb-card-desc">
-              The world comes alive in your hands. An Empress Bearing means abundance comes
-              naturally to you. The hard part is choosing where to put it.
+              You make things grow. An Empress Bearing means abundance comes naturally to
+              you. The hard part is choosing where to put it.
             </div>
           </div>
         </div>
@@ -342,10 +341,10 @@ export default async function Home() {
           <span className="fb-eyebrow">Your year card</span>
           <h2 className="fb-head">Every year is<br />working on<br /><em>something.</em></h2>
           <p className="fb-body">
-            Each calendar year sets one Major Arcana card for you, drawn from your birthday.
-            Think of it as the theme running under the year, the thing it keeps circling back
-            to. Read it early and you can meet the year on purpose, rather than spotting the
-            pattern only once it&rsquo;s behind you.
+            Every calendar year sets one Major Arcana card for you, drawn from your birthday.
+            It&rsquo;s the theme running under the whole year, the thing it keeps coming back
+            to. Read it early so you can work with it
+            intentionally.
           </p>
           <Link href="/personal-year-card" className="fb-cta">Find your year card &rarr;</Link>
         </div>
@@ -359,7 +358,7 @@ export default async function Home() {
             </span>
             <div className="fb-specimen-year">2026</div>
             <div className="fb-specimen-cap">
-              One card, set by your birthday, holding all twelve months of the year.
+              One card, set by your birthday, for all twelve months.
             </div>
           </div>
         </div>
@@ -371,10 +370,10 @@ export default async function Home() {
           <span className="fb-eyebrow">Your tarot birth chart</span>
           <h2 className="fb-head">Seven cards,<br />set the day<br /><em>you arrived.</em></h2>
           <p className="fb-body">
-            Your birth chart is the tarot answer to an astrology chart. Three cards for
-            who you were when you arrived, three for the world that was waiting, and your
-            Bearing in the middle — the distance between the two, which never changes. One
-            page that holds the whole picture at once.
+            Your Bearing is one card. Your birth chart is the whole picture. Three cards for
+            you, three for the world you were born into, and your Bearing in the middle, the
+            angle between them. It&rsquo;s the reason you&rsquo;re the way you are, laid out
+            on one page. And you can make one for anyone you want to understand better.
           </p>
           <Link href="/tarot-birth-chart" className="fb-cta">See your birth chart &rarr;</Link>
         </div>

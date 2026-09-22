@@ -5,8 +5,9 @@
 // unlocked) for a live example, then explains what each position means, and CTAs into
 // /chart. Wires the real engine — no invented cards.
 //
-// COPY NOTE: the prose is a first draft in-voice for Tali to refine. It's marketing /
-// positional copy, not card-reading interpretation (those stay authored / in the deck).
+// COPY NOTE: revised 2026-09-22 in Tali's voice, led by the value props people get an
+// astrology birth chart for. Marketing / positional copy, not card-reading
+// interpretation (those stay authored / in the deck).
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
@@ -19,7 +20,7 @@ import { organizationRef, serviceLd } from "../../lib/organizationSchema";
 const URL = `${SITE_URL}/tarot-birth-chart`;
 const TITLE = "Tarot Birth Chart & Natal Chart | The Tarot Almanac";
 const DESCRIPTION =
-  "A tarot birth chart, or tarot natal chart, is seven cards drawn from your birthday: the self you arrived as, the world that met you, and the Bearing between them. See an example and build your own.";
+  "A tarot birth chart, or tarot natal chart, is seven cards from your birthday: three for you, three for the world you were born into, and your Bearing between them. See an example and build your own.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -32,19 +33,19 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "What is a tarot birth chart?",
-    a: "A tarot birth chart is seven tarot cards drawn from your birth date: three for you (your year, month, and day), three for the world you were born into, and the Bearing, the fixed distance between the two. It's the tarot counterpart to an astrology birth chart, built from arithmetic instead of the sky.",
+    a: "A tarot birth chart is seven tarot cards set by your birth date: three for you (your year, month, and day), three for the world you were born into, and your Bearing, the fixed distance between the two. It's the tarot version of an astrology birth chart, and all it needs is your birth date.",
   },
   {
     q: "How is a tarot birth chart calculated?",
-    a: "Add the digits of your birth year, then fold in your birth month and day, and wrap the total around the twenty-two Major Arcana. Each of the seven positions is one of those sums; the two day positions resolve to Minor cards. It's tarot numerology, and every step is checkable by hand.",
+    a: "Add the digits of your birth year, then add in your birth month and day, and wrap the total around the twenty-two Major Arcana. Each of the seven positions is one of those sums, and the two day positions come out as Minor cards. It's tarot numerology, and you can work out every step by hand.",
   },
   {
     q: "Is a tarot birth chart the same as an astrology birth chart?",
-    a: "It's a close cousin. Astrology reads the sky the minute you were born; a tarot birth chart reads your birth date through the cards. Your year card works like your sun, your month like your moon, and your day like your rising.",
+    a: "It's a close cousin. Astrology reads the sky the minute you were born, and a tarot birth chart reads your birth date through the cards. Both help you understand why you're the way you are. Your year card works like your sun, your month like your moon, and your day like your rising.",
   },
   {
     q: "What's the difference between a tarot birth chart and a tarot birth card?",
-    a: "Your birth card, what the Almanac calls your Bearing, is a single card: the fixed angle between you and the world. The full chart is seven cards, the Bearing included, that together describe the whole picture, not just the one lens.",
+    a: "Your birth card, which we call your Bearing, is a single card: the fixed angle between you and the world. Your birth chart is seven cards with your Bearing in the middle. If your Bearing is like your sun sign, the chart is your full chart.",
   },
 ];
 
@@ -73,7 +74,7 @@ export default function TarotBirthChartPage() {
   const chartServiceLd = serviceLd({
     name: "Tarot birth chart",
     description:
-      "A seven-card tarot natal chart built from your birthday: the self you arrived as, the world that met you, and the Bearing between them. A fixed object, yours to keep or give.",
+      "A seven-card tarot natal chart built from your birthday: three cards for you, three for the world you were born into, and your Bearing between them. Yours to keep, or to give.",
     url: `${SITE_URL}/chart`,
     price: 12,
   });
@@ -155,11 +156,11 @@ export default function TarotBirthChartPage() {
         <section className="section">
           <h2>What is a tarot birth chart?</h2>
           <p>
-            Astrology reads the sky the minute you were born. A tarot birth chart reads the same
-            moment through the cards, built from your birth date instead of the stars. No birth
-            time, no software, no chart you have to pay someone to draw. Just your date, run
-            through arithmetic you can check, turned into seven cards: the person you came in as,
-            the world that was waiting, and the fixed distance between the two.
+            People get their astrology birth chart because it explains them. It takes the one
+            thing they already know, their sun sign, and fills in the rest. A tarot birth chart
+            does the same thing with the cards. It&rsquo;s set by your birth date, so you
+            don&rsquo;t need a birth time. You get seven cards: three for you, three for the
+            world you were born into, and your Bearing in the middle, the angle between them.
           </p>
         </section>
 
@@ -173,49 +174,84 @@ export default function TarotBirthChartPage() {
         </section>
 
         <section className="section">
+          <h2>What your birth chart gives you</h2>
+          <p>
+            <strong>It explains you.</strong>{" "}Your chart puts words to things you already know
+            about yourself: what comes easily, what you keep working on, how you meet people.
+            It&rsquo;s the reason you&rsquo;re the way you are, laid out on one page.
+          </p>
+          <p>
+            <strong>It&rsquo;s the fuller version of your Bearing.</strong>{" "}If you know your
+            Bearing, you know one card. Your chart shows the six around it, the way a full
+            astrology chart goes deeper than your sun sign.
+          </p>
+          <p>
+            <strong>It makes sense of your contradictions.</strong>{" "}Some of your cards will pull
+            against each other. That&rsquo;s normal, and the chart shows you where the pull is
+            coming from.
+          </p>
+          <p>
+            <strong>It gives you a language for the people you love.</strong>{" "}You can make a
+            chart for a partner, a parent, or a friend and see the cards they came in under. It
+            makes a good gift, too.
+          </p>
+          <p>
+            <strong>It&rsquo;s yours for life.</strong>{" "}Your chart never changes. You can come
+            back to it for years and read it differently as you grow. And your Bearing, at the
+            center of it, is the same card that sets your angle on every day in the Almanac.
+          </p>
+          <p>
+            <strong>It&rsquo;s a snapshot of the day you arrived.</strong>{" "}You, and the world
+            you showed up in, on one page.
+          </p>
+        </section>
+
+        <section className="section">
           <h2>What each position means</h2>
 
           <h3 style={label}>You, the person you arrived as</h3>
           <p>
-            <strong>Your year is your core.</strong> The deepest, slowest layer, the part of you
-            still true after everything on top has changed. Astrology would call it your sun.
+            <strong>Your year is your core.</strong>{" "}It&rsquo;s the deepest, slowest layer of
+            you, the part that stays true after everything else has changed. In astrology,
+            that&rsquo;s your sun.
           </p>
           <p>
-            <strong>Your month is your inner life.</strong> The weather underneath what anyone
-            sees, how you are when no one is watching. Your moon.
+            <strong>Your month is your inner life.</strong>{" "}It&rsquo;s how you are when no one
+            is watching. That&rsquo;s your moon.
           </p>
           <p>
-            <strong>Your day is how you meet a room.</strong> The surface, the first thing people
-            get from you. It comes out as a Minor card, the lived, everyday you. Your rising.
+            <strong>Your day is how you meet a room.</strong>{" "}It&rsquo;s the first thing people
+            get from you, and it comes out as a Minor card, the everyday you. That&rsquo;s your
+            rising.
           </p>
 
           <h3 style={label}>The world you were born into</h3>
           <p>
-            <strong>The world&rsquo;s year is what you inherited.</strong> The signature of your
-            whole birth year, shared by everyone who arrived when you did.
+            <strong>The world&rsquo;s year is what you inherited.</strong>{" "}It&rsquo;s the card
+            for your whole birth year, shared by everyone born that year.
           </p>
           <p>
-            <strong>The world&rsquo;s month is the season you formed in.</strong> The nearer
-            weather, the mood in the air as you got here.
+            <strong>The world&rsquo;s month is the season you arrived in.</strong>{" "}It&rsquo;s the
+            mood in the air as you got here.
           </p>
           <p>
-            <strong>The world&rsquo;s day is the day that caught you.</strong> The most specific of
-            the three, shared only by people born your exact date.
+            <strong>The world&rsquo;s day is your exact day.</strong>{" "}It&rsquo;s the most specific
+            of the three, shared only with people born on the same date.
           </p>
 
           <h3 style={label}>The card that ties it together</h3>
           <p>
-            <strong>Your Bearing is the fixed angle to the world.</strong> The distance between
-            your side of the chart and the world&rsquo;s, the one card that never changes, whatever
-            the day. <Link href="/bearing">More on the Bearing</Link>.
+            <strong>Your Bearing is your angle on the world.</strong>{" "}It&rsquo;s the distance
+            between your side of the chart and the world&rsquo;s, and it&rsquo;s the one card that
+            never changes, whatever the day. <Link href="/bearing">More on the Bearing</Link>.
           </p>
         </section>
 
         <section className="section">
           <h2>How a tarot birth chart is calculated</h2>
           <p>
-            Every card comes from one move you repeat: add, and if you pass twenty-two, wrap back
-            around the wheel. Only the year gets its digits added up; the month and day go in
+            Every card comes from one simple move: add, and if you pass twenty-two, wrap back
+            around the wheel. Only the year gets its digits added up. The month and day go in
             whole. It&rsquo;s the same tarot numerology behind every reading in the Almanac.
           </p>
           <p className="dates">
@@ -251,10 +287,9 @@ export default function TarotBirthChartPage() {
         <aside className="almanac">
           <span className="eyebrow">Build your own</span>
           <p>
-            Your chart names all seven cards and reads each one, then weaves them into a single
-            portrait: a core meeting a world, a deep self under the face you lead with. It&rsquo;s a
-            fixed object you can keep or give. A chart is $12 on its own, or included with a
-            subscription.
+            Your chart names all seven cards, reads each one, and then puts them together into
+            one reading of you. It&rsquo;s yours to keep, and you can make one for anyone you want
+            to understand better. A chart is $12 on its own, or included with a subscription.
           </p>
           <p className="dates">
             <Link href="/chart">Build your natal chart &rarr;</Link> ·{" "}
