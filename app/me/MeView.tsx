@@ -27,6 +27,7 @@ import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import CheckoutSubmitButton from "../components/CheckoutSubmitButton";
 import DeleteAccountForm from "./DeleteAccountForm";
 import styles from "./MeView.module.css";
+import PrivacyNote from "../components/PrivacyNote";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -334,6 +335,7 @@ export default function MeView({
             <BirthdayFields id="chartBirthday" name="birthday" selectClassName={styles.fieldInput} required />
           </div>
           <button type="submit" className={styles.saveBtn}>Add a chart</button>
+          <PrivacyNote subject="theirs" />
         </form>
       ) : (
         <div className={styles.paywall} id="subscribe">
@@ -374,6 +376,7 @@ export default function MeView({
                 <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                   Buy this chart
                 </CheckoutSubmitButton>
+                <PrivacyNote subject="theirs" />
               </form>
             </div>
           </div>
@@ -430,6 +433,7 @@ export default function MeView({
           />
         </div>
         <button type="submit" className={styles.saveBtn}>Save</button>
+        <PrivacyNote />
       </form>
 
       <div className={styles.tiny}>

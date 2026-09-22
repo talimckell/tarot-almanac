@@ -6,6 +6,7 @@ import { mod22, MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "@/lib/almanac";
 import { trackFormSubmit } from "@/lib/analytics";
 import ShareImageButton from "../components/ShareImageButton";
 import styles from "./page.module.css";
+import PrivacyNote from "../components/PrivacyNote";
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -47,6 +48,7 @@ export default function BearingFinder() {
         </select>
         <button type="button" onClick={reveal}>Reveal</button>
       </div>
+      <PrivacyNote />
 
       {result !== null && (
         <div className={styles.result}>

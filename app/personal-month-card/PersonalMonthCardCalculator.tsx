@@ -11,6 +11,7 @@ import {
   MONTH_NAMES,
 } from "../../lib/monthCard";
 import { trackFormSubmit } from "@/lib/analytics";
+import PrivacyNote from "../components/PrivacyNote";
 
 // The month card depends on birth month + birth day, the calendar year, and the
 // month being read (birth year is not used, same as the year card and Bearing).
@@ -92,6 +93,7 @@ export default function PersonalMonthCardCalculator({ bodies }: { bodies: string
           </div>
         </div>
         <p className="hint" style={{ marginTop: 8 }}>Month and day only. Your birth year isn&rsquo;t needed.</p>
+        <PrivacyNote style={{ marginTop: 4 }} />
 
         <span className="flabel" style={{ marginTop: 20 }}>Which month do you want to read?</span>
         <p className="hint" style={{ marginTop: 4, marginBottom: 10 }}>

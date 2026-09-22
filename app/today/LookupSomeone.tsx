@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./TodayView.module.css";
 import { trackFormSubmit } from "@/lib/analytics";
 import BirthdayFields from "../components/BirthdayFields";
+import PrivacyNote from "../components/PrivacyNote";
 
 // Signed-in only. Because a signed-in account's own birthday is fixed (it always
 // wins on the default view), a looked-up birthday is unambiguously "not you", so we
@@ -45,6 +46,7 @@ export default function LookupSomeone({ action }: { action: string }) {
           <button type="submit" className={`${styles.btn} ${styles.btnSolid}`}>See their day</button>
           <button type="button" className={styles.btn} onClick={() => setOpen(false)}>Cancel</button>
         </div>
+        <PrivacyNote subject="theirs" />
       </form>
     </div>
   );

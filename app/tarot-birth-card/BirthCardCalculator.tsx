@@ -5,6 +5,7 @@ import Link from "next/link";
 import { bearingIndex, MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "@/lib/almanac";
 import { trackFormSubmit } from "@/lib/analytics";
 import ShareImageButton from "../components/ShareImageButton";
+import PrivacyNote from "../components/PrivacyNote";
 
 // The tarot birth card is the Bearing: mod22(birth month + birth day), birth year
 // excluded, so it holds for a whole life. Same math as /bearing's finder, wired for
@@ -73,6 +74,7 @@ export default function BirthCardCalculator() {
           <button type="submit">Reveal my card</button>
         </div>
         <p className="tbc-hint">No sign-up, no email. Your birth year isn&rsquo;t needed, only the month and day.</p>
+        <PrivacyNote />
       </form>
 
       {result !== null && element && (

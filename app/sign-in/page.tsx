@@ -5,6 +5,7 @@ import Link from "next/link";
 import { createClient } from "../../lib/supabase/client";
 import { trackFormSubmit } from "@/lib/analytics";
 import styles from "./page.module.css";
+import PrivacyNote from "../components/PrivacyNote";
 
 // Every checkout flow (year reading, chart, gift chart, /me) lands here mid-purchase with
 // no explanation of why — the generic "Your almanac" framing only makes sense if someone
@@ -192,6 +193,7 @@ export default function SignInPage() {
         >
           {status === "sending" ? "Sending..." : "Send sign-in link"}
         </button>
+        <PrivacyNote subject="email" />
       </form>
     </div>
   );

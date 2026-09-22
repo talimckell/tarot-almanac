@@ -18,6 +18,7 @@ import type { Birthday } from "@/lib/today";
 import BirthdayRevealForm from "./components/BirthdayRevealForm";
 import BirthdayFields from "./components/BirthdayFields";
 import { saveBirthdayFromToday } from "./today/actions";
+import PrivacyNote from "./components/PrivacyNote";
 
 // Suit pip icons, keyed by suit. Stroke inherits the element color via `currentColor`.
 function SuitPip({ suit }: { suit: string }) {
@@ -288,12 +289,17 @@ export default function TodayEntry({
                   action="/today"
                   defaultName={name ?? ""}
                   saveAction={signedIn ? saveBirthdayFromToday : undefined}
+                  showPrivacyNote={false}
                 />
               </div>
             </>
           )}
         </div>
       </div>
+
+      {!guest && (looking || !personal) && (
+        <PrivacyNote subject={looking ? "theirs" : "yours"} style={{ textAlign: "center", margin: "12px auto 0", maxWidth: 420 }} />
+      )}
 
       <div className="entry-meta">
         <div className="meta-item">

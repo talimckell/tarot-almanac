@@ -4,6 +4,7 @@ import { type FormEvent, useState } from "react";
 import { isOldEnough, type YMD } from "@/lib/today";
 import { trackFormSubmit } from "@/lib/analytics";
 import BirthdayFields from "./BirthdayFields";
+import PrivacyNote from "./PrivacyNote";
 
 // Shared by the homepage's "You today" block (today-entry.tsx) and /today's own
 // "Add your birthday" empty state (TodayView.tsx) — same reveal form, same age
@@ -15,6 +16,7 @@ export default function BirthdayRevealForm({
   action = "",
   defaultName = "",
   saveAction,
+  showPrivacyNote = true,
 }: {
   action?: string;
   defaultName?: string;
@@ -22,6 +24,8 @@ export default function BirthdayRevealForm({
   // Profile — the plain GET below only persists for anonymous visitors (via the
   // proxy.ts cookie), so without this a signed-in reveal is a silent no-op.
   saveAction?: (formData: FormData) => void | Promise<void>;
+  // The homepage hero renders the note below its narrow card instead of inside it.
+  showPrivacyNote?: boolean;
 }) {
   const [error, setError] = useState<string | null>(null);
 
@@ -63,6 +67,7 @@ export default function BirthdayRevealForm({
       <BirthdayFields name="b" required />
       <button type="submit" className="btn-reveal">Reveal my card &rarr;</button>
       {error && <p className="reveal-error">{error}</p>}
+      {showPrivacyNote && <PrivacyNote />}
     </form>
   );
 }

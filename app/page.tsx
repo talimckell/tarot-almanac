@@ -9,6 +9,7 @@ import { getSignedInBirthday } from "@/lib/accountBirthday";
 import { viewerNow } from "@/lib/viewerNow";
 import { SITE_URL } from "@/lib/site";
 import { organizationLd, serviceLd } from "@/lib/organizationSchema";
+import PrivacyNote from "./components/PrivacyNote";
 
 // Kept identical to the root layout's title/description (app/layout.tsx) — this file
 // exists to add the openGraph/twitter block the homepage was missing, not to change
@@ -456,28 +457,28 @@ export default async function Home() {
       <section className="acct-band">
         <span className="acct-eyebrow">YOUR ALMANAC</span>
         <StarMark size={20} style={{ display: "block", margin: "10px auto 0" }} />
-        <h2 className="acct-head">Today is free.<br /><em>An account opens the rest.</em></h2>
+        <h2 className="acct-head">Today is free.<br /><em>A subscription opens the rest.</em></h2>
         <p className="acct-sub">
-          Your daily card is always yours, no account needed. Make one and your almanac
-          fills in: every day behind you, a month ahead, your natal chart, and the charts
-          of the people you love.
+          Your daily cards are always free, and you don&rsquo;t need an account. Subscribe and
+          your Almanac fills in: every day you&rsquo;ve lived, the month ahead, your birth chart,
+          and charts for the people you love.
         </p>
         <div className="acct-cols">
           <div className="acct-col">
-            <div className="acct-col-h">Your whole almanac</div>
-            <div className="acct-col-b">Every day you&rsquo;ve already lived, open to walk back through. And always a month ahead, unfolding as you go.</div>
+            <div className="acct-col-h">Your whole Almanac</div>
+            <div className="acct-col-b">Every day you&rsquo;ve lived, open to walk back through. And the month ahead, unfolding as you go.</div>
           </div>
           <div className="acct-col">
-            <div className="acct-col-h">Your natal chart</div>
-            <div className="acct-col-b">The full set of cards fixed the day you arrived, read together.</div>
+            <div className="acct-col-h">Your birth chart</div>
+            <div className="acct-col-b">All seven cards from the day you arrived, read together.</div>
           </div>
           <div className="acct-col">
             <div className="acct-col-h">The people you love</div>
             <div className="acct-col-b">Make a chart for anyone who matters to you, and see the cards they came in under. Yours to keep.</div>
           </div>
         </div>
-        <p className="acct-price">Your whole almanac, $7/month. Cancel anytime.</p>
-        <Link href="/me" className="acct-cta">Make your almanac</Link>
+        <p className="acct-price">Your whole Almanac, $7/month. Cancel anytime.</p>
+        <Link href="/me" className="acct-cta">Start your Almanac</Link>
         <p className="acct-trust">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="4" y="11" width="16" height="10" rx="1.5" />
@@ -489,6 +490,7 @@ export default async function Home() {
           $7 charged today, then monthly. Not for you? <Link href="/contact">Email us</Link>{" "}
           within 14 days and we&rsquo;ll refund it, no questions asked.
         </p>
+        <PrivacyNote style={{ textAlign: "center" }} />
       </section>
 
       {/* COMPARE — moved below the primary funnel (tools grid, feature bands,

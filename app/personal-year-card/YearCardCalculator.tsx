@@ -17,6 +17,7 @@ import { YEAR_READING_PRICE_DISPLAY } from "../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "./checkoutActions";
 import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import { trackFormSubmit } from "@/lib/analytics";
+import PrivacyNote from "../components/PrivacyNote";
 
 // The year card depends only on birth month + birth day and the calendar year
 // being read (birth year is not used, same as the Bearing). So we ask for month
@@ -108,6 +109,7 @@ export default function YearCardCalculator({
           </div>
         </div>
         <p className="hint" style={{ marginTop: 8 }}>Month and day only. Your birth year isn&rsquo;t needed.</p>
+        <PrivacyNote style={{ marginTop: 4 }} />
 
         <span className="flabel" style={{ marginTop: 20 }}>Which year do you want to read?</span>
         <p className="hint" style={{ marginTop: 4, marginBottom: 10 }}>
