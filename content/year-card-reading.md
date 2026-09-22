@@ -113,28 +113,28 @@ A World year is arriving, whole, at the end of something real. The final draft s
 ## Hub FAQ / explainer (lives once, on /personal-year-card, with FAQPage schema)
 
 **What's a personal year card?**
-It's the one Major Arcana card set for you for a given calendar year, found from your birthday through tarot numerology. Everyone has one. It's the same card every time you check for that year, and it changes from year to year. Think of it as the overarching theme the year is working on with you, the weather the twelve months move through.
+It's the one Major Arcana card set for you for a given calendar year, found from your birthday through tarot numerology. Everyone has one, and it changes from year to year. It's the theme running under the whole year, the thing the twelve months keep coming back to.
 
 **How is it worked out?**
-Add your birth month, your birth day, and the digits of the year, then wrap the total onto the 22 Major Arcana. Born March 15, looking at 2026: 3 + 15 + (2 + 0 + 2 + 6) = 28, and 28 wraps around to 6, The Lovers. Nothing is shuffled. The same birthday and year always land on the same card.
+Add your birth month, your birth day, and the digits of the year, then wrap the total around the 22 Major Arcana. Say you were born March 15 and you're looking at 2026: 3 + 15 + (2 + 0 + 2 + 6) = 28, and 28 wraps around to 6, The Lovers. The same birthday and year always land on the same card.
 
 **Why is knowing your year card useful?**
-It gives the year a throughline. Instead of facing twelve months as one undifferentiated stretch, you have a lens: a single theme to notice, work with, and check your choices against. People use it the way they'd use a word of the year, except this one comes with a whole card's worth of meaning and a reason behind it.
+It gives the year a throughline. Twelve months is a lot to hold at once, and your year card gives you one theme to notice, work with, and check your choices against. It's a bit like picking a word of the year, except yours comes with a whole card's worth of meaning.
 
 **What do I actually do with it?**
-Read it at the start of the year and let it set an intention or two. Come back to it when a decision comes up and ask how this year's theme would meet it. Some people revisit it at the start of each month, or journal the reflection questions from the full reading. It works best as something you return to, not something you read once.
+Read it early in the year and let it set an intention or two. Come back to it when a big decision comes up and ask how this year's theme would meet it. Some people check in with it at the start of each month, or journal the reflection questions from the full reading. It works best when you keep coming back to it.
 
 **Is this telling my future?**
-No. The card doesn't decide what happens to you. It offers an angle on the year and some questions to think through, and what you do with that is yours. It can influence you if you let it, which is different from fate.
+No. The card doesn't decide what happens to you. It gives you an angle on the year and some questions to think through. How you play your hand is still up to you.
 
 **How is this different from a normal tarot reading?**
-A normal reading is drawn: you shuffle, and chance sets the cards. This one is given. Your birthday and the year fix the card through numerology, so it's the same every time and you're not hoping for a lucky pull. It reflects the pattern your dates already make.
+In a normal reading, you shuffle and chance picks the cards. Here, your birthday and the year set the card through tarot numerology, so it's the same every time you look. It shows you the pattern your dates already make.
 
 **Why is my card different from one I got somewhere else?**
-Most tarot year card calculators reduce your numbers all the way down, which can only ever reach part of the Major Arcana. The Almanac keeps the whole wheel of twenty-two and wraps around instead of reducing, so it can land on any card, including the ones a reduced method never reaches. If another calculator gave you a different card, that's the reason. [Links out to /how-it-works: "See how the math works".]
+Most tarot year card calculators reduce your numbers all the way down, so they can only land on some of the Major Arcana. The Almanac keeps all twenty-two cards and wraps around the wheel, so your year card can be any of them. If another calculator gave you a different card, that's why. [Links out to /how-it-works: "See how the math works".]
 
 **Does the card change every year? What about the months?**
-Yes, it changes from year to year. And within a year, each of the twelve months has its own card, stepping forward one place at a time from your year card, so the year reads as a path rather than a single note. The full year-ahead reading walks all twelve, with the woven narrative and your reflection questions.
+Yes, it changes every year. Within the year, each month has its own card too, stepping forward one place at a time from your year card, so the year unfolds like a path. The full year-ahead reading goes through all twelve months, with a reading for each one and your reflection questions.
 
 ---
 

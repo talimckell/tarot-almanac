@@ -154,7 +154,7 @@ export default function YearCardCalculator({
             </span>
             <p className="hint" style={{ marginTop: 0, marginBottom: 14 }}>
               The twelve months that follow from your year card, one Major each. The full
-              reading walks each one; this is just the shape of it.
+              reading goes through every month. This is the shape of it.
             </p>
             <div className="pyc-arc">
               {yearMonths(result.idx).map((mi, i) => (
@@ -182,7 +182,7 @@ export default function YearCardCalculator({
             <input type="hidden" name="year" value={String(result.year)} />
             <input name="name" className="pyc-buy-name" placeholder="Name for the reading (yours, or a gift)" maxLength={40} />
             <button type="submit" className="pyc-cta-btn">
-              Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
+              Get your full year reading · {YEAR_READING_PRICE_DISPLAY}
             </button>
           </form>
         </>

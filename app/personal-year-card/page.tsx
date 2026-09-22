@@ -16,7 +16,7 @@ import "./styles.css";
 
 const TITLE = "Tarot Year Card Calculator: Your Card of the Year | The Tarot Almanac";
 const DESCRIPTION =
-  "Find your tarot year card, the Major Arcana card of the year set by your birthday through tarot numerology. Get your card and what it means, the same every time, no shuffle.";
+  "Find your tarot year card, the Major Arcana card your birthday sets for each calendar year through tarot numerology. It's the theme your year keeps coming back to. Read it early and work with it.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -51,7 +51,7 @@ export default async function PersonalYearCardHub({
   const yearReadingServiceLd = serviceLd({
     name: "Tarot year-ahead reading",
     description:
-      "A full year-ahead tarot reading woven from your year card: the twelve months that follow from it, the element weather of the year, and how your Bearing meets it.",
+      "A full year-ahead tarot reading built from your year card: the twelve months that follow from it, the balance of elements across the year, and how your Bearing meets it.",
     url: `${SITE_URL}/personal-year-card/sample`,
     price: 15,
   });
@@ -70,9 +70,9 @@ export default async function PersonalYearCardHub({
         <p className="pyc-eyebrow">Tarot Numerology · Year Card Calculator</p>
         <h1 className="pyc-h1">Your tarot year card</h1>
         <p className="pyc-lede">
-          Every calendar year sets one Major Arcana card for you, your tarot card of the year, found
-          from your birthday through tarot numerology. It&rsquo;s given, not shuffled, so it&rsquo;s
-          the same card every time you check. Think of it as the theme the year is working on with you.
+          Every calendar year sets one Major Arcana card for you, drawn from your birthday through
+          tarot numerology. It&rsquo;s the theme running under the whole year, the thing it keeps
+          coming back to. Read it early so you can work with it intentionally.
         </p>
 
         <YearCardCalculator resume={resume} />
@@ -132,16 +132,17 @@ export default async function PersonalYearCardHub({
 
         <section className="pyc-teaser">
           <span className="eyebrow">The full year-ahead reading</span>
-          <h2>Your whole year, woven</h2>
+          <h2>Your whole year, month by month</h2>
           <p>
-            The free card above is your year&rsquo;s theme. The full reading walks the twelve months
-            that follow from it, each a step forward through the cycle, and ties the year together:
+            The free card above is your year&rsquo;s theme. The full reading goes through the twelve
+            months that follow from it, one step at a time, and pulls the whole year together. You can
+            get one for yourself or give one as a gift.
           </p>
           <ul>
-            <li>Your year wheel, the twelve months laid out around the card that sets them</li>
-            <li>The element weather of the year, and what the balance asks of you</li>
-            <li>A woven reading, month by month, in the Almanac&rsquo;s voice</li>
-            <li>How your Bearing meets the year, and the skills and reflection questions it calls for</li>
+            <li>Your year wheel, with all twelve months laid out around your year card</li>
+            <li>The balance of elements across your year, and what it asks of you</li>
+            <li>A reading for each month, in the Almanac&rsquo;s voice</li>
+            <li>How your Bearing meets the year, plus the skills and reflection questions it calls for</li>
           </ul>
           <p style={{ marginTop: 4 }}>
             <Link href="/personal-year-card/sample" style={{ color: "var(--indigo)", fontFamily: "var(--serif-sc)", letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 13, textDecoration: "none" }}>
