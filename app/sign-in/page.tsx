@@ -29,22 +29,22 @@ const REASON_COPY: Record<string, ReasonCopy> = {
   chart: {
     eyebrow: "Create your account",
     title: "See your chart",
-    deck: "Your natal chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
+    deck: "Your birth chart runs on your birthday, so I need an account to keep it in. The chart preview is free to see, structure and all, no purchase required. Enter your email and I'll send you a link and a code. No password to remember.",
     sample: { href: "/tarot-birth-chart/sample", label: "See a full sample chart" },
   },
-  // The homepage's "Make your almanac" CTA and /me both land here — this is the main
+  // The homepage's "Start your Almanac" CTA and /me both land here — this is the main
   // subscription entry point, not a one-off purchase, so the value prop covers the
   // whole thing (reusing the same line /pricing already uses for this tier).
   almanac: {
     eyebrow: "Create your account",
-    title: "Make your almanac",
-    deck: "Every day you've already lived, open to walk back through, and always a month ahead. Your full natal chart. A monthly personal reading. $7 a month, cancel anytime. Enter your email and I'll send you a link and a code. No password to remember.",
+    title: "Start your Almanac",
+    deck: "Every day you've lived, plus the month ahead. Your full birth chart, and a personal reading every month. $7 a month, cancel anytime. Enter your email and I'll send you a link and a code. No password to remember.",
     sample: { href: "/today", label: "See today's cards free, no account needed" },
   },
 };
 const DEFAULT_COPY: ReasonCopy = {
   eyebrow: "Sign in",
-  title: "Your almanac",
+  title: "Your Almanac",
   deck: "Enter your email and I'll send you a link and a 6-digit code to sign in. No password to remember.",
 };
 

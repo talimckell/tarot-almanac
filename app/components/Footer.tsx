@@ -51,6 +51,21 @@ export default function Footer() {
               </svg>
               Read the Almanac on Substack
             </a>
+            {/* Product Hunt launch badge (Sept 2026). */}
+            <a
+              href="https://www.producthunt.com/products/tarot-almanac?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tarot-almanac"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-block", marginTop: 14 }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt="Tarot Almanac - The astro.com of tarot: every date maps to its own cards. | Product Hunt"
+                width={200}
+                height={43}
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258332&theme=neutral&t=1790090596736"
+              />
+            </a>
           </div>
 
           <div className={styles.fcol}>

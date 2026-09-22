@@ -53,15 +53,15 @@ function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: num
 const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
   {
     q: "Is this just another random card app?",
-    answer: "No. Your cards are set by tarot numerology, the same every time you look. Nobody shuffles.",
-    render: "No. Your cards are set by tarot numerology, the same every time you look. Nobody shuffles.",
+    answer: "No. Every day already has its cards, set by tarot numerology and your birthday. They're the same every time you look.",
+    render: "No. Every day already has its cards, set by tarot numerology and your birthday. They're the same every time you look.",
   },
   {
     q: "Why $7/month when free apps exist?",
     answer:
-      "Free apps give you a random draw. The Almanac gives you a fixed system you can check yourself: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+      "Your daily cards are free here too. The subscription gives you the whole Almanac: every day you've lived, the month ahead, your birth chart, charts for the people you love, and a personal reading every month.",
     render:
-      "Free apps give you a random draw. The Almanac gives you a fixed system you can check yourself: every day behind you, a month ahead, your natal chart, and charts for people you love.",
+      "Your daily cards are free here too. The subscription gives you the whole Almanac: every day you've lived, the month ahead, your birth chart, charts for the people you love, and a personal reading every month.",
   },
   {
     q: "Who is behind this?",
@@ -78,11 +78,11 @@ const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
   {
     q: "Can I give a chart as a gift?",
     answer:
-      "Yes. A $12 natal chart is a fixed object you can give someone, built from their birthday, no subscription needed.",
+      "Yes. A $12 birth chart is made from their birthday, and it's theirs to keep. You don't need a subscription.",
     render: (
       <>
-        Yes. A $12 natal chart is a fixed object you can give someone, built from their
-        birthday, no subscription needed.{" "}
+        Yes. A $12 birth chart is made from their birthday, and it&rsquo;s theirs to keep.
+        You don&rsquo;t need a subscription.{" "}
         <Link href="/me?subscribe=1#subscribe">Make one &rarr;</Link>
       </>
     ),
@@ -102,7 +102,7 @@ const homeFaqLd = {
 const subscriptionLd = serviceLd({
   name: "The Tarot Almanac subscription",
   description:
-    "Full access to the living tarot almanac: every day behind you, a month ahead, your natal chart, and charts for the people you love.",
+    "The whole Almanac: every day you've lived, the month ahead, your birth chart, charts for the people you love, and a personal reading every month.",
   url: `${SITE_URL}/me`,
   price: 7,
   billingIncrement: "P1M",
@@ -125,7 +125,7 @@ export default async function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
-      <SiteNav ctaLabel="Make your almanac" />
+      <SiteNav ctaLabel="Start your Almanac" />
 
       <main>
       {/* HERO */}
@@ -142,21 +142,6 @@ export default async function Home() {
             <Link href="/today" className="btn-primary">SEE TODAY&rsquo;S CARDS</Link>
             <Link href="/how-it-works" className="btn-ghost">How it works &rarr;</Link>
           </div>
-          {/* Product Hunt launch badge (Sept 2026). */}
-          <a
-            href="https://www.producthunt.com/products/tarot-almanac?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tarot-almanac"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "inline-block", marginTop: 20 }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt="Tarot Almanac - The astro.com of tarot: every date maps to its own cards. | Product Hunt"
-              width={250}
-              height={54}
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258332&theme=neutral&t=1790090596736"
-            />
-          </a>
         </div>
 
         <TodayEntry birthday={birthday} name={name} signedIn={!!account} />
