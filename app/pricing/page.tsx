@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 const URL = `${SITE_URL}/pricing`;
 const TITLE = "Tarot Subscription & Reading Pricing | The Tarot Almanac";
 const DESCRIPTION =
-  "What The Tarot Almanac costs: a free daily card with no account, a $7/month subscription for the full almanac, or one-off purchases — a $12 natal chart or a $15 year-ahead reading.";
+  "What The Tarot Almanac costs: free daily cards with no account, a $7/month subscription for the whole Almanac, or one-off purchases: a $12 birth chart or a $15 year-ahead reading.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -26,11 +26,11 @@ const ROWS: { label: string; free: Cell; sub: Cell; oneOff: Cell }[] = [
   { label: "Today's cards, collective and yours", free: true, sub: true, oneOff: true },
   { label: "This month, day 1 through today", free: true, sub: true, oneOff: true },
   { label: "Your Bearing (birth card)", free: true, sub: true, oneOff: true },
-  { label: "Every day behind you, and a month ahead", free: false, sub: true, oneOff: false },
-  { label: "Your full natal chart, all seven positions", free: false, sub: true, oneOff: "With the $12 chart" },
+  { label: "Every day you've lived, plus the month ahead", free: false, sub: true, oneOff: false },
+  { label: "Your full birth chart, all seven cards", free: false, sub: true, oneOff: "With the $12 chart" },
   { label: "Charts for the people you love", free: false, sub: true, oneOff: "$12 each" },
   { label: "Monthly personal reading", free: false, sub: true, oneOff: false },
-  { label: "Year-ahead woven reading", free: false, sub: `${YEAR_READING_PRICE_DISPLAY} each`, oneOff: `${YEAR_READING_PRICE_DISPLAY} each` },
+  { label: "Year-ahead reading", free: false, sub: `${YEAR_READING_PRICE_DISPLAY} each`, oneOff: `${YEAR_READING_PRICE_DISPLAY} each` },
   { label: "Cancel anytime", free: true, sub: true, oneOff: true },
   { label: "14-day money-back guarantee", free: false, sub: true, oneOff: false },
 ];
@@ -49,10 +49,11 @@ export default function PricingPage() {
       <div className={styles.wrap}>
         <header className={styles.hero}>
           <span className={styles.eyebrow}>Pricing</span>
-          <h1>What it costs to keep your almanac</h1>
+          <h1>What it costs to keep your Almanac</h1>
           <p className={styles.deck}>
-            Your daily card is always free, no account needed. An account opens the rest for $7 a
-            month, cancel anytime. Or buy exactly what you need, once.
+            Your daily cards are always free, and you don&rsquo;t need an account. A subscription
+            opens up the whole Almanac for $7 a month, and you can cancel anytime. Or buy just what
+            you need, once.
           </p>
         </header>
 
@@ -65,8 +66,8 @@ export default function PricingPage() {
               $0<span className={styles.tierPer}> forever</span>
             </div>
             <p className={styles.tierWhat}>
-              Today&rsquo;s cards, the world&rsquo;s and yours. This month, day one through today.
-              Your Bearing, free and permanent.
+              Today&rsquo;s cards, the collective card and yours. This month, from day one through
+              today. And your Bearing, free for life.
             </p>
             <Link href="/today" className={styles.tierCta}>
               See today&rsquo;s cards
@@ -81,12 +82,12 @@ export default function PricingPage() {
               $7<span className={styles.tierPer}>/mo</span>
             </div>
             <p className={styles.tierWhat}>
-              Every day you&rsquo;ve already lived, open to walk back through, and always a month
-              ahead. Your full natal chart. Charts for anyone you love, included. A monthly
-              personal reading.
+              Every day you&rsquo;ve lived, plus the month ahead. Your full birth chart, and
+              charts for the people you love. A personal reading every month. We keep it all in
+              one place so you can come back to it whenever you like.
             </p>
             <Link href="/me?subscribe=1#subscribe" className={styles.tierCta}>
-              Make your almanac
+              Start your Almanac
             </Link>
             <p className={styles.tierFine}>Cancel anytime. 14-day money-back guarantee.</p>
           </div>
@@ -100,8 +101,8 @@ export default function PricingPage() {
                 $12<span className={styles.tierPer}> once</span>
               </div>
               <p className={styles.tierWhat}>
-                A natal chart, fixed and giftable, built from one birthday &mdash; yours or someone
-                else&rsquo;s. Or included free with a subscription.
+                A birth chart for one birthday, yours or someone else&rsquo;s. It&rsquo;s yours to
+                keep, or to give. It&rsquo;s also included with a subscription.
               </p>
               <Link href="/chart" className={styles.tierCtaSecondary}>
                 Build a chart
@@ -116,8 +117,8 @@ export default function PricingPage() {
                 <span className={styles.tierPer}> once</span>
               </div>
               <p className={styles.tierWhat}>
-                A woven year-ahead reading, built from one birthday and the year&rsquo;s card. Yours
-                or a gift.
+                A full year-ahead reading, built from one birthday and that year&rsquo;s card. Get
+                one for yourself or give it as a gift.
               </p>
               <Link href="/personal-year-card" className={styles.tierCtaSecondary}>
                 See your year card
