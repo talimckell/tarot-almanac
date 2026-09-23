@@ -44,13 +44,28 @@ function StarMark({ size = 20, fill = "var(--warm-stone)", style }: { size?: num
   );
 }
 
-// Homepage FAQ — the top 4 objections a first-time visitor arrives with
-// (audience.md), not a duplicate of /tarot-birth-chart's 14-question FAQ
-// (that one is about the chart specifically; this one is about the site).
-// `answer` is plain text for the schema; `render` is the same copy with the
-// /about link wired in for Q3. Kept in one place so the visible section and
+// Homepage FAQ — the first questions a first-time visitor arrives with
+// (audience.md), not a duplicate of /tarot-birth-chart's FAQ (that one is about
+// the chart specifically; this one is about the site). Q1 targets the Bing AI
+// grounding query "daily tarot reading by date of birth" (/today is noindex, so
+// the homepage owns it). `answer` is plain text for the schema; `render` is the
+// same copy with links wired in. Kept in one place so the visible section and
 // the JSON-LD stay in sync.
 const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
+  {
+    q: "Can I get a daily tarot reading by my date of birth?",
+    answer:
+      "Yes, that's what the Almanac is. Enter your birthday and you'll get today's cards: the collective card we all share, and your personal card, set by your birthday. It's free, and you don't need an account. Subscribe and you can look back at every day you've lived, and ahead to next month.",
+    render: (
+      <>
+        Yes, that&rsquo;s what the Almanac is. Enter your birthday and you&rsquo;ll get
+        today&rsquo;s cards: the collective card we all share, and your personal card, set by
+        your birthday. It&rsquo;s free, and you don&rsquo;t need an account. Subscribe and you
+        can look back at every day you&rsquo;ve lived, and ahead to next month.{" "}
+        <Link href="/today">See today&rsquo;s cards &rarr;</Link>
+      </>
+    ),
+  },
   {
     q: "Is this just another random card app?",
     answer: "No. Every day already has its cards, set by tarot numerology and your birthday. They're the same every time you look.",
