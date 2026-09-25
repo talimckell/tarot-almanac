@@ -3,7 +3,9 @@
 import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
 import { createClient } from "../../lib/supabase/client";
+import { analytics } from "@heycatch/sdk";
 import { trackFormSubmit } from "@/lib/analytics";
+import { recordCodeSignIn } from "./actions";
 import styles from "./page.module.css";
 import PrivacyNote from "../components/PrivacyNote";
 
@@ -101,6 +103,7 @@ export default function SignInPage() {
       return;
     }
     trackFormSubmit("sign_in");
+    analytics.trackEvent("sign_in_requested");
     setStatus("sent");
   }
 
@@ -122,7 +125,9 @@ export default function SignInPage() {
       return;
     }
 
-    // Session cookies are now set in this browser. Send the account onward.
+    // Session cookies are now set in this browser. Record it, then send the
+    // account onward.
+    await recordCodeSignIn();
     window.location.assign(nextParam() ?? "/today");
   }
 

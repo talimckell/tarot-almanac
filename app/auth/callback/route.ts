@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { createClient } from "../../../lib/supabase/server";
-import { analytics } from "@/lib/serverAnalytics";
+import { recordSignIn } from "@/lib/signInAnalytics";
 
 const OTP_TYPES: EmailOtpType[] = ["email", "signup", "magiclink", "invite", "recovery", "email_change"];
 
@@ -48,11 +48,7 @@ export async function GET(request: NextRequest) {
   }
 
   if (user) {
-    // This is the only place the app server-side learns who just signed
-    // in via a link (code-entry sign-ins on /sign-in don't pass through here). Fires on
-    // every successful sign-in, not just first-ever; safe to call
-    // repeatedly per HeyCatch's docs.
-    await analytics.setIdentity(user.id, { email: user.email });
+    await recordSignIn(user, "link");
     return NextResponse.redirect(`${origin}${next}`);
   }
 
