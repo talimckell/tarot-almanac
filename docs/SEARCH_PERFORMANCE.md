@@ -21,6 +21,15 @@ that lose on Google are winning on Bing and in AI answers, so Google alone tells
 Each week: drop the exports in ~/Downloads → diff against the last entry → add a new one covering all
 four. Not every channel needs a fresh export every week, but the entry should note what moved in each.
 
+**Always report % to Mediavine Journey** (threshold: 1,000 sessions / 30 days). Estimate from the
+rolling ~30-day Vercel visitor count, discounted for bots (Vercel visitor ≈ session, cookieless).
+Mediavine counts its own bot-filtered sessions, so report a raw and a bot-adjusted number and treat as
+±. **OPEN QUESTION (raised 2026-09-28): is Mediavine even worth it for this niche?** The Name Report
+sister site (adjacent names/numerology audience) is reportedly earning poorly on ads — a live proxy
+for TA's likely RPM, and it matches the low spiritual/names-RPM risk in the ad-revenue reference
+section. To answer: pull NR's monthly sessions, RPM, and actual ad revenue → model TA's earnings at
+1k/5k/20k sessions. Until then, track the % as a traffic-health proxy, not a settled goal.
+
 **Read the dates, not the label.** The export always says "Last 3 months" but the site has only
 been indexed since early July 2026, so the real window is much shorter. Use the Chart tab's first
 and last row as the true window.
@@ -120,6 +129,9 @@ possibly a crawl event too (can't cleanly separate).
   Google 119 — Google pulled ahead this week (was ~even). Homepage 46 (brand/direct growing).
 - Engagement solid (20 form_submits; birth_card_finder 7, personal_year_card 8, birthday_reveal 6).
 - **No `checkout.stripe.com` this week** (last week had 2). One week, neutral — just noting no visible sale.
+- **Mediavine Journey: ~60–65%** (rolling 30-day ≈ 750 sessions raw → ~75%, ~600–650 bot-adjusted, of
+  1,000). Rising fast — ~4–8 weeks to the door at this trajectory. But see the open worth-it question
+  in the header: Name Report's poor ad performance may mean the door isn't worth walking through yet.
 
 ### 3. Bing-index (BWT search)
 - bing.com itself still tiny: ~12–31 impr/day, **0 clicks** (first-ever 2 clicks on Sep 24). Positions
