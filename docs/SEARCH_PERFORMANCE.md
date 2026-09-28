@@ -96,6 +96,58 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-09-28 (window: Jul 4–Sep 25, 84 days) — first four-channel week; a Sep-24 cross-channel jump
+
+First review on the four-channel structure. Headline: **another expansion around Sep 24 that shows up
+in Google, Bing, AND AI citations at once** — likely October-ahead demand ramping as September closes,
+possibly a crawl event too (can't cleanly separate).
+
+### 1. Google (GSC)
+- Cumulative: impr **9,784**, clicks **223 (+61)**, CTR 2.33%, page-1 **461** (+33), mobile pos **8.66**.
+- Sep 24 was a daily record: 649 impr, 21 clicks, pos 7.8. Daily rate stepped up ~230 → ~330/day.
+- **Birth-card hub finally moved: pos 72.9 → 64.2.** First real budge on the stubborn head-term page
+  after weeks flat — the internal link (Sep 7) recrawled + general authority. Still page 7, not page 1;
+  don't overclaim, but it's no longer stuck.
+- **`/tarot-birth-chart` (the $12 product landing) is climbing fast: pos ~42 → 20.9**, 236 impr, 5
+  clicks. The revenue page is doing better on Google than the free birth-*card* page. Watch it.
+- `/month/2026-10` holding page 1 (pos 8.58, 5 clicks) ahead of October; `/month/2026-09` still top
+  earner (20 clicks). `/vs/raka` page 1 (pos 6.1).
+
+### 2. Vercel (traffic + engagement)
+- **271 visitors (+62%)**, 686 pageviews, bounce 68% — but **bot-inflated** (Mac 29 visitors → 197
+  pageviews = 6.8 pv/visitor; IN 12/61; FI 1/18). Real humans ~210–230, still a real jump.
+- Referrers: **Google surged to 119** (was 39). Bing-index (DDG 26 + Ecosia 16 + Bing 3 = 45) vs
+  Google 119 — Google pulled ahead this week (was ~even). Homepage 46 (brand/direct growing).
+- Engagement solid (20 form_submits; birth_card_finder 7, personal_year_card 8, birthday_reveal 6).
+- **No `checkout.stripe.com` this week** (last week had 2). One week, neutral — just noting no visible sale.
+
+### 3. Bing-index (BWT search)
+- bing.com itself still tiny: ~12–31 impr/day, **0 clicks** (first-ever 2 clicks on Sep 24). Positions
+  stay good (pos 1–10). The real Bing reach is the ~45 DDG+Ecosia visitors in Vercel — bing.com's own
+  numbers under-represent it, as expected.
+
+### 4. AI citations (BWT AI) — fastest-growing channel
+- Daily citations Sep 18–25: **7 → 26 → 11 → 29 → 33 → 16 → 58 → 57**, across up to **12 cited pages**.
+  Roughly 8× in a week. Sep 24 peak (58) coincides with the Google jump.
+- Still the standing caveats: citations ≠ clicks; it's visibility/authority. But it's climbing fast and
+  the `chatgpt.com` referrals earlier suggest some convert. This is a real emerging channel now.
+
+### Watch / still-stuck
+- **`/today` crawl-trap: 5 weeks post-fix, total still rising (39 → 88 → 108), no visible thinning.**
+  The noindex IS served on old dates (verified 08-24); Google just rarely recrawls low-priority old
+  `/today` pages, so it hasn't "seen" the noindex to drop them. Likely fine but genuinely slow. If it
+  matters, the real check is GSC URL-inspection on a specific >365-day date, not the total count.
+- **Bearing pages still barely surfacing** (7 in GSC, 9 impr, 0 clicks) despite the index requests —
+  slow to land. Positions are good when they do show; just not many yet.
+
+### Baseline to beat next week
+Google: impr 9,784 · clicks 223 · CTR 2.33% · 461 page-1 · mobile pos 8.66. Vercel ~271 (real ~215).
+Bing-index ~45/wk. AI citations ~57/day and climbing. Watch: `/month/2026-11` opening ~Oct 1 with the
+reading live, the birth-card hub continuing to climb, `/tarot-birth-chart` reaching page 1, and whether
+the AI-citation ramp holds.
+
+---
+
 ## 2026-09-21 (window: Jul 4–Sep 19, 78 days) — bump settled to a new baseline; /vs/ index requests paid off
 
 | cumulative | | vs last week |
