@@ -24,11 +24,15 @@ four. Not every channel needs a fresh export every week, but the entry should no
 **Always report % to Mediavine Journey** (threshold: 1,000 sessions / 30 days). Estimate from the
 rolling ~30-day Vercel visitor count, discounted for bots (Vercel visitor ≈ session, cookieless).
 Mediavine counts its own bot-filtered sessions, so report a raw and a bot-adjusted number and treat as
-±. **OPEN QUESTION (raised 2026-09-28): is Mediavine even worth it for this niche?** The Name Report
-sister site (adjacent names/numerology audience) is reportedly earning poorly on ads — a live proxy
-for TA's likely RPM, and it matches the low spiritual/names-RPM risk in the ad-revenue reference
-section. To answer: pull NR's monthly sessions, RPM, and actual ad revenue → model TA's earnings at
-1k/5k/20k sessions. Until then, track the % as a traffic-health proxy, not a settled goal.
+±. **Track the % as a traffic-health proxy ONLY, never a revenue goal — see the resolved question below.**
+
+> **RESOLVED 2026-10-02 — is Mediavine worth it? NO.** Name Report (baby-names, a *normal* ad niche —
+> not a woo problem, correcting the earlier framing) earns **$0.63 RPM / $3.54 a month on 5,619
+> sessions**, because high-bounce lookup content earns ~nothing on display ads regardless of topic, and
+> TA is the same content shape. The revenue model (docs/REVENUE_MODEL.md) confirms ads are a rounding
+> error in every scenario (~0.8% of revenue even in the $470k optimistic case). And on a conversion-
+> driven site, display ads would likely cannibalize more chart/sub conversion than they earn — net
+> negative. The money is charts + subscription (the subscription at scale). Don't pursue Mediavine.
 
 **Read the dates, not the label.** The export always says "Last 3 months" but the site has only
 been indexed since early July 2026, so the real window is much shorter. Use the Chart tab's first
