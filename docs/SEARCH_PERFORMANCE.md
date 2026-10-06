@@ -109,6 +109,60 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-10-06 (window: Jul 4–Oct 3, 92 days) — the spike held a full week; clicks doubled
+
+The Sep-28 jump wasn't a flash — it's a sustained new plateau, and it pushed everything up a tier.
+
+### 1. Google (GSC)
+- Cumulative: impr **16,971**, clicks **541** (was 380 four days ago, 223 two weeks ago — **more than
+  doubled**), CTR ~3.2%, page-1 **506**, mobile position **6.63** (was 8.66) — top of page 1 on average.
+- Daily rate held high all week: ~850–1,200 impr/day, **46–59 clicks/day**, avg position 4.6–6.6. This
+  is a durable ~10× step above the pre-Sep-8 baseline, now a full week old. (Oct 3's drop to 21 clicks
+  is recency lag; it'll revise up.)
+- **`/tarot-birth-chart` (the $12 product page) keeps climbing: pos 42 → 21 → 14 → 12**, now 873 impr
+  and **10 clicks.** The revenue page is the one gaining real search visibility — the most important
+  commercial signal. `/tarot-birth-card` (free calculator) also climbed, pos 64 → 55.
+- **`/month/2026-11` opened** (5 impr, pos 11) — November is now current+1, so the page with Tali's
+  authored "The World" reading is live and indexable, right on schedule. The mechanism worked end to end.
+- Birthday long-tail converting at page 1: hub 1,300 impr/16 clicks, plus a dozen individual dates at
+  6 clicks each. `/month/2026-09` still the top single page (20 clicks).
+
+### 2. Vercel
+- **459 visitors (+19% WoW)** — the spike HELD for a second week (461 → 459), not a one-week flash.
+  Mobile 84%. Real humans ~390 (lighter bot inflation than some weeks). Engagement up: **birth_card_finder
+  14 uses** (was 7), birthday_reveal 6.
+- Referrers: Google 271, DDG 43 + Ecosia 11 + Bing 6 = 60 Bing-index. Google dominant now.
+- **Great Britain sustained high (78 visitors, ~matching US's 119)** — unusual; a UK ranking win or
+  Discover pickup. Worth watching whether it holds.
+
+### 3. Bing-index (BWT)
+- bing.com still tiny (~17–27 impr/day, 0–2 clicks). Real reach is the ~60 DDG+Ecosia visitors. Steady.
+
+### 4. AI citations (BWT AI)
+- Sep 30–Oct 4: 56, 52, 28, 27, 17 — settled down from the late-Sep peak (58) to a steady ~20–55/day.
+  Holding as a channel, not still climbing. Fine; it's established now.
+
+### Mediavine Journey: ~crossed the threshold — but it's just a health marker now
+Rolling 30-day sessions ≈ ~1,400 raw / ~1,150 human → **~115% of the 1,000 door.** So you're effectively
+Journey-eligible. Per the 2026-10-02 resolution, we're **not pursuing it** (ads = rounding error + would
+net-negative a conversion site). Logged only as traffic-health: the site is now at real-traffic scale.
+
+### The honest watch: traffic doubled, conversions didn't follow (yet)
+Two things point the same direction and I won't paper over them:
+- **No visible `checkout.stripe.com` return for ~2–3 weeks**, while traffic doubled. One sale remains the
+  total. The `birth_card_finder` calculator gets used (14×) but visitors aren't converting to a purchase.
+- This is exactly the conversion question from 10-02: traffic is finally at scale, so **this is when the
+  conversion rate gets exposed.** Caveats — the Stripe-referrer proxy can miss sales, and the big traffic
+  is only days old, so it's early. But if another week or two of ~450 visitors produces no sale, the
+  bottleneck is the funnel, not traffic, and that's where to dig (price, the preview, the CTA).
+
+### Baseline to beat next week
+Google: impr 16,971 · clicks 541 · CTR ~3.2% · 506 page-1 · mobile pos 6.63. Vercel ~459 (real ~390).
+Bing-index ~60/wk. AI ~20–55/day. Journey ~115% (health only). **Watch above all: does any conversion
+follow the traffic** — a sale, a subscription — and does `/tarot-birth-chart` reach page 1.
+
+---
+
 ## 2026-09-28 (window: Jul 4–Sep 25, 84 days) — first four-channel week; a Sep-24 cross-channel jump
 
 First review on the four-channel structure. Headline: **another expansion around Sep 24 that shows up
