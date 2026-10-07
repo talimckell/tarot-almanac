@@ -272,6 +272,21 @@ export default async function ChartPage({
         )}
 
         {!unlocked && (
+          <div className="trust-solo" style={{ margin: "40px auto 0" }}>
+            <div className="trust-card">
+              <span className="trust-card-label">On the birth chart</span>
+              <p className="trust-quote">
+                &ldquo;I have read a lot of astrology and tarot content, and this felt
+                more focused and less overwhelming. The chart gave me a clear place
+                to start, then let me explore the details at my own pace. Thank
+                you!&rdquo;
+              </p>
+              <span className="trust-name">Tay</span>
+            </div>
+          </div>
+        )}
+
+        {!unlocked && (
           <div id="unlock" className={styles.paywall}>
             <h3>Read your whole chart</h3>
             <p>
