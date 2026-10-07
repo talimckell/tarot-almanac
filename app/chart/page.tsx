@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { parseDateSlug } from "@/lib/today";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import ShareImageButton from "../components/ShareImageButton";
@@ -38,76 +38,129 @@ export const metadata: Metadata = {
 export default async function ChartPage({
   searchParams,
 }: {
-  searchParams: Promise<{ checkout?: string; session_id?: string }>;
+  searchParams: Promise<{ checkout?: string; session_id?: string; d?: string }>;
 }) {
-  const { checkout, session_id } = await searchParams;
+  const { checkout, session_id, d } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/chart&reason=chart");
 
-  const profile = await prisma.profile.upsert({
-    where: { id: user.id },
-    update: {},
-    create: { id: user.id, email: user.email ?? user.id },
-  });
-
-  // Just back from a successful Stripe Checkout: resolve the real amount from the
-  // session so the Google Ads conversion carries a verified value (not a spoofable
-  // URL param) and dedupes on transaction_id. Ownership + paid are both checked so a
-  // replayed or borrowed session id can't fire a phantom conversion. Owner's own
-  // purchases are excluded, mirroring how server analytics drops owner events.
+  // Resolve the chart's birth date for signed-in viewers AND guests. Signed-in keeps
+  // its exact prior behavior (saved profile birthday). Guests get the preview from a
+  // birth date in the URL (?d=YYYY-MM-DD) or an inline form — no account needed to SEE
+  // the chart. `unlocked` only ever goes true for a signed-in, paid/subscribed profile,
+  // so a guest gets the same leak-proofed preview: the reading text below is gated on
+  // `unlocked` and is never shipped to the browser for a guest.
+  let by: number, bm: number, bd: number;
+  let unlocked = false;
+  let subscribed = false;
+  let name: string | undefined;
   let purchase: { value: number; currency: string; transactionId: string } | null = null;
-  const isOwner = (user.email ?? "").toLowerCase() === STUDIO_OWNER_EMAIL.toLowerCase();
-  if (checkout === "success" && session_id && !isOwner) {
-    try {
-      const s = await stripe.checkout.sessions.retrieve(session_id);
-      if (
-        s.payment_status === "paid" &&
-        s.metadata?.supabaseUserId === user.id &&
-        s.amount_total
-      ) {
-        purchase = {
-          value: s.amount_total / 100,
-          currency: (s.currency ?? "usd").toUpperCase(),
-          transactionId: s.id,
-        };
+
+  if (user) {
+    const profile = await prisma.profile.upsert({
+      where: { id: user.id },
+      update: {},
+      create: { id: user.id, email: user.email ?? user.id },
+    });
+    name = profile.name ?? undefined;
+
+    // Just back from a successful Stripe Checkout: resolve the real amount from the
+    // session so the Google Ads conversion carries a verified value (not a spoofable
+    // URL param) and dedupes on transaction_id. Ownership + paid are both checked so a
+    // replayed or borrowed session id can't fire a phantom conversion. Owner's own
+    // purchases are excluded, mirroring how server analytics drops owner events.
+    const isOwner = (user.email ?? "").toLowerCase() === STUDIO_OWNER_EMAIL.toLowerCase();
+    if (checkout === "success" && session_id && !isOwner) {
+      try {
+        const s = await stripe.checkout.sessions.retrieve(session_id);
+        if (
+          s.payment_status === "paid" &&
+          s.metadata?.supabaseUserId === user.id &&
+          s.amount_total
+        ) {
+          purchase = {
+            value: s.amount_total / 100,
+            currency: (s.currency ?? "usd").toUpperCase(),
+            transactionId: s.id,
+          };
+        }
+      } catch {
+        purchase = null;
       }
-    } catch {
-      purchase = null;
     }
+
+    if (!profile.birthDate) {
+      return (
+        <>
+          <SiteNav current="me" />
+          <main>
+          <div className={styles.addBirthday}>
+            <h1>Add your birthday first</h1>
+            <p>
+              Your natal chart runs on your birth date. <Link href="/me?next=/chart#your-details">Add it in My Almanac</Link> to see your chart.
+            </p>
+          </div>
+          </main>
+          <Footer />
+        </>
+      );
+    }
+
+    by = profile.birthDate.getUTCFullYear();
+    bm = profile.birthDate.getUTCMonth() + 1;
+    bd = profile.birthDate.getUTCDate();
+    subscribed = isSubscribed(profile);
+    unlocked = subscribed || !!profile.ownChartPurchasedPaymentIntentId;
+  } else {
+    // Guest: no sign-in wall. Show the preview from ?d=YYYY-MM-DD, otherwise a date
+    // form. The chart needs the birth YEAR (unlike the month/day Bearing), so this takes
+    // a full date, not the Bearing cookie.
+    const ymd = d ? parseDateSlug(d) : null;
+    const thisYear = new Date().getUTCFullYear();
+    if (!ymd || ymd.y < 1900 || ymd.y > thisYear) {
+      const maxDate = new Date().toISOString().slice(0, 10);
+      return (
+        <>
+          <SiteNav current="me" />
+          <main>
+          <div className={styles.addBirthday}>
+            <h1>See your natal chart</h1>
+            <p>
+              Your chart runs on your birth date. Enter it to see your chart — the preview is free,
+              structure and all, no account needed.
+            </p>
+            <form method="get" action="/chart" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginTop: 20 }}>
+              <input
+                type="date"
+                name="d"
+                required
+                max={maxDate}
+                min="1900-01-01"
+                aria-label="Your birth date"
+                style={{ fontSize: 16, padding: "10px 12px" }}
+              />
+              <button type="submit" className={styles.buy}>See my chart &rarr;</button>
+            </form>
+          </div>
+          </main>
+          <Footer />
+        </>
+      );
+    }
+    by = ymd.y;
+    bm = ymd.m;
+    bd = ymd.d;
   }
 
-  if (!profile.birthDate) {
-    return (
-      <>
-        <SiteNav current="me" />
-        <main>
-        <div className={styles.addBirthday}>
-          <h1>Add your birthday first</h1>
-          <p>
-            Your natal chart runs on your birth date. <Link href="/me?next=/chart#your-details">Add it in My Almanac</Link> to see your chart.
-          </p>
-        </div>
-        </main>
-        <Footer />
-      </>
-    );
-  }
-
-  const by = profile.birthDate.getUTCFullYear();
-  const bm = profile.birthDate.getUTCMonth() + 1;
-  const bd = profile.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
-  const subscribed = isSubscribed(profile);
-  const unlocked = subscribed || !!profile.ownChartPurchasedPaymentIntentId;
   const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
   const repeat = findRepeatedMajor(chart);
 
   const shareQ = new URLSearchParams({ by: String(by), bm: String(bm), bd: String(bd) });
-  if (profile.name) shareQ.set("n", profile.name);
+  if (name) shareQ.set("n", name);
   const chartShareImg = `/chart/share/image?${shareQ}`;
   const chartSharePage = `/chart/share?${shareQ}`;
 
@@ -135,7 +188,7 @@ export default async function ChartPage({
               imagePath={chartShareImg}
               pagePath={chartSharePage}
               linkPath="/chart"
-              title={profile.name ? `${profile.name}'s natal chart` : "My natal chart"}
+              title={name ? `${name}'s natal chart` : "My natal chart"}
               text="My natal chart · The Tarot Almanac"
               label="Share my chart"
             />
