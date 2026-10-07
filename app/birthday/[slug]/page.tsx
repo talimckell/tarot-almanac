@@ -7,6 +7,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import ChartCtaButton from "../../components/ChartCtaButton";
 import { getCardBySlug } from "../../../lib/cards";
 import { MAJORS, MAJOR_SLUGS, bearingIndex } from "../../../lib/almanac";
 import { majorGlyphId } from "../../../lib/pips";
@@ -135,8 +136,9 @@ export default async function BirthdayPage({
             Your Bearing is where your natal chart begins. The full chart fixes seven cards to your
             birth date, read through this Bearing.
           </p>
+          <ChartCtaButton variant="onDark" margin="20px 0 6px" />
           <p className="dates">
-            <Link href="/chart">Build your natal chart</Link> · <Link href="/bearing">All 22 Bearings</Link>
+            <Link href="/bearing">All 22 Bearings</Link>
           </p>
         </aside>
 

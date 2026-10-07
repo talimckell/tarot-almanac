@@ -212,6 +212,17 @@ export default function TarotBirthCardPage() {
           <Link className="tbc-btn" href="/tarot-birth-chart">See what your chart holds &rarr;</Link>
         </aside>
 
+        <div className="trust-solo" style={{ margin: "28px auto" }}>
+          <div className="trust-card">
+            <span className="trust-card-label">From the DMs</span>
+            <p className="trust-quote">
+              &ldquo;I&rsquo;m a little embarrassed to say I didn&rsquo;t even know this was a thing! I
+              put my birthday in and the interpretation is 100% spot on!! Super cool!&rdquo;
+            </p>
+            <span className="trust-name">A reader</span>
+          </div>
+        </div>
+
         <p className="tbc-capture">
           Not ready for the full chart?{" "}
           <a
