@@ -13,6 +13,7 @@ import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import ChartDiagram from "../chart/ChartDiagram";
+import ChartCtaButton from "../components/ChartCtaButton";
 import { computeNatalChart } from "../../lib/natalChart";
 import { SITE_URL } from "../../lib/site";
 import { organizationRef, serviceLd } from "../../lib/organizationSchema";
@@ -113,20 +114,7 @@ export default function TarotBirthChartPage() {
         </header>
 
         <div style={{ textAlign: "center", margin: "4px 0 8px" }}>
-          <Link
-            href="/chart"
-            style={{
-              display: "inline-block",
-              fontFamily: "var(--serif-sc)",
-              fontSize: 13,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              background: "var(--indigo)",
-              color: "var(--stone)",
-              padding: "14px 32px",
-              textDecoration: "none",
-            }}
-          >
+          <Link href="/chart" className="btn-primary">
             Build your birth chart · $12 &rarr;
           </Link>
           <p
@@ -205,6 +193,11 @@ export default function TarotBirthChartPage() {
             you showed up in, on one page.
           </p>
         </section>
+
+        <ChartCtaButton
+          margin="8px 0 10px"
+          sub={<Link href="/tarot-birth-chart/sample">Or see a full sample first</Link>}
+        />
 
         <section className="section">
           <h2>What each position means</h2>
@@ -291,8 +284,12 @@ export default function TarotBirthChartPage() {
             one reading of you. It&rsquo;s yours to keep, and you can make one for anyone you want
             to understand better. A chart is $12 on its own, or included with a subscription.
           </p>
-          <p className="dates">
-            <Link href="/chart">Build your natal chart &rarr;</Link> ·{" "}
+          <ChartCtaButton
+            variant="onDark"
+            margin="22px 0 6px"
+            sub={<>Secured by Stripe · Pay once, yours to keep</>}
+          />
+          <p className="dates" style={{ textAlign: "center" }}>
             <Link href="/tarot-birth-chart/sample">See a full sample chart</Link> ·{" "}
             <Link href="/bearing">Find your Bearing first</Link> ·{" "}
             <Link href="/personal-year-card">See your year card</Link>
