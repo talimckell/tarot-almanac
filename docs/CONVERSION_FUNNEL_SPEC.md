@@ -22,7 +22,7 @@ as a guest, create the account after payment.
 - Webhook already provisions a profile + sets `ownChartPurchasedPaymentIntentId`
   (app/api/webhooks/stripe/route.ts); today it needs a pre-existing `supabaseUserId`.
 
-## Phase 1 — no-auth chart preview (low risk, likely most of the gain) — BUILDING 2026-10-07
+## Phase 1 — no-auth chart preview (low risk, likely most of the gain) — SHIPPED 2026-10-07 (live)
 1. `/chart`: for a logged-out visitor, don't redirect. Resolve birthday from `?by&bm&bd`, else the
    birthday cookie, else a small inline "enter your birthday" field. Compute the chart, render the
    LOCKED preview (Bearing named, six positions locked) with reading text STILL server-gated (never
@@ -36,13 +36,32 @@ as a guest, create the account after payment.
 Risk: low — no payment/auth changes; preview is deterministic. Only care: keep reading text
 server-gated for guests (don't ship paid content).
 
-## Phase 2 — guest checkout (after Phase 1 proves out; payment-path, higher care) — NOT YET
-1. checkoutActions: allow a null user; put birthday (+name) in session metadata; Stripe collects email.
-2. Webhook: when `supabaseUserId` absent, use the Stripe email to find-or-create a Supabase user
-   (admin client), upsert Profile (birthDate), set the purchase flag, email a magic link to the chart.
-3. Success page: guest → "Paid — we emailed you a link to your chart"; signed-in → unchanged.
-Edge cases: existing-email collision → link not duplicate; webhook idempotency; Ads conversion on guest
-success; RLS (admin = service-role bypass).
+## Phase 2 — guest checkout for the $12 own chart — SHIPPED 2026-10-07 (live, test-verified)
+Scope: the $12 own-chart only. Subscription still requires sign-in first (by decision).
+1. checkoutActions.startOwnChartCheckout: guest branch — takes the previewed birth date (hidden form
+   field `d`), creates a Stripe session with `customer_creation: "always"` + `guestBirthDate` metadata,
+   no `supabaseUserId`. Signed-in path unchanged.
+2. Webhook handleGuestOwnChart: when `supabaseUserId` absent on an own-chart session, find-or-create a
+   Supabase user from the Stripe-collected email (admin client; existing Profile email = link, else
+   `createUser`), upsert Profile (birthDate + purchase flag), email a magic link (`signInWithOtp` →
+   /auth/callback?next=/chart). Idempotent: re-delivery finds the purchase already recorded and no-ops.
+3. Success page: guest → "Payment received — check your inbox"; signed-in → unchanged.
+Edge cases handled: existing-email collision → link not duplicate; webhook idempotency; RLS (admin =
+service-role bypass). Note: existing-user-without-Profile lookup uses single-page `listUsers` — fine at
+scale, revisit if the user base grows large.
+
+**Verification (2026-10-07):** full loop run end-to-end in TEST mode (stripe listen + dev server + a
+4242 guest purchase via the in-app browser). Confirmed: guest session created (`cs_test_…`), webhook
+`[200]` no errors, Profile provisioned with the right birthDate + purchase flag (checked against the
+real Supabase), magic-link email sent, guest success page shown. Test account cleaned up. Merged to
+main (07fdc33) and deployed green to production. NOT re-tested: the final magic-link click → unlocked
+chart (logic sound — Profile carries the purchase flag, Phase 1 verified the unlocked render) and
+live-mode email deliverability (Resend SMTP already live). First real guest purchase is the ultimate
+live proof.
+
+Known-separate issue surfaced during this: Vercel **Preview** deploys fail (`prisma generate` can't
+resolve `DIRECT_URL`) because Prisma env vars are only set on Production, not Preview. Add them to the
+Preview environment if branch previews should build. Non-urgent; production unaffected.
 
 ## Sequence
 Phase 1 → deploy → watch conversion ~2 weeks → Phase 2 only if the buy-step still leaks.
