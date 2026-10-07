@@ -110,7 +110,7 @@ export default function TarotBirthChartPage() {
           </span>
           <span className="num">Tarot Numerology</span>
           <h1>Your Tarot Birth Chart</h1>
-          <p className="position">a natal chart, built from your birthday</p>
+          <p className="position">Seven cards from your birthday that explain why you&rsquo;re the way you are.</p>
         </header>
 
         <div style={{ textAlign: "center", margin: "4px 0 8px" }}>
@@ -178,35 +178,49 @@ export default function TarotBirthChartPage() {
 
         <section className="section">
           <h2>What your birth chart gives you</h2>
-          <p>
-            <strong>It explains you.</strong>{" "}Your chart puts words to things you already know
-            about yourself: what comes easily, what you keep working on, how you meet people.
-            It&rsquo;s the reason you&rsquo;re the way you are, laid out on one page.
-          </p>
-          <p>
-            <strong>It&rsquo;s the fuller version of your Bearing.</strong>{" "}If you know your
-            Bearing, you know one card. Your chart shows the six around it, the way a full
-            astrology chart goes deeper than your sun sign.
-          </p>
-          <p>
-            <strong>It makes sense of your contradictions.</strong>{" "}Some of your cards will pull
-            against each other. That&rsquo;s normal, and the chart shows you where the pull is
-            coming from.
-          </p>
-          <p>
-            <strong>It gives you a language for the people you love.</strong>{" "}You can make a
-            chart for a partner, a parent, or a friend and see the cards they came in under. It
-            makes a good gift, too.
-          </p>
-          <p>
-            <strong>It&rsquo;s yours for life.</strong>{" "}Your chart never changes. You can come
-            back to it for years and read it differently as you grow. And your Bearing, at the
-            center of it, is the same card that sets your angle on every day in the Almanac.
-          </p>
-          <p>
-            <strong>It&rsquo;s a snapshot of the day you arrived.</strong>{" "}You, and the world
-            you showed up in, on one page.
-          </p>
+          <div className="value-grid">
+            <div className="value-card">
+              <p className="vt">It explains you.</p>
+              <p className="vb">
+                Your chart puts words to things you already know about yourself: what comes easily,
+                what you keep working on, how you meet people. It&rsquo;s the reason you&rsquo;re the
+                way you are, laid out on one page.
+              </p>
+            </div>
+            <div className="value-card">
+              <p className="vt">It&rsquo;s the fuller version of your Bearing.</p>
+              <p className="vb">
+                If you know your Bearing, you know one card. Your chart shows the six around it, the
+                way a full astrology chart goes deeper than your sun sign.
+              </p>
+            </div>
+            <div className="value-card">
+              <p className="vt">It makes sense of your contradictions.</p>
+              <p className="vb">
+                Some of your cards will pull against each other. That&rsquo;s normal, and the chart
+                shows you where the pull is coming from.
+              </p>
+            </div>
+            <div className="value-card">
+              <p className="vt">It gives you a language for the people you love.</p>
+              <p className="vb">
+                You can make a chart for a partner, a parent, or a friend and see the cards they
+                came in under. It makes a good gift, too.
+              </p>
+            </div>
+            <div className="value-card">
+              <p className="vt">It&rsquo;s yours for life.</p>
+              <p className="vb">
+                Your chart never changes. You can come back to it for years and read it differently
+                as you grow. And your Bearing, at the center of it, is the same card that sets your
+                angle on every day in the Almanac.
+              </p>
+            </div>
+            <div className="value-card">
+              <p className="vt">It&rsquo;s a snapshot of the day you arrived.</p>
+              <p className="vb">You, and the world you showed up in, on one page.</p>
+            </div>
+          </div>
         </section>
 
         <ChartCtaButton
