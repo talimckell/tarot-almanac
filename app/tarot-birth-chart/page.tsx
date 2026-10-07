@@ -141,6 +141,21 @@ export default function TarotBirthChartPage() {
           </p>
         </div>
 
+        {/* Accuracy proof, high on the page: a real unsolicited reader DM. Kept
+            anonymous at the reader's implied preference; the source (a DM) is
+            cited instead, which reads as genuine. A different quote (Tay) sits
+            lower, by the closing CTA, so the two don't repeat. */}
+        <div className="trust-solo" style={{ margin: "26px auto 8px" }}>
+          <div className="trust-card">
+            <span className="trust-card-label">From the DMs</span>
+            <p className="trust-quote">
+              &ldquo;I&rsquo;m a little embarrassed to say I didn&rsquo;t even know this was a thing! I
+              put my birthday in and the interpretation is 100% spot on!! Super cool!&rdquo;
+            </p>
+            <span className="trust-name">A reader</span>
+          </div>
+        </div>
+
         <section className="section">
           <h2>What is a tarot birth chart?</h2>
           <p>
