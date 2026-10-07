@@ -120,12 +120,65 @@
   margin: 26px auto 0;
   max-width: 480px;
 }
+.teaserLink {
+  font-style: normal;
+  color: var(--indigo);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* The "rare pattern" callout: a real buy reason, so it reads as a discovery to
+   open, not fine print to skip. Still leak-proof — it never names the card or
+   the position. The whole box is the scroll link down to the paywall. */
+.rareCallout {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  max-width: 520px;
+  margin: 30px auto 0;
+  padding: 22px 28px 20px;
+  border: 1px solid var(--indigo);
+  background: #fbf8f2;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.rareCallout:hover {
+  background: #f6f0e4;
+  transform: translateY(-1px);
+}
+.rareLabel {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 10px;
+}
+.rareBody {
+  display: block;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 440px;
+  margin: 0 auto;
+}
+.rareCue {
+  display: block;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--indigo);
+  margin-top: 14px;
+}
 .paywall {
   border: 1px solid var(--indigo);
   background: #fbf8f2;
   padding: 36px;
   text-align: center;
   margin: 34px 0 0;
+  scroll-margin-top: 24px;
 }
 .paywall h3 {
   font-family: var(--serif);

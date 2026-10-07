@@ -242,11 +242,24 @@ export default async function ChartPage({
           ) : (
             <>
               <LockedPositionsGrid chart={chart} they={false} heading="The other six positions of your chart" />
-              <p className={styles.teaser}>
-                {repeat
-                  ? "Your chart also holds a rare pattern: one card repeats where it almost never does, somewhere in the six positions still locked. It's waiting inside the full reading."
-                  : "Your chart also holds the full architecture of who caught you and what you inherited. Unlock it to read every position."}
-              </p>
+              {repeat ? (
+                <a href="#unlock" className={styles.rareCallout}>
+                  <span className={styles.rareLabel}>A rare pattern in your chart</span>
+                  <span className={styles.rareBody}>
+                    One card repeats where it almost never does, somewhere in the six positions
+                    still locked. Unlock the full reading to see where it lands.
+                  </span>
+                  <span className={styles.rareCue}>Read your whole chart &darr;</span>
+                </a>
+              ) : (
+                <p className={styles.teaser}>
+                  Your chart also holds the full architecture of who caught you and what you
+                  inherited.{" "}
+                  <a href="#unlock" className={styles.teaserLink}>
+                    Unlock it to read every position &darr;
+                  </a>
+                </p>
+              )}
             </>
           )}
         </div>
@@ -259,7 +272,7 @@ export default async function ChartPage({
         )}
 
         {!unlocked && (
-          <div className={styles.paywall}>
+          <div id="unlock" className={styles.paywall}>
             <h3>Read your whole chart</h3>
             <p>
               Your Bearing is yours free. Unlock the other six positions, the self you came in as and the world that
