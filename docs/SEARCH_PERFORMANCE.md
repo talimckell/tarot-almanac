@@ -109,6 +109,43 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-10-07 — FUNNEL BASELINE (chart funnel) + conversion changes shipped
+
+Anchored baseline for the chart funnel, captured before the Oct-7 changes can take effect, so
+later weeks have a clean before. Source: Vercel Top Pages + Top Events, three complete weeks.
+Live dashboard (pinned): https://claude.ai/artifact/9EM1eiEnAf86zjmoRbc2eF — feed it each week
+with Top Pages + Top Events + whether there was a purchase; it republishes to the same link.
+
+| Step | Sep 13–19 | Sep 20–26 | Sep 27–Oct 3 |
+|---|---|---|---|
+| `/tarot-birth-chart` (landing) | 6 | 15 | 16 |
+| `/chart` (preview/generator) | 2 | 5 | 5 |
+| Purchases | 1 (Sep 17) | 0 | 0 |
+| Landing → chart | 33% | 33% | 31% |
+| Chart → purchase | 50% | 0% | 0% |
+| — context — | | | |
+| Free-tool uses (finders) | 32 | 21 | 32 |
+| Sign-ins | 2 | 4 | 1 |
+| `/tarot-birth-chart/sample` | 1 | 2 | 3 |
+
+**The read:** landing traffic grew (6→15→16) but both leak points held flat — only ~⅓ of landing
+visitors reach `/chart`, and ~0% of those buy. The one sale (Sep 17) predates any fix, off 2 chart
+visits. ~450 visitors/wk since produced zero sales → the bottleneck is the funnel, not traffic.
+
+**Shipped 2026-10-07 (all live on prod), each aimed at one of those two steps:**
+- Chart→purchase: no-auth value-first preview (see your chart before any wall), guest checkout for
+  the $12 own-chart (account created after payment), obvious button CTAs, the rare-pattern callout,
+  two testimonials (hero accuracy quote + paywall clarity quote), on-brand Month/Day/Year picker
+  (replacing a native date input that broke in mobile webviews), Stripe/privacy reassurance lines.
+- Landing→chart: outcome-led hero subhead, scannable value-prop grid, button CTAs through the page.
+
+**Watch next weeks:** does **landing→chart rise above ~⅓** and does **chart→purchase lift off 0**.
+Caveats: `/chart` also reachable from nav/account (landing→chart is a proxy); checkout-intent step
+(form_submits) not in these exports; small-n weeks are noisy. Oct 4–7 export was partial/truncated
+(no chart pages) — excluded; pull a full Mon–Sun week next time.
+
+---
+
 ## 2026-10-06 (window: Jul 4–Oct 3, 92 days) — the spike held a full week; clicks doubled
 
 The Sep-28 jump wasn't a flash — it's a sustained new plateau, and it pushed everything up a tier.
