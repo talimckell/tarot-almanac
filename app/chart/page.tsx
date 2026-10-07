@@ -26,6 +26,7 @@ import AdsConsent from "../components/AdsConsent";
 import AdsPurchaseConversion from "../components/AdsPurchaseConversion";
 import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
 import InAppBrowserNotice from "../components/InAppBrowserNotice";
+import BirthdayFields from "../components/BirthdayFields";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -141,7 +142,6 @@ export default async function ChartPage({
     const ymd = d ? parseDateSlug(d) : null;
     const thisYear = new Date().getUTCFullYear();
     if (!ymd || ymd.y < 1900 || ymd.y > thisYear) {
-      const maxDate = new Date().toISOString().slice(0, 10);
       return (
         <>
           <SiteNav current="me" />
@@ -152,18 +152,18 @@ export default async function ChartPage({
               Your chart runs on your birth date. Enter it to see your chart — the preview is free,
               structure and all, no account needed.
             </p>
-            <form method="get" action="/chart" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginTop: 20 }}>
-              <input
-                type="date"
-                name="d"
-                required
-                max={maxDate}
-                min="1900-01-01"
-                aria-label="Your birth date"
-                style={{ fontSize: 16, padding: "10px 12px" }}
-              />
-              <button type="submit" className={styles.buy}>See my chart &rarr;</button>
+            <form method="get" action="/chart" className={styles.dateForm}>
+              <BirthdayFields name="d" required selectClassName={styles.dateSelect} />
+              <button type="submit" className={styles.seeChart}>See my chart &rarr;</button>
             </form>
+            <p className={styles.privacyNote}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="4" y="11" width="16" height="10" rx="1.5" />
+                <path d="M7.5 11V7a4.5 4.5 0 0 1 9 0v4" />
+              </svg>
+              Your birth date stays private. We use it only to build your chart, and you don&rsquo;t
+              need an account to see it.
+            </p>
           </div>
           </main>
           <Footer />
@@ -324,6 +324,13 @@ export default async function ChartPage({
                 </form>
               </div>
             </div>
+            <p className={styles.secureLine}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="4" y="11" width="16" height="10" rx="1.5" />
+                <path d="M7.5 11V7a4.5 4.5 0 0 1 9 0v4" />
+              </svg>
+              Secure checkout with Stripe. We never see your card details.
+            </p>
           </div>
         )}
 
