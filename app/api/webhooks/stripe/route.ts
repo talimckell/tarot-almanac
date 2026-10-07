@@ -46,12 +46,17 @@ export async function POST(req: Request) {
 async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
   const supabaseUserId = session.metadata?.supabaseUserId;
 
-  // Guest $12 own-chart: no supabaseUserId because the buyer had no account. Provision
-  // from the Stripe-collected email, then email a sign-in link. Every other flow still
-  // requires a known user (they're only reachable while signed in), so they no-op here.
+  // Guest one-off: no supabaseUserId because the buyer had no account. Provision from the
+  // Stripe-collected email, then email a sign-in link. Two guest products: the $12 own-chart
+  // and the $15 year reading. Every other flow still requires a known user (only reachable
+  // while signed in), so they no-op here.
   if (!supabaseUserId) {
-    if (session.mode === "payment" && session.metadata?.kind === "own-chart") {
-      await handleGuestOwnChart(session);
+    if (session.mode === "payment") {
+      if (session.metadata?.kind === "own-chart") {
+        await handleGuestOwnChart(session);
+      } else if (session.metadata?.kind === "year-reading") {
+        await handleGuestYearReading(session);
+      }
     }
     return;
   }
@@ -199,6 +204,85 @@ async function handleGuestOwnChart(session: Stripe.Checkout.Session) {
   });
 
   await analytics.trackEvent("guest_chart_purchased", {}, { userId });
+}
+
+// Guest $15 year-reading provisioning (buyer had no account). Find-or-create the Supabase
+// user from the Stripe-collected email, create the YearReading row owned by them, then email
+// a sign-in link so it shows up in their account. Viewing needs no account: the success page
+// lands the buyer on the reading's share-token URL immediately. Idempotent: a re-delivered
+// event finds the reading already created (unique paymentIntentId) and no-ops.
+async function handleGuestYearReading(session: Stripe.Checkout.Session) {
+  const email = session.customer_details?.email?.toLowerCase();
+  const paymentIntentId = session.payment_intent as string;
+  const name = session.metadata?.yrName?.trim() || "you";
+  const bm = Number(session.metadata?.yrBm);
+  const bd = Number(session.metadata?.yrBd);
+  const year = Number(session.metadata?.yrYear);
+  if (!email || !bm || !bd || !year || !paymentIntentId) return; // malformed — nothing safe to do
+
+  // Already processed? (re-delivered webhook) — bail before creating a second account/email.
+  const existingReading = await prisma.yearReading.findUnique({
+    where: { purchasedPaymentIntentId: paymentIntentId },
+  });
+  if (existingReading) return;
+
+  // Resolve the user: existing customer (by Profile email) or a freshly created auth user.
+  const admin = createAdminClient();
+  let userId: string | null = null;
+  const existingProfile = await prisma.profile.findFirst({ where: { email } });
+  if (existingProfile) {
+    userId = existingProfile.id;
+  } else {
+    const created = await admin.auth.admin.createUser({ email, email_confirm: true });
+    if (created.data.user) {
+      userId = created.data.user.id;
+    } else {
+      // Likely already registered without a Profile row — look the user up by email.
+      const { data: list } = await admin.auth.admin.listUsers();
+      userId = list?.users.find((u) => (u.email ?? "").toLowerCase() === email)?.id ?? null;
+    }
+  }
+  if (!userId) return; // couldn't resolve a user — bail safely (Stripe will retry)
+
+  // YearReading.ownerId is a required FK to Profile; createUser makes an auth user, not a
+  // Profile, so ensure the row exists first. Don't clobber a returning user's profile.
+  await prisma.profile.upsert({
+    where: { id: userId },
+    update: {},
+    create: { id: userId, email },
+  });
+
+  // Idempotent by paymentIntentId (unique). Mirrors the signed-in year-reading branch; the
+  // woven reading generates lazily on first view of the reading page.
+  await prisma.yearReading.upsert({
+    where: { purchasedPaymentIntentId: paymentIntentId },
+    update: {},
+    create: {
+      ownerId: userId,
+      name,
+      birthMonth: bm,
+      birthDay: bd,
+      readingYear: year,
+      yearCardIndex: yearCardIndex(year, bm, bd),
+      bearingIndex: bearingForBirthday(bm, bd),
+      purchasedPaymentIntentId: paymentIntentId,
+      status: "pending",
+    },
+  });
+
+  // Email a sign-in link so the buyer can find the reading in their account later. Viewing
+  // doesn't require it — the success page already lands them on the share-token reading.
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+  const anon = createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  );
+  await anon.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: `${siteUrl}/auth/callback?next=/me` },
+  });
+
+  await analytics.trackEvent("guest_year_reading_purchased", {}, { userId });
 }
 
 // customer.subscription.updated/.deleted carry no metadata, only a customer id, so

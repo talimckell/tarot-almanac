@@ -187,6 +187,9 @@ export default function YearCardCalculator({
               Get your full year reading · {YEAR_READING_PRICE_DISPLAY}
             </button>
           </form>
+          <p className="hint" style={{ textAlign: "center", marginTop: 12 }}>
+            Secure checkout with Stripe. No account needed to buy or read it.
+          </p>
         </>
       )}
     </div>

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
-import { createClient } from "../../../lib/supabase/server";
 import {
   yearCardIndex,
   yearCardContent,
@@ -44,15 +43,6 @@ export default async function ContinueYearReading({
 }) {
   const { bm, bd, year } = await searchParams;
 
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    const here = `/personal-year-card/continue?bm=${bm ?? ""}&bd=${bd ?? ""}&year=${year ?? ""}`;
-    redirect(`/sign-in?next=${encodeURIComponent(here)}&reason=year-reading`);
-  }
-
   const parsed = parseYearCardResumeParams(bm, bd, year);
   if (!parsed) redirect("/personal-year-card");
 
@@ -73,7 +63,7 @@ export default async function ContinueYearReading({
           <Link href="/">Home</Link> · Personal Year Card
         </nav>
 
-        <p className="pyc-eyebrow">You&rsquo;re signed in</p>
+        <p className="pyc-eyebrow">Your year reading</p>
         <h1 className="pyc-h1">One more step</h1>
         <p className="pyc-lede">
           Your card&rsquo;s still right here. Confirm and I&rsquo;ll take you to checkout.
@@ -90,6 +80,9 @@ export default async function ContinueYearReading({
             Get the full woven reading · {YEAR_READING_PRICE_DISPLAY}
           </button>
         </form>
+        <p className="hint" style={{ textAlign: "center", marginTop: 12 }}>
+          Secure checkout with Stripe. No account needed to buy or read it.
+        </p>
 
         <div className="pyc-result" style={{ marginTop: 32 }}>
           <span className="pyc-glyph" style={{ color: `var(--${majorElement(idx)})` }}>
