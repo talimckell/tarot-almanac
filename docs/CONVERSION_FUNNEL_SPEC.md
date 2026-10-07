@@ -69,3 +69,35 @@ Phase 1 → deploy → watch conversion ~2 weeks → Phase 2 only if the buy-ste
 ## Not changing
 Returning to saved charts + the almanac stays authenticated. Leak-proofing unchanged. The $15/$12
 pricing-copy inconsistency (sign-in/page.tsx:29) is a separate small fix.
+
+## Year-reading guest checkout — SHIPPED 2026-10-07 (live, test-verified)
+The $15 year reading carried the same sign-in-before-payment wall the chart used to have, and the
+Sep baseline showed 0 buyers reaching the buy page in three weeks. With the year-ahead-reading season
+opening, applied the chart's guest-checkout pattern to it now.
+1. `startYearReadingCheckout` (app/personal-year-card/checkoutActions.ts): guest branch creates a
+   Stripe session with `customer_creation: "always"` and no `supabaseUserId`; signed-in path
+   unchanged. New guest event `buy_year_reading_guest`.
+2. Webhook `handleGuestYearReading` (app/api/webhooks/stripe/route.ts): find-or-create the Supabase
+   user from the Stripe email, ensure a Profile (the reading's required owner FK), create the
+   `YearReading` row, email a sign-in link (`next=/me`). Idempotent on the unique `paymentIntentId`.
+3. No account needed to VIEW: the reading is served by its `shareToken`
+   (`/personal-year-card/reading/[token]`, public, `notFound()` only), so the existing success page
+   (session → payment intent → token) lands the guest straight in it. The sign-in link is only so it
+   also shows in their `/me` later.
+4. `/continue` no longer redirects guests to sign-in (neutral copy). Calculator + continue show a
+   "secure checkout, no account needed to buy or read it" line.
+
+**Verification (2026-10-07):** full loop run end-to-end in TEST mode (stripe listen + dev server + a
+4242 guest purchase via the in-app browser). Confirmed: guest buy button → Stripe Checkout (no
+sign-in), webhook `[200]` no errors, `YearReading` provisioned (name/year/card-index correct, status
+reached `ready`) owned by a Profile with the exact Stripe-collected email, success page redirected the
+guest to the share-token reading, reading rendered with no account. Test account + reading cleaned up.
+Local-only note: `stripe listen`'s signing secret differs from `.env`'s (the dashboard endpoint's), so
+the test used a gitignored `.env.local` override of `STRIPE_WEBHOOK_SECRET`, removed afterward.
+
+## Other funnel fixes shipped 2026-10-07 (from the funnel review)
+- **Birthday pages** (biggest traffic source): a real `ChartCtaButton` (on-dark variant) in the
+  "Go deeper" box, replacing a small text link → /chart.
+- **Birth-card page**: the "100% spot on" reader testimonial at the free→paid chart upsell.
+- **Weekly dashboard** extended to a multi-funnel view (chart + year-reading funnels + free-tool
+  engagement): https://claude.ai/artifact/9EM1eiEnAf86zjmoRbc2eF (pinned).
