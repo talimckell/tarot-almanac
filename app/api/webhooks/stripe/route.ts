@@ -3,6 +3,8 @@ import { stripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
 import { yearCardIndex, bearingForBirthday } from "@/lib/yearCard";
 import { analytics } from "@/lib/serverAnalytics";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 
 // Stripe webhook receiver. Raw body must be read via req.text() (NOT req.json())
 // because signature verification (constructEvent) needs the exact original bytes —
@@ -43,7 +45,16 @@ export async function POST(req: Request) {
 // "own-chart" apart from "gift-chart".
 async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
   const supabaseUserId = session.metadata?.supabaseUserId;
-  if (!supabaseUserId) return; // shouldn't happen — every session we create sets this
+
+  // Guest $12 own-chart: no supabaseUserId because the buyer had no account. Provision
+  // from the Stripe-collected email, then email a sign-in link. Every other flow still
+  // requires a known user (they're only reachable while signed in), so they no-op here.
+  if (!supabaseUserId) {
+    if (session.mode === "payment" && session.metadata?.kind === "own-chart") {
+      await handleGuestOwnChart(session);
+    }
+    return;
+  }
 
   if (session.mode === "subscription") {
     // The session payload only has the subscription id; status/period-end need
@@ -126,6 +137,68 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
       },
     });
   }
+}
+
+// Guest $12 own-chart provisioning (buyer had no account). Find-or-create the Supabase
+// user from the Stripe-collected email, save their birth date + the purchase on their
+// Profile, then email a sign-in link so they can read the chart they bought. Idempotent:
+// a re-delivered event finds the purchase already recorded and no-ops (no second account,
+// no second email).
+async function handleGuestOwnChart(session: Stripe.Checkout.Session) {
+  const email = session.customer_details?.email?.toLowerCase();
+  const guestBirthDate = session.metadata?.guestBirthDate; // "YYYY-MM-DD"
+  const paymentIntentId = session.payment_intent as string;
+  if (!email || !guestBirthDate || !paymentIntentId) return; // malformed — nothing safe to do
+
+  const admin = createAdminClient();
+
+  // Resolve the user: existing customer (by Profile email) or a freshly created auth user.
+  let userId: string | null = null;
+  const existing = await prisma.profile.findFirst({ where: { email } });
+  if (existing) {
+    if (existing.ownChartPurchasedPaymentIntentId === paymentIntentId) return; // already processed
+    userId = existing.id;
+  } else {
+    const created = await admin.auth.admin.createUser({ email, email_confirm: true });
+    if (created.data.user) {
+      userId = created.data.user.id;
+    } else {
+      // Likely already registered without a Profile row — look the user up by email.
+      const { data: list } = await admin.auth.admin.listUsers();
+      userId = list?.users.find((u) => (u.email ?? "").toLowerCase() === email)?.id ?? null;
+    }
+  }
+  if (!userId) return; // couldn't resolve a user — bail safely (Stripe will retry)
+
+  const [y, m, d] = guestBirthDate.split("-").map(Number);
+  await prisma.profile.upsert({
+    where: { id: userId },
+    update: {
+      ownChartPurchasedPaymentIntentId: paymentIntentId,
+      // Don't clobber a returning user's existing birthday.
+      ...(existing?.birthDate ? {} : { birthDate: new Date(Date.UTC(y, m - 1, d)) }),
+    },
+    create: {
+      id: userId,
+      email,
+      birthDate: new Date(Date.UTC(y, m - 1, d)),
+      ownChartPurchasedPaymentIntentId: paymentIntentId,
+    },
+  });
+
+  // Email a branded sign-in link (same OTP path as the sign-in page; the user exists now)
+  // so they can reach their unlocked chart. The anon-key client is enough to send it.
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+  const anon = createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  );
+  await anon.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: `${siteUrl}/auth/callback?next=/chart` },
+  });
+
+  await analytics.trackEvent("guest_chart_purchased", {}, { userId });
 }
 
 // customer.subscription.updated/.deleted carry no metadata, only a customer id, so

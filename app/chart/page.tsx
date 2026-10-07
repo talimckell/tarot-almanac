@@ -114,6 +114,27 @@ export default async function ChartPage({
     subscribed = isSubscribed(profile);
     unlocked = subscribed || !!profile.ownChartPurchasedPaymentIntentId;
   } else {
+    // Guest just completed a guest checkout: no session yet (the webhook provisions the
+    // account + emails a sign-in link). Confirm the payment and point them to their inbox,
+    // rather than dropping back to the birth-date form.
+    if (checkout === "success") {
+      return (
+        <>
+          <SiteNav current="me" />
+          <main>
+          <div className={styles.addBirthday}>
+            <h1>Payment received</h1>
+            <p>
+              Thank you. We&rsquo;ve emailed you a sign-in link so you can read your full chart and keep
+              it — check your inbox (and spam) for a note from The Tarot Almanac.
+            </p>
+          </div>
+          </main>
+          <Footer />
+        </>
+      );
+    }
+
     // Guest: no sign-in wall. Show the preview from ?d=YYYY-MM-DD, otherwise a date
     // form. The chart needs the birth YEAR (unlike the month/day Bearing), so this takes
     // a full date, not the Bearing cookie.
@@ -158,6 +179,10 @@ export default async function ChartPage({
   const readings = getChartReadings(chart);
   const [bearingReading, ...otherReadings] = readings;
   const repeat = findRepeatedMajor(chart);
+
+  // The chart's birth date as YYYY-MM-DD — carried on the guest "Buy my chart" form so
+  // guest checkout knows which chart was purchased (ignored for signed-in buyers).
+  const birthDateParam = `${by}-${String(bm).padStart(2, "0")}-${String(bd).padStart(2, "0")}`;
 
   const shareQ = new URLSearchParams({ by: String(by), bm: String(bm), bd: String(bd) });
   if (name) shareQ.set("n", name);
@@ -264,6 +289,7 @@ export default async function ChartPage({
                 </div>
                 <div className={styles.what}>Unlock this one natal chart to read and keep. No subscription.</div>
                 <form action={startOwnChartCheckout}>
+                  <input type="hidden" name="d" value={birthDateParam} />
                   <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Buy my chart
                   </CheckoutSubmitButton>

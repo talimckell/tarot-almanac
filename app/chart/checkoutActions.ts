@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { parseDateSlug } from "@/lib/today";
 import {
   stripe,
   STRIPE_PRICE_ID_SUBSCRIPTION,
@@ -59,12 +60,38 @@ export async function startSubscriptionCheckout(formData?: FormData) {
 // chart (the "Buy my chart" button on /chart's paywall). No chart name/birthdate
 // metadata needed — the webhook just sets Profile.ownChartPurchasedPaymentIntentId
 // for this supabaseUserId.
-export async function startOwnChartCheckout() {
+export async function startOwnChartCheckout(formData?: FormData) {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/sign-in?next=/chart&reason=chart");
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+
+  // GUEST ($12 own chart): no sign-in wall. Carry the previewed birth date through
+  // metadata; Stripe collects the email; the webhook provisions the account AFTER
+  // payment and emails a sign-in link. (Subscription still requires sign-in first.)
+  if (!user) {
+    const d = ((formData?.get("d") as string | null) ?? "").trim();
+    const ymd = parseDateSlug(d);
+    const thisYear = new Date().getUTCFullYear();
+    if (!ymd || ymd.y < 1900 || ymd.y > thisYear) {
+      redirect("/chart"); // no valid birth date to chart — send them to enter one
+    }
+    const guestBirthDate = `${ymd!.y}-${String(ymd!.m).padStart(2, "0")}-${String(ymd!.d).padStart(2, "0")}`;
+    const guestSession = await stripe.checkout.sessions.create({
+      mode: "payment",
+      customer_creation: "always",
+      line_items: [{ price: STRIPE_PRICE_ID_CHART, quantity: 1 }],
+      success_url: `${siteUrl}/chart?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${siteUrl}/chart?checkout=cancelled&d=${guestBirthDate}`,
+      // No supabaseUserId → the webhook treats this as a guest: it provisions the
+      // account from the Stripe-collected email and saves this birth date.
+      metadata: { kind: "own-chart", guestBirthDate },
+      payment_intent_data: { metadata: { kind: "own-chart", guestBirthDate } },
+    });
+    await trackFormSubmitServer("buy_own_chart_guest", undefined, undefined);
+    redirect(guestSession.url!);
+  }
 
   const profile = await prisma.profile.upsert({
     where: { id: user.id },
@@ -73,7 +100,6 @@ export async function startOwnChartCheckout() {
   });
 
   const customerId = await getOrCreateStripeCustomerId(profile);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
