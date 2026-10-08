@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/strength",
     "cardMeta": "Major Arcana VIII · Fire · the turn from outer force to inner power",
-    "essence": "Strength is the part of you that meets your own intensity without flinching. It is power held quietly, the steadiness that can sit with fear, anger, and desire without being run by them. It is courage that doesn't need to roar.",
-    "narrative": "At eight, the journey changes the kind of power it's talking about. The Chariot just before it was force directed outward, drive and momentum and going. Strength turns that inward and asks a harder question: can you hold your own wildness with a gentle hand? The image is a person and a lion, and the person isn't fighting the lion or caging it. They're resting a hand on its jaw, calm, unhurried, on good terms with the beast. Strength here is partnership with your instincts rather than domination of them. The rage, the hunger, the fear, all of it met with steadiness instead of war. It sits at the midpoint of the journey because this is where outer mastery has to become inner, where you learn that the thing you most needed to steady was never out there.",
+    "essence": "The Strength card in Tarot represents courage, patience, inner strength, and compassion. A woman in white rests her hands on a lion's jaw, calm and unhurried. An infinity symbol hovers above her head with a mountain in the distance. She's gentle with the lion and completely unafraid. This card shows your ability to feel intense emotions like fear, anger, and desire while still keeping your steadiness.",
+    "narrative": "Strength is card number eight, shifting the kind of power being discussed. The Chariot before it was all about moving forward with force and drive. Now, Strength turns inward; it asks whether you can manage your wild side with kindness. The woman and the lion in this card coexist harmoniously. This is how your instincts should be treated. You can approach your rage, hunger, or fear patiently. For the Fool, this is where mastering the outside world becomes about mastering yourself. Strength challenges you to ask what feelings you're trying to suppress and what might happen if you held them gently instead.",
     "gift": {
       "keywords": [
         "inner resilience",
@@ -16,8 +16,8 @@
         "compassion",
         "integration"
       ],
-      "body": "Upright, Strength is the calm that doesn't come from the absence of intensity but from being able to hold it. It's staying steady in the hard conversation instead of going cold or going off. It's feeling the fear all the way through and doing the thing anyway, without needing to pretend you weren't afraid. Your calm is not compliance and your gentleness is not weakness. The gift is being able to meet your own anger, desire, and grief with a hand on the jaw rather than a fist, holding your whole self with something close to reverence. You don't have to roar to be powerful.",
-      "affirmation": "My strength is steadiness. I can hold all of myself without losing myself."
+      "body": "When Strength appears upright, it means inner resilience, quiet courage, and compassion. You can stay steady during tough conversations without becoming cold or exploding. It means feeling fear completely but still moving forward. Your calmness is a form of power. Facing your own anger, desire, and grief with steadiness shows real strength. You don't need to roar to prove it.",
+      "affirmation": "My strength is steadiness. I can hold all parts of myself without losing who I am."
     },
     "shadow": {
       "keywords": [
@@ -27,8 +27,8 @@
         "collapse",
         "outbursts"
       ],
-      "body": "The hand clamps down or lets go entirely. Strength's shadow swings between two poles: the intensity stuffed down so hard it leaks out sideways, and the intensity that finally bursts the lid and floods everything. It's the calm that's actually suppression, the steadiness that's really just holding your breath. Or it's the collapse, the moment the held thing wins. Underneath is the fear of your own power, the conviction that if you ever fully let yourself feel the anger or want the thing, you'd lose control of it for good. So you sit on it, and sitting on a living thing only works for so long.",
-      "affirmation": "I can feel it without being run by it. Letting go of the grip is not the same as losing control."
+      "body": "In reverse, Strength can signify repression, feeling overwhelmed, or having explosive outbursts. You may bottle up your feelings until they slip out sideways, like snapping at someone or developing a headache. Alternatively, the pressure might build until you release everything all at once. A calm exterior might hide a held breath, masking a fear that letting yourself feel the full weight of anger or desire means losing control forever.",
+      "affirmation": "I can experience my feelings without being overwhelmed. I can loosen my grip while staying in control."
     },
     "reclaiming": {
       "keywords": [
@@ -37,15 +37,15 @@
         "being witnessed",
         "refusing the armor"
       ],
-      "body": "Strength reverses a second way, as a refusal of the strength that was only ever survival. If your power was built from masking, shrinking, and needing no one, this is permission to set the armor down. Let someone witness you. Let the lion lie down beside you instead of being managed. Strength was never supposed to mean never needing help. The reclaiming here is rest, the radical act of being held instead of holding, of letting your guard down in front of someone safe. If you were taught that being strong meant being impenetrable, this is you discovering that letting yourself be seen takes more.",
-      "affirmation": "I can lay the armor down. Letting myself be witnessed takes more than holding it all alone."
+      "body": "Strength reversed also suggests putting down a strength that was only ever about survival. If you developed your strength by denying your needs or never asking for help, it's okay to let that go. Allow someone to see your struggles. Let others hold things for you for a change. It's fine to rest. Being vulnerable takes more courage than always being strong.",
+      "affirmation": "I can lay down my armor. Sharing my struggles takes more strength than hiding them."
     },
     "skills": [
-      "Breathing through emotional intensity instead of bracing against it",
-      "Naming a feeling before it names you",
-      "Meeting your hardest moments with self-compassion",
-      "Telling steadiness apart from suppression",
-      "Letting yourself be helped"
+      "Breathing through strong emotions",
+      "Acknowledging feelings before they take over",
+      "Being kind to yourself during tough moments",
+      "Differentiating steadiness from suppression",
+      "Allowing yourself to receive help"
     ]
   },
   "bearing": {
@@ -98,6 +98,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do people come to you when things get hard? You don't fix it. You just stay, and something about the staying makes it more bearable. That's a Strength way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "She's not holding the lion's mouth shut. Her hand is resting on his jaw. She's not trying to stop him. She's just there."
+  },
+  "contexts": {
+    "yesNo": "Yes, if you remain patient and steady. Strength suggests you can handle the situation, but it may require persistence and self-control rather than brute force. It's a strong yes for matters of recovery, courage, or overcoming challenges.",
+    "asFeelings": "If someone feels Strength toward you, their feelings are deep, patient, and protective. They're drawn to you and prefer to take things slowly, even if they feel a strong desire to rush.",
+    "asPerson": "This is a calm, kind person who stays steady in crises. They're patient and have a natural way with animals, children, and those having a rough time. They might hide their own struggles because they're used to being the \"strong\" one.",
+    "asAdvice": "Be gentle with yourself and stay steady. You'll make more progress with patience than with force, whether you're dealing with yourself or others. When a big feeling comes up, take a moment to breathe before you act.",
+    "timing": "Slow but sure. Strength focuses on processes that require patience, often over a few weeks or months.",
+    "howSomeoneSeesYou": "People see you as calm, kind, and stronger than you look. You're the one they trust to stay steady when things go wrong. Some may not realize how much you carry, so let the people close to you know when you need support."
   },
   "slug": "strength"
 }
