@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-high-priestess",
     "cardMeta": "Major Arcana II · Water · the depth beneath the early path",
-    "essence": "The High Priestess is the part of you that knows things without being able to explain how. She is the knowing that arrives before the reasons do, the one you can't show your work for. Where the Magician acts, she waits and listens.",
-    "narrative": "She comes second, and she's the necessary counterweight to the card before her. The Magician is all outward will, busy making things happen in the world. The High Priestess turns the other direction entirely, inward and downward, into everything that can't be willed. She sits between two pillars with a veil behind her, and the veil is the point: there's a whole realm she guards that doesn't open to force or cleverness. You reach it by going quiet. Placed this early in the journey, she's teaching a lesson the Fool needs almost immediately, that not everything worth knowing can be figured out, and some of it can only be received. She holds a scroll half-hidden in her robe. She isn't going to hand it over. She's waiting to see if you'll get still enough to be shown.",
+    "essence": "The High Priestess card in Tarot symbolizes intuition, inner wisdom, and an understanding that doesn't always have a clear rationale. She sits between two pillars, one representing light and the other darkness, with a veil behind her and a scroll partially concealed in her robe. Her presence encourages you to take a moment of stillness to really listen to your inner voice.",
+    "narrative": "As the second card in the Tarot deck, the High Priestess serves as a counterbalance to the Magician, who's all about action and achievement. In contrast, she invites us to look inward and contemplate what can't be rushed. The veil behind her signifies the deeper insights that only come with silence. This lesson is essential for the Fool, as some truths must be felt rather than reasoned out. When the High Priestess appears in a reading, she prompts you to reflect on the truths you may be aware of but hesitant to acknowledge.",
     "gift": {
       "keywords": [
         "intuition",
@@ -17,8 +17,8 @@
         "the unconscious",
         "receptivity"
       ],
-      "body": "Upright, the High Priestess is the trustworthiness of your own quiet knowing. It's the read you got on a person in the first ten seconds, before they'd done anything you could point to, that turned out to be exactly right. It's waking with the decision already made, as if some part of you settled it overnight while you slept. She honors the knowing that can't show its work: the dream, the gut feeling, the sense that you should not get in the car. You don't have to be able to defend it to act on it. Some of your sharpest intelligence never bothers to put itself into words.",
-      "affirmation": "I trust what I know before I can prove it. My quiet knowing is real intelligence."
+      "body": "When the High Priestess appears upright, she embodies intuition, serenity, and an air of mystery. She represents that immediate understanding you might have about someone; the gut feeling that ends up being accurate. It's the clarity that comes when you wake up knowing exactly what decision to make. She also represents instincts that guide you away from certain paths without needing justification.",
+      "affirmation": "I trust my inherent knowledge before needing proof. My quiet awareness is valid."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "withdrawal",
         "hidden feelings"
       ],
-      "body": "Reversed, the inner channel gets blocked or misused. The High Priestess's shadow is the self that has stopped listening inward, drowning the quiet signal in noise and then wondering why it feels lost. It can also turn the gift of privacy into the wound of secrecy, holding everything back, hidden even from the people who are safe. Sometimes the intuition is screaming and you overrule it, because the respectable, explainable answer is easier to defend to other people. The knowing hasn't gone anywhere. The shadow is the static you've laid over it, or the choice not to listen.",
-      "affirmation": "I can listen inward again. My intuition is still speaking, even when I have ignored it."
+      "body": "In reverse, the High Priestess signifies disconnection, secrecy, and the neglect of one's intuition. You might find yourself ignoring your inner voice, allowing external distractions to drown it out, which can lead to feelings of being lost. Privacy may edge into secrecy, even with those who care. Even if your intuition is speaking loudly, it can be overshadowed by seemingly more rational choices.",
+      "affirmation": "I can reconnect with my inner self. My intuition is still there, even when I've overlooked it."
     },
     "reclaiming": {
       "keywords": [
@@ -38,15 +38,15 @@
         "sacred privacy",
         "knowing without explaining"
       ],
-      "body": "The High Priestess reverses a second way, as a refusal to make everything legible. The world rewards people who explain themselves, who are transparent and forthcoming and easy to read. This is the person who declines that, who keeps an inner life that belongs to no one else, who refuses to translate every private knowing into language for other people's comfort. Your interior is yours. Not everything has to be shared to be valid, and not every truth owes anyone an explanation. If you were taught that being good meant being fully visible, the reclaiming High Priestess is you keeping a room that stays closed.",
-      "affirmation": "I do not owe anyone full access to my inner life. What I keep private is still whole."
+      "body": "The reversed High Priestess might also indicate that you are holding back your inner thoughts from others. In a society that often values transparency, you may choose to keep some aspects of your emotional world to yourself. Just because you don't openly share it doesn't mean it's invalid. You don't owe anyone an explanation of your feelings or what you're experiencing.",
+      "affirmation": "I don't have to offer complete access to my inner life. What I choose to keep private is still meaningful."
     },
     "skills": [
-      "Getting quiet enough to hear the inner signal",
-      "Acting on a knowing you can't yet justify",
-      "Telling the difference between privacy and isolation",
-      "Protecting an inner life from the pressure to explain it",
-      "Letting some answers arrive instead of forcing them"
+      "Finding moments of quiet to tune into your intuition",
+      "Acting on feelings that may not yet be rationalized",
+      "Distinguishing between privacy and isolation",
+      "Protecting your inner story from outside influences",
+      "Allowing insights to surface naturally instead of forcing them"
     ]
   },
   "bearing": {
@@ -99,6 +99,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you know how a situation is going to go before it's gone there? Pick up what's really happening in a room before anyone's said it out loud? That's a High Priestess way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "She's holding a scroll in her robe. She's been holding it the whole time. She wasn't waiting for you to ask. She was waiting to see if you'd get quiet enough."
+  },
+  "contexts": {
+    "yesNo": "Maybe, or not yet. The High Priestess suggests there might be hidden aspects to consider. Trust your gut instincts before seeking answers externally; you may already possess the insight you need.",
+    "asFeelings": "If someone perceives you through the lens of the High Priestess, they feel deeply attracted but are keeping their feelings to themselves. They are drawn to you but may be waiting for you to take the initiative. There is much more to their emotions than they let on.",
+    "asPerson": "This is an individual who is quiet yet observant. They are aware of everything around them but tend to keep their thoughts to themselves. People often seek their advice due to their perceptiveness. It can take time to truly get to know them, as they reveal their inner selves gradually.",
+    "asAdvice": "Take time to sit in silence and listen to your thoughts. Before consulting anyone else, spend an evening away from external influences and see what arises. Trust what you discover, even if you can't articulate it perfectly yet.",
+    "timing": "Things may develop more slowly than you'd prefer. The High Priestess indicates that certain events are occurring behind the scenes. Don't expect immediate clarity; it might take weeks or even months for everything to come into focus.",
+    "howSomeoneSeesYou": "People may view you as calm, wise, and somewhat enigmatic. They sense that you know more than you share, creating intrigue for some while leaving others feeling uncertain. If you want to draw someone closer, consider opening up a bit more about yourself."
   },
   "slug": "high-priestess"
 }
