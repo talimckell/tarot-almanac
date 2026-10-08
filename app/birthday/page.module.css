@@ -16,37 +16,45 @@
 }
 .dayList {
   list-style: none;
+  /* Wider tracks so the full date + card name fit on one line (no mid-name wrap). */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 0 20px;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  gap: 2px 24px;
   padding: 0;
   margin: 0;
 }
 .dayLink {
+  /* Date and card read as one unit, left-aligned, so the card always sits next to
+     its own date instead of being flung to the far right (where it looked like it
+     belonged to the next column). */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
-  padding: 6px 0;
-  border-bottom: 1px solid transparent;
+  padding: 6px 6px;
+  margin: 0 -6px;
+  border-radius: 3px;
+  transition: background 0.12s ease;
 }
 .dayLink:hover {
-  border-bottom-color: var(--warm-stone);
+  background: var(--vellum);
 }
 .dayNum {
+  /* Fixed width aligns every card name down the column. Quiet index tone; the
+     card name is the thing to read. */
+  min-width: 92px;
   font-family: var(--sans);
-  font-size: 14px;
-  color: var(--ink);
+  font-size: 13px;
+  color: var(--label);
   white-space: nowrap;
 }
 .dayCard {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 14px;
-  color: var(--label);
-  text-align: right;
+  font-size: 15px;
+  color: var(--ink);
 }
 @media (max-width: 640px) {
-  .dayList { grid-template-columns: 1fr 1fr; }
+  .dayList { grid-template-columns: 1fr; gap: 0; }
 }
