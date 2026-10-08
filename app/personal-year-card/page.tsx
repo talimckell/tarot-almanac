@@ -14,21 +14,23 @@ import { serviceLd } from "../../lib/organizationSchema";
 import YearCardCalculator from "./YearCardCalculator";
 import "./styles.css";
 
-const TITLE = "Tarot Year Card Calculator: Your Card of the Year | The Tarot Almanac";
-const DESCRIPTION =
-  "Find your tarot year card, the Major Arcana card your birthday sets for each calendar year through tarot numerology. It's the theme your year keeps coming back to. Read it early and work with it.";
+const CANONICAL = `${SITE_URL}/personal-year-card`;
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: { canonical: `${SITE_URL}/personal-year-card` },
-  openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}/personal-year-card`,
-    type: "website",
-  },
-};
+// Title/description carry the current + next calendar year so the page shows up for
+// "year card calculator 2026/2027"-style searches. Computed per request so the years
+// roll forward on their own; no hardcoded year to go stale.
+export async function generateMetadata(): Promise<Metadata> {
+  const now = new Date().getUTCFullYear();
+  const next = now + 1;
+  const title = `Tarot Year Card Calculator: Your Card for ${now} & ${next} | The Tarot Almanac`;
+  const description = `Find your tarot year card for ${now} or ${next}, the Major Arcana card your birthday sets for each calendar year through tarot numerology. It's the theme your year keeps coming back to. Read it early and work with it.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: CANONICAL },
+    openGraph: { title, description, url: CANONICAL, type: "website" },
+  };
+}
 
 export default async function PersonalYearCardHub({
   searchParams,
@@ -39,6 +41,8 @@ export default async function PersonalYearCardHub({
 }) {
   const { bm, bd, year } = await searchParams;
   const resume = bm && bd && year ? { bm, bd, year } : undefined;
+  const nowYear = new Date().getUTCFullYear();
+  const nextYear = nowYear + 1;
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -72,7 +76,8 @@ export default async function PersonalYearCardHub({
         <p className="pyc-lede">
           Every calendar year sets one Major Arcana card for you, drawn from your birthday through
           tarot numerology. It&rsquo;s the theme running under the whole year, the thing it keeps
-          coming back to. Read it early so you can work with it intentionally.
+          coming back to. Read it early so you can work with it intentionally. Find your card for{" "}
+          {nowYear} below, or look ahead to {nextYear}.
         </p>
 
         <YearCardCalculator resume={resume} />
