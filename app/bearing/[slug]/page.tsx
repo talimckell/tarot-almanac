@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
 import ShareImageButton from "../../components/ShareImageButton";
+import ChartCtaButton from "../../components/ChartCtaButton";
 import YourBearingBanner from "./YourBearingBanner";
 import { getCardBySlug } from "@/lib/cards";
 import { MAJORS, MAJOR_SLUGS } from "@/lib/almanac";
@@ -130,8 +131,9 @@ export default async function BearingPage({
           The Bearing is the lens the rest of your almanac is read through. The same day meets a
           {` ${card.name}`} Bearing differently than it meets any other. It is where you begin.
         </p>
+        <ChartCtaButton variant="onDark" label="See your full natal chart &rarr;" margin="18px 0 8px" />
         <p className="dates">
-          <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/tarot-birth-card">Find your tarot birth card</Link> · <Link href="/chart">See your natal chart</Link>
+          <Link href={`/tarot/${card.slug}`}>See the full card for {card.name}</Link> · <Link href="/tarot-birth-card">Find your tarot birth card</Link>
         </p>
         <div style={{ marginTop: 20 }}>
           <ShareImageButton
