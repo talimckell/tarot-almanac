@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-chariot",
     "cardMeta": "Major Arcana VII · Water · the first push out into the world",
-    "essence": "The Chariot is the part of you that moves with purpose. It is drive, momentum, the will to actually go somewhere rather than only intend to. It holds the reins from the inside.",
-    "narrative": "Seventh, and the first big push outward. The self has been built and has made its first real choice in the Lovers, and now it has to move, to take all of that into the world and go. The image is someone driving a chariot pulled by two creatures facing different directions, and the whole trick of the card is that they're steered by will rather than reins, held together by the driver's own focus. That's the lesson: forward motion that comes from inner direction, not from being whipped along. It arrives at the close of the journey's first stretch, the last card before Strength changes the register entirely. The Chariot is ambition, but the aligned kind, drive that knows what it's driving toward. Without that inner steering, the same momentum just scatters or stalls.",
+    "essence": "The Chariot card in the Tarot represents a drive toward ambition and purpose. It's all about getting into action after making significant choices, like those made during the Lovers card. The imagery of a chariot pulled by two creatures facing different directions captures the essence of focus and will. You steer your own path rather than being dragged along by external pressures.",
+    "narrative": "This card is the first big push outward. The self has been developed and is now ready to take all that has been learned into the world. The Chariot teaches you about forward motion that comes from inner direction, not just going through the motions. It signals the close of the journey's first stretch before Strength changes the tone completely. This card embodies ambition, but it's the kind that's aligned with your true goals. Without that inner steering, you could find yourself scattered or stalled.",
     "gift": {
       "keywords": [
         "determination",
@@ -16,7 +16,7 @@
         "self-mastery",
         "agency"
       ],
-      "body": "Upright, the Chariot is the day the wanting becomes moving. It's finishing the thing you kept circling, the project that finally has motion under it, the decision made and acted on the same week instead of deliberated for a year. The gift is self-mastery, the two pulling forces held in one direction by your own focus. Your drive doesn't have to look like anyone else's to be real. It can be slow, soft, nonlinear, and still carry you exactly where you meant to go. You know what moves you, and you know how to hold the reins from within.",
+      "body": "When upright, the Chariot symbolizes determination, aligned action, momentum, self-mastery, and agency. It suggests that the time has come to make your desires a reality. Projects finally gain momentum, and decisions get acted on rather than overanalyzed. The gift here is self-mastery. The two forces that pull you are directed by your own focus. Your journey may be slow and nonlinear, yet it's still guiding you where you intend to go.",
       "affirmation": "I move forward with purpose. I steer from my own center."
     },
     "shadow": {
@@ -27,7 +27,7 @@
         "misaligned goals",
         "loss of direction"
       ],
-      "body": "The reins slip. The Chariot's shadow is the engine running with no one steering, motion for its own sake, busy and exhausted and not sure anymore where you're even headed. It's burnout dressed as ambition, the white-knuckle grip on goals that stopped being yours a long time ago. Or the two horses break in different directions and you stall out completely, all that force and nowhere to put it. Underneath is often the belief that if you're not winning you're failing, that to stop is to lose. So you keep driving a route you no longer believe in, because pulling over feels like defeat.",
+      "body": "When reversed, the Chariot might indicate a loss of direction. The reins can slip, leading to movement without purpose, resulting in burnout disguised as ambition. You may push hard towards goals you don't even want anymore. The two creatures pulling in opposite directions could leave you stalled, overwhelmed, and unsure of where you're headed. Often, there's a belief that if you're not continually pushing forward, you're failing, which can lead to driving down a path that no longer feels right.",
       "affirmation": "I can stop without it meaning I failed. Rest is part of how I move."
     },
     "reclaiming": {
@@ -37,15 +37,15 @@
         "rerouting",
         "refusing the race"
       ],
-      "body": "The Chariot reverses a second way, as a refusal to keep proving you can go fast. You are not your productivity. So much of what gets called drive is really just speed performed for an audience, and this is you stepping out of that race. If the road ahead feels wrong, you get to reroute. You can pull over. You can turn back and call it wisdom rather than failure. There's no shame in the pause, the recalibration, the slow path chosen on purpose. If the only success you were shown was fast and loud and upward, the reclaiming Chariot is you deciding where you're actually going and moving at the pace that's yours.",
+      "body": "In its reversed state, the Chariot can also signify a refusal to conform to the fast-paced expectations society often demands. This is about stepping out of the productivity race and reassessing what success means for you. If the path ahead feels wrong, it's perfectly acceptable to reconsider your direction. Taking time to pause and reflect on your choices is a form of wisdom rather than defeat.",
       "affirmation": "I am not my productivity. I get to choose the route and the pace."
     },
     "skills": [
-      "Setting goals from your values rather than your fears",
-      "Checking what's actually driving an action before you take it",
-      "Grounding in the body before a big decision",
-      "Letting progress count without it being perfect",
-      "Rerouting when the road stops being yours"
+      "Setting goals based on your values rather than your fears",
+      "Checking what's genuinely driving your actions before you take them",
+      "Grounding yourself before making significant decisions",
+      "Letting progress count without needing it to be perfect",
+      "Rerouting when the road doesn't feel right"
     ]
   },
   "bearing": {
@@ -98,6 +98,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you move while other people are still deciding? Act before the conditions are perfect because waiting for perfect means not going? That's a Chariot way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Chariot has no reins. He's steering two creatures pulling in opposite directions with nothing but his own focus. That's the whole card."
+  },
+  "contexts": {
+    "yesNo": "The Chariot offers a clear yes, especially when questions revolve around drive, travel, or determination to push something through. It encourages you to take the reins and commit to a single direction rather than waiting for perfect conditions.",
+    "asFeelings": "If someone feels the Chariot toward you, they are likely certain and already moving forward. You might sense strong energy with little softness, reflecting more about control rather than doubt.",
+    "asPerson": "This represents a driven and self-assured individual, someone who sets a course and sticks to it. They are focused and competitive, though they risk steamrolling others in pursuit of their goals.",
+    "asAdvice": "Choose one direction and commit. Don't let yourself be pulled in multiple ways. The Chariot thrives on harnessing opposing forces and aiming them at a single goal. Take charge of what you can control, and move.",
+    "timing": "Expect quick outcomes. Things could escalate in weeks, especially around decisions you push through yourself or travel plans.",
+    "howSomeoneSeesYou": "People may see you as capable and in command, someone who knows where they are headed. You come across as driven and possibly a bit intimidating. The risk lies in seeming solely focused on forward movement, so make sure you balance that with openness."
   },
   "slug": "chariot"
 }
