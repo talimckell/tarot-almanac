@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-hierophant",
     "cardMeta": "Major Arcana V · Earth · where the journey meets what came before it",
-    "essence": "The Hierophant is the part of you that learns from what came before. He is tradition, lineage, the knowledge that gets handed down rather than invented from scratch. He stands for belonging to something older than yourself.",
-    "narrative": "He's the fifth card, and he arrives right after the Emperor builds the structure. Where the Emperor makes the walls, the Hierophant fills the rooms with meaning, the rituals and teachings and ways-of-doing that a structure accumulates once it's been standing a while. He sits between two pillars like the High Priestess did, but his are out in the open, public where hers were veiled. That's the difference: she's the knowing you find alone, he's the knowing a community keeps and passes on. Early in the journey he's the question of what you'll accept from the people who came before you. The hand raised in blessing, the keys at his feet, the students kneeling: all of it is about transmission, one generation handing the next what it learned. The trouble is that traditions don't only carry wisdom. They carry the rules nobody questioned, too.",
+    "essence": "The Hierophant card in Tarot stands for tradition, mentorship, and shared beliefs. He represents the wisdom passed down through generations. Picture him between two pillars, wearing a triple crown, a hand raised in blessing. Two crossed keys lie at his feet, and two students kneel before him. This card embodies the part of you that learns from those who came before. It's about belonging to something greater than yourself.",
+    "narrative": "As card number five, the Hierophant follows the Emperor. While the Emperor constructs the walls, the Hierophant adds meaning to the spaces within: the rituals and customs that a community gathers over time. He sits between two pillars like the High Priestess, but his are more visible. The High Priestess represents individual knowledge, whereas the Hierophant signifies collective wisdom. For the Fool, this card poses a real question: What should you accept from those who walked this path before you? Traditions can be wise, but they also come with rules that may never have been questioned. When this card appears, it prompts reflection on what you've learned and what you still believe.",
     "gift": {
       "keywords": [
         "tradition",
@@ -17,8 +17,8 @@
         "belonging",
         "learning within structure"
       ],
-      "body": "Upright, the Hierophant is the gift of not having to start from nothing. There are people who knew things before you arrived, and you get to learn from them. It's the mentor who shortens your road by years, the ritual that holds you when you can't hold yourself, the relief of belonging somewhere with a history. You inherit only what resonates, and what resonates can be real healing. There's strength in being part of a lineage, in knowing the practice you're doing has steadied people for a long time before you. You belong to something bigger than this moment.",
-      "affirmation": "I learn from those who came before me. I am part of something older than myself."
+      "body": "When the Hierophant shows up upright, it highlights the value of tradition, mentorship, and shared rituals. There's comfort in not having to figure everything out on your own. A mentor can spare you from years of trial and error. Weekly rituals can anchor you during tough times. Belonging to a group with a history is a relief. This card reminds you that you can learn from those who've previously walked this road.",
+      "affirmation": "I learn from those who came before me. I'm part of something older than myself."
     },
     "shadow": {
       "keywords": [
@@ -28,7 +28,7 @@
         "blind obedience",
         "fear of difference"
       ],
-      "body": "The tradition closes its fist. The Hierophant's shadow is belonging that costs you yourself, the institution that wants your obedience more than your growth. It's doing the ritual long after it stopped meaning anything because leaving would mean being cast out. It's the teaching repeated as a rule with the reason long forgotten. Sometimes it's the quiet pressure to conform, to want what you're supposed to want, to keep your real questions to yourself in the room where they'd be unwelcome. Underneath is usually the fear of not belonging, which is a real and old fear, and the shadow trades your truth to keep the membership.",
+      "body": "In reverse, the Hierophant may signal issues like dogma, blind obedience, or a fear of being different. Belonging can sometimes come with the price of losing yourself. You might find yourself performing rituals that have lost their meaning, staying in a place that feels restrictive out of fear of being cast out. You could be following outdated rules without understanding their origins. Real questions might go unasked because you're concerned they won't be accepted. Underneath, the fear of not fitting in looms.",
       "affirmation": "I can belong somewhere without disappearing into it. My questions are allowed in the room."
     },
     "reclaiming": {
@@ -38,15 +38,15 @@
         "queer mysticism",
         "rewriting belief"
       ],
-      "body": "The Hierophant reverses a second way, and it is holy refusal. This is the break from the systems that tried to erase you, the decision to stop asking permission from an institution that was never going to give it. It asks the real questions: what if your body is the temple now? What if your own truth is the text? You get to keep what fed you and leave the rest at the door. You can build a practice from scratch, stitched together from many lineages or invented where none existed, and it is no less sacred for being yours. If the tradition you were handed had no room for you, the reclaiming Hierophant is you becoming your own authority on the holy.",
-      "affirmation": "I am allowed to find my own sacred, even if I have to build it from scratch."
+      "body": "The Hierophant reversed can signify breaking away from a restrictive system. You might finally stop seeking permission from an institution that never acknowledged your worth. You hold onto what nourishes you and leave the rest behind. You could create your own practices, drawing from multiple traditions or even crafting something entirely new. That can be just as sacred. This card encourages you to be your own authority on what feels holy.",
+      "affirmation": "I'm allowed to find my own sacred, even if I have to build it from scratch."
     },
     "skills": [
-      "Keeping what resonates and releasing what doesn't",
-      "Finding teachers and communities aligned with your actual values",
-      "Questioning a practice without having to abandon it",
-      "Building ritual that means something to you",
-      "Looking honestly at what you inherited and what you'd choose"
+      "Keeping the parts of a tradition that resonate with you and letting go of the rest",
+      "Finding teachers and communities that align with your values",
+      "Questioning practices without feeling you must abandon them",
+      "Building rituals that hold personal meaning",
+      "Examining what you've inherited and deciding what you want for yourself"
     ]
   },
   "bearing": {
@@ -99,6 +99,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you want to know who figured something out before you, and what they learned? Feel more settled inside a practice that has years behind it than one you invented this morning? That's a Hierophant way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Hierophant has keys at his feet. He's not holding them. He put them down. The question is whether that means anyone can pick them up."
+  },
+  "contexts": {
+    "yesNo": "Yes, if you follow traditional paths. The Hierophant supports adhering to the rules, seeking expert advice, and doing things in the established way. If your plan requires breaking conventions, lean towards no.",
+    "asFeelings": "If someone has Hierophant feelings for you, they might be thinking about commitment in conventional terms. They could be imagining marriage, meeting family, or building something lasting. This indicates they take the relationship seriously and want to do things properly.",
+    "asPerson": "Think of a teacher, mentor, or guide. This person often belongs to an institution, like a school or church. They offer wisdom and reliability but may also cling to their ingrained beliefs.",
+    "asAdvice": "Learn from someone who's walked this path before. Seek a mentor, take a class, or ask someone you admire about their experiences. Understanding the rules is key, even if you decide to break them later.",
+    "timing": "Expect things to move slowly and by the book. The Hierophant indicates processes that go through official channels like applications or approvals, so plan for months. This may align with traditional milestones such as graduations, weddings, or holidays.",
+    "howSomeoneSeesYou": "People perceive you as wise, trustworthy, and principled, the go-to person for advice. They see you as someone who knows the right way to do things. Some may find you a bit traditional, so be open to sharing new perspectives."
   },
   "slug": "hierophant"
 }

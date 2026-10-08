@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-lovers",
     "cardMeta": "Major Arcana VI · Air · the first real choice",
-    "essence": "The Lovers is the part of you that chooses, and is chosen, with your whole self showing. It is intimacy and alignment, the meeting of two that asks you to be genuinely known. It lives where connection and choice overlap.",
-    "narrative": "Sixth in the sequence, the Lovers is where the journey first asks you to decide. Everything before it built the self: the Magician's will, the Empress's fullness, the Emperor's structure. The Lovers is where that self meets another and has to choose, not just whom to love but what to value and who to become alongside someone else. The old image shows two figures with a third presence above them, blessing or witnessing the bond. People read it as romance, and it can be, but the deeper subject is alignment, choosing what actually matches you rather than what you were told to want. It comes early because choosing from your own center, instead of from fear or habit, is one of the first adult tasks. The card holds both the intimacy and the exposure, because you can't be truly chosen without first being truly seen.",
+    "essence": "The Lovers card in Tarot is all about love, connection, and making choices that reflect who you truly are. In the imagery, two figures stand under an angel with the sun in the background. One figure has a tree of flames behind them, while the other has a tree with a serpent. A mountain separates them, symbolizing the choices we make regarding love. This card represents the part of you that has the power to choose and be chosen.",
+    "narrative": "As the sixth card, the Lovers marks the point in the Fool's journey where a real choice needs to be made. The earlier cards help to construct a sense of self, and now that self meets a potential partner. This is about deciding what to value and who to become. While many read this card strictly as romance, it also speaks to alignment. It challenges you to choose what truly fits you. The Lovers prompts you to reflect on whether your choices authentically represent who you are.",
     "gift": {
       "keywords": [
         "connection",
@@ -16,8 +16,8 @@
         "conscious choice",
         "being seen"
       ],
-      "body": "Upright, the Lovers is being known and not turned away. It's telling someone the thing you were sure would make them leave, and watching them move closer instead. It's the relief of choosing a person, or a job, or a city, and feeling your whole self agree with the choice instead of half of you bracing. That agreement is the gift. You can usually feel the difference in your body: the choices that fit settle you, and the ones that don't keep you slightly clenched no matter how good they look on paper. This is what it feels like when what you want and what you value point the same way. You are worthy of love that sees you, and you're allowed to choose it on purpose.",
-      "affirmation": "I am worthy of love that sees me. I can choose what actually fits who I am."
+      "body": "When the Lovers appears upright, it signals deep connection, intimacy, and shared values. It's about being open and sharing fears, and watching someone draw closer rather than pull away. Making a choice, whether it's a partner, job, or place to live, feels right when your entire being supports that decision. The right choices settle your spirit, while the wrong ones can leave you feeling uneasy, even if they look ideal on the outside. You deserve the love that sees you for who you are, and you have the right to choose it deliberately.",
+      "affirmation": "I'm worthy of love that sees me. I can choose what fits who I am."
     },
     "shadow": {
       "keywords": [
@@ -27,7 +27,7 @@
         "unspoken needs",
         "avoidance"
       ],
-      "body": "The connection starts running on everything you're not saying. The Lovers' shadow is the relationship held together by silence, where you stopped naming what you needed because keeping things smooth felt more important, and now smooth is all that's left. It's the choice you keep almost making, hoping it'll resolve itself if you wait long enough. It's staying true to someone else's values while quietly abandoning your own. Underneath the avoidance is usually an old fear that showing your real self gets you left, so you show an easier version and call it closeness. The two of you are still here. What's gone missing is the truth between you.",
+      "body": "In reverse, the Lovers might suggest misalignment or indecision. It hints at unspoken needs that can lead to tension. Perhaps you've stopped expressing what you need to keep things calm. The peace may feel superficial. This could also reflect a decision you're hesitant to make, hoping it will just resolve itself. You might find yourself living according to someone else's values while neglecting your own. Often, there's an underlying fear that showing your true self could push someone away.",
       "affirmation": "I can say the true thing and stay. My real needs are allowed to take up space."
     },
     "reclaiming": {
@@ -37,15 +37,15 @@
         "redefining love",
         "self-reconnection"
       ],
-      "body": "The Lovers reverses a second way, as a refusal of the single script for what love has to look like. You're not broken if you're alone, and you're not failing if something ended. Love is not one shape. This is chosen family, queer kinship, the bond that rewrites the rules about who counts as your people. It's also the love that comes back to yourself, the wholeness that arrives when you stop waiting to be completed by someone else. You were never half a person looking for the other half. If the only love you were shown came with a fixed cast and a prescribed ending, the reclaiming Lovers is you choosing again, on your own terms.",
-      "affirmation": "I do not have to follow the script. I am whole, and I get to choose my people."
+      "body": "The Lovers reversed can also mean stepping away from conventional ideas about love. Embracing singleness or acknowledging that a past relationship was meaningful counts too. This card celebrates chosen family, queer friendships, and self-love. You've always been a complete person, and it's up to you to determine who you want in your life.",
+      "affirmation": "I don't have to follow the script. I'm whole, and I get to choose my people."
     },
     "skills": [
-      "Checking a choice against your real values, not your fears",
-      "Naming a need before it hardens into resentment",
-      "Letting yourself be seen a little past what's comfortable",
-      "Telling alignment apart from approval",
-      "Building the family you choose"
+      "Evaluating choices based on your values",
+      "Communicating your needs before resentment builds",
+      "Allowing yourself to be seen beyond your comfort zone",
+      "Distinguishing alignment from seeking approval",
+      "Constructing the family you choose"
     ]
   },
   "bearing": {
@@ -98,6 +98,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Can you feel in your body whether a choice fits you or not? Not whether it's smart or sensible, but whether it's actually yours? That's a Lovers way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The two figures in the Lovers are standing separately. They're not holding on. They're just both there, under the same light, being seen."
+  },
+  "contexts": {
+    "yesNo": "This card is a strong yes, especially when it comes to love and values that resonate with you. If you're torn between options, go with the one that feels most authentic.",
+    "asFeelings": "If someone feels the Lovers for you, there's a strong mutual attraction that goes beyond just chemistry. They want closeness, and they want to understand you.",
+    "asPerson": "This card represents someone romantic and open-hearted. They value connection and shared beliefs, but they might struggle with tough decisions, especially those that could disappoint others.",
+    "asAdvice": "Make choices that reflect who you are. Be honest about your desires, even if it's challenging. If you're caught between two paths, notice which one brings you the most ease.",
+    "timing": "Expect movement soon after a decision is made. The Lovers suggests things can progress quickly once you commit. Delaying a choice will keep everything stagnant.",
+    "howSomeoneSeesYou": "People see you as warm and approachable. You have a knack for making others feel valued. Just be aware that some might seek more closeness than you're comfortable with, so communicate your boundaries clearly."
   },
   "slug": "lovers"
 }
