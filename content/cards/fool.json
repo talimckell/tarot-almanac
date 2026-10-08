@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-fool",
     "cardMeta": "Major Arcana 0 · Air · the beginning, before the journey starts",
-    "essence": "The Fool is the part of you willing to step off into something before you can see where your foot will land. He is pure beginning, the openness that comes before experience has had a chance to make you careful. He trusts that the ground will be there.",
-    "narrative": "He's numbered zero, which means he isn't really on the path yet. He's the moment just before it, standing at the edge with everything still ahead and nothing yet decided. That zero matters. Every other card is a step he hasn't taken yet. The Magician's focus, the High Priestess's depth, the long row of trials further along: none of it has happened to him. He carries almost nothing, a small bundle, a white rose, a dog at his heels. What he has instead of experience is faith, the kind that lets a person move before they have proof. The whole journey of the deck is what happens to the Fool, and he begins it by being willing to begin at all. The risk and the gift are the same thing here, which is that he doesn't yet know what he doesn't know.",
+    "essence": "The Fool card in Tarot symbolizes new beginnings and the courage to start without knowing the outcomes. Positioned at the edge of a cliff, he's carrying a small bundle with a dog by his side. He's ready to leap, trusting that the ground will be there to catch him.",
+    "narrative": "Numbered zero, the Fool represents the moment right before a journey begins. Every other card in the Major Arcana reflects something he'll experience. With little to carry, he substitutes experience with faith, taking action before acquiring proof. This embodies both his gift and risk, as he hasn't grasped what he doesn't know. When the Fool appears in a reading, it raises a question: Are you focusing on the possibilities or the fears?",
     "gift": {
       "keywords": [
         "beginnings",
@@ -17,8 +17,8 @@
         "trust",
         "the leap"
       ],
-      "body": "Upright, the Fool is the freedom of the open road. This is the readiness to start something without a guarantee, to say yes before you've worked out every step. It feels light because it is light, unburdened by the weight of all the things that could go wrong. There's a kind of wisdom in it that experience often forgets, the willingness to be a beginner, to meet your life as if it were new. You don't need to have it figured out to take the first step. The not-knowing is allowed to be part of the adventure.",
-      "affirmation": "I can begin before I am ready. The first step is the only one I need to see."
+      "body": "When the Fool appears upright, it signifies new beginnings, faith, spontaneity, openness, and trust. It's an encouraging sign for starting fresh, whether it's a move, a new job, a trip, or tackling that project you've been postponing. You don't need a master plan. The Fool feels light, unencumbered by worries. Embracing your beginner's mindset can lead to exciting new opportunities.",
+      "affirmation": "I can begin before I'm ready. The first step is the only one I need to see."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "fear of commitment",
         "drifting"
       ],
-      "body": "Reversed, the leap becomes a way of never landing. The Fool's shadow is the part that uses freedom to avoid, that starts everything and finishes nothing because finishing would mean being held to something. It can look like recklessness, leaping without ever once looking, or it can look like the opposite, a person frozen at the edge who has talked themselves out of every step. Underneath both is the same fear, that committing to this road means losing all the others, and so you keep them all open by walking none of them.",
-      "affirmation": "I can choose a path and still be free. Committing to one thing is not the loss of everything else."
+      "body": "In reverse, the Fool might indicate recklessness, avoidance, naivety, fear of commitment, or drifting. You may find yourself starting many things without finishing any because completing them means being locked into something. Alternatively, you might hesitate, standing at the edge and talking yourself out of stepping forward. This often stems from the fear that choosing one path means losing out on others.",
+      "affirmation": "I can choose a path and still be free. Committing to one thing doesn't mean losing everything else."
     },
     "reclaiming": {
       "keywords": [
@@ -38,15 +38,15 @@
         "unmapped living",
         "your own timing"
       ],
-      "body": "The Fool reverses a second way, and it isn't recklessness. It's a refusal to live on the schedule you were handed. This is the person who declines to have it all figured out by now, who starts over later than they were supposed to, who picks up something brand new at an age when the world says you should already be settled. You are allowed to be a beginner whenever you choose to be. You're allowed to leave a path that was working on paper because it wasn't yours. If everyone around you has a map and you don't, that can be a refusal rather than a lack, the decision to walk somewhere that doesn't have a route yet.",
+      "body": "The Fool reversed can also suggest rejecting the expected timeline of life. Whether it's starting anew at forty, returning to school later in life, or leaving a seemingly perfect job that never felt right, your journey doesn't have to follow a set route. You have the freedom to be a beginner at any stage.",
       "affirmation": "I begin on my own timing. An unmapped road is still a real road."
     },
     "skills": [
-      "Tolerating uncertainty without rushing to resolve it",
-      "Distinguishing a true leap from an escape",
-      "Letting yourself be new at something",
-      "Noticing where fear is dressed up as freedom",
-      "Trusting your own timing over the schedule you were handed"
+      "Living with uncertainty without rushing to resolve it",
+      "Distinguishing between a genuine leap and running away",
+      "Allowing yourself to be new at something",
+      "Recognizing when \"keeping my options open\" is a sign of fear",
+      "Trusting your own timing over societal expectations"
     ]
   },
   "bearing": {
@@ -99,6 +99,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you start things before you've figured out how they end, and somehow trust you'll sort the landing on the way down? Begin late, begin again, pick up brand new things at an age when you're \"supposed\" to be settled? That's a Fool way of moving through the world. → [your Bearing]",
     "didYouNoticeCardTake": "Everyone calls the Fool reckless, about to walk off the cliff. But look at his face. He isn't scared. What does he know that we forgot?"
+  },
+  "contexts": {
+    "yesNo": "Yes, especially for questions about starting something new, like a job, move, or trip. The Fool encourages you to proceed even without a complete plan. If it involves a significant financial risk, proceed with caution.",
+    "asFeelings": "If someone feels the Fool toward you, they're excited and impulsive, perhaps not planning too far ahead. Their feelings are genuine and fresh, but don't expect a detailed plan just yet.",
+    "asPerson": "The Fool represents a free spirit, often young or young at heart, eager to embrace opportunities without overthinking. They're enjoyable to be around but might struggle with following through.",
+    "asAdvice": "Start your journey. You don't need a full checklist to take that first step, and waiting until you feel fully prepared might mean waiting indefinitely. Travel light and take the leap. Just check that you aim toward something you genuinely desire.",
+    "timing": "Expect things to begin soon, likely without much warning. The Fool indicates swift beginnings and could mean days or weeks, especially for new ventures.",
+    "howSomeoneSeesYou": "People perceive you as open and easygoing. You're the person who'd readily agree to a spontaneous trip. Some might view this as being naive. If you want others to take you more seriously, demonstrate your consideration for the details."
   },
   "slug": "fool"
 }
