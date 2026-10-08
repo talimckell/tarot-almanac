@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/strength",
     "cardMeta": "Major Arcana VIII · Fire · the turn from outer force to inner power",
-    "essence": "The Strength card in Tarot represents courage, patience, inner strength, and compassion. A woman in white rests her hands on a lion's jaw, calm and unhurried. An infinity symbol hovers above her head with a mountain in the distance. She's gentle with the lion and completely unafraid. This card shows your ability to feel intense emotions like fear, anger, and desire while still keeping your steadiness.",
-    "narrative": "Strength is card number eight, shifting the kind of power being discussed. The Chariot before it was all about moving forward with force and drive. Now, Strength turns inward; it asks whether you can manage your wild side with kindness. The woman and the lion in this card coexist harmoniously. This is how your instincts should be treated. You can approach your rage, hunger, or fear patiently. For the Fool, this is where mastering the outside world becomes about mastering yourself. Strength challenges you to ask what feelings you're trying to suppress and what might happen if you held them gently instead.",
+    "essence": "The Strength card in Tarot represents courage, patience, inner strength, and compassion. A woman in white rests her hands on a lion's jaw, calm and unhurried. An infinity symbol floats above her head, and there's a mountain in the distance. She's gentle with the lion and not afraid of it at all. This card is about feeling big emotions like fear, anger, and desire and staying steady through them.",
+    "narrative": "Strength is card number eight. Some older decks put it at eleven, but in the Golden Dawn order we use, it comes right after the Chariot. The Chariot is about pushing forward with drive and force. Strength turns that energy inward. The woman in the card is calm with the lion, and the lion is calm with her. That's how this card asks you to treat your own instincts, like rage, hunger, and fear. You meet them with patience. For the Fool, this is where learning to handle the outside world turns into learning to handle himself. When Strength shows up in a reading, ask yourself which feelings you've been pushing down, and what would happen if you were gentler with them.",
     "gift": {
       "keywords": [
         "inner resilience",
@@ -16,8 +16,8 @@
         "compassion",
         "integration"
       ],
-      "body": "When Strength appears upright, it means inner resilience, quiet courage, and compassion. You can stay steady during tough conversations without becoming cold or exploding. It means feeling fear completely but still moving forward. Your calmness is a form of power. Facing your own anger, desire, and grief with steadiness shows real strength. You don't need to roar to prove it.",
-      "affirmation": "My strength is steadiness. I can hold all parts of myself without losing who I am."
+      "body": "When Strength appears upright, it means inner resilience, quiet courage, compassion, and patience. It's staying steady in a hard conversation without going cold or blowing up. It's feeling scared all the way through and doing the thing anyway, without pretending you weren't scared. It might be sitting with a friend who's falling apart and staying calm for both of you, or taking a breath before you answer an email that made you furious. Being calm and gentle takes real strength. You can meet your own anger, desire, and grief the way the woman meets the lion, with a steady hand.",
+      "affirmation": "My strength is steadiness. I can hold all of myself without losing myself."
     },
     "shadow": {
       "keywords": [
@@ -27,8 +27,8 @@
         "collapse",
         "outbursts"
       ],
-      "body": "In reverse, Strength can signify repression, feeling overwhelmed, or having explosive outbursts. You may bottle up your feelings until they slip out sideways, like snapping at someone or developing a headache. Alternatively, the pressure might build until you release everything all at once. A calm exterior might hide a held breath, masking a fear that letting yourself feel the full weight of anger or desire means losing control forever.",
-      "affirmation": "I can experience my feelings without being overwhelmed. I can loosen my grip while staying in control."
+      "body": "In reverse, Strength can point to repression, overwhelm, outbursts, or fear of your own power. You might push your feelings down so hard that they leak out sideways, like snapping at someone you love or getting a headache that won't go away. Or the pressure builds until everything comes out at once. Someone can look calm on the outside and be holding their breath on the inside. Underneath, there's often a fear that if you let yourself feel the full anger or want something completely, you'd lose control for good. Try naming the feeling out loud, even just to yourself, before it gets that big.",
+      "affirmation": "I can feel it without being run by it. I can loosen my grip and still stay in control."
     },
     "reclaiming": {
       "keywords": [
@@ -37,15 +37,15 @@
         "being witnessed",
         "refusing the armor"
       ],
-      "body": "Strength reversed also suggests putting down a strength that was only ever about survival. If you developed your strength by denying your needs or never asking for help, it's okay to let that go. Allow someone to see your struggles. Let others hold things for you for a change. It's fine to rest. Being vulnerable takes more courage than always being strong.",
+      "body": "Strength reversed can also mean putting down a strength that was only ever about survival. If you got strong by hiding your needs, making yourself small, and never asking anyone for help, you can stop now. Let someone see you struggle. Let someone else carry things for a while. Rest when you need to. Being seen at your most tired takes courage too, and the people who care about you will usually want to help.",
       "affirmation": "I can lay down my armor. Sharing my struggles takes more strength than hiding them."
     },
     "skills": [
-      "Breathing through strong emotions",
-      "Acknowledging feelings before they take over",
-      "Being kind to yourself during tough moments",
-      "Differentiating steadiness from suppression",
-      "Allowing yourself to receive help"
+      "Breathing through big feelings",
+      "Naming a feeling before it takes over",
+      "Being kind to yourself when things are hard",
+      "Telling steadiness apart from pushing feelings down",
+      "Letting yourself be helped"
     ]
   },
   "bearing": {
@@ -100,11 +100,11 @@
     "didYouNoticeCardTake": "She's not holding the lion's mouth shut. Her hand is resting on his jaw. She's not trying to stop him. She's just there."
   },
   "contexts": {
-    "yesNo": "Yes, if you remain patient and steady. Strength suggests you can handle the situation, but it may require persistence and self-control rather than brute force. It's a strong yes for matters of recovery, courage, or overcoming challenges.",
-    "asFeelings": "If someone feels Strength toward you, their feelings are deep, patient, and protective. They're drawn to you and prefer to take things slowly, even if they feel a strong desire to rush.",
-    "asPerson": "This is a calm, kind person who stays steady in crises. They're patient and have a natural way with animals, children, and those having a rough time. They might hide their own struggles because they're used to being the \"strong\" one.",
-    "asAdvice": "Be gentle with yourself and stay steady. You'll make more progress with patience than with force, whether you're dealing with yourself or others. When a big feeling comes up, take a moment to breathe before you act.",
-    "timing": "Slow but sure. Strength focuses on processes that require patience, often over a few weeks or months.",
+    "yesNo": "Yes, if you stay patient and steady. Strength says you can handle this, though it may take persistence and self-control more than force. It's a strong yes for questions about recovery, courage, or getting through something hard.",
+    "asFeelings": "If someone feels Strength toward you, their feelings are deep, patient, and protective. They're drawn to you and willing to take things slowly, even if part of them wants to rush. They're careful with you because you matter to them.",
+    "asPerson": "A calm, kind, quietly brave person who stays steady in a crisis. They're patient with others and good with animals, children, and anyone having a hard day. They may hide how much they're struggling, because they're used to being the strong one.",
+    "asAdvice": "Be gentle with yourself and stay steady. You'll get further with patience than with force, with yourself and with other people. When a big feeling comes up, take a breath before you act on it.",
+    "timing": "Slow but sure. Strength points to things that take patience, usually a few weeks or months. Keep going, even if it's taking longer than you hoped.",
     "howSomeoneSeesYou": "People see you as calm, kind, and stronger than you look. You're the one they trust to stay steady when things go wrong. Some may not realize how much you carry, so let the people close to you know when you need support."
   },
   "slug": "strength"

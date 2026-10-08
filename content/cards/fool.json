@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-fool",
     "cardMeta": "Major Arcana 0 · Air · the beginning, before the journey starts",
-    "essence": "The Fool card in Tarot symbolizes new beginnings and the courage to start without knowing the outcomes. Positioned at the edge of a cliff, he's carrying a small bundle with a dog by his side. He's ready to leap, trusting that the ground will be there to catch him.",
-    "narrative": "Numbered zero, the Fool represents the moment right before a journey begins. Every other card in the Major Arcana reflects something he'll experience. With little to carry, he substitutes experience with faith, taking action before acquiring proof. This embodies both his gift and risk, as he hasn't grasped what he doesn't know. When the Fool appears in a reading, it raises a question: Are you focusing on the possibilities or the fears?",
+    "essence": "The Fool card in Tarot represents new beginnings, faith, and the courage to start something before you know how it will turn out. A young man stands at the edge of a cliff with a small bundle over his shoulder, a white rose in his hand, and a little dog at his heels. He's looking up at the sky, about to step off. This card is about being willing to begin.",
+    "narrative": "The Fool is card number zero, so he comes before the journey of the Major Arcana really starts. Every card after him is something that will happen to him, from the Magician all the way to the World. He doesn't carry much, and he hasn't learned anything yet. What he has is trust that things will work out. That's what makes him brave, and it's also what makes him easy to trip up, because he doesn't know what could go wrong. The dog at his heels is often read as a warning, or as a friend trying to get his attention. When the Fool shows up in a reading, ask yourself whether you're paying more attention to what could go right or what could go wrong.",
     "gift": {
       "keywords": [
         "beginnings",
@@ -17,7 +17,7 @@
         "trust",
         "the leap"
       ],
-      "body": "When the Fool appears upright, it signifies new beginnings, faith, spontaneity, openness, and trust. It's an encouraging sign for starting fresh, whether it's a move, a new job, a trip, or tackling that project you've been postponing. You don't need a master plan. The Fool feels light, unencumbered by worries. Embracing your beginner's mindset can lead to exciting new opportunities.",
+      "body": "When the Fool appears upright, it means new beginnings, faith, spontaneity, and openness. It's a good sign for starting something, like a move, a new job, a trip, or the project you keep putting off because you can't see every step yet. You don't need the whole plan to begin. The Fool feels light because he isn't carrying around everything that could go wrong. It's saying yes to the trip with two days' notice, or signing up for the class where you'll be the oldest one there and the worst at it. Being new at something is fine, and it can be a lot of fun.",
       "affirmation": "I can begin before I'm ready. The first step is the only one I need to see."
     },
     "shadow": {
@@ -28,7 +28,7 @@
         "fear of commitment",
         "drifting"
       ],
-      "body": "In reverse, the Fool might indicate recklessness, avoidance, naivety, fear of commitment, or drifting. You may find yourself starting many things without finishing any because completing them means being locked into something. Alternatively, you might hesitate, standing at the edge and talking yourself out of stepping forward. This often stems from the fear that choosing one path means losing out on others.",
+      "body": "In reverse, the Fool can point to recklessness, avoidance, naivety, or fear of commitment. You might start a lot of things and finish very few, because finishing means being held to something. You might quit a job on a whim with no plan for rent, or jump into a relationship before you know the person. It can also go the other way. You stand at the edge for so long that you talk yourself out of every step. Both usually come from the same worry, that choosing one path means losing all the others. If you notice you're keeping every option open and not acting on any of them, pick one small thing and do it.",
       "affirmation": "I can choose a path and still be free. Committing to one thing doesn't mean losing everything else."
     },
     "reclaiming": {
@@ -38,15 +38,15 @@
         "unmapped living",
         "your own timing"
       ],
-      "body": "The Fool reversed can also suggest rejecting the expected timeline of life. Whether it's starting anew at forty, returning to school later in life, or leaving a seemingly perfect job that never felt right, your journey doesn't have to follow a set route. You have the freedom to be a beginner at any stage.",
+      "body": "The Fool reversed can also mean refusing the timeline you were handed. Starting over at forty, going back to school later than everyone else, or leaving a job that looked fine on paper because it was never right for you. People may tell you that you should have it figured out by now. You don't have to. If everyone around you seems to have a plan and you don't, you may be heading somewhere new. You can be a beginner at any age, as many times as you want.",
       "affirmation": "I begin on my own timing. An unmapped road is still a real road."
     },
     "skills": [
-      "Living with uncertainty without rushing to resolve it",
-      "Distinguishing between a genuine leap and running away",
-      "Allowing yourself to be new at something",
-      "Recognizing when \"keeping my options open\" is a sign of fear",
-      "Trusting your own timing over societal expectations"
+      "Living with not knowing how things will turn out",
+      "Telling a real leap apart from running away",
+      "Letting yourself be new at something",
+      "Noticing when \"keeping my options open\" is really fear",
+      "Trusting your own timing over the schedule you were handed"
     ]
   },
   "bearing": {
@@ -101,12 +101,12 @@
     "didYouNoticeCardTake": "Everyone calls the Fool reckless, about to walk off the cliff. But look at his face. He isn't scared. What does he know that we forgot?"
   },
   "contexts": {
-    "yesNo": "Yes, especially for questions about starting something new, like a job, move, or trip. The Fool encourages you to proceed even without a complete plan. If it involves a significant financial risk, proceed with caution.",
-    "asFeelings": "If someone feels the Fool toward you, they're excited and impulsive, perhaps not planning too far ahead. Their feelings are genuine and fresh, but don't expect a detailed plan just yet.",
-    "asPerson": "The Fool represents a free spirit, often young or young at heart, eager to embrace opportunities without overthinking. They're enjoyable to be around but might struggle with following through.",
-    "asAdvice": "Start your journey. You don't need a full checklist to take that first step, and waiting until you feel fully prepared might mean waiting indefinitely. Travel light and take the leap. Just check that you aim toward something you genuinely desire.",
-    "timing": "Expect things to begin soon, likely without much warning. The Fool indicates swift beginnings and could mean days or weeks, especially for new ventures.",
-    "howSomeoneSeesYou": "People perceive you as open and easygoing. You're the person who'd readily agree to a spontaneous trip. Some might view this as being naive. If you want others to take you more seriously, demonstrate your consideration for the details."
+    "yesNo": "Yes, especially if the question is about starting something new, like a job, a move, a trip, or a first date. The Fool says to go ahead even if you don't have every detail sorted. If there's a lot of money or safety at stake, it's still a yes, but do some homework first.",
+    "asFeelings": "If someone feels the Fool toward you, they're excited and a little giddy, and they haven't thought very far ahead. The feelings are real and new. They're enjoying the moment, so don't expect a plan or a promise from them yet.",
+    "asPerson": "A free spirit, often young or young at heart, who says yes first and figures it out later. They're fun to be around and up for almost anything, from a road trip to a new hobby. They can also be hard to pin down, and following through isn't their strong suit.",
+    "asAdvice": "Start. You don't need the whole plan to take the first step, and waiting until you feel completely ready can mean waiting a long time. Pack light and go. Before you leap, make sure it's something you want, and not just a way to get away from something else.",
+    "timing": "Soon, and probably suddenly. The Fool is the very beginning, so things tend to start fast and without much warning. Think days or weeks, especially for anything brand new.",
+    "howSomeoneSeesYou": "People see you as open, easygoing, and fun, the friend who'd say yes to a last-minute road trip. Some may see you as naive or not quite serious. If you need people to take you seriously on something, show them you've thought it through."
   },
   "slug": "fool"
 }

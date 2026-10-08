@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-empress",
     "cardMeta": "Major Arcana III · Earth · the first flourishing of the path",
-    "essence": "The Empress card in Tarot represents abundance, creativity, nurturing, and enjoying your physical self. She's seated in a field of ripe wheat, adorned with stars, and surrounded by trees and flowing water. Everything around her is thriving. She's the part of you that nurtures growth by providing care and space.",
-    "narrative": "As card number three, the Empress is where the first two cards begin to produce results. The Magician introduced will, and the High Priestess offered inner knowing. The Empress takes both of these and brings them to life. She comes just before the Emperor. She embodies growth while he embodies the structure that supports it, which is why she comes first. For the Fool, she teaches that creating takes patience as well as effort. Some things need time to ripen. When the Empress appears in a reading, she prompts you to reflect: What are you nurturing, and are you giving it the attention it needs?",
+    "essence": "The Empress card in Tarot represents abundance, creativity, nurturing, and enjoying life in your body. She sits on soft cushions in a field of ripe wheat, wearing a crown of twelve stars, with trees and a stream behind her. Everything around her is growing. This card is about making things, caring for things, and letting yourself enjoy them.",
+    "narrative": "The Empress is card number three. The Magician brought will and the High Priestess brought inner knowing, and the Empress is where those turn into something alive. She comes right before the Emperor. She's the growth, and he's the structure that protects it, which is why she comes first. For the Fool, she's a lesson that making things takes patience as well as effort. Some things need a whole season to grow, like a garden, a friendship, or a business. When the Empress shows up in a reading, ask yourself what you're growing right now and whether you're giving it what it needs.",
     "gift": {
       "keywords": [
         "abundance",
@@ -17,8 +17,8 @@
         "fertility",
         "the body"
       ],
-      "body": "When the Empress appears upright, it symbolizes abundance, creativity, nurturing, sensuality, and fertility. Imagine a time when ideas overflow and you can hardly jot them down fast enough. Picture preparing a meal for loved ones and savoring the experience together. Caring for others is seen as a valid pursuit. You're allowed to enjoy what you create and desire good things without feeling the need to earn them first. You deserve care too.",
-      "affirmation": "I create from fullness. There is enough, and I'm free to enjoy it."
+      "body": "When the Empress appears upright, it means abundance, creativity, nurturing, sensuality, and fertility. It's the afternoon when ideas come faster than you can write them down. It's cooking dinner for people you love and enjoying it as much as they do. It can be as simple as a long bath, clean sheets, or a walk somewhere green. The Empress treats caring for people and things as real work. You can enjoy what you make and want good things without earning them first. It's also a good time to let other people take care of you.",
+      "affirmation": "I create from fullness. There's enough, and I'm free to enjoy it."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "over-giving",
         "neglect of self"
       ],
-      "body": "In reverse, the Empress can signify depletion, over-giving, or neglecting your own needs. She might be the person who supports everyone else while forgetting to take care of herself. You may find yourself running out of creative inspiration, returning to the well only to discover it's dry. Care can morph into control, where managing someone else overshadows genuine support. Often, this stems from a fear that your worth hinges on how much you give.",
-      "affirmation": "I'm allowed to retain some of my care for myself. My worth isn't solely based on what I give."
+      "body": "In reverse, the Empress can point to depletion, over-giving, creative block, or neglecting yourself. It's the person who makes sure everyone else has eaten and forgets to eat. You might go back to the well for ideas and keep coming up empty. Care can also tip into control, where looking after someone turns into managing their life for them. Underneath, there's often a fear that you're only worth what you give to other people. If you're running on empty, take something back for yourself this week, even if it's only an hour.",
+      "affirmation": "I'm allowed to keep some of my care for myself. My worth isn't only what I give."
     },
     "reclaiming": {
       "keywords": [
@@ -38,15 +38,15 @@
         "self-sourced abundance",
         "redefining nurture"
       ],
-      "body": "The Empress reversed can signal a refusal to conform to narrow definitions of your body and life. Many decisions get made for us, like whether to have children or how to spend our time. This is someone who chooses for themselves what to cultivate, whether that's parenthood or something else. Your creativity might manifest in art, work, a community, or your own life. You decide what you want to bring into existence.",
-      "affirmation": "I determine what I bring to life. My creativity is mine, in whatever shape I choose."
+      "body": "The Empress reversed can also mean rejecting the narrow story about what your body and your life are for. A lot gets decided for us here, like whether to have children, what to make of ourselves, and how much of our time belongs to other people. This is someone who chooses for themselves what to create and what to care for, whether that's parenthood or something else. Your creativity might go into art, your work, a community you hold together, or your own life. You decide what you bring to life.",
+      "affirmation": "I decide what I bring to life. My creativity is mine, in whatever shape I choose."
     },
     "skills": [
-      "Creating from a place of rest",
-      "Allowing yourself to receive care",
-      "Recognizing when support turns into control",
-      "Putting your own needs first",
-      "Choosing what you want to create"
+      "Creating from a rested place",
+      "Letting other people take care of you",
+      "Noticing when caring for someone has turned into controlling them",
+      "Looking after your own needs",
+      "Deciding for yourself what you want to make"
     ]
   },
   "bearing": {
@@ -101,12 +101,12 @@
     "didYouNoticeCardTake": "The Empress is already sitting in a full field. She didn't plant it this morning. The abundance was there when she arrived."
   },
   "contexts": {
-    "yesNo": "Yes, especially regarding love, creative projects, pregnancy, home life, or financial growth over time. The Empress indicates that things are flourishing, even if patience is required for full realization.",
-    "asFeelings": "If someone feels the Empress toward you, it means they care about you and want to look after you. Their feelings are warm and affectionate, and they likely envision a future together, complete with a home.",
-    "asPerson": "A warm and generous soul who makes others feel at ease, often a parent, a host, or that friend who brings snacks. They have a keen sense of what's beautiful and comforting. At times, they might give so much that they neglect their own needs.",
-    "asAdvice": "Take care of yourself as you do for those around you. Nourish your body, rest, and dedicate time to something you love creating. Let your plans develop before you judge their potential.",
-    "timing": "Progress is gradual and steady. The Empress suggests growth that takes time: typically a season, around three months, or longer for significant changes. Things are maturing even if you can't see them yet.",
-    "howSomeoneSeesYou": "People perceive you as warm and nurturing. You're the one they turn to for comfort, and your space likely feels like a sanctuary. Some may rely on you more than is fair, so it's important to allow others to care for you too."
+    "yesNo": "Yes, especially for questions about love, creative projects, pregnancy, home, or money growing over time. The Empress points to things doing well. It may take some patience for the yes to fully arrive.",
+    "asFeelings": "If someone feels the Empress toward you, they care about you warmly and want to look after you. Their feelings are affectionate and physical, and they're comfortable around you. They may already picture a home and a life with you.",
+    "asPerson": "A warm, generous person who makes everyone feel at home. They might be a parent, a host, a gardener, or the friend who always shows up with food. They have a good eye for beauty and comfort. They can give so much that they forget about themselves.",
+    "asAdvice": "Take care of yourself the way you take care of everyone else. Eat well, rest, and spend time on something you love making. Give your plans time to grow before you decide whether they're working.",
+    "timing": "Gradual and steady. The Empress points to growth that takes a season, often around three months, or longer for something big. Things may be moving even if you can't see them yet.",
+    "howSomeoneSeesYou": "People see you as warm, nurturing, and easy to be around. You're the one they come to for comfort, and your home probably feels like a safe place to land. Some may lean on you more than is fair, so let people take care of you too."
   },
   "slug": "empress"
 }

@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-hermit",
     "cardMeta": "Major Arcana IX · Earth · the journey turns inward",
-    "essence": "The Hermit is the part of you that steps back to hear what's true. He is solitude, reflection, the light you carry into your own quiet. He withdraws in order to listen.",
-    "narrative": "The ninth card offers a deliberate retreat. After Strength's hard inner work, the Hermit does something that looks like nothing: he leaves. He climbs away from the noise, alone, carrying a single lantern with a star for its light, because the point of the solitude was never emptiness. It's the chance to see by your own light instead of everyone else's. He stands near the close of the journey's middle stretch, the pause before the Wheel sets everything turning again. The Hermit is the knowing that some things can only be heard in silence, that stepping away from the crowd is sometimes the only way to find out what you actually think. The cave is real and the solitude is sacred. The only danger is mistaking the waypoint for a home.",
+    "essence": "The Hermit card in Tarot represents solitude, reflection, and inner guidance. An old man in a gray cloak stands alone on a snowy mountaintop. He holds up a lantern with a six-pointed star inside and leans on a long staff. This card is about stepping away from other people for a while so you can think for yourself.",
+    "narrative": "The Hermit is card number nine. Right after Strength, the Hermit leaves everyone behind and goes up the mountain on his own. His lantern only lights a little of the path around him, but it's enough for him to keep going. He comes right before the Wheel of Fortune, which brings change, so his time alone doesn't last forever. Up to this point, the Fool has mostly learned from other people. With the Hermit, he goes off to decide what he thinks about all of it. When the Hermit shows up in a reading, it usually means you need some time alone before you make a decision.",
     "gift": {
       "keywords": [
         "reflection",
@@ -16,8 +16,8 @@
         "quiet clarity",
         "retreat for renewal"
       ],
-      "body": "Upright, the Hermit is the clarity that only comes once you get quiet. It's the walk alone where the thing you couldn't untangle in a loud room suddenly comes clear. It's the evening you spend by yourself and wake up steadier for. It's turning the volume of the world down far enough to finally hear your own read on your own life. The gift is your own counsel, the discovery that you carry the light and don't have to borrow it from anyone. Solitude isn't the same as loneliness. It's where you go to come back to yourself, and the answers that arrive there tend to be the ones you can actually trust.",
-      "affirmation": "I carry my own light. I can step back to hear what is true."
+      "body": "When the Hermit appears upright, it means reflection, solitude, and clarity. It's the long walk where the problem you couldn't sort out at work suddenly makes sense. It's a friend who takes a trip by herself and comes home knowing she's going to leave her job. It can be as small as a Saturday with no plans and your phone in a drawer, which is sometimes enough time to figure out what you want. Other people's advice is useful, but too much of it can make it hard to know your own opinion. The Hermit suggests taking some time away from it.",
+      "affirmation": "I carry my own light. I can step back to hear what's true."
     },
     "shadow": {
       "keywords": [
@@ -27,8 +27,8 @@
         "stagnation",
         "loneliness"
       ],
-      "body": "The retreat becomes a place to hide. The Hermit's shadow is solitude curdled into isolation, the door that started as a healthy boundary and slowly became a wall. It's telling yourself you're reflecting when you're really just avoiding, the cave gone from sanctuary to bunker. It's the loneliness you won't admit to, because admitting it would mean coming back out. Underneath is often the belief that no one could understand this part of you anyway, so why try, and the longer you stay in, the truer that starts to feel. You went in to hear yourself. The shadow is staying so long you can no longer hear anything but the silence.",
-      "affirmation": "I can come back out when I'm ready. The cave was always a waypoint, not a home."
+      "body": "In reverse, the Hermit can point to isolation, avoidance, or loneliness. The time alone that was helping you has turned into hiding. It usually happens slowly. You skip one dinner because you're tired, then another, and soon you're not answering texts either. You tell yourself you're thinking things through, but you've been stuck on the same problem for months. Sometimes there's a belief underneath it that nobody would understand you anyway, and staying away makes that belief stronger. If the thought of seeing people fills you with dread, try reaching out to one person you trust.",
+      "affirmation": "I can come back out when I'm ready."
     },
     "reclaiming": {
       "keywords": [
@@ -36,15 +36,15 @@
         "refusing the summons",
         "owing no one your conclusions"
       ],
-      "body": "The Hermit reverses a second way, as a refusal of anyone else's claim on when you rejoin the world. People will want you back on their schedule, will treat your retreat as a problem to be ended, will expect you to emerge with answers and explanations ready. This says no to all of it. You come out when you're done, not when you're summoned. You don't have to return with conclusions, a transformation, or a tidy account of where you've been. Your re-emergence is not a performance you owe anyone. If you were taught that disappearing was rude and that you owed the world a constant, available version of yourself, the reclaiming Hermit is you deciding the door opens from the inside, on your hand.",
+      "body": "The Hermit reversed can also mean coming back on your own schedule. People may want you back sooner than you're ready. They may ask what's wrong when nothing is, or treat your quiet as a problem to fix. They may expect you to come back with big news or a big change. You can take the time you need, come back when you're done, and decide how much you want to tell anyone about where you went. If you were raised to always be available, it's okay to be unavailable for a while.",
       "affirmation": "I rejoin the world on my own timing. I owe no one an explanation for where I went."
     },
     "skills": [
-      "Making real quiet, not just quieter noise",
-      "Telling reflection apart from avoidance",
-      "Setting boundaries around your time and availability",
-      "Listening for your own counsel before borrowing anyone else's",
-      "Returning when you're ready, not when you're called"
+      "Making real quiet time for yourself",
+      "Noticing when time alone has turned into avoiding people",
+      "Saying no to plans when you need to recharge",
+      "Working out what you think before asking for advice",
+      "Coming back when you're ready"
     ]
   },
   "bearing": {
@@ -97,6 +97,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you need to go away by yourself to find out what you actually think? Not to calm down. To think? That's a Hermit way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Hermit's lantern has a star inside it. He's not carrying a flame. He's carrying a piece of the sky."
+  },
+  "contexts": {
+    "yesNo": "Not yet. The Hermit says to spend some time with the question before you answer it. Sleep on it, or give it a week. If you still can't tell, you probably need more information or more time to think.",
+    "asFeelings": "If someone feels the Hermit toward you, they care but are keeping some distance right now. They may need to sort out their own feelings, or something else in their life, before they can share them. They may be quiet for a while. Give them some room and let them come back to you.",
+    "asPerson": "A private, thoughtful person who needs a lot of time alone to recharge. They're a good listener and the friend people call when they want real advice. They're often wiser than they let on. They can also disappear for weeks when life gets heavy, and they may not explain why.",
+    "asAdvice": "Get some time alone. Cancel a plan, take a long walk, or go somewhere you won't run into anyone you know. Leave your phone behind if you can. Make the decision on your own first, and then talk it over with other people if you want to.",
+    "timing": "Slow. The Hermit points to a stretch of waiting and thinking, usually weeks or months. This isn't the time to rush. Things will start moving once you're clear on what you want.",
+    "howSomeoneSeesYou": "People see you as wise, calm, and a little hard to read. They value your advice because you think before you speak. If you've pulled away lately, some may feel shut out or wonder if they did something wrong, so let them know you'll be back."
   },
   "slug": "hermit"
 }

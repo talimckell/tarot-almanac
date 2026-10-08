@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-magician",
     "cardMeta": "Major Arcana I · Air · the first step onto the path",
-    "essence": "The Magician card in Tarot is all about focus, willpower, and turning ideas into reality. He stands at a table with the four suits—cup, wand, sword, and pentacle—laid out in front of him. One hand points to the sky while the other reaches down to the ground. Everything he needs is right within reach.",
-    "narrative": "As card number one, the Magician represents the first real step after the Fool takes that leap. While the Fool embodies potential, the Magician shows what can happen when that potential gets directed. The tools on his table symbolize all the elements you may need, indicating that nothing is missing. His raised and lowered hands represent the act of bringing an idea down to earth. Focus becomes key at this stage. The Fool must learn that a leap without direction leads to scatter. When the Magician pops up in a reading, it prompts a question: What are you ready to create with what you already have?",
+    "essence": "The Magician card in Tarot represents focus, willpower, skill, and turning ideas into something real. He stands at a table with the four suits—cup, wand, sword, and pentacle—laid out in front of him. One hand holds a wand up toward the sky and the other points down at the ground. An infinity symbol floats over his head. This card is about using what you already have.",
+    "narrative": "The Magician is card number one, the first step after the Fool jumps. The Fool has a lot of potential, and the Magician shows what happens when that potential gets pointed at something specific. The four tools on his table stand for the four suits of the deck, so he has everything he needs. His raised and lowered hands are an old image of bringing an idea down into the real world. For the Fool, he's an early lesson in focus. Jumping in is a good start, but without a direction, the energy goes everywhere and nothing gets made. When the Magician shows up in a reading, ask yourself what you could make with what you already have.",
     "gift": {
       "keywords": [
         "will",
@@ -17,8 +17,8 @@
         "capability",
         "intention"
       ],
-      "body": "When the Magician appears upright, it signals willpower, focus, manifestation, and intention. It's a strong go-ahead to initiate action: whether you're launching a business, sending a pitch, or finally opening that document you've been avoiding. You possess more resources than you realize. The tough conversation you dread? You already know how to approach it. Grab your tools and target one thing.",
-      "affirmation": "I have what I need to begin. My focus turns intention into reality."
+      "body": "When the Magician appears upright, it means willpower, focus, skill, and intention. It's a strong sign for getting started, whether that's launching the business, sending the pitch, or finally opening the document instead of reading one more article about how to write it. You probably have more resources than you think. The hard conversation you've been dreading is one you already know how to have, because you know what you need to say. It's the week you stop planning and start doing, and the work comes faster than you expected. Pick one thing and give it your full attention.",
+      "affirmation": "I have what I need to begin. My focus turns intention into something real."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "illusion",
         "trickery"
       ],
-      "body": "When reversed, the Magician hints at manipulation, scattered energy, or self-doubt. It's when skills are used for charm without creating anything substantial. You might find your energy divided: you open ten tabs, start several things, and finish none. Deep down, there may be a fear that you don't measure up, or that someone might see through the facade.",
-      "affirmation": "My skill is real. I can use what I have in an honest way."
+      "body": "In reverse, the Magician can point to manipulation, scattered energy, self-doubt, or trickery. Sometimes the skill gets used on people instead of on the work, like someone who can talk their way through any meeting but never builds anything. Other times the energy won't come together at all. You open ten tabs, start five things, and finish none of them, and at the end of the day you're tired with nothing to show for it. Underneath, there's often a worry that you don't really know what you're doing and someone is going to find out. If that sounds familiar, finish one small thing today, even if it isn't perfect.",
+      "affirmation": "My skill is real. I can use what I have honestly."
     },
     "reclaiming": {
       "keywords": [
@@ -38,15 +38,15 @@
         "refusing the hustle",
         "your own kind of skill"
       ],
-      "body": "The Magician reversed can also signal a rejection of that loud, self-promoting version of success. This is the quiet skill, creating good things without the need for an audience or a performance. Work that nobody bought still counts. Work that nobody saw still counts. You define what mastery looks like for you.",
-      "affirmation": "My skill doesn't have to perform to be valid. I create on my own terms."
+      "body": "The Magician reversed can also mean stepping away from the loud, self-promoting version of success. Some people's skill is quiet. They make good things without posting about them, pitching them, or turning them into a personal brand. Work nobody bought still counts, and so does work nobody saw. You get to decide what mastery looks like for you, whether that's a garden, a piece of software, or a really good loaf of bread. It's still mastery if you're the only one who knows about it.",
+      "affirmation": "My skill doesn't have to perform to be real. I make things on my own terms."
     },
     "skills": [
-      "Identifying what you want before taking action",
-      "Assessing the resources you already have",
-      "Concentrating your energy on one task at a time",
-      "Letting go of impostor syndrome",
-      "Creating quietly, without needing an audience"
+      "Naming what you want before you act",
+      "Taking stock of what you already have",
+      "Working on one thing at a time",
+      "Noticing the impostor feeling and doing the work anyway",
+      "Making things without needing an audience"
     ]
   },
   "bearing": {
@@ -101,12 +101,12 @@
     "didYouNoticeCardTake": "The Magician has all four suits on his table already. The card was never about getting more."
   },
   "contexts": {
-    "yesNo": "Yes, especially if the outcome hinges on your own efforts. The Magician indicates that you have the skills and resources to make it happen. If you're waiting on someone else, that yes weakens, so focus on what you can control.",
-    "asFeelings": "If someone feels the Magician about you, they're interested and intentional. They may already be devising ways to impress you. The attraction is genuine and confident. Just keep an eye on whether their words align with their actions.",
-    "asPerson": "A skilled, persuasive individual who knows how to get things done. Often a maker or a good talker, they come across as resourceful and charming. At their worst, they might use that charm to manipulate rather than build something meaningful.",
-    "asAdvice": "Use what's available to you. Stop waiting for one more course, tool, or sign. Choose the one thing that matters most and focus on it completely.",
-    "timing": "Soon, largely depending on your actions. The Magician shows things moving as soon as you engage, often within days or weeks. The start date is in your hands.",
-    "howSomeoneSeesYou": "People view you as capable and clever, often believing you always have a plan. You come across as confident and articulate. Some may wonder what you're not revealing, so being transparent about your intentions can help build trust."
+    "yesNo": "Yes, especially if the outcome depends on your own effort. The Magician says you have the skills and resources to make it happen. If you're waiting on someone else to act, the yes is weaker, so focus on the part you can control.",
+    "asFeelings": "If someone feels the Magician toward you, they're interested and they're being deliberate about it. They may already be planning how to impress you. The attraction is confident and real. Pay attention to whether what they say matches what they do.",
+    "asPerson": "A skilled, persuasive person who knows how to get things done. They might be a maker, a founder, or the friend who can fix anything. They're resourceful and charming. At their worst, they use that charm to work people instead of to make anything.",
+    "asAdvice": "Use what you have. Stop waiting for one more course, one more tool, or one more sign before you start. Pick the one thing that matters most this week and put your full attention on it until it's done.",
+    "timing": "Soon, and mostly up to you. The Magician points to things moving as soon as you act, often within days or weeks, depending on when you start.",
+    "howSomeoneSeesYou": "People see you as capable and clever, someone who always seems to have a plan. You come across as confident and good with words. Some may wonder what you're not telling them, so being open about what you want helps people trust you."
   },
   "slug": "magician"
 }
