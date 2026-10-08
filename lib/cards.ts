@@ -31,6 +31,19 @@ export interface PositionReading {
   body: string;
 }
 
+// Contextual reading angles — the practical "how does this card answer X" reads
+// people search for most (yes/no, feelings, timing, etc.). All optional and
+// authored per card; a section renders only for the angles that have content, so
+// cards fill in gradually without empty headings.
+export interface CardContexts {
+  yesNo?: string;
+  asFeelings?: string;
+  asPerson?: string;
+  asAdvice?: string;
+  timing?: string;
+  howSomeoneSeesYou?: string;
+}
+
 export interface Card {
   arcana: "major" | "minor";
   name: string;
@@ -54,6 +67,7 @@ export interface Card {
   // top-level `bearing.body`) is the actual authored content.
   bearingLinkMap?: Record<string, string>; // majors only — resolves this essay's "#"
   // placeholder links by exact visible text, same convention as BlogPostMeta.linkMap.
+  contexts?: CardContexts; // optional contextual reading angles (yes/no, feelings, …)
 }
 
 interface RawCardReading {
@@ -76,6 +90,7 @@ interface RawCard {
   natalPersonalDay?: { body: string };
   natalCollectiveDay?: { body: string };
   bearing?: { body: string; linkMap?: Record<string, string> };
+  contexts?: CardContexts;
 }
 
 export function parseCardMeta(raw: string): CardMeta {
@@ -129,6 +144,7 @@ export function getAllCards(): Card[] {
       natalCollectiveDay: raw.natalCollectiveDay?.body,
       bearingReading: raw.bearing?.body,
       bearingLinkMap: raw.bearing?.linkMap,
+      contexts: raw.contexts,
     };
   });
   return cache;

@@ -99,5 +99,14 @@
     "bearingRecognitionPost": "Do you move while other people are still deciding? Act before the conditions are perfect because waiting for perfect means not going? That's a Chariot way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Chariot has no reins. He's steering two creatures pulling in opposite directions with nothing but his own focus. That's the whole card."
   },
+  "contexts": {
+    "status": "DRAFT — sample for review, edit freely",
+    "yesNo": "A yes, and a yes that asks something of you. The Chariot says go, especially when the question is about drive, travel, or pushing a thing through by will. It wants you to take the reins and commit to one direction rather than wait for the conditions to be perfect.",
+    "asFeelings": "Strong and pointed. Someone feeling the Chariot toward you is sure of it and already moving forward, more drive than softness. If they seem to be holding back, it tends to be about control rather than doubt.",
+    "asPerson": "Driven and self-possessed, the one who sets a course and holds it. Focused, competitive, hard to knock off track. At their worst they steamroll, treating people as things that sit between them and the goal.",
+    "asAdvice": "Pick one direction and commit. Stop letting yourself be pulled two ways. The Chariot wins by harnessing forces that pull against each other and aiming them at a single goal, so take hold of what you can control and move.",
+    "timing": "Fast. Expect things to come to a head in weeks rather than months, often around travel or a decision you push through yourself.",
+    "howSomeoneSeesYou": "Capable and in command, someone who clearly gets where they are going. Driven, and a little formidable. The risk is reading as all forward motion, so set on your direction that you can seem hard to reach."
+  },
   "slug": "chariot"
 }

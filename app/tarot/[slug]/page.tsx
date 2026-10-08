@@ -107,6 +107,19 @@ export default async function CardPage({
   const numberingNote = card.slug === "strength" || card.slug === "justice";
   const related = getRelated(card);
 
+  // Contextual reading angles, in a fixed order; only the ones authored for this
+  // card render (see content/cards/*.json `contexts`). Empty for most cards today.
+  const contextAngles = (
+    [
+      { label: "Yes or no", body: card.contexts?.yesNo },
+      { label: "As feelings", body: card.contexts?.asFeelings },
+      { label: "As a person", body: card.contexts?.asPerson },
+      { label: "As advice", body: card.contexts?.asAdvice },
+      { label: "Timing", body: card.contexts?.timing },
+      { label: "How someone sees you", body: card.contexts?.howSomeoneSeesYou },
+    ] as { label: string; body?: string }[]
+  ).filter((a): a is { label: string; body: string } => Boolean(a.body));
+
   const headerNum = isMajor
     ? `Major Arcana · ${card.numberLabel}`
     : `Minor Arcana · ${card.meta.suit}`;
@@ -189,6 +202,22 @@ export default async function CardPage({
         <p>{card.reclaiming.body}</p>
         <p className="affirm">{card.reclaiming.affirmation}</p>
       </section>
+
+      {/* CONTEXTUAL READING ANGLES — renders only for the angles authored in
+          content/cards/<slug>.json `contexts`; absent sections simply don't show. */}
+      {contextAngles.length > 0 && (
+        <section className="contexts">
+          <h2>{card.name} in a reading</h2>
+          <div className="ctx-list">
+            {contextAngles.map(({ label, body }) => (
+              <div className="ctx-item" key={label}>
+                <h3>{label}</h3>
+                <p>{body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* SKILLS — one unified list */}
       <section className="skills">
