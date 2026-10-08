@@ -63,6 +63,16 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     link: { href: BLOG, text: "See both methods side by side" },
   },
   {
+    q: "Why do I have two tarot birth cards?",
+    a: "That comes from the Mary Greer and Tarot School method, which adds up your whole birth date and reduces it. When the total reduces to a two-digit number and then again to a single digit, you get two cards: a Personality card and a Soul card. Our method uses your month and day around the full wheel of twenty-two, so it gives you one card, your Bearing.",
+    link: { href: BLOG, text: "Both methods, side by side" },
+  },
+  {
+    q: "What is a soul card? What is a personality card?",
+    a: "They're the two cards the traditional method gives you. The Personality card is the one you present to the world, from the two-digit total of your birth date. The Soul card is the deeper one underneath, from reducing that total to a single digit. When they match, you have one card. In our method, the single card your birthday points to is your Bearing.",
+    link: { href: BLOG, text: "How the methods compare" },
+  },
+  {
     q: "Is a tarot birth card the same as an astrology sign?",
     a: "It's a close cousin. Astrology reads the sky the minute you were born, and your tarot birth card reads your birthday through the cards. Both give you a fixed lens, set by when you arrived. If your birth card is like your sun sign, your tarot birth chart is like your full astrology chart.",
   },
@@ -176,6 +186,23 @@ export default function TarotBirthCardPage() {
         </section>
 
         <section className="tbc-section">
+          <h2>How to find your tarot birth card</h2>
+          <div className="tbc-prose">
+            <p>
+              The fastest way is the calculator above: enter your birth month and day and it names your
+              card right away, free and with no sign-up. It works the same for anyone, so you can look up
+              a friend or a parent while you&rsquo;re here.
+            </p>
+            <p>
+              To work it out by hand, add your birth month and birth day together. If the total comes to
+              more than twenty-one, subtract twenty-two, and the number you land on is your card. A July 30
+              birthday is 7 plus 30, which is 37; subtract 22 and you land on 15, the Devil. That card is
+              your <Link href="/bearing">Bearing</Link>, and it never changes.
+            </p>
+          </div>
+        </section>
+
+        <section className="tbc-section">
           <h2>Why your card might differ from other calculators</h2>
           <div className="tbc-prose">
             <p>
@@ -190,6 +217,28 @@ export default function TarotBirthCardPage() {
             </p>
             <p>
               <Link className="tbc-morelink" href={BLOG}>The full explanation, both methods side by side &rarr;</Link>
+            </p>
+          </div>
+        </section>
+
+        <section className="tbc-section">
+          <h2>Soul card, personality card, and your Bearing</h2>
+          <div className="tbc-prose">
+            <p>
+              The method you&rsquo;ll see most often, from Mary Greer and the Tarot School, adds up your
+              whole birth date, year included, and reduces it to a number. That usually lands on two
+              cards: a Personality card, the one you present to the world, and a Soul card, the deeper one
+              underneath. When the total reduces straight to a single digit, the two are the same card.
+            </p>
+            <p>
+              That&rsquo;s why some calculators hand you two cards and ours hands you one. We use your
+              birth month and day alone, wrapped around the full wheel of twenty-two, so you get a single
+              card, your Bearing, and every card in the Major Arcana can come up. The soul and personality
+              cards are one tradition&rsquo;s answer; your Bearing is ours. All three are a fixed card, set
+              by when you were born.
+            </p>
+            <p>
+              <Link className="tbc-morelink" href={BLOG}>Both methods, side by side &rarr;</Link>
             </p>
           </div>
         </section>
