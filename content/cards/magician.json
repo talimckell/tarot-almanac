@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-magician",
     "cardMeta": "Major Arcana I · Air · the first step onto the path",
-    "essence": "The Magician is the part of you that can make something real. He is focus and will, and the knowledge that the tools are already in your hands. Where the Fool has potential, the Magician has the power to direct it.",
-    "narrative": "He's the first true step, card one, right after the Fool tips over the edge. The Fool is raw possibility, and the Magician is what possibility becomes the moment it gets pointed at something. On his table are the four suits, every element laid out and ready. That's the card's central claim: you already have what you need. One hand lifts toward the sky and the other points to the ground, the old image of bringing something down into the world, making the unseen real. He stands near the start of the journey because focus is one of the first things the Fool has to learn. Without it the leap just scatters. The Magician gathers it into a direction.",
+    "essence": "The Magician card in Tarot is all about focus, willpower, and turning ideas into reality. He stands at a table with the four suits—cup, wand, sword, and pentacle—laid out in front of him. One hand points to the sky while the other reaches down to the ground. Everything he needs is right within reach.",
+    "narrative": "As card number one, the Magician represents the first real step after the Fool takes that leap. While the Fool embodies potential, the Magician shows what can happen when that potential gets directed. The tools on his table symbolize all the elements you may need, indicating that nothing is missing. His raised and lowered hands represent the act of bringing an idea down to earth. Focus becomes key at this stage. The Fool must learn that a leap without direction leads to scatter. When the Magician pops up in a reading, it prompts a question: What are you ready to create with what you already have?",
     "gift": {
       "keywords": [
         "will",
@@ -17,8 +17,8 @@
         "capability",
         "intention"
       ],
-      "body": "Upright, the Magician is the moment scattered energy becomes a clear act of will. It's the day you stop researching how to do the thing and just open the document and start. It's realizing the hard conversation you've been dreading is one you already know how to have, because you already know what you need to say. This is competence that stops waiting for permission. You are more resourced than you think, and the thing you've been treating as out of reach is usually built from tools already on your desk. What's asked of you is to pick them up and aim.",
-      "affirmation": "I have what I need to begin. My focus turns intention into something real."
+      "body": "When the Magician appears upright, it signals willpower, focus, manifestation, and intention. It's a strong go-ahead to initiate action: whether you're launching a business, sending a pitch, or finally opening that document you've been avoiding. You possess more resources than you realize. The tough conversation you dread? You already know how to approach it. Grab your tools and target one thing.",
+      "affirmation": "I have what I need to begin. My focus turns intention into reality."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "illusion",
         "trickery"
       ],
-      "body": "Reversed, the same gathered power leaks or turns sour. Sometimes it's skill bent toward managing people instead of making things, the charm that talks its way around a room rather than building anything in it. Other times the power just won't gather. You open ten tabs, start five things, and finish none, busy all day with nothing to show for it. Underneath there's often the quiet conviction that you don't really have what it takes, that your competence is a performance you'll eventually be caught faking. The tools are still on the table. The shadow is the story that they were never yours to pick up.",
-      "affirmation": "My capability is real, not a performance. I can use what I have honestly."
+      "body": "When reversed, the Magician hints at manipulation, scattered energy, or self-doubt. It's when skills are used for charm without creating anything substantial. You might find your energy divided: you open ten tabs, start several things, and finish none. Deep down, there may be a fear that you don't measure up, or that someone might see through the facade.",
+      "affirmation": "My skill is real. I can use what I have in an honest way."
     },
     "reclaiming": {
       "keywords": [
@@ -38,15 +38,15 @@
         "refusing the hustle",
         "your own kind of skill"
       ],
-      "body": "The Magician reverses a second way, as a refusal of whose power gets to count. So much of what the world calls capability is loud, fast, self-promoting. This is the person who declines that, whose skill is quiet and doesn't announce itself, who makes real things without turning them into a performance for anyone watching. You get to define what mastery looks like for you. Quiet work counts. Work nobody bought still counts. If the version of success you were shown was all hustle and display, the reclaiming Magician is you keeping the competence and putting down the show.",
-      "affirmation": "My skill does not have to perform to be real. I make things on my own terms."
+      "body": "The Magician reversed can also signal a rejection of that loud, self-promoting version of success. This is the quiet skill, creating good things without the need for an audience or a performance. Work that nobody bought still counts. Work that nobody saw still counts. You define what mastery looks like for you.",
+      "affirmation": "My skill doesn't have to perform to be valid. I create on my own terms."
     },
     "skills": [
-      "Naming what you actually want before acting",
-      "Taking inventory of the resources you already have",
-      "Directing energy instead of scattering it",
-      "Catching the impostor story and setting it down",
-      "Building quietly, without needing an audience"
+      "Identifying what you want before taking action",
+      "Assessing the resources you already have",
+      "Concentrating your energy on one task at a time",
+      "Letting go of impostor syndrome",
+      "Creating quietly, without needing an audience"
     ]
   },
   "bearing": {
@@ -99,6 +99,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you walk into a mess and immediately start figuring out what you can build from it? Look at what's already there and begin before anyone else has decided if there's enough to start with? That's a Magician way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Magician has all four suits on his table already. The card was never about getting more."
+  },
+  "contexts": {
+    "yesNo": "Yes, especially if the outcome hinges on your own efforts. The Magician indicates that you have the skills and resources to make it happen. If you're waiting on someone else, that yes weakens, so focus on what you can control.",
+    "asFeelings": "If someone feels the Magician about you, they're interested and intentional. They may already be devising ways to impress you. The attraction is genuine and confident. Just keep an eye on whether their words align with their actions.",
+    "asPerson": "A skilled, persuasive individual who knows how to get things done. Often a maker or a good talker, they come across as resourceful and charming. At their worst, they might use that charm to manipulate rather than build something meaningful.",
+    "asAdvice": "Use what's available to you. Stop waiting for one more course, tool, or sign. Choose the one thing that matters most and focus on it completely.",
+    "timing": "Soon, largely depending on your actions. The Magician shows things moving as soon as you engage, often within days or weeks. The start date is in your hands.",
+    "howSomeoneSeesYou": "People view you as capable and clever, often believing you always have a plan. You come across as confident and articulate. Some may wonder what you're not revealing, so being transparent about your intentions can help build trust."
   },
   "slug": "magician"
 }
