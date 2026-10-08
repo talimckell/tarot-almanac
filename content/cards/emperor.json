@@ -6,8 +6,8 @@
     "status": "BLESSED",
     "referenceUrl": "/tarot/the-emperor",
     "cardMeta": "Major Arcana IV · Fire · the early structure of the journey",
-    "essence": "The Emperor is the part of you that builds something solid enough to stand on. He is structure as an act of care: the boundaries and the follow-through that let a life hold together. He protects what he loves by giving it a shape that lasts.",
-    "narrative": "He comes fourth. The Empress is right before him, the green force of everything that grows, and he follows her because growth needs somewhere to happen. She is the life. He is the field she's planted in, the walls that keep the weather off. Look at what's still ahead of him, the Hierophant and the Lovers and eventually the Chariot, and you can see what he's for: he's the ground all of it gets built on. None of the later cards stand up without the structure he lays down this early. The Emperor is the father energy of the deck, reimagined, with none of the old assumption that authority has to be loud or hard or male. At his best he's the container that lets a thing flourish inside it. The danger is always close, though, because holding something safe and holding it too tightly can look almost the same from the inside.",
+    "essence": "The Emperor card in Tarot signifies leadership, stability, and protection. He is depicted seated on a stone throne adorned with ram heads, wearing armor under his red robe, set against a backdrop of rugged mountains. In one hand, he holds a scepter, symbolizing authority, while in the other, an orb represents his dominion. This card embodies the part of us that lays down a solid foundation for life.",
+    "narrative": "As the fourth card in the Tarot, the Emperor follows the Empress, who embodies nurturing and growth. The Emperor provides the necessary structure that allows this growth to flourish. The cards that follow him, like the Hierophant, Lovers, and Chariot, depend on the firm ground he establishes. Representing a father figure, his influence is strong yet subtle. The Emperor's protective authority shapes and safeguards what he loves. When this card appears in a reading, it prompts reflection on where more structure is needed in your life and urges consideration of areas where you might be overly rigid.",
     "gift": {
       "keywords": [
         "structure",
@@ -17,8 +17,8 @@
         "accountability",
         "foundations"
       ],
-      "body": "Upright, this is your own steady authority. It's saying the deadline is Friday and meaning it, holding the boundary without three paragraphs of apology after it. It's being the calm one in the room when something goes wrong, the fixed point other people end up organizing themselves around without being asked. It feels like standing on ground that doesn't shift under you. Your structure is in service of something you care about, giving your vision a body and turning what you meant to do into something that actually lasts. You're allowed to lead. You're allowed to be the one who decides.",
-      "affirmation": "I create safety through structure. I protect what matters, and I lead on my own terms."
+      "body": "When drawn upright, the Emperor signifies order, leadership, and stability. It represents accountability and the establishment of clear boundaries without excessive apologies. In challenging situations, you have the potential to be the calming presence. Your rules and routines help protect what you hold dear. Embrace your leadership qualities and decision-making abilities.",
+      "affirmation": "I create safety through structure. I protect what matters and lead on my own terms."
     },
     "shadow": {
       "keywords": [
@@ -28,8 +28,8 @@
         "domination",
         "fear of vulnerability"
       ],
-      "body": "The structure hardens into a cage. This is control that's stopped serving anything but its own need to feel safe. Rules for the sake of rules. A grip so tight that nothing underneath it can breathe. It tends to show up when control has quietly become a coping strategy, when some part of you has decided that if you just hold everything tightly enough, nothing will be allowed to fall apart on your watch. But brittle things break, and this is brittleness dressed up as strength. Underneath the domination there's almost always fear: of being unprotected, of being caught out as weak, of what happens if you loosen your hands even a little.",
-      "affirmation": "I can loosen my grip and still be safe. My worth is not the same thing as my control."
+      "body": "Reversed, the Emperor may point to issues of rigidity and an excessive need for control, sometimes feeling like a cage. Rules may seem arbitrary, causing discomfort for those around you. This desire for control often comes from a place of fear, fear of chaos or vulnerability. However, when too rigid, structures are prone to breaking under stress.",
+      "affirmation": "I can loosen my grip and still feel safe. My value is not defined by how much I control."
     },
     "reclaiming": {
       "keywords": [
@@ -38,16 +38,16 @@
         "softness as strength",
         "leading differently"
       ],
-      "body": "The Emperor can reverse a second way, and this one isn't a failure. It's a refusal. This is the conscious rejection of inherited authority, the decision that you won't lead the way you were taught leadership was supposed to look. You get to define what power means to you, and it doesn't have to be loud or hard or masculine to count. The reclaiming Emperor rebuilds from the inside out. Softness becomes a strategy rather than a liability. Collaboration replaces command. You put down a script for authority that was never going to fit you and you write one that does. If the throne you were shown was never going to be yours, this is you building a different seat entirely. Your way of leading matters, and it matters most exactly where it looks different from what came before.",
-      "affirmation": "I put down the authority that was never mine. I lead from softness, and it holds."
+      "body": "When the Emperor is reversed, it signals a conscious rejection of traditional authority. You may choose to lead in ways that differ from what you were taught, embracing a softer, more collaborative approach. This mindset fosters a rebuilding of leadership from within. Asking for support is part of how you lead. If the conventional throne doesn't fit you, it's possible to create your own.",
+      "affirmation": "I release the authority that was never mine. I lead in my own way, and it holds."
     },
     "skills": [
-      "Values-based planning and decision-making",
-      "Leadership from empathy rather than ego",
-      "Nervous-system regulation through structure and routine",
-      "Building inner and outer boundaries that serve your real priorities",
-      "Deconstructing the authority scripts you inherited",
-      "Letting help and collaboration into how you lead"
+      "Making decisions aligned with your personal values",
+      "Leading with compassion",
+      "Creating routines to ease anxiety",
+      "Setting meaningful boundaries",
+      "Challenging traditional views of authority",
+      "Embracing collaborative leadership"
     ]
   },
   "bearing": {
@@ -100,6 +100,14 @@
     "status": "DRAFT",
     "bearingRecognitionPost": "Do you walk into an open situation and immediately start thinking about what it needs to hold together? Feel the discomfort until the plan is solid? That's an Emperor way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Emperor is wearing armor under his robe. He dressed for a fight before he sat down to rule."
+  },
+  "contexts": {
+    "yesNo": "A strong \"yes\" if you're prepared to implement structure. The Emperor encourages planning, commitment, and tasks requiring discipline, especially concerning career and leadership.",
+    "asFeelings": "If someone feels the Emperor toward you, they are likely serious and protective. They want to ensure your safety and may express this through actions rather than words. Their feelings are stable and grounded, even if not openly emotive.",
+    "asPerson": "This person is typically reliable and organized, often taking on leadership roles like a boss, parent, or someone who coordinates plans among friends. You can trust their words, yet they might come off as controlling or slow to embrace change.",
+    "asAdvice": "Focus on organizing and taking charge. Formulate a plan, set a deadline, and uphold boundaries, but make sure your rules protect something you care about.",
+    "timing": "Progress unfolds steadily, indicating that results will come once you establish the needed structure, generally within a month. Set a timeline and adhere to it.",
+    "howSomeoneSeesYou": "Others perceive you as dependable, capable, and in control, someone they trust during tough times. Some may find you somewhat intimidating, so it's important to show that you're open to listening as well."
   },
   "slug": "emperor"
 }
