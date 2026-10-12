@@ -109,6 +109,72 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-10-12 (window: last 3 mo GSC / Oct 5–12 Vercel) — the spike receded; down week on every channel
+
+The late-September surge normalized. Traffic, Google clicks, and AI citations are all down
+~25–40% WoW, settling to a new baseline that's still well above pre-Sep-8. Average position
+slipped about a spot as the recrawl boost faded. We also shipped a lot (funnel + content), but
+it's too early and too thin a week to read any of it. Data note: the Vercel-dashboard
+"SearchPerformanceOverview" CSV was a broken partial (~20 impr/day — impossible against 167
+Google visits); the xlsx is authoritative and reconciles (GSC last-7 176 clicks ≈ Vercel 167).
+
+### 1. Google (GSC) — last 3 months, Web text
+- Cumulative: impr **21,487** (was 16,971), clicks **717** (was 541), mobile position **6.38**
+  (was 6.63 — cumulative still improving).
+- But the week itself is **down**: last 7 days (Oct 4–10) **176 clicks / 4,830 impr / avg pos 6.8**,
+  vs prev 7 (Sep 27–Oct 3) 307 clicks / 6,479 impr / pos 5.8. Daily clicks fell from the 46–59 peak
+  to 14–34. The spike is receding to a higher baseline, not collapsing.
+- **`/tarot-birth-chart` steady at the page-1 edge: 13 clicks / 1,174 impr / pos 11.64.** Query
+  "tarot birth chart" **pos 9.33** (was 9.48), impr 495 (up from 431) — on page 1 now.
+- **`/birthday` hub is the top organic page: 24 clicks / 2,014 impr / pos 10.49** — the long-tail is
+  the engine (and now carries the new chart CTA button).
+- Year card: `/personal-year-card` still buried (pos 31.6), but query "tarot card of the year
+  calculator" **pos 28.86 (was 37.6)** — possible early lift from the Oct-8 title/2027 optimization,
+  but only ~2 days of data. WATCH.
+
+### 2. Vercel
+- **335 visitors (−38% on the dashboard; −27% vs last week's 459)**, 706 pageviews (−35%), bounce 72%.
+  Mobile 78% (260). Real humans ~290.
+- Referrers: Google 167, Bing-index (DDG 28 + Ecosia 16 + Bing 5) = **49**, Facebook 10, Instagram 1.
+- Countries: US 116, **GB 44** (UK still unusually strong), AU 17, DE 16.
+- Engagement fell with traffic: birth_card_finder **5** (was 12), personal_year_card 5, bearing_finder
+  **1** (was 5), birthday_reveal 1.
+
+### 3. Bing-index (BWT / DDG + Ecosia)
+- DDG 28 + Ecosia 16 + Bing 5 ≈ **49/wk** (was ~60). Steady channel, down with everything else.
+
+### 4. AI citations (BWT)
+- Last 7 days **~191 citations (~27/day)**, 4–10 cited pages/day. Down from ~254 prev-7 (−25%) but
+  holding as an established channel.
+
+### Mediavine Journey: ~145% (health only)
+Rolling 30-day ≈ **~1,700 raw / ~1,450 human → ~145% of the 1,000 door.** Down from the peak, still
+comfortably over. Not pursuing (resolved 2026-10-02).
+
+### Conversions: still zero
+No purchase reported this week; no checkout events in Vercel. Chart funnel Oct 5–12: `/tarot-birth-chart`
+10 → `/chart` 7 → 0 sales. One tentative bright spot: `/chart` held at 7 while the landing fell to 10, so
+landing→chart reads ~70% vs the old ~⅓ — likely the new birthday/bearing CTA buttons now feeding `/chart`
+(tiny-n, don't over-read, and `/chart` has always had multiple entry points). Year funnel:
+`/personal-year-card` 7 → calculator 5 → 0. **Caveat that matters:**
+every funnel + content change shipped Oct 7–12, into a *down-traffic* week — far too early and thin to
+read. The real test is the next few weeks as traffic stabilizes.
+
+### Shipped since the last entry (why none of it should show yet)
+Funnel: guest checkout (chart **and** year reading, both test-verified), obvious button CTAs on the
+birthday and bearing pages, two testimonials, on-brand Month/Day/Year picker. Content: birth-card
+how-to + soul-card sections + FAQs, year-card 2026/2027 title/lede/FAQ, card contextual-angle scaffold
++ The Chariot full rewrite. Pending on your side: Request Indexing for `/tarot-birth-card`,
+`/personal-year-card`, `/tarot/chariot` (GSC + Bing).
+
+### Baseline to beat next week
+Google last-7: 176 clicks / 4,830 impr / pos 6.8 (cumulative 21,487 impr / 717 clicks / mobile pos
+6.38). Vercel 335 (real ~290). Bing-index ~49. AI ~27/day. Journey ~145%. **Watch:** does traffic
+stabilize above pre-spike, does `/tarot-birth-chart` crack page 1, does the year-card query keep
+climbing, and does **any** conversion finally appear.
+
+---
+
 ## 2026-10-07 — FUNNEL BASELINE (chart funnel) + conversion changes shipped
 
 Anchored baseline for the chart funnel, captured before the Oct-7 changes can take effect, so
