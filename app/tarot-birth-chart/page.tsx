@@ -33,6 +33,10 @@ export const metadata: Metadata = {
 // FAQ content — kept in one place so the visible section and the schema stay in sync.
 const FAQ = [
   {
+    q: "Is a tarot birth chart a tarot reading by date of birth?",
+    a: "Yes. Your tarot birth chart is a reading built entirely from your date of birth. The seven cards come from your birth year, month, and day through tarot numerology, so there is no shuffle and no birth time needed. It is the full version of a tarot reading by date of birth: your birth card, the self you came in as, and the world you were born into.",
+  },
+  {
     q: "What is a tarot birth chart?",
     a: "A tarot birth chart is seven tarot cards set by your birth date: three for you (your year, month, and day), three for the world you were born into, and your Bearing, the fixed distance between the two. It's the tarot version of an astrology birth chart, and all it needs is your birth date.",
   },

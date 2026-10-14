@@ -37,6 +37,11 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     a: "Your tarot birth card is the one Major Arcana card set by the day you were born. It's the same card every time you check, and it's yours for life. We call it your Bearing, the angle you bring to the world.",
   },
   {
+    q: "Is this a tarot reading by date of birth?",
+    a: "Yes. Your tarot birth card is a reading set entirely by your date of birth: your birth month and day name the one Major Arcana card you carry, with no shuffle and no sign-up. For the fuller picture, your seven-card birth chart reads your whole date of birth, and the daily Almanac reads each day from your birthday too.",
+    link: { href: "/tarot-birth-chart", text: "See the full seven-card version" },
+  },
+  {
     q: "What is my tarot card?",
     a: "If you mean the one card that's yours for life, that's your tarot birth card, and the calculator above finds it. Enter your birth month and day and it names the Major Arcana card your birthday points to.",
   },
