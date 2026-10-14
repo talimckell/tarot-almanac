@@ -9,6 +9,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import ChartCtaButton from "../../components/ChartCtaButton";
 import { getAllCards, getCardBySlug, getRelated, type Card } from "../../../lib/cards";
 import { pipRows, suitGlyphId, isCourt } from "../../../lib/pips";
 import { organizationRef } from "../../../lib/organizationSchema";
@@ -244,6 +245,7 @@ export default async function CardPage({
       <aside className="almanac">
         <span className="eyebrow">This card in the almanac</span>
         <p>When the system hands you {card.name}, it points at the shape of the day, not a fortune. The card is fixed. What you do with it is yours.</p>
+        <ChartCtaButton variant="onDark" label="See your natal chart &rarr;" margin="18px 0 6px" />
         <p className="dates">
           <Link href="/today">See today&rsquo;s card</Link> · <Link href="/tarot">All seventy-eight</Link>
           {isMajor && (
