@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the King of Swords. The sword is upright but tilted, not rigid. There's give in it. Keep that in mind before you rule on anything today."
   },
+  "contexts": {
+    "yesNo": "Yes, if it's fair and well reasoned. The King of Swords backs choices you can explain and defend. If the decision would only hold up by ignoring someone's feelings, give it another look.",
+    "asFeelings": "If someone feels the King of Swords toward you, they respect you and think carefully before they say so. They show care through reliability and honest words more than through grand gestures. They may need time to speak about feelings, since they trust logic more than emotion.",
+    "asPerson": "A sharp, fair, principled person, often a boss, lawyer, doctor, or mentor type. They think clearly, keep their word, and give sound advice. They can be cold, rigid, or harsh in judgment, and they may forget that people aren't always logical.",
+    "asAdvice": "Decide based on facts and principles, and put it in writing if you need to. Be fair and be firm. Check in on how your decision feels to the people it affects, since a good ruling still has human effects.",
+    "timing": "Measured. The King of Swords prefers a deliberate pace, so expect decisions and outcomes in weeks to a couple of months. Rushing it won't help, and neither will endless delay.",
+    "howSomeoneSeesYou": "People see you as authoritative, sensible, and fair. They trust your judgment and look to you for answers. Some may find you stern or hard to approach, so show a little warmth before you give the verdict."
+  },
   "slug": "king-of-swords"
 }

@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Queen of Pentacles. Cradling the coin like something alive. Tend what's yours today. Tend yourself too."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for home, family, health, and money matters. The Queen of Pentacles favors choices that care for people and keep life running well. Check that you aren't giving up your own needs to say yes.",
+    "asFeelings": "If someone feels the Queen of Pentacles toward you, they care for you in practical ways. They feed you, remember what you need, and make you feel at home. Their love is warm and steady, and they hope you'll look after them too.",
+    "asPerson": "A warm, capable person who runs a home or business well and makes people feel looked after. They're resourceful, generous, and down to earth. They can overgive, neglect themselves, or hold on to the role of the one who does everything.",
+    "asAdvice": "Look after your body, your home, and your money, and look after the people near you. Keep some of your energy for yourself. Ask for help, and let others do their share.",
+    "timing": "Steady and ongoing, in weeks to months. The Queen of Pentacles points to growth through consistent care. Results come as you keep tending things day after day.",
+    "howSomeoneSeesYou": "People see you as warm, capable, and generous. You make a place feel safe. Some may take you for granted or lean on you too much, so say no sometimes and let them look after you."
+  },
   "slug": "queen-of-pentacles"
 }

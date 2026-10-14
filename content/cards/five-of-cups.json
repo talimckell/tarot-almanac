@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Five of Cups. Three spilled. Two still standing. The figure hasn't turned around yet. That's not a flaw in the card. That's where grief actually is."
   },
+  "contexts": {
+    "yesNo": "Not right now. The Five of Cups says a loss is taking up most of your attention, and that's a hard place to decide from. Give yourself time to grieve, then ask again when you can see what's still standing.",
+    "asFeelings": "If someone feels the Five of Cups toward you, they're hurting, and it may be about a loss that has nothing to do with you. They may feel regret or sadness and have little energy for anything else. A kind word helps more than advice.",
+    "asPerson": "A deeply feeling person who takes loss seriously and doesn't pretend to be fine. They're honest about pain and good at sitting with others in theirs. They can get stuck counting what's gone and overlook what they still have.",
+    "asAdvice": "Let yourself grieve. Cry, talk to someone, or write it down. Once you've done that, take a look around for what's still standing, and take one small step toward it.",
+    "timing": "Slow. Grief takes weeks or months, and the Five of Cups asks you to give it that time. Things start to lift once you turn around and notice what remains.",
+    "howSomeoneSeesYou": "People see you as sad, heavy, or hurting, and the ones who care will want to help. Some may not know what to say, so tell them what would be useful. Reaching out is the quickest way to feel less alone."
+  },
   "slug": "five-of-cups"
 }

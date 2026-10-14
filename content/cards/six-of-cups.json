@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Six of Cups. Something old is coming through warm today. Let it. Just don't unpack your bags."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for anything tied to family, old friends, home, or something you used to love. The Six of Cups is a gentle yes. If the question is about moving forward in a new direction, make sure you're not choosing it only because it feels familiar.",
+    "asFeelings": "If someone feels the Six of Cups toward you, they feel fond and a little nostalgic. You may remind them of good times, or they may be thinking of reaching out after a long gap. The feeling is sweet and sincere, though it may be more about the past than the future.",
+    "asPerson": "A kind, sentimental person who remembers everything and holds onto old friendships. They're gentle, generous, and good with children. They can live too much in the past and hold the present up against how things used to be.",
+    "asAdvice": "Reach out to someone from your past, or revisit something you used to love. Take what was good about it and bring it into this year. Don't try to go back and live there, because you can't.",
+    "timing": "Gradual and gentle. The Six of Cups points to things from the past coming back around, often within weeks or a few months. Reunions and memories tend to arrive on their own schedule.",
+    "howSomeoneSeesYou": "People see you as kind, sweet, and a little nostalgic. You make others feel at home. If you keep talking about how things used to be, some may feel you're not fully here, so ask about the present too."
+  },
   "slug": "six-of-cups"
 }

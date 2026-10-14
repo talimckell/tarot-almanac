@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Two of Wands. Holding the whole world in one hand. The other hand is already on the wand. The horizon is right there. The only move left is stepping off the wall."
   },
+  "contexts": {
+    "yesNo": "Yes, once you have a plan. The Two of Wands says you have the power and the options, and now you need to choose one. Write a short plan with a first step. If you can't name what you'd do next week, the answer is not yet.",
+    "asFeelings": "If someone feels the Two of Wands toward you, they're interested and weighing what to do about it. They're picturing a future that might include you, and they may still be looking at other options. Let them know where you stand so they can decide.",
+    "asPerson": "An ambitious, forward-looking person who's always thinking about what's next. They're confident, curious, and good at seeing the big picture. They can stall at the edge of a decision, and they may prefer planning to doing.",
+    "asAdvice": "Choose a direction and make a plan. Write down where you want to be in a year, then list the first three steps. Pick one and do it this week. Planning is useful until it becomes a way to avoid starting.",
+    "timing": "Medium-slow. The Two of Wands points to a planning stage of a few weeks, with real movement after you decide. The larger plan may take a few months to take shape.",
+    "howSomeoneSeesYou": "People see you as ambitious, capable, and a bit far away, like you're always looking at the next thing. They trust your vision. They may wonder whether you're staying or leaving, so tell them what you're planning."
+  },
   "slug": "two-of-wands"
 }

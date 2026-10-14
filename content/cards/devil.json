@@ -99,5 +99,13 @@
     "bearingRecognitionPost": "Do you know what someone actually wants before they've admitted it to themselves? See the thing nobody's saying in the room? That's a Devil way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The chains in the Devil card are loose around their necks. They could lift them off. They're just not."
   },
+  "contexts": {
+    "yesNo": "Yes, if it's something you truly want and you know the cost. The Devil is a yes with strings attached. It points to desire, money, attraction, and ambition, and it asks whether you're choosing freely. If you feel like you can't say no, or you're hiding it from someone, treat the answer as a no until you've looked closer.",
+    "asFeelings": "If someone feels the Devil toward you, the attraction is intense, physical, and hard for them to ignore. It can be thrilling. It can also be possessive, or tangled up with jealousy and need. Notice how they treat you once the excitement settles down.",
+    "asPerson": "A magnetic, passionate person with big appetites and a clear sense of what they want. They're charming and honest about desire. They can get stuck in habits, people, or patterns they know aren't good for them, and letting go is hard.",
+    "asAdvice": "Name what has a hold on you. It might be a habit, a person, a job, or a worry. Ask honestly what you get from it and what it costs. The chain is looser than it feels, so pick one small way to loosen it this week, and tell someone you trust.",
+    "timing": "Fast to start and slow to end. The Devil describes a pull that arrives quickly and can last as long as you let it, often months. Change usually comes within weeks of the moment you admit the pattern out loud.",
+    "howSomeoneSeesYou": "People see you as magnetic, bold, and a little dangerous in a fun way. You draw attention without trying. Some may worry about your habits and others may get pulled into them, so be honest about what you're really after."
+  },
   "slug": "devil"
 }

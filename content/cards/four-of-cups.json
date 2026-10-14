@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Four of Cups. The figure isn't looking at the fourth cup, the one being offered right now. Easy to miss when you're fixed on what's not there."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Four of Cups says you aren't in the right frame of mind to answer well. Wait until you feel more interested, or look again at what's already on offer before you decide.",
+    "asFeelings": "If someone feels the Four of Cups toward you, they're bored, distracted, or flat right now, and it may have little to do with you. They may be pulling back to figure out what they want. Give them space, and don't take the quiet as a final answer.",
+    "asPerson": "A thoughtful, reflective person who spends a lot of time in their own head. They take a hard look at what they have, and they don't fake enthusiasm. They can get stuck in discontent, and they may miss what's being offered because they're busy looking inward.",
+    "asAdvice": "Take a step back and rest. Then look honestly at what's in front of you that you've been ignoring, like an invitation, an offer, or a person who keeps showing up. Try one small thing you'd usually skip.",
+    "timing": "Slow. The Four of Cups points to a stretch of waiting and low energy, usually a few weeks or a couple of months. Things pick up once you start paying attention to what's already there.",
+    "howSomeoneSeesYou": "People see you as quiet, distant, and a bit hard to impress. Some may read you as bored or unavailable. If you do care, say so out loud, because people can't tell from the outside."
+  },
   "slug": "four-of-cups"
 }

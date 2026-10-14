@@ -99,5 +99,13 @@
     "bearingRecognitionPost": "Do you feel the emotional weather of a room before anyone has said anything? Pick up what's actually going on under what's being performed? That's a Moon way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "There's a crayfish climbing out of the water in the Moon card. It just got here. It has never seen land before. It's going anyway."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Moon says things aren't clear enough to answer. Details are missing, or fear is coloring how you read them. Wait for more information, notice what keeps coming up in your dreams and your gut, and ask again in a few weeks. Hold off on big commitments for now.",
+    "asFeelings": "If someone feels the Moon toward you, their feelings are strong but confused. They may not know what they want, or they may be sending mixed signals. They could also be going through something private. Ask them one direct, kind question and give them time to answer.",
+    "asPerson": "A sensitive, imaginative, intuitive person, often artistic, who picks up the mood of a room. They have vivid dreams and deep feelings. They can be moody, anxious, or hard to read, and they sometimes let fear fill in details they can't see.",
+    "asAdvice": "Slow down and don't trust your worst-case thoughts yet. Write down your dreams and hunches, and check the facts before you act on a fear. Go to bed early, or take a walk by water. Wait for the picture to sharpen before you make a big decision.",
+    "timing": "Slow and unclear. The Moon points to a foggy stretch, usually a few weeks and sometimes a couple of months. Things get clearer a little at a time, so wait until you can see the next step.",
+    "howSomeoneSeesYou": "People see you as mysterious, sensitive, and intuitive. They may find you hard to read, and some will see you as moody. Tell people what you're feeling so they don't have to guess."
+  },
   "slug": "moon"
 }

@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Seven of Cups. Seven options, all of them floating, all of them a little unreal. Dream freely. Then pick the one that's actually there."
   },
+  "contexts": {
+    "yesNo": "Maybe, or not yet. The Seven of Cups says there are many options and not all of them are real. Narrow the list to the ones you can actually do, and then ask again.",
+    "asFeelings": "If someone feels the Seven of Cups toward you, they like you and they're also picturing a lot of other possibilities. They may be undecided, or daydreaming about what this could be. Don't expect a clear answer until they pick a direction.",
+    "asPerson": "A creative, imaginative person with a head full of ideas and plans. They're inspiring to talk to and always seeing new possibilities. They can have trouble choosing, and some of what they promise stays in the daydream.",
+    "asAdvice": "Write down every option, then cross off the ones you wouldn't really do. Pick one and take one concrete step this week. A small real thing beats a big imagined one.",
+    "timing": "Slow to settle. The Seven of Cups can stretch for weeks or months while you keep considering, and nothing moves until you choose. Once you commit, things speed up.",
+    "howSomeoneSeesYou": "People see you as creative, dreamy, and full of ideas. They enjoy your vision, though some may wonder if you'll follow through. Finish one thing and they'll take the rest more seriously."
+  },
   "slug": "seven-of-cups"
 }

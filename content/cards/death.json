@@ -99,5 +99,13 @@
     "bearingRecognitionPost": "Do you feel when something is over before anyone's said so? Move through endings that stop other people cold, because you were already ready to let go? That's a Death way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "There's a sun rising between the towers in the Death card. The card everyone is afraid of is the one with the dawn in it."
   },
+  "contexts": {
+    "yesNo": "Yes to ending something, no to keeping it the same. Death is a clear yes for questions about leaving a job, ending a relationship, or closing a chapter. If you're asking whether something can go on unchanged, the answer is no. It rarely means a literal death.",
+    "asFeelings": "If someone feels Death toward you, something in their feelings is ending or changing. They may be letting go, or the relationship may be turning into something new. That could mean a clean break or a different kind of closeness. Ask them directly where things stand.",
+    "asPerson": "A person who has been through major change and come out different. They're calm about endings, direct, and good at helping others through loss. They can cut things off quickly, and they sometimes leave before they've told anyone they were unhappy.",
+    "asAdvice": "Let it end. Name the thing that's already over, whether it's a job, a habit, a belief, or a relationship, and stop feeding it. Make the cut cleanly and kindly, then give yourself a few quiet days. Leave some room for what comes next.",
+    "timing": "Often quick once the decision is made. Death points to an ending within days or weeks, followed by a quieter stretch of a few months before the new thing takes shape.",
+    "howSomeoneSeesYou": "People see you as intense, decisive, and different from before. You may seem to close doors without warning. Give people notice when a change you're making affects them."
+  },
   "slug": "death"
 }

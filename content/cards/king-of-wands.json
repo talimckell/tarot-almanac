@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the King of Wands. Already half out of the throne. The vision is there. The question is whether the people around you are coming with you or just watching you go."
   },
+  "contexts": {
+    "yesNo": "Yes, if it serves something bigger than you. The King of Wands backs a clear vision and a decisive move. Make sure you've heard other people's views before you commit, since he can decide too fast.",
+    "asFeelings": "If someone feels the King of Wands toward you, they're confident, protective, and serious about you. They want to lead and to build something with you. They respect strength. They may want things their way, so speak up about what you need.",
+    "asPerson": "A charismatic, visionary leader who inspires people and gets things done. They're decisive, generous, and good at seeing the big picture. They can be domineering, impatient with slower people, and slow to admit they're wrong.",
+    "asAdvice": "Lead with a clear goal. Decide what you're building and tell people why it matters. Delegate, and listen to the people who disagree with you. Check that others are coming along with you, and ask how they're doing.",
+    "timing": "Steady and decisive. The King of Wands points to months of focused building, with early results in a few weeks. He moves quickly once the vision is set.",
+    "howSomeoneSeesYou": "People see you as a leader, confident, inspiring, and in charge. They follow you willingly. Some may find you intimidating or hard to correct, so invite pushback and take it well."
+  },
   "slug": "king-of-wands"
 }

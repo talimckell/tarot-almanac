@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ten of Pentacles. Three generations, an archway, ten coins arranged like a family tree. What you're building today is bigger than today."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for family, home, and long-term plans. The Ten of Pentacles favors choices that last and benefit others as well as you. Think about who else this affects, and talk it over with them.",
+    "asFeelings": "If someone feels the Ten of Pentacles toward you, they're thinking long term. They see you as part of their family and future, and may imagine a home together. Their feelings are serious, and they want to introduce you to the people who matter to them.",
+    "asPerson": "A well-established person with deep roots in family, home, or a long career. They value tradition, security, and being part of something lasting. They can lean too hard on family expectations or expect everyone to follow the plan.",
+    "asAdvice": "Think about what you want to build for the long run. Put your time into the family, home, and finances that will outlast you. Make a will, start a savings plan, or call a relative. Keep your own wishes in the plan too.",
+    "timing": "Long. The Ten of Pentacles points to results that build over years, with milestones along the way. Expect a lasting outcome after months to years, so settle in for the wait.",
+    "howSomeoneSeesYou": "People see you as established, trustworthy, and rooted. You seem to have stability to share. Some may feel pressure to meet the standards of your family or your way of doing things, so leave room for their own choices."
+  },
   "slug": "ten-of-pentacles"
 }

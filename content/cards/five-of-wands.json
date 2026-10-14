@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Five of Wands. Five people, five wands, no one clearly winning. Worth asking which fights today are actually worth your fire."
   },
+  "contexts": {
+    "yesNo": "Maybe, and expect some friction first. The Five of Wands says the answer will come out of competition or disagreement rather than a clean yes. If you can handle some pushback and a few rival opinions, go ahead. If you need it to be smooth, wait.",
+    "asFeelings": "If someone feels the Five of Wands toward you, they're stirred up and a little unsettled. There may be attraction mixed with rivalry, or they may be sparring with you because it's exciting. Their feelings are loud and mixed right now, so ask them directly what they want.",
+    "asPerson": "A competitive, lively person who loves a debate and does their best work with a little pressure. They're quick, funny, and hard to bore. They can pick fights for sport, and they may not notice when a joke has turned into a real argument.",
+    "asAdvice": "Let the friction happen, but keep it useful. Pick the one disagreement that matters and drop the rest. Listen to what the other side is asking for before you answer. If it turns into a shouting match, take a walk.",
+    "timing": "Fast and messy. The Five of Wands points to a noisy stretch of days or a couple of weeks. Things settle once people stop talking over each other and someone makes a call.",
+    "howSomeoneSeesYou": "People see you as energetic, outspoken, and ready to argue. Some will enjoy the challenge. Others may find you exhausting or think you're picking a fight, so say so when you're only debating for fun."
+  },
   "slug": "five-of-wands"
 }

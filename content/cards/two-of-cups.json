@@ -67,5 +67,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Two of Cups. Someone is going to be actually seen today, maybe by you, maybe by someone else, maybe by both at once. The card is about what happens when both cups come up."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for relationships, partnerships, and any agreement between two people. The Two of Cups says the answer is good when both sides want it equally. If you're the only one putting in effort, treat it as a maybe and check in with the other person.",
+    "asFeelings": "If someone feels the Two of Cups toward you, the feeling is mutual and they know it. They respect you, they enjoy your company, and they want to be met halfway. They're likely ready for an honest conversation about where this is going.",
+    "asPerson": "A fair, attentive person who treats the people close to them as equals. They listen well and give as much as they get. They can lose themselves in a partner, or hold back until they're sure the other person is as invested as they are.",
+    "asAdvice": "Reach out to the person in question and say what you actually feel. Aim for a fair exchange, where both people give and both people receive. If the balance is off, name it kindly now rather than letting it build.",
+    "timing": "Steady and mutual. The Two of Cups moves at the speed of two people, so expect weeks rather than days. Things move forward as soon as both sides show up.",
+    "howSomeoneSeesYou": "People see you as fair, kind, and a good partner. You make others feel heard and valued. The risk is that you come across as too eager to please, so make sure your own needs get said out loud too."
+  },
   "slug": "two-of-cups"
 }

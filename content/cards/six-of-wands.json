@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Six of Wands. The rider came through the melee and earned the wreath. Today: don't give it back."
   },
+  "contexts": {
+    "yesNo": "Yes. The Six of Wands is a clear sign of success and good news. It's a strong yes for work, competitions, and anything where other people will see the result. Keep your head level and do the follow-up.",
+    "asFeelings": "If someone feels the Six of Wands toward you, they admire you and are proud of you. They may be impressed by what you've done and want to be near it. They're likely to say so openly, so let them.",
+    "asPerson": "A confident, successful person who's used to being noticed. They're a natural leader, generous with credit, and good at rallying a crowd. They can lean on applause, and they may feel shaky when nobody's clapping.",
+    "asAdvice": "Take the win and let people see it. Share the news, say thank you, and let yourself enjoy it. Then share the credit with the people who helped. Keep working, because recognition fades quickly.",
+    "timing": "Soon. The Six of Wands points to good news within days or a few weeks, often after a stretch of hard effort. The glow lasts a while, so put it to use.",
+    "howSomeoneSeesYou": "People see you as successful, confident, and a leader worth following. Most are happy for you, and a few may feel a bit of envy. Stay generous and keep your feet on the ground so the win doesn't go to your head."
+  },
   "slug": "six-of-wands"
 }

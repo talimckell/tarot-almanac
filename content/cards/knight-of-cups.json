@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Knight of Cups. Slow horse. Cup held out. Heart already decided. The Knight isn't charging. He's riding steadily toward the thing he means."
   },
+  "contexts": {
+    "yesNo": "Yes, if the question is about love, creative work, or following your heart. The Knight of Cups says go for it. Before you commit, check that the feeling is steady and the plan is real.",
+    "asFeelings": "If someone feels the Knight of Cups toward you, they're romantic and keen to pursue you. They may send messages, write you something, or make big gestures. The feeling is real, though you should watch for whether it lasts once the excitement settles.",
+    "asPerson": "A charming, romantic person who follows their heart and says what they feel. They're thoughtful and polite and great at a first date. They can get carried away by an ideal, promise more than they can deliver, and lose interest when things get ordinary.",
+    "asAdvice": "Act on what moves you. Send the message, make the offer, or start the project. Then follow through the next week and the one after, when the excitement has faded.",
+    "timing": "Moderate, with a burst. The Knight of Cups arrives with an offer or an invitation, often within a few weeks, and it moves at the speed of emotion. Check back in a month to see whether it's still going.",
+    "howSomeoneSeesYou": "People see you as romantic, charming, and sincere. You make others feel special. If you disappear when things get hard, they'll notice, so stay in touch when it's not exciting."
+  },
   "slug": "knight-of-cups"
 }

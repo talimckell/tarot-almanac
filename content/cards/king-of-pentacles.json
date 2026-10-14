@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the King of Pentacles. Armor under the robe, even on the throne. What you built is secure today. Let it be generous too."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for money, business, and long-term security. The King of Pentacles says the foundation is solid and you can build on it. Check the numbers first, then commit.",
+    "asFeelings": "If someone feels the King of Pentacles toward you, they're serious and committed. They show care by providing, fixing things, and being dependable, and they may say little in words. They want a stable life with you, and they won't rush in until they're sure.",
+    "asPerson": "A steady, successful, generous person who has built something real, often in business or finance. They're calm, reliable, and good at taking care of others. They can also get controlling about money or too attached to status, and they may measure love by what they provide.",
+    "asAdvice": "Build on what is already solid. Make a budget, finish what you've started, and put your resources to work for the people you care about. Be generous, and keep the decisions about your own money yours.",
+    "timing": "Slow and steady, usually several months to a year. The King of Pentacles points to results that come from long-term building. Expect security to grow gradually, and keep going.",
+    "howSomeoneSeesYou": "People see you as capable, stable, and successful, the one they come to for sound advice or help. Some may find you stern or too focused on money and status. Let people see your warmth, and do something generous without being asked."
+  },
   "slug": "king-of-pentacles"
 }

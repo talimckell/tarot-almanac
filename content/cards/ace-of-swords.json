@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ace of Swords. The fog just lifted. Whatever you're seeing clearly right now, you won't be able to un-see it."
   },
+  "contexts": {
+    "yesNo": "Yes, once you have the facts. The Ace of Swords brings a clear, honest answer, and it tends to favor the truth even if it's uncomfortable. If you aren't sure yet, the clarity is on its way.",
+    "asFeelings": "If someone feels the Ace of Swords toward you, they've had a moment of clarity about you and they're ready to say so plainly. They'll give you a straight answer, whether it's yes or no. You won't have to guess where you stand.",
+    "asPerson": "A sharp, honest, quick-minded person who cuts to the heart of things. They explain complicated ideas simply and don't tolerate vagueness. Their honesty can land like a blade when they forget to be gentle.",
+    "asAdvice": "Name what's true, and write it down. Make the decision you've been circling, and have the direct conversation. Say it plainly and with care, because the truth lands best when it's kind.",
+    "timing": "Sudden. The Ace of Swords is a flash of clarity, so expect answers, ideas, or decisions within days. What you do with them takes longer.",
+    "howSomeoneSeesYou": "People see you as clear, direct, and quick to get to the point. They count on you for a straight answer. Some may find your bluntness a lot to take, so soften the delivery without softening the truth."
+  },
   "slug": "ace-of-swords"
 }

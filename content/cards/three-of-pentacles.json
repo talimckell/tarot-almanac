@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Three of Pentacles. Three figures, tools, the cathedral plans on the table. None of them are building it alone."
   },
+  "contexts": {
+    "yesNo": "Yes, if you work with others. The Three of Pentacles favors projects that combine different skills and have a clear plan. Get input from people who know more than you do, then do your part well.",
+    "asFeelings": "If someone feels the Three of Pentacles toward you, they respect you and see you as a real partner. They like working beside you and value what you can do. Their feelings grow through shared effort, so expect them to build over time.",
+    "asPerson": "A skilled, dependable collaborator who takes pride in good work. They're a good teammate and comfortable taking feedback. They can get too wrapped up in the job, or clash with others over how it should be done.",
+    "asAdvice": "Ask for help and share the work. Find people whose skills fill your gaps, and be clear about who does what. When someone gives you honest feedback on your work, listen to it.",
+    "timing": "Gradual, over weeks to a few months. The Three of Pentacles shows progress as each part comes together. Early signs of success usually appear before the whole project is done.",
+    "howSomeoneSeesYou": "People see you as skilled, reliable, and good to work with. Your work earns respect. If you tend to do everything yourself, they may not know what you need, so speak up and give others credit."
+  },
   "slug": "three-of-pentacles"
 }

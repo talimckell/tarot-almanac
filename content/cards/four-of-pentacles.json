@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Four of Pentacles. One coin clutched to the chest, two pinned under the feet. He has everything and can't move. Worth checking your own grip today."
   },
+  "contexts": {
+    "yesNo": "Not yet, or only with care. The Four of Pentacles says to protect what you have. If the question involves risking money or letting go, slow down and hold your position until you're sure.",
+    "asFeelings": "If someone feels the Four of Pentacles toward you, they care but are guarded. They're afraid of losing something, so they hold back. They may be slow to commit or to share their time and money. Patience and reassurance can help.",
+    "asPerson": "A careful, protective person who saves, plans, and values security. They're dependable and good with money. They can be tight-fisted, controlling, or afraid to take any risk.",
+    "asAdvice": "Keep your stability, and loosen your grip a little. Ask what you're afraid of losing, and whether holding on is helping. Spend or share something small this week and see that you're fine.",
+    "timing": "Slow, with a pause. The Four of Pentacles points to holding steady for weeks to months. Little will change until you decide to loosen up.",
+    "howSomeoneSeesYou": "People see you as stable, careful, and a bit guarded. They trust you with money and plans. Some may find you closed off or stingy, so let people in on what you're feeling and be generous when you can."
+  },
   "slug": "four-of-pentacles"
 }

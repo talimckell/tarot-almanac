@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ace of Wands. The branch is budding. The spark is real. The only question is whether you let it touch something today."
   },
+  "contexts": {
+    "yesNo": "Yes. The Ace of Wands is a strong yes for new projects, ideas, and fresh starts. The spark is real. The condition is that you act on it soon, before it cools.",
+    "asFeelings": "If someone feels the Ace of Wands toward you, there's a new spark, with strong attraction and excitement. They're feeling something fresh and want to explore it. It's early and energetic, so let it develop.",
+    "asPerson": "An energetic, inspired person full of ideas who gets others excited. They're creative, direct, and good at starting things. They can lose interest quickly and leave things half-built.",
+    "asAdvice": "Start the thing you've been thinking about. Write the first page, make the first call, book the first session. Act while the energy is high. Then plan how to keep it going once the rush fades.",
+    "timing": "Immediate. The Ace of Wands points to a beginning within days, and a first step can happen today. Momentum builds over the following weeks.",
+    "howSomeoneSeesYou": "People see you as energized, inspiring, and full of potential. Your enthusiasm is catching. Some may wonder whether this idea will last any longer than the last one, so show them a first result."
+  },
   "slug": "ace-of-wands"
 }

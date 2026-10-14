@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Three of Swords. No figure in this one. Just a heart, three swords, rain. It doesn't soften it. It just tells the truth."
   },
+  "contexts": {
+    "yesNo": "Probably no, or at least painful. The Three of Swords says the honest answer may hurt. It's still better to know, because the clear truth lets you start healing.",
+    "asFeelings": "If someone feels the Three of Swords toward you, they're hurting, and you may be tied up in it. They could be grieving, disappointed, or carrying a wound they haven't said out loud. Be gentle, and don't rush them to feel better.",
+    "asPerson": "A sensitive, honest person who feels things deeply and has known real heartbreak. They're compassionate and understand pain in others. They can hold onto old hurt and replay it long after it needs to be carried.",
+    "asAdvice": "Let yourself feel it. Cry, talk to someone you trust, and write down what happened. Then take one small step toward repair, and let the wound close a bit at a time.",
+    "timing": "Painful at first, then healing. The Three of Swords usually marks a sharp moment followed by weeks to months of recovery. The sting is strongest early and fades as you let yourself grieve.",
+    "howSomeoneSeesYou": "People see you as someone who feels deeply and has been through something. They may handle you gently or not know what to say. Let the people who care about you in, because carrying this alone makes it heavier."
+  },
   "slug": "three-of-swords"
 }

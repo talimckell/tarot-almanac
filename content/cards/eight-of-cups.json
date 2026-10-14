@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Eight of Cups. Eight cups, stacked and untouched. The figure isn't looking back. They were finished before they left."
   },
+  "contexts": {
+    "yesNo": "Yes, if the question is about leaving, ending, or moving on from something that no longer fits. The Eight of Cups says it's time to go, even though it's hard. If you're asking whether to stay, the answer leans no.",
+    "asFeelings": "If someone feels the Eight of Cups toward you, they may care about you and still feel something is missing. They're thinking about leaving, or they've already begun to pull away. It may not be about you, so ask them honestly what they need.",
+    "asPerson": "A thoughtful, honest person who follows their values even when it costs them. They know when something is finished and have the courage to walk away. They can leave too quickly without saying why, and they may keep searching without finding what they want.",
+    "asAdvice": "Admit what's missing. If something is complete, or it no longer fits who you are, let yourself leave it. Plan the exit carefully, take what matters, and say goodbye kindly.",
+    "timing": "A slow start and then a clear break. The Eight of Cups points to a decision that has built up over weeks or months. Once you walk, things change quickly.",
+    "howSomeoneSeesYou": "People see you as serious, self-aware, and a bit private. They may be surprised when you leave something that looked fine. Tell the people close to you why, so it doesn't feel sudden."
+  },
   "slug": "eight-of-cups"
 }

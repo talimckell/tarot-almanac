@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Page of Pentacles. Holding the coin up, studying it like it's the only thing in the field. Start something real today, even slowly."
   },
+  "contexts": {
+    "yesNo": "Yes, as a start. The Page of Pentacles favors beginning something practical, like a class, a savings plan, or a new job. Begin small and keep at it. It's a weaker yes for big, fast commitments.",
+    "asFeelings": "If someone feels the Page of Pentacles toward you, they're sincere and a little shy about it. They're curious about you and want to learn who you are. They aren't playing games. They'll show it by remembering details and showing up.",
+    "asPerson": "A student or beginner, eager and careful, ready to learn a new skill or trade. They're earnest, practical, and hardworking. They can talk about plans without starting them, or give up when the first stage gets dull.",
+    "asAdvice": "Pick one practical thing and start it this week. Sign up for the class, open the account, or write the first page. Small, steady steps will do more for you than big plans.",
+    "timing": "Slow and steady, as with any new skill. The Page of Pentacles points to a start now and visible progress within weeks to months. Real results take longer than the first burst of enthusiasm.",
+    "howSomeoneSeesYou": "People see you as sincere, curious, and hardworking, though new at something. They'll be glad to teach you. If you keep planning without starting, they'll notice, so show them something finished, however small."
+  },
   "slug": "page-of-pentacles"
 }

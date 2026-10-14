@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Seven of Wands. Outnumbered on the high ground. The question isn't whether you can hold it. It's whether this is the hill."
   },
+  "contexts": {
+    "yesNo": "Yes, if you're willing to defend it. The Seven of Wands says you're in a good position, and people will push back. If you believe in your answer, hold it. If you're only holding on out of stubbornness, rethink.",
+    "asFeelings": "If someone feels the Seven of Wands toward you, they feel strongly and are protecting something, maybe their pride or their position. They may seem guarded or defensive. Give them space to say what they're protecting, and avoid pushing back right away.",
+    "asPerson": "A determined, principled person who stands up for what they believe and doesn't back down under pressure. They're brave and loyal to their views. They can get defensive, and they may treat every disagreement like an attack.",
+    "asAdvice": "Stand your ground on what matters. Decide the two or three things you won't give up, and let the smaller ones go. Stay calm when you're challenged and say your position in plain words. Rest when the pressure eases.",
+    "timing": "Ongoing. The Seven of Wands points to a stretch of pushback lasting weeks, with relief once people see you won't be moved. Pace yourself so you don't run out of energy halfway.",
+    "howSomeoneSeesYou": "People see you as confident, firm, and willing to take a stand. You earn respect for it. Some may find you hard to argue with or always on guard, so show them that you can listen."
+  },
   "slug": "seven-of-wands"
 }

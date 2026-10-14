@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Queen of Wands. Sunflower in one hand, staff in the other. Black cat at her feet. She's not performing. She just showed up."
   },
+  "contexts": {
+    "yesNo": "Yes, if you want it. The Queen of Wands answers to your own desire, and she says go with confidence. If you notice you need other people's approval before you can say yes, spend a minute with that first.",
+    "asFeelings": "If someone feels the Queen of Wands toward you, they're warm, open, and attracted, and they're comfortable showing it. They'll be direct about wanting to see you. They want you to be yourself around them.",
+    "asPerson": "A confident, charismatic person who's comfortable in the spotlight and generous with their warmth. They're a natural host and they know what they want. They can get jealous or need reassurance when they feel overlooked.",
+    "asAdvice": "Own what you want, and say it out loud. Wear the thing, ask for the role, take up space. Be warm with people, and keep a few honest friends who'll tell you the truth. Stop doing things just to be seen.",
+    "timing": "Steady and ongoing. The Queen of Wands points to things that build over weeks and reward consistent energy. Things move when you commit.",
+    "howSomeoneSeesYou": "People see you as confident, warm, and magnetic. You light up a room. Some may see it as a performance, or feel overshadowed, so let people see the real, unpolished you too."
+  },
   "slug": "queen-of-wands"
 }

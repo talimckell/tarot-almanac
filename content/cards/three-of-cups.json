@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Three of Cups. Joy that gets bigger when you pass it around. Find your people today and actually let yourself be with them."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for anything involving friends, community, or celebration. The Three of Cups says this goes better with other people around. If the question is about something you'd have to do alone, it's more of a maybe.",
+    "asFeelings": "If someone feels the Three of Cups toward you, they like having you around and see you as part of their circle. The feeling is warm and friendly, and it may not be romantic yet. They'd be glad to see you at the next gathering.",
+    "asPerson": "A social, generous person who brings people together and remembers birthdays. They're fun at a party and loyal to their friends. They can spread themselves thin, or lean on the crowd so they never have to be alone with their thoughts.",
+    "asAdvice": "Call your friends and make a plan. Host something small, or say yes to the invitation you've been putting off. Spend your time on the people who are glad to see you, and let the rest go.",
+    "timing": "Quick and lively. The Three of Cups points to good news and gatherings, often within days or a couple of weeks. Social plans move faster than most things, so say yes while the invitation is open.",
+    "howSomeoneSeesYou": "People see you as friendly, fun, and the one who brings people together. You make others feel included. If you start performing for the crowd, some people will notice, so let a few of them see the real you."
+  },
   "slug": "three-of-cups"
 }

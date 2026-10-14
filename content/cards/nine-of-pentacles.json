@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Nine of Pentacles. Falcon on the glove, vineyard she grew herself, completely at ease. She built this. She's allowed to enjoy it."
   },
+  "contexts": {
+    "yesNo": "Yes, if it fits the life you've built. The Nine of Pentacles favors choices that protect your independence and comfort. If the answer would make you depend on someone else, think twice.",
+    "asFeelings": "If someone feels the Nine of Pentacles toward you, they're content and self-sufficient, and they want to share a good life with you. They're attracted and taking their time. They value their independence and want a partner who respects it.",
+    "asPerson": "A self-made, polished person who enjoys the results of years of effort. They appreciate nice things, quiet time, and their own company. They can become isolated or overly guarded, and may find it hard to let others in.",
+    "asAdvice": "Enjoy what you've built. Take the time off, buy the good thing, and sit in the garden. Then ask whether anyone is missing from the picture, and invite them in.",
+    "timing": "Comfortable and unhurried, usually months. The Nine of Pentacles shows the reward arriving after long effort, and it's already close. Take your time with it.",
+    "howSomeoneSeesYou": "People see you as independent, elegant, and successful. You seem to have your life in order. Some may find you hard to approach, so let people know they're welcome."
+  },
   "slug": "nine-of-pentacles"
 }

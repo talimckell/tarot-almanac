@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Six of Swords. Far shore calm. Near water choppy. The boat is already moving. That's enough for today."
   },
+  "contexts": {
+    "yesNo": "Yes, if the question is about leaving something behind or moving toward calmer ground. The Six of Swords says the way forward is real, though it may feel slow and a little sad. Expect to bring some of the old weight with you, and plan to put it down along the way.",
+    "asFeelings": "If someone feels the Six of Swords toward you, they're moving past something hard and you may be part of the calmer place they're heading toward. They feel cautious relief, not wild excitement. They need things to be gentle and low-drama right now.",
+    "asPerson": "A quiet, resilient person who has come through a rough stretch and is rebuilding. They're gentle, patient, and good at helping others through a hard season. They can keep a lot of hurt tucked away and may be slow to say what they still carry.",
+    "asAdvice": "Keep moving, even if it's at a slow pace. Leave the situation, the habit, or the conversation that keeps pulling you back into the storm. Take only what you actually need with you, and sort the rest later.",
+    "timing": "Gradual. The Six of Swords is a steady passage, usually weeks to a few months, with no sudden arrival. Things get calmer a little at a time.",
+    "howSomeoneSeesYou": "People see you as steady, thoughtful, and a bit reserved, someone who is quietly getting through something. They may sense you're in transition and give you space. If you never say what's going on, they might not know how to help, so give them a small piece of the story."
+  },
   "slug": "six-of-swords"
 }

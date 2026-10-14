@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Page of Wands. Holding the wand up, looking at it like it might do something extraordinary. Doesn't know yet. Doesn't need to."
   },
+  "contexts": {
+    "yesNo": "Yes, if it's something you're excited about. The Page of Wands is a green light for trying, learning, and starting small. It's a weaker yes for anything that needs a long commitment, so keep the first step low-stakes.",
+    "asFeelings": "If someone feels the Page of Wands toward you, they're curious and excited, with real crush energy. They like you and want to find out more. It's early, so expect enthusiasm and not much of a plan yet.",
+    "asPerson": "An enthusiastic, curious beginner, often young or new to something. They're playful, full of ideas, and happy to try anything once. They can drop a project when the novelty fades, and they sometimes promise more than they deliver.",
+    "asAdvice": "Try the thing. Sign up for the class, start the draft, send the message. Keep it small and fun. Then pick one idea to stick with for a month before you chase the next one.",
+    "timing": "Quick to start. The Page of Wands points to news and fresh ideas within days or a couple of weeks. Whether it lasts depends on whether you keep showing up.",
+    "howSomeoneSeesYou": "People see you as bright, eager, and fun to be around. Your enthusiasm lifts a room. Some may wonder whether you'll follow through, so finish something small and let them see it."
+  },
   "slug": "page-of-wands"
 }

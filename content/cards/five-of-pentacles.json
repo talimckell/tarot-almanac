@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Five of Pentacles. They're walking right past a lit window. They don't look up. Look up today."
   },
+  "contexts": {
+    "yesNo": "Not right now. The Five of Pentacles shows hardship, and it's hard to say yes when money, health, or support are short. Ask for help first, then look at the question again once you're on steadier ground.",
+    "asFeelings": "If someone feels the Five of Pentacles toward you, they may feel left out or unsure they deserve you. They may be going through a hard time and have little to give. They might care but feel too ashamed or stretched thin to show it. A kind, direct reach out can help.",
+    "asPerson": "A person going through a rough patch, with money trouble, poor health, or loneliness. They're often tougher than they look and know what it's like to struggle. They can also be too proud or ashamed to ask for help, and may keep struggling alone.",
+    "asAdvice": "Ask for help, and accept it when it's offered. Reach out to one real person today, whether that's a friend, a family member, a local group, or a service. Help is closer than it feels, and asking for it is a practical step.",
+    "timing": "Slow, and often a hard stretch of weeks to months. The Five of Pentacles usually eases once you reach out for support. A change tends to come after you ask for help, so don't wait to be noticed.",
+    "howSomeoneSeesYou": "People may see you as struggling, withdrawn, or hard to reach. Some will want to help but not know how. If you're hurting, tell someone directly what you need, because people can't always tell."
+  },
   "slug": "five-of-pentacles"
 }

@@ -98,5 +98,13 @@
     "bearingRecognitionPost": "Do people feel warmer after they've been around you? Not because you tried. Just because that's the effect? That's a Sun way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The child in the Sun card isn't holding the reins. Arms wide open, on a moving horse, in full gallop. Not steering. Just in it."
   },
+  "contexts": {
+    "yesNo": "Yes, one of the clearest yeses in the deck. The Sun says go ahead, especially for anything that makes you feel alive, like a celebration, a relationship, a child, or a creative project. Still read the fine print, since the Sun's confidence can skip past the details.",
+    "asFeelings": "If someone feels the Sun toward you, they're happy about you and they show it. They're open, warm, and proud to be with you. There's very little hidden. Expect them to be direct about how they feel and to want to include you in their life.",
+    "asPerson": "A warm, upbeat, generous person who lights up a room and makes others feel welcome. They're confident, playful, and honest. They can miss it when someone else is having a bad day, and they may push themselves to stay cheerful when they're struggling.",
+    "asAdvice": "Do the thing that makes you glad, and let people see it. Spend time outside in daylight. Share your good news and celebrate it. If you've been hiding or playing small, stop. Then check in with how you actually feel under the cheer.",
+    "timing": "Fast and bright. The Sun points to good things arriving within days or weeks, and a stretch of momentum through the following season.",
+    "howSomeoneSeesYou": "People see you as friendly, confident, and fun to be around. Your energy lifts a room. Some may expect you to be okay all the time, so tell people when you aren't."
+  },
   "slug": "sun"
 }

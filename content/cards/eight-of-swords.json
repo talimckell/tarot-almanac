@@ -63,5 +63,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Eight of Swords. The swords aren't touching her. The cage has gaps. Worth checking before you assume it's locked."
   },
+  "contexts": {
+    "yesNo": "Maybe, and the answer is likely more open than it feels. The Eight of Swords says you're seeing fewer options than you really have. List out every way forward, including the ones that scare you, and then answer again.",
+    "asFeelings": "If someone feels the Eight of Swords toward you, they feel stuck, and that may color how they act around you. They could be holding back because they don't think they can change things. Patience and a clear, simple invitation can help.",
+    "asPerson": "A thoughtful person who feels boxed in by circumstances, worry, or old beliefs. They're often capable and smart, and they underestimate their own freedom. They can talk themselves out of every option and wait for someone to rescue them.",
+    "asAdvice": "Take one small step toward the way out. Question the story that says you can't. Ask one person for help, or try one thing you've told yourself is impossible.",
+    "timing": "Slow to start, then faster. The Eight of Swords describes being stuck for weeks or months, and it often shifts the moment you see the exit. One decision can open things up within days.",
+    "howSomeoneSeesYou": "People see you as capable, though they may sense you feel stuck or held back. Some will want to rescue you. Tell them what kind of help you actually want, and keep making your own moves."
+  },
   "slug": "eight-of-swords"
 }

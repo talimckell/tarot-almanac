@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Three of Wands. Ships on the water. The figure isn't pacing. They're watching. There's a difference."
   },
+  "contexts": {
+    "yesNo": "Yes, and it's already underway. The Three of Wands says what you set in motion is working, though results take time. Be patient, and plan the next step while you wait.",
+    "asFeelings": "If someone feels the Three of Wands toward you, they're thinking ahead and hoping about a future with you. They've made their choice and are waiting to see how it goes. Their interest is steady, so keep in touch.",
+    "asPerson": "A forward-thinking, patient person who plans ahead and watches for results. They're good with long projects, travel, and anything that reaches beyond home. They can get anxious while they wait, and they may stare at the horizon instead of working on what's in front of them.",
+    "asAdvice": "Keep going and look further out. You've done the hard part of choosing, so give it time. Use the wait to plan the next move or build a useful connection. Check on your progress once a week instead of every day.",
+    "timing": "Medium. The Three of Wands points to a few weeks to a few months before results show. The first signs come sooner, so watch for them.",
+    "howSomeoneSeesYou": "People see you as visionary, capable, and a few steps ahead. They trust your plans. You may seem distant or absorbed in the future, so stay connected to the people around you now."
+  },
   "slug": "three-of-wands"
 }

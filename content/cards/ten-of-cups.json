@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ten of Cups. The suit's final card. Ten cups in the sky, people you love, the ordinary Sunday you wouldn't trade. Look up."
   },
+  "contexts": {
+    "yesNo": "Yes, especially for home, family, and long-term love. The Ten of Cups is a strong yes when it means building something lasting with people you trust. If it would cost the people you love, think again.",
+    "asFeelings": "If someone feels the Ten of Cups toward you, they see a future with you. They think of you as family, or want to. The feeling is steady and committed, and it grows with time.",
+    "asPerson": "A loyal, warm person who builds a home and keeps their people close. They value family, tradition, and peace. They can put too much weight on the picture of a happy life, and they may hide problems to keep it looking whole.",
+    "asAdvice": "Spend time with the people who feel like home. Make a regular ritual, like a weekly dinner or a Sunday call. If something at home needs a real conversation, have it, because peace lasts longer when it's honest.",
+    "timing": "Slow and lasting. The Ten of Cups builds over months and years, though you may feel the first sign of it within weeks. It's the long-term outcome, so be patient with the process.",
+    "howSomeoneSeesYou": "People see you as happy, loyal, and deeply rooted. You make others feel like they belong. If things at home are harder than they look, let one trusted person know, so you're not carrying it alone."
+  },
   "slug": "ten-of-cups"
 }

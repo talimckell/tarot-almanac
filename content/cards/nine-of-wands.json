@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Nine of Wands. Bandaged. Still standing. Eight staves already won behind them. This isn't fresh strength. It's the real kind."
   },
+  "contexts": {
+    "yesNo": "Yes, but it will take more effort. The Nine of Wands says you're nearly there and tired. Keep going, and rest where you can. If you've been fighting this for a long time and it costs more than it gives, ask yourself whether it's still worth it.",
+    "asFeelings": "If someone feels the Nine of Wands toward you, they care and they're wary. Something in the past may have hurt them, so they're slow to trust. Be patient and consistent, and show up the same way each time.",
+    "asPerson": "A tough, resilient person who's been through a lot and kept going. They're loyal, determined, and don't quit. They can be guarded and slow to accept help, and they sometimes expect the next hit before it comes.",
+    "asAdvice": "Keep going, and rest. You're closer than you think, so take one more step. Take a real break, even a short one, and accept help from someone you trust. Look at the threats you're bracing for and check which ones are real.",
+    "timing": "Slow, near the end. The Nine of Wands points to a last push of a few weeks to a couple of months. Relief arrives once you finish.",
+    "howSomeoneSeesYou": "People see you as tough, determined, and a bit guarded. They respect that you keep going. Some may find you hard to approach, so let a few people in on how you're really doing."
+  },
   "slug": "nine-of-wands"
 }

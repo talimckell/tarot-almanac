@@ -100,5 +100,13 @@
     "bearingRecognitionPost": "Do you take change in stride in a way that other people find almost unsettling? Not numb to it. Just already a few steps into adjusting before everyone else has finished being surprised? That's a Wheel of Fortune way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Wheel of Fortune is turning mid-card. Nobody asked it to stop for the image. It just kept going."
   },
+  "contexts": {
+    "yesNo": "Yes, if the timing is on your side, and the Wheel usually says it is. Things are turning and a lucky break may be on its way. It doesn't promise how it ends, so be ready to adapt. Say yes to what's already moving and keep a backup plan.",
+    "asFeelings": "If someone feels the Wheel toward you, their feelings are shifting, and so is the situation around them. A change in their circumstances may bring you closer, or they may feel carried along by events. Don't expect a steady line right now. Check in again once things settle.",
+    "asPerson": "A person who rolls with change, often lucky or well-timed, who has seen real ups and downs. They're optimistic, adaptable, and quick to spot a chance. They can leave too much to luck, and they may blame bad timing for a decision that was really theirs.",
+    "asAdvice": "Say yes to the change that's already coming, and stop bracing against it. Do what's in your control, like paying the bills, doing the work, and showing up. Don't hold the highs or the lows too tightly. Both pass.",
+    "timing": "Change arrives on its own schedule, but the Wheel points to a turn within weeks to a few months. A full cycle can take a year. Watch for small signs that things are moving.",
+    "howSomeoneSeesYou": "People see you as adaptable, lucky, and hard to pin down. You seem to land on your feet. Some may think you leave things to chance, so let people see the work behind your good timing."
+  },
   "slug": "wheel-of-fortune"
 }

@@ -98,5 +98,13 @@
     "bearingRecognitionPost": "Do you see what a structure is built on before you see the structure? Spot the false foundation while everyone else is admiring the building? That's a Tower way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "Look at what's actually falling off the Tower. A crown. People built that high specifically to put a crown on it."
   },
+  "contexts": {
+    "yesNo": "No to keeping things as they are, and yes to what comes after. The Tower says a plan built on shaky ground won't hold. If the question is about something you suspect isn't true, the answer is no. It's a yes to hard truths and to clearing out what was never solid.",
+    "asFeelings": "If someone feels the Tower toward you, their feelings are in upheaval. Something has shocked them or a truth has come out, and they're reacting strongly. Don't take sudden outbursts too personally. Wait for things to calm down before you talk it through.",
+    "asPerson": "An intense, honest person whose life has changed suddenly more than once, and who has rebuilt each time. They're resilient and blunt. They can blow up a situation, say things in anger, or bring chaos along with the truth.",
+    "asAdvice": "Let what's already falling fall. Don't spend your energy propping up something that's cracked. Get safe first by checking your money, your housing, and your people. Then rebuild on something true, one piece at a time.",
+    "timing": "Sudden. The Tower points to a shake-up that arrives fast, often in days, followed by weeks or months of rebuilding.",
+    "howSomeoneSeesYou": "People see you as intense, direct, and maybe unpredictable. Your honesty can land as a shock. Soften the delivery when you can."
+  },
   "slug": "tower"
 }

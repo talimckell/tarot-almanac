@@ -67,5 +67,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Page of Cups. A fish just appeared in the cup. The Page's response is delight. That's the whole move today."
   },
+  "contexts": {
+    "yesNo": "Yes, if the question is about something creative, new, or tender. The Page of Cups says give it a try and see how it feels. If a lot is at stake, make it a cautious yes and check your facts first.",
+    "asFeelings": "If someone feels the Page of Cups toward you, they're sweet on you and a bit shy about it. The feeling is new, and they may express it through a message, a small gift, or a joke. Be kind, because they're probably nervous.",
+    "asPerson": "A gentle, curious, creative person, often young or young at heart. They're sensitive, playful, and quick to follow a hunch. They can be moody, easily hurt, and unsure how to handle big feelings.",
+    "asAdvice": "Try the creative thing you've been putting off, and let it be imperfect. Pay attention to the small hunch or message that keeps showing up. If you're afraid of being rejected, ask anyway, and see what happens.",
+    "timing": "Quick, in small ways. The Page of Cups points to a message, an invitation, or an idea arriving within days or a couple of weeks. Bigger results take longer, so stay patient.",
+    "howSomeoneSeesYou": "People see you as sweet, imaginative, and a little shy. They find you easy to like. Some may think you're not serious, so show them a finished piece of work or a steady follow-through."
+  },
   "slug": "page-of-cups"
 }

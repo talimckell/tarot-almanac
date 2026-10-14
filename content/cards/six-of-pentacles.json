@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Six of Pentacles. Scales in one hand, coins in the other. Worth noticing which side of the exchange you're standing on today."
   },
+  "contexts": {
+    "yesNo": "Yes, if the exchange is fair. The Six of Pentacles favors giving and receiving in balance. Ask what's expected on both sides before you agree.",
+    "asFeelings": "If someone feels the Six of Pentacles toward you, they're generous and want to give. They may show care through gifts, time, or help. Pay attention to whether it comes freely or with expectations attached.",
+    "asPerson": "A generous person who shares their time, money, or knowledge. They're fair-minded and happy to help. They can use giving to keep people in their debt, or find it hard to accept help themselves.",
+    "asAdvice": "Give what you can and accept help when it's offered. Keep the exchange fair, and be clear about the terms on any money you lend. If you notice you're giving to feel in control, stop and ask why.",
+    "timing": "Moderate, in weeks. The Six of Pentacles points to things moving as resources change hands, such as a payment, a loan, or help arriving. Expect a fair outcome within a month or two.",
+    "howSomeoneSeesYou": "People see you as generous, fair, and willing to help. Some may feel they owe you. If it's true, make it clear that your help comes with no strings attached."
+  },
   "slug": "six-of-pentacles"
 }

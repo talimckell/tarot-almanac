@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Seven of Swords. Five swords gone, two left behind, one glance back. Worth asking what you're actually leaving behind today."
   },
+  "contexts": {
+    "yesNo": "Maybe, and be careful. The Seven of Swords says a plan could work but something is being left unsaid. If the plan only works as long as nobody finds out, the answer leans toward no.",
+    "asFeelings": "If someone feels the Seven of Swords toward you, they may be holding something back or managing what they tell you. They could be protecting themselves, or they could be less open than they appear. Pay attention to whether their words and actions match.",
+    "asPerson": "A clever, resourceful person who thinks several steps ahead and prefers to work alone. They find workarounds and rarely get caught off guard. They may bend the truth, take shortcuts, or leave out details when it suits them.",
+    "asAdvice": "Use your cleverness, and keep it honest. If you're quietly working around someone, ask yourself whether a direct conversation would be easier. Check your plan for anything you wouldn't want to explain out loud.",
+    "timing": "Quiet and quick. The Seven of Swords points to things moving behind the scenes in days or weeks. A hidden detail tends to surface within a month or two.",
+    "howSomeoneSeesYou": "People see you as smart, independent, and resourceful. They trust you to figure things out. Some may sense you keep things to yourself and wonder what you're not telling them, so share more than you think you need to."
+  },
   "slug": "seven-of-swords"
 }

@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the King of Cups. His throne is in the middle of the sea. The water is rough. He's not moving. That's not distance. That's mastery."
   },
+  "contexts": {
+    "yesNo": "Yes, if you can answer calmly and with care for the people involved. The King of Cups says decide with a steady head and an open heart. If you're acting in anger or fear, wait a day.",
+    "asFeelings": "If someone feels the King of Cups toward you, their care is calm and dependable. They may not say much, though they'd show up when you need them. They're serious about you, and they're not rushing.",
+    "asPerson": "A mature, calm person who stays steady in hard moments. They give good advice, listen without judging, and keep promises. They can hold their feelings in too tightly, and they may seem distant or avoid saying what hurts.",
+    "asAdvice": "Stay calm and be kind. Listen first, then say what you think. If you've been keeping a feeling locked down, tell someone you trust, so it doesn't leak out sideways.",
+    "timing": "Slow and steady. The King of Cups works over weeks and months, and rewards patience. Things settle once you handle them with a level head.",
+    "howSomeoneSeesYou": "People see you as calm, wise, and reliable. They come to you in a crisis because you stay steady. Some may think you're hard to read, so let them see how you actually feel once in a while."
+  },
   "slug": "king-of-cups"
 }

@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ten of Wands. Bent under the bundle. Almost to the door. The question worth asking: is everything in that armful actually yours?"
   },
+  "contexts": {
+    "yesNo": "Yes, but at a cost. The Ten of Wands says you can do it, and it will add to a load you're already carrying. Ask what you'd have to drop or hand off to make room. If the answer is nothing, wait.",
+    "asFeelings": "If someone feels the Ten of Wands toward you, they care, but they're stretched thin. They may seem tired or distracted, which says more about their load than about you. Offer to help with something concrete, and try not to take their low energy personally.",
+    "asPerson": "A dependable, hardworking person who says yes to everything and carries more than their share. They're the one who gets it done. They can burn out, and they often don't ask for help until they're at the edge.",
+    "asAdvice": "Put something down. Make a list of everything you're carrying, then hand off, delay, or drop at least one item this week. Ask for help with one specific task. You're close to the finish, so decide what is truly yours to carry the rest of the way.",
+    "timing": "Slow at the end. The Ten of Wands points to the last stretch of something long, usually a few weeks to a couple of months. Relief comes once you lighten the load.",
+    "howSomeoneSeesYou": "People see you as reliable, hardworking, and always busy. They lean on you a lot, sometimes without realizing how much. Tell them when it's too much, or they'll keep adding to the pile."
+  },
   "slug": "ten-of-wands"
 }

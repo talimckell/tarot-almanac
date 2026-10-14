@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Queen of Swords. One hand holds the sword. The other is open. Both at once, today."
   },
+  "contexts": {
+    "yesNo": "Yes, if you can handle an honest answer. The Queen of Swords favors clear, truthful choices over comfortable ones. Say your answer out loud as if you were telling a friend, and see if it still holds.",
+    "asFeelings": "If someone feels the Queen of Swords toward you, they see you clearly and respect you for it. Their feelings are honest and unshowy, and they'll tell you where they stand if you ask. Don't expect flattery from them, because they say what they mean.",
+    "asPerson": "A sharp, fair, independent person who has been through enough to know what matters. They listen well, spot nonsense quickly, and give advice that is direct and kind. They can pull back into a cold, guarded silence when they've been hurt, so notice if the walls are going up.",
+    "asAdvice": "Say the honest thing, and say it kindly. Cut the commitment, the story, or the habit that you already know isn't working. Then give yourself credit for the clarity you've earned.",
+    "timing": "Steady and clear-headed. The Queen of Swords doesn't rush or drag things out, so expect movement once the facts are on the table, usually within a few weeks. Waiting for certainty that never comes will slow it down.",
+    "howSomeoneSeesYou": "People see you as perceptive, honest, and hard to fool. They come to you when they want the truth without the sugar. If you've been guarded lately, some may read you as cold or unreachable, so let your warmth show too."
+  },
   "slug": "queen-of-swords"
 }

@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Queen of Cups. She's looking into the cup, not showing it around. The depth is there. It's hers."
   },
+  "contexts": {
+    "yesNo": "Yes, if your gut agrees. The Queen of Cups says trust your feelings, especially on questions about people, care, and healing. If you're answering for someone else, check that you're not ignoring your own needs.",
+    "asFeelings": "If someone feels the Queen of Cups toward you, they care deeply and they're paying close attention. They pick up on your moods and want you to feel safe. They'd show it through kindness and listening more than words.",
+    "asPerson": "A compassionate, intuitive person who feels what others feel and knows how to help. They're the friend or relative people go to when they're hurting. They can take on too much, forget to look after themselves, and absorb other people's problems.",
+    "asAdvice": "Trust your intuition, and look after yourself the way you look after others. Set a limit on how much you take on this week. Make time for rest, water, and someone who cares for you.",
+    "timing": "Slow and steady. The Queen of Cups works at the pace of feeling, usually weeks or months. Don't rush it, because the answer shows up once you've listened.",
+    "howSomeoneSeesYou": "People see you as caring, understanding, and a safe person to talk to. They bring you their problems. If you're running on empty, say so, because they won't always notice."
+  },
   "slug": "queen-of-cups"
 }

@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Eight of Wands. Eight staves, mid-flight, moving fast. The question is whether they were aimed before they left."
   },
+  "contexts": {
+    "yesNo": "Yes, and quickly. The Eight of Wands says things are lined up and moving, so act while the window is open. The condition is that you're ready to move, because this won't wait. Check the details fast before you hit send.",
+    "asFeelings": "If someone feels the Eight of Wands toward you, they're eager and thinking about you a lot. Messages come fast, plans get made quickly, and they want to move things forward. Enjoy the energy, and make sure the pace works for you.",
+    "asPerson": "A fast-moving, decisive person who gets things done and answers messages within minutes. They're energetic, great at momentum, and hard to keep up with. They can overlook details or leave people behind in their rush.",
+    "asAdvice": "Move now. Send the email, book the ticket, make the call. Clear your schedule for the next few days so you can follow through. Slow down just long enough to check that you're headed where you want to go.",
+    "timing": "Very fast. The Eight of Wands points to days, sometimes hours. After a long wait, expect news and developments to arrive all at once.",
+    "howSomeoneSeesYou": "People see you as quick, driven, and always on the go. They count on you to get things moving. You can come across as hard to reach or too rushed to listen, so pause for the people who matter."
+  },
   "slug": "eight-of-wands"
 }

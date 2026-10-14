@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Eight of Pentacles. Head down, coin after coin, the town not even visible past the bench. Good work today. Just look up once."
   },
+  "contexts": {
+    "yesNo": "Yes, if you're ready to put in the work. The Eight of Pentacles favors learning, practice, and doing a job well. It's a yes for a skill, a course, or a craft, and a slow yes for quick fixes.",
+    "asFeelings": "If someone feels the Eight of Pentacles toward you, they're focused and committed, and they show care through effort. They're working on the relationship, or on becoming someone worth being with. They may be busy with work, so give them time.",
+    "asPerson": "A dedicated craftsperson who takes pride in doing things well. They're disciplined, focused, and always improving. They can work too much, aim for perfect, or lose sight of why they're doing it.",
+    "asAdvice": "Practice the skill a little every day. Pick one thing you want to get good at and set aside time for it. Aim for better rather than perfect, and take a break when the work starts to feel empty.",
+    "timing": "Slow and steady, in months. The Eight of Pentacles points to mastery that builds through repetition. You'll notice improvement in weeks, with real skill after several months.",
+    "howSomeoneSeesYou": "People see you as skilled, focused, and serious about your work. You earn respect through effort. Some may think you're all work, so make time for people and for fun."
+  },
   "slug": "eight-of-pentacles"
 }

@@ -99,5 +99,13 @@
     "bearingRecognitionPost": "Do you notice when the story someone's telling doesn't quite add up, even when no one else has caught it yet? Feel it in your chest when something's just not fair? That's a Justice way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "Justice is looking directly at you. Every other card in the Major Arcana is looking somewhere else."
   },
+  "contexts": {
+    "yesNo": "Yes, if it's fair and honest. Justice says yes when the facts and your conscience both back you up. It says no when a decision depends on hiding something. It's a strong answer for contracts, legal questions, and anything about fairness. Read the details before you sign.",
+    "asFeelings": "If someone feels Justice toward you, they're weighing things carefully. They care, and they also want honesty and fairness between you. They may be asking themselves whether it all adds up. They'll respond well to straight talk, so be honest with them.",
+    "asPerson": "A fair-minded, honest person who thinks before deciding and values being straightforward. People trust them with hard truths. They can be strict, judging themselves and others by a high standard, and slow to forgive.",
+    "asAdvice": "Tell the truth, including to yourself. Look at the facts, read what you're signing, and take responsibility for your part. Make the decision that's fair instead of the one that's easy. Then follow through on it.",
+    "timing": "Steady and procedural. Justice points to outcomes that take as long as paperwork and fair process take, usually weeks to a few months. Things move once the facts are on the table.",
+    "howSomeoneSeesYou": "People see you as honest, fair, and sharp. They trust you to tell it straight. Some may feel judged, so lead with kindness when you share a hard truth."
+  },
   "slug": "justice"
 }

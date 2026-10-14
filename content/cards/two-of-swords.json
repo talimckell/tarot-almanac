@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Two of Swords. Blindfold on. Swords crossed. The sea behind her is calm. That calm has a cost."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Two of Swords says you haven't looked at all the facts, and you can't answer well until you do. Find the piece of information you've been avoiding.",
+    "asFeelings": "If someone feels the Two of Swords toward you, they're undecided, and they may be guarding their feelings. They could be weighing you against something else or avoiding what they really think. Ask a direct, gentle question and give them room to answer.",
+    "asPerson": "A careful, composed person who weighs every side before they act. They're fair and hard to rush. They can freeze when a decision gets uncomfortable, and they may shut out a truth they don't want to deal with.",
+    "asAdvice": "Take off the blindfold. Write out the choice, list what you know and what you're avoiding, and give yourself a deadline. A truce is useful for a short time, and a decision is what ends the standoff.",
+    "timing": "On hold. The Two of Swords means nothing moves until a choice is made, which can stretch for weeks or months. Things get going once you face the facts and pick a side.",
+    "howSomeoneSeesYou": "People see you as calm, balanced, and hard to read. They may find you slow to commit. If someone is waiting on your answer, tell them when you'll have one."
+  },
   "slug": "two-of-swords"
 }

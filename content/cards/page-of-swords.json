@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Page of Swords. Sword already up, hair blown sideways, not waiting for permission to ask. Ask the question today."
   },
+  "contexts": {
+    "yesNo": "Yes, as a reason to dig deeper. The Page of Swords favors asking more questions and gathering facts before you commit. If the answer depends on information you haven't found yet, go find it first.",
+    "asFeelings": "If someone feels the Page of Swords toward you, they're curious about you and eager to talk. They want to know how your mind works, and they'll ask a lot of questions. Their interest is fresh and sincere, though they may still be figuring out what they actually want.",
+    "asPerson": "A bright, curious, talkative person who loves learning and new ideas. They ask great questions and keep conversations lively. They can be scattered, a little gossipy, or quick to lose interest once something stops being new.",
+    "asAdvice": "Get curious and ask the questions you've been holding back. Read the thing, make the call, or take the class. Pick one topic and go deeper with it before you jump to the next.",
+    "timing": "Quick to start, uneven to finish. The Page of Swords brings news, ideas, and messages in days or weeks. Anything that needs real follow-through will take longer than the first burst of energy suggests.",
+    "howSomeoneSeesYou": "People see you as sharp, lively, and fun to talk to. You make conversation feel like play. Some may see you as restless or a bit of a gossip, so be careful with what you repeat and finish what you start."
+  },
   "slug": "page-of-swords"
 }

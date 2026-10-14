@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ace of Pentacles. A coin offered over an open garden, a path through it, the gate unlatched. Plant something real today."
   },
+  "contexts": {
+    "yesNo": "Yes. The Ace of Pentacles is a clear opening, often involving money, work, health, or a home. Take the offer seriously and look at the details, then say yes to what's real and workable.",
+    "asFeelings": "If someone feels the Ace of Pentacles toward you, they want something real with you. They're offering a solid start, like a date that's actually planned or a step toward a shared life. Their interest shows up in concrete actions.",
+    "asPerson": "A practical person with a good opportunity in hand, such as a new job, a new business, or a fresh start. They're grounded and ready to build. They can overlook the long work that follows, or hesitate to act on a good chance.",
+    "asAdvice": "Take the opportunity in front of you and make it concrete. Write down the first three steps and do one today. Don't wait for a perfect version, because a real offer now is worth more than a better one that may never come.",
+    "timing": "Quick to arrive, slow to grow. The Ace of Pentacles points to an offer or opening showing up within days or weeks. Building on it takes months.",
+    "howSomeoneSeesYou": "People see you as grounded, capable, and ready to start something real. They may want to invest in you or join your plans. Follow through on what you start, since people will count on it."
+  },
   "slug": "ace-of-pentacles"
 }

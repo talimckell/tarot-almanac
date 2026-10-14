@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Five of Swords. The winner is holding three swords and standing alone. That's the whole card, really."
   },
+  "contexts": {
+    "yesNo": "No, or yes at a high price. The Five of Swords warns that you could win this and lose something that matters more. Ask yourself what you'd give up to get the result.",
+    "asFeelings": "If someone feels the Five of Swords toward you, there's tension. They may feel competitive, defensive, or like they have to win with you. They might also be tired of fighting. Look at whether you can lower the temperature first.",
+    "asPerson": "A competitive, determined person who hates to lose and argues to win. They're strong in a conflict and good at holding their ground. They can leave a trail of hurt behind them and may not notice what their victories cost.",
+    "asAdvice": "Pick your battles. Ask if being right is worth the relationship, the job, or the peace. If it isn't, walk away and keep your energy for something that matters.",
+    "timing": "The fight ends quickly, and the fallout lasts. The Five of Swords brings a conflict that can resolve in days or weeks, though the effects linger for a couple of months. Cooling off sooner makes the aftermath shorter.",
+    "howSomeoneSeesYou": "People see you as tough, competitive, and hard to beat. Some admire it, and others feel steamrolled or wary. If you want people on your side later, let someone else have a win."
+  },
   "slug": "five-of-swords"
 }

@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Four of Swords. It looks like a tomb. It's a nap. There's a difference, and today asks you to take it."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Four of Swords says to rest before you decide. Give it a few days of quiet, and let your head clear, and you'll likely know your answer afterward.",
+    "asFeelings": "If someone feels the Four of Swords toward you, they may care but have little energy to show it right now. They're worn out, recovering, or taking a break from everything. It may say little about you personally, so give them space and check in gently.",
+    "asPerson": "A tired, thoughtful person who is in a recovery phase, or someone who knows how to rest well. They're calm, reflective, and good at stepping back from the noise. They can drift into hiding out, and a short break can turn into months of avoiding things.",
+    "asAdvice": "Rest. Cancel what you can, sleep, take a quiet day, and let your mind go still. Set a gentle end date for your break so it stays a recovery and doesn't turn into avoidance.",
+    "timing": "Slow. The Four of Swords is a pause, usually a few days to a few weeks, sometimes a season if you've been depleted for a long time. Progress comes after you've rested.",
+    "howSomeoneSeesYou": "People see you as calm, quiet, and maybe a bit distant right now. They may notice you've pulled back. Tell the people close to you that you're resting so they don't take it personally."
+  },
   "slug": "four-of-swords"
 }

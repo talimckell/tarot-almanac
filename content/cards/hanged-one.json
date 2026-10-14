@@ -98,5 +98,13 @@
     "bearingRecognitionPost": "Do you find that problems solve themselves once you stop trying to solve them? That the answer arrives on the walk, not at the desk? That's a Hanged One way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The Hanged One is upside down and completely calm. The halo is glowing. Whatever is happening, it is working."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Hanged One says to pause, because the answer will change once you see the question from another side. Wait, and try looking at it from the other person's point of view. If you've already waited a long time with no change, it may be time to let the question go.",
+    "asFeelings": "If someone feels the Hanged One toward you, they're on hold. They may be unsure, stuck, or thinking things over before they act. They aren't ignoring you. Ask clearly what they need, and give them time.",
+    "asPerson": "A thoughtful, unconventional person who sees things from an angle others miss. They're patient, open-minded, and willing to give something up for what they believe in. They can be indecisive, and they sometimes wait so long for the right moment that it passes.",
+    "asAdvice": "Pause on purpose. Stop pushing for a week and see what changes. Try the other person's point of view, or do the opposite of your usual approach. Let go of the outcome you've been gripping so tightly.",
+    "timing": "Slow and on hold. The Hanged One points to a waiting period of weeks or a few months. Things start again once you change how you're looking at them.",
+    "howSomeoneSeesYou": "People see you as patient, unusual, and hard to rush. You may look like you're doing nothing. Tell people you're thinking it through so they don't read the pause as lost interest."
+  },
   "slug": "hanged-one"
 }

@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Nine of Cups. The wish card. The cups are full. The only task is letting yourself have it."
   },
+  "contexts": {
+    "yesNo": "Yes, and it's one of the best answers in the deck. The Nine of Cups says you'll get what you wished for. Enjoy it, and still check that the thing you want is the thing you need.",
+    "asFeelings": "If someone feels the Nine of Cups toward you, they're happy, satisfied, and comfortable around you. They enjoy your company and feel they have what they want. The feeling is content more than passionate, and it's real.",
+    "asPerson": "A warm, generous person who enjoys good food, good company, and the good things in life. They're easygoing, proud of what they've built, and glad to share it. They can get complacent, or lean on comfort when something deeper is needed.",
+    "asAdvice": "Enjoy what you have. Say thank you, out loud, to someone who helped you get here. Stop chasing the next thing for an evening and let this one be enough.",
+    "timing": "Fairly soon. The Nine of Cups points to a wish coming true within weeks, and the contentment lasts a good while after. Let it arrive without rushing it.",
+    "howSomeoneSeesYou": "People see you as happy, comfortable, and lucky. They enjoy being around you. Some may envy you or assume things come easily, so be open about the work that got you here."
+  },
   "slug": "nine-of-cups"
 }

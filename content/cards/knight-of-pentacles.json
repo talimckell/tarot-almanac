@@ -66,5 +66,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Knight of Pentacles. Workhorse standing still, surveying the field. Not exciting. Gets there anyway."
   },
+  "contexts": {
+    "yesNo": "Yes, if you're willing to do the work. The Knight of Pentacles favors plans that are sensible and steady. It's a slow yes, so don't expect quick results.",
+    "asFeelings": "If someone feels the Knight of Pentacles toward you, they're loyal and in no hurry. They show care by being consistent and showing up when they say they will. They may not say big things, but they mean what they say.",
+    "asPerson": "A reliable, hardworking person who finishes what they start. They're patient, practical, and dependable. They can be stubborn, stuck in routine, and slow to try anything new.",
+    "asAdvice": "Keep going and finish what you started. Set up a routine and stick to it, even on dull days. If the routine has stopped working, change one piece of it.",
+    "timing": "Slow. The Knight of Pentacles is the slowest of the knights, so think months, sometimes a season or longer. Progress is steady and tends to last.",
+    "howSomeoneSeesYou": "People see you as dependable, steady, and hardworking. They know you'll do what you said. Some may find you rigid or dull, so try something new every so often."
+  },
   "slug": "knight-of-pentacles"
 }

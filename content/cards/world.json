@@ -99,5 +99,13 @@
     "bearingRecognitionPost": "Do you actually feel when something is finished? Land in it, rather than immediately scanning for what's next? That's a World way of moving. → [your Bearing]",
     "didYouNoticeCardTake": "The wreath around the World dancer is a circle. It's the ending card. It's also a door."
   },
+  "contexts": {
+    "yesNo": "Yes, and the yes comes with a finish line. The World says what you're asking about will be completed or fulfilled, especially after long effort. It's a good answer for finishing a project, graduating, or making a big move. Remember the next chapter is already waiting.",
+    "asFeelings": "If someone feels the World toward you, they feel whole with you. They're satisfied, settled, and ready for something lasting. They see you as part of the life they want, and they're likely to say so.",
+    "asPerson": "An accomplished, well-rounded person who has finished real things and knows who they are. They've often traveled or lived widely. They're settled and generous. They can coast on past wins, and starting something new after a big finish can be hard for them.",
+    "asAdvice": "Finish what's nearly done, and let yourself enjoy it. Mark the moment with a dinner or a day off. Then decide what comes next. Give this chapter a proper ending before you start the next one.",
+    "timing": "Near the end of a long process. The World points to completion arriving in weeks to a few months. It's the finish line, so the hard part is usually behind you.",
+    "howSomeoneSeesYou": "People see you as capable, accomplished, and at ease with yourself. You seem like you have it together. Some may assume you have nothing left to want, so share what you're still reaching for."
+  },
   "slug": "world"
 }

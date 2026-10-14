@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Ten of Swords. Ten swords. Black sky. And right there on the horizon, the first gold of dawn. It's always in the image. People just don't look that far yet."
   },
+  "contexts": {
+    "yesNo": "No, at least in the form you're asking. The Ten of Swords says this chapter is over. A new answer comes after you let the old situation finish.",
+    "asFeelings": "If someone feels the Ten of Swords toward you, something between you has reached its end, or they feel completely worn down by it. They may be at the bottom of a hard stretch and relieved it's over. Give them space to recover.",
+    "asPerson": "A person who has been through the worst and come out the other side. They're resilient, honest about loss, and unafraid of a fresh start. They can dramatize their pain or hold onto the wound after it stops needing to be there.",
+    "asAdvice": "Let it end. Stop trying to revive what's finished, grieve it, and clear space for what's next. Pick one small thing you can do tomorrow that belongs to the next chapter.",
+    "timing": "Over quickly, and recovery follows. The Ten of Swords is the final blow, so the worst passes in days to weeks. Rebuilding takes a few months, and dawn comes sooner than it feels like it will.",
+    "howSomeoneSeesYou": "People see you as someone who has been through a lot and is still standing. They may feel for you or admire your resilience. Don't let the story of what happened become your whole identity, since you have more to offer than the hurt."
+  },
   "slug": "ten-of-swords"
 }

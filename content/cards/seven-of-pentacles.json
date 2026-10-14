@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Seven of Pentacles. Leaning on the hoe. Not harvesting, not walking away. Just looking honestly at what's actually there."
   },
+  "contexts": {
+    "yesNo": "Not yet. The Seven of Pentacles says the work is underway and the result isn't ready. Keep going and check again in a few weeks. Don't quit now, but ask yourself honestly whether it's still worth the effort.",
+    "asFeelings": "If someone feels the Seven of Pentacles toward you, they're taking the relationship seriously and waiting to see how it grows. They're investing time and thinking about whether it's worth it. They aren't rushing. Keep showing up.",
+    "asPerson": "A patient, hardworking person in the middle of a long project. They plan ahead and stick with it. They can get impatient, doubt their progress, or hold on to something that isn't paying off.",
+    "asAdvice": "Stop and take stock. Look at what you've put in and what's growing. If it's working, keep going and trust it. If it isn't, change your plan rather than just trying harder.",
+    "timing": "Slow, usually months, sometimes a full season. The Seven of Pentacles is the wait between planting and harvest. Results are coming, though later than you want.",
+    "howSomeoneSeesYou": "People see you as patient, committed, and in it for the long haul. Some may not see how much work you're doing because the results aren't visible yet. Share your progress so they know you're growing something."
+  },
   "slug": "seven-of-pentacles"
 }

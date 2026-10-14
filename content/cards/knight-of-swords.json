@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Knight of Swords. Full gallop, sword raised, leaning into the wind. Make sure you checked the direction before the speed picked up."
   },
+  "contexts": {
+    "yesNo": "Yes, and quickly. The Knight of Swords backs decisive action and a clear line of reasoning. Check the facts first, because this card can charge ahead on a half-finished plan.",
+    "asFeelings": "If someone feels the Knight of Swords toward you, they're interested and direct about it, and they want to act now. They may text fast, push for answers, and expect you to keep up. Their intensity is real, but so is their tendency to miss how their pace lands on you.",
+    "asPerson": "A fast-thinking, confident, outspoken person who knows what they want and goes after it. They're brave in an argument and great in a crisis. They can steamroll people, interrupt, and care more about being right than about how it feels to be on the other side.",
+    "asAdvice": "Act on what you know, and slow down enough to listen before you speak. Pick one clear goal and aim at it. Before you hit send on the sharp message, read it once as if you were the person receiving it.",
+    "timing": "Fast. The Knight of Swords means things move in days or a couple of weeks, often in a rush. Pace yourself, because speed that outruns your preparation can cause a messy crash.",
+    "howSomeoneSeesYou": "People see you as confident, sharp, and driven, someone who gets things done. They admire your conviction. Some may find you blunt, impatient, or hard to interrupt, so leave a pause for other people to speak."
+  },
   "slug": "knight-of-swords"
 }

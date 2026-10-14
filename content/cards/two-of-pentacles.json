@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Two of Pentacles. Two coins, an infinity loop, ships rising and falling behind. Still dancing. That's the whole trick today."
   },
+  "contexts": {
+    "yesNo": "Maybe, and it depends on your load. The Two of Pentacles says you can manage it if you stay flexible, though you may be stretched thin. Check your time and money first.",
+    "asFeelings": "If someone feels the Two of Pentacles toward you, they're interested, but they're also busy and pulled in several directions. They like you and are trying to fit you in. Their attention may come and go. Tell them what you need and ask what they can give.",
+    "asPerson": "A busy, adaptable person handling several things at once, such as a job, family, and a side project. They're good at improvising and keeping a sense of humor. They can run themselves ragged and let something important slip.",
+    "asAdvice": "Make a simple list and decide what matters most this week. Drop or delay one thing. Stay flexible, and don't try to keep everything in the air at the same time.",
+    "timing": "Quick and changing, in days to a few weeks. The Two of Pentacles points to a shifting situation where things move back and forth. Don't expect it to settle yet.",
+    "howSomeoneSeesYou": "People see you as capable, adaptable, and always busy. They may admire how much you handle. They may also find you hard to pin down, so tell them when you're overloaded."
+  },
   "slug": "two-of-pentacles"
 }

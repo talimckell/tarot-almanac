@@ -64,5 +64,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Nine of Swords. Whatever's loud in your head right now, say it to someone today. It's smaller out loud than it is at 3am."
   },
+  "contexts": {
+    "yesNo": "Not yet, and not at 3am. The Nine of Swords says anxiety is coloring your view of the question. Wait until you've slept and talk to someone before you decide anything.",
+    "asFeelings": "If someone feels the Nine of Swords toward you, they're worried, and you may be on their mind a lot. They could be anxious about the relationship, or stressed about something else and spilling over. A reassuring word from you could help.",
+    "asPerson": "A conscientious, caring person who worries a lot and takes things to heart. They think hard about how their choices affect others. They can spiral into dread and guilt, and they often suffer quietly instead of asking for help.",
+    "asAdvice": "Write down what you're afraid of, then look at what's actually likely. Talk to a friend, a doctor, or a counselor if the worry won't quit. Fear grows in the dark, so give it a light and a listener.",
+    "timing": "The worst stretch is usually the night before it eases. The Nine of Swords can last a few weeks, and it often loosens once you speak up. Relief tends to come sooner than the worry predicts.",
+    "howSomeoneSeesYou": "People may see you as tense, tired, or quietly burdened. Some won't know how much you're carrying. Tell one person the real story, because you don't have to hold all of it by yourself."
+  },
   "slug": "nine-of-swords"
 }

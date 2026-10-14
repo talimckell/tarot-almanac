@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Knight of Wands. Horse rearing, staff already raised. He didn't wait for the plan. Some days that's exactly right."
   },
+  "contexts": {
+    "yesNo": "Yes, and fast. The Knight of Wands says to go for it. The condition is to plan a little as you go, because this card acts before it looks. Sleep on it for one night before any big move that's hard to undo.",
+    "asFeelings": "If someone feels the Knight of Wands toward you, they're passionate and intense, and they want to act on it. Expect big gestures and fast moves. The feeling is real, though it can burn hot and quick, so watch for staying power over time.",
+    "asPerson": "A bold, charming, adventurous person who lives at full speed. They're exciting, quick, and hard to say no to. They can be restless or impulsive, and they may be gone before the follow-through.",
+    "asAdvice": "Act on it. Take the trip, ask the question, start the project. Put your energy somewhere specific so it doesn't scatter. Before you commit to anything big, sleep on it once.",
+    "timing": "Very fast. The Knight of Wands points to days or a couple of weeks. It can also fade quickly if there's no plan behind it.",
+    "howSomeoneSeesYou": "People see you as exciting, bold, and magnetic. You make things happen. Some may worry you'll run off or lose interest, so show them you can stay for the slow parts."
+  },
   "slug": "knight-of-wands"
 }

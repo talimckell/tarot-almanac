@@ -65,5 +65,13 @@
     "status": "DRAFT",
     "dailyCaption": "The day card is the Four of Wands. The canopy is up. The people are gathered. The only move today is standing under it and actually feeling it."
   },
+  "contexts": {
+    "yesNo": "Yes. The Four of Wands is a happy, stable yes, especially for home, community, weddings, and milestones. The condition is that the foundation is really in place. Enjoy it.",
+    "asFeelings": "If someone feels the Four of Wands toward you, they feel at home with you. They're happy and comfortable, and they want you in their life, maybe alongside family and friends. They see a future that's stable and shared.",
+    "asPerson": "A warm, welcoming person who loves bringing people together. They're a natural host, loyal to their community, and good at making others feel they belong. They can avoid conflict to keep the peace, and they may cling to the party after it's over.",
+    "asAdvice": "Celebrate what you've done. Throw the party, call your people, and mark the milestone. Make space for the people who helped. After you've enjoyed it, pick the next goal.",
+    "timing": "Steady and pleasant. The Four of Wands points to a milestone in a few weeks to a couple of months, often tied to an event, a date, or a gathering.",
+    "howSomeoneSeesYou": "People see you as warm, stable, and welcoming, the person who makes everyone feel included. Your home or your circle feels like a safe place. Some may find it hard to leave or feel stuck in a comfort zone, so keep making room for new people."
+  },
   "slug": "four-of-wands"
 }
