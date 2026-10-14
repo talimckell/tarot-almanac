@@ -20,6 +20,9 @@ that lose on Google are winning on Bing and in AI answers, so Google alone tells
 
 Each week: drop the exports in ~/Downloads → diff against the last entry → add a new one covering all
 four. Not every channel needs a fresh export every week, but the entry should note what moved in each.
+**End every weekly entry with an "Optimization paths / to explore" section** — a short prioritized list
+of what to act on (and what to merely watch/investigate), drawn from that week's data. Keep it concrete
+and ranked by expected value; it's the "so what do we do" that turns the numbers into moves.
 
 **Always report % to Mediavine Journey** (threshold: 1,000 sessions / 30 days). Estimate from the
 rolling ~30-day Vercel visitor count, discounted for bots (Vercel visitor ≈ session, cookieless).
@@ -172,6 +175,32 @@ Google last-7: 176 clicks / 4,830 impr / pos 6.8 (cumulative 21,487 impr / 717 c
 6.38). Vercel 335 (real ~290). Bing-index ~49. AI ~27/day. Journey ~145%. **Watch:** does traffic
 stabilize above pre-spike, does `/tarot-birth-chart` crack page 1, does the year-card query keep
 climbing, and does **any** conversion finally appear.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **Ride the year-card season now (most time-sensitive).** "tarot card of the year calculator" is
+   climbing (37.6→28.9) and the 2027 blog ranks pos 7.61 — Oct–Dec is exactly when people seek year-
+   ahead readings, and guest checkout + 2027 copy just shipped. Cross-link `/blog/2027-tarot-year-card`
+   ↔ `/personal-year-card` hard, make sure "2027 tarot year card" is covered, and point the year-card
+   calculator result at the paid reading clearly. This is the one paid product with a live seasonal tailwind.
+2. **Push `/tarot-birth-chart` onto page 1 (commercial priority).** Stuck at pos 11.64; the query "tarot
+   birth chart" is pos 9.33. It's the revenue page. Add internal links to it with "tarot birth chart"
+   anchor text from the highest-traffic pages (birthday pages, card pages, bearing pages), and keep its
+   on-page tight. Best ROI ranking target on the site.
+3. **Author more contextual card angles.** Proven demand (ranks #5 for "[card] how someone sees you"
+   with no content). Do the highest-value cards first (Majors + Cups; yes/no + how-someone-sees-you
+   angles). The Chariot is the template; this is the biggest content-headroom lever.
+4. **Lean into "tarot reading by date of birth" (AI's #1 grounding query).** AI is the growing channel
+   and the birth-card page already dominates it. Reinforce that phrasing on the birth-card/chart pages.
+   Low effort, aligned with existing authority.
+5. **Reinforce the chart-CTA signal.** `/chart` held up this week (landing→chart ~70%) — if the new
+   birthday/bearing buttons are feeding it, consider the same CTA on other entry points (card pages,
+   `/today`). Cheap to test.
+
+To explore (investigate, not act yet): why the **UK over-performs** (GB pos 9.6 vs US 17.4 — Discover?
+a UK-skewed ranking win?); whether the birth-card page's heavy **AI citations** convert to any traffic/
+sales or stay citation-only; and, once there's a non-trivial traffic week, **where the funnel actually
+breaks** (needs the form_submit / HeyCatch step data, not just page views).
 
 ---
 
