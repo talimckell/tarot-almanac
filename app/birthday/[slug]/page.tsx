@@ -133,8 +133,8 @@ export default async function BirthdayPage({
         <aside className="almanac">
           <span className="eyebrow">Go deeper</span>
           <p>
-            Your Bearing is where your natal chart begins. The full chart fixes seven cards to your
-            birth date, read through this Bearing.
+            Your Bearing is where your <Link href="/tarot-birth-chart">tarot birth chart</Link> begins.
+            The full chart fixes seven cards to your birth date, read through this Bearing.
           </p>
           <ChartCtaButton variant="onDark" margin="20px 0 6px" />
           <p className="dates">

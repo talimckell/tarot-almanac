@@ -129,7 +129,8 @@ export default async function BearingPage({
         <span className="eyebrow">Your Bearing in the almanac</span>
         <p>
           The Bearing is the lens the rest of your almanac is read through. The same day meets a
-          {` ${card.name}`} Bearing differently than it meets any other. It is where you begin.
+          {` ${card.name}`} Bearing differently than it meets any other. It is where your{" "}
+          <Link href="/tarot-birth-chart">tarot birth chart</Link> begins.
         </p>
         <ChartCtaButton variant="onDark" label="See your full natal chart &rarr;" margin="18px 0 8px" />
         <p className="dates">
