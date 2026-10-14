@@ -82,6 +82,13 @@ export default async function PersonalYearCardHub({
 
         <YearCardCalculator resume={resume} />
 
+        <p className="pyc-season" style={{ textAlign: "center", margin: "22px auto 0", maxWidth: 560, fontSize: 15, color: "var(--charcoal)" }}>
+          The collective card for 2027 is Justice, the one everyone shares.{" "}
+          <Link href="/blog/2027-tarot-year-card" style={{ color: "var(--indigo)" }}>
+            See what a Justice year asks of everyone &rarr;
+          </Link>
+        </p>
+
         <section className="pyc-section">
           <h2>Every year card</h2>
           <p className="pyc-subhead">All twenty-two, and what each one asks of a year.</p>
@@ -158,6 +165,7 @@ export default async function PersonalYearCardHub({
 
         <p className="pyc-links">
           Related:{" "}
+          <Link href="/blog/2027-tarot-year-card">the 2027 year card (Justice)</Link> ·{" "}
           <Link href="/blog/personal-year-number-tarot">your personal year number, explained</Link> ·{" "}
           <Link href="/personal-month-card">your month card</Link> ·{" "}
           <Link href="/bearing">your Bearing</Link> ·{" "}
