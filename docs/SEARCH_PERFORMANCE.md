@@ -183,10 +183,13 @@ info / phone number" step that hides the card fields until you dismiss it. I hit
 test purchases, on an 84%-mobile audience. There's also an `InAppBrowserNotice` because Stripe Checkout is
 unreliable in app webviews (no Apple/Google Pay, flaky return trip), and Instagram is a traffic source, which fits
 the Oct-7 instant bounce.
-Leading hypothesis + cheapest test: **turn Link off for Checkout in the Stripe Dashboard** (Settings → Payments →
-Link) to drop the mobile "save info / phone" friction. Secondary: strengthen the in-app-browser nudge; longer-term,
-Stripe embedded checkout to avoid the hop off-site. All directional at n=2 — remove known friction and watch the
-clicked-Buy → paid rate.
+I first guessed "turn Link off," but the Stripe Dashboard reversed it: **Link is 100% of completed payments (last
+30 days) and those buyers check out 3× faster.** So Link is the path that actually *converts* here, not the villain.
+Do NOT turn it off. Revised read: the abandons are more likely **in-app-browser breakage** (the Oct-7 no-email
+instant bounce fits an Instagram webview, where Link/Apple Pay don't work) plus the **higher bar of a subscription**
+(the Sep-23 one), on tiny volume. Focus instead on the bigger leak **upstream** — only ~14% of /chart visitors
+click Buy — and strengthen the in-app-browser nudge (helps IG buyers finish) without touching Link. Leave checkout
+alone and watch the clicked-Buy → paid rate; revisit (e.g. embedded checkout) only if abandons pile up at real volume.
 
 ### Shipped since the last entry (why none of it should show yet)
 Funnel: guest checkout (chart **and** year reading, both test-verified), obvious button CTAs on the
