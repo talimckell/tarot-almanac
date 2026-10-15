@@ -23,6 +23,11 @@ four. Not every channel needs a fresh export every week, but the entry should no
 **End every weekly entry with an "Optimization paths / to explore" section** — a short prioritized list
 of what to act on (and what to merely watch/investigate), drawn from that week's data. Keep it concrete
 and ranked by expected value; it's the "so what do we do" that turns the numbers into moves.
+**Also run the conversion funnel each week:** `env $(grep -hE '^(DATABASE_URL|STRIPE_LIVE_SECRET_KEY)=' .env
+.env.local | xargs) node scripts/weekly-funnel.mjs --since YYYY-MM-DD --until YYYY-MM-DD --chart-visitors N`
+(N = that week's `/chart` visitor count from Vercel Top Pages). It prints the real **reached /chart → clicked Buy
+→ paid** funnel from the DB + live Stripe (owner/test excluded); report it in the Conversions section. The live
+Stripe key lives only in the gitignored `.env.local`.
 
 **Always report % to Mediavine Journey** (threshold: 1,000 sessions / 30 days). Estimate from the
 rolling ~30-day Vercel visitor count, discounted for bots (Vercel visitor ≈ session, cookieless).
@@ -154,14 +159,34 @@ Google visits); the xlsx is authoritative and reconciles (GSC last-7 176 clicks 
 Rolling 30-day ≈ **~1,700 raw / ~1,450 human → ~145% of the 1,000 door.** Down from the peak, still
 comfortably over. Not pursuing (resolved 2026-10-02).
 
-### Conversions: still zero
-No purchase reported this week; no checkout events in Vercel. Chart funnel Oct 5–12: `/tarot-birth-chart`
-10 → `/chart` 7 → 0 sales. One tentative bright spot: `/chart` held at 7 while the landing fell to 10, so
+### Conversions: the real four-step funnel (new)
+Now pulled from the DB + live Stripe via `scripts/weekly-funnel.mjs` (owner/test excluded), not guessed from
+referrers. **Oct 5–12: reached /chart 7 → clicked Buy 1 (14% of /chart) → paid 0.** That one checkout was a
+real own-chart start that **expired at Stripe without paying** — the first buy-intent we've ever been able to
+see. All-time real: 3 checkout starts → 1 paid (the Sep-15 chart); the other two abandoned at Stripe (a Sep-23
+subscription attempt that got as far as entering an email, and this week's own-chart that bounced before even
+entering one). So the funnel breaks in **two** places: most /chart visitors never click Buy, and of the few who
+do, a real share bail on the Stripe page. See the Stripe-abandonment dig below.
+
+Page-view note: `/chart` held at 7 while the landing fell to 10, so
 landing→chart reads ~70% vs the old ~⅓ — likely the new birthday/bearing CTA buttons now feeding `/chart`
 (tiny-n, don't over-read, and `/chart` has always had multiple entry points). Year funnel:
 `/personal-year-card` 7 → calculator 5 → 0. **Caveat that matters:**
 every funnel + content change shipped Oct 7–12, into a *down-traffic* week — far too early and thin to
 read. The real test is the next few weeks as traffic stabilizes.
+
+### Stripe-abandonment dig (n=2, directional)
+The two real abandons show two patterns: Sep-23 subscription got as far as **entering an email** then stopped at
+payment; Oct-7 chart **bounced before entering an email**. Checkout config review (app/chart/checkoutActions.ts,
+app/personal-year-card/checkoutActions.ts): sessions use Stripe defaults, so **Stripe Link is on** — the "save my
+info / phone number" step that hides the card fields until you dismiss it. I hit that friction firsthand in both
+test purchases, on an 84%-mobile audience. There's also an `InAppBrowserNotice` because Stripe Checkout is
+unreliable in app webviews (no Apple/Google Pay, flaky return trip), and Instagram is a traffic source, which fits
+the Oct-7 instant bounce.
+Leading hypothesis + cheapest test: **turn Link off for Checkout in the Stripe Dashboard** (Settings → Payments →
+Link) to drop the mobile "save info / phone" friction. Secondary: strengthen the in-app-browser nudge; longer-term,
+Stripe embedded checkout to avoid the hop off-site. All directional at n=2 — remove known friction and watch the
+clicked-Buy → paid rate.
 
 ### Shipped since the last entry (why none of it should show yet)
 Funnel: guest checkout (chart **and** year reading, both test-verified), obvious button CTAs on the
