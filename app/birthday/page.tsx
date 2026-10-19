@@ -56,7 +56,8 @@ export default function BirthdayIndexPage() {
             <Link href="/tarot-birth-card">find your tarot birth card</Link>.
           </p>
           <p>
-            Your Bearing is one position of seven. A full natal chart sets it among the other six,
+            Your Bearing is one position of seven. A full natal chart, your{" "}
+            <Link href="/tarot-birth-chart">tarot birth chart</Link>, sets it among the other six,
             the collective and personal cards of your birth year, month, and day, read as one shape.
           </p>
           <div className="cta-group">

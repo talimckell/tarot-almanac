@@ -19,7 +19,7 @@ import "./styles.css";
 const URL = `${SITE_URL}/tarot-birth-card`;
 const TITLE = "Tarot Birth Card Calculator: Find Yours by Birthday | The Tarot Almanac";
 const DESCRIPTION =
-  "Find your tarot birth card, the one Major Arcana card set by your birthday through tarot numerology. It's free, there's no sign-up, and it's yours for life. See what it means.";
+  "Find your tarot birth card, the Major Arcana card set by your date of birth. A free birthday tarot reading through tarot numerology: no shuffle, no sign-up, yours for life.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -37,7 +37,7 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     a: "Your tarot birth card is the one Major Arcana card set by the day you were born. It's the same card every time you check, and it's yours for life. We call it your Bearing, the angle you bring to the world.",
   },
   {
-    q: "Is this a tarot reading by date of birth?",
+    q: "Is this a tarot card reading by date of birth?",
     a: "Yes. Your tarot birth card is a reading set entirely by your date of birth: your birth month and day name the one Major Arcana card you carry, with no shuffle and no sign-up. For the fuller picture, your seven-card birth chart reads your whole date of birth, and the daily Almanac reads each day from your birthday too.",
     link: { href: "/tarot-birth-chart", text: "See the full seven-card version" },
   },
