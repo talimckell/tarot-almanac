@@ -117,6 +117,106 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-10-19 (window: GSC Jul 18–Oct 17 / Oct 12–19 Vercel) — recovery week; the new card-angle content starts showing in Google
+
+Traffic bounced back (+22% WoW) and every channel ticked up with it, reversing last week's dip —
+we're now clearly above the pre-spike baseline, not just recovered to it. The headline-looking
+"bad" number — Google average position slipping 6.8 → 10.0 — is actually the **content strategy
+working**: 55 brand-new "[card] yes or no / as how someone sees you" queries appeared this week
+(132 impressions, 0 clicks, mostly pos 42–81), the contextual-angle pages shipped Oct 14 starting
+to index. They drag the *average* position down precisely because they add a pile of fresh
+low-position long-tail impressions — more surface area, not lost rank on the pages that matter.
+First-ever **chatgpt.com referral click** landed too. Conversions still the sore spot: 10 `/chart`
+visitors, 0 clicked Buy.
+
+### 1. Google (GSC) — window Jul 18–Oct 17 (GSC lags ~2 days)
+- Cumulative: clicks **916** (was 717), impr **26,860** (was 21,487) — both up strongly.
+- The week itself **recovered**: last 7 (Oct 11–17) **199 clicks / 5,431 impr / avg pos 10.0**,
+  vs prev 7 (Oct 4–10) 176 / 4,830 / 6.8. Clicks +13%, impr +12%.
+- **Position slip 6.8 → 10.0 is the new content, not decay.** 55 contextual-angle queries now
+  register (`9 of wands yes or no` pos 71.6, `the hermit yes or no` pos 81.3, `the devil as how
+  someone sees you` pos 50, `2 of cups as a person` pos 48, …) — 132 impr, 0 clicks yet, brand new
+  at pos 42–81. They pull the average down while *adding* impressions. Path #3 is indexing on schedule.
+- **`/birthday` hub jumped: 38 clicks / 2,895 impr / pos 8.6** (was 24 / 2,014 / 10.49). Still the
+  engine, and now ranking a full point better.
+- **`/tarot-birth-chart`: 15 clicks / 1,431 impr / pos 12.2** (was 13 / 1,174 / 11.64) — more
+  clicks and impr, page still just off page 1. Query "tarot birth chart" **pos 9.1** (was 9.33),
+  578 impr — holds page 1 on the query itself.
+- Year card: `/personal-year-card` 10 clicks / 394 impr / **pos 29.3** (was 31.6). Query "tarot card
+  of the year calculator" **pos 28.4** — basically flat vs last week's 28.86; the early climb
+  **stalled**. `/blog/2027-tarot-year-card` 8 clicks / pos 7.9 (seasonal, holding page 1).
+- `/tarot-birth-card` still Google-buried (3 clicks / 985 impr / pos 48.6) — but it's the AI darling (§4).
+
+### 2. Vercel — Oct 12–19
+- **454 visitors (+22%)**, 897 pageviews (+16%), bounce **70% (−2%)**. Mobile 319 (**70%**),
+  iOS 214 / Android 108. Real humans ~410 (ID 6/34, MX 4/29, BR 5/27 are high-pageview crawlers; visitors look clean).
+- Referrers: **Google 219 (+31%)**, Bing-index (DDG 28 + Ecosia 21 + Bing 11) = **60**, Facebook 10,
+  Instagram 2, **chatgpt.com 1 (first AI-driven click)**, Pinterest 1, theempresstarot.blog 1.
+- Countries: US 141, **GB 57** (UK still over-indexing), SG 35, AU 17, CA 13, IT 13, DE 11.
+- Engagement recovered with traffic: birth_card_finder **9** (was 5), personal_year_card **8** (was 5),
+  birthday_reveal 4 (was 1), personal_month_card 4, bearing_finder 2 (was 1).
+
+### 3. Bing-index (BWT / DDG + Ecosia + Bing)
+- DDG 28 + Ecosia 21 + Bing 11 = **60/wk** (was 49). Up with the rest; steady ~half-of-search channel.
+
+### 4. AI citations (BWT)
+- Last 7 days **~248 citations (~35/day)**, up from ~191 (**+30%**), peaked **66 on Oct 16**. And the
+  first **chatgpt.com referral** click in Vercel — the thing we've been watching for: citations
+  beginning to convert into actual visits, not just visibility.
+
+### Mediavine Journey: ~150% (health only)
+Rolling 30-day ≈ **~1,750 raw / ~1,500 human → ~150% of the 1,000 door.** Comfortably over, trending
+back up after last week's dip. Not pursuing (resolved 2026-10-02) — traffic-health proxy only.
+
+### Conversions: the real four-step funnel
+Pulled from the DB + live Stripe via `scripts/weekly-funnel.mjs` (owner/test excluded). **Oct 12–19:
+reached /chart 10 → clicked Buy 0 (0% of /chart) → paid 0.** DB: 0 real signups, 0 paid (chart/subs/
+year/gift all 0). Stripe: 0 real checkout sessions started. So despite the traffic recovery and
+engagement bounce, **zero buy-intent this week** — last week had 1 click-to-Buy (which expired at
+Stripe); this week none even clicked. All-time real unchanged: 3 checkout starts → 1 paid (Sep-15 chart).
+- Page-view funnel context: landing `/tarot-birth-chart` 9 → `/chart` 10 (chart ≥ landing again — the
+  birthday/bearing/card CTAs feed `/chart` from multiple entries). Year funnel `/personal-year-card`
+  16 → calculator event 8 → 0.
+- **The leak is confirmed upstream and unchanged:** the problem isn't Stripe this week, it's that
+  `/chart` visitors don't click Buy at all. Content and traffic are growing; the generator→Buy step is
+  the flat line. (n still tiny — don't over-read a single 0-click week, but the pattern holds across weeks.)
+
+### Baseline to beat next week
+Google last-7: 199 clicks / 5,431 impr / pos 10.0 (cumulative 26,860 impr / 916 clicks). Vercel 454
+(real ~410). Bing-index 60. AI ~35/day (248/wk). Journey ~150%. **Watch:** do the 55 new angle queries
+start *climbing* from pos 40–80 (and eventually click); does `/tarot-birth-chart` finally crack page 1;
+does the year-card query resume climbing or stay stalled at ~28; does the chatgpt.com referral repeat;
+and does **any** buy-click return.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **The angle content is indexing — now help it climb (cheapest compounding win).** 55 "[card] yes or
+   no" / "as a person" queries appeared this week at pos 42–81 on their own. Internal-link them to each
+   other and from the matching `/tarot/[card]` and `/birthday` pages so they consolidate topical signal;
+   make sure each angle is a real on-page heading (not buried). This is the lever with proven, already-
+   measured demand and the most headroom.
+2. **Fix the `/chart` → Buy step (the one flat line).** Traffic and engagement are up; buy-clicks are
+   0. Before adding more top-of-funnel, instrument *why* nobody clicks Buy — is the preview satisfying
+   the curiosity for free, is the price reveal mistimed, is the button below the fold on mobile (70% of
+   users)? One concrete test: make the paywall/CTA visible without scrolling on mobile and restate the
+   $12 value at the moment the chart renders. This is the single highest-leverage conversion fix.
+3. **Push `/tarot-birth-chart` onto page 1 (commercial priority, unchanged).** pos 12.2, query pos 9.1.
+   Keep adding "tarot birth chart" anchor-text internal links from the high-traffic `/birthday` pages
+   (now 2,895 impr — the biggest referrer surface we control).
+4. **Year-card season: the climb stalled — decide whether to invest.** "calculator" query flat at ~28
+   two weeks running; it's peak season (Oct–Dec) and the paid year reading is live. Either push it hard
+   now (dedicated "2027 tarot year card calculator" content + hard cross-links to the 2027 blog that
+   *is* on page 1) or consciously let it ride. Don't leave it half-optimized.
+5. **Lean further into AI (the channel that's actually accelerating).** +30% citations and the first
+   click-through. The birth-card page dominates AI while Google buries it — keep reinforcing "tarot
+   reading by date of birth" phrasing; AI is turning into real visits now.
+
+To explore (watch, don't act): whether the **UK over-performs** structurally (GB 57 visitors, pos
+better than US — still unexplained); whether **SG 35** is real audience or crawler; and whether the new
+angle pages ever **click** or stay citation/impression-only — revisit in 2–3 weeks once they've had time to move.
+
+---
+
 ## 2026-10-12 (window: last 3 mo GSC / Oct 5–12 Vercel) — the spike receded; down week on every channel
 
 The late-September surge normalized. Traffic, Google clicks, and AI citations are all down
