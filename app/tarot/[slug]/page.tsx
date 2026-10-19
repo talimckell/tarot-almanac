@@ -16,6 +16,12 @@ import { organizationRef } from "../../../lib/organizationSchema";
 
 const SITE = "https://www.tarotalmanac.com";
 
+// Stable anchor id for a reading-angle label ("Yes or no" -> "yes-or-no"), used to
+// deep-link and jump-nav the contextual angle sections.
+function ctxAnchor(label: string): string {
+  return label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 export function generateStaticParams() {
   return getAllCards().map((c) => ({ slug: c.slug }));
 }
@@ -209,9 +215,17 @@ export default async function CardPage({
       {contextAngles.length > 0 && (
         <section className="contexts">
           <h2>{card.name} in a reading</h2>
+          {/* Jump-nav over the angle anchors below: reinforces the angle terms on-page
+              (these pages rank for "[card] yes or no", "as a person", etc.) and makes
+              each angle deep-linkable, so Google can surface them as jump-to sitelinks. */}
+          <nav className="ctx-nav" aria-label={`${card.name} reading angles`}>
+            {contextAngles.map(({ label }) => (
+              <a href={`#${ctxAnchor(label)}`} key={label}>{label}</a>
+            ))}
+          </nav>
           <div className="ctx-list">
             {contextAngles.map(({ label, body }) => (
-              <div className="ctx-item" key={label}>
+              <div className="ctx-item" id={ctxAnchor(label)} key={label}>
                 <h3>{label}</h3>
                 <p>{body}</p>
               </div>
