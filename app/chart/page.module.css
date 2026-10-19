@@ -322,6 +322,67 @@
   color: var(--label);
   margin-top: 18px;
 }
+
+/* Mobile sticky unlock bar (StickyUnlockBar.tsx). Desktop shows the paywall near the
+   fold, so it's hidden there; on a phone the paywall is ~3.5 screens below the chart,
+   so this pins the $12 value + a one-tap Buy to the bottom until the real paywall
+   scrolls in (StickyUnlockBar then adds .stickyHidden). */
+.stickyBar { display: none; }
+@media (max-width: 768px) {
+  .stickyBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--indigo);
+    box-shadow: 0 -2px 16px rgba(20, 24, 40, 0.18);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .stickyHidden {
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .stickyText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    color: var(--stone);
+  }
+  .stickyLead {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .stickyPrice {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .stickyBuy {
+    font-family: var(--serif-sc);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 11px 26px;
+    border: 1px solid var(--stone);
+    background: var(--stone);
+    color: var(--indigo);
+    white-space: nowrap;
+  }
+  .stickyBuy:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
 .addBirthday {
   text-align: center;
   padding: 80px 28px;

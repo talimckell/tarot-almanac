@@ -27,6 +27,7 @@ import AdsPurchaseConversion from "../components/AdsPurchaseConversion";
 import { startSubscriptionCheckout, startOwnChartCheckout } from "./checkoutActions";
 import InAppBrowserNotice from "../components/InAppBrowserNotice";
 import BirthdayFields from "../components/BirthdayFields";
+import StickyUnlockBar from "./StickyUnlockBar";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -249,14 +250,14 @@ export default async function ChartPage({
                     One card repeats where it almost never does, somewhere in the six positions
                     still locked. Unlock the full reading to see where it lands.
                   </span>
-                  <span className={styles.rareCue}>Read your whole chart &darr;</span>
+                  <span className={styles.rareCue}>Read your whole chart for $12 &darr;</span>
                 </a>
               ) : (
                 <p className={styles.teaser}>
                   Your chart also holds the full architecture of who caught you and what you
                   inherited.{" "}
                   <a href="#unlock" className={styles.teaserLink}>
-                    Unlock it to read every position &darr;
+                    Unlock all six positions for $12 &darr;
                   </a>
                 </p>
               )}
@@ -358,6 +359,8 @@ export default async function ChartPage({
             </div>
           </div>
         )}
+
+        {!unlocked && <StickyUnlockBar birthDate={birthDateParam} />}
       </div>
       </main>
       <Footer />
