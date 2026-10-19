@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BirthdayRevealForm from "../components/BirthdayRevealForm";
+import SeasonalYearCardLink from "../components/SeasonalYearCardLink";
 import { saveBirthdayFromToday } from "./actions";
 import {
   MAJORS,
@@ -378,6 +379,10 @@ export default function TodayView({
           )}
         </div>
       </div>
+
+      <SeasonalYearCardLink
+        style={{ textAlign: "center", margin: "18px auto 0", maxWidth: 520, fontSize: 14, opacity: 0.85 }}
+      />
 
       {pCard && (
         <div className={styles.bearing}>

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteNav from "../../components/SiteNav";
 import Footer from "../../components/Footer";
+import SeasonalYearCardLink from "../../components/SeasonalYearCardLink";
 import { SITE_URL } from "../../../lib/site";
 import { organizationRef } from "../../../lib/organizationSchema";
 import { MAJORS, MAJOR_SLUGS, ELEMENT_BY_MAJOR } from "../../../lib/almanac";
@@ -181,6 +182,11 @@ export default async function YearCardPage({
             </Link>
           </p>
         </section>
+
+        <SeasonalYearCardLink
+          className="pyc-season"
+          style={{ textAlign: "center", margin: "0 auto 28px", maxWidth: 560, fontSize: 15, color: "var(--charcoal)" }}
+        />
 
         <p className="pyc-links">
           <Link href="/personal-year-card">Find your own year card &rarr;</Link>

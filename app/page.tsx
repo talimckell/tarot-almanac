@@ -10,6 +10,7 @@ import { viewerNow } from "@/lib/viewerNow";
 import { SITE_URL } from "@/lib/site";
 import { organizationLd, serviceLd } from "@/lib/organizationSchema";
 import PrivacyNote from "./components/PrivacyNote";
+import SeasonalYearCardLink from "./components/SeasonalYearCardLink";
 
 // Kept identical to the root layout's title/description (app/layout.tsx) — this file
 // exists to add the openGraph/twitter block the homepage was missing, not to change
@@ -363,6 +364,7 @@ export default async function Home() {
             intentionally.
           </p>
           <Link href="/personal-year-card" className="fb-cta">Find your year card &rarr;</Link>
+          <SeasonalYearCardLink style={{ marginTop: 14, fontSize: 14, opacity: 0.85 }} />
         </div>
         <div className="fb-visual">
           <div className="fb-specimen">

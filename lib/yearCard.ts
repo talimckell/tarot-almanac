@@ -36,6 +36,34 @@ export interface FaqItem {
 const CARDS = data.cards as YearCardContent[];
 export const YEAR_CARD_FAQ = data.faq as FaqItem[];
 
+// The upcoming-year explainer post, surfaced as a seasonal cross-link to lift it
+// during the year-ahead search spike (Oct–Jan) and funnel readers to the calculator.
+// `card` is that year's COLLECTIVE card (digit-sum of the year), shared by everyone —
+// distinct from the personal year card the calculator computes. Update (or clear) this
+// when the next year's post ships; seasonalYearPost() auto-retires it on its own.
+export interface SeasonalYearPost {
+  year: number;
+  /** The year's collective card name, for the lead sentence. */
+  card: string;
+  href: string;
+}
+const SEASONAL_YEAR_POST: SeasonalYearPost = {
+  year: 2027,
+  card: "Justice",
+  href: "/blog/2027-tarot-year-card",
+};
+
+// Returns the seasonal post only inside its window — October of the year before
+// through the end of the post's own year — so "2027" links never outlive 2027. Date
+// is injectable for tests; defaults to now. Month-granular, so no SSR/CSR hydration
+// drift in practice.
+export function seasonalYearPost(now: Date = new Date()): SeasonalYearPost | null {
+  const y = now.getUTCFullYear();
+  const m = now.getUTCMonth(); // 0 = January
+  const inWindow = (y === SEASONAL_YEAR_POST.year - 1 && m >= 9) || y === SEASONAL_YEAR_POST.year;
+  return inWindow ? SEASONAL_YEAR_POST : null;
+}
+
 export function yearCardContent(index: number): YearCardContent {
   return CARDS[index];
 }

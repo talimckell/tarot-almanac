@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
+import SeasonalYearCardLink from "../components/SeasonalYearCardLink";
 import { MAJORS, MAJOR_SLUGS, collectiveMonth } from "../../lib/almanac";
 import { getCardBySlug } from "../../lib/cards";
 import { majorGlyphId } from "../../lib/pips";
@@ -63,6 +64,7 @@ export default async function MonthIndexPage() {
             This is the world&rsquo;s card for the month. Your birthday sets a second one that&rsquo;s
             yours alone: <Link href="/personal-month-card">find your personal month card</Link>.
           </p>
+          <SeasonalYearCardLink />
           <p>
             Every month here is free to browse. A subscription walks all twelve as they come, your
             own day cards alongside the world&rsquo;s, personal and collective side by side.

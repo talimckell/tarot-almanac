@@ -20,10 +20,18 @@ const CANONICAL = `${SITE_URL}/personal-year-card`;
 // "year card calculator 2026/2027"-style searches. Computed per request so the years
 // roll forward on their own; no hardcoded year to go stale.
 export async function generateMetadata(): Promise<Metadata> {
-  const now = new Date().getUTCFullYear();
+  const nowDate = new Date();
+  const now = nowDate.getUTCFullYear();
   const next = now + 1;
-  const title = `Tarot Year Card Calculator: Your Card for ${now} & ${next} | The Tarot Almanac`;
-  const description = `Find your tarot year card for ${now} or ${next}, the Major Arcana card your birthday sets for each calendar year through tarot numerology. It's the theme your year keeps coming back to. Read it early and work with it.`;
+  // In the year-ahead season (Oct–Dec), searchers want next year's card, so lead the
+  // title and description with it; otherwise lead with the current year. Either way the
+  // page targets the "tarot year card calculator <year>" variant (the calculator intent
+  // is this hub's; the "<year> tarot year card" term stays the 2027 blog's).
+  const inSeason = nowDate.getUTCMonth() >= 9;
+  const leadYear = inSeason ? next : now;
+  const otherYear = inSeason ? now : next;
+  const title = `Tarot Year Card Calculator: Your Card for ${leadYear} & ${otherYear} | The Tarot Almanac`;
+  const description = `Free tarot year card calculator. Find your card for ${leadYear} or ${otherYear} from your birthday: the Major Arcana card your year keeps coming back to. Read it early and work with it.`;
   return {
     title,
     description,
