@@ -42,6 +42,11 @@ const FAQ: { q: string; a: string; link?: { href: string; text: string } }[] = [
     link: { href: "/tarot-birth-chart", text: "See the full seven-card version" },
   },
   {
+    q: "Is this a birthday tarot reading?",
+    a: "Yes. Your birth card is a birthday tarot reading in the truest sense: it comes straight from your birth month and day, names one Major Arcana card, and reads the same every time, with no shuffle and no sign-up. If you want a reading that moves day to day, the Almanac reads each day from your birthday too, and the full birth chart reads your whole date of birth.",
+    link: { href: "/today", text: "See today's reading from your birthday" },
+  },
+  {
     q: "What is my tarot card?",
     a: "If you mean the one card that's yours for life, that's your tarot birth card, and the calculator above finds it. Enter your birth month and day and it names the Major Arcana card your birthday points to.",
   },
