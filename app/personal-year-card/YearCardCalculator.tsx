@@ -12,6 +12,7 @@ import {
   majorElement,
   maxDay,
   parseYearCardResumeParams,
+  seasonalYearPost,
 } from "../../lib/yearCard";
 import { YEAR_READING_PRICE_DISPLAY } from "../../lib/yearReadingPricing";
 import { startYearReadingCheckout } from "./checkoutActions";
@@ -45,6 +46,11 @@ export default function YearCardCalculator({
 }) {
   const now = new Date().getFullYear();
   const YEARS = [now - 1, now, now + 1, now + 2, now + 3];
+  // In the year-ahead season (Oct–Dec), default the year to the one being promoted
+  // (next year) so seasonal searchers land on it without touching the picker; out of
+  // season it falls back to the current year. Same window as the seasonal cross-link,
+  // so it auto-reverts. A resume value from the sign-in round-trip still wins.
+  const seasonalDefaultYear = seasonalYearPost()?.year ?? now;
   const parsed = resume && parseYearCardResumeParams(resume.bm, resume.bd, resume.year);
   const initial = parsed
     ? { bm: String(parsed.bm).padStart(2, "0"), bd: String(parsed.bd).padStart(2, "0"), year: String(parsed.year) }
@@ -52,7 +58,7 @@ export default function YearCardCalculator({
 
   const [m, setM] = useState(initial?.bm ?? "");
   const [d, setD] = useState(initial?.bd ?? "");
-  const [y, setY] = useState(initial?.year ?? String(now));
+  const [y, setY] = useState(initial?.year ?? String(seasonalDefaultYear));
   // Not re-tracked as a form_submit: the original submit already fired client-side
   // before the sign-in redirect, so restoring it here isn't a new submission.
   const [result, setResult] = useState<{ idx: number; year: number; m: string; d: string } | null>(() =>
