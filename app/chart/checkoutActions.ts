@@ -61,6 +61,11 @@ export async function startSubscriptionCheckout(formData?: FormData) {
 // metadata needed — the webhook just sets Profile.ownChartPurchasedPaymentIntentId
 // for this supabaseUserId.
 export async function startOwnChartCheckout(formData?: FormData) {
+  // Which Buy placement fired: "chart_sticky" (mobile sticky bar), "chart_paywall"
+  // (the bottom paywall), else "unknown". Carried into the Stripe session metadata so
+  // the weekly funnel can attribute paid own-chart sales to a placement.
+  const location = (formData?.get("location") as string | null) ?? "unknown";
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -86,10 +91,10 @@ export async function startOwnChartCheckout(formData?: FormData) {
       cancel_url: `${siteUrl}/chart?checkout=cancelled&d=${guestBirthDate}`,
       // No supabaseUserId → the webhook treats this as a guest: it provisions the
       // account from the Stripe-collected email and saves this birth date.
-      metadata: { kind: "own-chart", guestBirthDate },
-      payment_intent_data: { metadata: { kind: "own-chart", guestBirthDate } },
+      metadata: { kind: "own-chart", guestBirthDate, location },
+      payment_intent_data: { metadata: { kind: "own-chart", guestBirthDate, location } },
     });
-    await trackFormSubmitServer("buy_own_chart_guest", undefined, undefined);
+    await trackFormSubmitServer("buy_own_chart_guest", { location }, undefined);
     redirect(guestSession.url!);
   }
 
@@ -109,10 +114,10 @@ export async function startOwnChartCheckout(formData?: FormData) {
     // dedupe on reload. Stripe substitutes the literal {CHECKOUT_SESSION_ID} template.
     success_url: `${siteUrl}/chart?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/chart?checkout=cancelled`,
-    metadata: { kind: "own-chart", supabaseUserId: user.id },
-    payment_intent_data: { metadata: { kind: "own-chart", supabaseUserId: user.id } },
+    metadata: { kind: "own-chart", supabaseUserId: user.id, location },
+    payment_intent_data: { metadata: { kind: "own-chart", supabaseUserId: user.id, location } },
   });
 
-  await trackFormSubmitServer("buy_own_chart", undefined, user.email);
+  await trackFormSubmitServer("buy_own_chart", { location }, user.email);
   redirect(session.url!);
 }

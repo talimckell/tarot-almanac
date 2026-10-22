@@ -34,6 +34,7 @@ export default function StickyUnlockBar({ birthDate }: { birthDate: string }) {
       </div>
       <form action={startOwnChartCheckout}>
         <input type="hidden" name="d" value={birthDate} />
+        <input type="hidden" name="location" value="chart_sticky" />
         <CheckoutSubmitButton className={styles.stickyBuy} pendingLabel="…">
           Unlock
         </CheckoutSubmitButton>

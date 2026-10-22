@@ -98,19 +98,36 @@ if (!liveKey) {
     .autoPagingToArray({ limit: 1000 });
   const real = sessions.filter((s) => !isTest(s.customer_details?.email));
   const byKind = {};
+  // Placement attribution for own-chart Buy (chart_sticky = mobile sticky bar,
+  // chart_paywall = bottom paywall), from the session metadata.location set in
+  // startOwnChartCheckout. Sessions created before that field shipped read "unknown".
+  const ownChartByLocation = {};
   started = real.length;
   paid = 0;
   for (const s of real) {
     const kind = s.mode === "subscription" ? "subscription" : (s.metadata?.kind || "unknown");
     byKind[kind] = byKind[kind] || { started: 0, paid: 0, open: 0, expired: 0 };
     byKind[kind].started++;
-    if (s.payment_status === "paid" || s.status === "complete") { byKind[kind].paid++; paid++; }
+    const isPaid = s.payment_status === "paid" || s.status === "complete";
+    if (isPaid) { byKind[kind].paid++; paid++; }
     else if (s.status === "open") byKind[kind].open++;
     else if (s.status === "expired") byKind[kind].expired++;
+    if (kind === "own-chart") {
+      const loc = s.metadata?.location || "unknown";
+      ownChartByLocation[loc] = ownChartByLocation[loc] || { started: 0, paid: 0 };
+      ownChartByLocation[loc].started++;
+      if (isPaid) ownChartByLocation[loc].paid++;
+    }
   }
   console.log(`Stripe (real, owner/test excluded): ${started} checkout sessions started, ${paid} paid`);
   for (const [k, v] of Object.entries(byKind)) {
     console.log(`  ${k}: started ${v.started} -> paid ${v.paid}  (abandoned: open ${v.open}, expired ${v.expired})`);
+  }
+  if (Object.keys(ownChartByLocation).length > 0) {
+    console.log("  own-chart Buy by placement:");
+    for (const [loc, v] of Object.entries(ownChartByLocation)) {
+      console.log(`    ${loc}: started ${v.started} -> paid ${v.paid}`);
+    }
   }
   console.log("");
 }

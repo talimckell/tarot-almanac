@@ -319,6 +319,7 @@ export default async function ChartPage({
                 <div className={styles.what}>Unlock this one natal chart to read and keep. No subscription.</div>
                 <form action={startOwnChartCheckout}>
                   <input type="hidden" name="d" value={birthDateParam} />
+                  <input type="hidden" name="location" value="chart_paywall" />
                   <CheckoutSubmitButton className={styles.buy} pendingLabel="Redirecting to Stripe…">
                     Buy my chart
                   </CheckoutSubmitButton>
