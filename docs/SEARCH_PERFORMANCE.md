@@ -60,6 +60,42 @@ searches (see `/month/2026-08`).
 
 ---
 
+## EXPERIMENT: Instagram Reels stop 2026-10-29 — what (if anything) were they doing?
+
+Standing marker, not a weekly entry. Tali is cancelling the **$80/mo HeyCatch Reels tool on
+2026-10-29** (unclear ROI; can't justify the cost regardless). Clean natural experiment: watch what
+changes after the Reels stop. This is a SEPARATE account from the site's own `@heycatch/sdk`
+analytics (instrumentation-client.ts + lib/serverAnalytics.ts), which stays — but confirm post-cutoff
+that the SDK still reports (if it breaks, the two were linked after all; remove the SDK then). We don't
+use HeyCatch in this review anyway (Vercel + GSC + BWT + DB/Stripe), so the experiment isn't blinded.
+
+**Read it through the right lens.** Reels drive AWARENESS, not clicks. IG referrals are already
+~0–2 visits/wk (see any weekly entry), so the referral line will NOT move and is not the test. The
+Reels-sensitive signals are:
+- **Branded search** ("tarot almanac" / "the tarot almanac") in GSC — the cleanest tell: someone sees
+  a Reel, later Googles the name.
+- **Direct traffic** (Vercel) — IG's in-app browser strips the referrer, so its clicks land in direct.
+- **Overall visitor level** + **mobile %** (Vercel).
+- **Engagement events + sales** (DB/Stripe), lagged.
+
+**Pre-cutoff baseline (Reels ACTIVE), frozen 2026-10-23:**
+- Branded search: **3 clicks / 119 impr over the full 3-mo window** ("tarot almanac" 2cl/55im pos 8.1;
+  "the tarot almanac" 1cl/64im pos 11.0) = **0% of 916 clicks.** Near-zero and flat.
+- Weekly visitors: Oct 5–12 ≈ 335, Oct 12–19 = 454 (Vercel). Mobile ~70%.
+- Social referrals: IG 1–2/wk, FB ~10/wk, Threads 0.
+- Sales: 2 ever (Sep 15 chart, Oct 22 own-chart), neither attributable to IG.
+
+**The honest prior: expect little to change.** Branded search is already negligible AND flat while the
+Reels have been running, which is itself weak evidence they built little brand recall that sticks. If
+the Reels were working, branded search should have been climbing. Base case is a near-flat read after Oct 29.
+
+**Confounder to respect:** organic SEO is still ramping (GSC clicks rising WoW). A steady total after
+Oct 29 could mean "Reels did nothing" OR "SEO backfilled a Reels-propped number." Read every signal as a
+change in TREND vs. the SEO curve, not an absolute level, and give it 2–3 weeks of lag. Revisit
+deliberately in the ~Nov 16 and ~Nov 23 reviews.
+
+---
+
 ## Reference: ad-revenue path (Mediavine) — added 2026-08-06
 
 Strategic context, not a weekly entry. Rationale: paid acquisition failed on conversion (see the
