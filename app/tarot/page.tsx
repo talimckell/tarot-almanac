@@ -117,9 +117,9 @@ export default function TarotIndexPage() {
         <aside className={styles.chartAside}>
           <span className={styles.asideEyebrow}>Your seven cards</span>
           <p>
-            These are everyone&rsquo;s cards. Seven of them are already yours, set by the day
-            you were born. Your natal chart reads them as one shape: the self you came in as,
-            the world that met you, and the Bearing that ties the two together.
+            The full deck holds the cards. Seven of them are yours, determined by the day you
+            were born. Your natal chart brings them together into a single pattern: who you are,
+            the world you were born into, and the Bearing that connects the two.
           </p>
           <ChartCtaButton variant="onDark" label="See your natal chart &rarr;" margin="22px 0 0" />
         </aside>
