@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
+import ChartCtaButton from "../components/ChartCtaButton";
 import { MAJORS, MAJOR_SLUGS, RANKS, ELEMENT_BY_MAJOR, SUIT_BY_ELEMENT, type Element } from "../../lib/almanac";
 import styles from "./page.module.css";
 
@@ -112,6 +113,16 @@ export default function TarotIndexPage() {
             </section>
           );
         })}
+
+        <aside className={styles.chartAside}>
+          <span className={styles.asideEyebrow}>Your seven cards</span>
+          <p>
+            These are everyone&rsquo;s cards. Seven of them are already yours, set by the day
+            you were born. Your natal chart reads them as one shape: the self you came in as,
+            the world that met you, and the Bearing that ties the two together.
+          </p>
+          <ChartCtaButton variant="onDark" label="See your natal chart &rarr;" margin="22px 0 0" />
+        </aside>
       </div>
       </main>
 
