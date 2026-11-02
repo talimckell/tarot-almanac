@@ -153,6 +153,86 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-11-02 (window: GSC Aug 1–Oct 31 / Oct 26–Nov 2 Vercel) — new traffic high, Google position recovered; funnel reverted to zero
+
+Big week almost everywhere except the till. Traffic hit a **new high (538 visitors, +24%)**, Google
+**average position recovered 11.9 → 8.7** (the long-tail-drag reversed), `/birthday` surged, AI jumped
++20%, and engagement with the free finders spiked. The one sour note: the funnel went back to **0 buy-clicks**,
+so last week's sale reads as a one-off rather than a new baseline. This window also **straddles the Reels
+stop (Oct 29)** — Reels ran 3 of the 7 days, so the clean post-Reels read is next week; notably, traffic
+*rose* as the Reels wound down, a first weak hint they weren't the driver.
+
+### 1. Google (GSC) — window Aug 1–Oct 31 (GSC lags ~2 days)
+- Cumulative: clicks **1,314** (was 1,101), impr **38,184** (was 32,086) — another big step.
+- The week was strong: last 7 (Oct 25–31) **221 clicks / 6,661 impr / avg pos 8.7**, vs prev 7 189 / 5,406
+  / 11.9. Clicks +17%, impr +23%, and **position recovered a full 3+ spots** — the slip from the angle
+  long-tail reversed as `/birthday` and the money pages climbed.
+- **`/birthday` surging: 64 clicks / 4,979 impr / pos 7.0** (was 47 / 3,810 / 7.7). The engine, accelerating.
+- **`/tarot-birth-chart`: 18 clicks / 2,005 impr / pos 12.5** (was 15 / 1,637 / 12.8). Query "tarot birth
+  chart" **pos 8.7 / 6 clicks / 709 impr** (was 9.1 / 4 / 603) — improving, solidly page 1 now.
+- `/personal-year-card` **pos 25.1** (was 26.6) — still climbing into year-card season. `/tarot-birth-card`
+  **pos 35.1** (was 45.0), improving but still Google-shy (the AI darling, §4).
+- Angle queries: **49 / 162 impr / 0 clicks** (was 57 / 180 / 0) — fluctuating, still indexing, still no
+  clicks. The Oct-19 anchors/jump-nav have now had ~2 weeks; see paths below.
+
+### 2. Vercel — Oct 26–Nov 2
+- **538 visitors (+24%)**, 1,112 pageviews (+28%), bounce **70% (flat)**. Mobile 384 (**71%**),
+  iOS 273 / Android 120. Real humans ~470 (BG 4/35, RO 10/46, MC 1/14, RU 1/14 are high-pageview crawlers).
+- Referrers: **Google 291** (big jump from 179), Bing-index (DDG 36 + Ecosia 16 + Bing 14) = **66** (was 57),
+  Facebook 4, Instagram 2, Pinterest 1. **No chatgpt.com referral again** (2 weeks now).
+- Countries: US 173, **SG 62** (still climbing, but 1.0 pv/visitor = bounce traffic, low engagement — watch),
+  GB 57, CA 21, DE 19. Seasonal: `/month/2026-11` (November) 10 visits.
+- **Engagement spiked:** birth_card_finder **16** (was 10), personal_year_card 9, personal_month_card 8,
+  bearing_finder **6** (was 1), birthday_reveal 6. All finders up — but see conversions.
+
+### 3. Bing-index (BWT / DDG + Ecosia + Bing)
+- DDG 36 + Ecosia 16 + Bing 14 = **66/wk** (was 57). Up with everything.
+
+### 4. AI citations (BWT)
+- Last 7 days (Oct 25–31) **~308 citations (~44/day)**, up from ~256 (**+20%**), Oct 27 peaked **82**.
+  Strongest AI week yet. Still no chatgpt.com click-through, so it stays a visibility signal.
+
+### Mediavine Journey: ~155% (health only)
+Rolling 30-day ≈ **~1,800 raw / ~1,550 human → ~155% of the 1,000 door.** Back up with the traffic high.
+Not pursuing (resolved 2026-10-02).
+
+### Conversions: reverted to zero
+From the DB + live Stripe via `scripts/weekly-funnel.mjs`. **Oct 26–Nov 2: reached /chart 11 → clicked Buy 0
+(0%) → paid 0.** 1 signup (no purchase). So last week's clean sale was a one-off, not a step-change — the
+upstream leak (/chart visitors don't click Buy) is back in full. The **engagement spike didn't convert**:
+16 birth-card finders, 9 year-card, 8 month-card, all free, none bought. That's the core tension now — the
+free tools are satisfying, the paid step isn't being taken.
+- Year funnel: `/personal-year-card` 13 → calculator 9 → 0. `/chart` 11 → 0.
+- Nothing to attribute yet (0 sales); the `location` tag (sticky vs paywall) still waits on the next sale.
+
+### Baseline to beat next week
+Google last-7: 221 clicks / 6,661 impr / pos 8.7 (cumulative 38,184 impr / 1,314 clicks). Vercel 538
+(real ~470). Bing-index 66. AI ~44/day. Journey ~155%. Branded search 7 clicks / 175 impr (Reels still
+partly on). **Watch:** the **first clean post-Reels week** (branded + direct vs the SEO curve); whether
+any buy-click returns; whether the huge finder engagement ever converts; and the SG bounce traffic.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **The angle-link trigger has arrived — act or give it one more week.** The Oct-19 anchors/jump-nav have
+   had ~2 weeks and the angle queries are still 162 impr / 0 clicks at pos 40–80. The teed-up lever is a few
+   internal links from the matching `/birthday` and `/tarot/[card]` pages using the angle phrasing, plus
+   FAQ-style markup on the "Yes or no" angle. GSC only has ~12 indexed days of the anchors, so one more week
+   fully de-risks it, but this is the next real "do."
+2. **Keep feeding `/birthday` (pos 7.0, surging).** The compounding winner, now accelerating. Protect its
+   internal links; it's carrying the whole organic story.
+3. **Investigate the engagement→purchase gap (the real wall).** Finders are way up (16 birth-card uses) and
+   buy-clicks are zero. Worth a hard look at whether the free finders over-satisfy, or the jump from a free
+   finder to the $12 chart is too abrupt. Don't act blind; instrument the finder→/chart→Buy path first.
+4. **Year-card season is live and climbing (pos 25.1).** Let the shipped 2027 work read out; don't pile on.
+5. **Reels experiment: next week is the first clean read.** Branded (7/175) + direct vs the SEO curve.
+   Traffic rising as Reels wound down is the early tell; confirm it.
+
+To explore (watch, don't act): the **SG 62** bounce traffic (1 pv/visitor — a link circulating, or a
+single-page bot?); whether the **`/tarot` CTA** (shipped Nov 2) lifts `/chart` visits from card-browsers;
+and the **chatgpt.com referral** staying quiet two weeks running.
+
+---
+
 ## 2026-10-26 (window: GSC Jul 25–Oct 24 / Oct 19–26 Vercel) — traffic dipped, but the funnel finally closed a sale
 
 Traffic gave back last week's bounce (390 visitors, −20%), settling into the post-spike band rather
