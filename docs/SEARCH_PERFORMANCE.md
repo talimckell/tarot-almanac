@@ -94,6 +94,11 @@ Oct 29 could mean "Reels did nothing" OR "SEO backfilled a Reels-propped number.
 change in TREND vs. the SEO curve, not an absolute level, and give it 2–3 weeks of lag. Revisit
 deliberately in the ~Nov 16 and ~Nov 23 reviews.
 
+> **FIRST CLEAN READ (2026-11-09) — no effect, as predicted.** The first full post-Reels week (Nov 2–9)
+> grew on every axis: traffic +20% to a new high, Google clicks +44%, and **branded search rose 7 → 10**
+> with the Reels off. Nothing dropped. The Reels were not driving traffic, awareness, or branded search;
+> the $80/mo cut costs nothing measurable. One more week (~Nov 16) to fully confirm, but the result is clear.
+
 ---
 
 ## Reference: ad-revenue path (Mediavine) — added 2026-08-06
@@ -150,6 +155,96 @@ is in bounds before building around this.
 
 **What to do now:** nothing to act on — it's a sessions game and we're early. Start noting the
 weekly organic **sessions** figure (from Vercel) alongside impressions, tracking toward 1,000.
+
+---
+
+## 2026-11-09 (window: GSC Aug 8–Nov 7 / Nov 2–9 Vercel) — breakout week: best Google yet, two sales, and the Reels stop changed nothing
+
+The biggest week of the build, and the clean post-Reels read landed: **everything grew with the Reels off.**
+New traffic high (~644 visitors, +20%), the **best Google week by far** (319 clicks, +44%; position 6.5),
+`/birthday` exploding, **two $12 sales** (both via the bottom paywall), and the year-card season visibly
+turning on. Branded search *rose* after the Reels stopped, which closes the experiment about where the honest
+prior said it would. AI citations also hit a new high (~57/day, +30%).
+
+### 1. Google (GSC) — window Aug 8–Nov 7 (GSC lags ~2 days)
+- Cumulative: clicks **1,626** (was 1,314), impr **46,085** (was 38,184) — a huge step.
+- **Best week yet: last 7 (Nov 1–7) 319 clicks / 8,502 impr / avg pos 6.5**, vs prev 7 221 / 6,661 / 8.7.
+  Clicks **+44%**, impr +28%, position improved another 2+ spots to its best ever.
+- **`/birthday` is exploding: 95 clicks / 6,917 impr / pos 6.5** (was 64 / 4,979 / 7.0). The long-tail engine
+  is carrying the whole site now.
+- **`/blog/2027-tarot-year-card`: 20 clicks / 860 impr / pos 7.5** — the 2027 blog is now a top performer
+  (seasonal + the Oct cross-links), and 28 Vercel visits. Year-card season is turning on.
+- `/tarot-birth-chart`: 25 clicks / 2,367 impr / pos 11.7 (was 18 / 2,005 / 12.5), climbing. `/personal-year-card`
+  pos 23.4 (was 25.1). `/tarot-birth-card` pos 29.3 (was 35.1). All the money pages moved up.
+- Angle queries: **51 / 173 impr / 0 clicks** — still zero after ~3 weeks of the Oct-19 anchors. The link
+  lever is now firmly due (see paths).
+
+### 2. Vercel — Nov 2–9
+- **~644 visitors (+20%)**, ~1,401 pageviews (+26%). Mobile 449 (**70%**), iOS 327 / Android 128.
+  Real humans ~570 (SI 3/55, VN 1/7, RU 4/13 are high-pageview crawlers).
+- Referrers: **Google 337** (up from 291), Bing-index (DDG 35 + Ecosia 25 + Bing 17) = **77** (was 66),
+  Facebook 3, Instagram 2, Pinterest 1, Brave 1. No chatgpt.com (3 weeks).
+- Countries: US 242, GB 72, SG 66 (still bounce-heavy), AU 33, CA 32, **PH 27** (climbing).
+- **Year-card season in the events:** personal_year_card finder **17** (was 9, the top event now),
+  birthday_reveal 11, birth_card_finder 10, bearing_finder 9, personal_month_card 9. Plus the time-travel
+  selectors: year **2027 picked 13×**, Dec-2026 month 4× — people are looking ahead.
+- `/chart` visits **doubled to 24** (was 11) — plausibly the `/tarot` closing CTA (shipped Nov 2) feeding it.
+
+### 3. Bing-index (BWT / DDG + Ecosia + Bing)
+- DDG 35 + Ecosia 25 + Bing 17 = **77/wk** (was 66). Up with everything. BWT's own search report: last 7
+  **14 clicks / 283 impr** (was 17 / 217) — Bing indexing more pages, clicks roughly flat at this volume.
+
+### 4. AI citations (BWT)
+- **Strongest week yet: last 7 (Oct 31–Nov 6) ~396 citations (~57/day)**, up from ~305 (**+30%**), Nov 3 & 5
+  peaked 76. The #1 grounding query **"tarot card reading by date of birth" grew to 66 citations** (was 45) —
+  plausibly the Oct-19 metadata/FAQ tuning for that exact phrase landing. "birth chart tarot card" also now
+  appears (12 cites, 31% share). Still no chatgpt.com click-through (3 weeks).
+
+### Mediavine Journey: ~170% (health only)
+Rolling 30-day ≈ **~1,950 raw / ~1,700 human → ~170% of the 1,000 door.** New high with the traffic.
+Not pursuing (resolved 2026-10-02).
+
+### Conversions: two sales, both through the paywall
+From the DB + live Stripe. **Nov 2–9: reached /chart 24 → clicked Buy 2 (8%) → paid 2 (100% of started).**
+Two $12 own-chart sales (incl. penny@…, Nov 5), both **started → paid with zero abandonment**, and the
+attribution finally reads: **both via `chart_paywall` (the bottom paywall), 0 via the mobile sticky bar.**
+That's now **3 sales in ~3 weeks** (Oct 22 + these 2), plural-per-week for the first time — conversion is
+genuinely picking up alongside the traffic.
+- **Caveat that matters:** the sticky bar is mobile-only, so a desktop sale *must* read as paywall. We can't
+  see device from the funnel, so "2/2 paywall" doesn't yet prove the sticky bar is unused on mobile — it could
+  be desktop buyers. Stamping device alongside the placement tag would resolve this (offered, not yet built).
+
+### Reels experiment — FIRST CLEAN READ (Reels stopped Oct 29): no effect
+Nov 2–9 is the first full post-Reels week. **Everything grew:** traffic +20% (new high), Google +44%, and
+**branded search rose 7 → 10 clicks / 208 impr** with the Reels off. Exactly the honest prior: the Reels were
+not driving traffic, awareness, or branded search. The $80/mo cut costs nothing measurable. One more week
+confirms it fully, but the result is already clear. (Baseline in the experiment marker above.)
+
+### Baseline to beat next week
+Google last-7: 319 clicks / 8,502 impr / pos 6.5 (cumulative 46,085 impr / 1,626 clicks). Vercel ~644
+(real ~570). Bing-index 77. AI ~57/day. Journey ~170%. Branded 10 cl / 208 im. 3 sales all-time, 2 this week (both paywall).
+**Watch:** does the sale rate hold (is conversion really turning?); does the year-card season keep climbing;
+does `/chart` stay elevated (the `/tarot` CTA working?); and confirm the Reels null result.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **Wire the angle internal-links — the trigger is now firmly met.** 3 weeks of the Oct-19 anchors, still
+   173 impr / 0 clicks at pos 40–80. Do it: a few internal links from the matching `/birthday` and
+   `/tarot/[card]` pages using the angle phrasing, plus FAQ-style markup on the "Yes or no" angle. This is
+   the one ripe content "do."
+2. **Ride the year-card season hard — it's turning on NOW.** `/blog/2027-tarot-year-card` pos 7.5 / 20 clicks,
+   year-card finder the top event (17), 2027 picked 13×. The 2027 work is live; make sure every seasonal
+   surface points at the calculator and the 2027 blog. Highest-tailwind product right now. **(Submit the Dec
+   `/month/2026-12` page to GSC/Bing — The Fool — while here.)**
+3. **Keep protecting `/birthday` (pos 6.5, 95 clicks, exploding).** It is the whole organic story; keep its
+   internal links tight and don't disrupt it.
+4. **Resolve the sticky-vs-paywall question: stamp device on the placement tag.** Cheap, and it turns the
+   ambiguous "paywall" attribution into a real answer about whether the mobile bar helps.
+5. **Watch conversion for a third data point.** 2 sales this week is real but small; one more good week tells
+   us the funnel genuinely turned rather than caught a seasonal updraft.
+
+To explore (watch, don't act): the **SG 66 / SI-crawler** noise; whether the `/tarot` CTA is what doubled
+`/chart`; and re-pull the AI export next week to confirm that channel held.
 
 ---
 
