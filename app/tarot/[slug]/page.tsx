@@ -22,6 +22,18 @@ function ctxAnchor(label: string): string {
   return label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+// Natural-language question for each angle, used only for the FAQPage schema and matched
+// to the queries these sections already rank for ("[card] yes or no", "[card] as a
+// person", ...). The answer is the authored angle body; only the question is generated.
+const CTX_QUESTION: Record<string, (name: string) => string> = {
+  "Yes or no": (n) => `Is ${n} a yes or no card?`,
+  "As feelings": (n) => `What does ${n} mean as feelings?`,
+  "As a person": (n) => `What is ${n} as a person?`,
+  "As advice": (n) => `What does ${n} mean as advice?`,
+  Timing: (n) => `What does ${n} mean for timing?`,
+  "How someone sees you": (n) => `What does ${n} mean as how someone sees you?`,
+};
+
 export function generateStaticParams() {
   return getAllCards().map((c) => ({ slug: c.slug }));
 }
@@ -141,11 +153,28 @@ export default async function CardPage({
     mainEntityOfPage: `${SITE}/tarot/${card.slug}`,
   };
 
+  // FAQPage schema over the contextual reading angles, so Google can read them as Q&A for
+  // the "[card] yes or no / as a person / ..." queries they rank for (pos ~46, 0 clicks).
+  // Only built when this card has authored angles; answers are the authored bodies.
+  const faqLd =
+    contextAngles.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: contextAngles.map((a) => ({
+            "@type": "Question",
+            name: CTX_QUESTION[a.label] ? CTX_QUESTION[a.label](card.name) : `${card.name}: ${a.label}`,
+            acceptedAnswer: { "@type": "Answer", text: a.body },
+          })),
+        }
+      : null;
+
   return (
     <>
       <SiteNav current="tarot" />
       <main className="wrap">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <nav className="crumb">
         <Link href="/">Home</Link> · <Link href="/tarot">The Cards</Link> ·{" "}
@@ -261,7 +290,8 @@ export default async function CardPage({
         <p>When the system hands you {card.name}, it points at the shape of the day, not a fortune. The card is fixed. What you do with it is yours.</p>
         <ChartCtaButton variant="onDark" label="See your natal chart &rarr;" margin="18px 0 6px" />
         <p className="dates">
-          <Link href="/today">See today&rsquo;s card</Link> · <Link href="/tarot">All seventy-eight</Link>
+          <Link href="/today">See today&rsquo;s card</Link> · <Link href="/tarot">All seventy-eight</Link> ·{" "}
+          <Link href="/tarot-birth-chart">your tarot birth chart</Link>
           {isMajor && (
             <>
               {" "}· <Link href={`/bearing/${card.slug}`}>{card.name} as a Bearing</Link>

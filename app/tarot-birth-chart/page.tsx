@@ -19,9 +19,9 @@ import { SITE_URL } from "../../lib/site";
 import { organizationRef, serviceLd } from "../../lib/organizationSchema";
 
 const URL = `${SITE_URL}/tarot-birth-chart`;
-const TITLE = "Tarot Birth Chart & Natal Chart | The Tarot Almanac";
+const TITLE = "Tarot Birth Chart: 7 Cards From Your Birthday | The Tarot Almanac";
 const DESCRIPTION =
-  "A tarot birth chart, or tarot natal chart, is seven cards from your birthday: three for you, three for the world you were born into, and your Bearing between them. See an example and build your own.";
+  "Your tarot birth chart, or natal chart, is seven cards set by your birthday: who you are, the world you were born into, and the Bearing between them. See a free sample and build your own.";
 
 export const metadata: Metadata = {
   title: TITLE,
