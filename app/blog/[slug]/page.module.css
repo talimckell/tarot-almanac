@@ -163,6 +163,48 @@
   color: var(--stone);
 }
 
+/* Inline "find your card" callout box (blog-06's mid-article CTA), a stronger
+   treatment than the plain .body-cta button for the season's high-traffic post. */
+.body :global(.year-callout) {
+  margin: 32px 0;
+  padding: 26px 28px;
+  border: 1px solid var(--indigo);
+  background: color-mix(in srgb, var(--indigo) 5%, transparent);
+  text-align: center;
+}
+.body :global(.year-callout .year-callout-eyebrow) {
+  display: block;
+  font-family: var(--serif-sc);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 8px;
+}
+.body :global(.year-callout p) {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.body :global(a.year-callout-btn) {
+  display: inline-block;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: var(--indigo);
+  border: 1px solid var(--indigo);
+  padding: 12px 28px;
+  text-decoration: none;
+}
+.body :global(a.year-callout-btn:hover) {
+  background: transparent;
+  color: var(--indigo);
+}
+
 /* figures — diagrams and images, centered with optional caption */
 .body :global(figure) {
   margin: 34px 0;

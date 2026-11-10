@@ -54,7 +54,7 @@ Seven of those months, April through October, sit in the Reckoning stretch, the 
 
 Your own card for the year uses your birthday. Add your birth month and your birth day to the year's eleven, wrap the total on the wheel of twenty-two, and that's your personal 2027 card.
 
-[Find your 2027 card →](#)
+<aside class="year-callout"><span class="year-callout-eyebrow">Your own 2027 card</span><p>Your birthday sets a card of your own for the year. See where 2027 lands for you.</p><a class="year-callout-btn" href="/personal-year-card">Find your 2027 card →</a></aside>
 
 Your birth month plus your birth day is something you may already know. It's [your Bearing](#), the card your birthday carries in every year there is, which makes the whole calculation for next year very short. Your Bearing, plus eleven.
 
