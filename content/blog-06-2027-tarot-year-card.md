@@ -54,6 +54,8 @@ Seven of those months, April through October, sit in the Reckoning stretch, the 
 
 Your own card for the year uses your birthday. Add your birth month and your birth day to the year's eleven, wrap the total on the wheel of twenty-two, and that's your personal 2027 card.
 
+[Find your 2027 card →](#)
+
 Your birth month plus your birth day is something you may already know. It's [your Bearing](#), the card your birthday carries in every year there is, which makes the whole calculation for next year very short. Your Bearing, plus eleven.
 
 Eleven is exactly half of twenty-two, which means 2027 does something no other year this decade does. It stands every single person directly across the wheel from their own card, as far from the Bearing as the wheel allows. A March 15 birthday carries the Moon, card eighteen. Eighteen plus eleven is twenty-nine, which wraps to seven, the Chariot. Whatever your birthday points to, next year sets you down on the far side of it.
