@@ -94,12 +94,12 @@ const HOME_FAQ: { q: string; answer: string; render: React.ReactNode }[] = [
   {
     q: "Can I give a chart as a gift?",
     answer:
-      "Yes. A $12 birth chart is made from their birthday, and it's theirs to keep. You don't need a subscription.",
+      "Yes. A $12 birth chart is made from their birthday. You send them a link, they open it and see their cards, and it's theirs to keep. No account needed, for you or them.",
     render: (
       <>
-        Yes. A $12 birth chart is made from their birthday, and it&rsquo;s theirs to keep.
-        You don&rsquo;t need a subscription.{" "}
-        <Link href="/me?gift=1#subscribe">Make one &rarr;</Link>
+        Yes. A $12 birth chart is made from their birthday. You send them a link, they open it
+        and see their cards, and it&rsquo;s theirs to keep. No account needed.{" "}
+        <Link href="/gift">Gift a chart &rarr;</Link>
       </>
     ),
   },

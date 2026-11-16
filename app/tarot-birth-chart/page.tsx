@@ -323,6 +323,7 @@ export default function TarotBirthChartPage() {
             sub={<>Secured by Stripe · Pay once, yours to keep</>}
           />
           <p className="dates" style={{ textAlign: "center" }}>
+            <Link href="/gift">Gift a chart to someone</Link> ·{" "}
             <Link href="/tarot-birth-chart/sample">See a full sample chart</Link> ·{" "}
             <Link href="/bearing">Find your Bearing first</Link> ·{" "}
             <Link href="/personal-year-card">See your year card</Link>

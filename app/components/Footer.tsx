@@ -74,6 +74,7 @@ export default function Footer() {
             <Link href="/bearing">Your Bearing</Link>
             <Link href="/tarot-birth-card">Your Birth Card</Link>
             <Link href="/tarot-birth-chart">Your Chart</Link>
+            <Link href="/gift">Gift a Chart</Link>
             <Link href="/personal-year-card">Your Year Card</Link>
             <Link href="/personal-month-card">Your Month Card</Link>
             <Link href="/birthday">Card by Birthday</Link>
