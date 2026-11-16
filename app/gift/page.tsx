@@ -4,6 +4,11 @@ import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import BirthdayFields from "../components/BirthdayFields";
 import { SITE_URL } from "@/lib/site";
+import { computeNatalChart, bearingStepsWord } from "@/lib/natalChart";
+import { getChartReadings } from "@/lib/chartReadings";
+import ChartDiagram from "../chart/ChartDiagram";
+import ReadCard from "../chart/ReadCard";
+import chartStyles from "../chart/page.module.css";
 import { startGiftCheckout } from "./actions";
 import styles from "./gift.module.css";
 
@@ -28,6 +33,13 @@ function Star({ size = 22 }: { size?: number }) {
 }
 
 export default function GiftLandingPage() {
+  // A real sample chart (Ava, March 15 1990 → the Moon) for the "see a full example"
+  // reveal. Rendered with the exact components the recipient opens at /gift/[token], so
+  // the example is faithful: their Bearing named and fully read, plus the six positions.
+  const sample = computeNatalChart(1990, 3, 15);
+  const [sampleBearing, ...sampleOthers] = getChartReadings(sample);
+  const sampleSteps = bearingStepsWord(sample.bearing.major);
+
   return (
     <>
       <SiteNav />
@@ -115,8 +127,34 @@ export default function GiftLandingPage() {
                 </span>
               ))}
             </div>
-            <span className={styles.previewTag}>This is an example. Theirs is made from their birthday.</span>
+            <span className={styles.previewTag}>A quick look. Open the full example below.</span>
           </div>
+
+          <details className={styles.example}>
+            <summary className={styles.exampleCarrot}>
+              See a full example <span className={styles.carrotArrow} aria-hidden="true">&darr;</span>
+            </summary>
+            <div className={styles.exampleBody}>
+              <ChartDiagram chart={sample} unlocked columnLabel="Ava" they />
+              <p className={chartStyles.gapNote}>
+                {sampleSteps.charAt(0).toUpperCase() + sampleSteps.slice(1)} steps separate Ava from the world
+                at every layer. That distance, {sample.bearing.name}, is Ava&rsquo;s Bearing.
+              </p>
+              <div className={chartStyles.readings}>
+                <ReadCard
+                  item={sampleBearing}
+                  featured
+                  linkText={`Read the full Bearing of ${sample.bearing.name} →`}
+                />
+                {sampleOthers.map((item) => (
+                  <ReadCard key={item.key} item={item} />
+                ))}
+              </div>
+              <p className={styles.exampleNote}>
+                This is Ava&rsquo;s example. The one you send is built from their own birthday.
+              </p>
+            </div>
+          </details>
         </section>
 
         {/* WHY IT'S A GOOD GIFT */}

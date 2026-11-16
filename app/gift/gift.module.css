@@ -182,6 +182,49 @@
   color: var(--label);
 }
 
+/* "See a full example" carrot (native <details>, no JS) → expands to a real sample chart. */
+.example {
+  max-width: 620px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+.exampleCarrot {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--serif-sc);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  border: 1px solid var(--indigo);
+  padding: 12px 28px;
+  border-radius: 2px;
+}
+.exampleCarrot::-webkit-details-marker { display: none; }
+.exampleCarrot:hover { background: var(--indigo); color: var(--stone); }
+.carrotArrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.example[open] .carrotArrow { transform: rotate(180deg); }
+.exampleBody {
+  margin-top: 26px;
+  text-align: left;
+  padding: 26px 20px;
+  background: #fbf8f2;
+  border: 1px solid var(--warm-stone);
+  border-radius: 4px;
+}
+.exampleNote {
+  text-align: center;
+  font-size: 13px;
+  color: var(--label);
+  margin: 20px 0 0;
+}
+
 /* ---------- why ---------- */
 .why {
   max-width: 540px;

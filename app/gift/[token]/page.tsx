@@ -3,11 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Footer from "../../components/Footer";
 import { prisma } from "@/lib/prisma";
-import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote, findRepeatedMajor } from "@/lib/natalChart";
+import { computeNatalChart, bearingStepsWord, isFoolBearing, foolBearingNote, findRepeatedMajor, repeatedMajorNote } from "@/lib/natalChart";
 import { formatLongDate } from "@/lib/almanac";
 import { formatDateSlug } from "@/lib/today";
 import { getChartReadings } from "@/lib/chartReadings";
-import ChartDiagram, { LockedPositionsGrid } from "../../chart/ChartDiagram";
+import ChartDiagram from "../../chart/ChartDiagram";
 import ReadCard from "../../chart/ReadCard";
 import styles from "../../chart/page.module.css";
 
@@ -41,7 +41,7 @@ export default async function GiftPage({
   const bd = saved.birthDate.getUTCDate();
   const chart = computeNatalChart(by, bm, bd);
 
-  const [bearingReading] = getChartReadings(chart);
+  const [bearingReading, ...otherReadings] = getChartReadings(chart);
   const steps = bearingStepsWord(chart.bearing.major);
   const repeat = findRepeatedMajor(chart);
   const giverName = saved.owner.name ?? saved.owner.email;
@@ -68,13 +68,14 @@ export default async function GiftPage({
           <p className={styles.giftFrom}>Made for you by {giverName}, using the Tarot Almanac.</p>
         </div>
 
-        <ChartDiagram chart={chart} unlocked={false} columnLabel={saved.name} they />
+        <ChartDiagram chart={chart} unlocked columnLabel={saved.name} they />
 
         <p className={styles.gapNote}>
           {steps.charAt(0).toUpperCase() + steps.slice(1)} steps separate {saved.name} from the world at every layer.
           That distance, {chart.bearing.name}, is {saved.name}&rsquo;s Bearing.
         </p>
         {isFoolBearing(chart) && <p className={styles.gapNote}>{foolBearingNote(`${saved.name}'s`)}</p>}
+        {repeat && <p className={styles.gapNote}>{repeatedMajorNote(repeat, `${saved.name}'s`)}</p>}
 
         <div className={styles.readings}>
           <ReadCard
@@ -82,13 +83,9 @@ export default async function GiftPage({
             featured
             linkText={`Read the full Bearing of ${chart.bearing.name} →`}
           />
-          <LockedPositionsGrid chart={chart} they heading={`${saved.name}'s six positions`} />
-          {repeat && (
-            <p className={styles.teaser}>
-              {saved.name}&rsquo;s chart also holds a rare pattern: one card repeats where it almost never does,
-              somewhere in the six positions still locked.
-            </p>
-          )}
+          {otherReadings.map((item) => (
+            <ReadCard key={item.key} item={item} />
+          ))}
         </div>
 
         <div className={styles.funnel}>
