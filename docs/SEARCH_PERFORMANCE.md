@@ -62,6 +62,9 @@ searches (see `/month/2026-08`).
 
 ## ⏰ Next-review reminders
 
+- **⏰ REMIND TALI (next chat): submit `/gift` to GSC + Bing.** The new gift landing page
+  shipped 2026-11-16; Tali hit her GSC Request-Indexing daily limit that day, so it still
+  needs submitting. URL: `https://www.tarotalmanac.com/gift` (already live + in the sitemap).
 - **Nov 23 review — CHECK YEAR-READING CONVERSION.** The $15 year reading has **0 sales ever** despite
   year-card season peaking (finder doubled to 34, `/personal-year-card` pos 16.7, 2027 blog 34 clicks) and
   the Nov-10 mid-article callout funneling readers in. If the Nov 16–23 week *still* shows 0 year-reading
