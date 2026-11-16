@@ -60,6 +60,22 @@ searches (see `/month/2026-08`).
 
 ---
 
+## ⏰ Next-review reminders
+
+- **Nov 23 review — CHECK YEAR-READING CONVERSION.** The $15 year reading has **0 sales ever** despite
+  year-card season peaking (finder doubled to 34, `/personal-year-card` pos 16.7, 2027 blog 34 clicks) and
+  the Nov-10 mid-article callout funneling readers in. If the Nov 16–23 week *still* shows 0 year-reading
+  sales, the next "do" is **instrumenting/fixing the calculator → $15 buy step** (where it drops), not guessing.
+- Same review, read the other Nov-10 holds: did **"tarot birth chart" CTR** move off 1.0% (title change)?
+  did the **angle queries start clicking** (FAQ schema)? did a **2nd chart sale** attribute sticky-vs-paywall?
+- **Bigger exploration raised 2026-11-16:** a **birthday-anchored year reading** (your year runs from your
+  birthday, so it's always 12 fresh months ahead — fixes the "stale mid-calendar-year" problem) paired with
+  the **gift angle** as a birthday-gift product. Gift plumbing already exists (chart + year reading both mint
+  a share-link; buyer sends it; `/gift/[token]` redeems). The work is reframing + surfacing, not new mechanics.
+  Needs a proper product spike + Tali-authored reading copy; not a quick build.
+
+---
+
 ## EXPERIMENT: Instagram Reels stop 2026-10-29 — what (if anything) were they doing?
 
 Standing marker, not a weekly entry. Tali is cancelling the **$80/mo HeyCatch Reels tool on
