@@ -158,6 +158,82 @@ weekly organic **sessions** figure (from Vercel) alongside impressions, tracking
 
 ---
 
+## 2026-11-16 (window: GSC Aug 15–Nov 14 / Nov 9–16 Vercel) — FIRST SUBSCRIPTION; and the "+78%" is a bot wave, not growth
+
+Two headlines, one real and one fake. The real one: **the first subscription ever** (Kelly, $7/mo, Nov 15 —
+confirmed active, already made 5 charts). The fake one: Vercel shows **1,299 visitors (+78%)**, but that is a
+**bot wave, not real traffic** — desktop 850 outran mobile 441 for the first time ever, Windows alone was 789
+(normally ~90–130), bounce jumped to **86% (+18%)**, and the geo table is full of tells (KR 10 visitors / 333
+pageviews = 33 pv each, plus sudden BR 71 / VN 34 / EC 31 / CO 30 / VE 20). **Real human traffic (mobile ~441)
+is flat vs last week's 449.** GSC (which Google bot-filters) agrees: clicks ~flat. So read this week off GSC +
+the subscription, and discount the Vercel top line entirely.
+
+### 1. Google (GSC) — window Aug 15–Nov 14 (the clean, bot-filtered signal)
+- Cumulative: clicks **1,927** (was 1,626), impr **56,054** (was 46,085) — still climbing hard.
+- The week held: last 7 (Nov 8–14) **305 clicks / 10,312 impr / pos 8.1**, vs prev 7 319 / 8,502 / 6.5.
+  Clicks ~flat (−4%), impr +21%, position eased 6.5 → 8.1 (more long-tail impr; money pages still rose).
+- **`/birthday` still exploding: 131 clicks / 9,159 impr / pos 6.3** (was 95 / 6,917 / 7.0). The engine.
+- **`/personal-year-card` jumped: pos 16.7** (was 23.4), 26 clicks / 877 impr — year-card season landing
+  on the hub now, not just the blog. **`/blog/2027-tarot-year-card`: 34 clicks / 1,577 impr / pos 7.9**
+  (was 20 / 860) — the +2,132% impression alert is real and converting to clicks.
+- **"tarot birth chart" query: 1,011 impr, but CTR still 1.0% at pos 8.3.** The Nov-10 title/CTR change has
+  only ~4 indexed days, so no read yet — watch next week. Impressions keep growing (881 → 1,011).
+- Angle queries: 57 / 222 impr / **0 clicks**. FAQ schema (Nov 10) also too recent. Still the pending watch.
+
+### 2. Vercel — Nov 9–16 (bot-inflated; discount the totals)
+- Headline **1,299 visitors (+78%), 2,248 pageviews, bounce 86% (+18%)** — but **desktop 850 / Windows 789**
+  with 86% bounce is the bot signature. **Real humans ~mobile 441 (flat) + ~180 real desktop ≈ ~620.**
+- Referrers (these look human/clean): **Google 328**, Bing-index (DDG 38 + Ecosia 20 + Bing 4) = **62**,
+  Pinterest 4, **gemini.google.com 1 (first Gemini referral!)**, t.co 1, Facebook 1. No chatgpt.com.
+- **Year-card season is real in the events:** personal_year_card finder **34** (was 17 — doubled, the runaway
+  top event), personal_month_card 8, birthday_reveal 9, birth_card_finder 7. New event: **lookup_someone 1**
+  (a subscriber making a chart for someone — fits Kelly's 5 charts).
+
+### 3. Bing-index (BWT)
+- DDG 38 + Ecosia 20 + Bing 4 = **62/wk** (was 77). Down a bit. BWT search report: last 7 **7 clicks / 279 impr**
+  (was 12 / 299) — clicks soft, impressions steady.
+
+### 4. AI citations (BWT)
+- Last 7 (Nov 8–14) **~272 citations (~39/day)**, down from ~394 (**−31%**) — the early-Nov spike receded to a
+  still-healthy baseline. First **gemini.google.com** referral appeared in Vercel, a new AI surface.
+
+### Mediavine Journey: unreadable this week (bot wave)
+The raw 30-day count is inflated by the desktop/Windows bot flood, so the % isn't meaningful. On the
+bot-adjusted ~620 real humans this week, the real trend is roughly flat at ~155–165%. Not pursuing anyway.
+
+### Conversions: THE FIRST SUBSCRIPTION
+From the DB + live Stripe. **Nov 9–16: 1 subscription started → paid (zero abandonment).** Kelly, $7/mo, renews
+Dec 15, account created and subscribed within ~2 minutes, already **5 charts in their library** (the giftable-
+charts benefit, used immediately). Verified end-to-end: webhook set `subscriptionStatus = active`, all gates
+open. **This is the recurring-revenue product converting for the first time** — a bigger milestone than the $12
+charts. All-time real paid now **5** (4 one-off charts + 1 subscription); subscription sessions all-time: 2
+started → 1 paid (the other expired Sep 23). No chart buy-clicks this week (the one conversion was the sub).
+
+### Baseline to beat next week
+Google last-7: 305 clicks / 10,312 impr / pos 8.1 (cumulative 56,054 / 1,927). Real humans ~620 (ignore the
+1,299 Vercel figure). Bing-index 62. AI ~39/day. Branded 12 cl / 247 im. All-time paid 5 (4 charts + 1 sub).
+**Watch:** does the bot wave persist or clear (if it persists, set a filter view); does the "tarot birth chart"
+CTR move off 1.0% now the new title is indexed; do the angle queries finally click (FAQ schema); and does a
+second subscription follow.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **Nurture the first subscriber toward the behavior that retains.** Kelly made 5 charts in a day — that's the
+   retention-predicting pattern. Nothing to build, but it validates that the subscription value prop (charts for
+   people you love) is what converts and sticks. Keep that front-and-center in the paywall copy.
+2. **Ride year-card season — it's peaking NOW and reaching the hub.** `/personal-year-card` jumped to pos 16.7,
+   the finder doubled to 34, the 2027 blog is at 34 clicks. The callout + CTA work shipped; let it run and read
+   whether any year-reading ($15) sale finally lands (still 0 ever).
+3. **Watch, don't re-touch, the birth-chart + angle changes.** The Nov-10 title/CTR and FAQ-schema changes have
+   <1 week of indexed data. Give them two full weeks before judging. "tarot birth chart" is still 1,011 impr / 1%.
+4. **Decide on bot filtering.** If the Windows/desktop wave repeats next week, it's worth a filtered Vercel view
+   (or at least always reading real traffic off mobile + GSC) so the weekly numbers stay honest.
+
+To explore (watch, don't act): the **gemini.google.com** referral (new AI surface opening?); whether the bot
+wave is a one-off scrape or recurring; and the SG/BR/VN surge (some real season, mostly bots this week).
+
+---
+
 ## 2026-11-09 (window: GSC Aug 8–Nov 7 / Nov 2–9 Vercel) — breakout week: best Google yet, two sales, and the Reels stop changed nothing
 
 The biggest week of the build, and the clean post-Reels read landed: **everything grew with the Reels off.**
