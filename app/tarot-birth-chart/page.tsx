@@ -52,6 +52,30 @@ const FAQ = [
     q: "What's the difference between a tarot birth chart and a tarot birth card?",
     a: "Your birth card, which we call your Bearing, is a single card: the fixed angle between you and the world. Your birth chart is seven cards with your Bearing in the middle. If your Bearing is like your sun sign, the chart is your full chart.",
   },
+  {
+    q: "Is a tarot birth chart the same as a tarot natal chart?",
+    a: "Yes, they're two names for one thing. Natal just means birth, so a tarot natal chart is the same seven cards your birth date sets. We use birth chart and natal chart to mean exactly the same reading.",
+  },
+  {
+    q: "What tarot cards are in your birth chart?",
+    a: "Seven. Three are you: your year card, your month card, and your day card. Three are the world you were born into, read the same way from the shared calendar. The seventh is your Bearing, the fixed distance between you and the world. The two day positions come out as Minor cards, and the rest are Major Arcana.",
+  },
+  {
+    q: "Is there a tarot birth chart calculator?",
+    a: "Yes. You can see a full chart worked out on this page for free, every one of the seven positions named, with no sign-up to look. To build your own from your birth date, head to the chart and we fix all seven cards to it, yours to keep and read for life.",
+  },
+  {
+    q: "Do you need my birth time?",
+    a: "No. A tarot birth chart reads your birth date alone, so your birth month, day, and year are all it takes. That's one thing it has over an astrology chart, which needs the exact minute and place you were born.",
+  },
+  {
+    q: "Do you need my birth year?",
+    a: "For the full chart, yes. Your birth card on its own comes from your month and day, which is why it never changes. The chart adds your birth year, and that year is what fills in the three cards for the self you came in as.",
+  },
+  {
+    q: "Which tarot card is my sun, moon, and rising?",
+    a: "Put in astrology terms, your year card works like your sun, your month card like your moon, and your day card like your rising. They're the three cards for who you are, set by your birth year, month, and day, with your Bearing at the center.",
+  },
 ];
 
 export default function TarotBirthChartPage() {
