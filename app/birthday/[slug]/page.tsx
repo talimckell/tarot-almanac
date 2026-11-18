@@ -121,12 +121,15 @@ export default async function BirthdayPage({
         <section className="section">
           <h2>Your Bearing is {bearingName}</h2>
           <p>{card.essence}</p>
+          <p>
+            {bearingName} is your <Link href="/tarot-birth-card">tarot birth card</Link>: the one
+            Major Arcana card your birth month and day point to, read the same every time and yours
+            for life. The calculator shows how it&rsquo;s worked out.
+          </p>
           <p className="dates">
             <Link href={`/bearing/${bearingSlug}`}>Read the full {bearingName} Bearing &rarr;</Link>
             {" · "}
             <Link href={`/tarot/${bearingSlug}`}>See the card</Link>
-            {" · "}
-            <Link href="/tarot-birth-card">What is a tarot birth card?</Link>
           </p>
         </section>
 
