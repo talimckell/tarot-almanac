@@ -139,6 +139,7 @@ export default function PersonalMonthCardHub() {
           <Link href="/blog/personal-month-number-tarot">your personal month number, explained</Link> ·{" "}
           <Link href="/bearing">your Bearing</Link> ·{" "}
           <Link href="/tarot-birth-card">your tarot birth card</Link> ·{" "}
+          <Link href="/tarot-birth-chart">your tarot birth chart</Link> ·{" "}
           <Link href="/tarot">all seventy-eight cards</Link> ·{" "}
           <Link href="/how-it-works">how the almanac works</Link>
         </p>

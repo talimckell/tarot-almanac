@@ -510,6 +510,19 @@ export default function TodayView({
         </div>
 
         <div className={styles.faqItem}>
+          <h3 className={styles.faqQ}>What&rsquo;s a tarot birth chart?</h3>
+          <p className={styles.faqA}>
+            Your Bearing sits at the center of a larger picture. Your tarot birth chart is
+            seven cards set by your birth date: three for you, three for the world you were
+            born into, and the Bearing between them. The day card here is the weather; the
+            chart is the ground it falls on.{" "}
+            <Link href="/tarot-birth-chart" className={styles.faqLink}>
+              See your tarot birth chart &rarr;
+            </Link>
+          </p>
+        </div>
+
+        <div className={styles.faqItem}>
           <h3 className={styles.faqQ}>How does the tarot numerology math work?</h3>
           <p className={styles.faqA}>
             Every card comes from plain arithmetic on the date. Your birthday and the

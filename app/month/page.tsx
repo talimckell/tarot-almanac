@@ -62,7 +62,8 @@ export default async function MonthIndexPage() {
           </p>
           <p>
             This is the world&rsquo;s card for the month. Your birthday sets a second one that&rsquo;s
-            yours alone: <Link href="/personal-month-card">find your personal month card</Link>.
+            yours alone: <Link href="/personal-month-card">find your personal month card</Link>. It,
+            and the rest of your cards, sit in your <Link href="/tarot-birth-chart">tarot birth chart</Link>.
           </p>
           <SeasonalYearCardLink />
           <p>
