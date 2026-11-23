@@ -62,20 +62,25 @@ searches (see `/month/2026-08`).
 
 ## ⏰ Next-review reminders
 
-- **⏰ REMIND TALI (next chat): submit `/gift` to GSC + Bing.** The new gift landing page
-  shipped 2026-11-16; Tali hit her GSC Request-Indexing daily limit that day, so it still
-  needs submitting. URL: `https://www.tarotalmanac.com/gift` (already live + in the sitemap).
-- **Nov 23 review — CHECK YEAR-READING CONVERSION.** The $15 year reading has **0 sales ever** despite
-  year-card season peaking (finder doubled to 34, `/personal-year-card` pos 16.7, 2027 blog 34 clicks) and
-  the Nov-10 mid-article callout funneling readers in. If the Nov 16–23 week *still* shows 0 year-reading
-  sales, the next "do" is **instrumenting/fixing the calculator → $15 buy step** (where it drops), not guessing.
-- Same review, read the other Nov-10 holds: did **"tarot birth chart" CTR** move off 1.0% (title change)?
-  did the **angle queries start clicking** (FAQ schema)? did a **2nd chart sale** attribute sticky-vs-paywall?
+- **⏰ STILL PENDING — submit `/gift` to GSC + Bing.** Flagged 2026-11-16 and again 11-23; Tali keeps
+  hitting her GSC Request-Indexing daily limit on other pages. URL: `https://www.tarotalmanac.com/gift`
+  (live + in the sitemap). Carry this until it's confirmed submitted.
+- **🔨 ACTIVE DO — instrument the year-reading ($15) funnel.** CONFIRMED 2026-11-23: still **0 sales ever**
+  even as year-card season PEAKED (finder 32 uses, `/personal-year-card` jumped to pos 12.5, 2027 blog 56
+  clicks). The condition the Nov-16 reminder set is now met, so stop waiting: instrument the
+  `/personal-year-card` → $15 buy step and find where it drops. Demand is here; the conversion step is the leak.
+- **👀 WATCH (once pushed) — the SEO internal-link + FAQ changes** shipped in this session (birthday→
+  `/tarot-birth-card` prominent link across 363 pages; `/tarot-birth-chart` FAQ 5→11; chart inlinks from
+  today/month/personal-month). As of 11-23 these were committed but NOT pushed. NB `/tarot-birth-card` was
+  ALREADY climbing pre-deploy (pos 24.9→16.8, impr doubled), so read the deploy as an accelerant, not the cause.
+- **🤖 SET UP bot filtering / read real traffic off mobile+GSC.** The Windows/Singapore datacenter wave
+  repeated and grew (Windows 1,103, SG 272). The Vercel top line is now reliably misleading.
 - **Bigger exploration raised 2026-11-16:** a **birthday-anchored year reading** (your year runs from your
   birthday, so it's always 12 fresh months ahead — fixes the "stale mid-calendar-year" problem) paired with
   the **gift angle** as a birthday-gift product. Gift plumbing already exists (chart + year reading both mint
   a share-link; buyer sends it; `/gift/[token]` redeems). The work is reframing + surfacing, not new mechanics.
-  Needs a proper product spike + Tali-authored reading copy; not a quick build.
+  Needs a proper product spike + Tali-authored reading copy; not a quick build. (Gains urgency given the
+  $15 year reading's 0-conversion at peak season — a birthday-anchored framing may convert where calendar-year doesn't.)
 
 ---
 
@@ -174,6 +179,89 @@ is in bounds before building around this.
 
 **What to do now:** nothing to act on — it's a sessions game and we're early. Start noting the
 weekly organic **sessions** figure (from Vercel) alongside impressions, tracking toward 1,000.
+
+---
+
+## 2026-11-23 (window: GSC Aug 23–Nov 21 / Nov 16–23 Vercel) — year-card season PEAKS on Google, but the $15 reading still converts zero; bot wave persists
+
+The clean signal (Google + AI) is strongly up; the two things to act on are both conversion, not traffic.
+Year-card season is landing hard in search, yet the product that season should sell (the $15 year reading)
+has still never sold. And the Vercel bot wave from last week repeated and grew, so read the top line off
+mobile + GSC again.
+
+### 1. Google (GSC) — window ends ~Nov 21 (the clean, bot-filtered signal)
+- Cumulative: clicks **2,237** (was 1,927), impr **68,543** (was 56,054) — still climbing hard.
+- Last 7 (Nov 15–21): **329 cl / 13,185 impr** vs prev 7 **305 / 10,312**. Clicks +8%, impr **+28%** (long-tail
+  surging with year-card season).
+- **Year-card cluster is the breakout:** `/blog/2027-tarot-year-card` **56 cl / 2,725 impr / pos 8.1** (was
+  34 / 1,577 / 7.9 — clicks +65%); `/personal-year-card` jumped to **pos 12.5** (was 16.7), 32 cl / 1,251 impr.
+- **`/tarot-birth-card` moving on its own, pre-deploy: pos 16.8** (was 24.9), impressions **doubled to 4,150**,
+  21 cl. The internal-link work committed this session isn't live yet, so this is organic momentum — the
+  deploy should accelerate it, not take credit for it.
+- **`/birthday` hub 154 cl / 10,773 impr / pos 6.0** (was 131 / 9,159 / 6.3). Birthday detail pages agg
+  **1,683 cl / 33,706 impr / 363 pages**. Birthday system = **~82% of all clicks** (1,837 of 2,237). Still the engine.
+- `/personal-month-card` 27 cl / pos 7.7 (up from 8.5). `/tarot-birth-chart` steady 26 cl / pos 11.6.
+
+### Query holds (the Nov-10 experiment reads, now ~2 weeks indexed)
+- **"tarot birth chart": CTR still 1.0% at pos 8.3.** The Nov-10 title change did NOT move CTR after two weeks.
+  **That lever is spent — CTR isn't the unlock, position is.** Stop tuning the snippet; work the position.
+- **"tarot birth card calculator": pos 13.1, 676 impr** (was pos 30.7, 98 impr) — the calculator query SURGED,
+  now page 2, first 2 clicks. The winnable near-term term (page has the calculator; internal links now committed).
+- "tarot birth card" head term pos 42.9 (was 60.4) — creeping up, still page 4–5, 0 clicks (contested incumbents).
+- Angle queries: couldn't isolate cleanly in this export; FAQ-schema read still inconclusive, carry it.
+
+### 2. Vercel — Nov 16–23 (bot-inflated AGAIN; discount the totals)
+- Headline **1,656 visitors (+9%), 2,555 pv (−1%), bounce 87%** — but **Windows 1,103** (was 789) and
+  **Singapore 272** (272 visitors / 284 pv ≈ 1 pv each = datacenter) are the bot signature, bigger than last week.
+- **Real humans ≈ mobile 480 (iOS 319 + Android 166) + Mac 48 ≈ ~530–600**, roughly flat vs last week's ~620.
+  The +9% is bots, not growth.
+- Referrers (clean/human): **Google 337** (was 328), Bing-index **DDG 41 + Ecosia 15 + Bing 15 = 71** (was 62),
+  Pinterest 4, Brave 1, Yahoo 1, FB 1. **No chatgpt/gemini referral this week** (last week had 1 gemini).
+- Top pages (visitors): `/personal-year-card` **41** (top page — season), `/` 36, `/birthday` 36,
+  `/blog/2027-tarot-year-card` 33, `/tarot` 31, `/tarot-birth-card` 31, `/chart` 21, `/tarot-birth-chart` 20.
+- Events: personal_year_card finder **32** (was 34 — flat, still #1), **birth_card_finder 21 (was 7 — tripled)**,
+  personal_month_card 8, birthday_reveal 5, bearing_finder 4. No lookup_someone this week.
+
+### 3. Bing-index (BWT)
+- Last 7: **15 clicks / 286 impr** (was 7 / 279) — clicks **doubled**, impressions steady. Referral side
+  (DDG+Ecosia+Bing) 71/wk, up from 62. Slow, real improvement.
+
+### 4. AI citations (BWT)
+- Last 7 (Nov 15–21): **~352 citations / ~50 a day** (was ~272 / ~39), **+29%**. Nov 18 peaked at **80 cites /
+  14 cited pages**. Growing, but still no AI *referrals* in Vercel — citations are an authority signal, not traffic.
+
+### Mediavine Journey: health proxy only (resolved NO)
+Raw 30-day count is bot-inflated again, so the % isn't meaningful. On ~550–600 real humans/wk the trend is roughly
+flat, comfortably above the 1,000/30-day bar on real traffic. Not pursuing (ads ≈ $3.54/mo on comparable traffic).
+
+### Conversions: reverted to ZERO paid (and the year reading still has never sold)
+From DB + live Stripe. **Nov 16–23: 2 signups → 0 paid** (chart 0 · subs 0 · year 0 · gift 0). One own-chart Buy
+click, from **chart_sticky** (the mobile sticky bar — so that placement IS generating clicks), abandoned at Stripe
+(session expired). No 2nd subscription. **The $15 year reading is still 0 sales ever**, and this was PEAK year-card
+season (finder 32, `/personal-year-card` pos 12.5, 2027 blog 56 clicks). Demand is unmistakably there; the
+conversion step is the leak. All-time real paid still **5** (4 one-off charts + 1 subscription).
+
+### Reels experiment — SECOND clean week, CLOSED
+Reels have been off since Oct 29. Second full post-Reels week grew again (traffic +9%, Google clicks +8%, AI
+citations +29%); nothing dropped. **Confirmed: the $80/mo Reels tool was doing nothing measurable. Experiment closed.**
+
+### Baseline to beat next week
+Google last-7: 329 cl / 13,185 impr (cumulative 2,237 / 68,543). Real humans ~550–600 (ignore the 1,656 Vercel figure).
+Bing-index 71 referrals / 15 BWT clicks. AI ~50/day. All-time paid 5. `/tarot-birth-card` pos 16.8, "tarot birth
+card calculator" pos 13.1, `/personal-year-card` pos 12.5, `/blog/2027-tarot-year-card` pos 8.1.
+
+### Optimization paths / to explore
+Ranked by expected value:
+1. **Instrument + fix the $15 year-reading funnel — the clearest gap on the site.** Season peaked, demand is
+   proven (finder 32, page pos 12.5), and it still converts zero. Instrument `/personal-year-card` → buy step;
+   find the drop. This is the active "do," not a watch.
+2. **Push the committed SEO work + submit `/gift` to GSC/Bing.** Birth-card is already climbing (pos 24.9→16.8);
+   the internal-link/FAQ deploy should compound it. `/gift` still unsubmitted.
+3. **Chase "tarot birth card calculator" to page 1** — it jumped to pos 13.1 with 676 impr, clear calculator
+   intent, the page already is a calculator. Internal links (now committed) plus surfacing "calculator" language.
+4. **Set up bot filtering** (or always read mobile+GSC). The Windows/SG datacenter wave is now a recurring fixture.
+5. **Explore the birthday-anchored year reading** (see reminder) — the calendar-year $15 reading's zero-conversion
+   at peak season is itself evidence the framing may be the problem, not just the funnel.
 
 ---
 
