@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   yearCardIndex,
@@ -71,6 +71,31 @@ export default function YearCardCalculator({
         }
       : null,
   );
+
+  const buyRef = useRef<HTMLFormElement>(null);
+  const ctaViewedRef = useRef(false);
+  // Instrumentation (2026-11-23): fire once when the $15 buy CTA actually scrolls
+  // into view, so next week's funnel can separate "saw the price and didn't buy"
+  // (a value/price objection) from "never reached it" (the free 12-month wheel
+  // satisfied the curiosity). Pairs with the personal_year_card finder event above
+  // and the server-side buy_year_reading on checkout.
+  useEffect(() => {
+    ctaViewedRef.current = false;
+    const el = buyRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting) && !ctaViewedRef.current) {
+          ctaViewedRef.current = true;
+          trackFormSubmit("year_buy_cta_viewed", result ? { year_read: result.year } : {});
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [result]);
 
   const dayCount = m ? maxDay(Number(m)) : 31;
 
@@ -184,7 +209,7 @@ export default function YearCardCalculator({
 
           <InAppBrowserNotice />
 
-          <form action={startYearReadingCheckout} className="pyc-buy">
+          <form action={startYearReadingCheckout} className="pyc-buy" ref={buyRef}>
             <input type="hidden" name="bm" value={result.m} />
             <input type="hidden" name="bd" value={result.d} />
             <input type="hidden" name="year" value={String(result.year)} />

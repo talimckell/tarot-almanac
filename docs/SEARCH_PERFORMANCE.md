@@ -62,9 +62,8 @@ searches (see `/month/2026-08`).
 
 ## ⏰ Next-review reminders
 
-- **⏰ STILL PENDING — submit `/gift` to GSC + Bing.** Flagged 2026-11-16 and again 11-23; Tali keeps
-  hitting her GSC Request-Indexing daily limit on other pages. URL: `https://www.tarotalmanac.com/gift`
-  (live + in the sitemap). Carry this until it's confirmed submitted.
+- **✅ DONE 2026-11-23 — `/gift` submitted to GSC + Bing.** Tali confirmed. Watch for it entering the
+  index / first impressions in the next review or two.
 - **🔨 ACTIVE DO — instrument the year-reading ($15) funnel.** CONFIRMED 2026-11-23: still **0 sales ever**
   even as year-card season PEAKED (finder 32 uses, `/personal-year-card` jumped to pos 12.5, 2027 blog 56
   clicks). The condition the Nov-16 reminder set is now met, so stop waiting: instrument the
